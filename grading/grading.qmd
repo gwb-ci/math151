@@ -1,5 +1,5 @@
 ---
-title: "Math 151 Syllabus"
+title: "Math 393 Syllabus"
 format:
   html:
     toc: true
@@ -7,7 +7,7 @@ format:
   pdf: default
 ---
 
-# Math 151: Calculus II
+# Math 393: Abstract Algebra
  
 **Professor:** Geoffrey Buhl  
 **Email:** [geoffrey.buhl@csuci.edu](mailto:geoffrey.buhl@csuci.edu)  
@@ -15,21 +15,21 @@ format:
 **Office:** 2324 Marin Hall  
 **Office hours:** MW 9:00–10:00am or by appointment  
 
-**Course meetings:** Tuesday and Thursday, 10:00–11:50am  
-**Course textbook:** [OpexStax Calculus Volume 2](https://openstax.org/details/books/calculus-volume-2)
+**Course meetings:** Monday and Wednesday, 10:30–11:45am  
+**Course textbook:** [Abstract Algebra: Theory and Applications](https://judsonbooks.org/aata-files/aata-html/aata-toc.html), Thomas W. Judson  
 **Course website:** CI Learn
 
-## Math 151 Specific Information
+## Math 393 Specific Information
 
 ### Why I like this course
 
-Calculus II is a course where we deepen our understanding of integration, infinite series, and the powerful ideas that connect them. You will be challenged to think carefully, reason precisely, and build on the foundations you’ve already developed in Calculus I. I encourage you to stay curious, ask questions, and engage fully as we explore the elegance and utility of calculus together.
+Groups, rings, and fields! Oh My!  These are the core algebraic structures in mathematics.  Finally we get to the good stuff: axiomatic mathematics and discussing the rules and structures that are the baseline tools for all of mathematics. Groups describe symmetry and have rich and interesting structure that arise from 3 simple axioms.
 
 ### Course Description
 
-Prerequisite: MATH 150
+Prerequisite: MATH 240 and MATH 310
 
-Topics include: differentiation, integration, sequences, infinite series, and power series.
+Groups, rings, and fields, the basic algebraic structures in contemporary mathematics.
 
 ### How to contact me
 
@@ -37,14 +37,13 @@ The best way to get in touch with me is in-person or by email.  In general, if y
 
 ### Student Learning Outcomes
 
-- Design mathematical models and work with functions
-- Compute integrals, areas, volumes, surface areas
-- Analyze various representations of functions and use them to solve problems
-- Apply modern software to solve problems
-- Apply integral optimization techniques
-- Apply sequences, series and power series to solve problems
-- Explain, using proper terminology, ideas of calculus and solve computational problems using good technique.
-- Express ideas of Calculus in oral and written form.
+- Discuss the basic algebraic structures appearing in mathematics today
+- Apply the knowledge of these structures to the analysis of concrete special cases
+- Compute degrees of extensions
+- Prove impossibility of certain ruler and compass geometric constructions, e.g. squaring of the circle
+- Parametrize field extensions by groups and vice-versa
+- Determine the solvability of higher degree polynomial equations by radicals
+- Express concepts and techniques of Abstract Algebra in oral and written form
 
 ### Course Workload
 
@@ -52,8 +51,25 @@ This is a 3 credit hour course, which means that students should be prepared to 
 
 ### Student Evaluation Structure
 
-In this course, Prof. Buhl used specification grading, which has also been known as mastery grading. Assignments and assessments are graded based on whether or not they provide Prof. Buhl evidence that you, the student, have learned the material. The more course material you demonstate that you have learned, the higher your grade in
-the course.
+| Component | Points |
+|---|---:|
+| Homework | 200 |
+| Midterm  | 100 |
+| Proof Portfolio | 100 |
+| Final Exam | 200 |
+| **Total** | **600** |
+
+| Percent | Grade |
+|---|---:|
+| 100-90 | A |
+| 89-80  | B |
+| 79-70 | C |
+| 69-60 | D |
+| 59-0| F|
+
+I will assign + and - grades in this course at my discretion. The grade book on CILearn will be used to record and track your scores.  There will be a few small opportunities for extra credit.
+
+**Homework is due by 11:59pm on the Friday due date.**  Late homework will have the total score reduced by 2.5% for each day that the homework is late up for to 20 days.  Homework that is over 20 day late will not be graded.   Submit your assignments as PDFs or JPEGs through CI Learn.  Please take care to write up your work clearly and to submit PDFs that are easy to read.  Many students successfully use CamScanner or Adobe Scan apps for their phones to create PDFs to upload. There are nine homework scores the lowest score will be dropped.
 
 ### Educational Opportunities
 
@@ -67,16 +83,9 @@ Working in groups on the homework assignment is strongly encouraged.  However ea
 
 **Office hours** is a time when you can come to my office and ask me questions about course material.  Students who make use of office hours tend to do better in college courses. You are encouraged to make early and regular use of **campus tutors** in the LRC. For campus tutoring locations, subjects and hours, use [this link](http://go.csuci.edu/tutoring).
 
-### Course Outline
+### Semester Schedule
 
-The course divides into three sections:
-
-1. Techniques of integration and their applications (weeks 1-7),
-2. Sequences and series of real numbers (weeks 8-13), and
-3. Power series and their convergence (weeks 14-15).
-
-Two themes pervade the course: what to do when the Fundamental Theorem of
-Calculus does or does not work; and that limits can turn approximations into equalities.
+comming soon
 
 ## CSU Channel Islands Information
 
