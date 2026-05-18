@@ -1,5 +1,5 @@
 ---
-title: "Math 393 Syllabus"
+title: "Math 151 Evaluation Structure"
 format:
   html:
     toc: true
