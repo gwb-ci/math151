@@ -1,0 +1,296 @@
+---
+title: "Math 151 Grading"
+format:
+  html:
+    toc: true
+    math: mathjax
+  pdf: default
+---
+
+# Math 151 Specification Grading
+
+
+This course uses specification grading, which may be new to you. Your grade in this course will reflect the degree to which you have mastered course material. You will provide me evidence that you have mastered material through work you provide on Learning Target Quizzes, oral interviews with me on Zoom, and other written assignments. This section of the course syllabus describes in painstaking detail the ideas that I will ask you to master and how evidence of mastery will translate into a letter grade in the course. This detail is important to you because it will help you focus your efforts to master concepts and techniques in the course.
+
+
+## Course Learning Targets
+
+To successfully learn the Calculus, you need to demonstrate that you understand some of the following Learning Targets. See @grading-targets below, for what 'some' means. these learning targets are divided into five groups that represent different core principles in the course. They are:
+
+- A: Applications of integration  
+- I: Fundamental Concepts and Techniques in Integration
+- N: Numerican Integration (with computer assistance)
+- S: Sequences and Series
+- P: Power Series Each of these groups are described in detail below. Learning Targets whose abbreviations are marked with a $\bigstar$ are Supplemental Learning Targets. The Learning Targets with an 'MP' in their abbreviation are Mathematical Practice Learning Targets. The rest are Core Learning Targets. Your grade in the course will be calcualted, primarily, from the number and type of learning targets you master.
+
+
+### (A) Applications of integration
+
+Newton and Leibniz are immortal because the mathematics they discovered (i.e., the Calculus) can be used to tell us so much about the world. In this section, we learn how to use the concept of the definite integral to create formulas that tell us other things. Just like using the sum or rectangular areas to approximate the area under a curve, all derivations use the 'cut-up-and-add-up' approach that starts with approximating the phenomena under investigation and then pass to a limit to get a definite integral. The student needs to know how to do derive some such definite integral formulas and needs to know how to use many others. We also flirt with infinity for the first time by learning about improper integrals. 
+
+**A1**: Substitution.  
+
+- I know how to use the technique of u-substitution to re-write an indefinite integral in a way that allows me to compute the antiderivative of the integrand.
+- I know how to use the technique of u-substitution to re-write a a definite integral an update its limits of integration in a way that allows me to compute the value of the definite integral. 
+
+**A2**: The Average Value of a Continuous Function, Area between Curves
+
+- I know the integral formula for average value of a continuous function.
+- I understand how the integral formula can be derived.
+- I can apply the average value formula in a word problem.
+
+**A3**: Volume of solids defined in terms of the shape of their cross sections.
+
+- I understand how to read a shape described in terms of its cross-sections.
+- I know how to to express the area of a cross-section as a function of the location of the cross-section (i.e., the value x).
+- I know how the volume of the solid is the definite integral of the cross-sectional areas, and I know how to set the limits of that definite integral.
+- I am familiar with Cavalierri's Principle and how it describes the relationship between volume and cross-sectional area.
+
+**A4**: Volumes of solids of revolution.
+
+- I understand how to create a solid of revolution by rotating a region between an axis and a curve around the axis of rotation.
+- I can draw a solid of revolution and a cross-section of that solid.
+- I can find a formula for the circular cross section of the solid in terms of the location of the cross-section (i.e., the value x)
+- I can write the volume of the solid of revolution as a definite integral of the area of the cross-sections, and I know how to set the limits of that definite integral.
+- I can apply the above ideas to the situation where our region in bounded by two curves and rotated about an axis that does not intersect that region. (And I know why this is called the washer method.)
+
+**A5** $\bigstar$ : Arc-length of the graph of a function in the plane.
+
+- I understand how to apply the 'cut-up-and-add-up' principle to approximate the length of a graph y = f (x) using line segments.
+- I know how and why the Mean Value Theorem is used in the derivation of the integral formula for arc length.
+- I know the integral formula for the length of the graph of y = f (x).
+- I understand why arc length integrals are likely to need numerical methods to compute.
+- I know what a parametric curve is. I can derive an integral formula for the length of a parametric curve, γ(t) = (x(t), y(t)).
+
+**A6** $\bigstar$ : Surface area of a solid of revolution.
+
+-  I understand how to apply the 'cut-up-and-add-up' principle to approximate the surface area of a solid of revolution using frustrums.
+- I understand the role of approximating frustrums in the derivation of the integral formula and the role that the length of line segments play in the approximation.
+- I can use the integral formula to calculate examples, by hand and with computer.
+
+**A7** $\bigstar$ : Calculating work done by a variable force.
+
+- I understand how to apply the 'cut-up-and-add-up' principle to approximate the total work done in an experiment.
+- I understand the role that approximating a continuous function by locally constant functions plays in the derivation of the definite integral formula.
+- I can use the integral formula to calculate examples.
+
+**A8**: Calculating the centroid of a planar region.
+
+- I can calculate the principle of symmstry to find the centroid of a symmetric region (e.g., circle, oval, rectangle).
+- I know how to use the Archimedian Principle to calculate the balance point of a finite set of point masses.
+- I know how to approximate the centroid of a region between the x-axis and the graph of y = f (x) using the cut-up-and-add-up method.
+- I know the integral formulas for the x- and y-coordinates of the centroid of a region between the x-axis and the graph of y = f (x).
+- I could extend these formulas to integral formulas for the centroid of a threedimensional solid.
+
+### (I) Fundamental Concepts and Techniques in Integration
+
+We can't let computer algebra systems, like SageMath, have all the fun. We need to learn how to leverage our knowledge of algebra (e.g., completing the square) and trigonometry (e.g., Pythagorean identities, differentiation formulas) in service of antidifferentiation. In this section of the course, we learn some fundamental techniques for integration. Together the techniques allow us to antidifferentiate any rational function.
+
+ **I1**: Substitution Techniques.
+
+- I know how to simplify an integrand using the Chain Rule through 'u-substitution'.
+- I know when to make algebraic revisions of integrand during and after u-substitution.
+- When using u-substitution, I know how to adjust the limits of integration in a definite integral. 
+ I2: Integration by parts in indefinite and definite integrals.
+- I know how to execute the technique we call integration by parts.
+- I know what the mnemonic LIATE means and how it guides the choice of functions in integration by parts.
+- I know how to use integration by parts in the context of a definite integral.
+
+**I3**: Integrating integrands that are combinations of trigonometric functions.
+
+- I can recognize when an integrand consists of combinations of trigonometric functions.
+- I can use trigonometric identities to simplify expressions for the purpose of antidifferentiation.
+- Calculating definite integrals in such a situation.
+- I know how to use a computer to check the antiderivative (e.g., through graphing) and to check the value of an antiderivative. 
+
+ **I4**: Using trigonometric substitutions to calculate an antiderivative.
+
+- I can recognize when a trigonometric identity can help simplify an integrand.
+- I know how to choose a trigonometric identity to simplify expressions.
+- I know how to adjust limits of integration when using a trigonometric identity.
+- I know how to use a computer to check a computation (definite or indefinite) using a trigonometric substitution. 
+
+ **I5** $\bigstar$ : Integrating rational functions using the technique of partial fraction decomposition.
+
+- I know the pattern used to establish a partial fraction decomposition of a rational function. Specifically, 2 I understand how the multiplicity of a denominator's factors effect the decomposition and the expressions that appear in the numerators, and 2 I understand how the degree of a denominator's factors effects the decomposition (e.g., linear or irreducible quadratic).
+- I understand how to find the unknown parameters in a partial fraction decompoisiton in one of two ways: equating coefficients, sampling values.
+- I can use a computer algebra system (e.g., wolfram Alpha) to calculate a patial fraction decomposition.
+- I can calcualte a definite integral using partial fractions decomposition.
+- I can use a computer to check the result of using partial fraction decomposition to evaluate a (definite or indefinite) integral.
+- I understand how partial fraction decomposition naturally leads (in some cases) to use u-substitution or trigonometric substituion. 
+
+ **I6**: Improper integrals.
+
+- I can recognize an improper integral that involves an infinite limit of integration, and I know how to rewrite it using a limit.
+- I can recognize an improper integral that involves an unbounded integrand, and I know how to rewrite it using a limit. 
+- I understand what it means for an improper integral to converge or diverge.
+- I know the p-test for improper integrals and how the value of p for convergence depends on the type of improper integral.
+- I can use the comparison test for improper integrals to determine convergence and divergence.
+- I can recognize and work with the case that our improper integral requries a multiple limits.
+
+### (N) What do we do when we can't compute an antiderivative?
+
+When we can't use the Fundamental Theorem of Calculus to calculate definite integral of a function, we use numerial methods.
+
+**N1**: What it means for definite integral of continuous integrand on a closed interval to defy the
+ 
+ -  I can recognize problematic integrands (i.e., those which do not have an
+ - I understand that numerical integration will always give an approximate answer.
+- I understand what error is in the context of numerical integration.
+- I know the left and right endpoint methods for numerical approximation of a definite 2 I know the midpoint, trapezoid, and Simpson's methods for numerical approximation.
+
+ **N2**: Bounded functions.
+
+- I know why a continuous function on a closed and bounded set has an upper and lower 2 I can find a bound for a differentiable function using differentiation.
+- I can find a bound for a function using a process of successive approximation. 
+
+**N3**: Bounding error in numerical methods.
+
+- I know how to find the error bound formulas for the numerical integration methods: 2 I know how to use the error bound formulas to determine the minimum number of
+
+### (S) Sequences and Series
+
+Sequences and series of real numbers are important objects in mathematics, and we will study their properties including how to determine whether they converge or diverge. 
+
+ **S1**: Sequences of real numbers.
+
+- I understand sequence notation, terms, index, notation, and visualizing (as sampling of a function, as points on real line).
+- I have an understanding of the basic types of sequences (explicit, recursive), and I can recognize and translate between formula and terms.
+- I can recognize when a sequence is bounded.
+- I can compute the limit of a sequence for various tyles of sequences.
+- I know how to apply the Algebraic Limit Theorems for sequences, the Squeeze Theorem for sequences, and the Monotone Convergence Theorem. 
+
+**S2**: Series of real numbers.
+
+- I understand how to use sigma notation, what a summand is, what limits of summation are, what the terms of a series are, and what a sequence of partial sums is.
+- I know what it means for a series to converge, and I know what it means for a series to diverge.
+- I have an understanding of the basic types of series, including telescoping series, arithmetic series, geometric series, positive series, harmonic series, and alternating series.
+- I know the First Test for Convergence.
+- I understand and can use the algebraic properties of convergent series including the Sum and Difference theorem for convergent series, the Constant Multiple theorem for convergent series. 
+
+**S3**: Convergence tests for positive series.
+
+- I understand and can use the convegent tests for positive series include the Integral Test Theorem, the Direct Comparison Test Theorem, the Limit Comparison Test Theorem.
+- I know how negative terms and positive terms combine to effect the convergence of a series.
+- I understand what absolute convergence tells us about convergence of a series, and I know how to use tests for absolute convergence including the Ratio Test and the Root Test.
+
+ **S4** $\bigstar$ : Convergence tests for series with an infinite number of positive and negative terms.
+
+- I can explain why the alternating harmonic series is convergent but not absolutely convergent.
+- I know how to estimate the sum of a convergent alternating series.
+
+### (P) Power Series
+
+We will apply the principles learned in our study of sequences and series of real numbers to understand sequences and series of polynomials and how polynomials can be used to approximate transcendental functions. 
+ 
+**P1**: Power series 
+
+- I know how to work with (do algebra on) a power series as an abstract, symbolic 'infinte' polynomial.
+- I know how to view a power series as a function of an independent variable.
+- I know to determine the interval of convergence of a power series, and I know how to determine if the power series converges at the endpoints of this interval.
+- I know when two power series can be combined algebraically and how to create those combinations.
+- I know how to apply techniques from the Calculus to power series. 
+
+**P2**: Taylor series and Maclaurin series.
+
+- I know what a Taylor Series is. I know what a Maclaurin series is.
+- Given an infintely differentiable function f (x) and a real number x0 , I can compute the coefficients to get the associated Maclaurin Series and Taylor Series.
+- I know the Taylor and Maclurin Series for the sine, the cosine, the natural logarithm, and the natural exponential function.
+- I know when a function has a power series representation. 
+
+**P3** $\bigstar$ : Approximating a function by its power series.
+
+- I can use a power series to calculate an antiderivative of functions and find approximate values of definite integrals.
+- I know the error bound theorem for power series and how to use it. 
+
+### Homework
+
+There will be weekly homework. Each homework problem assigned will be reviewed and scored according to the following: 
+
+- **2 points**: Your solution is clear and demonstrates sufficient understanding of the assocated learning outcome of the learning targeting being practiced.
+- **1 point**: Your solution lacks evidence (either through ommision or lack of clarity) that you understand the assocated learning outcome of the learning targeting being practiced.
+- **0 points**: The problem was not attempted or the provided solution should no evidence that you understand the assocated learning outcome of the learning targeting being practiced. 
+
+The total number of points you earn on an assignment will be reported to you and recorded in the Canvas gradebook.
+ At the end of the semester, your total homework score will be assigned a plus-or-minus letter grade on a curve that is no steeper than 90-80-70-60. If your homework grade is higher than the grade you earn through learning target quizzes, your course grade will be increased by one increment (onthe plus-or-minus continuum). If your homework score is lower, the opposite will happen.
+
+
+### Demonstrating Mastery
+
+Each week, you will be allowed to take Learning Target Quizzes. Your work on those quizzes will be the evidence I use the decide if you've mastered the concepts and techniques of that Learning Target.
+
+I will make time every Wednesday for you to take a Learning Target Quiz during class time. I expect you to be prepared to take a quiz at that time.
+This is how the quiz process works.
+
+When you take a quiz, I expect you not to use any resources other than those that are in your mind and memory. With the exception of the quizzed over Numerical Integration (which require a computer tool to assist with complex calcualtions), you may not use notes or other resources, written or online, when taking a quiz.
+When I assess your work, I will give you written comments. I do not award points for quizzes. Instead I will assess your work based on the evidence it provides me that you have learned the material on the quiz. I convey my assessment using an ESPN score: 
+
+- **E**: Excellent evidence of mastery
+- **S**: Sufficient evidence of mastery
+- **P**: Evidence of progress toward mastery
+- **N**: No evidence of understanding 
+
+Work on a Learning Target Quiz earns an 'E' if I think I could share with the class as exemplary and worthy of emulation by other students. Work on a Learning Target Quiz earns an 'S' if I think your work is evidence of your mastery of the material. Both marks allow you to move on to the next learning target. If on a Learning Target Quiz some work is at mastery level but other work shows there are enough ideas or techniques you have not mastered, the quiz will earn an 'P'. A student will need to retake that quiz to demonstrate mastery. If you qui shows no evidence of learning, the quiz will be marked with an 'N'.
+
+Whenever someone turns in a quiz, there is a chance that I will ask them to explain one or more answer in a face-to-face appointment. This is one way I incorporates oral quizzes into the course. What if you earn a 'P' or an 'N' on a quiz? You can retake it provided you take steps to solidify your knowledge of the material in the learning target. At minimum, you need to do the following.
+
+1. Quiz corrections. On separate paper, write up a correct solution to each problem you missed. Your solution must be absolutely correct and clear. You are welcome to consult with Miller before turning your corrections in.
+
+2. Learning reflections. Include as part of your quiz corrections a short reflective statement (50-250 words) on the gaps in understanding the quiz helped you identify and what you did to solidify your understanding of the learning target. Your reflection should include at least one affirmative and detailed statement of your new understanding. For example, if your solution to a question on using u-substitution to calculate a definite integral was incorrect, your reflection might say, "It is now clear to me that when using u-substitution to calculate a definite integral, I should update the limits of integration to reflect new values associated with my new variable." 
+
+3.  If you earned an 'N' on the quiz, you must do the above. In addition, for each question on the quiz that you did not do correctly, you must find a similar problem in the textbook (give its number and the page number on which it appears) and solve it. This question and solution should be included with your quiz corrections.     The solution for each 'additional problem' should appear immediately after the corrected solution to the quiz problem that it resembles. 
+
+As soon as you complete the above and I do a quick review, you may retake the quiz.
+
+
+
+## Grading {#grading-targets}
+
+This is a graded course. At the end of the semester, you will get a letter grade that will contribute to your college grade point average (GPA). I will be very clear about what it takes to earn each possible passing letter grade. Campus policy (Senate Policy SP.12.007) establishes the following interpretations for letter grades:
+
+- **A**: Student performance has been outstanding and indicates an exceptional degree of academic achievement in meeting learning outcomes and course requirements.
+- **B**: Student performance has been at a high level and indicates solid academic achievement in meeting learning outcomes and course requirements.
+- **C**: Student performance has been adequate and indicates satisfactory academic achievement in meeting learning outcomes and course requirements.
+- **D**: Student performance has been less than adequate and indicates deficiencies in meeting the learning outcomes and/or course requirements. 
+- **F**: Student performance has been unacceptable and indicates a failure to meet the learning outcomes and/or course requirements. 
+
+You will demonstrate your understanding of Learning Targeets through weekly or biweekly in-class quizzes (which you may retake without penalty, see below), in-class midterm exams, and the final. These assessments will focus on Core and Supplementary Learning Targets. Your work on these assessments will be evaluated on a Satisfactory/Unsatisfactory basis and will be returned to you with comments aimed at helping your improve your understanding.
+
+To succeed in this course, you will need to demonstrate to me that you understand a significant subset of this course's 27 Learning Targets. These learning targets consist of
+
+ - 18 Core Learning Targets, and 
+ - 6 Supplementary Learning Targets Each Learning Target is described in detail in Section 1.1, above. 
+ 
+To pass the class you need to: 
+1. Demonstrate mastery on 5 Core Learning Targets.
+2. Demonstrate mastery on 0 Supplementary Learning Targets, and
+
+To earn an C you need to:
+1. Demonstrate mastery on 11-12 Core Learning Targets.
+2. demonstrate mastery on 0-1 Supplementary Learning Targets, and 
+
+To earn an B- you need to:
+1. Demonstrate mastery on 16-18 Core Learning Targets.
+2. demonstrate mastery on 0-2 Supplementary Learning Targets, and 
+
+To earn an A- you need to:
+1. Demonstrate mastery on all (18) Core Learning Targets.
+2. demonstrate mastery on all (6) Supplementary Learning Targets, and 
+
+In addition, your grade is based on how many Learning Target you learn in each area. The table below (which is also a checklist for you) provides a guide to this relationship. The table is organized into columns by learning Target area, and rows by the final course grade. Starting from the bottom of each column, use the table by checking off a box each time you earn at least an 'S' on a learning target. When you fill up all the boxes in a row, you have met the minimal requirement for earning that row's grade. (The number in the right-most colums are the cumulative number of checked boxes required for that row's grade.) Aw BCpass
+
+Applications 22 22 22 22
+
+Techniques 2 2 22 22
+
+Numerical Series 2 2 2 2 2 2 --- 2
+
+Pwr Series 2 (24) 2 (18) 2 (12) --- (5)
+
+There will also be a final exam that will also allow you to demonstrate understanding on some learning targets that will not be of your choice. Performance on the final can impact your course grade in either a positive or negative way.
+
+### Final Exam
+
+The course will have a common final. This is a final exam that is taken by all students in both sections of Calculus II. Your exam on the final will be assigned using a curve that is based on all the scores across both sections. The curve will be no steeper than 90-80-70-60.
+
+If your final exam grade is higher than the grade you earn through learning target quizzes, your course grade will be increased by one increments (on the plus-or-minus continuum). If your final exam score is lower, your course grade will be decrease by one or two increments.

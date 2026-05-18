@@ -12,7 +12,9 @@ website:
   title: "Math 151 - Calculus II"
   sidebar:
     contents:
-    - text: "Home"
-      file: index.qmd
-    - text: "Syllabus"
-      file: syllabus/syllabus.qmd
+      - text: "Home"
+        file: index.qmd
+      - text: "Syllabus"
+        file: syllabus/syllabus.qmd
+      - text: "Grading Guide"
+        file: grading/grading-guide.qmd
