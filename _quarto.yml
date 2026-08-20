@@ -17,6 +17,6 @@ website:
       - text: "Syllabus"
         file: syllabus/syllabus.qmd
       - text: "Course Grading"
-        file: course-grading.qmd
+        file: grading/course-grading.qmd
       - text: "Learning Targets"
-        file: course-learning-targets.qmd
+        file: grading/course-learning-targets.qmd

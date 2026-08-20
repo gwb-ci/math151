@@ -11,8 +11,10 @@ format:
  
 Professor contact information is available on CI Learn as an announcement.
 
-**Course meetings:** Tuesday and Thursday, 10:00–11:50am  
+**Course meetings:** Tuesday and Thursday, 10:00–11:50am
+
 **Course textbook:** [OpexStax Calculus Volume 2](https://openstax.org/details/books/calculus-volume-2)
+
 **Course website:** CI Learn
 
 ## Math 151 Specific Information
