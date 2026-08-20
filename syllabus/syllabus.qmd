@@ -74,6 +74,41 @@ The course divides into three sections:
 Two themes pervade the course: what to do when the Fundamental Theorem of
 Calculus does or does not work; and that limits can turn approximations into equalities.
 
+### Class Schedule
+
+| Week | Date | Chapter | Notes |
+|:----:|:----:|:-------:|-------|
+| 1 | Aug 25 | 1.1, 1.2, 1.3 |   |
+| 1 | Aug 27 | 1.3, 1.4 |  |
+| 2 | Sep 1 | 1.5, 1.6, 1.7 |  |
+| 2 | Sep 3 | 2.1, 2.2 |  |
+| 3 | Sep 8 | 2.2 | |
+| 3 | Sep 10 | 2.3 |   |
+| 4 | Sep 15 |  | Target Learning Assessment **A1**, **A2** |
+| 4 | Sep 17 | 2.4 |   |
+| 5 | Sep 22 | 2.5, 2.6 |  |
+| 5 | Sep 24 | 2.7, 2.8  |   |
+| 6 | Sep 29 | 2.5 | Target Learning Assessment **A3**, **A4** /*, **A5** /* |
+| 6 | Oct 1 |  3.1, 3.4 |   |
+| 7 | Oct 6 | 3.2, 3.3 |  |
+| 7 | Oct 8 |  |  3.7 |
+| 8 | Oct 13 |  | Target Learning Assessment **I1**, **I2**, **I4** /* |
+| 8 | Oct 15 | 3.6 |   |
+| 9 | Oct 20 | 3.6 |  |
+| 9 | Oct 22 |  5.1 |   |
+| 10 | Oct 27 |  | Target Learning Assessment **I3**, **N1**, **N2** |
+| 10 | Oct 29 | 5.2 |   |
+| 11 | Nov 3 | 5.3, 5.4 |  |
+| 11 | Nov 5 | 5.5, 5.6 |  |
+| 12 | Nov 10 |   | Target Learning Assessment **S1**, **S2**, **S3** |
+| 12 | Nov 12 | 6.1 |   |
+| 13 | Nov 17 | 6.2 | |
+| 13 | Nov 19 | 6.3 |   |
+| 14 | Nov 24 |  |  Target Learning Assessment **P1**, **P2** /*, **student choice** |
+| 14 | Nov 27 |  | **Thanksgiving** - Campus Closed  |
+| 15 | Dec 1 | 6.4 |  |
+| 15 | Dec 3 |  |  Target Learning Assessment Lab |
+
 ## CSU Channel Islands Information
 
 ### Degree Planning
@@ -125,3 +160,39 @@ There is a distinction between collaboration and copying.  Collaboration is enco
 ### Disclaimer on syllabus changes
 
 Information on this syllabus is subject to change. I will make such changes known in class and on CI Learn.
+
+
+## Class Schedule
+
+| Week | Date | Chapter | Notes |
+|:----:|:----:|:-------:|-------|
+| 1 | Aug 25 | 1.1, 1.2, 1.3 |   |
+| 1 | Aug 27 | 1.3, 1.4 |  |
+| 2 | Sep 1 | 1.5, 1.6, 1.7 |  |
+| 2 | Sep 3 | 2.1, 2.2 |  |
+| 3 | Sep 8 | 2.2 | |
+| 3 | Sep 10 | 2.3 |   |
+| 4 | Sep 15 |  | Target Learning Assessment **A1**, **A2** |
+| 4 | Sep 17 | 2.4 |   |
+| 5 | Sep 22 | 2.5, 2.6 |  |
+| 5 | Sep 24 | 2.7, 2.8  |   |
+| 6 | Sep 29 | 2.5 | Target Learning Assessment **A3**, **A4** /*, **A5** /* |
+| 6 | Oct 1 |  3.1, 3.4 |   |
+| 7 | Oct 6 | 3.2, 3.3 |  |
+| 7 | Oct 8 |  |  3.7 |
+| 8 | Oct 13 |  | Target Learning Assessment **I1**, **I2**, **I4** /* |
+| 8 | Oct 15 | 3.6 |   |
+| 9 | Oct 20 | 3.6 |  |
+| 9 | Oct 22 |  5.1 |   |
+| 10 | Oct 27 |  | Target Learning Assessment **I3**, **N1**, **N2** |
+| 10 | Oct 29 | 5.2 |   |
+| 11 | Nov 3 | 5.3, 5.4 |  |
+| 11 | Nov 5 | 5.5, 5.6 |  |
+| 12 | Nov 10 |   | Target Learning Assessment **S1**, **S2**, **S3** |
+| 12 | Nov 12 | 6.1 |   |
+| 13 | Nov 17 | 6.2 | |
+| 13 | Nov 19 | 6.3 |   |
+| 14 | Nov 24 |  |  Target Learning Assessment **P1**, **P2** /*, **student choice** |
+| 14 | Nov 27 |  | **Thanksgiving** - Campus Closed  |
+| 15 | Dec 1 | 6.4 |  |
+| 15 | Dec 3 |  |  Target Learning Assessment Lab |

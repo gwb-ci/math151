@@ -1,10 +1,13 @@
 ---
-title: "Math 151 Course Learning Targets"
+title: "Math 151 Grading"
 format:
   html:
     toc: true
     math: mathjax
-  pdf: default
+  pdf:
+    include-in-header:
+      text: |
+        \usepackage{amssymb}
 ---
 
 
@@ -18,7 +21,7 @@ To successfully learn the Calculus, you need to demonstrate that you understand 
 - **S**: Sequences and Series
 - **P**: Power Series 
 
-Each of these groups are described in detail below. Learning Targets whose abbreviations are marked with a $\bigstar$ are Supplemental Learning Targets. The Learning Targets with an 'MP' in their abbreviation are Mathematical Practice Learning Targets. The rest are Core Learning Targets. Your grade in the course will be calcualted, primarily, from the number and type of learning targets you master.
+Each of these groups are described in detail below. Learning Targets whose abbreviations are marked with a \* are Supplemental Learning Targets. The Learning Targets with an 'MP' in their abbreviation are Mathematical Practice Learning Targets. The rest are Core Learning Targets. Your grade in the course will be calcualted, primarily, from the number and type of learning targets you master.
 
 
 ## (A) Applications of integration
@@ -44,7 +47,7 @@ Newton and Leibniz are immortal because the mathematics they discovered (i.e., t
 - I know how the volume of the solid is the definite integral of the cross-sectional areas, and I know how to set the limits of that definite integral.
 - I am familiar with Cavalierri's Principle and how it describes the relationship between volume and cross-sectional area.
 
-**A4** $\bigstar$  Volumes of solids of revolution.
+**A4** \*  Volumes of solids of revolution.
 
 - I understand how to create a solid of revolution by rotating a region between an axis and a curve around the axis of rotation.
 - I can draw a solid of revolution and a cross-section of that solid.
@@ -52,7 +55,7 @@ Newton and Leibniz are immortal because the mathematics they discovered (i.e., t
 - I can write the volume of the solid of revolution as a definite integral of the area of the cross-sections, and I know how to set the limits of that definite integral.
 - I can apply the above ideas to the situation where our region in bounded by two curves and rotated about an axis that does not intersect that region. (And I know why this is called the washer method.)
 
-**A5** $\bigstar$ : Arc-length and surface area of a solid of revolution
+**A5** \* : Arc-length and surface area of a solid of revolution
 
 - I understand how to apply the 'cut-up-and-add-up' principle to approximate tarc length.
 -  I understand how to apply the 'cut-up-and-add-up' principle to approximate the surface area of a solid of revolution using frustrums.
@@ -62,13 +65,13 @@ Newton and Leibniz are immortal because the mathematics they discovered (i.e., t
 - I can use the integral formula to calculate surface areas of revolution, by hand and with computer.
 
 
-**A6** $\bigstar$ : Calculating work done by a variable force.
+**A6** \* : Calculating work done by a variable force.
 
 - I understand how to apply the 'cut-up-and-add-up' principle to approximate the total work done in an experiment.
 - I understand the role that approximating a continuous function by locally constant functions plays in the derivation of the definite integral formula.
 - I can use the integral formula to calculate examples.
 
-**A7** $\bigstar$ : Calculating the centroid of a planar region.
+**A7** \* : Calculating the centroid of a planar region.
 
 - I can calculate the principle of symmstry to find the centroid of a symmetric region (e.g., circle, oval, rectangle).
 - I know how to use the Archimedian Principle to calculate the balance point of a finite set of point masses.
@@ -81,6 +84,7 @@ Newton and Leibniz are immortal because the mathematics they discovered (i.e., t
 We can't let computer algebra systems, like SageMath, have all the fun. We need to learn how to leverage our knowledge of algebra (e.g., completing the square) and trigonometry (e.g., Pythagorean identities, differentiation formulas) in service of antidifferentiation. In this section of the course, we learn some fundamental techniques for integration. Together the techniques allow us to antidifferentiate any rational function.
 
 **I1**: Integration by parts in indefinite and definite integrals.
+
 - I know how to execute the technique we call integration by parts.
 - I know what the mnemonic LIATE means and how it guides the choice of functions in integration by parts.
 - I know how to use integration by parts in the context of a definite integral.
@@ -102,7 +106,7 @@ We can't let computer algebra systems, like SageMath, have all the fun. We need 
 - I can use the comparison test for improper integrals to determine convergence and divergence.
 - I can recognize and work with the case that our improper integral requries a multiple limits.
 
- **I4** $\bigstar$ : Integrating rational functions using the technique of partial fraction decomposition.
+ **I4** \* : Integrating rational functions using the technique of partial fraction decomposition.
 
 - I know the pattern used to establish a partial fraction decomposition of a rational function. Specifically, 2 I understand how the multiplicity of a denominator's factors effect the decomposition and the expressions that appear in the numerators, and 2 I understand how the degree of a denominator's factors effects the decomposition (e.g., linear or irreducible quadratic).
 - I understand how to find the unknown parameters in a partial fraction decompoisiton in one of two ways: equating coefficients, sampling values.
@@ -170,7 +174,7 @@ We will apply the principles learned in our study of sequences and series of rea
 - I know when two power series can be combined algebraically and how to create those combinations.
 - I know how to apply techniques from the Calculus to power series. 
 
-**P2** $\bigstar$ : Taylor series, Maclaurin series, and approximations.
+**P2** \* : Taylor series, Maclaurin series, and approximations.
 
 - I know what a Taylor Series is. I know what a Maclaurin series is.
 - Given an infintely differentiable function f (x) and a real number $x_0$ , I can compute the coefficients to get the associated Maclaurin Series and Taylor Series.
