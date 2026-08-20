@@ -16,5 +16,7 @@ website:
         file: index.qmd
       - text: "Syllabus"
         file: syllabus/syllabus.qmd
-      - text: "Grading Guide"
-        file: grading/grading-guide.qmd
+      - text: "Course Grading"
+        file: course-grading.qmd
+      - text: "Learning Targets"
+        file: course-learning-targets.qmd
