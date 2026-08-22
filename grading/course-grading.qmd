@@ -18,7 +18,7 @@ This course uses specification grading, which may be new to you. Your grade in t
 
 ## Course Learning Targets
 
-To successfully learn the Calculus, you need to demonstrate that you understand some of the following Learning Area. See @sec-grading-targets below, for what 'some' means. these learning targets are divided into five groups that represent different core principles in the course. They are:
+To successfully learn the Calculus, you need to demonstrate that you understand the following Target Learning Area. These learning targets are divided into five groups that represent different core principles in the course. They are:
 
 - **A**: Applications of integration  
 - **I**: Fundamental Concepts and Techniques in Integration
@@ -31,7 +31,7 @@ Each of these groups are described in detail below. Learning Targets whose abbre
 
 ### (A) Applications of integration
 
-Newton and Leibniz are immortal because the mathematics they discovered (i.e., the Calculus) can be used to tell us so much about the world. In this section, we learn how to use the concept of the definite integral to create formulas that tell us other things. Just like using the sum or rectangular areas to approximate the area under a curve, all derivations use the 'cut-up-and-add-up' approach that starts with approximating the phenomena under investigation and then pass to a limit to get a definite integral. The student needs to know how to do derive some such definite integral formulas and needs to know how to use many others. We also flirt with infinity for the first time by learning about improper integrals. 
+Newton and Leibniz are immortal because the mathematics they discovered (i.e., the Calculus) can be used to tell us so much about the world. In this section, we learn how to use the concept of the definite integral to create formulas that tell us other things. Just like using the sum or rectangular areas to approximate the area under a curve, all derivations use the 'cut-up-and-add-up' approach that starts with approximating the phenomena under investigation and then pass to a limit to get a definite integral. The student needs to know how to do derive some such definite integral formulas and needs to know how to use many others. We also explore infinity for the first time by learning about improper integrals. 
 
 - **A1**: Substitution and Integration Rules
 - **A2**: The Average Value of a Continuous Function and Area between Curves

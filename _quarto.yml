@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  render:
+  - "**/*.qmd"
+  - "!syllabus/"
 
 format:
   html:
@@ -14,8 +17,6 @@ website:
     contents:
       - text: "Home"
         file: index.qmd
-      - text: "Syllabus"
-        file: syllabus/syllabus.qmd
       - text: "Course Grading"
         file: grading/course-grading.qmd
       - text: "Learning Targets"
