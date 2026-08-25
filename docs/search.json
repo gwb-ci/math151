@@ -74,112 +74,176 @@
     "href": "classes/01/slides.html#welcome-to-math-151-calculus-ii",
     "title": "Course Introduction",
     "section": "Welcome to Math 151 Calculus II",
-    "text": "Welcome to Math 151 Calculus II\nWelcome to Math 151 Calculus II! I am Prof. Geoffrey Buhl, and I am you instructor for this semester. Buhl rhymes with fuel.\nClass Session Goals:\n\nMeet Classmates and work in small groups.\nLearn about this course and my expectations.\nReview of Approximating Areas and Definition of the Definite Integral."
+    "text": "Welcome to Math 151 Calculus II\nWelcome to Math 151 Calculus II! I am Prof. Geoffrey Buhl, and I am you instructor for this semester. Buhl rhymes with fuel.\nClass Session Goals:\n\nMeet Classmates and work in small groups.\nLearn about this course and my expectations.\nReview of Approximating Areas and Definition of the Definite Integral.",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#syllabus-activity",
     "href": "classes/01/slides.html#syllabus-activity",
     "title": "Course Introduction",
     "section": "Syllabus Activity",
-    "text": "Syllabus Activity\n\nTake a few minutes to introduce yourselves and share what other courses you are taking this semester.\nAs a group, take 10–15 minutes to look over the syllabus and formulate four questions your group would like to ask about the course.\nAs a whole class, groups will ask questions and I will answer them."
+    "text": "Syllabus Activity\n\nTake a few minutes to introduce yourselves and share what other courses you are taking this semester.\nAs a group, take 10–15 minutes to look over the syllabus and formulate four questions your group would like to ask about the course.\nAs a whole class, groups will ask questions and I will answer them.",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#grading-structureactivity",
     "href": "classes/01/slides.html#grading-structureactivity",
     "title": "Course Introduction",
     "section": "Grading StructureActivity",
-    "text": "Grading StructureActivity\n\nTake a few minutes to introduce yourselves and share what other courses you are taking this semester.\nAs a group, take 10–15 minutes to look over the grading and formulate four questions your group would like to ask about the course.\nAs a whole class, groups will ask questions and I will answer them."
+    "text": "Grading StructureActivity\n\nTake a few minutes to introduce yourselves and share what other courses you are taking this semester.\nAs a group, take 10–15 minutes to look over the grading and formulate four questions your group would like to ask about the course.\nAs a whole class, groups will ask questions and I will answer them.",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#advice-for-students",
     "href": "classes/01/slides.html#advice-for-students",
     "title": "Course Introduction",
     "section": "Advice for students",
-    "text": "Advice for students\n\nStart homework early, do it consistently, and redo missed or difficult problems since homework closely matches exam questions.\nAttend every lecture, pay attention, take clear notes, and ask questions to fully understand concepts and proofs."
+    "text": "Advice for students\n\nStart homework early, do it consistently, and redo missed or difficult problems since homework closely matches exam questions.\nAttend every lecture, pay attention, take clear notes, and ask questions to fully understand concepts and proofs.",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#how-i-will-teach-this-course",
     "href": "classes/01/slides.html#how-i-will-teach-this-course",
     "title": "Course Introduction",
     "section": "How I will teach this course",
-    "text": "How I will teach this course\nI cannot cover everything in the text or in a given chapter or section. I will focus on the most important concepts and proofs, and I will provide additional examples and exercises to help you understand the material. I will also provide additional resources and references for further study. Ask questions in class, during office hours, or via email. Part of you preparation for the class is to read the text beforehand."
+    "text": "How I will teach this course\nI cannot cover everything in the text or in a given chapter or section. I will focus on the most important concepts and proofs, and I will provide additional examples and exercises to help you understand the material. I will also provide additional resources and references for further study. Ask questions in class, during office hours, or via email. Part of you preparation for the class is to read the text beforehand.",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#idea-approximating-areas-under-curves",
     "href": "classes/01/slides.html#idea-approximating-areas-under-curves",
     "title": "Course Introduction",
     "section": "Idea: Approximating Areas under curves",
-    "text": "Idea: Approximating Areas under curves\nUse Rectanges or other shapes to approximate the area under a curve. If we use more rectangles, we should get a better approximation. What is there are between the graph of \\(f(x)=x^2\\) and the \\(x\\)-axis from \\(x=1\\) to \\(x=3\\)?"
+    "text": "Idea: Approximating Areas under curves\nUse Rectanges or other shapes to approximate the area under a curve. If we use more rectangles, we should get a better approximation. What is there are between the graph of \\(f(x)=x^2\\) and the \\(x\\)-axis from \\(x=1\\) to \\(x=3\\)?",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#interactive-approximating-areas",
     "href": "classes/01/slides.html#interactive-approximating-areas",
     "title": "Course Introduction",
     "section": "Interactive Approximating Areas",
-    "text": "Interactive Approximating Areas\nHere are a couple of websites that can help you visualize Riemann sums and the definite integral:\nExplore the StatsLG Riemann Sum Visualizer.\nExplore the Riemann Sum Slider."
+    "text": "Interactive Approximating Areas\nHere are a couple of websites that can help you visualize Riemann sums and the definite integral:\nExplore the StatsLG Riemann Sum Visualizer.\nExplore the Riemann Sum Slider.",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#definition-riemann-sum",
     "href": "classes/01/slides.html#definition-riemann-sum",
     "title": "Course Introduction",
     "section": "Definition: Riemann Sum",
-    "text": "Definition: Riemann Sum\nLet \\(f(x)\\) be defined on a closed interval \\([a,b]\\), and let \\(P\\) be a regular partition of \\([a,b]\\).\nLet \\(\\Delta x\\) be the width of each subinterval \\([x_{i-1},x_i]\\). For each \\(i\\), let \\(x_i^*\\) be any point in \\([x_{i-1},x_i]\\).\nA Riemann sum for \\(f(x)\\) is defined as\n\\[\n\\boxed{\n\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n}\n\\]"
+    "text": "Definition: Riemann Sum\nLet \\(f(x)\\) be defined on a closed interval \\([a,b]\\), and let \\(P\\) be a regular partition of \\([a,b]\\).\nLet \\(\\Delta x\\) be the width of each subinterval \\([x_{i-1},x_i]\\). For each \\(i\\), let \\(x_i^*\\) be any point in \\([x_{i-1},x_i]\\).\nA Riemann sum for \\(f(x)\\) is defined as\n\\[\n\\boxed{\n\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#definition-area-under-a-curve",
     "href": "classes/01/slides.html#definition-area-under-a-curve",
     "title": "Course Introduction",
     "section": "Definition: Area Under a Curve",
-    "text": "Definition: Area Under a Curve\nLet \\(f(x)\\) be a continuous, nonnegative function on an interval \\([a,b]\\), and let\n\\[\n\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n\\]\nbe a Riemann sum for \\(f(x)\\).\nThen the area under the curve \\(y=f(x)\\) on \\([a,b]\\) is\n\\[\n\\boxed{\nA=\\lim_{n\\to\\infty}\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n}\n\\]"
+    "text": "Definition: Area Under a Curve\nLet \\(f(x)\\) be a continuous, nonnegative function on an interval \\([a,b]\\), and let\n\\[\n\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n\\]\nbe a Riemann sum for \\(f(x)\\).\nThen the area under the curve \\(y=f(x)\\) on \\([a,b]\\) is\n\\[\n\\boxed{\nA=\\lim_{n\\to\\infty}\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#definition-definite-integral",
     "href": "classes/01/slides.html#definition-definite-integral",
     "title": "Course Introduction",
     "section": "Definition: Definite Integral",
-    "text": "Definition: Definite Integral\nIf \\(f(x)\\) is defined on an interval \\([a,b]\\), the definite integral of \\(f\\) from \\(a\\) to \\(b\\) is\n\\[\n\\boxed{\n\\int_a^b f(x)\\,dx\n=\n\\lim_{n\\to\\infty}\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n}\n\\tag{1.8}\n\\]\nprovided the limit exists.\nIf this limit exists, then \\(f(x)\\) is said to be integrable on \\([a,b]\\), or simply an integrable function."
+    "text": "Definition: Definite Integral\nIf \\(f(x)\\) is defined on an interval \\([a,b]\\), the definite integral of \\(f\\) from \\(a\\) to \\(b\\) is\n\\[\n\\boxed{\n\\int_a^b f(x)\\,dx\n=\n\\lim_{n\\to\\infty}\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n}\n\\tag{1.8}\n\\]\nprovided the limit exists.\nIf this limit exists, then \\(f(x)\\) is said to be integrable on \\([a,b]\\), or simply an integrable function.",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#properties-of-the-definite-integral-bounds",
     "href": "classes/01/slides.html#properties-of-the-definite-integral-bounds",
     "title": "Course Introduction",
     "section": "Properties of the Definite Integral: Bounds",
-    "text": "Properties of the Definite Integral: Bounds\nIf \\(f\\) is integrable, then an interval with zero width has integral zero:\n\\[\n\\boxed{\n\\int_a^a f(x)\\,dx=0\n}\n\\]\nReversing the limits changes the sign:\n\\[\n\\boxed{\n\\int_b^a f(x)\\,dx\n=\n-\\int_a^b f(x)\\,dx\n}\n\\]\nThe order of the limits determines the orientation of the integral."
+    "text": "Properties of the Definite Integral: Bounds\nIf \\(f\\) is integrable, then an interval with zero width has integral zero:\n\\[\n\\boxed{\n\\int_a^a f(x)\\,dx=0\n}\n\\]\nReversing the limits changes the sign:\n\\[\n\\boxed{\n\\int_b^a f(x)\\,dx\n=\n-\\int_a^b f(x)\\,dx\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#properties-of-the-definite-integral-linearity",
     "href": "classes/01/slides.html#properties-of-the-definite-integral-linearity",
     "title": "Course Introduction",
     "section": "Properties of the Definite Integral: Linearity",
-    "text": "Properties of the Definite Integral: Linearity\nThe integral of a sum or difference can be separated:\n\\[\n\\int_a^b[f(x)+g(x)]\\,dx\n=\n\\int_a^b f(x)\\,dx+\\int_a^b g(x)\\,dx\n\\]\n\\[\n\\int_a^b[f(x)-g(x)]\\,dx\n=\n\\int_a^b f(x)\\,dx-\\int_a^b g(x)\\,dx\n\\]\nA constant factor can be moved outside the integral:\n\\[\n\\int_a^b c f(x)\\,dx\n=\nc\\int_a^b f(x)\\,dx\n\\]"
+    "text": "Properties of the Definite Integral: Linearity\nThe integral of a sum or difference can be separated:\n\\[\n\\int_a^b[f(x)+g(x)]\\,dx\n=\n\\int_a^b f(x)\\,dx+\\int_a^b g(x)\\,dx\n\\]\n\\[\n\\int_a^b[f(x)-g(x)]\\,dx\n=\n\\int_a^b f(x)\\,dx-\\int_a^b g(x)\\,dx\n\\]\nA constant factor can be moved outside the integral:\n\\[\n\\int_a^b c f(x)\\,dx\n=\nc\\int_a^b f(x)\\,dx\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#properties-of-the-definite-integral-adjacent-intervals",
     "href": "classes/01/slides.html#properties-of-the-definite-integral-adjacent-intervals",
     "title": "Course Introduction",
     "section": "Properties of the Definite Integral: Adjacent Intervals",
-    "text": "Properties of the Definite Integral: Adjacent Intervals\nAn integral can be split at any point \\(c\\):\n\\[\n\\boxed{\n\\int_a^b f(x)\\,dx\n=\n\\int_a^c f(x)\\,dx\n+\n\\int_c^b f(x)\\,dx\n}\n\\]\nFor example, if\n\\[\n\\int_0^8 f(x)\\,dx=10\n\\qquad\\text{and}\\qquad\n\\int_0^5 f(x)\\,dx=5,\n\\]\nthen\n\\[\n\\int_5^8 f(x)\\,dx=10-5=5.\n\\]"
+    "text": "Properties of the Definite Integral: Adjacent Intervals\nAn integral can be split at any point \\(c\\):\n\\[\n\\boxed{\n\\int_a^b f(x)\\,dx\n=\n\\int_a^c f(x)\\,dx\n+\n\\int_c^b f(x)\\,dx\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/slides.html#next-steps",
     "href": "classes/01/slides.html#next-steps",
     "title": "Course Introduction",
     "section": "Next Steps",
-    "text": "Next Steps\n\nLook over the “Welcome! Students - Start Here!” Module in CI Learn.\nLook at and work on the W1 (Week 1) Learner Survey Info Quiz on CI Learn.\nLook at and work on W1 Introduce yourself Assignment in CI Learn."
+    "text": "Next Steps\n\nLook over the “Welcome! Students - Start Here!” Module in CI Learn.\nLook at and work on the W1 (Week 1) Learner Survey Info Quiz on CI Learn.\nLook at and work on W1 Introduce yourself Assignment in CI Learn.",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
   },
   {
     "objectID": "classes/01/worksheet.html",
     "href": "classes/01/worksheet.html",
     "title": "TBD",
     "section": "",
-    "text": "Hint"
+    "text": "Hint",
+    "crumbs": [
+      "Class Material",
+      "TBD"
+    ]
   },
   {
     "objectID": "classes/01/worksheet.html#null",
     "href": "classes/01/worksheet.html#null",
     "title": "TBD",
     "section": "",
-    "text": "Hint"
+    "text": "Hint",
+    "crumbs": [
+      "Class Material",
+      "TBD"
+    ]
   },
   {
     "objectID": "grading/course-learning-targets.html",

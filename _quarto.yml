@@ -2,14 +2,8 @@ project:
   type: website
   output-dir: docs
   render:
-  - "**/*.qmd"
-  - "!syllabus/"
-
-format:
-  html:
-    theme: cosmo
-    toc: true
-    math: mathjax
+    - "**/*.qmd"
+    - "!syllabus/**"
 
 website:
   title: "Math 151 - Calculus II"
@@ -21,3 +15,15 @@ website:
         file: grading/course-grading.qmd
       - text: "Learning Targets"
         file: grading/course-learning-targets.qmd
+      - section: "Class Material"
+        contents:
+          - file: classes/01/worksheet.qmd
+          - file: classes/01/slides.qmd
+          - file: classes/02/worksheet.qmd
+          - file: classes/02/slides.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    html-math-method: mathjax
