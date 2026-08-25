@@ -1,0 +1,217 @@
+---
+title: "Course Introduction"
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+---
+
+# Course Introduction
+
+
+
+
+## Welcome to Math 151 Calculus II
+
+Welcome to Math 151 Calculus II! I am Prof. Geoffrey Buhl, and I am you instructor for this semester. Buhl rhymes with fuel.
+
+Class Session Goals:
+
+- Meet Classmates and work in small groups.
+- Learn about this course and my expectations.
+- Review of Approximating Areas and Definition of the Definite Integral.
+
+---
+
+## Syllabus Activity
+
+1. Take a few minutes to introduce yourselves and share what other
+   courses you are taking this semester.
+
+2. As a group, take 10–15 minutes to look over the syllabus and
+   formulate four questions your group would like to ask about the course.
+
+3. As a whole class, groups will ask questions and I will answer them.
+
+---
+
+
+## Grading StructureActivity
+
+1. Take a few minutes to introduce yourselves and share what other
+   courses you are taking this semester.
+
+2. As a group, take 10–15 minutes to look over the grading and
+   formulate four questions your group would like to ask about the course.
+
+3. As a whole class, groups will ask questions and I will answer them.
+
+---
+
+## Advice for students
+
+
+- Start homework early, do it consistently, and redo missed or difficult
+problems since homework closely matches exam questions.
+- Attend every lecture, pay attention, take clear notes, and ask questions
+to fully understand concepts and proofs.
+
+---
+
+
+## How I will teach this course
+
+
+I cannot cover everything in the text or in a given chapter or section.  I will focus on the most important concepts and proofs, and I will provide additional examples and exercises to help you understand the material.  I will also provide additional resources and references for further study.  Ask questions in class, during office hours, or via email.  Part of you preparation for the class is to read the text beforehand.
+
+---
+
+## Idea: Approximating Areas under curves
+
+Use Rectanges or other shapes to approximate the area under a curve.  If we use more rectangles, we should get a better approximation.  What is there are between the graph of $f(x)=x^2$ and the $x$-axis from $x=1$ to $x=3$?  
+
+---
+
+## Interactive Approximating Areas 
+
+Here are a couple of websites that can help you visualize Riemann sums and the definite integral:
+
+Explore the [StatsLG Riemann Sum Visualizer](https://statslg.com/demo/riemann.html){target="_blank"}.
+
+Explore the [Riemann Sum Slider](https://www.calclearn.org/interactives/riemann-sum-slider){target="_blank"}.
+
+---
+
+## Definition: Riemann Sum
+
+Let $f(x)$ be defined on a closed interval $[a,b]$, and let $P$ be a regular partition of $[a,b]$.
+
+Let $\Delta x$ be the width of each subinterval $[x_{i-1},x_i]$. For each $i$, let $x_i^*$ be any point in $[x_{i-1},x_i]$.
+
+A **Riemann sum** for $f(x)$ is defined as
+
+$$
+\boxed{
+\sum_{i=1}^{n} f(x_i^*)\,\Delta x
+}
+$$
+
+
+---
+
+## Definition: Area Under a Curve
+
+Let $f(x)$ be a continuous, nonnegative function on an interval $[a,b]$, and let
+
+$$
+\sum_{i=1}^{n} f(x_i^*)\,\Delta x
+$$
+
+be a Riemann sum for $f(x)$.
+
+Then the **area under the curve** $y=f(x)$ on $[a,b]$ is
+
+$$
+\boxed{
+A=\lim_{n\to\infty}\sum_{i=1}^{n} f(x_i^*)\,\Delta x
+}
+$$
+
+---
+
+## Definition: Definite Integral
+
+If $f(x)$ is defined on an interval $[a,b]$, the **definite integral** of $f$ from $a$ to $b$ is
+
+$$
+\boxed{
+\int_a^b f(x)\,dx
+=
+\lim_{n\to\infty}\sum_{i=1}^{n} f(x_i^*)\,\Delta x
+}
+\tag{1.8}
+$$
+
+provided the limit exists.
+
+If this limit exists, then $f(x)$ is said to be **integrable on $[a,b]$**, or simply an **integrable function**.
+
+---
+
+## Properties of the Definite Integral: Bounds
+
+If $f$ is integrable, then an interval with zero width has integral zero:
+
+$$
+\boxed{
+\int_a^a f(x)\,dx=0
+}
+$$
+
+Reversing the limits changes the sign:
+
+$$
+\boxed{
+\int_b^a f(x)\,dx
+=
+-\int_a^b f(x)\,dx
+}
+$$
+
+
+
+---
+
+## Properties of the Definite Integral: Linearity
+
+The integral of a sum or difference can be separated:
+
+$$
+\int_a^b[f(x)+g(x)]\,dx
+=
+\int_a^b f(x)\,dx+\int_a^b g(x)\,dx
+$$
+
+$$
+\int_a^b[f(x)-g(x)]\,dx
+=
+\int_a^b f(x)\,dx-\int_a^b g(x)\,dx
+$$
+
+A constant factor can be moved outside the integral:
+
+$$
+\int_a^b c f(x)\,dx
+=
+c\int_a^b f(x)\,dx
+$$
+
+---
+
+## Properties of the Definite Integral: Adjacent Intervals
+
+An integral can be split at any point $c$:
+
+$$
+\boxed{
+\int_a^b f(x)\,dx
+=
+\int_a^c f(x)\,dx
++
+\int_c^b f(x)\,dx
+}
+$$
+
+
+
+---
+
+## Next Steps
+
+
+- Look over the "Welcome! Students - Start Here!" Module in CI Learn.
+- Look at and work on the W1 (Week 1) Learner Survey Info Quiz on CI
+Learn.
+- Look at and work on W1 Introduce yourself Assignment in CI Learn.
+
+---
