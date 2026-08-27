@@ -13,7 +13,7 @@ format:
 
 # Math 151 Course Learning Targets
 
-To successfully learn the Calculus, you need to demonstrate that you understand some of the following Learning Targets. See @sec-grading-targets below, for what 'some' means. these learning targets are divided into five groups that represent different core principles in the course. They are:
+To successfully learn the Calculus, you need to demonstrate that you understand of the following Learning Targets. See These learning targets are divided into five groups that represent different core principles in the course. They are:
 
 - **A**: Applications of integration  
 - **I**: Fundamental Concepts and Techniques in Integration

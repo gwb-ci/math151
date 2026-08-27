@@ -1,0 +1,320 @@
+---
+title: "Fundemental Theorem of Calculus"
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+---
+
+
+
+
+## Fundemental Theorem of Calculus
+
+
+Class Session Goals:
+
+
+- Definition of the Definite Integral and Properties
+- Fundemental Theorem of Calculus, two versions
+- U-substitution Rule for Integrals
+
+---
+
+
+
+## Definition: Definite Integral
+
+If $f(x)$ is defined on an interval $[a,b]$, the **definite integral** of $f$ from $a$ to $b$ is
+
+$$
+\boxed{
+\int_a^b f(x)\,dx
+=
+\lim_{n\to\infty}\sum_{i=1}^{n} f(x_i^*)\,\Delta x
+}
+\tag{1.8}
+$$
+
+provided the limit exists.
+
+If this limit exists, then $f(x)$ is said to be **integrable on $[a,b]$**, or simply an **integrable function**.
+
+---
+
+## Properties of the Definite Integral: Bounds
+
+If $f$ is integrable, then an interval with zero width has integral zero:
+
+$$
+\boxed{
+\int_a^a f(x)\,dx=0
+}
+$$
+
+Reversing the limits changes the sign:
+
+$$
+\boxed{
+\int_b^a f(x)\,dx
+=
+-\int_a^b f(x)\,dx
+}
+$$
+
+
+
+---
+
+## Properties of the Definite Integral: Linearity
+
+The integral of a sum or difference can be separated:
+
+$$
+\int_a^b[f(x)+g(x)]\,dx
+=
+\int_a^b f(x)\,dx+\int_a^b g(x)\,dx
+$$
+
+$$
+\int_a^b[f(x)-g(x)]\,dx
+=
+\int_a^b f(x)\,dx-\int_a^b g(x)\,dx
+$$
+
+A constant factor can be moved outside the integral:
+
+$$
+\int_a^b c f(x)\,dx
+=
+c\int_a^b f(x)\,dx
+$$
+
+---
+
+## Properties of the Definite Integral: Adjacent Intervals
+
+An integral can be split at any point $c$:
+
+$$
+\boxed{
+\int_a^b f(x)\,dx
+=
+\int_a^c f(x)\,dx
++
+\int_c^b f(x)\,dx
+}
+$$
+
+---
+
+## Example: Using properties
+
+
+$$\int_5^7 2x+2 \,dx$$
+
+---
+
+## Fundamental Theorem of Calculus, Part 1
+
+If $f(x)$ is continuous over an interval $[a,b]$, and the function $F(x)$ is defined by
+
+$$
+F(x)=\int_a^x f(t)\,dt,
+$$
+
+then $F'(x)=f(x)$ over $(a,b)$.
+
+**The derivative of an integrated function is the original function.**
+
+---
+
+## Fundamental Theorem of Calculus, Part 2
+
+If $f$ is continuous over the interval $[a,b]$ and $F(x)$ is any antiderivative of $f(x)$, then
+
+$$
+\int_a^b f(x)\,dx=F(b)-F(a).
+$$
+
+We often use $F(x)\big|_a^b$ to denote $F(b)-F(a)$.
+
+**The integral of the derivative function is the original function.**
+
+---
+
+
+
+## Integration Techniques
+
+The Fundamental Theorem of Calculus gives us a method to evaluate integrals without using Riemann sums or using known geometric formulas.
+
+The drawback is that we must be able to find an antiderivative, and this is not always easy.  Much of the rest of this course is about way to find antiderivatives.
+
+**Big Idea** For every derivative rule there is a coresponding integration rule.
+
+---
+
+## Challenges of integration
+
+Somethings in are easy in on direction but hard in the opposite direction.  It is easy and quick to multipy two numbers, but is challenging and slow to factor a number into it's prime factors.  What are the prime factors of 391?
+
+---
+
+## Challenges of integration
+
+Integration and derivation have a similar relationship.  It is realitvely straight forward to calculate derivatives, and for functions involving fractions, powers, trig fucitons, logs and exponents you can always write down what the derivative down.  If you are given a similar function, it is challenging to write down the antiderivative if one exists at all.
+
+We'll start with know derivative rules and use then to get some integral rules.
+
+---
+
+## Power rule for differentiation and integration
+
+**Power Rule for Derivatives**
+
+For $n$ a positive integer,
+
+$\displaystyle \frac{d}{dx}\left(x^n\right)=nx^{n-1}$.
+
+**Power Rule for Integrals**
+
+For $n\ne -1$,
+
+$\displaystyle \int x^n\,dx=\frac{x^{n+1}}{n+1}+C$.
+
+
+
+---
+
+## Example using Fundemental Theorem
+
+
+$$\int_5^7 2x+2 \,dx$$
+
+---
+
+
+## Review of derivative rules for common functions
+
+- $\frac{d}{dx}(k)=0$
+- $\frac{d}{dx}(\ln|x|)=\frac{1}{x}$
+- $\frac{d}{dx}(e^x)=e^x$
+- $\frac{d}{dx}(\sin x)=\cos x$
+- $\frac{d}{dx}(\cos x)=-\sin x$
+
+---
+
+## Integration rules for common functions
+
+- $\int k\,dx=kx+C$
+- $\int \frac{1}{x}\,dx=\ln|x|+C$
+- $\int e^x\,dx=e^x+C$
+- $\int \cos x\,dx=\sin x+C$
+- $\int \sin x\,dx=-\cos x+C$
+
+---
+
+## More Derivative Rules
+
+- $\frac{d}{dx}(\tan x)=\sec^2 x$
+- $\frac{d}{dx}(\csc x)=-\csc x\cot x$
+- $\frac{d}{dx}(\sec x)=\sec x\tan x$
+- $\frac{d}{dx}(\cot x)=-\csc^2 x$
+- $\frac{d}{dx}(\tan^{-1}x)=\frac{1}{1+x^2}$
+
+---
+
+## More Integration rules
+
+- $\int \sec^2 x\,dx=\tan x+C$
+- $\int \csc x\cot x\,dx=-\csc x+C$
+- $\int \sec x\tan x\,dx=\sec x+C$
+- $\int \csc^2 x\,dx=-\cot x+C$
+- $\int \frac{1}{1+x^2}\,dx=\tan^{-1}x+C$
+
+---
+
+## Examples using the rules
+
+$$\int_0^4 3e^t \, dt$$
+
+$$\int_0^\pi \sin \theta \, d\theta$$
+
+---
+
+## First Integration Technique
+
+Integration by substitution
+
+Substitution is the reverse of the chain rule of differentiation.
+
+
+---
+
+
+## Chain Rule
+
+If $f$ is differentiable at $g(x)$ and $g$ is differentiable at $x$, then the composite function $F=f\circ g$ defined by $F(x)=f(g(x))$ is differentiable at $x$ and
+
+$$
+F'(x)=f'(g(x))g'(x).
+$$
+
+
+
+---
+
+## U-Substitution
+
+Let $u=g(x)$, where $g'(x)$ is continuous over an interval, and let $f$ be continuous over the corresponding range of $g$.
+
+Then
+
+$$
+\int f[g(x)]g'(x)\,dx
+=
+\int f(u)\,du.
+$$
+
+If $F$ is an antiderivative of $f$, then
+
+$\int f(u)\,du=F(u)+C=F(g(x))+C$.
+
+---
+
+## U-Substitution Examples
+
+$$\int 6x(3x^2+4)^4 \,dx$$
+
+$$\int z \sqrt{z^2-5} \, dz$$
+
+
+
+
+---
+
+
+## Average Value of a function
+
+Let $f(x)$ be continuous over the interval $[a,b]$.
+
+The average value of $f$ on $[a,b]$ is
+
+$$
+f_{\text{ave}}
+=
+\frac{1}{b-a}\int_a^b f(x)\,dx.
+$$
+
+---
+
+
+
+## Next Steps
+
+
+- Look over the CI Learn page
+- Start working on the week 2 homework assignment
+
+---

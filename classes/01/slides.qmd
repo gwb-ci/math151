@@ -202,7 +202,11 @@ $$
 }
 $$
 
+---
 
+## Challenging Calculations
+
+Computing definite integrals using the limits of Riemann sums can be challenging.  Computers can make it easier, but those only are approximations, and computers have limitations.  We will learn a more efficient way to compute definite integrals in the next class by leveraging the Fundamental Theorem of Calculus.
 
 ---
 

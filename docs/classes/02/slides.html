@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <title>Math 151 - Calculus II – Course Introduction</title>
+  <title>Math 151 - Calculus II – Fundemental Theorem of Calculus</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,88 +129,20 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Course Introduction</h1>
+  <h1 class="title">Fundemental Theorem of Calculus</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section>
-<section id="course-introduction" class="title-slide slide level1 center">
-<h1>Course Introduction</h1>
-
-</section>
-<section id="welcome-to-math-151-calculus-ii" class="slide level2">
-<h2>Welcome to Math 151 Calculus II</h2>
-<p>Welcome to Math 151 Calculus II! I am Prof.&nbsp;Geoffrey Buhl, and I am you instructor for this semester. Buhl rhymes with fuel.</p>
+<section id="fundemental-theorem-of-calculus" class="slide level2">
+<h2>Fundemental Theorem of Calculus</h2>
 <p>Class Session Goals:</p>
 <ul>
-<li>Meet Classmates and work in small groups.</li>
-<li>Learn about this course and my expectations.</li>
-<li>Review of Approximating Areas and Definition of the Definite Integral.</li>
+<li>Definition of the Definite Integral and Properties</li>
+<li>Fundemental Theorem of Calculus, two versions</li>
+<li>U-substitution Rule for Integrals</li>
 </ul>
-</section>
-<section id="syllabus-activity" class="slide level2">
-<h2>Syllabus Activity</h2>
-<ol type="1">
-<li><p>Take a few minutes to introduce yourselves and share what other courses you are taking this semester.</p></li>
-<li><p>As a group, take 10–15 minutes to look over the syllabus and formulate four questions your group would like to ask about the course.</p></li>
-<li><p>As a whole class, groups will ask questions and I will answer them.</p></li>
-</ol>
-</section>
-<section id="grading-structureactivity" class="slide level2">
-<h2>Grading StructureActivity</h2>
-<ol type="1">
-<li><p>Take a few minutes to introduce yourselves and share what other courses you are taking this semester.</p></li>
-<li><p>As a group, take 10–15 minutes to look over the grading and formulate four questions your group would like to ask about the course.</p></li>
-<li><p>As a whole class, groups will ask questions and I will answer them.</p></li>
-</ol>
-</section>
-<section id="advice-for-students" class="slide level2">
-<h2>Advice for students</h2>
-<ul>
-<li>Start homework early, do it consistently, and redo missed or difficult problems since homework closely matches exam questions.</li>
-<li>Attend every lecture, pay attention, take clear notes, and ask questions to fully understand concepts and proofs.</li>
-</ul>
-</section>
-<section id="how-i-will-teach-this-course" class="slide level2">
-<h2>How I will teach this course</h2>
-<p>I cannot cover everything in the text or in a given chapter or section. I will focus on the most important concepts and proofs, and I will provide additional examples and exercises to help you understand the material. I will also provide additional resources and references for further study. Ask questions in class, during office hours, or via email. Part of you preparation for the class is to read the text beforehand.</p>
-</section>
-<section id="idea-approximating-areas-under-curves" class="slide level2">
-<h2>Idea: Approximating Areas under curves</h2>
-<p>Use Rectanges or other shapes to approximate the area under a curve. If we use more rectangles, we should get a better approximation. What is there are between the graph of <span class="math inline">\(f(x)=x^2\)</span> and the <span class="math inline">\(x\)</span>-axis from <span class="math inline">\(x=1\)</span> to <span class="math inline">\(x=3\)</span>?</p>
-</section>
-<section id="interactive-approximating-areas" class="slide level2">
-<h2>Interactive Approximating Areas</h2>
-<p>Here are a couple of websites that can help you visualize Riemann sums and the definite integral:</p>
-<p>Explore the <a href="https://statslg.com/demo/riemann.html" target="_blank">StatsLG Riemann Sum Visualizer</a>.</p>
-<p>Explore the <a href="https://www.calclearn.org/interactives/riemann-sum-slider" target="_blank">Riemann Sum Slider</a>.</p>
-</section>
-<section id="definition-riemann-sum" class="slide level2">
-<h2>Definition: Riemann Sum</h2>
-<p>Let <span class="math inline">\(f(x)\)</span> be defined on a closed interval <span class="math inline">\([a,b]\)</span>, and let <span class="math inline">\(P\)</span> be a regular partition of <span class="math inline">\([a,b]\)</span>.</p>
-<p>Let <span class="math inline">\(\Delta x\)</span> be the width of each subinterval <span class="math inline">\([x_{i-1},x_i]\)</span>. For each <span class="math inline">\(i\)</span>, let <span class="math inline">\(x_i^*\)</span> be any point in <span class="math inline">\([x_{i-1},x_i]\)</span>.</p>
-<p>A <strong>Riemann sum</strong> for <span class="math inline">\(f(x)\)</span> is defined as</p>
-<p><span class="math display">\[
-\boxed{
-\sum_{i=1}^{n} f(x_i^*)\,\Delta x
-}
-\]</span></p>
-</section>
-<section id="definition-area-under-a-curve" class="slide level2">
-<h2>Definition: Area Under a Curve</h2>
-<p>Let <span class="math inline">\(f(x)\)</span> be a continuous, nonnegative function on an interval <span class="math inline">\([a,b]\)</span>, and let</p>
-<p><span class="math display">\[
-\sum_{i=1}^{n} f(x_i^*)\,\Delta x
-\]</span></p>
-<p>be a Riemann sum for <span class="math inline">\(f(x)\)</span>.</p>
-<p>Then the <strong>area under the curve</strong> <span class="math inline">\(y=f(x)\)</span> on <span class="math inline">\([a,b]\)</span> is</p>
-<p><span class="math display">\[
-\boxed{
-A=\lim_{n\to\infty}\sum_{i=1}^{n} f(x_i^*)\,\Delta x
-}
-\]</span></p>
 </section>
 <section id="definition-definite-integral" class="slide level2">
 <h2>Definition: Definite Integral</h2>
@@ -276,23 +208,152 @@ c\int_a^b f(x)\,dx
 }
 \]</span></p>
 </section>
-<section id="challenging-calculations" class="slide level2">
-<h2>Challenging Calculations</h2>
-<p>Computing definite integrals using the limits of Riemann sums can be challenging. Computers can make it easier, but those only are approximations, and computers have limitations. We will learn a more efficient way to compute definite integrals in the next class by leveraging the Fundamental Theorem of Calculus.</p>
+<section id="example-using-properties" class="slide level2">
+<h2>Example: Using properties</h2>
+<p><span class="math display">\[\int_5^7 2x+2 \,dx\]</span></p>
+</section>
+<section id="fundamental-theorem-of-calculus-part-1" class="slide level2">
+<h2>Fundamental Theorem of Calculus, Part 1</h2>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous over an interval <span class="math inline">\([a,b]\)</span>, and the function <span class="math inline">\(F(x)\)</span> is defined by</p>
+<p><span class="math display">\[
+F(x)=\int_a^x f(t)\,dt,
+\]</span></p>
+<p>then <span class="math inline">\(F'(x)=f(x)\)</span> over <span class="math inline">\((a,b)\)</span>.</p>
+<p><strong>The derivative of an integrated function is the original function.</strong></p>
+</section>
+<section id="fundamental-theorem-of-calculus-part-2" class="slide level2">
+<h2>Fundamental Theorem of Calculus, Part 2</h2>
+<p>If <span class="math inline">\(f\)</span> is continuous over the interval <span class="math inline">\([a,b]\)</span> and <span class="math inline">\(F(x)\)</span> is any antiderivative of <span class="math inline">\(f(x)\)</span>, then</p>
+<p><span class="math display">\[
+\int_a^b f(x)\,dx=F(b)-F(a).
+\]</span></p>
+<p>We often use <span class="math inline">\(F(x)\big|_a^b\)</span> to denote <span class="math inline">\(F(b)-F(a)\)</span>.</p>
+<p><strong>The integral of the derivative function is the original function.</strong></p>
+</section>
+<section id="integration-techniques" class="slide level2">
+<h2>Integration Techniques</h2>
+<p>The Fundamental Theorem of Calculus gives us a method to evaluate integrals without using Riemann sums or using known geometric formulas.</p>
+<p>The drawback is that we must be able to find an antiderivative, and this is not always easy. Much of the rest of this course is about way to find antiderivatives.</p>
+<p><strong>Big Idea</strong> For every derivative rule there is a coresponding integration rule.</p>
+</section>
+<section id="challenges-of-integration" class="slide level2">
+<h2>Challenges of integration</h2>
+<p>Somethings in are easy in on direction but hard in the opposite direction. It is easy and quick to multipy two numbers, but is challenging and slow to factor a number into it’s prime factors. What are the prime factors of 391?</p>
+</section>
+<section id="challenges-of-integration-1" class="slide level2">
+<h2>Challenges of integration</h2>
+<p>Integration and derivation have a similar relationship. It is realitvely straight forward to calculate derivatives, and for functions involving fractions, powers, trig fucitons, logs and exponents you can always write down what the derivative down. If you are given a similar function, it is challenging to write down the antiderivative if one exists at all.</p>
+<p>We’ll start with know derivative rules and use then to get some integral rules.</p>
+</section>
+<section id="power-rule-for-differentiation-and-integration" class="slide level2">
+<h2>Power rule for differentiation and integration</h2>
+<p><strong>Power Rule for Derivatives</strong></p>
+<p>For <span class="math inline">\(n\)</span> a positive integer,</p>
+<p><span class="math inline">\(\displaystyle \frac{d}{dx}\left(x^n\right)=nx^{n-1}\)</span>.</p>
+<p><strong>Power Rule for Integrals</strong></p>
+<p>For <span class="math inline">\(n\ne -1\)</span>,</p>
+<p><span class="math inline">\(\displaystyle \int x^n\,dx=\frac{x^{n+1}}{n+1}+C\)</span>.</p>
+</section>
+<section id="example-using-fundemental-theorem" class="slide level2">
+<h2>Example using Fundemental Theorem</h2>
+<p><span class="math display">\[\int_5^7 2x+2 \,dx\]</span></p>
+</section>
+<section id="review-of-derivative-rules-for-common-functions" class="slide level2">
+<h2>Review of derivative rules for common functions</h2>
+<ul>
+<li><span class="math inline">\(\frac{d}{dx}(k)=0\)</span></li>
+<li><span class="math inline">\(\frac{d}{dx}(\ln|x|)=\frac{1}{x}\)</span></li>
+<li><span class="math inline">\(\frac{d}{dx}(e^x)=e^x\)</span></li>
+<li><span class="math inline">\(\frac{d}{dx}(\sin x)=\cos x\)</span></li>
+<li><span class="math inline">\(\frac{d}{dx}(\cos x)=-\sin x\)</span></li>
+</ul>
+</section>
+<section id="integration-rules-for-common-functions" class="slide level2">
+<h2>Integration rules for common functions</h2>
+<ul>
+<li><span class="math inline">\(\int k\,dx=kx+C\)</span></li>
+<li><span class="math inline">\(\int \frac{1}{x}\,dx=\ln|x|+C\)</span></li>
+<li><span class="math inline">\(\int e^x\,dx=e^x+C\)</span></li>
+<li><span class="math inline">\(\int \cos x\,dx=\sin x+C\)</span></li>
+<li><span class="math inline">\(\int \sin x\,dx=-\cos x+C\)</span></li>
+</ul>
+</section>
+<section id="more-derivative-rules" class="slide level2">
+<h2>More Derivative Rules</h2>
+<ul>
+<li><span class="math inline">\(\frac{d}{dx}(\tan x)=\sec^2 x\)</span></li>
+<li><span class="math inline">\(\frac{d}{dx}(\csc x)=-\csc x\cot x\)</span></li>
+<li><span class="math inline">\(\frac{d}{dx}(\sec x)=\sec x\tan x\)</span></li>
+<li><span class="math inline">\(\frac{d}{dx}(\cot x)=-\csc^2 x\)</span></li>
+<li><span class="math inline">\(\frac{d}{dx}(\tan^{-1}x)=\frac{1}{1+x^2}\)</span></li>
+</ul>
+</section>
+<section id="more-integration-rules" class="slide level2">
+<h2>More Integration rules</h2>
+<ul>
+<li><span class="math inline">\(\int \sec^2 x\,dx=\tan x+C\)</span></li>
+<li><span class="math inline">\(\int \csc x\cot x\,dx=-\csc x+C\)</span></li>
+<li><span class="math inline">\(\int \sec x\tan x\,dx=\sec x+C\)</span></li>
+<li><span class="math inline">\(\int \csc^2 x\,dx=-\cot x+C\)</span></li>
+<li><span class="math inline">\(\int \frac{1}{1+x^2}\,dx=\tan^{-1}x+C\)</span></li>
+</ul>
+</section>
+<section id="examples-using-the-rules" class="slide level2">
+<h2>Examples using the rules</h2>
+<p><span class="math display">\[\int_0^4 3e^t \, dt\]</span></p>
+<p><span class="math display">\[\int_0^\pi \sin \theta \, d\theta\]</span></p>
+</section>
+<section id="first-integration-technique" class="slide level2">
+<h2>First Integration Technique</h2>
+<p>Integration by substitution</p>
+<p>Substitution is the reverse of the chain rule of differentiation.</p>
+</section>
+<section id="chain-rule" class="slide level2">
+<h2>Chain Rule</h2>
+<p>If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(g(x)\)</span> and <span class="math inline">\(g\)</span> is differentiable at <span class="math inline">\(x\)</span>, then the composite function <span class="math inline">\(F=f\circ g\)</span> defined by <span class="math inline">\(F(x)=f(g(x))\)</span> is differentiable at <span class="math inline">\(x\)</span> and</p>
+<p><span class="math display">\[
+F'(x)=f'(g(x))g'(x).
+\]</span></p>
+</section>
+<section id="u-substitution" class="slide level2">
+<h2>U-Substitution</h2>
+<p>Let <span class="math inline">\(u=g(x)\)</span>, where <span class="math inline">\(g'(x)\)</span> is continuous over an interval, and let <span class="math inline">\(f\)</span> be continuous over the corresponding range of <span class="math inline">\(g\)</span>.</p>
+<p>Then</p>
+<p><span class="math display">\[
+\int f[g(x)]g'(x)\,dx
+=
+\int f(u)\,du.
+\]</span></p>
+<p>If <span class="math inline">\(F\)</span> is an antiderivative of <span class="math inline">\(f\)</span>, then</p>
+<p><span class="math inline">\(\int f(u)\,du=F(u)+C=F(g(x))+C\)</span>.</p>
+</section>
+<section id="u-substitution-examples" class="slide level2">
+<h2>U-Substitution Examples</h2>
+<p><span class="math display">\[\int 6x(3x^2+4)^4 \,dx\]</span></p>
+<p><span class="math display">\[\int z \sqrt{z^2-5} \, dz\]</span></p>
+</section>
+<section id="average-value-of-a-function" class="slide level2">
+<h2>Average Value of a function</h2>
+<p>Let <span class="math inline">\(f(x)\)</span> be continuous over the interval <span class="math inline">\([a,b]\)</span>.</p>
+<p>The average value of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span> is</p>
+<p><span class="math display">\[
+f_{\text{ave}}
+=
+\frac{1}{b-a}\int_a^b f(x)\,dx.
+\]</span></p>
 </section>
 <section id="next-steps" class="slide level2">
 <h2>Next Steps</h2>
 <ul>
-<li>Look over the “Welcome! Students - Start Here!” Module in CI Learn.</li>
-<li>Look at and work on the W1 (Week 1) Learner Survey Info Quiz on CI Learn.</li>
-<li>Look at and work on W1 Introduce yourself Assignment in CI Learn.</li>
+<li>Look over the CI Learn page</li>
+<li>Start working on the week 2 homework assignment</li>
 </ul>
 </section>
 <section class="slide level2">
 
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

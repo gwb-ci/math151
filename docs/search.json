@@ -70,6 +70,270 @@
     ]
   },
   {
+    "objectID": "classes/02/slides.html#fundemental-theorem-of-calculus",
+    "href": "classes/02/slides.html#fundemental-theorem-of-calculus",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Fundemental Theorem of Calculus",
+    "text": "Fundemental Theorem of Calculus\nClass Session Goals:\n\nDefinition of the Definite Integral and Properties\nFundemental Theorem of Calculus, two versions\nU-substitution Rule for Integrals",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#definition-definite-integral",
+    "href": "classes/02/slides.html#definition-definite-integral",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Definition: Definite Integral",
+    "text": "Definition: Definite Integral\nIf \\(f(x)\\) is defined on an interval \\([a,b]\\), the definite integral of \\(f\\) from \\(a\\) to \\(b\\) is\n\\[\n\\boxed{\n\\int_a^b f(x)\\,dx\n=\n\\lim_{n\\to\\infty}\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n}\n\\tag{1.8}\n\\]\nprovided the limit exists.\nIf this limit exists, then \\(f(x)\\) is said to be integrable on \\([a,b]\\), or simply an integrable function.",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#properties-of-the-definite-integral-bounds",
+    "href": "classes/02/slides.html#properties-of-the-definite-integral-bounds",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Properties of the Definite Integral: Bounds",
+    "text": "Properties of the Definite Integral: Bounds\nIf \\(f\\) is integrable, then an interval with zero width has integral zero:\n\\[\n\\boxed{\n\\int_a^a f(x)\\,dx=0\n}\n\\]\nReversing the limits changes the sign:\n\\[\n\\boxed{\n\\int_b^a f(x)\\,dx\n=\n-\\int_a^b f(x)\\,dx\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#properties-of-the-definite-integral-linearity",
+    "href": "classes/02/slides.html#properties-of-the-definite-integral-linearity",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Properties of the Definite Integral: Linearity",
+    "text": "Properties of the Definite Integral: Linearity\nThe integral of a sum or difference can be separated:\n\\[\n\\int_a^b[f(x)+g(x)]\\,dx\n=\n\\int_a^b f(x)\\,dx+\\int_a^b g(x)\\,dx\n\\]\n\\[\n\\int_a^b[f(x)-g(x)]\\,dx\n=\n\\int_a^b f(x)\\,dx-\\int_a^b g(x)\\,dx\n\\]\nA constant factor can be moved outside the integral:\n\\[\n\\int_a^b c f(x)\\,dx\n=\nc\\int_a^b f(x)\\,dx\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#properties-of-the-definite-integral-adjacent-intervals",
+    "href": "classes/02/slides.html#properties-of-the-definite-integral-adjacent-intervals",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Properties of the Definite Integral: Adjacent Intervals",
+    "text": "Properties of the Definite Integral: Adjacent Intervals\nAn integral can be split at any point \\(c\\):\n\\[\n\\boxed{\n\\int_a^b f(x)\\,dx\n=\n\\int_a^c f(x)\\,dx\n+\n\\int_c^b f(x)\\,dx\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#example-using-properties",
+    "href": "classes/02/slides.html#example-using-properties",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Example: Using properties",
+    "text": "Example: Using properties\n\\[\\int_5^7 2x+2 \\,dx\\]",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#fundamental-theorem-of-calculus-part-1",
+    "href": "classes/02/slides.html#fundamental-theorem-of-calculus-part-1",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Fundamental Theorem of Calculus, Part 1",
+    "text": "Fundamental Theorem of Calculus, Part 1\nIf \\(f(x)\\) is continuous over an interval \\([a,b]\\), and the function \\(F(x)\\) is defined by\n\\[\nF(x)=\\int_a^x f(t)\\,dt,\n\\]\nthen \\(F'(x)=f(x)\\) over \\((a,b)\\).\nThe derivative of an integrated function is the original function.",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#fundamental-theorem-of-calculus-part-2",
+    "href": "classes/02/slides.html#fundamental-theorem-of-calculus-part-2",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Fundamental Theorem of Calculus, Part 2",
+    "text": "Fundamental Theorem of Calculus, Part 2\nIf \\(f\\) is continuous over the interval \\([a,b]\\) and \\(F(x)\\) is any antiderivative of \\(f(x)\\), then\n\\[\n\\int_a^b f(x)\\,dx=F(b)-F(a).\n\\]\nWe often use \\(F(x)\\big|_a^b\\) to denote \\(F(b)-F(a)\\).\nThe integral of the derivative function is the original function.",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#integration-techniques",
+    "href": "classes/02/slides.html#integration-techniques",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Integration Techniques",
+    "text": "Integration Techniques\nThe Fundamental Theorem of Calculus gives us a method to evaluate integrals without using Riemann sums or using known geometric formulas.\nThe drawback is that we must be able to find an antiderivative, and this is not always easy. Much of the rest of this course is about way to find antiderivatives.\nBig Idea For every derivative rule there is a coresponding integration rule.",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#challenges-of-integration",
+    "href": "classes/02/slides.html#challenges-of-integration",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Challenges of integration",
+    "text": "Challenges of integration\nSomethings in are easy in on direction but hard in the opposite direction. It is easy and quick to multipy two numbers, but is challenging and slow to factor a number into it’s prime factors. What are the prime factors of 391?",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#challenges-of-integration-1",
+    "href": "classes/02/slides.html#challenges-of-integration-1",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Challenges of integration",
+    "text": "Challenges of integration\nIntegration and derivation have a similar relationship. It is realitvely straight forward to calculate derivatives, and for functions involving fractions, powers, trig fucitons, logs and exponents you can always write down what the derivative down. If you are given a similar function, it is challenging to write down the antiderivative if one exists at all.\nWe’ll start with know derivative rules and use then to get some integral rules.",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#power-rule-for-differentiation-and-integration",
+    "href": "classes/02/slides.html#power-rule-for-differentiation-and-integration",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Power rule for differentiation and integration",
+    "text": "Power rule for differentiation and integration\nPower Rule for Derivatives\nFor \\(n\\) a positive integer,\n\\(\\displaystyle \\frac{d}{dx}\\left(x^n\\right)=nx^{n-1}\\).\nPower Rule for Integrals\nFor \\(n\\ne -1\\),\n\\(\\displaystyle \\int x^n\\,dx=\\frac{x^{n+1}}{n+1}+C\\).",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#example-using-fundemental-theorem",
+    "href": "classes/02/slides.html#example-using-fundemental-theorem",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Example using Fundemental Theorem",
+    "text": "Example using Fundemental Theorem\n\\[\\int_5^7 2x+2 \\,dx\\]",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#review-of-derivative-rules-for-common-functions",
+    "href": "classes/02/slides.html#review-of-derivative-rules-for-common-functions",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Review of derivative rules for common functions",
+    "text": "Review of derivative rules for common functions\n\n\\(\\frac{d}{dx}(k)=0\\)\n\\(\\frac{d}{dx}(\\ln|x|)=\\frac{1}{x}\\)\n\\(\\frac{d}{dx}(e^x)=e^x\\)\n\\(\\frac{d}{dx}(\\sin x)=\\cos x\\)\n\\(\\frac{d}{dx}(\\cos x)=-\\sin x\\)",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#integration-rules-for-common-functions",
+    "href": "classes/02/slides.html#integration-rules-for-common-functions",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Integration rules for common functions",
+    "text": "Integration rules for common functions\n\n\\(\\int k\\,dx=kx+C\\)\n\\(\\int \\frac{1}{x}\\,dx=\\ln|x|+C\\)\n\\(\\int e^x\\,dx=e^x+C\\)\n\\(\\int \\cos x\\,dx=\\sin x+C\\)\n\\(\\int \\sin x\\,dx=-\\cos x+C\\)",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#more-derivative-rules",
+    "href": "classes/02/slides.html#more-derivative-rules",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "More Derivative Rules",
+    "text": "More Derivative Rules\n\n\\(\\frac{d}{dx}(\\tan x)=\\sec^2 x\\)\n\\(\\frac{d}{dx}(\\csc x)=-\\csc x\\cot x\\)\n\\(\\frac{d}{dx}(\\sec x)=\\sec x\\tan x\\)\n\\(\\frac{d}{dx}(\\cot x)=-\\csc^2 x\\)\n\\(\\frac{d}{dx}(\\tan^{-1}x)=\\frac{1}{1+x^2}\\)",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#more-integration-rules",
+    "href": "classes/02/slides.html#more-integration-rules",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "More Integration rules",
+    "text": "More Integration rules\n\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\csc x\\cot x\\,dx=-\\csc x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\csc^2 x\\,dx=-\\cot x+C\\)\n\\(\\int \\frac{1}{1+x^2}\\,dx=\\tan^{-1}x+C\\)",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#examples-using-the-rules",
+    "href": "classes/02/slides.html#examples-using-the-rules",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Examples using the rules",
+    "text": "Examples using the rules\n\\[\\int_0^4 3e^t \\, dt\\]\n\\[\\int_0^\\pi \\sin \\theta \\, d\\theta\\]",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#first-integration-technique",
+    "href": "classes/02/slides.html#first-integration-technique",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "First Integration Technique",
+    "text": "First Integration Technique\nIntegration by substitution\nSubstitution is the reverse of the chain rule of differentiation.",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#chain-rule",
+    "href": "classes/02/slides.html#chain-rule",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Chain Rule",
+    "text": "Chain Rule\nIf \\(f\\) is differentiable at \\(g(x)\\) and \\(g\\) is differentiable at \\(x\\), then the composite function \\(F=f\\circ g\\) defined by \\(F(x)=f(g(x))\\) is differentiable at \\(x\\) and\n\\[\nF'(x)=f'(g(x))g'(x).\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#u-substitution",
+    "href": "classes/02/slides.html#u-substitution",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "U-Substitution",
+    "text": "U-Substitution\nLet \\(u=g(x)\\), where \\(g'(x)\\) is continuous over an interval, and let \\(f\\) be continuous over the corresponding range of \\(g\\).\nThen\n\\[\n\\int f[g(x)]g'(x)\\,dx\n=\n\\int f(u)\\,du.\n\\]\nIf \\(F\\) is an antiderivative of \\(f\\), then\n\\(\\int f(u)\\,du=F(u)+C=F(g(x))+C\\).",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#u-substitution-examples",
+    "href": "classes/02/slides.html#u-substitution-examples",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "U-Substitution Examples",
+    "text": "U-Substitution Examples\n\\[\\int 6x(3x^2+4)^4 \\,dx\\]\n\\[\\int z \\sqrt{z^2-5} \\, dz\\]",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#average-value-of-a-function",
+    "href": "classes/02/slides.html#average-value-of-a-function",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Average Value of a function",
+    "text": "Average Value of a function\nLet \\(f(x)\\) be continuous over the interval \\([a,b]\\).\nThe average value of \\(f\\) on \\([a,b]\\) is\n\\[\nf_{\\text{ave}}\n=\n\\frac{1}{b-a}\\int_a^b f(x)\\,dx.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#next-steps",
+    "href": "classes/02/slides.html#next-steps",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Next Steps",
+    "text": "Next Steps\n\nLook over the CI Learn page\nStart working on the week 2 homework assignment",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
     "objectID": "classes/01/slides.html#welcome-to-math-151-calculus-ii",
     "href": "classes/01/slides.html#welcome-to-math-151-calculus-ii",
     "title": "Course Introduction",
@@ -213,6 +477,17 @@
     ]
   },
   {
+    "objectID": "classes/01/slides.html#challenging-calculations",
+    "href": "classes/01/slides.html#challenging-calculations",
+    "title": "Course Introduction",
+    "section": "Challenging Calculations",
+    "text": "Challenging Calculations\nComputing definite integrals using the limits of Riemann sums can be challenging. Computers can make it easier, but those only are approximations, and computers have limitations. We will learn a more efficient way to compute definite integrals in the next class by leveraging the Fundamental Theorem of Calculus.",
+    "crumbs": [
+      "Class Material",
+      "Course Introduction"
+    ]
+  },
+  {
     "objectID": "classes/01/slides.html#next-steps",
     "href": "classes/01/slides.html#next-steps",
     "title": "Course Introduction",
@@ -246,11 +521,33 @@
     ]
   },
   {
+    "objectID": "classes/02/worksheet.html",
+    "href": "classes/02/worksheet.html",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint",
+    "crumbs": [
+      "Class Material",
+      "TBD"
+    ]
+  },
+  {
+    "objectID": "classes/02/worksheet.html#null",
+    "href": "classes/02/worksheet.html#null",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint",
+    "crumbs": [
+      "Class Material",
+      "TBD"
+    ]
+  },
+  {
     "objectID": "grading/course-learning-targets.html",
     "href": "grading/course-learning-targets.html",
     "title": "Math 151 Grading",
     "section": "",
-    "text": "To successfully learn the Calculus, you need to demonstrate that you understand some of the following Learning Targets. See ?@sec-grading-targets below, for what ‘some’ means. these learning targets are divided into five groups that represent different core principles in the course. They are:\n\nA: Applications of integration\n\nI: Fundamental Concepts and Techniques in Integration\nN: Numerican Integration\nS: Sequences and Series\nP: Power Series\n\nEach of these groups are described in detail below. Learning Targets whose abbreviations are marked with a * are Supplemental Learning Targets. The Learning Targets with an ‘MP’ in their abbreviation are Mathematical Practice Learning Targets. The rest are Core Learning Targets. Your grade in the course will be calcualted, primarily, from the number and type of learning targets you master.\n\n\nNewton and Leibniz are immortal because the mathematics they discovered (i.e., the Calculus) can be used to tell us so much about the world. In this section, we learn how to use the concept of the definite integral to create formulas that tell us other things. Just like using the sum or rectangular areas to approximate the area under a curve, all derivations use the ‘cut-up-and-add-up’ approach that starts with approximating the phenomena under investigation and then pass to a limit to get a definite integral. The student needs to know how to do derive some such definite integral formulas and needs to know how to use many others. We also flirt with infinity for the first time by learning about improper integrals.\nA1: Substitution and Integration Rules\n\nI know how to use the technique of u-substitution to re-write an indefinite integral in a way that allows me to compute the antiderivative of the integrand.\nI know how to use the technique of u-substitution to re-write a a definite integral an update its limits of integration in a way that allows me to compute the value of the definite integral.\nI know and can apply the integration rules for the following functions: polynomial, exponential, logarithmic, trigonometric, and inverse trigonometric functions.\n\nA2: The Average Value of a Continuous Function, Area between Curves\n\nI know the integral formula for average value of a continuous function.\nI understand how the integral formula can be derived.\nI can apply the average value formula in a word problem.\n\nA3: Volume of solids defined in terms of the shape of their cross sections.\n\nI understand how to read a shape described in terms of its cross-sections.\nI know how to to express the area of a cross-section as a function of the location of the cross-section (i.e., the value x).\nI know how the volume of the solid is the definite integral of the cross-sectional areas, and I know how to set the limits of that definite integral.\nI am familiar with Cavalierri’s Principle and how it describes the relationship between volume and cross-sectional area.\n\nA4 * Volumes of solids of revolution.\n\nI understand how to create a solid of revolution by rotating a region between an axis and a curve around the axis of rotation.\nI can draw a solid of revolution and a cross-section of that solid.\nI can find a formula for the circular cross section of the solid in terms of the location of the cross-section (i.e., the value x)\nI can write the volume of the solid of revolution as a definite integral of the area of the cross-sections, and I know how to set the limits of that definite integral.\nI can apply the above ideas to the situation where our region in bounded by two curves and rotated about an axis that does not intersect that region. (And I know why this is called the washer method.)\n\nA5 * : Arc-length and surface area of a solid of revolution\n\nI understand how to apply the ‘cut-up-and-add-up’ principle to approximate tarc length.\nI understand how to apply the ‘cut-up-and-add-up’ principle to approximate the surface area of a solid of revolution using frustrums.\nI know how and why the Mean Value Theorem is used in the derivation of the integral formula for arc length.\nI know the integral formula for the length of the graph of \\(y = f (x)\\).\nI understand why arc length integrals are likely to need numerical methods to compute.\nI can use the integral formula to calculate surface areas of revolution, by hand and with computer.\n\nA6 * : Calculating work done by a variable force.\n\nI understand how to apply the ‘cut-up-and-add-up’ principle to approximate the total work done in an experiment.\nI understand the role that approximating a continuous function by locally constant functions plays in the derivation of the definite integral formula.\nI can use the integral formula to calculate examples.\n\nA7 * : Calculating the centroid of a planar region.\n\nI can calculate the principle of symmstry to find the centroid of a symmetric region (e.g., circle, oval, rectangle).\nI know how to use the Archimedian Principle to calculate the balance point of a finite set of point masses.\nI know how to approximate the centroid of a region between the x-axis and the graph of y = \\(f (x)\\) using the cut-up-and-add-up method.\nI know the integral formulas for the x- and y-coordinates of the centroid of a region between the \\(x\\)-axis and the graph of \\(y = f (x)\\).\nI could extend these formulas to integral formulas for the centroid of a threedimensional solid.\n\n\n\n\nWe can’t let computer algebra systems, like SageMath, have all the fun. We need to learn how to leverage our knowledge of algebra (e.g., completing the square) and trigonometry (e.g., Pythagorean identities, differentiation formulas) in service of antidifferentiation. In this section of the course, we learn some fundamental techniques for integration. Together the techniques allow us to antidifferentiate any rational function.\nI1: Integration by parts in indefinite and definite integrals.\n\nI know how to execute the technique we call integration by parts.\nI know what the mnemonic LIATE means and how it guides the choice of functions in integration by parts.\nI know how to use integration by parts in the context of a definite integral.\n\nI2: Integration using trigonometric substitutions and identities\n\nI can recognize when an integrand consists of combinations of trigonometric functions.\nI know how to choose a trigonometric identity to simplify expressions.\nI can use trigonometric identities to simplify expressions for the purpose of antidifferentiation.\nI know how to adjust limits of integration when using a trigonometric identity.\nI know how to use a computer to check the antiderivative (e.g., through graphing) and to check the value of an antiderivative.\n\nI3: Improper integrals.\n\nI can recognize an improper integral that involves an infinite limit of integration, and I know how to rewrite it using a limit.\nI can recognize an improper integral that involves an unbounded integrand, and I know how to rewrite it using a limit.\nI understand what it means for an improper integral to converge or diverge.\nI know the p-test for improper integrals and how the value of p for convergence depends on the type of improper integral.\nI can use the comparison test for improper integrals to determine convergence and divergence.\nI can recognize and work with the case that our improper integral requries a multiple limits.\n\nI4 * : Integrating rational functions using the technique of partial fraction decomposition.\n\nI know the pattern used to establish a partial fraction decomposition of a rational function. Specifically, 2 I understand how the multiplicity of a denominator’s factors effect the decomposition and the expressions that appear in the numerators, and 2 I understand how the degree of a denominator’s factors effects the decomposition (e.g., linear or irreducible quadratic).\nI understand how to find the unknown parameters in a partial fraction decompoisiton in one of two ways: equating coefficients, sampling values.\nI can use a computer algebra system (e.g., wolfram Alpha) to calculate a patial fraction decomposition.\nI can calcualte a definite integral using partial fractions decomposition.\nI can use a computer to check the result of using partial fraction decomposition to evaluate a (definite or indefinite) integral.\nI understand how partial fraction decomposition naturally leads (in some cases) to use u-substitution or trigonometric substituion.\n\n\n\n\nWhen we can’t use the Fundamental Theorem of Calculus to calculate definite integral of a function, we use numerial methods.\nN1: What it means for definite integral of continuous integrand on a closed interval to be approximated by a numerical method.\n\nI can recognize problematic integrands (i.e., those which do not have an antiderivative that can be expressed in terms of elementary functions).\nI understand that numerical integration will always give an approximate answer.\nI understand what error is in the context of numerical integration.\nI know the left and right endpoint methods for numerical approximation of a definite 2 I know the midpoint, trapezoid, and Simpson’s methods for numerical approximation.\n\nN2: Bounded functions and bounding error in numerical methods.\n\nI know why a continuous function on a closed and bounded set has an upper and lower 2 I can find a bound for a differentiable function using differentiation.\nI can find a bound for a function using a process of successive approximation.\nI know how to find the error bound formulas for the numerical integration methods: 2 I know how to use the error bound formulas to determine the minimum number of\n\n\n\n\nSequences and series of real numbers are important objects in mathematics, and we will study their properties including how to determine whether they converge or diverge.\nS1: Sequences of real numbers.\n\nI understand sequence notation, terms, index, notation, and visualizing (as sampling of a function, as points on real line).\nI have an understanding of the basic types of sequences (explicit, recursive), and I can recognize and translate between formula and terms.\nI can recognize when a sequence is bounded.\nI can compute the limit of a sequence for various tyles of sequences.\nI know how to apply the Algebraic Limit Theorems for sequences, the Squeeze Theorem for sequences, and the Monotone Convergence Theorem.\n\nS2: Series of real numbers.\n\nI understand how to use sigma notation, what a summand is, what limits of summation are, what the terms of a series are, and what a sequence of partial sums is.\nI know what it means for a series to converge, and I know what it means for a series to diverge.\nI have an understanding of the basic types of series, including telescoping series, arithmetic series, geometric series, positive series, harmonic series, and alternating series.\nI know the First Test for Convergence.\nI understand and can use the algebraic properties of convergent series including the Sum and Difference theorem for convergent series, the Constant Multiple theorem for convergent series.\n\nS3: Convergence tests\n\nI understand and can use the convegent tests for positive series include the Integral Test Theorem, the Direct Comparison Test Theorem, the Limit Comparison Test Theorem.\nI know how negative terms and positive terms combine to effect the convergence of a series.\nI understand what absolute convergence tells us about convergence of a series, and I know how to use tests for absolute convergence including the Ratio Test and the Root Test.\nI can explain why the alternating harmonic series is convergent but not absolutely convergent.\nI know how to estimate the sum of a convergent alternating series.\n\n\n\n\nWe will apply the principles learned in our study of sequences and series of real numbers to understand sequences and series of polynomials and how polynomials can be used to approximate transcendental functions.\nP1: Power series\n\nI know how to work with (do algebra on) a power series as an abstract, symbolic ‘infinte’ polynomial.\nI know how to view a power series as a function of an independent variable.\nI know to determine the interval of convergence of a power series, and I know how to determine if the power series converges at the endpoints of this interval.\nI know when two power series can be combined algebraically and how to create those combinations.\nI know how to apply techniques from the Calculus to power series.\n\nP2 * : Taylor series, Maclaurin series, and approximations.\n\nI know what a Taylor Series is. I know what a Maclaurin series is.\nGiven an infintely differentiable function f (x) and a real number \\(x_0\\) , I can compute the coefficients to get the associated Maclaurin Series and Taylor Series.\nI know the Taylor and Maclurin Series for the sine, the cosine, the natural logarithm, and the natural exponential function.\nI know when a function has a power series representation.\nI can use a power series to calculate an antiderivative of functions and find approximate values of definite integrals.\nI know the error bound theorem for power series and how to use it.",
+    "text": "To successfully learn the Calculus, you need to demonstrate that you understand of the following Learning Targets. See These learning targets are divided into five groups that represent different core principles in the course. They are:\n\nA: Applications of integration\n\nI: Fundamental Concepts and Techniques in Integration\nN: Numerican Integration\nS: Sequences and Series\nP: Power Series\n\nEach of these groups are described in detail below. Learning Targets whose abbreviations are marked with a * are Supplemental Learning Targets. The Learning Targets with an ‘MP’ in their abbreviation are Mathematical Practice Learning Targets. The rest are Core Learning Targets. Your grade in the course will be calcualted, primarily, from the number and type of learning targets you master.\n\n\nNewton and Leibniz are immortal because the mathematics they discovered (i.e., the Calculus) can be used to tell us so much about the world. In this section, we learn how to use the concept of the definite integral to create formulas that tell us other things. Just like using the sum or rectangular areas to approximate the area under a curve, all derivations use the ‘cut-up-and-add-up’ approach that starts with approximating the phenomena under investigation and then pass to a limit to get a definite integral. The student needs to know how to do derive some such definite integral formulas and needs to know how to use many others. We also flirt with infinity for the first time by learning about improper integrals.\nA1: Substitution and Integration Rules\n\nI know how to use the technique of u-substitution to re-write an indefinite integral in a way that allows me to compute the antiderivative of the integrand.\nI know how to use the technique of u-substitution to re-write a a definite integral an update its limits of integration in a way that allows me to compute the value of the definite integral.\nI know and can apply the integration rules for the following functions: polynomial, exponential, logarithmic, trigonometric, and inverse trigonometric functions.\n\nA2: The Average Value of a Continuous Function, Area between Curves\n\nI know the integral formula for average value of a continuous function.\nI understand how the integral formula can be derived.\nI can apply the average value formula in a word problem.\n\nA3: Volume of solids defined in terms of the shape of their cross sections.\n\nI understand how to read a shape described in terms of its cross-sections.\nI know how to to express the area of a cross-section as a function of the location of the cross-section (i.e., the value x).\nI know how the volume of the solid is the definite integral of the cross-sectional areas, and I know how to set the limits of that definite integral.\nI am familiar with Cavalierri’s Principle and how it describes the relationship between volume and cross-sectional area.\n\nA4 * Volumes of solids of revolution.\n\nI understand how to create a solid of revolution by rotating a region between an axis and a curve around the axis of rotation.\nI can draw a solid of revolution and a cross-section of that solid.\nI can find a formula for the circular cross section of the solid in terms of the location of the cross-section (i.e., the value x)\nI can write the volume of the solid of revolution as a definite integral of the area of the cross-sections, and I know how to set the limits of that definite integral.\nI can apply the above ideas to the situation where our region in bounded by two curves and rotated about an axis that does not intersect that region. (And I know why this is called the washer method.)\n\nA5 * : Arc-length and surface area of a solid of revolution\n\nI understand how to apply the ‘cut-up-and-add-up’ principle to approximate tarc length.\nI understand how to apply the ‘cut-up-and-add-up’ principle to approximate the surface area of a solid of revolution using frustrums.\nI know how and why the Mean Value Theorem is used in the derivation of the integral formula for arc length.\nI know the integral formula for the length of the graph of \\(y = f (x)\\).\nI understand why arc length integrals are likely to need numerical methods to compute.\nI can use the integral formula to calculate surface areas of revolution, by hand and with computer.\n\nA6 * : Calculating work done by a variable force.\n\nI understand how to apply the ‘cut-up-and-add-up’ principle to approximate the total work done in an experiment.\nI understand the role that approximating a continuous function by locally constant functions plays in the derivation of the definite integral formula.\nI can use the integral formula to calculate examples.\n\nA7 * : Calculating the centroid of a planar region.\n\nI can calculate the principle of symmstry to find the centroid of a symmetric region (e.g., circle, oval, rectangle).\nI know how to use the Archimedian Principle to calculate the balance point of a finite set of point masses.\nI know how to approximate the centroid of a region between the x-axis and the graph of y = \\(f (x)\\) using the cut-up-and-add-up method.\nI know the integral formulas for the x- and y-coordinates of the centroid of a region between the \\(x\\)-axis and the graph of \\(y = f (x)\\).\nI could extend these formulas to integral formulas for the centroid of a threedimensional solid.\n\n\n\n\nWe can’t let computer algebra systems, like SageMath, have all the fun. We need to learn how to leverage our knowledge of algebra (e.g., completing the square) and trigonometry (e.g., Pythagorean identities, differentiation formulas) in service of antidifferentiation. In this section of the course, we learn some fundamental techniques for integration. Together the techniques allow us to antidifferentiate any rational function.\nI1: Integration by parts in indefinite and definite integrals.\n\nI know how to execute the technique we call integration by parts.\nI know what the mnemonic LIATE means and how it guides the choice of functions in integration by parts.\nI know how to use integration by parts in the context of a definite integral.\n\nI2: Integration using trigonometric substitutions and identities\n\nI can recognize when an integrand consists of combinations of trigonometric functions.\nI know how to choose a trigonometric identity to simplify expressions.\nI can use trigonometric identities to simplify expressions for the purpose of antidifferentiation.\nI know how to adjust limits of integration when using a trigonometric identity.\nI know how to use a computer to check the antiderivative (e.g., through graphing) and to check the value of an antiderivative.\n\nI3: Improper integrals.\n\nI can recognize an improper integral that involves an infinite limit of integration, and I know how to rewrite it using a limit.\nI can recognize an improper integral that involves an unbounded integrand, and I know how to rewrite it using a limit.\nI understand what it means for an improper integral to converge or diverge.\nI know the p-test for improper integrals and how the value of p for convergence depends on the type of improper integral.\nI can use the comparison test for improper integrals to determine convergence and divergence.\nI can recognize and work with the case that our improper integral requries a multiple limits.\n\nI4 * : Integrating rational functions using the technique of partial fraction decomposition.\n\nI know the pattern used to establish a partial fraction decomposition of a rational function. Specifically, 2 I understand how the multiplicity of a denominator’s factors effect the decomposition and the expressions that appear in the numerators, and 2 I understand how the degree of a denominator’s factors effects the decomposition (e.g., linear or irreducible quadratic).\nI understand how to find the unknown parameters in a partial fraction decompoisiton in one of two ways: equating coefficients, sampling values.\nI can use a computer algebra system (e.g., wolfram Alpha) to calculate a patial fraction decomposition.\nI can calcualte a definite integral using partial fractions decomposition.\nI can use a computer to check the result of using partial fraction decomposition to evaluate a (definite or indefinite) integral.\nI understand how partial fraction decomposition naturally leads (in some cases) to use u-substitution or trigonometric substituion.\n\n\n\n\nWhen we can’t use the Fundamental Theorem of Calculus to calculate definite integral of a function, we use numerial methods.\nN1: What it means for definite integral of continuous integrand on a closed interval to be approximated by a numerical method.\n\nI can recognize problematic integrands (i.e., those which do not have an antiderivative that can be expressed in terms of elementary functions).\nI understand that numerical integration will always give an approximate answer.\nI understand what error is in the context of numerical integration.\nI know the left and right endpoint methods for numerical approximation of a definite 2 I know the midpoint, trapezoid, and Simpson’s methods for numerical approximation.\n\nN2: Bounded functions and bounding error in numerical methods.\n\nI know why a continuous function on a closed and bounded set has an upper and lower 2 I can find a bound for a differentiable function using differentiation.\nI can find a bound for a function using a process of successive approximation.\nI know how to find the error bound formulas for the numerical integration methods: 2 I know how to use the error bound formulas to determine the minimum number of\n\n\n\n\nSequences and series of real numbers are important objects in mathematics, and we will study their properties including how to determine whether they converge or diverge.\nS1: Sequences of real numbers.\n\nI understand sequence notation, terms, index, notation, and visualizing (as sampling of a function, as points on real line).\nI have an understanding of the basic types of sequences (explicit, recursive), and I can recognize and translate between formula and terms.\nI can recognize when a sequence is bounded.\nI can compute the limit of a sequence for various tyles of sequences.\nI know how to apply the Algebraic Limit Theorems for sequences, the Squeeze Theorem for sequences, and the Monotone Convergence Theorem.\n\nS2: Series of real numbers.\n\nI understand how to use sigma notation, what a summand is, what limits of summation are, what the terms of a series are, and what a sequence of partial sums is.\nI know what it means for a series to converge, and I know what it means for a series to diverge.\nI have an understanding of the basic types of series, including telescoping series, arithmetic series, geometric series, positive series, harmonic series, and alternating series.\nI know the First Test for Convergence.\nI understand and can use the algebraic properties of convergent series including the Sum and Difference theorem for convergent series, the Constant Multiple theorem for convergent series.\n\nS3: Convergence tests\n\nI understand and can use the convegent tests for positive series include the Integral Test Theorem, the Direct Comparison Test Theorem, the Limit Comparison Test Theorem.\nI know how negative terms and positive terms combine to effect the convergence of a series.\nI understand what absolute convergence tells us about convergence of a series, and I know how to use tests for absolute convergence including the Ratio Test and the Root Test.\nI can explain why the alternating harmonic series is convergent but not absolutely convergent.\nI know how to estimate the sum of a convergent alternating series.\n\n\n\n\nWe will apply the principles learned in our study of sequences and series of real numbers to understand sequences and series of polynomials and how polynomials can be used to approximate transcendental functions.\nP1: Power series\n\nI know how to work with (do algebra on) a power series as an abstract, symbolic ‘infinte’ polynomial.\nI know how to view a power series as a function of an independent variable.\nI know to determine the interval of convergence of a power series, and I know how to determine if the power series converges at the endpoints of this interval.\nI know when two power series can be combined algebraically and how to create those combinations.\nI know how to apply techniques from the Calculus to power series.\n\nP2 * : Taylor series, Maclaurin series, and approximations.\n\nI know what a Taylor Series is. I know what a Maclaurin series is.\nGiven an infintely differentiable function f (x) and a real number \\(x_0\\) , I can compute the coefficients to get the associated Maclaurin Series and Taylor Series.\nI know the Taylor and Maclurin Series for the sine, the cosine, the natural logarithm, and the natural exponential function.\nI know when a function has a power series representation.\nI can use a power series to calculate an antiderivative of functions and find approximate values of definite integrals.\nI know the error bound theorem for power series and how to use it.",
     "crumbs": [
       "Learning Targets"
     ]
