@@ -129,7 +129,7 @@
     "href": "classes/02/slides.html#example-using-properties",
     "title": "Fundemental Theorem of Calculus",
     "section": "Example: Using properties",
-    "text": "Example: Using properties\n\\[\\int_5^7 2x+2 \\,dx\\]",
+    "text": "Example: Using properties\n\\[\\int_{-5}^7 2x+2 \\,dx\\]",
     "crumbs": [
       "Class Material",
       "Fundemental Theorem of Calculus"
@@ -206,7 +206,7 @@
     "href": "classes/02/slides.html#example-using-fundemental-theorem",
     "title": "Fundemental Theorem of Calculus",
     "section": "Example using Fundemental Theorem",
-    "text": "Example using Fundemental Theorem\n\\[\\int_5^7 2x+2 \\,dx\\]",
+    "text": "Example using Fundemental Theorem\n\\[\\int_{-2}^2 t^2-4 \\,dt\\]\n\\[\\int_{-5}^7 2x+2 \\,dx\\]",
     "crumbs": [
       "Class Material",
       "Fundemental Theorem of Calculus"
@@ -251,6 +251,17 @@
     "title": "Fundemental Theorem of Calculus",
     "section": "More Integration rules",
     "text": "More Integration rules\n\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\csc x\\cot x\\,dx=-\\csc x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\csc^2 x\\,dx=-\\cot x+C\\)\n\\(\\int \\frac{1}{1+x^2}\\,dx=\\tan^{-1}x+C\\)",
+    "crumbs": [
+      "Class Material",
+      "Fundemental Theorem of Calculus"
+    ]
+  },
+  {
+    "objectID": "classes/02/slides.html#longer-lists-of-rules",
+    "href": "classes/02/slides.html#longer-lists-of-rules",
+    "title": "Fundemental Theorem of Calculus",
+    "section": "Longer lists of rules",
+    "text": "Longer lists of rules\nIntegral Rules\nDifferentiation Rules",
     "crumbs": [
       "Class Material",
       "Fundemental Theorem of Calculus"

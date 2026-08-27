@@ -111,7 +111,7 @@ $$
 ## Example: Using properties
 
 
-$$\int_5^7 2x+2 \,dx$$
+$$\int_{-5}^7 2x+2 \,dx$$
 
 ---
 
@@ -190,7 +190,9 @@ $\displaystyle \int x^n\,dx=\frac{x^{n+1}}{n+1}+C$.
 ## Example using Fundemental Theorem
 
 
-$$\int_5^7 2x+2 \,dx$$
+$$\int_{-2}^2 t^2-4 \,dt$$
+
+$$\int_{-5}^7 2x+2 \,dx$$
 
 ---
 
@@ -232,6 +234,14 @@ $$\int_5^7 2x+2 \,dx$$
 - $\int \sec x\tan x\,dx=\sec x+C$
 - $\int \csc^2 x\,dx=-\cot x+C$
 - $\int \frac{1}{1+x^2}\,dx=\tan^{-1}x+C$
+
+---
+
+## Longer lists of rules
+
+[Integral Rules](https://openstax.org/books/calculus-volume-2/pages/a-table-of-integrals)
+
+[Differentiation Rules](https://openstax.org/books/calculus-volume-2/pages/b-table-of-derivatives)
 
 ---
 
