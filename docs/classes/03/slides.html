@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <title>Math 151 - Calculus II – Fundemental Theorem of Calculus</title>
+  <title>Math 151 - Calculus II – U-Substitution</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,88 +129,19 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Fundemental Theorem of Calculus</h1>
+  <h1 class="title">U-Substitution</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="fundemental-theorem-of-calculus" class="slide level2">
-<h2>Fundemental Theorem of Calculus</h2>
+<section id="u-substitution" class="slide level2">
+<h2>U-Substitution</h2>
 <p>Class Session Goals:</p>
 <ul>
-<li>Definition of the Definite Integral and Properties</li>
-<li>Fundemental Theorem of Calculus, two versions</li>
 <li>U-substitution Rule for Integrals</li>
+<li>More Integration Rules for Functions</li>
 </ul>
-</section>
-<section id="definition-definite-integral" class="slide level2">
-<h2>Definition: Definite Integral</h2>
-<p>If <span class="math inline">\(f(x)\)</span> is defined on an interval <span class="math inline">\([a,b]\)</span>, the <strong>definite integral</strong> of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> is</p>
-<p><span class="math display">\[
-\boxed{
-\int_a^b f(x)\,dx
-=
-\lim_{n\to\infty}\sum_{i=1}^{n} f(x_i^*)\,\Delta x
-}
-\tag{1.8}
-\]</span></p>
-<p>provided the limit exists.</p>
-<p>If this limit exists, then <span class="math inline">\(f(x)\)</span> is said to be <strong>integrable on <span class="math inline">\([a,b]\)</span></strong>, or simply an <strong>integrable function</strong>.</p>
-</section>
-<section id="properties-of-the-definite-integral-bounds" class="slide level2">
-<h2>Properties of the Definite Integral: Bounds</h2>
-<p>If <span class="math inline">\(f\)</span> is integrable, then an interval with zero width has integral zero:</p>
-<p><span class="math display">\[
-\boxed{
-\int_a^a f(x)\,dx=0
-}
-\]</span></p>
-<p>Reversing the limits changes the sign:</p>
-<p><span class="math display">\[
-\boxed{
-\int_b^a f(x)\,dx
-=
--\int_a^b f(x)\,dx
-}
-\]</span></p>
-</section>
-<section id="properties-of-the-definite-integral-linearity" class="slide level2">
-<h2>Properties of the Definite Integral: Linearity</h2>
-<p>The integral of a sum or difference can be separated:</p>
-<p><span class="math display">\[
-\int_a^b[f(x)+g(x)]\,dx
-=
-\int_a^b f(x)\,dx+\int_a^b g(x)\,dx
-\]</span></p>
-<p><span class="math display">\[
-\int_a^b[f(x)-g(x)]\,dx
-=
-\int_a^b f(x)\,dx-\int_a^b g(x)\,dx
-\]</span></p>
-<p>A constant factor can be moved outside the integral:</p>
-<p><span class="math display">\[
-\int_a^b c f(x)\,dx
-=
-c\int_a^b f(x)\,dx
-\]</span></p>
-</section>
-<section id="properties-of-the-definite-integral-adjacent-intervals" class="slide level2">
-<h2>Properties of the Definite Integral: Adjacent Intervals</h2>
-<p>An integral can be split at any point <span class="math inline">\(c\)</span>:</p>
-<p><span class="math display">\[
-\boxed{
-\int_a^b f(x)\,dx
-=
-\int_a^c f(x)\,dx
-+
-\int_c^b f(x)\,dx
-}
-\]</span></p>
-</section>
-<section id="example-using-properties" class="slide level2">
-<h2>Example: Using properties</h2>
-<p><span class="math display">\[\int_{-5}^7 2x+2 \,dx\]</span></p>
 </section>
 <section id="fundamental-theorem-of-calculus-part-1" class="slide level2">
 <h2>Fundamental Theorem of Calculus, Part 1</h2>
@@ -232,42 +163,7 @@ F(x)=\int_a^x f(t)\,dt,
 </section>
 <section id="integration-techniques" class="slide level2">
 <h2>Integration Techniques</h2>
-<p>The Fundamental Theorem of Calculus gives us a method to evaluate integrals without using Riemann sums or using known geometric formulas.</p>
-<p>The drawback is that we must be able to find an antiderivative, and this is not always easy. Much of the rest of this course is about way to find antiderivatives.</p>
 <p><strong>Big Idea</strong> For every derivative rule there is a coresponding integration rule.</p>
-</section>
-<section id="challenges-of-integration" class="slide level2">
-<h2>Challenges of integration</h2>
-<p>Somethings in are easy in on direction but hard in the opposite direction. It is easy and quick to multipy two numbers, but is challenging and slow to factor a number into it’s prime factors. What are the prime factors of 391?</p>
-</section>
-<section id="challenges-of-integration-1" class="slide level2">
-<h2>Challenges of integration</h2>
-<p>Integration and derivation have a similar relationship. It is realitvely straight forward to calculate derivatives, and for functions involving fractions, powers, trig fucitons, logs and exponents you can always write down what the derivative down. If you are given a similar function, it is challenging to write down the antiderivative if one exists at all.</p>
-<p>We’ll start with know derivative rules and use then to get some integral rules.</p>
-</section>
-<section id="power-rule-for-differentiation-and-integration" class="slide level2">
-<h2>Power rule for differentiation and integration</h2>
-<p><strong>Power Rule for Derivatives</strong></p>
-<p>For <span class="math inline">\(n\)</span> a positive integer,</p>
-<p><span class="math inline">\(\displaystyle \frac{d}{dx}\left(x^n\right)=nx^{n-1}\)</span>.</p>
-<p><strong>Power Rule for Integrals</strong></p>
-<p>For <span class="math inline">\(n\ne -1\)</span>,</p>
-<p><span class="math inline">\(\displaystyle \int x^n\,dx=\frac{x^{n+1}}{n+1}+C\)</span>.</p>
-</section>
-<section id="example-using-fundemental-theorem" class="slide level2">
-<h2>Example using Fundemental Theorem</h2>
-<p><span class="math display">\[\int_{-2}^2 t^2-4 \,dt\]</span></p>
-<p><span class="math display">\[\int_{-5}^7 2x+2 \,dx\]</span></p>
-</section>
-<section id="review-of-derivative-rules-for-common-functions" class="slide level2">
-<h2>Review of derivative rules for common functions</h2>
-<ul>
-<li><span class="math inline">\(\frac{d}{dx}(k)=0\)</span></li>
-<li><span class="math inline">\(\frac{d}{dx}(\ln|x|)=\frac{1}{x}\)</span></li>
-<li><span class="math inline">\(\frac{d}{dx}(e^x)=e^x\)</span></li>
-<li><span class="math inline">\(\frac{d}{dx}(\sin x)=\cos x\)</span></li>
-<li><span class="math inline">\(\frac{d}{dx}(\cos x)=-\sin x\)</span></li>
-</ul>
 </section>
 <section id="integration-rules-for-common-functions" class="slide level2">
 <h2>Integration rules for common functions</h2>
@@ -277,16 +173,6 @@ F(x)=\int_a^x f(t)\,dt,
 <li><span class="math inline">\(\int e^x\,dx=e^x+C\)</span></li>
 <li><span class="math inline">\(\int \cos x\,dx=\sin x+C\)</span></li>
 <li><span class="math inline">\(\int \sin x\,dx=-\cos x+C\)</span></li>
-</ul>
-</section>
-<section id="more-derivative-rules" class="slide level2">
-<h2>More Derivative Rules</h2>
-<ul>
-<li><span class="math inline">\(\frac{d}{dx}(\tan x)=\sec^2 x\)</span></li>
-<li><span class="math inline">\(\frac{d}{dx}(\csc x)=-\csc x\cot x\)</span></li>
-<li><span class="math inline">\(\frac{d}{dx}(\sec x)=\sec x\tan x\)</span></li>
-<li><span class="math inline">\(\frac{d}{dx}(\cot x)=-\csc^2 x\)</span></li>
-<li><span class="math inline">\(\frac{d}{dx}(\tan^{-1}x)=\frac{1}{1+x^2}\)</span></li>
 </ul>
 </section>
 <section id="more-integration-rules" class="slide level2">
@@ -302,17 +188,7 @@ F(x)=\int_a^x f(t)\,dt,
 <section id="longer-lists-of-rules" class="slide level2">
 <h2>Longer lists of rules</h2>
 <p><a href="https://openstax.org/books/calculus-volume-2/pages/a-table-of-integrals">Integration Rules</a></p>
-<p><a href="https://openstax.org/books/calculus-volume-2/pages/a-table-of-integrals">Differentiation Rules</a></p>
-</section>
-<section id="examples-using-the-rules" class="slide level2">
-<h2>Examples using the rules</h2>
-<p><span class="math display">\[\int_0^4 3e^t \, dt\]</span></p>
-<p><span class="math display">\[\int_0^\pi \sin \theta \, d\theta\]</span></p>
-</section>
-<section id="first-integration-technique" class="slide level2">
-<h2>First Integration Technique</h2>
-<p>Integration by substitution</p>
-<p>Substitution is the reverse of the chain rule of differentiation.</p>
+<p><a href="https://openstax.org/books/calculus-volume-2/pages/b-table-of-derivatives">Differentiation Rules</a></p>
 </section>
 <section id="chain-rule" class="slide level2">
 <h2>Chain Rule</h2>
@@ -321,7 +197,13 @@ F(x)=\int_a^x f(t)\,dt,
 F'(x)=f'(g(x))g'(x).
 \]</span></p>
 </section>
-<section id="u-substitution" class="slide level2">
+<section id="first-integration-technique" class="slide level2">
+<h2>First Integration Technique</h2>
+<p>Integration by substitution</p>
+<p>Substitution is the reverse of the chain rule of differentiation.</p>
+<p><span class="math display">\[\frac{d}{dx}(x^2-3x)^3\]</span></p>
+</section>
+<section id="u-substitution-1" class="slide level2">
 <h2>U-Substitution</h2>
 <p>Let <span class="math inline">\(u=g(x)\)</span>, where <span class="math inline">\(g'(x)\)</span> is continuous over an interval, and let <span class="math inline">\(f\)</span> be continuous over the corresponding range of <span class="math inline">\(g\)</span>.</p>
 <p>Then</p>
@@ -333,13 +215,36 @@ F'(x)=f'(g(x))g'(x).
 <p>If <span class="math inline">\(F\)</span> is an antiderivative of <span class="math inline">\(f\)</span>, then</p>
 <p><span class="math inline">\(\int f(u)\,du=F(u)+C=F(g(x))+C\)</span>.</p>
 </section>
-<section id="u-substitution-examples" class="slide level2">
-<h2>U-Substitution Examples</h2>
-<p><span class="math display">\[\int 6x(3x^2+4)^4 \,dx\]</span></p>
-<p><span class="math display">\[\int z \sqrt{z^2-5} \, dz\]</span></p>
+<section id="u-substitution-examples-indefinite-integrals" class="slide level2">
+<h2>U-Substitution Examples Indefinite Integrals</h2>
+<p><span class="math display">\[\int x^2(x^3+5)^9 \,dx\]</span></p>
+<p><span class="math display">\[\int \cos^3(t)\sin(t) \,dt\]</span></p>
+<p><span class="math display">\[\int_1^2 \frac{x}{\sqrt{x-1}} \,dx\]</span></p>
 </section>
-<section id="average-value-of-a-function" class="slide level2">
-<h2>Average Value of a function</h2>
+<section id="theorem-1.8.-u-substitution-for-definite-integrals" class="slide level2">
+<h2>Theorem 1.8.: U-Substitution for Definite Integrals</h2>
+<p>Let <span class="math inline">\(u=g(x)\)</span> and let <span class="math inline">\(g'\)</span> be continuous over an interval <span class="math inline">\([a,b]\)</span>, and let <span class="math inline">\(f\)</span> be continuous over the range of <span class="math inline">\(u=g(x)\)</span>. Then,</p>
+<p><span class="math display">\[
+\int_a^b f(g(x))g'(x)\,dx
+=
+\int_{g(a)}^{g(b)} f(u)\,du.
+\]</span></p>
+</section>
+<section id="example-of-u-substitution-for-definite-integrals" class="slide level2">
+<h2>Example of U-Substitution for Definite Integrals</h2>
+<p>Evaluate each definite integral.</p>
+<p><span class="math display">\[
+\int_0^2 e^{2x}\,dx
+\]</span></p>
+<p><span class="math display">\[
+\int_{-1}^0 y(2y^2-3)^5\,dy
+\]</span></p>
+<p><span class="math display">\[
+\int_0^1 x^2 \cos (\frac{\pi}{2}x^3\,dx
+\]</span></p>
+</section>
+<section id="first-application-average-value-of-a-function" class="slide level2">
+<h2>First Application: Average Value of a function</h2>
 <p>Let <span class="math inline">\(f(x)\)</span> be continuous over the interval <span class="math inline">\([a,b]\)</span>.</p>
 <p>The average value of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span> is</p>
 <p><span class="math display">\[
@@ -347,12 +252,80 @@ f_{\text{ave}}
 =
 \frac{1}{b-a}\int_a^b f(x)\,dx.
 \]</span></p>
+<p><strong>What is the height of the rectangle with the same base and same area?</strong></p>
+</section>
+<section id="average-value-example" class="slide level2">
+<h2>Average Value Example</h2>
+<p>Find the <strong>average value</strong> of each function on the given interval.</p>
+<p><span class="math inline">\(\$f(x)=x(x^2+1)^2\)</span> on <span class="math inline">\([0,2]\)</span></p>
+<p><span class="math inline">\(f(x)=e^{2x+1}\)</span> on <span class="math inline">\([0,1]\)</span></p>
+<p><span class="math inline">\(f(x)=\dfrac{\sin x}{2+\cos x}\)</span> on <span class="math inline">\(\left[0,\dfrac{\pi}{2}\right]\)</span></p>
+<p><a href="https://www.geogebra.org/graphing/rkywqkpx" target="_blank">Open GeoGebra Graph</a></p>
+</section>
+<section id="integration-rules-for-exponential-functions" class="slide level2">
+<h2>Integration Rules for Exponential Functions</h2>
+<p>Exponential functions can be integrated using the following formulas.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int e^x\,dx &amp;= e^x+C \\
+\int a^x\,dx &amp;= \frac{a^x}{\ln a}+C
+\end{aligned}
+\]</span></p>
+</section>
+<section id="integration-rules-logarithmic-functions" class="slide level2">
+<h2>Integration Rules Logarithmic Functions</h2>
+<p>The following formulas can be used to evaluate integrals involving logarithmic functions.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int x^{-1}\,dx &amp;= \ln|x|+C \\
+\int \ln x\,dx &amp;= x\ln x-x+C=x(\ln x-1)+C \\
+\int \log_a x\,dx &amp;= \frac{x}{\ln a}(\ln x-1)+C
+\end{aligned}
+\]</span></p>
+</section>
+<section id="how-does-the-absolute-value-work" class="slide level2">
+<h2>How does the absolute value work?</h2>
+<p><span class="math display">\[\int^{-1}_{-3}\frac{1}{x}\,dx\]</span></p>
+<p><a href="https://www.geogebra.org/graphing/naeqhemf" target="_blank">Open GeoGebra Graph</a></p>
+<p>This is the “missing” piece of the power rule for integrals.</p>
+<p>Note about: <span class="math inline">\(\int \ln x\,dx\)</span></p>
+</section>
+<section id="integrations-resulting-in-inverse-trigonometric-functions" class="slide level2">
+<h2>Integrations Resulting in Inverse Trigonometric Functions</h2>
+<p><span class="math display">\[
+\int \frac{du}{\sqrt{a^2-u^2}}
+=
+\sin^{-1}\left(\frac{u}{a}\right)+C
+\]</span></p>
+<p><span class="math display">\[
+\int \frac{du}{a^2+u^2}
+=
+\frac{1}{a}\tan^{-1}\left(\frac{u}{a}\right)+C
+\]</span></p>
+<p><span class="math display">\[
+\int \frac{du}{u\sqrt{u^2-a^2}}
+=
+\frac{1}{a}\sec^{-1}\left(\frac{|u|}{a}\right)+C
+\]</span></p>
+</section>
+<section id="inverse-trigonometric-integral-examples" class="slide level2">
+<h2>Inverse Trigonometric Integral Examples</h2>
+<p>Evaluate each integral.</p>
+<p><span class="math display">\[
+\int \frac{dx}{\sqrt{9-x^2}}
+\]</span></p>
+<p><span class="math display">\[
+\int \frac{dx}{10+x^2}
+\]</span></p>
+<p><span class="math display">\[
+\int \frac{dx}{x\sqrt{x^2-25}}
+\]</span></p>
 </section>
 <section id="next-steps" class="slide level2">
 <h2>Next Steps</h2>
 <ul>
-<li>Look over the CI Learn page</li>
-<li>Start working on the week 2 homework assignment</li>
+<li>Start work on Homework 2 if you have not already</li>
+<li>Look of chapter 2 of the course text</li>
 </ul>
 </section>
 <section class="slide level2">

@@ -1,0 +1,329 @@
+---
+title: "U-Substitution"
+
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    include-after-body:
+      text: |
+        <script>
+        (function useMathJaxSVG() {
+          if (window.MathJax && MathJax.Hub) {
+            MathJax.Hub.Queue(
+              ["setRenderer", MathJax.Hub, "SVG"],
+              ["Rerender", MathJax.Hub]
+            );
+          } else {
+            window.setTimeout(useMathJaxSVG, 50);
+          }
+        })();
+        </script>
+---
+
+
+
+
+## U-Substitution
+
+
+Class Session Goals:
+
+
+- U-substitution Rule for Integrals
+- More Integration Rules for Functions
+
+---
+
+
+
+## Fundamental Theorem of Calculus, Part 1
+
+If $f(x)$ is continuous over an interval $[a,b]$, and the function $F(x)$ is defined by
+
+$$
+F(x)=\int_a^x f(t)\,dt,
+$$
+
+then $F'(x)=f(x)$ over $(a,b)$.
+
+**The derivative of an integrated function is the original function.**
+
+---
+
+## Fundamental Theorem of Calculus, Part 2
+
+If $f$ is continuous over the interval $[a,b]$ and $F(x)$ is any antiderivative of $f(x)$, then
+
+$$
+\int_a^b f(x)\,dx=F(b)-F(a).
+$$
+
+We often use $F(x)\big|_a^b$ to denote $F(b)-F(a)$.
+
+**The integral of the derivative function is the original function.**
+
+---
+
+
+
+## Integration Techniques
+
+
+
+**Big Idea** For every derivative rule there is a coresponding integration rule.
+
+---
+
+
+
+## Integration rules for common functions
+
+- $\int k\,dx=kx+C$
+- $\int \frac{1}{x}\,dx=\ln|x|+C$
+- $\int e^x\,dx=e^x+C$
+- $\int \cos x\,dx=\sin x+C$
+- $\int \sin x\,dx=-\cos x+C$
+
+---
+
+
+
+## More Integration rules
+
+- $\int \sec^2 x\,dx=\tan x+C$
+- $\int \csc x\cot x\,dx=-\csc x+C$
+- $\int \sec x\tan x\,dx=\sec x+C$
+- $\int \csc^2 x\,dx=-\cot x+C$
+- $\int \frac{1}{1+x^2}\,dx=\tan^{-1}x+C$
+
+---
+
+## Longer lists of rules
+
+[Integration Rules](https://openstax.org/books/calculus-volume-2/pages/a-table-of-integrals)
+
+[Differentiation Rules](https://openstax.org/books/calculus-volume-2/pages/b-table-of-derivatives)
+
+---
+
+
+
+
+
+## Chain Rule
+
+If $f$ is differentiable at $g(x)$ and $g$ is differentiable at $x$, then the composite function $F=f\circ g$ defined by $F(x)=f(g(x))$ is differentiable at $x$ and
+
+$$
+F'(x)=f'(g(x))g'(x).
+$$
+
+---
+
+## First Integration Technique
+
+Integration by substitution
+
+Substitution is the reverse of the chain rule of differentiation.
+
+$$\frac{d}{dx}(x^2-3x)^3$$
+
+
+
+---
+
+## U-Substitution
+
+Let $u=g(x)$, where $g'(x)$ is continuous over an interval, and let $f$ be continuous over the corresponding range of $g$.
+
+Then
+
+$$
+\int f[g(x)]g'(x)\,dx
+=
+\int f(u)\,du.
+$$
+
+If $F$ is an antiderivative of $f$, then
+
+$\int f(u)\,du=F(u)+C=F(g(x))+C$.
+
+---
+
+## U-Substitution Examples Indefinite Integrals
+
+
+
+$$\int x^2(x^3+5)^9 \,dx$$
+
+$$\int \cos^3(t)\sin(t) \,dt$$
+
+$$\int_1^2 \frac{x}{\sqrt{x-1}} \,dx$$
+
+
+
+
+---
+
+## Theorem 1.8.: U-Substitution for Definite Integrals
+
+Let $u=g(x)$ and let $g'$ be continuous over an interval $[a,b]$, and let $f$ be continuous over the range of $u=g(x)$. Then,
+
+$$
+\int_a^b f(g(x))g'(x)\,dx
+=
+\int_{g(a)}^{g(b)} f(u)\,du.
+$$
+
+---
+
+## Example of U-Substitution for Definite Integrals
+
+Evaluate each definite integral.
+
+$$
+\int_0^2 e^{2x}\,dx
+$$
+
+$$
+\int_{-1}^0 y(2y^2-3)^5\,dy
+$$
+
+$$
+\int_0^1 x^2 \cos (\frac{\pi}{2}x^3\,dx
+$$
+
+
+---
+
+
+## First Application: Average Value of a function
+
+Let $f(x)$ be continuous over the interval $[a,b]$.
+
+The average value of $f$ on $[a,b]$ is
+
+$$
+f_{\text{ave}}
+=
+\frac{1}{b-a}\int_a^b f(x)\,dx.
+$$
+
+**What is the height of the rectangle with the same base and same area?**
+
+---
+
+## Average Value Example
+
+Find the **average value** of each function on the given interval.
+
+$\$f(x)=x(x^2+1)^2$ on $[0,2]$
+
+$f(x)=e^{2x+1}$ on $[0,1]$
+
+$f(x)=\dfrac{\sin x}{2+\cos x}$ on $\left[0,\dfrac{\pi}{2}\right]$
+
+[Open GeoGebra Graph](https://www.geogebra.org/graphing/rkywqkpx){target="_blank"}
+
+---
+
+
+## Integration Rules for Exponential Functions
+
+Exponential functions can be integrated using the following formulas.
+
+$$
+\begin{aligned}
+\int e^x\,dx &= e^x+C \\
+\int a^x\,dx &= \frac{a^x}{\ln a}+C
+\end{aligned}
+$$
+
+---
+
+
+## Integration Rules Logarithmic Functions
+
+The following formulas can be used to evaluate integrals involving logarithmic functions.
+
+$$
+\begin{aligned}
+\int x^{-1}\,dx &= \ln|x|+C \\
+\int \ln x\,dx &= x\ln x-x+C=x(\ln x-1)+C \\
+\int \log_a x\,dx &= \frac{x}{\ln a}(\ln x-1)+C
+\end{aligned}
+$$
+
+
+---
+
+## How does the absolute value work?
+
+$$\int^{-1}_{-3}\frac{1}{x}\,dx$$
+
+
+[Open GeoGebra Graph](https://www.geogebra.org/graphing/naeqhemf){target="_blank"}
+
+This is the "missing" piece of the power rule for integrals.
+
+Note about: $\int \ln x\,dx$
+
+
+
+---
+
+## Integrations Resulting in Inverse Trigonometric Functions
+
+
+$$
+\int \frac{du}{\sqrt{a^2-u^2}}
+=
+\sin^{-1}\left(\frac{u}{a}\right)+C
+$$
+
+$$
+\int \frac{du}{a^2+u^2}
+=
+\frac{1}{a}\tan^{-1}\left(\frac{u}{a}\right)+C
+$$
+
+$$
+\int \frac{du}{u\sqrt{u^2-a^2}}
+=
+\frac{1}{a}\sec^{-1}\left(\frac{|u|}{a}\right)+C
+$$
+
+
+---
+
+
+
+
+
+## Inverse Trigonometric Integral Examples
+
+Evaluate each integral.
+
+$$
+\int \frac{dx}{\sqrt{9-x^2}}
+$$
+
+$$
+\int \frac{dx}{10+x^2}
+$$
+
+$$
+\int \frac{dx}{x\sqrt{x^2-25}}
+$$
+
+
+---
+
+## Next Steps
+
+
+- Start work on Homework 2 if you have not already
+- Look of chapter 2 of the course text
+
+---

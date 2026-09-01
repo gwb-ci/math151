@@ -4,8 +4,21 @@ format:
   revealjs:
     theme: solarized
     slide-number: true
+    include-after-body:
+      text: |
+        <script>
+        (function useMathJaxSVG() {
+          if (window.MathJax && MathJax.Hub) {
+            MathJax.Hub.Queue(
+              ["setRenderer", MathJax.Hub, "SVG"],
+              ["Rerender", MathJax.Hub]
+            );
+          } else {
+            window.setTimeout(useMathJaxSVG, 50);
+          }
+        })();
+        </script>
 ---
-
 
 
 
@@ -239,9 +252,9 @@ $$\int_{-5}^7 2x+2 \,dx$$
 
 ## Longer lists of rules
 
-[Integral Rules](https://openstax.org/books/calculus-volume-2/pages/a-table-of-integrals)
+[Integration Rules](https://openstax.org/books/calculus-volume-2/pages/a-table-of-integrals)
 
-[Differentiation Rules](https://openstax.org/books/calculus-volume-2/pages/b-table-of-derivatives)
+[Differentiation Rules](https://openstax.org/books/calculus-volume-2/pages/a-table-of-integrals)
 
 ---
 

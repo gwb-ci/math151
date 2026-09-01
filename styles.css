@@ -1,0 +1,5 @@
+/* Extend the radical bar over the square-root glyph */
+mjx-container[jax="CHTML"] mjx-sqrt mjx-box {
+  margin-left: -0.12em !important;
+  padding-left: 0.12em !important;
+}
