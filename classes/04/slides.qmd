@@ -1,5 +1,5 @@
 ---
-title: "U-Substitution"
+title: "Area and Volume"
 
 format:
   revealjs:
@@ -22,298 +22,511 @@ format:
 ---
 
 
-
-
-## U-Substitution
-
+## Area and Volume
 
 Class Session Goals:
 
+- Find the area of a region between two curves.
+- Find the volume of a solid using slicing.
 
-- U-substitution Rule for Integrals
-- More Integration Rules for Functions
 
 ---
 
 
+## Core Idea of Chapter 2
 
-## Fundamental Theorem of Calculus, Part 1
+**Integration gives us a way to add up infinitely small slices**
 
-If $f(x)$ is continuous over an interval $[a,b]$, and the function $F(x)$ is defined by
-
+Defintion of the Definite Integral:
 $$
-F(x)=\int_a^x f(t)\,dt,
-$$
-
-then $F'(x)=f(x)$ over $(a,b)$.
-
-**The derivative of an integrated function is the original function.**
-
----
-
-## Fundamental Theorem of Calculus, Part 2
-
-If $f$ is continuous over the interval $[a,b]$ and $F(x)$ is any antiderivative of $f(x)$, then
-
-$$
-\int_a^b f(x)\,dx=F(b)-F(a).
-$$
-
-We often use $F(x)\big|_a^b$ to denote $F(b)-F(a)$.
-
-**The integral of the derivative function is the original function.**
-
----
-
-
-
-## Integration Techniques
-
-
-
-**Big Idea** For every derivative rule there is a coresponding integration rule.
-
----
-
-
-
-## Integration rules for common functions
-
-- $\int k\,dx=kx+C$
-- $\int \frac{1}{x}\,dx=\ln|x|+C$
-- $\int e^x\,dx=e^x+C$
-- $\int \cos x\,dx=\sin x+C$
-- $\int \sin x\,dx=-\cos x+C$
-
----
-
-
-
-## More Integration rules
-
-- $\int \sec^2 x\,dx=\tan x+C$
-- $\int \csc x\cot x\,dx=-\csc x+C$
-- $\int \sec x\tan x\,dx=\sec x+C$
-- $\int \csc^2 x\,dx=-\cot x+C$
-- $\int \frac{1}{1+x^2}\,dx=\tan^{-1}x+C$
-
----
-
-## Longer lists of rules
-
-[Integration Rules](https://openstax.org/books/calculus-volume-2/pages/a-table-of-integrals)
-
-[Differentiation Rules](https://openstax.org/books/calculus-volume-2/pages/b-table-of-derivatives)
-
----
-
-
-
-## First Integration Technique
-
-Integration by substitution
-
-Substitution is the reverse of the chain rule of differentiation.
-
-
----
-
-
-## Chain Rule
-
-If $f$ is differentiable at $g(x)$ and $g$ is differentiable at $x$, then the composite function $F=f\circ g$ defined by $F(x)=f(g(x))$ is differentiable at $x$ and
-
-$$
-F'(x)=f'(g(x))g'(x).
-$$
-
-
-
----
-
-## U-Substitution
-
-Let $u=g(x)$, where $g'(x)$ is continuous over an interval, and let $f$ be continuous over the corresponding range of $g$.
-
-Then
-
-$$
-\int f[g(x)]g'(x)\,dx
+\boxed{
+\int_a^b f(x)\,dx
 =
-\int f(u)\,du.
+\lim_{n\to\infty}\sum_{i=1}^{n} f(x_i^*)\,\Delta x
+}
 $$
 
-If $F$ is an antiderivative of $f$, then
 
-$\int f(u)\,du=F(u)+C=F(g(x))+C$.
+## Two ways to think about the area between Curves
 
----
-
-## U-Substitution Examples
-
-$$\int 6x(3x^2+4)^4 \,dx$$
-
-$$\int z \sqrt{z^2-5} \,dz$$
-
-
-
-
----
-
-
-
-
-
-## Integration Rules for Exponential and Logarithmic Functions
-
-Exponential functions can be integrated using the following formulas.
-
+ Assume that $f(x)$ \ge $g(x)$ on $[a,b]$.
 $$
-\begin{aligned}
-\int e^x\,dx &= e^x+C \\
-\int a^x\,dx &= \frac{a^x}{\ln a}+C
-\end{aligned}
+\text{Area}=\int_a^b [\text{top}-\text{bottom}]\,dx
 $$
 
----
 
-## Integration Rules Logarithmic Functions
-
-The following formulas can be used to evaluate integrals involving logarithmic functions.
+or 
 
 $$
-\begin{aligned}
-\int x^{-1}\,dx &= \ln|x|+C \\
-\int \ln x\,dx &= x\ln x-x+C=x(\ln x-1)+C \\
-\int \log_a x\,dx &= \frac{x}{\ln a}(\ln x-1)+C
-\end{aligned}
+\text{Area}=\lim_{n\to\infty}\sum_{i=1}^{n} [f(x_i^*)-g(x_i^*)]\,\Delta x
 $$
 
 
 ---
 
-## Integrations Resulting in Inverse Trigonometric Functions
+## Theorem 2.1 Area Between Curves
+
+Let $f(x)$ and $g(x)$ be continuous functions such that
+
+$$
+f(x)\geq g(x)
+$$
+
+over an interval $[a,b]$.
+
+If $R$ is the region bounded above by $f(x)$, below by $g(x)$, and on the left and right by $x=a$ and $x=b$, then
+
+$$
+\boxed{
+A=\int_a^b [f(x)-g(x)]\,dx
+}
+$$
+
+
+---
+
+
+## Example of Area Between Curves
+
+Find the area of each region.
+
+The region bounded by
+
+   $$
+   f(x)=x+4
+   $$
+
+   and
+
+   $$
+   g(x)=3-\frac{x}{2}
+   $$
+
+   over $[1,4]$.
+
+[Function Plot](https://www.geogebra.org/graphing/qbq26vya){target="_blank"}
+
+---
+
+## Another Example of Area Between Curves
+The region bounded by
+
+   $$
+   y=x
+   \qquad\text{and}\qquad
+   y=x^2
+   $$
+
+[Function Plot](https://www.geogebra.org/graphing/vujutvsb){target="_blank"}
+
+---
+
+
+## A third Example of Area Between Curves
+The region bounded by
+
+   $$
+   y=x
+   \qquad\text{and}\qquad
+   y=x^3
+   $$
+
+[Function Plot](https://www.geogebra.org/graphing/naeqhemf){target="_blank"}
+
+---
+
+
+## Theorem 2.2 Area Between Curves that Cross
+
+If the graphs cross, the identity of the **top function** and **bottom function** may change.
+
+The area between two continuous functions over $[a,b]$ is
+
+$$
+A=\int_a^b |f(x)-g(x)|\,dx.
+$$
+
+Note: This is different from the value of the definite integral $\int_a^b [f(x)-g(x)]\,dx$.
+
+## Managing the Crossings
+
+In practice:
+
+1. Find the points where $f(x)=g(x)$.
+
+2. Use the intersection points to divide the interval.
+
+3. On each interval, identify the top and bottom functions.
+
+4. Add the areas of the subregions.
+
+
+---
+
+
+## Changing which slices you use
+
+Sometimes a region is easier to describe using **horizontal slices**.
+
+Instead of writing $y=f(x)$ write the boundaries as functions of $y$:
+
+$x=u(y) \qquad\text{and}\qquad x=v(y)$.
+
+For a horizontal slice, $\text{width} = \text{right}-\text{left}$.
+
+Therefore, $\text{Area} = \int[\text{right}-\text{left}]\,dy$.
+
+
+The limits of integration are now **$y$-values**.
+
+---
+
+
+## Definite Integral with respect to y
 
 
 $$
-\int \frac{du}{\sqrt{a^2-u^2}}
+\boxed{
+\int_a^b f(y)\,dy
 =
-\sin^{-1}\left(\frac{u}{a}\right)+C
+\lim_{n\to\infty}\sum_{i=1}^{n} f(y_i^*)\,\Delta y
+}
 $$
 
+
+---
+
+
+
+## Example of Area Between Curves with respect to y
+
+Suppose $f(x)= \sqrt[3]{x}$.  Find the area of the region bounded by $f(x)$, the line $x=0$ and the line $y=3$.
+
+[Function Plot](https://www.geogebra.org/graphing/nzjykyvj){target="_blank"}
+
+## Theorem 2.3 Area between Curves with respect to y
+
+Let $u(y)$ and $v(y)$ be continuous functions such that
+
 $$
-\int \frac{du}{a^2+u^2}
+u(y)\geq v(y)
+$$
+
+for all $y\in[c,d]$.
+
+If $R$ is bounded on the right by $u(y)$, on the left by $v(y)$, and above and below by $y=d$ and $y=c$, then
+
+$$
+\boxed{
+A=\int_c^d [u(y)-v(y)]\,dy
+}
+$$
+
+
+---
+
+## Horizontal slices example
+
+Find the area of the region bounded by
+
+$$
+f(x)=\sqrt{x}
+$$
+
+and
+
+$$
+g(x)=\frac{3}{2}-\frac{x}{2}
+$$
+
+and $y=0$.
+
+
+[Function Plot](https://www.geogebra.org/graphing/weftwhyw){target="_blank"}
+
+---
+
+
+## Slices of with Area $A(x)$
+
+**Integration, we can add up infinitely many slices of area to find the volume of a solid.**
+
+$$\lim_{n\to\infty}\sum_{i=1}^{n} A(x_i^*)\,\Delta x$$
+
+---
+
+
+## Volume and Slicing
+
+Suppose a solid extends from $x=a$ to $x=b$.
+
+If the area of the cross-section perpendicular to the $x$-axis is $A(x)$, then
+
+$$
+\boxed{
+V=\int_a^b A(x)\,dx
+}
+$$
+
+---
+
+## Volume of a Hut
+
+Consider a circular hut whose cross-section is a circle.  The hut is 5 feet tall and at its base the diameter is 10  The radius $r$ of the circular cross-section varies with the height $h$ of the hut.  The radius is given by $r(h)=5-\frac{h^2}{5}$.  What is the volume of the hut?
+
+---
+
+## Finding Volumes by the Slicing Method
+
+1. Determine the **shape** of a cross-section.
+2. Determine a formula for the **area** of the cross-section.
+3. Integrate the area formula over the appropriate interval.
+
+$$
+\text{Volume}
 =
-\frac{1}{a}\tan^{-1}\left(\frac{u}{a}\right)+C
+\int
+\text{cross-sectional area}.
 $$
 
+---
+
+
+## Volume of a Solid of Revolution
+
+If a region in a plane is revolved around a line in that plane, the resulting solid is called a **solid of revolution**.
+
+For example, rotate a region around the $x$-axis.
+
+A vertical slice of the region rotates to form a circular cross-section.
+
+The volume is still found using
+
 $$
-\int \frac{du}{u\sqrt{u^2-a^2}}
+V=\int_a^b A(x)\,dx,
+$$
+
+but now $A(x)$ is the area of a circular cross-section.
+
+---
+
+
+## Disk Method
+
+Suppose a region lies between
+
+$$
+y=f(x)
+$$
+
+and the $x$-axis.
+
+When the region is revolved around the $x$-axis, a vertical slice forms a **disk**.
+
+The radius of the disk is
+
+$$
+r=f(x).
+$$
+
+Since the area of a circle is
+
+$$
+A=\pi r^2,
+$$
+
+the cross-sectional area is
+
+$$
+A(x)=\pi[f(x)]^2.
+$$
+
+---
+
+
+## Disk Method Formula
+
+Let $f(x)$ be continuous and nonnegative over $[a,b]$.
+
+If the region under $f(x)$ is revolved around the $x$-axis, then
+
+$$
+\boxed{
+V=\int_a^b \pi[f(x)]^2\,dx
+}
+$$
+
+Equivalently,
+
+$$
+\boxed{
+V=\pi\int_a^b [f(x)]^2\,dx
+}
+$$
+
+For revolution around the $y$-axis, with $x=g(y)$,
+
+$$
+\boxed{
+V=\int_c^d \pi[g(y)]^2\,dy
+}
+$$
+
+---
+
+
+## Disk Method Example
+
+Find the volume of the solid generated by revolving the region bounded by
+
+$$
+f(x)=\sqrt{x},
+$$
+
+the $x$-axis, $x=1$, and $x=4$
+
+around the $x$-axis.
+
+### Set up
+
+Radius:
+
+$$
+r=f(x)=\sqrt{x}
+$$
+
+Cross-sectional area:
+
+$$
+A(x)=\pi(\sqrt{x})^2
+$$
+
+Volume:
+
+$$
+V=\int_1^4 \pi(\sqrt{x})^2\,dx
+$$
+
+**Finish the evaluation on the board.**
+
+---
+
+
+## Washer Method
+
+A solid of revolution may have a **cavity** in the middle.
+
+A cross-section is then a washer rather than a disk.
+
+Let
+
+$$
+R(x)=\text{outer radius}
+$$
+
+and
+
+$$
+r(x)=\text{inner radius}.
+$$
+
+The area of a washer is
+
+$$
+A(x)
 =
-\frac{1}{a}\sec^{-1}\left(\frac{|u|}{a}\right)+C
+\pi[R(x)]^2-\pi[r(x)]^2.
 $$
 
-
----
-
-
-## Indefinite Integral Examples
-
-Evaluate each indefinite integral.
+So,
 
 $$
-\int 7e^{3x}\,dx
-$$
-
-$$
-\int \frac{4}{x}\,dx
-$$
-
-$$
-\int 5^x\,dx
-$$
-
-
----
-
-
-## Definite Integral Examples
-
-Evaluate each definite integral.
-
-$$
-\int_0^2 e^{2x}\,dx
-$$
-
-$$
-\int_1^4 \frac{3}{x}\,dx
-$$
-
-$$
-\int_0^1 2^x\,dx
-$$
-
----
-
-## Inverse Trigonometric Integral Examples
-
-Evaluate each integral.
-
-$$
-\int \frac{dx}{\sqrt{9-x^2}}
-$$
-
-$$
-\int \frac{dx}{16+x^2}
-$$
-
-$$
-\int \frac{dx}{x\sqrt{x^2-25}}
-$$
-
----
-
-
-## Average Value of a function
-
-Let $f(x)$ be continuous over the interval $[a,b]$.
-
-The average value of $f$ on $[a,b]$ is
-
-$$
-f_{\text{ave}}
+A(x)
 =
-\frac{1}{b-a}\int_a^b f(x)\,dx.
+\pi\left([R(x)]^2-[r(x)]^2\right).
 $$
 
 ---
 
-## Average Value of a Function: Worked Examples
 
-Find the average value of each function over the given interval.
+## Washer Method Formula
 
-$$
-f(x)=x^2+1,\qquad 0\leq x\leq 3
-$$
+Suppose $f(x)$ and $g(x)$ are continuous, nonnegative functions with
 
 $$
-f(x)=\sqrt{x},\qquad 0\leq x\leq 4
+f(x)\geq g(x)
 $$
 
-$$
-f(x)=e^x,\qquad 0\leq x\leq \ln 2
-$$
+on $[a,b]$.
+
+When the region between the curves is revolved around the $x$-axis,
 
 $$
-f(x)=\frac{1}{x},\qquad 1\leq x\leq e
+\boxed{
+V
+=
+\int_a^b
+\pi\left([f(x)]^2-[g(x)]^2\right)\,dx
+}
+$$
+
+Think:
+
+$$
+\boxed{
+V
+=
+\pi\int_a^b
+\left[
+(\text{outer radius})^2
+-
+(\text{inner radius})^2
+\right]\,dx
+}
 $$
 
 ---
 
-## Next Steps
+
+## Washer Method Example
+
+Find the volume of the solid generated by revolving the region bounded above by
+
+$$
+f(x)=x
+$$
+
+and below by
+
+$$
+g(x)=\frac{1}{x}
+$$
+
+over $[1,4]$ around the $x$-axis.
+
+Outer radius:
+
+$$
+R(x)=x
+$$
+
+Inner radius:
+
+$$
+r(x)=\frac{1}{x}
+$$
+
+Set up the volume:
+
+$$
+V
+=
+\pi\int_1^4
+\left[
+x^2-\left(\frac{1}{x}\right)^2
+\right]\,dx
+$$
+
+**Finish the evaluation on the board.**
 
 
-- Start work on Homework 2 if you have not already
-- Look of chapter 2 of the course text
-
----

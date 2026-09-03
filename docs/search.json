@@ -74,420 +74,715 @@
     "href": "classes/06/slides.html#u-substitution",
     "title": "U-Substitution",
     "section": "U-Substitution",
-    "text": "U-Substitution\nClass Session Goals:\n\nU-substitution Rule for Integrals\nMore Integration Rules for Functions"
+    "text": "U-Substitution\nClass Session Goals:\n\nU-substitution Rule for Integrals\nMore Integration Rules for Functions",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#fundamental-theorem-of-calculus-part-1",
     "href": "classes/06/slides.html#fundamental-theorem-of-calculus-part-1",
     "title": "U-Substitution",
     "section": "Fundamental Theorem of Calculus, Part 1",
-    "text": "Fundamental Theorem of Calculus, Part 1\nIf \\(f(x)\\) is continuous over an interval \\([a,b]\\), and the function \\(F(x)\\) is defined by\n\\[\nF(x)=\\int_a^x f(t)\\,dt,\n\\]\nthen \\(F'(x)=f(x)\\) over \\((a,b)\\).\nThe derivative of an integrated function is the original function."
+    "text": "Fundamental Theorem of Calculus, Part 1\nIf \\(f(x)\\) is continuous over an interval \\([a,b]\\), and the function \\(F(x)\\) is defined by\n\\[\nF(x)=\\int_a^x f(t)\\,dt,\n\\]\nthen \\(F'(x)=f(x)\\) over \\((a,b)\\).\nThe derivative of an integrated function is the original function.",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#fundamental-theorem-of-calculus-part-2",
     "href": "classes/06/slides.html#fundamental-theorem-of-calculus-part-2",
     "title": "U-Substitution",
     "section": "Fundamental Theorem of Calculus, Part 2",
-    "text": "Fundamental Theorem of Calculus, Part 2\nIf \\(f\\) is continuous over the interval \\([a,b]\\) and \\(F(x)\\) is any antiderivative of \\(f(x)\\), then\n\\[\n\\int_a^b f(x)\\,dx=F(b)-F(a).\n\\]\nWe often use \\(F(x)\\big|_a^b\\) to denote \\(F(b)-F(a)\\).\nThe integral of the derivative function is the original function."
+    "text": "Fundamental Theorem of Calculus, Part 2\nIf \\(f\\) is continuous over the interval \\([a,b]\\) and \\(F(x)\\) is any antiderivative of \\(f(x)\\), then\n\\[\n\\int_a^b f(x)\\,dx=F(b)-F(a).\n\\]\nWe often use \\(F(x)\\big|_a^b\\) to denote \\(F(b)-F(a)\\).\nThe integral of the derivative function is the original function.",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#integration-techniques",
     "href": "classes/06/slides.html#integration-techniques",
     "title": "U-Substitution",
     "section": "Integration Techniques",
-    "text": "Integration Techniques\nBig Idea For every derivative rule there is a coresponding integration rule."
+    "text": "Integration Techniques\nBig Idea For every derivative rule there is a coresponding integration rule.",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#integration-rules-for-common-functions",
     "href": "classes/06/slides.html#integration-rules-for-common-functions",
     "title": "U-Substitution",
     "section": "Integration rules for common functions",
-    "text": "Integration rules for common functions\n\n\\(\\int k\\,dx=kx+C\\)\n\\(\\int \\frac{1}{x}\\,dx=\\ln|x|+C\\)\n\\(\\int e^x\\,dx=e^x+C\\)\n\\(\\int \\cos x\\,dx=\\sin x+C\\)\n\\(\\int \\sin x\\,dx=-\\cos x+C\\)"
+    "text": "Integration rules for common functions\n\n\\(\\int k\\,dx=kx+C\\)\n\\(\\int \\frac{1}{x}\\,dx=\\ln|x|+C\\)\n\\(\\int e^x\\,dx=e^x+C\\)\n\\(\\int \\cos x\\,dx=\\sin x+C\\)\n\\(\\int \\sin x\\,dx=-\\cos x+C\\)",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#more-integration-rules",
     "href": "classes/06/slides.html#more-integration-rules",
     "title": "U-Substitution",
     "section": "More Integration rules",
-    "text": "More Integration rules\n\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\csc x\\cot x\\,dx=-\\csc x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\csc^2 x\\,dx=-\\cot x+C\\)\n\\(\\int \\frac{1}{1+x^2}\\,dx=\\tan^{-1}x+C\\)"
+    "text": "More Integration rules\n\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\csc x\\cot x\\,dx=-\\csc x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\csc^2 x\\,dx=-\\cot x+C\\)\n\\(\\int \\frac{1}{1+x^2}\\,dx=\\tan^{-1}x+C\\)",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#longer-lists-of-rules",
     "href": "classes/06/slides.html#longer-lists-of-rules",
     "title": "U-Substitution",
     "section": "Longer lists of rules",
-    "text": "Longer lists of rules\nIntegration Rules\nDifferentiation Rules"
+    "text": "Longer lists of rules\nIntegration Rules\nDifferentiation Rules",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#first-integration-technique",
     "href": "classes/06/slides.html#first-integration-technique",
     "title": "U-Substitution",
     "section": "First Integration Technique",
-    "text": "First Integration Technique\nIntegration by substitution\nSubstitution is the reverse of the chain rule of differentiation."
+    "text": "First Integration Technique\nIntegration by substitution\nSubstitution is the reverse of the chain rule of differentiation.",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#chain-rule",
     "href": "classes/06/slides.html#chain-rule",
     "title": "U-Substitution",
     "section": "Chain Rule",
-    "text": "Chain Rule\nIf \\(f\\) is differentiable at \\(g(x)\\) and \\(g\\) is differentiable at \\(x\\), then the composite function \\(F=f\\circ g\\) defined by \\(F(x)=f(g(x))\\) is differentiable at \\(x\\) and\n\\[\nF'(x)=f'(g(x))g'(x).\n\\]"
+    "text": "Chain Rule\nIf \\(f\\) is differentiable at \\(g(x)\\) and \\(g\\) is differentiable at \\(x\\), then the composite function \\(F=f\\circ g\\) defined by \\(F(x)=f(g(x))\\) is differentiable at \\(x\\) and\n\\[\nF'(x)=f'(g(x))g'(x).\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#u-substitution-1",
     "href": "classes/06/slides.html#u-substitution-1",
     "title": "U-Substitution",
     "section": "U-Substitution",
-    "text": "U-Substitution\nLet \\(u=g(x)\\), where \\(g'(x)\\) is continuous over an interval, and let \\(f\\) be continuous over the corresponding range of \\(g\\).\nThen\n\\[\n\\int f[g(x)]g'(x)\\,dx\n=\n\\int f(u)\\,du.\n\\]\nIf \\(F\\) is an antiderivative of \\(f\\), then\n\\(\\int f(u)\\,du=F(u)+C=F(g(x))+C\\)."
+    "text": "U-Substitution\nLet \\(u=g(x)\\), where \\(g'(x)\\) is continuous over an interval, and let \\(f\\) be continuous over the corresponding range of \\(g\\).\nThen\n\\[\n\\int f[g(x)]g'(x)\\,dx\n=\n\\int f(u)\\,du.\n\\]\nIf \\(F\\) is an antiderivative of \\(f\\), then\n\\(\\int f(u)\\,du=F(u)+C=F(g(x))+C\\).",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#u-substitution-examples",
     "href": "classes/06/slides.html#u-substitution-examples",
     "title": "U-Substitution",
     "section": "U-Substitution Examples",
-    "text": "U-Substitution Examples\n\\[\\int 6x(3x^2+4)^4 \\,dx\\]\n\\[\\int z \\sqrt{z^2-5} \\,dz\\]"
+    "text": "U-Substitution Examples\n\\[\\int 6x(3x^2+4)^4 \\,dx\\]\n\\[\\int z \\sqrt{z^2-5} \\,dz\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#integration-rules-for-exponential-and-logarithmic-functions",
     "href": "classes/06/slides.html#integration-rules-for-exponential-and-logarithmic-functions",
     "title": "U-Substitution",
     "section": "Integration Rules for Exponential and Logarithmic Functions",
-    "text": "Integration Rules for Exponential and Logarithmic Functions\nExponential functions can be integrated using the following formulas.\n\\[\n\\begin{aligned}\n\\int e^x\\,dx &= e^x+C \\\\\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C\n\\end{aligned}\n\\]"
+    "text": "Integration Rules for Exponential and Logarithmic Functions\nExponential functions can be integrated using the following formulas.\n\\[\n\\begin{aligned}\n\\int e^x\\,dx &= e^x+C \\\\\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#integration-rules-logarithmic-functions",
     "href": "classes/06/slides.html#integration-rules-logarithmic-functions",
     "title": "U-Substitution",
     "section": "Integration Rules Logarithmic Functions",
-    "text": "Integration Rules Logarithmic Functions\nThe following formulas can be used to evaluate integrals involving logarithmic functions.\n\\[\n\\begin{aligned}\n\\int x^{-1}\\,dx &= \\ln|x|+C \\\\\n\\int \\ln x\\,dx &= x\\ln x-x+C=x(\\ln x-1)+C \\\\\n\\int \\log_a x\\,dx &= \\frac{x}{\\ln a}(\\ln x-1)+C\n\\end{aligned}\n\\]"
+    "text": "Integration Rules Logarithmic Functions\nThe following formulas can be used to evaluate integrals involving logarithmic functions.\n\\[\n\\begin{aligned}\n\\int x^{-1}\\,dx &= \\ln|x|+C \\\\\n\\int \\ln x\\,dx &= x\\ln x-x+C=x(\\ln x-1)+C \\\\\n\\int \\log_a x\\,dx &= \\frac{x}{\\ln a}(\\ln x-1)+C\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#integrations-resulting-in-inverse-trigonometric-functions",
     "href": "classes/06/slides.html#integrations-resulting-in-inverse-trigonometric-functions",
     "title": "U-Substitution",
     "section": "Integrations Resulting in Inverse Trigonometric Functions",
-    "text": "Integrations Resulting in Inverse Trigonometric Functions\n\\[\n\\int \\frac{du}{\\sqrt{a^2-u^2}}\n=\n\\sin^{-1}\\left(\\frac{u}{a}\\right)+C\n\\]\n\\[\n\\int \\frac{du}{a^2+u^2}\n=\n\\frac{1}{a}\\tan^{-1}\\left(\\frac{u}{a}\\right)+C\n\\]\n\\[\n\\int \\frac{du}{u\\sqrt{u^2-a^2}}\n=\n\\frac{1}{a}\\sec^{-1}\\left(\\frac{|u|}{a}\\right)+C\n\\]"
+    "text": "Integrations Resulting in Inverse Trigonometric Functions\n\\[\n\\int \\frac{du}{\\sqrt{a^2-u^2}}\n=\n\\sin^{-1}\\left(\\frac{u}{a}\\right)+C\n\\]\n\\[\n\\int \\frac{du}{a^2+u^2}\n=\n\\frac{1}{a}\\tan^{-1}\\left(\\frac{u}{a}\\right)+C\n\\]\n\\[\n\\int \\frac{du}{u\\sqrt{u^2-a^2}}\n=\n\\frac{1}{a}\\sec^{-1}\\left(\\frac{|u|}{a}\\right)+C\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#indefinite-integral-examples",
     "href": "classes/06/slides.html#indefinite-integral-examples",
     "title": "U-Substitution",
     "section": "Indefinite Integral Examples",
-    "text": "Indefinite Integral Examples\nEvaluate each indefinite integral.\n\\[\n\\int 7e^{3x}\\,dx\n\\]\n\\[\n\\int \\frac{4}{x}\\,dx\n\\]\n\\[\n\\int 5^x\\,dx\n\\]"
+    "text": "Indefinite Integral Examples\nEvaluate each indefinite integral.\n\\[\n\\int 7e^{3x}\\,dx\n\\]\n\\[\n\\int \\frac{4}{x}\\,dx\n\\]\n\\[\n\\int 5^x\\,dx\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#definite-integral-examples",
     "href": "classes/06/slides.html#definite-integral-examples",
     "title": "U-Substitution",
     "section": "Definite Integral Examples",
-    "text": "Definite Integral Examples\nEvaluate each definite integral.\n\\[\n\\int_0^2 e^{2x}\\,dx\n\\]\n\\[\n\\int_1^4 \\frac{3}{x}\\,dx\n\\]\n\\[\n\\int_0^1 2^x\\,dx\n\\]"
+    "text": "Definite Integral Examples\nEvaluate each definite integral.\n\\[\n\\int_0^2 e^{2x}\\,dx\n\\]\n\\[\n\\int_1^4 \\frac{3}{x}\\,dx\n\\]\n\\[\n\\int_0^1 2^x\\,dx\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#inverse-trigonometric-integral-examples",
     "href": "classes/06/slides.html#inverse-trigonometric-integral-examples",
     "title": "U-Substitution",
     "section": "Inverse Trigonometric Integral Examples",
-    "text": "Inverse Trigonometric Integral Examples\nEvaluate each integral.\n\\[\n\\int \\frac{dx}{\\sqrt{9-x^2}}\n\\]\n\\[\n\\int \\frac{dx}{16+x^2}\n\\]\n\\[\n\\int \\frac{dx}{x\\sqrt{x^2-25}}\n\\]"
+    "text": "Inverse Trigonometric Integral Examples\nEvaluate each integral.\n\\[\n\\int \\frac{dx}{\\sqrt{9-x^2}}\n\\]\n\\[\n\\int \\frac{dx}{16+x^2}\n\\]\n\\[\n\\int \\frac{dx}{x\\sqrt{x^2-25}}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#average-value-of-a-function",
     "href": "classes/06/slides.html#average-value-of-a-function",
     "title": "U-Substitution",
     "section": "Average Value of a function",
-    "text": "Average Value of a function\nLet \\(f(x)\\) be continuous over the interval \\([a,b]\\).\nThe average value of \\(f\\) on \\([a,b]\\) is\n\\[\nf_{\\text{ave}}\n=\n\\frac{1}{b-a}\\int_a^b f(x)\\,dx.\n\\]"
+    "text": "Average Value of a function\nLet \\(f(x)\\) be continuous over the interval \\([a,b]\\).\nThe average value of \\(f\\) on \\([a,b]\\) is\n\\[\nf_{\\text{ave}}\n=\n\\frac{1}{b-a}\\int_a^b f(x)\\,dx.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#average-value-of-a-function-worked-examples",
     "href": "classes/06/slides.html#average-value-of-a-function-worked-examples",
     "title": "U-Substitution",
     "section": "Average Value of a Function: Worked Examples",
-    "text": "Average Value of a Function: Worked Examples\nFind the average value of each function over the given interval.\n\\[\nf(x)=x^2+1,\\qquad 0\\leq x\\leq 3\n\\]\n\\[\nf(x)=\\sqrt{x},\\qquad 0\\leq x\\leq 4\n\\]\n\\[\nf(x)=e^x,\\qquad 0\\leq x\\leq \\ln 2\n\\]\n\\[\nf(x)=\\frac{1}{x},\\qquad 1\\leq x\\leq e\n\\]"
+    "text": "Average Value of a Function: Worked Examples\nFind the average value of each function over the given interval.\n\\[\nf(x)=x^2+1,\\qquad 0\\leq x\\leq 3\n\\]\n\\[\nf(x)=\\sqrt{x},\\qquad 0\\leq x\\leq 4\n\\]\n\\[\nf(x)=e^x,\\qquad 0\\leq x\\leq \\ln 2\n\\]\n\\[\nf(x)=\\frac{1}{x},\\qquad 1\\leq x\\leq e\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/06/slides.html#next-steps",
     "href": "classes/06/slides.html#next-steps",
     "title": "U-Substitution",
     "section": "Next Steps",
-    "text": "Next Steps\n\nStart work on Homework 2 if you have not already\nLook of chapter 2 of the course text"
+    "text": "Next Steps\n\nStart work on Homework 2 if you have not already\nLook of chapter 2 of the course text",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#u-substitution",
     "href": "classes/05/slides.html#u-substitution",
     "title": "U-Substitution",
     "section": "U-Substitution",
-    "text": "U-Substitution\nClass Session Goals:\n\nU-substitution Rule for Integrals\nMore Integration Rules for Functions"
+    "text": "U-Substitution\nClass Session Goals:\n\nU-substitution Rule for Integrals\nMore Integration Rules for Functions",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#fundamental-theorem-of-calculus-part-1",
     "href": "classes/05/slides.html#fundamental-theorem-of-calculus-part-1",
     "title": "U-Substitution",
     "section": "Fundamental Theorem of Calculus, Part 1",
-    "text": "Fundamental Theorem of Calculus, Part 1\nIf \\(f(x)\\) is continuous over an interval \\([a,b]\\), and the function \\(F(x)\\) is defined by\n\\[\nF(x)=\\int_a^x f(t)\\,dt,\n\\]\nthen \\(F'(x)=f(x)\\) over \\((a,b)\\).\nThe derivative of an integrated function is the original function."
+    "text": "Fundamental Theorem of Calculus, Part 1\nIf \\(f(x)\\) is continuous over an interval \\([a,b]\\), and the function \\(F(x)\\) is defined by\n\\[\nF(x)=\\int_a^x f(t)\\,dt,\n\\]\nthen \\(F'(x)=f(x)\\) over \\((a,b)\\).\nThe derivative of an integrated function is the original function.",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#fundamental-theorem-of-calculus-part-2",
     "href": "classes/05/slides.html#fundamental-theorem-of-calculus-part-2",
     "title": "U-Substitution",
     "section": "Fundamental Theorem of Calculus, Part 2",
-    "text": "Fundamental Theorem of Calculus, Part 2\nIf \\(f\\) is continuous over the interval \\([a,b]\\) and \\(F(x)\\) is any antiderivative of \\(f(x)\\), then\n\\[\n\\int_a^b f(x)\\,dx=F(b)-F(a).\n\\]\nWe often use \\(F(x)\\big|_a^b\\) to denote \\(F(b)-F(a)\\).\nThe integral of the derivative function is the original function."
+    "text": "Fundamental Theorem of Calculus, Part 2\nIf \\(f\\) is continuous over the interval \\([a,b]\\) and \\(F(x)\\) is any antiderivative of \\(f(x)\\), then\n\\[\n\\int_a^b f(x)\\,dx=F(b)-F(a).\n\\]\nWe often use \\(F(x)\\big|_a^b\\) to denote \\(F(b)-F(a)\\).\nThe integral of the derivative function is the original function.",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#integration-techniques",
     "href": "classes/05/slides.html#integration-techniques",
     "title": "U-Substitution",
     "section": "Integration Techniques",
-    "text": "Integration Techniques\nBig Idea For every derivative rule there is a coresponding integration rule."
+    "text": "Integration Techniques\nBig Idea For every derivative rule there is a coresponding integration rule.",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#integration-rules-for-common-functions",
     "href": "classes/05/slides.html#integration-rules-for-common-functions",
     "title": "U-Substitution",
     "section": "Integration rules for common functions",
-    "text": "Integration rules for common functions\n\n\\(\\int k\\,dx=kx+C\\)\n\\(\\int \\frac{1}{x}\\,dx=\\ln|x|+C\\)\n\\(\\int e^x\\,dx=e^x+C\\)\n\\(\\int \\cos x\\,dx=\\sin x+C\\)\n\\(\\int \\sin x\\,dx=-\\cos x+C\\)"
+    "text": "Integration rules for common functions\n\n\\(\\int k\\,dx=kx+C\\)\n\\(\\int \\frac{1}{x}\\,dx=\\ln|x|+C\\)\n\\(\\int e^x\\,dx=e^x+C\\)\n\\(\\int \\cos x\\,dx=\\sin x+C\\)\n\\(\\int \\sin x\\,dx=-\\cos x+C\\)",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#more-integration-rules",
     "href": "classes/05/slides.html#more-integration-rules",
     "title": "U-Substitution",
     "section": "More Integration rules",
-    "text": "More Integration rules\n\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\csc x\\cot x\\,dx=-\\csc x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\csc^2 x\\,dx=-\\cot x+C\\)\n\\(\\int \\frac{1}{1+x^2}\\,dx=\\tan^{-1}x+C\\)"
+    "text": "More Integration rules\n\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\csc x\\cot x\\,dx=-\\csc x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\csc^2 x\\,dx=-\\cot x+C\\)\n\\(\\int \\frac{1}{1+x^2}\\,dx=\\tan^{-1}x+C\\)",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#longer-lists-of-rules",
     "href": "classes/05/slides.html#longer-lists-of-rules",
     "title": "U-Substitution",
     "section": "Longer lists of rules",
-    "text": "Longer lists of rules\nIntegration Rules\nDifferentiation Rules"
+    "text": "Longer lists of rules\nIntegration Rules\nDifferentiation Rules",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#first-integration-technique",
     "href": "classes/05/slides.html#first-integration-technique",
     "title": "U-Substitution",
     "section": "First Integration Technique",
-    "text": "First Integration Technique\nIntegration by substitution\nSubstitution is the reverse of the chain rule of differentiation."
+    "text": "First Integration Technique\nIntegration by substitution\nSubstitution is the reverse of the chain rule of differentiation.",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#chain-rule",
     "href": "classes/05/slides.html#chain-rule",
     "title": "U-Substitution",
     "section": "Chain Rule",
-    "text": "Chain Rule\nIf \\(f\\) is differentiable at \\(g(x)\\) and \\(g\\) is differentiable at \\(x\\), then the composite function \\(F=f\\circ g\\) defined by \\(F(x)=f(g(x))\\) is differentiable at \\(x\\) and\n\\[\nF'(x)=f'(g(x))g'(x).\n\\]"
+    "text": "Chain Rule\nIf \\(f\\) is differentiable at \\(g(x)\\) and \\(g\\) is differentiable at \\(x\\), then the composite function \\(F=f\\circ g\\) defined by \\(F(x)=f(g(x))\\) is differentiable at \\(x\\) and\n\\[\nF'(x)=f'(g(x))g'(x).\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#u-substitution-1",
     "href": "classes/05/slides.html#u-substitution-1",
     "title": "U-Substitution",
     "section": "U-Substitution",
-    "text": "U-Substitution\nLet \\(u=g(x)\\), where \\(g'(x)\\) is continuous over an interval, and let \\(f\\) be continuous over the corresponding range of \\(g\\).\nThen\n\\[\n\\int f[g(x)]g'(x)\\,dx\n=\n\\int f(u)\\,du.\n\\]\nIf \\(F\\) is an antiderivative of \\(f\\), then\n\\(\\int f(u)\\,du=F(u)+C=F(g(x))+C\\)."
+    "text": "U-Substitution\nLet \\(u=g(x)\\), where \\(g'(x)\\) is continuous over an interval, and let \\(f\\) be continuous over the corresponding range of \\(g\\).\nThen\n\\[\n\\int f[g(x)]g'(x)\\,dx\n=\n\\int f(u)\\,du.\n\\]\nIf \\(F\\) is an antiderivative of \\(f\\), then\n\\(\\int f(u)\\,du=F(u)+C=F(g(x))+C\\).",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#u-substitution-examples",
     "href": "classes/05/slides.html#u-substitution-examples",
     "title": "U-Substitution",
     "section": "U-Substitution Examples",
-    "text": "U-Substitution Examples\n\\[\\int 6x(3x^2+4)^4 \\,dx\\]\n\\[\\int z \\sqrt{z^2-5} \\,dz\\]"
+    "text": "U-Substitution Examples\n\\[\\int 6x(3x^2+4)^4 \\,dx\\]\n\\[\\int z \\sqrt{z^2-5} \\,dz\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#integration-rules-for-exponential-and-logarithmic-functions",
     "href": "classes/05/slides.html#integration-rules-for-exponential-and-logarithmic-functions",
     "title": "U-Substitution",
     "section": "Integration Rules for Exponential and Logarithmic Functions",
-    "text": "Integration Rules for Exponential and Logarithmic Functions\nExponential functions can be integrated using the following formulas.\n\\[\n\\begin{aligned}\n\\int e^x\\,dx &= e^x+C \\\\\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C\n\\end{aligned}\n\\]"
+    "text": "Integration Rules for Exponential and Logarithmic Functions\nExponential functions can be integrated using the following formulas.\n\\[\n\\begin{aligned}\n\\int e^x\\,dx &= e^x+C \\\\\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#integration-rules-logarithmic-functions",
     "href": "classes/05/slides.html#integration-rules-logarithmic-functions",
     "title": "U-Substitution",
     "section": "Integration Rules Logarithmic Functions",
-    "text": "Integration Rules Logarithmic Functions\nThe following formulas can be used to evaluate integrals involving logarithmic functions.\n\\[\n\\begin{aligned}\n\\int x^{-1}\\,dx &= \\ln|x|+C \\\\\n\\int \\ln x\\,dx &= x\\ln x-x+C=x(\\ln x-1)+C \\\\\n\\int \\log_a x\\,dx &= \\frac{x}{\\ln a}(\\ln x-1)+C\n\\end{aligned}\n\\]"
+    "text": "Integration Rules Logarithmic Functions\nThe following formulas can be used to evaluate integrals involving logarithmic functions.\n\\[\n\\begin{aligned}\n\\int x^{-1}\\,dx &= \\ln|x|+C \\\\\n\\int \\ln x\\,dx &= x\\ln x-x+C=x(\\ln x-1)+C \\\\\n\\int \\log_a x\\,dx &= \\frac{x}{\\ln a}(\\ln x-1)+C\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#integrations-resulting-in-inverse-trigonometric-functions",
     "href": "classes/05/slides.html#integrations-resulting-in-inverse-trigonometric-functions",
     "title": "U-Substitution",
     "section": "Integrations Resulting in Inverse Trigonometric Functions",
-    "text": "Integrations Resulting in Inverse Trigonometric Functions\n\\[\n\\int \\frac{du}{\\sqrt{a^2-u^2}}\n=\n\\sin^{-1}\\left(\\frac{u}{a}\\right)+C\n\\]\n\\[\n\\int \\frac{du}{a^2+u^2}\n=\n\\frac{1}{a}\\tan^{-1}\\left(\\frac{u}{a}\\right)+C\n\\]\n\\[\n\\int \\frac{du}{u\\sqrt{u^2-a^2}}\n=\n\\frac{1}{a}\\sec^{-1}\\left(\\frac{|u|}{a}\\right)+C\n\\]"
+    "text": "Integrations Resulting in Inverse Trigonometric Functions\n\\[\n\\int \\frac{du}{\\sqrt{a^2-u^2}}\n=\n\\sin^{-1}\\left(\\frac{u}{a}\\right)+C\n\\]\n\\[\n\\int \\frac{du}{a^2+u^2}\n=\n\\frac{1}{a}\\tan^{-1}\\left(\\frac{u}{a}\\right)+C\n\\]\n\\[\n\\int \\frac{du}{u\\sqrt{u^2-a^2}}\n=\n\\frac{1}{a}\\sec^{-1}\\left(\\frac{|u|}{a}\\right)+C\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#indefinite-integral-examples",
     "href": "classes/05/slides.html#indefinite-integral-examples",
     "title": "U-Substitution",
     "section": "Indefinite Integral Examples",
-    "text": "Indefinite Integral Examples\nEvaluate each indefinite integral.\n\\[\n\\int 7e^{3x}\\,dx\n\\]\n\\[\n\\int \\frac{4}{x}\\,dx\n\\]\n\\[\n\\int 5^x\\,dx\n\\]"
+    "text": "Indefinite Integral Examples\nEvaluate each indefinite integral.\n\\[\n\\int 7e^{3x}\\,dx\n\\]\n\\[\n\\int \\frac{4}{x}\\,dx\n\\]\n\\[\n\\int 5^x\\,dx\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#definite-integral-examples",
     "href": "classes/05/slides.html#definite-integral-examples",
     "title": "U-Substitution",
     "section": "Definite Integral Examples",
-    "text": "Definite Integral Examples\nEvaluate each definite integral.\n\\[\n\\int_0^2 e^{2x}\\,dx\n\\]\n\\[\n\\int_1^4 \\frac{3}{x}\\,dx\n\\]\n\\[\n\\int_0^1 2^x\\,dx\n\\]"
+    "text": "Definite Integral Examples\nEvaluate each definite integral.\n\\[\n\\int_0^2 e^{2x}\\,dx\n\\]\n\\[\n\\int_1^4 \\frac{3}{x}\\,dx\n\\]\n\\[\n\\int_0^1 2^x\\,dx\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#inverse-trigonometric-integral-examples",
     "href": "classes/05/slides.html#inverse-trigonometric-integral-examples",
     "title": "U-Substitution",
     "section": "Inverse Trigonometric Integral Examples",
-    "text": "Inverse Trigonometric Integral Examples\nEvaluate each integral.\n\\[\n\\int \\frac{dx}{\\sqrt{9-x^2}}\n\\]\n\\[\n\\int \\frac{dx}{16+x^2}\n\\]\n\\[\n\\int \\frac{dx}{x\\sqrt{x^2-25}}\n\\]"
+    "text": "Inverse Trigonometric Integral Examples\nEvaluate each integral.\n\\[\n\\int \\frac{dx}{\\sqrt{9-x^2}}\n\\]\n\\[\n\\int \\frac{dx}{16+x^2}\n\\]\n\\[\n\\int \\frac{dx}{x\\sqrt{x^2-25}}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#average-value-of-a-function",
     "href": "classes/05/slides.html#average-value-of-a-function",
     "title": "U-Substitution",
     "section": "Average Value of a function",
-    "text": "Average Value of a function\nLet \\(f(x)\\) be continuous over the interval \\([a,b]\\).\nThe average value of \\(f\\) on \\([a,b]\\) is\n\\[\nf_{\\text{ave}}\n=\n\\frac{1}{b-a}\\int_a^b f(x)\\,dx.\n\\]"
+    "text": "Average Value of a function\nLet \\(f(x)\\) be continuous over the interval \\([a,b]\\).\nThe average value of \\(f\\) on \\([a,b]\\) is\n\\[\nf_{\\text{ave}}\n=\n\\frac{1}{b-a}\\int_a^b f(x)\\,dx.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#average-value-of-a-function-worked-examples",
     "href": "classes/05/slides.html#average-value-of-a-function-worked-examples",
     "title": "U-Substitution",
     "section": "Average Value of a Function: Worked Examples",
-    "text": "Average Value of a Function: Worked Examples\nFind the average value of each function over the given interval.\n\\[\nf(x)=x^2+1,\\qquad 0\\leq x\\leq 3\n\\]\n\\[\nf(x)=\\sqrt{x},\\qquad 0\\leq x\\leq 4\n\\]\n\\[\nf(x)=e^x,\\qquad 0\\leq x\\leq \\ln 2\n\\]\n\\[\nf(x)=\\frac{1}{x},\\qquad 1\\leq x\\leq e\n\\]"
+    "text": "Average Value of a Function: Worked Examples\nFind the average value of each function over the given interval.\n\\[\nf(x)=x^2+1,\\qquad 0\\leq x\\leq 3\n\\]\n\\[\nf(x)=\\sqrt{x},\\qquad 0\\leq x\\leq 4\n\\]\n\\[\nf(x)=e^x,\\qquad 0\\leq x\\leq \\ln 2\n\\]\n\\[\nf(x)=\\frac{1}{x},\\qquad 1\\leq x\\leq e\n\\]",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
     "objectID": "classes/05/slides.html#next-steps",
     "href": "classes/05/slides.html#next-steps",
     "title": "U-Substitution",
     "section": "Next Steps",
-    "text": "Next Steps\n\nStart work on Homework 2 if you have not already\nLook of chapter 2 of the course text"
+    "text": "Next Steps\n\nStart work on Homework 2 if you have not already\nLook of chapter 2 of the course text",
+    "crumbs": [
+      "Class Material",
+      "U-Substitution"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#u-substitution",
-    "href": "classes/04/slides.html#u-substitution",
-    "title": "U-Substitution",
-    "section": "U-Substitution",
-    "text": "U-Substitution\nClass Session Goals:\n\nU-substitution Rule for Integrals\nMore Integration Rules for Functions"
+    "objectID": "classes/04/slides.html#area-and-volume",
+    "href": "classes/04/slides.html#area-and-volume",
+    "title": "Area and Volume",
+    "section": "Area and Volume",
+    "text": "Area and Volume\nClass Session Goals:\n\nFind the area of a region between two curves.\nFind the volume of a solid using slicing.",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#fundamental-theorem-of-calculus-part-1",
-    "href": "classes/04/slides.html#fundamental-theorem-of-calculus-part-1",
-    "title": "U-Substitution",
-    "section": "Fundamental Theorem of Calculus, Part 1",
-    "text": "Fundamental Theorem of Calculus, Part 1\nIf \\(f(x)\\) is continuous over an interval \\([a,b]\\), and the function \\(F(x)\\) is defined by\n\\[\nF(x)=\\int_a^x f(t)\\,dt,\n\\]\nthen \\(F'(x)=f(x)\\) over \\((a,b)\\).\nThe derivative of an integrated function is the original function."
+    "objectID": "classes/04/slides.html#core-idea-of-chapter-2",
+    "href": "classes/04/slides.html#core-idea-of-chapter-2",
+    "title": "Area and Volume",
+    "section": "Core Idea of Chapter 2",
+    "text": "Core Idea of Chapter 2\nIntegration gives us a way to add up infinitely small slices\nDefintion of the Definite Integral: \\[\n\\boxed{\n\\int_a^b f(x)\\,dx\n=\n\\lim_{n\\to\\infty}\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#fundamental-theorem-of-calculus-part-2",
-    "href": "classes/04/slides.html#fundamental-theorem-of-calculus-part-2",
-    "title": "U-Substitution",
-    "section": "Fundamental Theorem of Calculus, Part 2",
-    "text": "Fundamental Theorem of Calculus, Part 2\nIf \\(f\\) is continuous over the interval \\([a,b]\\) and \\(F(x)\\) is any antiderivative of \\(f(x)\\), then\n\\[\n\\int_a^b f(x)\\,dx=F(b)-F(a).\n\\]\nWe often use \\(F(x)\\big|_a^b\\) to denote \\(F(b)-F(a)\\).\nThe integral of the derivative function is the original function."
+    "objectID": "classes/04/slides.html#two-ways-to-think-about-the-area-between-curves",
+    "href": "classes/04/slides.html#two-ways-to-think-about-the-area-between-curves",
+    "title": "Area and Volume",
+    "section": "Two ways to think about the area between Curves",
+    "text": "Two ways to think about the area between Curves\nAssume that \\(f(x)\\) \\(g(x)\\) on \\([a,b]\\). \\[\n\\text{Area}=\\int_a^b [\\text{top}-\\text{bottom}]\\,dx\n\\]\nor\n\\[\n\\text{Area}=\\lim_{n\\to\\infty}\\sum_{i=1}^{n} [f(x_i^*)-g(x_i^*)]\\,\\Delta x\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#integration-techniques",
-    "href": "classes/04/slides.html#integration-techniques",
-    "title": "U-Substitution",
-    "section": "Integration Techniques",
-    "text": "Integration Techniques\nBig Idea For every derivative rule there is a coresponding integration rule."
+    "objectID": "classes/04/slides.html#theorem-2.1-area-between-curves",
+    "href": "classes/04/slides.html#theorem-2.1-area-between-curves",
+    "title": "Area and Volume",
+    "section": "Theorem 2.1 Area Between Curves",
+    "text": "Theorem 2.1 Area Between Curves\nLet \\(f(x)\\) and \\(g(x)\\) be continuous functions such that\n\\[\nf(x)\\geq g(x)\n\\]\nover an interval \\([a,b]\\).\nIf \\(R\\) is the region bounded above by \\(f(x)\\), below by \\(g(x)\\), and on the left and right by \\(x=a\\) and \\(x=b\\), then\n\\[\n\\boxed{\nA=\\int_a^b [f(x)-g(x)]\\,dx\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#integration-rules-for-common-functions",
-    "href": "classes/04/slides.html#integration-rules-for-common-functions",
-    "title": "U-Substitution",
-    "section": "Integration rules for common functions",
-    "text": "Integration rules for common functions\n\n\\(\\int k\\,dx=kx+C\\)\n\\(\\int \\frac{1}{x}\\,dx=\\ln|x|+C\\)\n\\(\\int e^x\\,dx=e^x+C\\)\n\\(\\int \\cos x\\,dx=\\sin x+C\\)\n\\(\\int \\sin x\\,dx=-\\cos x+C\\)"
+    "objectID": "classes/04/slides.html#example-of-area-between-curves",
+    "href": "classes/04/slides.html#example-of-area-between-curves",
+    "title": "Area and Volume",
+    "section": "Example of Area Between Curves",
+    "text": "Example of Area Between Curves\nFind the area of each region.\nThe region bounded by\n\\[\n   f(x)=x+4\n   \\]\nand\n\\[\n   g(x)=3-\\frac{x}{2}\n   \\]\nover \\([1,4]\\).\nFunction Plot",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#more-integration-rules",
-    "href": "classes/04/slides.html#more-integration-rules",
-    "title": "U-Substitution",
-    "section": "More Integration rules",
-    "text": "More Integration rules\n\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\csc x\\cot x\\,dx=-\\csc x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\csc^2 x\\,dx=-\\cot x+C\\)\n\\(\\int \\frac{1}{1+x^2}\\,dx=\\tan^{-1}x+C\\)"
+    "objectID": "classes/04/slides.html#another-example-of-area-between-curves",
+    "href": "classes/04/slides.html#another-example-of-area-between-curves",
+    "title": "Area and Volume",
+    "section": "Another Example of Area Between Curves",
+    "text": "Another Example of Area Between Curves\nThe region bounded by\n\\[\n   y=x\n   \\qquad\\text{and}\\qquad\n   y=x^2\n   \\]\nFunction Plot",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#longer-lists-of-rules",
-    "href": "classes/04/slides.html#longer-lists-of-rules",
-    "title": "U-Substitution",
-    "section": "Longer lists of rules",
-    "text": "Longer lists of rules\nIntegration Rules\nDifferentiation Rules"
+    "objectID": "classes/04/slides.html#a-third-example-of-area-between-curves",
+    "href": "classes/04/slides.html#a-third-example-of-area-between-curves",
+    "title": "Area and Volume",
+    "section": "A third Example of Area Between Curves",
+    "text": "A third Example of Area Between Curves\nThe region bounded by\n\\[\n   y=x\n   \\qquad\\text{and}\\qquad\n   y=x^3\n   \\]\nFunction Plot",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#first-integration-technique",
-    "href": "classes/04/slides.html#first-integration-technique",
-    "title": "U-Substitution",
-    "section": "First Integration Technique",
-    "text": "First Integration Technique\nIntegration by substitution\nSubstitution is the reverse of the chain rule of differentiation."
+    "objectID": "classes/04/slides.html#theorem-2.2-area-between-curves-that-cross",
+    "href": "classes/04/slides.html#theorem-2.2-area-between-curves-that-cross",
+    "title": "Area and Volume",
+    "section": "Theorem 2.2 Area Between Curves that Cross",
+    "text": "Theorem 2.2 Area Between Curves that Cross\nIf the graphs cross, the identity of the top function and bottom function may change.\nThe area between two continuous functions over \\([a,b]\\) is\n\\[\nA=\\int_a^b |f(x)-g(x)|\\,dx.\n\\]\nNote: This is different from the value of the definite integral \\(\\int_a^b [f(x)-g(x)]\\,dx\\).",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#chain-rule",
-    "href": "classes/04/slides.html#chain-rule",
-    "title": "U-Substitution",
-    "section": "Chain Rule",
-    "text": "Chain Rule\nIf \\(f\\) is differentiable at \\(g(x)\\) and \\(g\\) is differentiable at \\(x\\), then the composite function \\(F=f\\circ g\\) defined by \\(F(x)=f(g(x))\\) is differentiable at \\(x\\) and\n\\[\nF'(x)=f'(g(x))g'(x).\n\\]"
+    "objectID": "classes/04/slides.html#managing-the-crossings",
+    "href": "classes/04/slides.html#managing-the-crossings",
+    "title": "Area and Volume",
+    "section": "Managing the Crossings",
+    "text": "Managing the Crossings\nIn practice:\n\nFind the points where \\(f(x)=g(x)\\).\nUse the intersection points to divide the interval.\nOn each interval, identify the top and bottom functions.\nAdd the areas of the subregions.",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#u-substitution-1",
-    "href": "classes/04/slides.html#u-substitution-1",
-    "title": "U-Substitution",
-    "section": "U-Substitution",
-    "text": "U-Substitution\nLet \\(u=g(x)\\), where \\(g'(x)\\) is continuous over an interval, and let \\(f\\) be continuous over the corresponding range of \\(g\\).\nThen\n\\[\n\\int f[g(x)]g'(x)\\,dx\n=\n\\int f(u)\\,du.\n\\]\nIf \\(F\\) is an antiderivative of \\(f\\), then\n\\(\\int f(u)\\,du=F(u)+C=F(g(x))+C\\)."
+    "objectID": "classes/04/slides.html#changing-which-slices-you-use",
+    "href": "classes/04/slides.html#changing-which-slices-you-use",
+    "title": "Area and Volume",
+    "section": "Changing which slices you use",
+    "text": "Changing which slices you use\nSometimes a region is easier to describe using horizontal slices.\nInstead of writing \\(y=f(x)\\) write the boundaries as functions of \\(y\\):\n\\(x=u(y) \\qquad\\text{and}\\qquad x=v(y)\\).\nFor a horizontal slice, \\(\\text{width} = \\text{right}-\\text{left}\\).\nTherefore, \\(\\text{Area} = \\int[\\text{right}-\\text{left}]\\,dy\\).\nThe limits of integration are now \\(y\\)-values.",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#u-substitution-examples",
-    "href": "classes/04/slides.html#u-substitution-examples",
-    "title": "U-Substitution",
-    "section": "U-Substitution Examples",
-    "text": "U-Substitution Examples\n\\[\\int 6x(3x^2+4)^4 \\,dx\\]\n\\[\\int z \\sqrt{z^2-5} \\,dz\\]"
+    "objectID": "classes/04/slides.html#definite-integral-with-respect-to-y",
+    "href": "classes/04/slides.html#definite-integral-with-respect-to-y",
+    "title": "Area and Volume",
+    "section": "Definite Integral with respect to y",
+    "text": "Definite Integral with respect to y\n\\[\n\\boxed{\n\\int_a^b f(y)\\,dy\n=\n\\lim_{n\\to\\infty}\\sum_{i=1}^{n} f(y_i^*)\\,\\Delta y\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#integration-rules-for-exponential-and-logarithmic-functions",
-    "href": "classes/04/slides.html#integration-rules-for-exponential-and-logarithmic-functions",
-    "title": "U-Substitution",
-    "section": "Integration Rules for Exponential and Logarithmic Functions",
-    "text": "Integration Rules for Exponential and Logarithmic Functions\nExponential functions can be integrated using the following formulas.\n\\[\n\\begin{aligned}\n\\int e^x\\,dx &= e^x+C \\\\\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C\n\\end{aligned}\n\\]"
+    "objectID": "classes/04/slides.html#example-of-area-between-curves-with-respect-to-y",
+    "href": "classes/04/slides.html#example-of-area-between-curves-with-respect-to-y",
+    "title": "Area and Volume",
+    "section": "Example of Area Between Curves with respect to y",
+    "text": "Example of Area Between Curves with respect to y\nSuppose \\(f(x)= \\sqrt[3]{x}\\). Find the area of the region bounded by \\(f(x)\\), the line \\(x=0\\) and the line \\(y=3\\).\nFunction Plot",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#integration-rules-logarithmic-functions",
-    "href": "classes/04/slides.html#integration-rules-logarithmic-functions",
-    "title": "U-Substitution",
-    "section": "Integration Rules Logarithmic Functions",
-    "text": "Integration Rules Logarithmic Functions\nThe following formulas can be used to evaluate integrals involving logarithmic functions.\n\\[\n\\begin{aligned}\n\\int x^{-1}\\,dx &= \\ln|x|+C \\\\\n\\int \\ln x\\,dx &= x\\ln x-x+C=x(\\ln x-1)+C \\\\\n\\int \\log_a x\\,dx &= \\frac{x}{\\ln a}(\\ln x-1)+C\n\\end{aligned}\n\\]"
+    "objectID": "classes/04/slides.html#theorem-2.3-area-between-curves-with-respect-to-y",
+    "href": "classes/04/slides.html#theorem-2.3-area-between-curves-with-respect-to-y",
+    "title": "Area and Volume",
+    "section": "Theorem 2.3 Area between Curves with respect to y",
+    "text": "Theorem 2.3 Area between Curves with respect to y\nLet \\(u(y)\\) and \\(v(y)\\) be continuous functions such that\n\\[\nu(y)\\geq v(y)\n\\]\nfor all \\(y\\in[c,d]\\).\nIf \\(R\\) is bounded on the right by \\(u(y)\\), on the left by \\(v(y)\\), and above and below by \\(y=d\\) and \\(y=c\\), then\n\\[\n\\boxed{\nA=\\int_c^d [u(y)-v(y)]\\,dy\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#integrations-resulting-in-inverse-trigonometric-functions",
-    "href": "classes/04/slides.html#integrations-resulting-in-inverse-trigonometric-functions",
-    "title": "U-Substitution",
-    "section": "Integrations Resulting in Inverse Trigonometric Functions",
-    "text": "Integrations Resulting in Inverse Trigonometric Functions\n\\[\n\\int \\frac{du}{\\sqrt{a^2-u^2}}\n=\n\\sin^{-1}\\left(\\frac{u}{a}\\right)+C\n\\]\n\\[\n\\int \\frac{du}{a^2+u^2}\n=\n\\frac{1}{a}\\tan^{-1}\\left(\\frac{u}{a}\\right)+C\n\\]\n\\[\n\\int \\frac{du}{u\\sqrt{u^2-a^2}}\n=\n\\frac{1}{a}\\sec^{-1}\\left(\\frac{|u|}{a}\\right)+C\n\\]"
+    "objectID": "classes/04/slides.html#horizontal-slices-example",
+    "href": "classes/04/slides.html#horizontal-slices-example",
+    "title": "Area and Volume",
+    "section": "Horizontal slices example",
+    "text": "Horizontal slices example\nFind the area of the region bounded by\n\\[\nf(x)=\\sqrt{x}\n\\]\nand\n\\[\ng(x)=\\frac{3}{2}-\\frac{x}{2}\n\\]\nand \\(y=0\\).\nFunction Plot",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#indefinite-integral-examples",
-    "href": "classes/04/slides.html#indefinite-integral-examples",
-    "title": "U-Substitution",
-    "section": "Indefinite Integral Examples",
-    "text": "Indefinite Integral Examples\nEvaluate each indefinite integral.\n\\[\n\\int 7e^{3x}\\,dx\n\\]\n\\[\n\\int \\frac{4}{x}\\,dx\n\\]\n\\[\n\\int 5^x\\,dx\n\\]"
+    "objectID": "classes/04/slides.html#slices-of-with-area-ax",
+    "href": "classes/04/slides.html#slices-of-with-area-ax",
+    "title": "Area and Volume",
+    "section": "Slices of with Area \\(A(x)\\)",
+    "text": "Slices of with Area \\(A(x)\\)\nIntegration, we can add up infinitely many slices of area to find the volume of a solid.\n\\[\\lim_{n\\to\\infty}\\sum_{i=1}^{n} A(x_i^*)\\,\\Delta x\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#definite-integral-examples",
-    "href": "classes/04/slides.html#definite-integral-examples",
-    "title": "U-Substitution",
-    "section": "Definite Integral Examples",
-    "text": "Definite Integral Examples\nEvaluate each definite integral.\n\\[\n\\int_0^2 e^{2x}\\,dx\n\\]\n\\[\n\\int_1^4 \\frac{3}{x}\\,dx\n\\]\n\\[\n\\int_0^1 2^x\\,dx\n\\]"
+    "objectID": "classes/04/slides.html#volume-and-slicing",
+    "href": "classes/04/slides.html#volume-and-slicing",
+    "title": "Area and Volume",
+    "section": "Volume and Slicing",
+    "text": "Volume and Slicing\nSuppose a solid extends from \\(x=a\\) to \\(x=b\\).\nIf the area of the cross-section perpendicular to the \\(x\\)-axis is \\(A(x)\\), then\n\\[\n\\boxed{\nV=\\int_a^b A(x)\\,dx\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#inverse-trigonometric-integral-examples",
-    "href": "classes/04/slides.html#inverse-trigonometric-integral-examples",
-    "title": "U-Substitution",
-    "section": "Inverse Trigonometric Integral Examples",
-    "text": "Inverse Trigonometric Integral Examples\nEvaluate each integral.\n\\[\n\\int \\frac{dx}{\\sqrt{9-x^2}}\n\\]\n\\[\n\\int \\frac{dx}{16+x^2}\n\\]\n\\[\n\\int \\frac{dx}{x\\sqrt{x^2-25}}\n\\]"
+    "objectID": "classes/04/slides.html#volume-of-a-hut",
+    "href": "classes/04/slides.html#volume-of-a-hut",
+    "title": "Area and Volume",
+    "section": "Volume of a Hut",
+    "text": "Volume of a Hut\nConsider a circular hut whose cross-section is a circle. The hut is 5 feet tall and at its base the diameter is 10 The radius \\(r\\) of the circular cross-section varies with the height \\(h\\) of the hut. The radius is given by \\(r(h)=5-\\frac{h^2}{5}\\). What is the volume of the hut?",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#average-value-of-a-function",
-    "href": "classes/04/slides.html#average-value-of-a-function",
-    "title": "U-Substitution",
-    "section": "Average Value of a function",
-    "text": "Average Value of a function\nLet \\(f(x)\\) be continuous over the interval \\([a,b]\\).\nThe average value of \\(f\\) on \\([a,b]\\) is\n\\[\nf_{\\text{ave}}\n=\n\\frac{1}{b-a}\\int_a^b f(x)\\,dx.\n\\]"
+    "objectID": "classes/04/slides.html#finding-volumes-by-the-slicing-method",
+    "href": "classes/04/slides.html#finding-volumes-by-the-slicing-method",
+    "title": "Area and Volume",
+    "section": "Finding Volumes by the Slicing Method",
+    "text": "Finding Volumes by the Slicing Method\n\nDetermine the shape of a cross-section.\nDetermine a formula for the area of the cross-section.\nIntegrate the area formula over the appropriate interval.\n\n\\[\n\\text{Volume}\n=\n\\int\n\\text{cross-sectional area}.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#average-value-of-a-function-worked-examples",
-    "href": "classes/04/slides.html#average-value-of-a-function-worked-examples",
-    "title": "U-Substitution",
-    "section": "Average Value of a Function: Worked Examples",
-    "text": "Average Value of a Function: Worked Examples\nFind the average value of each function over the given interval.\n\\[\nf(x)=x^2+1,\\qquad 0\\leq x\\leq 3\n\\]\n\\[\nf(x)=\\sqrt{x},\\qquad 0\\leq x\\leq 4\n\\]\n\\[\nf(x)=e^x,\\qquad 0\\leq x\\leq \\ln 2\n\\]\n\\[\nf(x)=\\frac{1}{x},\\qquad 1\\leq x\\leq e\n\\]"
+    "objectID": "classes/04/slides.html#volume-of-a-solid-of-revolution",
+    "href": "classes/04/slides.html#volume-of-a-solid-of-revolution",
+    "title": "Area and Volume",
+    "section": "Volume of a Solid of Revolution",
+    "text": "Volume of a Solid of Revolution\nIf a region in a plane is revolved around a line in that plane, the resulting solid is called a solid of revolution.\nFor example, rotate a region around the \\(x\\)-axis.\nA vertical slice of the region rotates to form a circular cross-section.\nThe volume is still found using\n\\[\nV=\\int_a^b A(x)\\,dx,\n\\]\nbut now \\(A(x)\\) is the area of a circular cross-section.",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
-    "objectID": "classes/04/slides.html#next-steps",
-    "href": "classes/04/slides.html#next-steps",
-    "title": "U-Substitution",
-    "section": "Next Steps",
-    "text": "Next Steps\n\nStart work on Homework 2 if you have not already\nLook of chapter 2 of the course text"
+    "objectID": "classes/04/slides.html#disk-method",
+    "href": "classes/04/slides.html#disk-method",
+    "title": "Area and Volume",
+    "section": "Disk Method",
+    "text": "Disk Method\nSuppose a region lies between\n\\[\ny=f(x)\n\\]\nand the \\(x\\)-axis.\nWhen the region is revolved around the \\(x\\)-axis, a vertical slice forms a disk.\nThe radius of the disk is\n\\[\nr=f(x).\n\\]\nSince the area of a circle is\n\\[\nA=\\pi r^2,\n\\]\nthe cross-sectional area is\n\\[\nA(x)=\\pi[f(x)]^2.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
+  },
+  {
+    "objectID": "classes/04/slides.html#disk-method-formula",
+    "href": "classes/04/slides.html#disk-method-formula",
+    "title": "Area and Volume",
+    "section": "Disk Method Formula",
+    "text": "Disk Method Formula\nLet \\(f(x)\\) be continuous and nonnegative over \\([a,b]\\).\nIf the region under \\(f(x)\\) is revolved around the \\(x\\)-axis, then\n\\[\n\\boxed{\nV=\\int_a^b \\pi[f(x)]^2\\,dx\n}\n\\]\nEquivalently,\n\\[\n\\boxed{\nV=\\pi\\int_a^b [f(x)]^2\\,dx\n}\n\\]\nFor revolution around the \\(y\\)-axis, with \\(x=g(y)\\),\n\\[\n\\boxed{\nV=\\int_c^d \\pi[g(y)]^2\\,dy\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
+  },
+  {
+    "objectID": "classes/04/slides.html#disk-method-example",
+    "href": "classes/04/slides.html#disk-method-example",
+    "title": "Area and Volume",
+    "section": "Disk Method Example",
+    "text": "Disk Method Example\nFind the volume of the solid generated by revolving the region bounded by\n\\[\nf(x)=\\sqrt{x},\n\\]\nthe \\(x\\)-axis, \\(x=1\\), and \\(x=4\\)\naround the \\(x\\)-axis.\nSet up\nRadius:\n\\[\nr=f(x)=\\sqrt{x}\n\\]\nCross-sectional area:\n\\[\nA(x)=\\pi(\\sqrt{x})^2\n\\]\nVolume:\n\\[\nV=\\int_1^4 \\pi(\\sqrt{x})^2\\,dx\n\\]\nFinish the evaluation on the board.",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
+  },
+  {
+    "objectID": "classes/04/slides.html#washer-method",
+    "href": "classes/04/slides.html#washer-method",
+    "title": "Area and Volume",
+    "section": "Washer Method",
+    "text": "Washer Method\nA solid of revolution may have a cavity in the middle.\nA cross-section is then a washer rather than a disk.\nLet\n\\[\nR(x)=\\text{outer radius}\n\\]\nand\n\\[\nr(x)=\\text{inner radius}.\n\\]\nThe area of a washer is\n\\[\nA(x)\n=\n\\pi[R(x)]^2-\\pi[r(x)]^2.\n\\]\nSo,\n\\[\nA(x)\n=\n\\pi\\left([R(x)]^2-[r(x)]^2\\right).\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
+  },
+  {
+    "objectID": "classes/04/slides.html#washer-method-formula",
+    "href": "classes/04/slides.html#washer-method-formula",
+    "title": "Area and Volume",
+    "section": "Washer Method Formula",
+    "text": "Washer Method Formula\nSuppose \\(f(x)\\) and \\(g(x)\\) are continuous, nonnegative functions with\n\\[\nf(x)\\geq g(x)\n\\]\non \\([a,b]\\).\nWhen the region between the curves is revolved around the \\(x\\)-axis,\n\\[\n\\boxed{\nV\n=\n\\int_a^b\n\\pi\\left([f(x)]^2-[g(x)]^2\\right)\\,dx\n}\n\\]\nThink:\n\\[\n\\boxed{\nV\n=\n\\pi\\int_a^b\n\\left[\n(\\text{outer radius})^2\n-\n(\\text{inner radius})^2\n\\right]\\,dx\n}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
+  },
+  {
+    "objectID": "classes/04/slides.html#washer-method-example",
+    "href": "classes/04/slides.html#washer-method-example",
+    "title": "Area and Volume",
+    "section": "Washer Method Example",
+    "text": "Washer Method Example\nFind the volume of the solid generated by revolving the region bounded above by\n\\[\nf(x)=x\n\\]\nand below by\n\\[\ng(x)=\\frac{1}{x}\n\\]\nover \\([1,4]\\) around the \\(x\\)-axis.\nOuter radius:\n\\[\nR(x)=x\n\\]\nInner radius:\n\\[\nr(x)=\\frac{1}{x}\n\\]\nSet up the volume:\n\\[\nV\n=\n\\pi\\int_1^4\n\\left[\nx^2-\\left(\\frac{1}{x}\\right)^2\n\\right]\\,dx\n\\]\nFinish the evaluation on the board.",
+    "crumbs": [
+      "Class Material",
+      "Area and Volume"
+    ]
   },
   {
     "objectID": "classes/03/slides.html#u-substitution",
@@ -1165,66 +1460,42 @@
     "href": "classes/01/worksheet.html",
     "title": "TBD",
     "section": "",
-    "text": "Hint",
-    "crumbs": [
-      "Class Material",
-      "TBD"
-    ]
+    "text": "Hint"
   },
   {
     "objectID": "classes/01/worksheet.html#null",
     "href": "classes/01/worksheet.html#null",
     "title": "TBD",
     "section": "",
-    "text": "Hint",
-    "crumbs": [
-      "Class Material",
-      "TBD"
-    ]
+    "text": "Hint"
   },
   {
     "objectID": "classes/02/worksheet.html",
     "href": "classes/02/worksheet.html",
     "title": "TBD",
     "section": "",
-    "text": "Hint",
-    "crumbs": [
-      "Class Material",
-      "TBD"
-    ]
+    "text": "Hint"
   },
   {
     "objectID": "classes/02/worksheet.html#null",
     "href": "classes/02/worksheet.html#null",
     "title": "TBD",
     "section": "",
-    "text": "Hint",
-    "crumbs": [
-      "Class Material",
-      "TBD"
-    ]
+    "text": "Hint"
   },
   {
     "objectID": "classes/03/worksheet.html",
     "href": "classes/03/worksheet.html",
     "title": "TBD",
     "section": "",
-    "text": "Hint",
-    "crumbs": [
-      "Class Material",
-      "TBD"
-    ]
+    "text": "Hint"
   },
   {
     "objectID": "classes/03/worksheet.html#null",
     "href": "classes/03/worksheet.html#null",
     "title": "TBD",
     "section": "",
-    "text": "Hint",
-    "crumbs": [
-      "Class Material",
-      "TBD"
-    ]
+    "text": "Hint"
   },
   {
     "objectID": "classes/04/worksheet.html",

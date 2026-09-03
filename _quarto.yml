@@ -17,12 +17,13 @@ website:
         file: grading/course-learning-targets.qmd
       - section: "Class Material"
         contents:
-          - file: classes/01/worksheet.qmd
+
           - file: classes/01/slides.qmd
-          - file: classes/02/worksheet.qmd
           - file: classes/02/slides.qmd
-          - file: classes/03/worksheet.qmd
           - file: classes/03/slides.qmd
+          - file: classes/04/slides.qmd
+          - file: classes/05/slides.qmd
+          - file: classes/06/slides.qmd
 
 format:
   html:

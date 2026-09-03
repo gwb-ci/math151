@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <title>Math 151 - Calculus II – U-Substitution</title>
+  <title>Math 151 - Calculus II – Area and Volume</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,209 +129,353 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">U-Substitution</h1>
+  <h1 class="title">Area and Volume</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="u-substitution" class="slide level2">
-<h2>U-Substitution</h2>
+<section id="area-and-volume" class="slide level2">
+<h2>Area and Volume</h2>
 <p>Class Session Goals:</p>
 <ul>
-<li>U-substitution Rule for Integrals</li>
-<li>More Integration Rules for Functions</li>
+<li>Find the area of a region between two curves.</li>
+<li>Find the volume of a solid using slicing.</li>
 </ul>
 </section>
-<section id="fundamental-theorem-of-calculus-part-1" class="slide level2">
-<h2>Fundamental Theorem of Calculus, Part 1</h2>
-<p>If <span class="math inline">\(f(x)\)</span> is continuous over an interval <span class="math inline">\([a,b]\)</span>, and the function <span class="math inline">\(F(x)\)</span> is defined by</p>
-<p><span class="math display">\[
-F(x)=\int_a^x f(t)\,dt,
-\]</span></p>
-<p>then <span class="math inline">\(F'(x)=f(x)\)</span> over <span class="math inline">\((a,b)\)</span>.</p>
-<p><strong>The derivative of an integrated function is the original function.</strong></p>
-</section>
-<section id="fundamental-theorem-of-calculus-part-2" class="slide level2">
-<h2>Fundamental Theorem of Calculus, Part 2</h2>
-<p>If <span class="math inline">\(f\)</span> is continuous over the interval <span class="math inline">\([a,b]\)</span> and <span class="math inline">\(F(x)\)</span> is any antiderivative of <span class="math inline">\(f(x)\)</span>, then</p>
-<p><span class="math display">\[
-\int_a^b f(x)\,dx=F(b)-F(a).
-\]</span></p>
-<p>We often use <span class="math inline">\(F(x)\big|_a^b\)</span> to denote <span class="math inline">\(F(b)-F(a)\)</span>.</p>
-<p><strong>The integral of the derivative function is the original function.</strong></p>
-</section>
-<section id="integration-techniques" class="slide level2">
-<h2>Integration Techniques</h2>
-<p><strong>Big Idea</strong> For every derivative rule there is a coresponding integration rule.</p>
-</section>
-<section id="integration-rules-for-common-functions" class="slide level2">
-<h2>Integration rules for common functions</h2>
-<ul>
-<li><span class="math inline">\(\int k\,dx=kx+C\)</span></li>
-<li><span class="math inline">\(\int \frac{1}{x}\,dx=\ln|x|+C\)</span></li>
-<li><span class="math inline">\(\int e^x\,dx=e^x+C\)</span></li>
-<li><span class="math inline">\(\int \cos x\,dx=\sin x+C\)</span></li>
-<li><span class="math inline">\(\int \sin x\,dx=-\cos x+C\)</span></li>
-</ul>
-</section>
-<section id="more-integration-rules" class="slide level2">
-<h2>More Integration rules</h2>
-<ul>
-<li><span class="math inline">\(\int \sec^2 x\,dx=\tan x+C\)</span></li>
-<li><span class="math inline">\(\int \csc x\cot x\,dx=-\csc x+C\)</span></li>
-<li><span class="math inline">\(\int \sec x\tan x\,dx=\sec x+C\)</span></li>
-<li><span class="math inline">\(\int \csc^2 x\,dx=-\cot x+C\)</span></li>
-<li><span class="math inline">\(\int \frac{1}{1+x^2}\,dx=\tan^{-1}x+C\)</span></li>
-</ul>
-</section>
-<section id="longer-lists-of-rules" class="slide level2">
-<h2>Longer lists of rules</h2>
-<p><a href="https://openstax.org/books/calculus-volume-2/pages/a-table-of-integrals">Integration Rules</a></p>
-<p><a href="https://openstax.org/books/calculus-volume-2/pages/b-table-of-derivatives">Differentiation Rules</a></p>
-</section>
-<section id="first-integration-technique" class="slide level2">
-<h2>First Integration Technique</h2>
-<p>Integration by substitution</p>
-<p>Substitution is the reverse of the chain rule of differentiation.</p>
-</section>
-<section id="chain-rule" class="slide level2">
-<h2>Chain Rule</h2>
-<p>If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(g(x)\)</span> and <span class="math inline">\(g\)</span> is differentiable at <span class="math inline">\(x\)</span>, then the composite function <span class="math inline">\(F=f\circ g\)</span> defined by <span class="math inline">\(F(x)=f(g(x))\)</span> is differentiable at <span class="math inline">\(x\)</span> and</p>
-<p><span class="math display">\[
-F'(x)=f'(g(x))g'(x).
-\]</span></p>
-</section>
-<section id="u-substitution-1" class="slide level2">
-<h2>U-Substitution</h2>
-<p>Let <span class="math inline">\(u=g(x)\)</span>, where <span class="math inline">\(g'(x)\)</span> is continuous over an interval, and let <span class="math inline">\(f\)</span> be continuous over the corresponding range of <span class="math inline">\(g\)</span>.</p>
-<p>Then</p>
-<p><span class="math display">\[
-\int f[g(x)]g'(x)\,dx
+<section id="core-idea-of-chapter-2" class="slide level2">
+<h2>Core Idea of Chapter 2</h2>
+<p><strong>Integration gives us a way to add up infinitely small slices</strong></p>
+<p>Defintion of the Definite Integral: <span class="math display">\[
+\boxed{
+\int_a^b f(x)\,dx
 =
-\int f(u)\,du.
-\]</span></p>
-<p>If <span class="math inline">\(F\)</span> is an antiderivative of <span class="math inline">\(f\)</span>, then</p>
-<p><span class="math inline">\(\int f(u)\,du=F(u)+C=F(g(x))+C\)</span>.</p>
-</section>
-<section id="u-substitution-examples" class="slide level2">
-<h2>U-Substitution Examples</h2>
-<p><span class="math display">\[\int 6x(3x^2+4)^4 \,dx\]</span></p>
-<p><span class="math display">\[\int z \sqrt{z^2-5} \,dz\]</span></p>
-</section>
-<section id="integration-rules-for-exponential-and-logarithmic-functions" class="slide level2">
-<h2>Integration Rules for Exponential and Logarithmic Functions</h2>
-<p>Exponential functions can be integrated using the following formulas.</p>
-<p><span class="math display">\[
-\begin{aligned}
-\int e^x\,dx &amp;= e^x+C \\
-\int a^x\,dx &amp;= \frac{a^x}{\ln a}+C
-\end{aligned}
+\lim_{n\to\infty}\sum_{i=1}^{n} f(x_i^*)\,\Delta x
+}
 \]</span></p>
 </section>
-<section id="integration-rules-logarithmic-functions" class="slide level2">
-<h2>Integration Rules Logarithmic Functions</h2>
-<p>The following formulas can be used to evaluate integrals involving logarithmic functions.</p>
+<section id="two-ways-to-think-about-the-area-between-curves" class="slide level2">
+<h2>Two ways to think about the area between Curves</h2>
+<p>Assume that <span class="math inline">\(f(x)\)</span> <span class="math inline">\(g(x)\)</span> on <span class="math inline">\([a,b]\)</span>. <span class="math display">\[
+\text{Area}=\int_a^b [\text{top}-\text{bottom}]\,dx
+\]</span></p>
+<p>or</p>
 <p><span class="math display">\[
-\begin{aligned}
-\int x^{-1}\,dx &amp;= \ln|x|+C \\
-\int \ln x\,dx &amp;= x\ln x-x+C=x(\ln x-1)+C \\
-\int \log_a x\,dx &amp;= \frac{x}{\ln a}(\ln x-1)+C
-\end{aligned}
+\text{Area}=\lim_{n\to\infty}\sum_{i=1}^{n} [f(x_i^*)-g(x_i^*)]\,\Delta x
 \]</span></p>
 </section>
-<section id="integrations-resulting-in-inverse-trigonometric-functions" class="slide level2">
-<h2>Integrations Resulting in Inverse Trigonometric Functions</h2>
+<section id="theorem-2.1-area-between-curves" class="slide level2">
+<h2>Theorem 2.1 Area Between Curves</h2>
+<p>Let <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> be continuous functions such that</p>
 <p><span class="math display">\[
-\int \frac{du}{\sqrt{a^2-u^2}}
+f(x)\geq g(x)
+\]</span></p>
+<p>over an interval <span class="math inline">\([a,b]\)</span>.</p>
+<p>If <span class="math inline">\(R\)</span> is the region bounded above by <span class="math inline">\(f(x)\)</span>, below by <span class="math inline">\(g(x)\)</span>, and on the left and right by <span class="math inline">\(x=a\)</span> and <span class="math inline">\(x=b\)</span>, then</p>
+<p><span class="math display">\[
+\boxed{
+A=\int_a^b [f(x)-g(x)]\,dx
+}
+\]</span></p>
+</section>
+<section id="example-of-area-between-curves" class="slide level2">
+<h2>Example of Area Between Curves</h2>
+<p>Find the area of each region.</p>
+<p>The region bounded by</p>
+<p><span class="math display">\[
+   f(x)=x+4
+   \]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+   g(x)=3-\frac{x}{2}
+   \]</span></p>
+<p>over <span class="math inline">\([1,4]\)</span>.</p>
+<p><a href="https://www.geogebra.org/graphing/qbq26vya" target="_blank">Function Plot</a></p>
+</section>
+<section id="another-example-of-area-between-curves" class="slide level2">
+<h2>Another Example of Area Between Curves</h2>
+<p>The region bounded by</p>
+<p><span class="math display">\[
+   y=x
+   \qquad\text{and}\qquad
+   y=x^2
+   \]</span></p>
+<p><a href="https://www.geogebra.org/graphing/vujutvsb" target="_blank">Function Plot</a></p>
+</section>
+<section id="a-third-example-of-area-between-curves" class="slide level2">
+<h2>A third Example of Area Between Curves</h2>
+<p>The region bounded by</p>
+<p><span class="math display">\[
+   y=x
+   \qquad\text{and}\qquad
+   y=x^3
+   \]</span></p>
+<p><a href="https://www.geogebra.org/graphing/naeqhemf" target="_blank">Function Plot</a></p>
+</section>
+<section id="theorem-2.2-area-between-curves-that-cross" class="slide level2">
+<h2>Theorem 2.2 Area Between Curves that Cross</h2>
+<p>If the graphs cross, the identity of the <strong>top function</strong> and <strong>bottom function</strong> may change.</p>
+<p>The area between two continuous functions over <span class="math inline">\([a,b]\)</span> is</p>
+<p><span class="math display">\[
+A=\int_a^b |f(x)-g(x)|\,dx.
+\]</span></p>
+<p>Note: This is different from the value of the definite integral <span class="math inline">\(\int_a^b [f(x)-g(x)]\,dx\)</span>.</p>
+</section>
+<section id="managing-the-crossings" class="slide level2">
+<h2>Managing the Crossings</h2>
+<p>In practice:</p>
+<ol type="1">
+<li><p>Find the points where <span class="math inline">\(f(x)=g(x)\)</span>.</p></li>
+<li><p>Use the intersection points to divide the interval.</p></li>
+<li><p>On each interval, identify the top and bottom functions.</p></li>
+<li><p>Add the areas of the subregions.</p></li>
+</ol>
+</section>
+<section id="changing-which-slices-you-use" class="slide level2">
+<h2>Changing which slices you use</h2>
+<p>Sometimes a region is easier to describe using <strong>horizontal slices</strong>.</p>
+<p>Instead of writing <span class="math inline">\(y=f(x)\)</span> write the boundaries as functions of <span class="math inline">\(y\)</span>:</p>
+<p><span class="math inline">\(x=u(y) \qquad\text{and}\qquad x=v(y)\)</span>.</p>
+<p>For a horizontal slice, <span class="math inline">\(\text{width} = \text{right}-\text{left}\)</span>.</p>
+<p>Therefore, <span class="math inline">\(\text{Area} = \int[\text{right}-\text{left}]\,dy\)</span>.</p>
+<p>The limits of integration are now <strong><span class="math inline">\(y\)</span>-values</strong>.</p>
+</section>
+<section id="definite-integral-with-respect-to-y" class="slide level2">
+<h2>Definite Integral with respect to y</h2>
+<p><span class="math display">\[
+\boxed{
+\int_a^b f(y)\,dy
 =
-\sin^{-1}\left(\frac{u}{a}\right)+C
+\lim_{n\to\infty}\sum_{i=1}^{n} f(y_i^*)\,\Delta y
+}
 \]</span></p>
+</section>
+<section id="example-of-area-between-curves-with-respect-to-y" class="slide level2">
+<h2>Example of Area Between Curves with respect to y</h2>
+<p>Suppose <span class="math inline">\(f(x)= \sqrt[3]{x}\)</span>. Find the area of the region bounded by <span class="math inline">\(f(x)\)</span>, the line <span class="math inline">\(x=0\)</span> and the line <span class="math inline">\(y=3\)</span>.</p>
+<p><a href="https://www.geogebra.org/graphing/nzjykyvj" target="_blank">Function Plot</a></p>
+</section>
+<section id="theorem-2.3-area-between-curves-with-respect-to-y" class="slide level2">
+<h2>Theorem 2.3 Area between Curves with respect to y</h2>
+<p>Let <span class="math inline">\(u(y)\)</span> and <span class="math inline">\(v(y)\)</span> be continuous functions such that</p>
 <p><span class="math display">\[
-\int \frac{du}{a^2+u^2}
+u(y)\geq v(y)
+\]</span></p>
+<p>for all <span class="math inline">\(y\in[c,d]\)</span>.</p>
+<p>If <span class="math inline">\(R\)</span> is bounded on the right by <span class="math inline">\(u(y)\)</span>, on the left by <span class="math inline">\(v(y)\)</span>, and above and below by <span class="math inline">\(y=d\)</span> and <span class="math inline">\(y=c\)</span>, then</p>
+<p><span class="math display">\[
+\boxed{
+A=\int_c^d [u(y)-v(y)]\,dy
+}
+\]</span></p>
+</section>
+<section id="horizontal-slices-example" class="slide level2">
+<h2>Horizontal slices example</h2>
+<p>Find the area of the region bounded by</p>
+<p><span class="math display">\[
+f(x)=\sqrt{x}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+g(x)=\frac{3}{2}-\frac{x}{2}
+\]</span></p>
+<p>and <span class="math inline">\(y=0\)</span>.</p>
+<p><a href="https://www.geogebra.org/graphing/weftwhyw" target="_blank">Function Plot</a></p>
+</section>
+<section id="slices-of-with-area-ax" class="slide level2">
+<h2>Slices of with Area <span class="math inline">\(A(x)\)</span></h2>
+<p><strong>Integration, we can add up infinitely many slices of area to find the volume of a solid.</strong></p>
+<p><span class="math display">\[\lim_{n\to\infty}\sum_{i=1}^{n} A(x_i^*)\,\Delta x\]</span></p>
+</section>
+<section id="volume-and-slicing" class="slide level2">
+<h2>Volume and Slicing</h2>
+<p>Suppose a solid extends from <span class="math inline">\(x=a\)</span> to <span class="math inline">\(x=b\)</span>.</p>
+<p>If the area of the cross-section perpendicular to the <span class="math inline">\(x\)</span>-axis is <span class="math inline">\(A(x)\)</span>, then</p>
+<p><span class="math display">\[
+\boxed{
+V=\int_a^b A(x)\,dx
+}
+\]</span></p>
+</section>
+<section id="volume-of-a-hut" class="slide level2">
+<h2>Volume of a Hut</h2>
+<p>Consider a circular hut whose cross-section is a circle. The hut is 5 feet tall and at its base the diameter is 10 The radius <span class="math inline">\(r\)</span> of the circular cross-section varies with the height <span class="math inline">\(h\)</span> of the hut. The radius is given by <span class="math inline">\(r(h)=5-\frac{h^2}{5}\)</span>. What is the volume of the hut?</p>
+</section>
+<section id="finding-volumes-by-the-slicing-method" class="slide level2">
+<h2>Finding Volumes by the Slicing Method</h2>
+<ol type="1">
+<li>Determine the <strong>shape</strong> of a cross-section.</li>
+<li>Determine a formula for the <strong>area</strong> of the cross-section.</li>
+<li>Integrate the area formula over the appropriate interval.</li>
+</ol>
+<p><span class="math display">\[
+\text{Volume}
 =
-\frac{1}{a}\tan^{-1}\left(\frac{u}{a}\right)+C
+\int
+\text{cross-sectional area}.
 \]</span></p>
+</section>
+<section id="volume-of-a-solid-of-revolution" class="slide level2">
+<h2>Volume of a Solid of Revolution</h2>
+<p>If a region in a plane is revolved around a line in that plane, the resulting solid is called a <strong>solid of revolution</strong>.</p>
+<p>For example, rotate a region around the <span class="math inline">\(x\)</span>-axis.</p>
+<p>A vertical slice of the region rotates to form a circular cross-section.</p>
+<p>The volume is still found using</p>
 <p><span class="math display">\[
-\int \frac{du}{u\sqrt{u^2-a^2}}
+V=\int_a^b A(x)\,dx,
+\]</span></p>
+<p>but now <span class="math inline">\(A(x)\)</span> is the area of a circular cross-section.</p>
+</section>
+<section id="disk-method" class="slide level2">
+<h2>Disk Method</h2>
+<p>Suppose a region lies between</p>
+<p><span class="math display">\[
+y=f(x)
+\]</span></p>
+<p>and the <span class="math inline">\(x\)</span>-axis.</p>
+<p>When the region is revolved around the <span class="math inline">\(x\)</span>-axis, a vertical slice forms a <strong>disk</strong>.</p>
+<p>The radius of the disk is</p>
+<p><span class="math display">\[
+r=f(x).
+\]</span></p>
+<p>Since the area of a circle is</p>
+<p><span class="math display">\[
+A=\pi r^2,
+\]</span></p>
+<p>the cross-sectional area is</p>
+<p><span class="math display">\[
+A(x)=\pi[f(x)]^2.
+\]</span></p>
+</section>
+<section id="disk-method-formula" class="slide level2">
+<h2>Disk Method Formula</h2>
+<p>Let <span class="math inline">\(f(x)\)</span> be continuous and nonnegative over <span class="math inline">\([a,b]\)</span>.</p>
+<p>If the region under <span class="math inline">\(f(x)\)</span> is revolved around the <span class="math inline">\(x\)</span>-axis, then</p>
+<p><span class="math display">\[
+\boxed{
+V=\int_a^b \pi[f(x)]^2\,dx
+}
+\]</span></p>
+<p>Equivalently,</p>
+<p><span class="math display">\[
+\boxed{
+V=\pi\int_a^b [f(x)]^2\,dx
+}
+\]</span></p>
+<p>For revolution around the <span class="math inline">\(y\)</span>-axis, with <span class="math inline">\(x=g(y)\)</span>,</p>
+<p><span class="math display">\[
+\boxed{
+V=\int_c^d \pi[g(y)]^2\,dy
+}
+\]</span></p>
+</section>
+<section id="disk-method-example" class="slide level2">
+<h2>Disk Method Example</h2>
+<p>Find the volume of the solid generated by revolving the region bounded by</p>
+<p><span class="math display">\[
+f(x)=\sqrt{x},
+\]</span></p>
+<p>the <span class="math inline">\(x\)</span>-axis, <span class="math inline">\(x=1\)</span>, and <span class="math inline">\(x=4\)</span></p>
+<p>around the <span class="math inline">\(x\)</span>-axis.</p>
+<h3 id="set-up">Set up</h3>
+<p>Radius:</p>
+<p><span class="math display">\[
+r=f(x)=\sqrt{x}
+\]</span></p>
+<p>Cross-sectional area:</p>
+<p><span class="math display">\[
+A(x)=\pi(\sqrt{x})^2
+\]</span></p>
+<p>Volume:</p>
+<p><span class="math display">\[
+V=\int_1^4 \pi(\sqrt{x})^2\,dx
+\]</span></p>
+<p><strong>Finish the evaluation on the board.</strong></p>
+</section>
+<section id="washer-method" class="slide level2">
+<h2>Washer Method</h2>
+<p>A solid of revolution may have a <strong>cavity</strong> in the middle.</p>
+<p>A cross-section is then a washer rather than a disk.</p>
+<p>Let</p>
+<p><span class="math display">\[
+R(x)=\text{outer radius}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+r(x)=\text{inner radius}.
+\]</span></p>
+<p>The area of a washer is</p>
+<p><span class="math display">\[
+A(x)
 =
-\frac{1}{a}\sec^{-1}\left(\frac{|u|}{a}\right)+C
+\pi[R(x)]^2-\pi[r(x)]^2.
 \]</span></p>
-</section>
-<section id="indefinite-integral-examples" class="slide level2">
-<h2>Indefinite Integral Examples</h2>
-<p>Evaluate each indefinite integral.</p>
+<p>So,</p>
 <p><span class="math display">\[
-\int 7e^{3x}\,dx
-\]</span></p>
-<p><span class="math display">\[
-\int \frac{4}{x}\,dx
-\]</span></p>
-<p><span class="math display">\[
-\int 5^x\,dx
-\]</span></p>
-</section>
-<section id="definite-integral-examples" class="slide level2">
-<h2>Definite Integral Examples</h2>
-<p>Evaluate each definite integral.</p>
-<p><span class="math display">\[
-\int_0^2 e^{2x}\,dx
-\]</span></p>
-<p><span class="math display">\[
-\int_1^4 \frac{3}{x}\,dx
-\]</span></p>
-<p><span class="math display">\[
-\int_0^1 2^x\,dx
-\]</span></p>
-</section>
-<section id="inverse-trigonometric-integral-examples" class="slide level2">
-<h2>Inverse Trigonometric Integral Examples</h2>
-<p>Evaluate each integral.</p>
-<p><span class="math display">\[
-\int \frac{dx}{\sqrt{9-x^2}}
-\]</span></p>
-<p><span class="math display">\[
-\int \frac{dx}{16+x^2}
-\]</span></p>
-<p><span class="math display">\[
-\int \frac{dx}{x\sqrt{x^2-25}}
-\]</span></p>
-</section>
-<section id="average-value-of-a-function" class="slide level2">
-<h2>Average Value of a function</h2>
-<p>Let <span class="math inline">\(f(x)\)</span> be continuous over the interval <span class="math inline">\([a,b]\)</span>.</p>
-<p>The average value of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span> is</p>
-<p><span class="math display">\[
-f_{\text{ave}}
+A(x)
 =
-\frac{1}{b-a}\int_a^b f(x)\,dx.
+\pi\left([R(x)]^2-[r(x)]^2\right).
 \]</span></p>
 </section>
-<section id="average-value-of-a-function-worked-examples" class="slide level2">
-<h2>Average Value of a Function: Worked Examples</h2>
-<p>Find the average value of each function over the given interval.</p>
+<section id="washer-method-formula" class="slide level2">
+<h2>Washer Method Formula</h2>
+<p>Suppose <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> are continuous, nonnegative functions with</p>
 <p><span class="math display">\[
-f(x)=x^2+1,\qquad 0\leq x\leq 3
+f(x)\geq g(x)
 \]</span></p>
+<p>on <span class="math inline">\([a,b]\)</span>.</p>
+<p>When the region between the curves is revolved around the <span class="math inline">\(x\)</span>-axis,</p>
 <p><span class="math display">\[
-f(x)=\sqrt{x},\qquad 0\leq x\leq 4
+\boxed{
+V
+=
+\int_a^b
+\pi\left([f(x)]^2-[g(x)]^2\right)\,dx
+}
 \]</span></p>
+<p>Think:</p>
 <p><span class="math display">\[
-f(x)=e^x,\qquad 0\leq x\leq \ln 2
-\]</span></p>
-<p><span class="math display">\[
-f(x)=\frac{1}{x},\qquad 1\leq x\leq e
+\boxed{
+V
+=
+\pi\int_a^b
+\left[
+(\text{outer radius})^2
+-
+(\text{inner radius})^2
+\right]\,dx
+}
 \]</span></p>
 </section>
-<section id="next-steps" class="slide level2">
-<h2>Next Steps</h2>
-<ul>
-<li>Start work on Homework 2 if you have not already</li>
-<li>Look of chapter 2 of the course text</li>
-</ul>
-</section>
-<section class="slide level2">
-
+<section id="washer-method-example" class="slide level2">
+<h2>Washer Method Example</h2>
+<p>Find the volume of the solid generated by revolving the region bounded above by</p>
+<p><span class="math display">\[
+f(x)=x
+\]</span></p>
+<p>and below by</p>
+<p><span class="math display">\[
+g(x)=\frac{1}{x}
+\]</span></p>
+<p>over <span class="math inline">\([1,4]\)</span> around the <span class="math inline">\(x\)</span>-axis.</p>
+<p>Outer radius:</p>
+<p><span class="math display">\[
+R(x)=x
+\]</span></p>
+<p>Inner radius:</p>
+<p><span class="math display">\[
+r(x)=\frac{1}{x}
+\]</span></p>
+<p>Set up the volume:</p>
+<p><span class="math display">\[
+V
+=
+\pi\int_1^4
+\left[
+x^2-\left(\frac{1}{x}\right)^2
+\right]\,dx
+\]</span></p>
+<p><strong>Finish the evaluation on the board.</strong></p>
 
 
 </section>
