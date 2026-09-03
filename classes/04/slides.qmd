@@ -49,9 +49,9 @@ $$
 
 ## Two ways to think about the area between Curves
 
- Assume that $f(x)$ \ge $g(x)$ on $[a,b]$.
+ Assume that $f(x) \geq g(x)$ on $[a,b]$.
 $$
-\text{Area}=\int_a^b [\text{top}-\text{bottom}]\,dx
+\text{Area}=\int_a^b \text{top}\,dx-\int_a^b \text{bottom}\,dx
 $$
 
 

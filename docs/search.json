@@ -536,7 +536,7 @@
     "href": "classes/04/slides.html#two-ways-to-think-about-the-area-between-curves",
     "title": "Area and Volume",
     "section": "Two ways to think about the area between Curves",
-    "text": "Two ways to think about the area between Curves\nAssume that \\(f(x)\\) \\(g(x)\\) on \\([a,b]\\). \\[\n\\text{Area}=\\int_a^b [\\text{top}-\\text{bottom}]\\,dx\n\\]\nor\n\\[\n\\text{Area}=\\lim_{n\\to\\infty}\\sum_{i=1}^{n} [f(x_i^*)-g(x_i^*)]\\,\\Delta x\n\\]",
+    "text": "Two ways to think about the area between Curves\nAssume that \\(f(x) \\geq g(x)\\) on \\([a,b]\\). \\[\n\\text{Area}=\\int_a^b \\text{top}\\,dx-\\int_a^b \\text{bottom}\\,dx\n\\]\nor\n\\[\n\\text{Area}=\\lim_{n\\to\\infty}\\sum_{i=1}^{n} [f(x_i^*)-g(x_i^*)]\\,\\Delta x\n\\]",
     "crumbs": [
       "Class Material",
       "Area and Volume"
