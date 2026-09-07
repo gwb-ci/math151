@@ -1,5 +1,5 @@
 ---
-title: "U-Substitution"
+title: "Volume by Disks and Washers"
 
 format:
   revealjs:
@@ -24,296 +24,268 @@ format:
 
 
 
-## U-Substitution
+## Calculating Volume using Slicing
 
 
 Class Session Goals:
 
 
-- U-substitution Rule for Integrals
-- More Integration Rules for Functions
+- Find the volume of a solid using slicing.
+- Find the volume of revolution using the disk/washer method.
 
 ---
 
+## Core Idea of Chapter 2
 
+**Integration gives us a way to add up infinitely small slices**
 
-## Fundamental Theorem of Calculus, Part 1
-
-If $f(x)$ is continuous over an interval $[a,b]$, and the function $F(x)$ is defined by
-
+Defintion of the Definite Integral:
 $$
-F(x)=\int_a^x f(t)\,dt,
-$$
-
-then $F'(x)=f(x)$ over $(a,b)$.
-
-**The derivative of an integrated function is the original function.**
-
----
-
-## Fundamental Theorem of Calculus, Part 2
-
-If $f$ is continuous over the interval $[a,b]$ and $F(x)$ is any antiderivative of $f(x)$, then
-
-$$
-\int_a^b f(x)\,dx=F(b)-F(a).
-$$
-
-We often use $F(x)\big|_a^b$ to denote $F(b)-F(a)$.
-
-**The integral of the derivative function is the original function.**
-
----
-
-
-
-## Integration Techniques
-
-
-
-**Big Idea** For every derivative rule there is a coresponding integration rule.
-
----
-
-
-
-## Integration rules for common functions
-
-- $\int k\,dx=kx+C$
-- $\int \frac{1}{x}\,dx=\ln|x|+C$
-- $\int e^x\,dx=e^x+C$
-- $\int \cos x\,dx=\sin x+C$
-- $\int \sin x\,dx=-\cos x+C$
-
----
-
-
-
-## More Integration rules
-
-- $\int \sec^2 x\,dx=\tan x+C$
-- $\int \csc x\cot x\,dx=-\csc x+C$
-- $\int \sec x\tan x\,dx=\sec x+C$
-- $\int \csc^2 x\,dx=-\cot x+C$
-- $\int \frac{1}{1+x^2}\,dx=\tan^{-1}x+C$
-
----
-
-## Longer lists of rules
-
-[Integration Rules](https://openstax.org/books/calculus-volume-2/pages/a-table-of-integrals)
-
-[Differentiation Rules](https://openstax.org/books/calculus-volume-2/pages/b-table-of-derivatives)
-
----
-
-
-
-## First Integration Technique
-
-Integration by substitution
-
-Substitution is the reverse of the chain rule of differentiation.
-
-
----
-
-
-## Chain Rule
-
-If $f$ is differentiable at $g(x)$ and $g$ is differentiable at $x$, then the composite function $F=f\circ g$ defined by $F(x)=f(g(x))$ is differentiable at $x$ and
-
-$$
-F'(x)=f'(g(x))g'(x).
-$$
-
-
-
----
-
-## U-Substitution
-
-Let $u=g(x)$, where $g'(x)$ is continuous over an interval, and let $f$ be continuous over the corresponding range of $g$.
-
-Then
-
-$$
-\int f[g(x)]g'(x)\,dx
+\boxed{
+\int_a^b f(x)\,dx
 =
-\int f(u)\,du.
-$$
-
-If $F$ is an antiderivative of $f$, then
-
-$\int f(u)\,du=F(u)+C=F(g(x))+C$.
-
----
-
-## U-Substitution Examples
-
-$$\int 6x(3x^2+4)^4 \,dx$$
-
-$$\int z \sqrt{z^2-5} \,dz$$
-
-
-
-
----
-
-
-
-
-
-## Integration Rules for Exponential and Logarithmic Functions
-
-Exponential functions can be integrated using the following formulas.
-
-$$
-\begin{aligned}
-\int e^x\,dx &= e^x+C \\
-\int a^x\,dx &= \frac{a^x}{\ln a}+C
-\end{aligned}
+\lim_{n\to\infty}\sum_{i=1}^{n} f(x_i^*)\,\Delta x
+}
 $$
 
 ---
 
-## Integration Rules Logarithmic Functions
 
-The following formulas can be used to evaluate integrals involving logarithmic functions.
+
+## Volume and Slicing
+
+Suppose a solid extends from $x=a$ to $x=b$.
+
+If the area of the cross-section perpendicular to the $x$-axis is $A(x)$, then
 
 $$
-\begin{aligned}
-\int x^{-1}\,dx &= \ln|x|+C \\
-\int \ln x\,dx &= x\ln x-x+C=x(\ln x-1)+C \\
-\int \log_a x\,dx &= \frac{x}{\ln a}(\ln x-1)+C
-\end{aligned}
+\boxed{
+V=\int_a^b A(x)\,dx
+}
 $$
-
 
 ---
 
-## Integrations Resulting in Inverse Trigonometric Functions
+## Volume of a Lean to Shelter
 
+Consider a circular lean-to shelter whose cross-section is a rectangle.  The shelter is 5 feet tall and at its base is a 5 foot by 8 foot rectangle.  The diameter is 10 feet.  The area $A$ of the rectangular cross-section varies with the height $h$ of the shelter.  The radius is given by $r(h)=5-h$.  What is the volume of the shelter?
+
+---
+
+## Finding Volumes by the Slicing Method
+
+1. Determine the **shape** of a cross-section.
+2. Determine a formula for the **area** of the cross-section.
+3. Integrate the area formula over the appropriate interval.
 
 $$
-\int \frac{du}{\sqrt{a^2-u^2}}
+\text{Volume}
 =
-\sin^{-1}\left(\frac{u}{a}\right)+C
+\int
+\text{cross-sectional area}.
 $$
 
+---
+
+## Volume of a cone
+
+Consider a cone with height $h$ and base radius $r$.  The radius of a cross-section at height $y$ is given by $R(y)=\frac{r}{h}(h-y)$.  The volume of the cone is
+
 $$
-\int \frac{du}{a^2+u^2}
+V=\int_0^h \pi[R(y)]^2\,dy
+=\int_0^h \pi\left[\frac{r}{h}(h-y)\right]^2\,dy
+=\frac{1}{3}\pi r^2 h.
+$$
+
+
+---
+
+
+## Volume of a Solid of Revolution
+
+If a region in a plane is revolved around a line in that plane, the resulting solid is called a **solid of revolution**.
+
+If we rotate a region around the $x$-axis. A vertical slice of the region rotates to form a circular cross-section.
+
+The volume is still found using $V=\int_a^b A(x)\,dx$.
+
+but now $A(x)$ is the area of a circular cross-section.
+
+---
+
+
+
+## Disk Method
+
+Suppose a region lies between $y=f(x)$ and the $x$-axis.
+
+When the region is revolved around the $x$-axis, a vertical slice forms a **disk**.
+
+The radius of the disk is $f(x)$ and the  area of the corresponding circle is $A(x)=\pi[f(x)]^2$.
+
+---
+
+
+
+
+## Disk Method Formula
+
+Let $f(x)$ be continuous and nonnegative over $[a,b]$.
+
+If the region under $f(x)$ is revolved around the $x$-axis, then
+
+$$
+\boxed{
+V=\int_a^b \pi[f(x)]^2\,dx
+}
+$$
+
+
+---
+
+
+## Disk Method Example 1
+
+Find the volume of the solid generated by revolving the region under the function $f(x)=\frac{1}{x}$ around the $x$-axis for $x$ in $[1,2]$ using the disk method.
+
+---
+
+## Disk Method Example 2
+
+Find the volume of the solid generated by revolving the region bounded by
+
+$$
+f(x)=\sqrt{x},
+$$
+
+the $x$-axis, $x=1$, and $x=4$ around the $x$-axis.
+
+
+---
+
+
+## Disk Method Example 3
+
+Find the volume of the solid generated by revolving the region bounded by
+
+$$
+f(x)=\sin x
+$$
+
+the $x$-axis, $x=0$, and $x=\frac{\pi}{2}$ around the $x$-axis.
+
+
+---
+
+## Washer Method
+
+A solid of revolution may have a **cavity** in the middle.
+
+A cross-section is then a washer rather than a disk.
+
+Let
+
+$$
+f(x)=\text{outer radius}
+$$
+
+and
+
+$$
+f(x)=\text{inner radius}.
+$$
+
+The area of a washer is
+
+$$
+A(x)
 =
-\frac{1}{a}\tan^{-1}\left(\frac{u}{a}\right)+C
+\pi[f(x)]^2-\pi[g(x)]^2
 $$
 
+
+---
+
+
+## Washer Method Formula
+
+Suppose $f(x)$ and $g(x)$ are continuous, nonnegative functions with
+
 $$
-\int \frac{du}{u\sqrt{u^2-a^2}}
+f(x)\geq g(x)
+$$
+
+on $[a,b]$.
+
+When the region between the curves is revolved around the $x$-axis,
+
+$$
+\boxed{
+V
 =
-\frac{1}{a}\sec^{-1}\left(\frac{|u|}{a}\right)+C
+\int_a^b
+\pi\left([f(x)]^2-[g(x)]^2\right)\,dx
+}
 $$
 
 
 ---
 
 
-## Indefinite Integral Examples
 
-Evaluate each indefinite integral.
 
-$$
-\int 7e^{3x}\,dx
-$$
+## Washer Method Example 1
+
+Find the volume of the solid generated by revolving the region bounded above by
 
 $$
-\int \frac{4}{x}\,dx
+f(x)=\sqrt{x}
 $$
 
+and below by
+
 $$
-\int 5^x\,dx
+g(x)=\frac{1}{x}
 $$
+
+over $[1,3]$ around the $x$-axis.
 
 
 ---
 
+## Rotation Around the y-Axis
 
-## Definite Integral Examples
-
-Evaluate each definite integral.
-
-$$
-\int_0^2 e^{2x}\,dx
-$$
+When the region under $f(x)$ is revolved around the $y$-axis, the volume is given by
 
 $$
-\int_1^4 \frac{3}{x}\,dx
+V=\pi\int_c^d [g(y)]^2\,dy
 $$
 
-$$
-\int_0^1 2^x\,dx
-$$
-
----
-
-## Inverse Trigonometric Integral Examples
-
-Evaluate each integral.
-
-$$
-\int \frac{dx}{\sqrt{9-x^2}}
-$$
-
-$$
-\int \frac{dx}{16+x^2}
-$$
-
-$$
-\int \frac{dx}{x\sqrt{x^2-25}}
-$$
+where $x=g(y)$ is the inverse function of $y=f(x)$ and $y$ ranges from $c$ to $d$.
 
 ---
 
 
-## Average Value of a function
+## Rotation Around the y-Axis Example 1
 
-Let $f(x)$ be continuous over the interval $[a,b]$.
-
-The average value of $f$ on $[a,b]$ is
-
-$$
-f_{\text{ave}}
-=
-\frac{1}{b-a}\int_a^b f(x)\,dx.
-$$
+Find the volume of the solid generated by revolving the region under the function $f(x)=\frac{1}{x}$ around the $y$-axis for $y$ in $[\frac{1}{2},1]$ using the method for rotation around the $y$-axis.    
 
 ---
 
-## Average Value of a Function: Worked Examples
+## Washer Method with a Different Axis of Rotation
 
-Find the average value of each function over the given interval.
+Find the volume generated by revolving the region bounded above by $f(x)=4-x$ and below by the $x$-axis over $[0,4]$ around $y=-2$.
 
-$$
-f(x)=x^2+1,\qquad 0\leq x\leq 3
-$$
+Outer radius: $R(x)=f(x)+2=(4-x)+2=6-x$
 
-$$
-f(x)=\sqrt{x},\qquad 0\leq x\leq 4
-$$
+Inner radius: $r(x)=2$
 
-$$
-f(x)=e^x,\qquad 0\leq x\leq \ln 2
-$$
-
-$$
-f(x)=\frac{1}{x},\qquad 1\leq x\leq e
-$$
+$V=\int_0^4 \pi\left[(6-x)^2-(2)^2\right]\,dx
+=\pi\int_0^4(x^2-12x+32)\,dx
+=\frac{160\pi}{3}$
 
 ---
 
-## Next Steps
+## Rotation around a different axis Example 1
 
-
-- Start work on Homework 2 if you have not already
-- Look of chapter 2 of the course text
-
----
+Find the volume of the solid generated by revolving the region under the function $f(x)=\sqrt{x}$ around the line $y=1$ for $x$ in $[0,4]$ using the method for rotation around a different axis. 
