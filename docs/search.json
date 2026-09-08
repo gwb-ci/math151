@@ -382,7 +382,18 @@
     "href": "classes/05/slides.html#washer-method-with-a-different-axis-of-rotation",
     "title": "Volume by Disks and Washers",
     "section": "Washer Method with a Different Axis of Rotation",
-    "text": "Washer Method with a Different Axis of Rotation\nFor a region revolved around a horizontal line \\(y=c\\):\n\\(V=\\pi\\int_a^b\\left([R(x)]^2-[r(x)]^2\\right)\\,dx\\)\nwhere\n\\(R(x)=\\) distance from \\(y=c\\) to the outer curve\n\\(r(x)=\\) distance from \\(y=c\\) to the inner curve\nIf the region is bounded above by \\(f(x)\\) and below by \\(g(x)\\), then the radii depend on the location of the axis of rotation.\nFor rotation about \\(y=c\\) below the region:\n\\(R(x)=f(x)-c,\\qquad r(x)=g(x)-c\\)\nFor rotation about \\(y=c\\) above the region:\n\\(R(x)=c-g(x),\\qquad r(x)=c-f(x)\\)",
+    "text": "Washer Method with a Different Axis of Rotation\nFor a region revolved around a horizontal line \\(y=c\\):\n\\(V=\\pi\\int_a^b\\left([R(x)]^2-[r(x)]^2\\right)\\,dx\\)\nwhere\n\\(R(x)=\\) distance from \\(y=c\\) to the outer curve\n\\(r(x)=\\) distance from \\(y=c\\) to the inner curve",
+    "crumbs": [
+      "Class Material",
+      "Volume by Disks and Washers"
+    ]
+  },
+  {
+    "objectID": "classes/05/slides.html#washer-method-with-a-different-axis-of-rotation-1",
+    "href": "classes/05/slides.html#washer-method-with-a-different-axis-of-rotation-1",
+    "title": "Volume by Disks and Washers",
+    "section": "Washer Method with a Different Axis of Rotation",
+    "text": "Washer Method with a Different Axis of Rotation\nIf the region is bounded above by \\(f(x)\\) and below by \\(g(x)\\), then the radii depend on the location of the axis of rotation.\nFor rotation about \\(y=c\\) below the region:\n\\(R(x)=f(x)-c,\\qquad r(x)=g(x)-c\\)\nFor rotation about \\(y=c\\) above the region:\n\\(R(x)=c-g(x),\\qquad r(x)=c-f(x)\\)\nUnderstanding the idea here is far more important than memorizing the formulas.",
     "crumbs": [
       "Class Material",
       "Volume by Disks and Washers"
@@ -404,7 +415,18 @@
     "href": "classes/05/slides.html#table-of-antiderivatives-trig",
     "title": "Volume by Disks and Washers",
     "section": "Table of Antiderivatives: Trig",
-    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\sec^2 x\\,dx &= \\tan x+C \\\\\n\\int \\csc^2 x\\,dx &= -\\cot x+C \\\\\n\\int \\sec x\\tan x\\,dx &= \\sec x+C \\\\\n\\int \\csc x\\cot x\\,dx &= -\\csc x+C \\\\\n\\int \\tan x\\,dx &= \\ln|\\sec x|+C \\\\\n\\int \\cot x\\,dx &= \\ln|\\sin x|+C \\\\\n\\int \\sec x\\,dx &= \\ln|\\sec x+\\tan x|+C \\\\\n\\int \\csc x\\,dx &= -\\ln|\\csc x+\\cot x|+C\n\\end{aligned}\n\\]",
+    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\sec^2 x\\,dx &= \\tan x+C \\\\\n\\int \\csc^2 x\\,dx &= -\\cot x+C \\\\\n\\int \\sec x\\tan x\\,dx &= \\sec x+C \\\\\n\\int \\csc x\\cot x\\,dx &= -\\csc x+C\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Volume by Disks and Washers"
+    ]
+  },
+  {
+    "objectID": "classes/05/slides.html#table-of-antiderivatives-trig-1",
+    "href": "classes/05/slides.html#table-of-antiderivatives-trig-1",
+    "title": "Volume by Disks and Washers",
+    "section": "Table of Antiderivatives: Trig",
+    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\tan x\\,dx &= \\ln|\\sec x|+C \\\\\n\\int \\cot x\\,dx &= \\ln|\\sin x|+C \\\\\n\\int \\sec x\\,dx &= \\ln|\\sec x+\\tan x|+C \\\\\n\\int \\csc x\\,dx &= -\\ln|\\csc x+\\cot x|+C\n\\end{aligned}\n\\]",
     "crumbs": [
       "Class Material",
       "Volume by Disks and Washers"

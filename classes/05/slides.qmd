@@ -300,6 +300,12 @@ $R(x)=$ distance from $y=c$ to the outer curve
 
 $r(x)=$ distance from $y=c$ to the inner curve
 
+
+---
+
+
+## Washer Method with a Different Axis of Rotation
+
 If the region is bounded above by $f(x)$ and below by $g(x)$, then the radii depend on the location of the axis of rotation.
 
 For rotation about $y=c$ below the region:
@@ -309,6 +315,8 @@ $R(x)=f(x)-c,\qquad r(x)=g(x)-c$
 For rotation about $y=c$ above the region:
 
 $R(x)=c-g(x),\qquad r(x)=c-f(x)$
+
+**Understanding the idea here is far more important than memorizing the formulas.**
 
 ---
 
@@ -327,7 +335,16 @@ $$
 \int \sec^2 x\,dx &= \tan x+C \\
 \int \csc^2 x\,dx &= -\cot x+C \\
 \int \sec x\tan x\,dx &= \sec x+C \\
-\int \csc x\cot x\,dx &= -\csc x+C \\
+\int \csc x\cot x\,dx &= -\csc x+C
+\end{aligned}
+$$
+
+---
+
+## Table of Antiderivatives: Trig
+
+$$
+\begin{aligned}
 \int \tan x\,dx &= \ln|\sec x|+C \\
 \int \cot x\,dx &= \ln|\sin x|+C \\
 \int \sec x\,dx &= \ln|\sec x+\tan x|+C \\
