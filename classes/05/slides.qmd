@@ -360,7 +360,14 @@ $$
 \begin{aligned}
 \int a^x\,dx &= \frac{a^x}{\ln a}+C,\quad a>0,\ a\neq1 \\
 \int \log_a x\,dx &= x\log_a x-\frac{x}{\ln a}+C,\quad a>0,\ a\neq1 \\
-\int \frac{1}{a^2+x^2}\,dx &= \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)+C \\
+\int \frac{1}{a^2+x^2}\,dx &= \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)+C
+\end{aligned}
+$$
+
+## Table of Antiderivatives: Other
+
+$$
+\begin{aligned}
 \int \frac{1}{\sqrt{a^2-x^2}}\,dx &= \sin^{-1}\left(\frac{x}{a}\right)+C \\
 \int \frac{1}{x\sqrt{x^2-a^2}}\,dx &= \frac{1}{a}\sec^{-1}\left|\frac{x}{a}\right|+C \\
 \int \frac{1}{x^2-a^2}\,dx &= \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|+C

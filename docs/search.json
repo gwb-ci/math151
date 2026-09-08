@@ -437,7 +437,18 @@
     "href": "classes/05/slides.html#table-of-antiderivatives-other",
     "title": "Volume by Disks and Washers",
     "section": "Table of Antiderivatives: Other",
-    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\log_a x\\,dx &= x\\log_a x-\\frac{x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\frac{1}{a^2+x^2}\\,dx &= \\frac{1}{a}\\tan^{-1}\\left(\\frac{x}{a}\\right)+C \\\\\n\\int \\frac{1}{\\sqrt{a^2-x^2}}\\,dx &= \\sin^{-1}\\left(\\frac{x}{a}\\right)+C \\\\\n\\int \\frac{1}{x\\sqrt{x^2-a^2}}\\,dx &= \\frac{1}{a}\\sec^{-1}\\left|\\frac{x}{a}\\right|+C \\\\\n\\int \\frac{1}{x^2-a^2}\\,dx &= \\frac{1}{2a}\\ln\\left|\\frac{x-a}{x+a}\\right|+C\n\\end{aligned}\n\\]",
+    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\log_a x\\,dx &= x\\log_a x-\\frac{x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\frac{1}{a^2+x^2}\\,dx &= \\frac{1}{a}\\tan^{-1}\\left(\\frac{x}{a}\\right)+C\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Volume by Disks and Washers"
+    ]
+  },
+  {
+    "objectID": "classes/05/slides.html#table-of-antiderivatives-other-1",
+    "href": "classes/05/slides.html#table-of-antiderivatives-other-1",
+    "title": "Volume by Disks and Washers",
+    "section": "Table of Antiderivatives: Other",
+    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int \\frac{1}{\\sqrt{a^2-x^2}}\\,dx &= \\sin^{-1}\\left(\\frac{x}{a}\\right)+C \\\\\n\\int \\frac{1}{x\\sqrt{x^2-a^2}}\\,dx &= \\frac{1}{a}\\sec^{-1}\\left|\\frac{x}{a}\\right|+C \\\\\n\\int \\frac{1}{x^2-a^2}\\,dx &= \\frac{1}{2a}\\ln\\left|\\frac{x-a}{x+a}\\right|+C\n\\end{aligned}\n\\]",
     "crumbs": [
       "Class Material",
       "Volume by Disks and Washers"
