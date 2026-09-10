@@ -364,6 +364,8 @@ $$
 \end{aligned}
 $$
 
+---
+
 ## Table of Antiderivatives: Other
 
 $$

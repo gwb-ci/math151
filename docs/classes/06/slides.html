@@ -140,6 +140,7 @@
 <p>Class Session Goals:</p>
 <ul>
 <li>Calculate the volume of a solid using the cylindrical shells method.</li>
+<li>Volume of rotation around other axes</li>
 </ul>
 </section>
 <section id="core-idea-of-chapter-2" class="slide level2">
@@ -163,6 +164,16 @@ V=\int_a^b A(x)\,dx
 }
 \]</span></p>
 </section>
+<section id="other-ways-to-slice" class="slide level2">
+<h2>Other ways to slice</h2>
+<p>We started with circular slices because that is a good starting point. We have this linear slices which lines up with what we think of slices in everyday life. But math is about generalizing an idea, so we ask the question “Can we do this for other types of slices?”</p>
+<ul>
+<li>circular slices</li>
+<li>cylindrical slices, think cookie cutters</li>
+<li>elliptical slices</li>
+<li>spherical slices, think onion peels</li>
+</ul>
+</section>
 <section id="cylindrical-shells-method" class="slide level2">
 <h2>Cylindrical Shells Method</h2>
 <p>With the method of cylindrical shells, we integrate along the coordinate axis perpendicular to the axis of revolution.</p>
@@ -176,51 +187,131 @@ V=\int_a^b A(x)\,dx
 <p>Let <span class="math inline">\(f(x)\)</span> be continuous and nonnegative.</p>
 <p>Define <span class="math inline">\(R\)</span> as the region bounded above by the graph of <span class="math inline">\(f(x)\)</span>, below by the <span class="math inline">\(x\)</span>-axis, on the left by the line <span class="math inline">\(x=a\)</span>, and on the right by the line <span class="math inline">\(x=b\)</span>.</p>
 <p>The volume of the solid of revolution formed by revolving <span class="math inline">\(R\)</span> around the <span class="math inline">\(y\)</span>-axis is</p>
-<p><span class="math inline">\(V=\int_a^b(2\pi x f(x))\,dx\)</span></p>
+<p><span class="math inline">\(V=\int_a^b2\pi x f(x)\,dx\)</span></p>
 </section>
 <section id="cylindrical-shells-example-1" class="slide level2">
 <h2>Cylindrical Shells Example 1</h2>
 <p>Region: under <span class="math inline">\(f(x)=\frac{1}{x}\)</span> over <span class="math inline">\([1,3]\)</span></p>
 <p>Rotate around the <span class="math inline">\(y\)</span>-axis.</p>
+<p><a href="https://www.geogebra.org/calculator/nuskw8fq" target="_blank">Function Plot</a></p>
+<div class="fragment">
 <p><span class="math inline">\(V=\int_1^3\left(2\pi x\left(\frac{1}{x}\right)\right)\,dx\)</span></p>
 <p><span class="math inline">\(V=\int_1^3 2\pi\,dx=2\pi x\big|_1^3=4\pi\)</span></p>
+</div>
 </section>
 <section id="cylindrical-shells-example-2" class="slide level2">
 <h2>Cylindrical Shells Example 2</h2>
-<p>Region: under <span class="math inline">\(f(x)=2x-x^2\)</span> over <span class="math inline">\([0,2]\)</span></p>
+<p>Region: under <span class="math inline">\(f(x)=2x-x^2\)</span> and above the x-axis.</p>
 <p>Rotate around the <span class="math inline">\(y\)</span>-axis.</p>
+<p><a href="https://www.geogebra.org/calculator/najspgg3" target="_blank">Function Plot</a></p>
+<div class="fragment">
 <p><span class="math inline">\(V=\int_0^2\left(2\pi x(2x-x^2)\right)\,dx\)</span></p>
 <p><span class="math inline">\(V=2\pi\int_0^2(2x^2-x^3)\,dx\)</span></p>
 <p><span class="math inline">\(V=2\pi\left[\frac{2x^3}{3}-\frac{x^4}{4}\right]_0^2=\frac{8\pi}{3}\)</span></p>
+</div>
 </section>
 <section id="cylindrical-shells-example-3" class="slide level2">
 <h2>Cylindrical Shells Example 3</h2>
 <p>Let <span class="math inline">\(Q\)</span> be bounded on the right by <span class="math inline">\(g(y)=2\sqrt{y}\)</span> and on the left by the <span class="math inline">\(y\)</span>-axis for <span class="math inline">\(y\in[0,4]\)</span>.</p>
 <p>Rotate around the <span class="math inline">\(x\)</span>-axis.</p>
+<p><a href="https://www.geogebra.org/calculator/rx7tf66p" target="_blank">Function Plot</a></p>
+<div class="fragment">
 <p><span class="math inline">\(V=\int_0^4\left(2\pi y(2\sqrt{y})\right)\,dy\)</span></p>
 <p><span class="math inline">\(V=4\pi\int_0^4 y^{3/2}\,dy
 =4\pi\left[\frac{2y^{5/2}}{5}\right]_0^4
 =\frac{256\pi}{5}\)</span></p>
+</div>
 </section>
-<section id="revolution-about-a-different-axis" class="slide level2">
-<h2>Revolution About a Different Axis</h2>
+<section id="rotation-around-other-axes" class="slide level2">
+<h2>Rotation around other axes</h2>
+<p>We can rotate areas around other lines too, we are not just restriced to the x-axis of the y-axis. When we do the main thing that changes is the radius. We aske the question, “What is the radius of the circles or cylinders I will be using?” and adjust the formulas.</p>
+</section>
+<section id="washer-method-with-a-different-axis-of-rotation" class="slide level2">
+<h2>Washer Method with a Different Axis of Rotation</h2>
+<p>For a region revolved around a horizontal line <span class="math inline">\(y=c\)</span>:</p>
+<p><span class="math inline">\(V=\pi\int_a^b\left([R(x)]^2-[r(x)]^2\right)\,dx\)</span></p>
+<p>where</p>
+<p><span class="math inline">\(R(x)=\)</span> distance from <span class="math inline">\(y=c\)</span> to the outer curve</p>
+<p><span class="math inline">\(r(x)=\)</span> distance from <span class="math inline">\(y=c\)</span> to the inner curve</p>
+</section>
+<section id="washer-method-with-a-different-axis-of-rotation-1" class="slide level2">
+<h2>Washer Method with a Different Axis of Rotation</h2>
+<p>If the region is bounded above by <span class="math inline">\(f(x)\)</span> and below by <span class="math inline">\(g(x)\)</span>, then the radii depend on the location of the axis of rotation.</p>
+<p>For rotation about <span class="math inline">\(y=c\)</span> below the region:</p>
+<p><span class="math inline">\(R(x)=f(x)-c,\qquad r(x)=g(x)-c\)</span></p>
+<p>For rotation about <span class="math inline">\(y=c\)</span> above the region:</p>
+<p><span class="math inline">\(R(x)=c-g(x),\qquad r(x)=c-f(x)\)</span></p>
+<p><strong>Understanding the idea here is far more important than memorizing the formulas.</strong></p>
+</section>
+<section id="revolution-about-a-different-axis-washer-method" class="slide level2">
+<h2>Revolution About a Different Axis: Washer Method</h2>
+<p>Find the volume of the solid generated by revolving the region under the function <span class="math inline">\(f(x)=\sqrt{x}\)</span> around the line <span class="math inline">\(y=1\)</span> for <span class="math inline">\(x\)</span> in <span class="math inline">\([0,\frac{1}{2}]\)</span> using the method for rotation around a different axis.</p>
+<p><a href="https://www.geogebra.org/calculator/xv4vdgqx" target="_blank">Function Plot</a></p>
+</section>
+<section id="revolution-about-a-different-axis-shell-method" class="slide level2">
+<h2>Revolution About a Different Axis: Shell Method</h2>
 <p>Region: under <span class="math inline">\(f(x)=x\)</span> over <span class="math inline">\([1,2]\)</span></p>
 <p>Rotate around the line <span class="math inline">\(x=-1\)</span>.</p>
+<p><a href="https://www.geogebra.org/calculator/qjkepkfe" target="_blank">Function Plot</a></p>
+<div class="fragment">
 <p>Radius of a shell: <span class="math inline">\(x+1\)</span></p>
 <p><span class="math inline">\(V=\int_1^2\left(2\pi(x+1)f(x)\right)\,dx\)</span></p>
 <p><span class="math inline">\(V=2\pi\int_1^2(x^2+x)\,dx
 =2\pi\left[\frac{x^3}{3}+\frac{x^2}{2}\right]_1^2
 =\frac{23\pi}{3}\)</span></p>
+</div>
 </section>
 <section id="how-to-choose-which-volume-method-to-use" class="slide level2">
 <h2>How to choose which Volume Method to Use</h2>
-<p>It often comes down to a choice of which integral is easiest to evaluate.</p>
+<p>It often comes down to a choice of <strong>which integral is easiest to evaluate</strong>.</p>
 <p>Disk method: slices perpendicular to the axis; no cavity.</p>
-<p><span class="math inline">\(V=\int_a^b \pi[R(x)]^2\,dx\)</span></p>
+<p><span class="math inline">\(V=\int_a^b \pi[f(x)]^2\,dx\)</span></p>
 <p>Washer method: slices perpendicular to the axis; cavity or two boundaries.</p>
-<p><span class="math inline">\(V=\int_a^b \pi\left([R(x)]^2-[r(x)]^2\right)\,dx\)</span></p>
-<p>Shell method: slices parallel to the axis.</p>
-<p><span class="math inline">\(V=\int 2\pi(\text{radius})(\text{height})\,d(\text{variable})\)</span></p>
+<p><span class="math inline">\(V=\int_a^b \pi\left([f(x)]^2-[g(x)]^2\right)\,dx\)</span></p>
+<p>Cylindrical Shell method: slices parallel to the axis.</p>
+<p><span class="math inline">\(V=\int 2\pi x f(x) \,dx\)</span></p>
+</section>
+<section id="table-of-antiderivatives-trig" class="slide level2">
+<h2>Table of Antiderivatives: Trig</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\int \sec^2 x\,dx &amp;= \tan x+C \\
+\int \csc^2 x\,dx &amp;= -\cot x+C \\
+\int \sec x\tan x\,dx &amp;= \sec x+C \\
+\int \csc x\cot x\,dx &amp;= -\csc x+C
+\end{aligned}
+\]</span></p>
+</section>
+<section id="table-of-antiderivatives-trig-1" class="slide level2">
+<h2>Table of Antiderivatives: Trig</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\int \tan x\,dx &amp;= \ln|\sec x|+C \\
+\int \cot x\,dx &amp;= \ln|\sin x|+C \\
+\int \sec x\,dx &amp;= \ln|\sec x+\tan x|+C \\
+\int \csc x\,dx &amp;= -\ln|\csc x+\cot x|+C
+\end{aligned}
+\]</span></p>
+</section>
+<section id="table-of-antiderivatives-other" class="slide level2">
+<h2>Table of Antiderivatives: Other</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\int a^x\,dx &amp;= \frac{a^x}{\ln a}+C,\quad a&gt;0,\ a\neq1 \\
+\int \log_a x\,dx &amp;= x\log_a x-\frac{x}{\ln a}+C,\quad a&gt;0,\ a\neq1 \\
+\int \frac{1}{a^2+x^2}\,dx &amp;= \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)+C
+\end{aligned}
+\]</span></p>
+</section>
+<section id="table-of-antiderivatives-other-1" class="slide level2">
+<h2>Table of Antiderivatives: Other</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\int \frac{1}{\sqrt{a^2-x^2}}\,dx &amp;= \sin^{-1}\left(\frac{x}{a}\right)+C \\
+\int \frac{1}{x\sqrt{x^2-a^2}}\,dx &amp;= \frac{1}{a}\sec^{-1}\left|\frac{x}{a}\right|+C \\
+\int \frac{1}{x^2-a^2}\,dx &amp;= \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|+C
+\end{aligned}
+\]</span></p>
 
 
 </section>
