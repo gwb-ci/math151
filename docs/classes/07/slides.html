@@ -147,11 +147,9 @@
 <h2>Core Idea of Chapter 2</h2>
 <p><strong>Integration gives us a way to add up infinitely small slices</strong></p>
 <p>Defintion of the Definite Integral: <span class="math display">\[
-\boxed{
 \int_a^b f(x)\,dx
 =
 \lim_{n\to\infty}\sum_{i=1}^{n} f(x_i^*)\,\Delta x
-}
 \]</span></p>
 </section>
 <section id="what-is-arc-length" class="slide level2">
@@ -166,7 +164,7 @@
 <p>For <span class="math inline">\(i=0,1,2,\ldots,n\)</span>, let <span class="math inline">\(P=\{x_0, x_1, x_2, \cdots, x_n\}\)</span> be a regular partition of <span class="math inline">\([a,b]\)</span>.</p>
 <p>For <span class="math inline">\(i=1,2,\ldots,n\)</span>, construct a line segment from the point <span class="math inline">\((x_{i-1},f(x_{i-1}))\)</span> to the point <span class="math inline">\((x_i,f(x_i))\)</span>.</p>
 <p><span class="math display">\[
-\sum_{i=1}^{n} (x_{i}-x_{i-1})^2 - (f(x_{i})-f(x_{i-1}))^2
+\sum_{i=1}^{n} \sqrt{(x_{i}-x_{i-1})^2 + (f(x_{i})-f(x_{i-1}))^2}
 \]</span></p>
 </section>
 <section id="recall-the-mean-value-theorem" class="slide level2">
@@ -250,7 +248,7 @@
 <p>In some cases, we may have to use a computer or calculator to approximate the value of the integral.</p>
 <p>We can go back to the formula we started with:</p>
 <p><span class="math display">\[
-\sum_{i=1}^{n} (x_{i}-x_{i-1})^2 - (f(x_{i})-f(x_{i-1}))^2
+\sum_{i=1}^{n} \sqrt{(x_{i}-x_{i-1})^2 + (f(x_{i})-f(x_{i-1}))^2}
 \]</span></p>
 <p>and choose the appropriate <span class="math inline">\(n\)</span>.</p>
 </section>

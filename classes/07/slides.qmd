@@ -43,11 +43,9 @@ Class Session Goals:
 
 Defintion of the Definite Integral:
 $$
-\boxed{
 \int_a^b f(x)\,dx
 =
 \lim_{n\to\infty}\sum_{i=1}^{n} f(x_i^*)\,\Delta x
-}
 $$
 
 ---
@@ -75,7 +73,7 @@ For $i=0,1,2,\ldots,n$, let $P=\{x_0, x_1, x_2, \cdots, x_n\}$ be a regular part
 For $i=1,2,\ldots,n$, construct a line segment from the point $(x_{i-1},f(x_{i-1}))$ to the point $(x_i,f(x_i))$.
 
 $$
-\sum_{i=1}^{n} (x_{i}-x_{i-1})^2 - (f(x_{i})-f(x_{i-1}))^2
+\sum_{i=1}^{n} \sqrt{(x_{i}-x_{i-1})^2 + (f(x_{i})-f(x_{i-1}))^2}
 $$
 
 ---
@@ -208,7 +206,7 @@ In some cases, we may have to use a computer or calculator to approximate the va
 We can go back to the formula we started with:
 
 $$
-\sum_{i=1}^{n} (x_{i}-x_{i-1})^2 - (f(x_{i})-f(x_{i-1}))^2
+\sum_{i=1}^{n} \sqrt{(x_{i}-x_{i-1})^2 + (f(x_{i})-f(x_{i-1}))^2}
 $$
 
 and choose the appropriate $n$.

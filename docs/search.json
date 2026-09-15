@@ -218,7 +218,7 @@
     "href": "classes/07/slides.html#core-idea-of-chapter-2",
     "title": "Arc Length of Curves",
     "section": "Core Idea of Chapter 2",
-    "text": "Core Idea of Chapter 2\nIntegration gives us a way to add up infinitely small slices\nDefintion of the Definite Integral: \\[\n\\boxed{\n\\int_a^b f(x)\\,dx\n=\n\\lim_{n\\to\\infty}\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n}\n\\]",
+    "text": "Core Idea of Chapter 2\nIntegration gives us a way to add up infinitely small slices\nDefintion of the Definite Integral: \\[\n\\int_a^b f(x)\\,dx\n=\n\\lim_{n\\to\\infty}\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n\\]",
     "crumbs": [
       "Class Material",
       "Arc Length of Curves"
@@ -240,7 +240,7 @@
     "href": "classes/07/slides.html#approximating-arc-length",
     "title": "Arc Length of Curves",
     "section": "Approximating Arc Length",
-    "text": "Approximating Arc Length\nLet \\(f(x)\\) be a smooth function defined over \\([a,b]\\).\nFor \\(i=0,1,2,\\ldots,n\\), let \\(P=\\{x_0, x_1, x_2, \\cdots, x_n\\}\\) be a regular partition of \\([a,b]\\).\nFor \\(i=1,2,\\ldots,n\\), construct a line segment from the point \\((x_{i-1},f(x_{i-1}))\\) to the point \\((x_i,f(x_i))\\).\n\\[\n\\sum_{i=1}^{n} (x_{i}-x_{i-1})^2 - (f(x_{i})-f(x_{i-1}))^2\n\\]",
+    "text": "Approximating Arc Length\nLet \\(f(x)\\) be a smooth function defined over \\([a,b]\\).\nFor \\(i=0,1,2,\\ldots,n\\), let \\(P=\\{x_0, x_1, x_2, \\cdots, x_n\\}\\) be a regular partition of \\([a,b]\\).\nFor \\(i=1,2,\\ldots,n\\), construct a line segment from the point \\((x_{i-1},f(x_{i-1}))\\) to the point \\((x_i,f(x_i))\\).\n\\[\n\\sum_{i=1}^{n} \\sqrt{(x_{i}-x_{i-1})^2 + (f(x_{i})-f(x_{i-1}))^2}\n\\]",
     "crumbs": [
       "Class Material",
       "Arc Length of Curves"
@@ -328,7 +328,7 @@
     "href": "classes/07/slides.html#note-about-numerical-integration",
     "title": "Arc Length of Curves",
     "section": "Note about Numerical Integration",
-    "text": "Note about Numerical Integration\nAlthough it is nice to have a formula for calculating arc length, this particular theorem can generate expressions that are difficult to integrate.\nIn some cases, we may have to use a computer or calculator to approximate the value of the integral.\nWe can go back to the formula we started with:\n\\[\n\\sum_{i=1}^{n} (x_{i}-x_{i-1})^2 - (f(x_{i})-f(x_{i-1}))^2\n\\]\nand choose the appropriate \\(n\\).",
+    "text": "Note about Numerical Integration\nAlthough it is nice to have a formula for calculating arc length, this particular theorem can generate expressions that are difficult to integrate.\nIn some cases, we may have to use a computer or calculator to approximate the value of the integral.\nWe can go back to the formula we started with:\n\\[\n\\sum_{i=1}^{n} \\sqrt{(x_{i}-x_{i-1})^2 + (f(x_{i})-f(x_{i-1}))^2}\n\\]\nand choose the appropriate \\(n\\).",
     "crumbs": [
       "Class Material",
       "Arc Length of Curves"
