@@ -315,9 +315,9 @@ S_i
 </section>
 <section id="density-of-the-air-above-sea-level-as-a-function-of-height" class="slide level2">
 <h2>Density of the air above sea level as a function of height</h2>
-<p>A common approximation of the density of air is <span class="math inline">\(\rho(h)=\rho e^{-h/H}\)</span> where:</p>
+<p>A common approximation of the density of air is <span class="math inline">\(\rho(h)=\rho_0 e^{-h/H}\)</span> where:</p>
 <ul>
-<li><span class="math inline">\(\rho \approx 1.225\ \mathrm{kg/m^3}\)</span> is sea-level air density</li>
+<li><span class="math inline">\(\rho_0 \approx 1.225\ \mathrm{kg/m^3}\)</span> is sea-level air density</li>
 <li><span class="math inline">\(h\)</span> is altitude above sea level in meters</li>
 <li><span class="math inline">\(H \approx 8500\ \mathrm{m}\)</span> and is upper limit for accuracy of this model</li>
 </ul>
@@ -325,7 +325,7 @@ S_i
 <section id="what-is-the-mass-of-air-above-1-square-meter" class="slide level2">
 <h2>What is the mass of air above 1 square meter?</h2>
 <p>For a column of air with base area <span class="math inline">\(1\ \mathrm{m^2}\)</span>,</p>
-<p><span class="math display">\[m=\int_0^{/infty} \rho_0 e^{-h/H}\,dh=\rho_0H\]</span></p>
+<p><span class="math display">\[m=\int_0^{\infty} \rho_0 e^{-h/H}\,dh=\rho_0H\]</span></p>
 <p>So,</p>
 <p><span class="math display">\[m\approx (1.225)(8500)=10412.5\ \mathrm{kg}\]</span></p>
 <p>Thus, the mass of air above <span class="math inline">\(1\ \mathrm{m^2}\)</span> is approximately <span class="math inline">\(1.04\times 10^4\ \mathrm{kg}\)</span>.</p>
@@ -336,35 +336,32 @@ S_i
 <p>For a <span class="math inline">\(1\ \mathrm{m^2}\)</span> column of air, <span class="math inline">\(F=mg\)</span>, so</p>
 <p><span class="math display">\[P=\rho_0Hg\]</span></p>
 <p>Using <span class="math inline">\(\rho_0 \approx 1.225\ \mathrm{kg/m^3}\)</span>, <span class="math inline">\(H\approx 8500\ \mathrm{m}\)</span>, and <span class="math inline">\(g\approx 9.81\ \mathrm{m/s^2}\)</span>,</p>
-<p><span class="math display">\[P\approx (1.225)(8500)(9.81)=1.02\times 10^5\ \mathrm{Pa}\]</span></p>
-<p>This is very close to standard atmospheric pressure at sea level: <span class="math inline">\(101{,}325\ \mathrm{Pa}\)</span>.</p>
+<p><span class="math display">\[P\approx (1.225)(8500)(9.81) \approx 1.02\times 10^5\ \mathrm{Pa}\]</span> or</p>
+<p>This is very close to standard atmospheric pressure at sea level: <span class="math inline">\(101{,}325\ \mathrm{Pa}\)</span> or <span class="math inline">\(101.3 \mathrm{kPa}\)</span>.</p>
 </section>
 <section id="density-functions" class="slide level2">
 <h2>Density Functions</h2>
 <p>Density describes how <strong>mass is distributed</strong> throughout an object.</p>
 <p>For a one-dimensional object such as a thin rod:</p>
 <p><span class="math inline">\(\rho(x)=\)</span> mass per unit length.</p>
-<p>If the density is constant,</p>
-<p><span class="math inline">\(m=(\text{density})(\text{length})\)</span>.</p>
-<p>Thus,</p>
-<p><span class="math inline">\(m=\rho(b-a)\)</span>.</p>
-<p>If density varies with position, we use a <strong>linear density function</strong></p>
-<p><span class="math inline">\(\rho(x)\)</span>.</p>
+<p>If the density is constant, <span class="math inline">\(m=(\text{density})(\text{length})\)</span>.</p>
+<p>Thus, <span class="math inline">\(m=\rho(b-a)\)</span>.</p>
+<p>If density varies with position, we use a <strong>linear density function</strong> <span class="math inline">\(\rho(x)\)</span>.</p>
 <p>Integration allows us to add the masses of infinitely small pieces of the rod.</p>
 </section>
 <section id="density-approximations-of-a-1-dimensional-object" class="slide level2">
 <h2>Density Approximations of a 1-Dimensional Object</h2>
-<p>Consider a thin rod extending from <span class="math inline">\(x=a\)</span> to <span class="math inline">\(x=b\)</span>.</p>
-<p>Partition the rod into small pieces of length <span class="math inline">\(\Delta x\)</span>.</p>
+<p>Consider a thin rod extending from <span class="math inline">\(x=a\)</span> to <span class="math inline">\(x=b\)</span>. Partition the rod into small pieces of length <span class="math inline">\(\Delta x\)</span>.</p>
 <p>On the <span class="math inline">\(i\)</span>th piece, choose</p>
 <p><span class="math inline">\(x_i^*\in[x_{i-1},x_i]\)</span>.</p>
-<p>The density of this small piece is approximately constant:</p>
-<p><span class="math inline">\(\rho(x)\approx\rho(x_i^*)\)</span>.</p>
+<p>The density of this small piece is approximately constant: <span class="math inline">\(\rho(x)\approx\rho(x_i^*)\)</span>.</p>
 <p>Therefore its mass is approximately</p>
 <p><span class="math display">\[
 m_i\approx\rho(x_i^*)\Delta x.
 \]</span></p>
-<p>Adding the masses,</p>
+</section>
+<section id="approximate-mass" class="slide level2">
+<h2>Approximate Mass</h2>
 <p><span class="math display">\[
 \text{Mass}\approx
 \sum_{i=1}^n
@@ -384,6 +381,7 @@ m_i\approx\rho(x_i^*)\Delta x.
 <h2>Example Mass Desinity of a Thin Rod</h2>
 <p>Consider a thin rod on the <span class="math inline">\(x\)</span>-axis over <span class="math inline">\(\left[\dfrac{\pi}{2},\pi\right]\)</span>.</p>
 <p>Suppose its density is <span class="math inline">\(\rho(x)=\sin x\)</span>. The mass is</p>
+<div class="fragment">
 <p><span class="math display">\[
 \begin{aligned}
 m
@@ -393,6 +391,7 @@ m
 &amp;=1.
 \end{aligned}
 \]</span></p>
+</div>
 </section>
 <section id="density-of-circular-objects" class="slide level2">
 <h2>Density of Circular Objects</h2>
@@ -412,16 +411,16 @@ A_i
 &amp;=\pi(x_i+x_{i-1})\Delta x.
 \end{aligned}
 \]</span></p>
-<p>Using</p>
-<p><span class="math inline">\(x_i^*\approx\dfrac{x_i+x_{i-1}}{2}\)</span>,</p>
-<p>we obtain</p>
-<p><span class="math inline">\(A_i\approx2\pi x_i^*\Delta x\)</span>.</p>
+<p>Using <span class="math inline">\(x_i^*\approx\dfrac{x_i+x_{i-1}}{2}\)</span>, we get <span class="math inline">\(A_i\approx2\pi x_i^*\Delta x\)</span>.</p>
 <p>Therefore the mass of the washer is approximately</p>
 <p><span class="math display">\[
 m_i
 \approx
 2\pi x_i^*\rho(x_i^*)\Delta x.
 \]</span></p>
+</section>
+<section id="approximating-mass" class="slide level2">
+<h2>Approximating Mass</h2>
 <p>Adding all the washers,</p>
 <p><span class="math inline">\(m\approx
 \displaystyle\sum_{i=1}^n
@@ -438,9 +437,8 @@ m_i
 <section id="mass-density-example-of-circular-object" class="slide level2">
 <h2>Mass Density Example of Circular Object</h2>
 <p>Let</p>
-<p><span class="math inline">\(\rho(x)=\sqrt{x}\)</span></p>
-<p>represent the radial density of a disk of radius <span class="math inline">\(4\)</span>.</p>
-<p>Using Theorem 2.8,</p>
+<p><span class="math inline">\(\rho(x)=\sqrt{x}\)</span> represent the radial density of a disk of radius <span class="math inline">\(4\)</span>.</p>
+<div class="fragment">
 <p><span class="math display">\[
 \begin{aligned}
 m
@@ -456,6 +454,7 @@ m
 m=\frac{128\pi}{5}
 }
 \]</span></p>
+</div>
 </section>
 <section id="table-of-antiderivatives-trig" class="slide level2">
 <h2>Table of Antiderivatives: Trig</h2>

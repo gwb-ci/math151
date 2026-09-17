@@ -723,7 +723,7 @@
     "href": "classes/08/slides.html#density-of-the-air-above-sea-level-as-a-function-of-height",
     "title": "Surface Area and Mass",
     "section": "Density of the air above sea level as a function of height",
-    "text": "Density of the air above sea level as a function of height\nA common approximation of the density of air is \\(\\rho(h)=\\rho e^{-h/H}\\) where:\n\n\\(\\rho \\approx 1.225\\ \\mathrm{kg/m^3}\\) is sea-level air density\n\\(h\\) is altitude above sea level in meters\n\\(H \\approx 8500\\ \\mathrm{m}\\) and is upper limit for accuracy of this model",
+    "text": "Density of the air above sea level as a function of height\nA common approximation of the density of air is \\(\\rho(h)=\\rho_0 e^{-h/H}\\) where:\n\n\\(\\rho_0 \\approx 1.225\\ \\mathrm{kg/m^3}\\) is sea-level air density\n\\(h\\) is altitude above sea level in meters\n\\(H \\approx 8500\\ \\mathrm{m}\\) and is upper limit for accuracy of this model",
     "crumbs": [
       "Class Material",
       "Surface Area and Mass"
@@ -734,7 +734,7 @@
     "href": "classes/08/slides.html#what-is-the-mass-of-air-above-1-square-meter",
     "title": "Surface Area and Mass",
     "section": "What is the mass of air above 1 square meter?",
-    "text": "What is the mass of air above 1 square meter?\nFor a column of air with base area \\(1\\ \\mathrm{m^2}\\),\n\\[m=\\int_0^{/infty} \\rho_0 e^{-h/H}\\,dh=\\rho_0H\\]\nSo,\n\\[m\\approx (1.225)(8500)=10412.5\\ \\mathrm{kg}\\]\nThus, the mass of air above \\(1\\ \\mathrm{m^2}\\) is approximately \\(1.04\\times 10^4\\ \\mathrm{kg}\\).",
+    "text": "What is the mass of air above 1 square meter?\nFor a column of air with base area \\(1\\ \\mathrm{m^2}\\),\n\\[m=\\int_0^{\\infty} \\rho_0 e^{-h/H}\\,dh=\\rho_0H\\]\nSo,\n\\[m\\approx (1.225)(8500)=10412.5\\ \\mathrm{kg}\\]\nThus, the mass of air above \\(1\\ \\mathrm{m^2}\\) is approximately \\(1.04\\times 10^4\\ \\mathrm{kg}\\).",
     "crumbs": [
       "Class Material",
       "Surface Area and Mass"
@@ -745,7 +745,7 @@
     "href": "classes/08/slides.html#relating-the-mass-of-air-to-pressure-at-sea-level",
     "title": "Surface Area and Mass",
     "section": "Relating the mass of air to pressure at sea level",
-    "text": "Relating the mass of air to pressure at sea level\nPressure is force per unit area: \\(P=\\frac{F}{A}\\).\nFor a \\(1\\ \\mathrm{m^2}\\) column of air, \\(F=mg\\), so\n\\[P=\\rho_0Hg\\]\nUsing \\(\\rho_0 \\approx 1.225\\ \\mathrm{kg/m^3}\\), \\(H\\approx 8500\\ \\mathrm{m}\\), and \\(g\\approx 9.81\\ \\mathrm{m/s^2}\\),\n\\[P\\approx (1.225)(8500)(9.81)=1.02\\times 10^5\\ \\mathrm{Pa}\\]\nThis is very close to standard atmospheric pressure at sea level: \\(101{,}325\\ \\mathrm{Pa}\\).",
+    "text": "Relating the mass of air to pressure at sea level\nPressure is force per unit area: \\(P=\\frac{F}{A}\\).\nFor a \\(1\\ \\mathrm{m^2}\\) column of air, \\(F=mg\\), so\n\\[P=\\rho_0Hg\\]\nUsing \\(\\rho_0 \\approx 1.225\\ \\mathrm{kg/m^3}\\), \\(H\\approx 8500\\ \\mathrm{m}\\), and \\(g\\approx 9.81\\ \\mathrm{m/s^2}\\),\n\\[P\\approx (1.225)(8500)(9.81) \\approx 1.02\\times 10^5\\ \\mathrm{Pa}\\] or\nThis is very close to standard atmospheric pressure at sea level: \\(101{,}325\\ \\mathrm{Pa}\\) or \\(101.3 \\mathrm{kPa}\\).",
     "crumbs": [
       "Class Material",
       "Surface Area and Mass"
@@ -756,7 +756,7 @@
     "href": "classes/08/slides.html#density-functions",
     "title": "Surface Area and Mass",
     "section": "Density Functions",
-    "text": "Density Functions\nDensity describes how mass is distributed throughout an object.\nFor a one-dimensional object such as a thin rod:\n\\(\\rho(x)=\\) mass per unit length.\nIf the density is constant,\n\\(m=(\\text{density})(\\text{length})\\).\nThus,\n\\(m=\\rho(b-a)\\).\nIf density varies with position, we use a linear density function\n\\(\\rho(x)\\).\nIntegration allows us to add the masses of infinitely small pieces of the rod.",
+    "text": "Density Functions\nDensity describes how mass is distributed throughout an object.\nFor a one-dimensional object such as a thin rod:\n\\(\\rho(x)=\\) mass per unit length.\nIf the density is constant, \\(m=(\\text{density})(\\text{length})\\).\nThus, \\(m=\\rho(b-a)\\).\nIf density varies with position, we use a linear density function \\(\\rho(x)\\).\nIntegration allows us to add the masses of infinitely small pieces of the rod.",
     "crumbs": [
       "Class Material",
       "Surface Area and Mass"
@@ -767,7 +767,18 @@
     "href": "classes/08/slides.html#density-approximations-of-a-1-dimensional-object",
     "title": "Surface Area and Mass",
     "section": "Density Approximations of a 1-Dimensional Object",
-    "text": "Density Approximations of a 1-Dimensional Object\nConsider a thin rod extending from \\(x=a\\) to \\(x=b\\).\nPartition the rod into small pieces of length \\(\\Delta x\\).\nOn the \\(i\\)th piece, choose\n\\(x_i^*\\in[x_{i-1},x_i]\\).\nThe density of this small piece is approximately constant:\n\\(\\rho(x)\\approx\\rho(x_i^*)\\).\nTherefore its mass is approximately\n\\[\nm_i\\approx\\rho(x_i^*)\\Delta x.\n\\]\nAdding the masses,\n\\[\n\\text{Mass}\\approx\n\\sum_{i=1}^n\n\\rho(x_i^*)\\Delta x.\n\\]",
+    "text": "Density Approximations of a 1-Dimensional Object\nConsider a thin rod extending from \\(x=a\\) to \\(x=b\\). Partition the rod into small pieces of length \\(\\Delta x\\).\nOn the \\(i\\)th piece, choose\n\\(x_i^*\\in[x_{i-1},x_i]\\).\nThe density of this small piece is approximately constant: \\(\\rho(x)\\approx\\rho(x_i^*)\\).\nTherefore its mass is approximately\n\\[\nm_i\\approx\\rho(x_i^*)\\Delta x.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Surface Area and Mass"
+    ]
+  },
+  {
+    "objectID": "classes/08/slides.html#approximate-mass",
+    "href": "classes/08/slides.html#approximate-mass",
+    "title": "Surface Area and Mass",
+    "section": "Approximate Mass",
+    "text": "Approximate Mass\n\\[\n\\text{Mass}\\approx\n\\sum_{i=1}^n\n\\rho(x_i^*)\\Delta x.\n\\]",
     "crumbs": [
       "Class Material",
       "Surface Area and Mass"
@@ -789,7 +800,7 @@
     "href": "classes/08/slides.html#example-mass-desinity-of-a-thin-rod",
     "title": "Surface Area and Mass",
     "section": "Example Mass Desinity of a Thin Rod",
-    "text": "Example Mass Desinity of a Thin Rod\nConsider a thin rod on the \\(x\\)-axis over \\(\\left[\\dfrac{\\pi}{2},\\pi\\right]\\).\nSuppose its density is \\(\\rho(x)=\\sin x\\). The mass is\n\\[\n\\begin{aligned}\nm\n&=\\int_{\\pi/2}^{\\pi}\\rho(x)\\,dx\\\\\n&=\\int_{\\pi/2}^{\\pi}\\sin x\\,dx\\\\\n&=\\left.-\\cos x\\right|_{\\pi/2}^{\\pi}\\\\\n&=1.\n\\end{aligned}\n\\]",
+    "text": "Example Mass Desinity of a Thin Rod\nConsider a thin rod on the \\(x\\)-axis over \\(\\left[\\dfrac{\\pi}{2},\\pi\\right]\\).\nSuppose its density is \\(\\rho(x)=\\sin x\\). The mass is\n\n\\[\n\\begin{aligned}\nm\n&=\\int_{\\pi/2}^{\\pi}\\rho(x)\\,dx\\\\\n&=\\int_{\\pi/2}^{\\pi}\\sin x\\,dx\\\\\n&=\\left.-\\cos x\\right|_{\\pi/2}^{\\pi}\\\\\n&=1.\n\\end{aligned}\n\\]",
     "crumbs": [
       "Class Material",
       "Surface Area and Mass"
@@ -811,7 +822,18 @@
     "href": "classes/08/slides.html#density-approximation-of-a-circular-object",
     "title": "Surface Area and Mass",
     "section": "Density Approximation of a Circular Object",
-    "text": "Density Approximation of a Circular Object\nConsider a washer between radii \\(x_{i-1}\\) and \\(x_i\\).\nIts area is\n\\[\n\\begin{aligned}\nA_i\n&=\\pi x_i^2-\\pi x_{i-1}^2\\\\\n&=\\pi(x_i+x_{i-1})\\Delta x.\n\\end{aligned}\n\\]\nUsing\n\\(x_i^*\\approx\\dfrac{x_i+x_{i-1}}{2}\\),\nwe obtain\n\\(A_i\\approx2\\pi x_i^*\\Delta x\\).\nTherefore the mass of the washer is approximately\n\\[\nm_i\n\\approx\n2\\pi x_i^*\\rho(x_i^*)\\Delta x.\n\\]\nAdding all the washers,\n\\(m\\approx\n\\displaystyle\\sum_{i=1}^n\n2\\pi x_i^*\\rho(x_i^*)\\Delta x\\).",
+    "text": "Density Approximation of a Circular Object\nConsider a washer between radii \\(x_{i-1}\\) and \\(x_i\\).\nIts area is\n\\[\n\\begin{aligned}\nA_i\n&=\\pi x_i^2-\\pi x_{i-1}^2\\\\\n&=\\pi(x_i+x_{i-1})\\Delta x.\n\\end{aligned}\n\\]\nUsing \\(x_i^*\\approx\\dfrac{x_i+x_{i-1}}{2}\\), we get \\(A_i\\approx2\\pi x_i^*\\Delta x\\).\nTherefore the mass of the washer is approximately\n\\[\nm_i\n\\approx\n2\\pi x_i^*\\rho(x_i^*)\\Delta x.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Surface Area and Mass"
+    ]
+  },
+  {
+    "objectID": "classes/08/slides.html#approximating-mass",
+    "href": "classes/08/slides.html#approximating-mass",
+    "title": "Surface Area and Mass",
+    "section": "Approximating Mass",
+    "text": "Approximating Mass\nAdding all the washers,\n\\(m\\approx\n\\displaystyle\\sum_{i=1}^n\n2\\pi x_i^*\\rho(x_i^*)\\Delta x\\).",
     "crumbs": [
       "Class Material",
       "Surface Area and Mass"
@@ -833,7 +855,7 @@
     "href": "classes/08/slides.html#mass-density-example-of-circular-object",
     "title": "Surface Area and Mass",
     "section": "Mass Density Example of Circular Object",
-    "text": "Mass Density Example of Circular Object\nLet\n\\(\\rho(x)=\\sqrt{x}\\)\nrepresent the radial density of a disk of radius \\(4\\).\nUsing Theorem 2.8,\n\\[\n\\begin{aligned}\nm\n&=\\int_0^4 2\\pi x\\rho(x)\\,dx\\\\\n&=\\int_0^4 2\\pi x\\sqrt{x}\\,dx\\\\\n&=2\\pi\\int_0^4x^{3/2}\\,dx\\\\\n&=2\\pi\\left[\\frac25x^{5/2}\\right]_0^4.\n\\end{aligned}\n\\]\nThus,\n\\[\n\\boxed{\nm=\\frac{128\\pi}{5}\n}\n\\]",
+    "text": "Mass Density Example of Circular Object\nLet\n\\(\\rho(x)=\\sqrt{x}\\) represent the radial density of a disk of radius \\(4\\).\n\n\\[\n\\begin{aligned}\nm\n&=\\int_0^4 2\\pi x\\rho(x)\\,dx\\\\\n&=\\int_0^4 2\\pi x\\sqrt{x}\\,dx\\\\\n&=2\\pi\\int_0^4x^{3/2}\\,dx\\\\\n&=2\\pi\\left[\\frac25x^{5/2}\\right]_0^4.\n\\end{aligned}\n\\]\nThus,\n\\[\n\\boxed{\nm=\\frac{128\\pi}{5}\n}\n\\]",
     "crumbs": [
       "Class Material",
       "Surface Area and Mass"
