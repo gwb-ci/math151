@@ -1,5 +1,5 @@
 ---
-title: "Volume by Cylindrical Shells"
+title: "Mass, Density, Force, and Work"
 
 format:
   revealjs:
@@ -28,10 +28,6 @@ format:
 
 Class Session Goals:
 
-- Approximate the surface area of a solid of revolution using frustums.
-- Calculate the surface area of a solid of revolution using integration.
-- Use density functions to calculate the mass of one-dimensional objects.
-- Use radial density functions to calculate the mass of circular objects.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Volume by Cylindrical Shells"
+title: "Centers of Mass and Exponetial Models"
 
 format:
   revealjs:

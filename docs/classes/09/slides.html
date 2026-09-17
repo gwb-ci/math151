@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <title>Math 151 - Calculus II – Surface Area and Mass</title>
+  <title>Math 151 - Calculus II – Mass, Density, Force, and Work</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,7 +129,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Surface Area and Mass</h1>
+  <h1 class="title">Mass, Density, Force, and Work</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -138,12 +138,6 @@
 <section id="surface-area-and-weight" class="slide level2">
 <h2>Surface Area and Weight</h2>
 <p>Class Session Goals:</p>
-<ul>
-<li>Approximate the surface area of a solid of revolution using frustums.</li>
-<li>Calculate the surface area of a solid of revolution using integration.</li>
-<li>Use density functions to calculate the mass of one-dimensional objects.</li>
-<li>Use radial density functions to calculate the mass of circular objects.</li>
-</ul>
 </section>
 <section id="core-idea-of-chapter-2" class="slide level2">
 <h2>Core Idea of Chapter 2</h2>
@@ -154,39 +148,15 @@
 =
 \lim_{n\to\infty}
 \sum_{i=1}^{n} f(x_i^*)\,\Delta x
+}
 \]</span></p>
-<p>where <span class="math inline">\(f(x_i^*)\Delta x\)</span> gives the approximate contribution from one small piece, in this case area. The same basic idea can be used to calculate: volumes, mass from density, and work from force.</p>
-</section>
-<section id="surface-area-of-a-cone" class="slide level2">
-<h2>Surface Area of a Cone</h2>
-<p>The lateral surface area, excluding the base, of a cone is</p>
-<p><span class="math display">\[
-\text{Surface Area}=\pi r s
-\]</span></p>
-<p>where <span class="math inline">\(r\)</span> is the radius of the base and <span class="math inline">\(s\)</span> is the slant height.</p>
-<p>For a right circular cone, <span class="math inline">\(s=\sqrt{r^2+h^2}\)</span>, so the total surface area is</p>
-<p><span class="math display">\[
-$\text{Surface Area}=\pi r\sqrt{r^2+h^2}
-\]</span></p>
-</section>
-<section id="what-is-a-frustum" class="slide level2">
-<h2>What is a Frustum?</h2>
-<p>A <strong>frustum of a cone</strong> is the portion of a cone that remains after the pointed end has been cut off.</p>
-<p>For a frustum, let</p>
+<p>where</p>
 <ul>
-<li><span class="math inline">\(r\)</span> = radius of the wide end,</li>
-<li><span class="math inline">\(R\)</span> = radius of the narrow end,</li>
-<li><span class="math inline">\(l\)</span> = slant height.</li>
+<li><span class="math inline">\(f(x_i^*)\)</span> gives the <strong>height</strong> of the <span class="math inline">\(i\)</span>th rectangle.</li>
+<li><span class="math inline">\(\Delta x=\dfrac{b-a}{n}\)</span> gives its <strong>width</strong>.</li>
+<li><span class="math inline">\(f(x_i^*)\Delta x\)</span> gives the contribution from one small piece, in this case area.</li>
 </ul>
-<p>We are interested in the <strong>surface area</strong> of this broken off piece of a cone. Frustrum comes from the a latin word meaning “broken off piece”. The plural of frustrum is frustra, kinda of like the plural of minimum is minima.</p>
-</section>
-<section id="surface-area-of-a-frustum" class="slide level2">
-<h2>Surface Area of a Frustum</h2>
-<p>Using similar triangles and subtracting the smaller cone from the larger cone gives the lateral surface area of a frustum (derivation of this formult in in the book):</p>
-<p><span class="math display">\[
-S=\pi(R+r)s
-\]</span></p>
-<p><span class="math inline">\(\dfrac{R+r}{2}\)</span> is the <strong>average radius</strong> of the frustum. So we can rewrite this as <span class="math inline">\(S=(2\pi\text{ average radius})(\text{slant height})\)</span>.</p>
+<p>The same basic idea can be used to calculate: volumes, mass from density, and work from force.</p>
 </section>
 <section id="approximating-surface-area-of-revolution" class="slide level2">
 <h2>Approximating Surface Area of Revolution</h2>
@@ -197,50 +167,69 @@ S=\pi(R+r)s
 <li>Approximate the curve on each interval by a <strong>line segment</strong>.</li>
 <li>Revolve each line segment around the <span class="math inline">\(x\)</span>-axis.</li>
 </ol>
-<p>Each line segment generates a small band that is a frustrum.</p>
+<p>Each line segment generates a small band that is a piece of a cone.</p>
+<p>This shape is called a <strong>frustum</strong>.</p>
+</section>
+<section id="what-is-a-frustum" class="slide level2">
+<h2>What is a Frustum?</h2>
+<p>A <strong>frustum of a cone</strong> is the portion of a cone that remains after the pointed end has been cut off.</p>
+<p>For a frustum, let</p>
+<ul>
+<li><span class="math inline">\(r_1\)</span> = radius of the wide end,</li>
+<li><span class="math inline">\(r_2\)</span> = radius of the narrow end,</li>
+<li><span class="math inline">\(l\)</span> = slant height.</li>
+</ul>
+<p>We are interested in the <strong>lateral surface area</strong>:</p>
+<blockquote>
+<p>the area of the slanted outside surface, not including the top or bottom.</p>
+</blockquote>
+</section>
+<section id="surface-area-of-a-frustum" class="slide level2">
+<h2>Surface Area of a Frustum</h2>
+<p>The lateral surface area of a cone is</p>
+<p><span class="math inline">\(\text{Lateral Surface Area}=\pi rs\)</span>.</p>
+<p>Using similar triangles and subtracting the smaller cone from the larger cone gives the lateral surface area of a frustum:</p>
+<p><span class="math display">\[
+\boxed{S=\pi(r_1+r_2)l}
+\]</span></p>
+<p><span class="math inline">\(\dfrac{r_1+r_2}{2}\)</span> is the <strong>average radius</strong> of the frustum.</p>
+<p>Another way to think about he formula is:</p>
+<p><span class="math inline">\(S=(2\pi\text{ average radius})(\text{slant height})\)</span>.</p>
 </section>
 <section id="formula-for-the-approximation-of-surface-area-using-frusta" class="slide level2">
 <h2>Formula for the Approximation of Surface Area Using Frusta</h2>
 <p>For the <span class="math inline">\(i\)</span>th interval, the radii are</p>
 <p><span class="math inline">\(r_1=f(x_{i-1})\)</span> and <span class="math inline">\(r_2=f(x_i)\)</span>.</p>
 <p>The slant height is</p>
-<p><span class="math inline">\(l=\sqrt{(\Delta x)^2+(\Delta y)^2}\)</span>.</p>
-</section>
-<section id="formula-for-the-approximation-of-surface-area-using-frusta-1" class="slide level2">
-<h2>Formula for the Approximation of Surface Area Using Frusta</h2>
+<p><span class="math inline">\(l=\sqrt{(\Delta x)^2+(\Delta y_i)^2}\)</span>.</p>
+<p>Therefore,</p>
 <p><span class="math inline">\(S_i=\pi\left(f(x_{i-1})+f(x_i)\right)
-\sqrt{(\Delta x)^2+(\Delta y)^2}\)</span>.</p>
-<p>Using the Mean Value Theorem, <span class="math inline">\(\dfrac{\Delta y}{\Delta x}=f'(x_i^*)\)</span>, and using <span class="math inline">\(f(x_i^{**})\)</span> for the average radius, the surface area of the <span class="math inline">\(i^{\text{th}}\)</span> frustrum is:</p>
+\sqrt{(\Delta x)^2+(\Delta y_i)^2}\)</span>.</p>
+<p>Using the Mean Value Theorem,</p>
+<p><span class="math inline">\(\dfrac{\Delta y_i}{\Delta x}=f'(x_i^*)\)</span>,</p>
+<p>and using <span class="math inline">\(f(x_i^{**})\)</span> for the average radius,</p>
 <p><span class="math display">\[
 S_i
 =
 2\pi f(x_i^{**})\Delta x
 \sqrt{1+\left(f'(x_i^*)\right)^2}.
 \]</span></p>
-</section>
-<section id="addding-up-the-surface-area-of-the-frustra" class="slide level2">
-<h2>Addding up the surface area of the frustra</h2>
-<p><span class="math display">\[
-\text{Surface Area}\approx
+<p>So</p>
+<p><span class="math inline">\(\text{Surface Area}\approx
 \displaystyle\sum_{i=1}^n
 2\pi f(x_i^{**})
-\sqrt{1+\left(f'(x_i^*)\right)^2}\Delta x
-\]</span></p>
-<p>Let the number of partitions go to infinity.</p>
+\sqrt{1+\left(f'(x_i^*)\right)^2}\Delta x\)</span>.</p>
 </section>
 <section id="theorem-2.6-surface-area-of-revolution" class="slide level2">
 <h2>Theorem 2.6 Surface Area of Revolution</h2>
 <p>Let <span class="math inline">\(f(x)\)</span> be a nonnegative smooth function over <span class="math inline">\([a,b]\)</span>.</p>
 <p>If the graph of <span class="math inline">\(f(x)\)</span> is revolved around the <span class="math inline">\(x\)</span>-axis, then</p>
 <p><span class="math display">\[
-\begin{aligned}
 \text{Surface Area}
-&amp;= \lim_{n \rightarrow \infty} \\[0.5em]
-&amp;\quad \sum_{i=1}^n 2\pi f(x_i^*)
-\sqrt{1+\left(f'(x_i^*)\right)^2}\Delta x \\[0.5em]
-&amp;= \int_a^b 2\pi f(x)
+=
+\int_a^b
+2\pi f(x)
 \sqrt{1+\left[f'(x)\right]^2}\,dx
-\end{aligned}
 \]</span></p>
 </section>
 <section id="theorem-2.6-surface-area-of-revolution-around-y-axis" class="slide level2">
@@ -315,29 +304,16 @@ S_i
 </section>
 <section id="density-of-the-air-above-sea-level-as-a-function-of-height" class="slide level2">
 <h2>Density of the air above sea level as a function of height</h2>
-<p>A common approximation of the density of air is <span class="math inline">\(\rho(h)=\rho e^{-h/H}\)</span> where:</p>
+<p>A common approximation is the <strong>exponential atmosphere</strong>:</p>
+<p><span class="math display">\[
+\rho(h)=\rho_0 e^{-h/H}
+\]</span></p>
+<p>where:</p>
 <ul>
-<li><span class="math inline">\(\rho \approx 1.225\ \mathrm{kg/m^3}\)</span> is sea-level air density</li>
+<li><span class="math inline">\(\rho_0 \approx 1.225\ \mathrm{kg/m^3}\)</span> is sea-level air density</li>
 <li><span class="math inline">\(h\)</span> is altitude above sea level in meters</li>
-<li><span class="math inline">\(H \approx 8500\ \mathrm{m}\)</span> and is upper limit for accuracy of this model</li>
+<li><span class="math inline">\(H \approx 8500\ \mathrm{m}\)</span> is the atmospheric scale height</li>
 </ul>
-</section>
-<section id="what-is-the-mass-of-air-above-1-square-meter" class="slide level2">
-<h2>What is the mass of air above 1 square meter?</h2>
-<p>For a column of air with base area <span class="math inline">\(1\ \mathrm{m^2}\)</span>,</p>
-<p><span class="math display">\[m=\int_0^{/infty} \rho_0 e^{-h/H}\,dh=\rho_0H\]</span></p>
-<p>So,</p>
-<p><span class="math display">\[m\approx (1.225)(8500)=10412.5\ \mathrm{kg}\]</span></p>
-<p>Thus, the mass of air above <span class="math inline">\(1\ \mathrm{m^2}\)</span> is approximately <span class="math inline">\(1.04\times 10^4\ \mathrm{kg}\)</span>.</p>
-</section>
-<section id="relating-the-mass-of-air-to-pressure-at-sea-level" class="slide level2">
-<h2>Relating the mass of air to pressure at sea level</h2>
-<p>Pressure is force per unit area: <span class="math inline">\(P=\frac{F}{A}\)</span>.</p>
-<p>For a <span class="math inline">\(1\ \mathrm{m^2}\)</span> column of air, <span class="math inline">\(F=mg\)</span>, so</p>
-<p><span class="math display">\[P=\rho_0Hg\]</span></p>
-<p>Using <span class="math inline">\(\rho_0 \approx 1.225\ \mathrm{kg/m^3}\)</span>, <span class="math inline">\(H\approx 8500\ \mathrm{m}\)</span>, and <span class="math inline">\(g\approx 9.81\ \mathrm{m/s^2}\)</span>,</p>
-<p><span class="math display">\[P\approx (1.225)(8500)(9.81)=1.02\times 10^5\ \mathrm{Pa}\]</span></p>
-<p>This is very close to standard atmospheric pressure at sea level: <span class="math inline">\(101{,}325\ \mathrm{Pa}\)</span>.</p>
 </section>
 <section id="density-functions" class="slide level2">
 <h2>Density Functions</h2>
@@ -366,10 +342,11 @@ m_i\approx\rho(x_i^*)\Delta x.
 \]</span></p>
 <p>Adding the masses,</p>
 <p><span class="math display">\[
-\text{Mass}\approx
+m\approx
 \sum_{i=1}^n
 \rho(x_i^*)\Delta x.
 \]</span></p>
+<p>This is a <strong>Riemann sum</strong>.</p>
 </section>
 <section id="theorem-2.7-mass-density-formula-for-one-dimensional-objects" class="slide level2">
 <h2>Theorem 2.7 Mass-Density Formula for One-Dimensional Objects</h2>
@@ -377,13 +354,22 @@ m_i\approx\rho(x_i^*)\Delta x.
 <p>Given a thin rod oriented along the <span class="math inline">\(x\)</span>-axis over <span class="math inline">\([a,b]\)</span>, let <span class="math inline">\(\rho(x)\)</span> denote a linear density function.</p>
 <p>Then the mass of the rod is</p>
 <p><span class="math display">\[
-\text{Mass}=\int_a^b\rho(x)\,dx
+\boxed{
+m=\int_a^b\rho(x)\,dx
+}
 \]</span></p>
+<p>Interpretation:</p>
+<p><span class="math inline">\(\rho(x)\,dx\)</span></p>
+<p>represents the mass of an infinitely small piece of the rod.</p>
 </section>
-<section id="example-mass-desinity-of-a-thin-rod" class="slide level2">
-<h2>Example Mass Desinity of a Thin Rod</h2>
-<p>Consider a thin rod on the <span class="math inline">\(x\)</span>-axis over <span class="math inline">\(\left[\dfrac{\pi}{2},\pi\right]\)</span>.</p>
-<p>Suppose its density is <span class="math inline">\(\rho(x)=\sin x\)</span>. The mass is</p>
+<section id="density-example-of-one-dimensional-object" class="slide level2">
+<h2>Density Example of One-Dimensional Object</h2>
+<p><strong>Example 2.23</strong></p>
+<p>Consider a thin rod on the <span class="math inline">\(x\)</span>-axis over</p>
+<p><span class="math inline">\(\left[\dfrac{\pi}{2},\pi\right]\)</span>.</p>
+<p>Suppose its density is</p>
+<p><span class="math inline">\(\rho(x)=\sin x\)</span>.</p>
+<p>The mass is</p>
 <p><span class="math display">\[
 \begin{aligned}
 m
@@ -393,13 +379,19 @@ m
 &amp;=1.
 \end{aligned}
 \]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\boxed{m=1}
+\]</span></p>
 </section>
 <section id="density-of-circular-objects" class="slide level2">
 <h2>Density of Circular Objects</h2>
 <p>Now consider a thin two-dimensional disk of radius <span class="math inline">\(r\)</span>.</p>
-<p>Density here is measured as mass per unit area. Suppose the density depends only on the distance from the center.</p>
-<p>This is called <strong>radial density</strong>, <span class="math inline">\(\rho(x)\)</span>.</p>
-<p>Because all points the same distance <span class="math inline">\(x\)</span> from the center have the same density, we divide the disk into thin circular washers.</p>
+<p>Density is measured as <strong>mass per unit area</strong>.</p>
+<p>Suppose the density depends only on the distance from the center.</p>
+<p>This is called <strong>radial density</strong>:</p>
+<p><span class="math inline">\(\rho(x)\)</span>.</p>
+<p>Because all points the same distance <span class="math inline">\(x\)</span> from the center have the same density, we divide the disk into thin <strong>circular washers</strong>.</p>
 </section>
 <section id="density-approximation-of-a-circular-object" class="slide level2">
 <h2>Density Approximation of a Circular Object</h2>
@@ -429,14 +421,24 @@ m_i
 </section>
 <section id="theorem-2.8-mass-density-formula-of-a-circular-object" class="slide level2">
 <h2>Theorem 2.8 Mass-Density Formula of a Circular Object</h2>
+<p><strong>Mass–Density Formula of a Circular Object</strong></p>
 <p>Let <span class="math inline">\(\rho(x)\)</span> be an integrable function representing the radial density of a disk of radius <span class="math inline">\(r\)</span>.</p>
 <p>Then the mass of the disk is</p>
 <p><span class="math display">\[
-\text{Mass}=\int_0^r2\pi x\rho(x)\,dx
+\boxed{
+m=\int_0^r2\pi x\rho(x)\,dx
+}
 \]</span></p>
+<p>Interpretation:</p>
+<ul>
+<li><span class="math inline">\(2\pi x\)</span> = circumference of a circle of radius <span class="math inline">\(x\)</span></li>
+<li><span class="math inline">\(2\pi x\,dx\)</span> = area of a thin circular band</li>
+<li><span class="math inline">\(\rho(x)2\pi x\,dx\)</span> = mass of that band</li>
+</ul>
 </section>
 <section id="mass-density-example-of-circular-object" class="slide level2">
 <h2>Mass Density Example of Circular Object</h2>
+<p><strong>Example 2.24</strong></p>
 <p>Let</p>
 <p><span class="math inline">\(\rho(x)=\sqrt{x}\)</span></p>
 <p>represent the radial density of a disk of radius <span class="math inline">\(4\)</span>.</p>
