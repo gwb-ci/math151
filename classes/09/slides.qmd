@@ -28,11 +28,13 @@ format:
 
 Class Session Goals:
 
+- forumlas for mass with variable density
+- formulas for work with variable force
 
 ---
 
 
-Definition of the Definite Integral:
+## Definition of the Definite Integral
 
 $$
 \int_a^b f(x)\,dx
