@@ -466,7 +466,18 @@
     "href": "classes/09/slides.html#surface-area-and-weight",
     "title": "Mass, Density, Force, and Work",
     "section": "Surface Area and Weight",
-    "text": "Surface Area and Weight\nClass Session Goals:\n\nforumlas for mass with variable density\nformulas for work with variable force",
+    "text": "Surface Area and Weight\nClass Session Goals:\n\nHow to calulate mass with variable density\nHow to work with variable force or variable distance",
+    "crumbs": [
+      "Class Material",
+      "Mass, Density, Force, and Work"
+    ]
+  },
+  {
+    "objectID": "classes/09/slides.html#definition-of-the-definite-integral",
+    "href": "classes/09/slides.html#definition-of-the-definite-integral",
+    "title": "Mass, Density, Force, and Work",
+    "section": "Definition of the Definite Integral",
+    "text": "Definition of the Definite Integral\n\\[\n\\int_a^b f(x)\\,dx\n=\n\\lim_{n\\to\\infty}\n\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x\n\\]\nwhere \\(f(x_i^*)\\Delta x\\) gives an approximation of a small “piece”.\nIt can be a small piece of area, volume, mass, or work.",
     "crumbs": [
       "Class Material",
       "Mass, Density, Force, and Work"

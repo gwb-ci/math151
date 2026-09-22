@@ -28,8 +28,8 @@ format:
 
 Class Session Goals:
 
-- forumlas for mass with variable density
-- formulas for work with variable force
+- How to calulate mass with variable density
+- How to work with variable force or variable distance
 
 ---
 
