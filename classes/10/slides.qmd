@@ -1,5 +1,5 @@
 ---
-title: "Moments Centers of Mass"
+title: "Moments and Center of Mass"
 
 format:
   revealjs:
@@ -34,42 +34,50 @@ Class Session Goals:
 
 ---
 
-## Core Idea of Chapter 2
+## What is a Moment?
 
-**Integration gives us a way to add up infinitely small pieces.**
+A **moment** measures how mass is distributed relative to a point.
 
-Definition of the Definite Integral:
+- Mass farther from the origin has a greater effect than mass closer to the origin.
+- The direction matters: mass on opposite sides of the origin contributes moments with opposite signs.
+- For a point mass $m$ located at $x$, its moment about the origin is $mx$.
+- For several masses, the total moment is the sum of their individual moments.
 
-$$
-\int_a^b f(x)\,dx
-=
-\lim_{n\to\infty}
-\sum_{i=1}^{n} f(x_i^*)\,\Delta x
-$$
-
-where $f(x_i^*)\Delta x$ gives an approximation of a small "piece".
-
-It can be a small piece of area, volume, mass, or work.
+The **center of mass** is the point where the system would balance.
 
 ---
 
-## Center of Mass on a Line Formula
+
+## Why Do Moments Matter in Physics?
+
+A **moment** measures how strongly a mass or force tends to produce rotation about a point.
+
+The farther the mass or force is from the axis of rotation, the greater its rotational effect.
+
+Both distance and mass affect the moment:
+
+$\text{moment} = \text{mass} \times \text{distance from the axis}$
+
+Moments translate the geometry of where a mass is into the physics of how strongly it influences rotational motion.
+
+---
+
+## Discrete Moments
 
 Let $m_1,m_2,\ldots,m_n$ be point masses placed on a number line at points $x_1,x_2,\ldots,x_n$, respectively.
 
-The total mass is
+The moment of a system with respect to the origin is $M=\sum_{i=1}^{n} m_i x_i$
 
-$m=\sum_{i=1}^n m_i$
+The total mass of the system is $m=\sum_{i=1}^{n} m_i$.
 
-The moment of the system with respect to the origin is
+The center of mass is $\bar{x}=\frac{M}{m}$.
 
-$M=\sum_{i=1}^n m_ix_i$
-
-The center of mass is
-
-$\bar{x}=\frac{M}{m}$
+The center of mass is the point where the total mass could be concentrated without changing the moment.  It is a sort of average that takes into consideration both the location and amount of mass.
 
 ---
+
+
+
 
 ## Center of Mass on a Line Example
 
@@ -85,27 +93,12 @@ $m_4=15$ kg at $x_4=-3$ m
 
 Find the moment of the system and the center of mass.
 
----
-
-## Center of Mass on a Line Example
-
-First, calculate the moment:
-
-$M=\sum_{i=1}^4 m_ix_i$
-
-$M=-60+15+60-45=-30$
-
-The total mass is
-
-$m=30+5+10+15=60$ kg
-
-Therefore,
+. . . 
 
 $\bar{x}=\frac{M}{m}=\frac{-30}{60}=-\frac{1}{2}$
 
-The center of mass is located $1/2$ m to the left of the origin.
-
 ---
+
 
 ## Center of Mass on a Plane Formula
 
@@ -139,31 +132,33 @@ The total mass is
 
 $m=2+6+4=12$ kg
 
----
-
-## Center of Mass on a Plane Example
-
-Find the moments:
-
-$M_y=\sum_{i=1}^3 m_ix_i=-2+6+8=12$
-
-$M_x=\sum_{i=1}^3 m_iy_i=6+6-8=4$
-
-Then
+. . . 
 
 $\bar{x}=\frac{M_y}{m}=\frac{12}{12}=1$
 
 $\bar{y}=\frac{M_x}{m}=\frac{4}{12}=\frac{1}{3}$
 
-The center of mass is $(1,1/3)$, in meters.
+---
+
+## Why Can We Replace a 2D Piece with a Point Mass?
+
+For balance, the shape is not critical.
+
+What is important is the total mass of the piece, and how that mass is distributed relative to each axis
+
+The center of mass is the single point where the piece has the same balancing effect as the whole region.
+
+For  moments, a region with mass can be replaced by a point mass located at its center of mass.
 
 ---
 
-## Generalizing Moment Formula 1
+
+
+## Continuous Moments
 
 Suppose a lamina is bounded above by $f(x)$, below by the $x$-axis, and on the left and right by $x=a$ and $x=b$.
 
-Let $\rho$ denote the density of the associated lamina.
+Let $\rho$ denote the density of the associated lamina with respect to area.
 
 The mass of the lamina is
 
@@ -171,7 +166,7 @@ $m=\rho\int_a^b f(x)\,dx$
 
 ---
 
-## Generalizing Moment Formula 2
+## Moment with respect to x axis
 
 A representative rectangle has height $f(x_i^*)$.
 
@@ -185,7 +180,7 @@ $M_x=\rho\int_a^b \frac{[f(x)]^2}{2}\,dx$
 
 ---
 
-## Generalizing Moment Formula 3
+## Moment with respect to y axis
 
 The moment with respect to the $y$-axis is
 
@@ -195,11 +190,11 @@ The coordinates of the center of mass are
 
 $\bar{x}=\frac{M_y}{m}$ and $\bar{y}=\frac{M_x}{m}$
 
-Since $\rho$ cancels out, the centroid depends only on the shape of the region.
+
 
 ---
 
-## Example 1
+## Example 1 Mass
 
 Let $R$ be the region bounded above by $f(x)=\sqrt{x}$ and below by the $x$-axis over $[0,4]$.
 
@@ -207,21 +202,22 @@ Find the centroid of the region.
 
 Assume $\rho=1$.
 
+. . . 
+
 $m=\int_0^4 \sqrt{x}\,dx=\left.\frac{2}{3}x^{3/2}\right|_0^4=\frac{16}{3}$
 
 ---
 
-## Example 1
+## Example 1 Moments
 
 Compute the moments:
 
-$M_x=\int_0^4 \frac{x}{2}\,dx=\left.\frac{1}{4}x^2\right|_0^4=4$
+$M_x=\int_0^4 \frac{x}{2}\,dx$
 
-$M_y=\int_0^4 x\sqrt{x}\,dx=\int_0^4 x^{3/2}\,dx$
+$M_y=\int_0^4 x\sqrt{x}\,dx$
 
-$M_y=\left.\frac{2}{5}x^{5/2}\right|_0^4=\frac{64}{5}$
 
-Thus,
+ . . . 
 
 $\bar{x}=\frac{64/5}{16/3}=\frac{12}{5}$
 
@@ -231,67 +227,143 @@ The centroid is $(12/5,3/4)$.
 
 ---
 
-## Example 2
+## Moments between two functions
 
-Let $R$ be the region bounded above by $f(x)=1-x^2$ and below by $g(x)=x-1$.
+For a region between $y=f(x)$ and $y=g(x)$, each thin slice has height $f(x)-g(x)$.
 
-The graphs intersect at $(-2,-3)$ and $(1,0)$, so integrate from $-2$ to $1$.
+Its mass is represented by its area:
 
-$m=\int_{-2}^{1}[1-x^2-(x-1)]\,dx$
+$\text{Area}=(f(x^*_i)-g(x^*_i))\Delta x$
 
-$m=\int_{-2}^{1}(2-x^2-x)\,dx=\frac{9}{2}$
+Center of mass of rectangle $y$-axis: $(x^*_i, \frac{1}{2}(f(x^*_i)+g(x^*_i)))$
+
+
+
+---
+
+## Moments between two functions forumla
+
+The moment about the $y$-axis uses the slice’s horizontal position:
+
+$M_y=\int_a^b x(f(x)-g(x))\,dx$
+
+The moment about the $x$-axis uses the slice’s midpoint height:
+
+$M_x=\frac{1}{2}\int_a^b \left([f(x)]^2-[g(x)]^2\right)\,dx$
 
 ---
 
 ## Example 2
 
-For a region between two functions,
+Let $R$ be the region bounded by $f(x)=6-x^2$ and $g(x)=3-2x$.  What is the centroid?
 
-$M_x=\int_a^b \frac{1}{2}\left([f(x)]^2-[g(x)]^2\right)\,dx$
+. . . 
 
-$M_y=\int_a^b x[f(x)-g(x)]\,dx$
+First find the intersection points:
 
-For this region,
+$6-x^2=3-2x$
 
-$M_x=-\frac{27}{10}$ and $M_y=-\frac{9}{4}$
+$x^2-2x-3=0$
 
-Therefore,
+$(x-3)(x+1)=0$
 
-$\bar{x}=\frac{M_y}{m}=-\frac{1}{2}$
+So the region lies on $[-1,3]$.
+$f(0)=6$ and $g(0)=3$. So $f$ is the upper bound and $g$ is the lower bound.
 
-$\bar{y}=\frac{M_x}{m}=-\frac{3}{5}$
+---
 
-The centroid is $(-1/2,-3/5)$.
+## Example 2
+
+$m=\int_{-1}^{3}\left[(6-x^2)-(3-2x)\right]\,dx$
+
+$M_y=\int_{-1}^{3}x\left[(6-x^2)-(3-2x)\right]\,dx$
+
+$M_x=\frac{1}{2}\int_{-1}^{3}\left[(6-x^2)^2-(3-2x)^2\right]\,dx$
+
+$\bar{x}=\frac{M_y}{m}=1$, $\bar{y}=\frac{M_x}{m}=\frac{13}{5}$
+
+. . . 
+
+The centroid is $(1,\frac{13}{5})$.
+
+---
+
+## Symmetry Principle
+
+Symmetry lets us recognize when opposite parts of a region balance each other.
+
+If a region is symmetric about a line, then the center of mass must lie on that line. We can use symmetry to find one coordinate immediately.
+
+
 
 ---
 
 ## Example 3
 
-Let $R$ be the region bounded above by $f(x)=4-x^2$ and below by the $x$-axis.
+What is the center of mass of the region under $f(x)=2x-x^2$ is bounded by the $x$-axis from $x=0$ to $x=2$.
 
-The region is symmetric with respect to the $y$-axis.
+. . . 
 
-Therefore, the $x$-coordinate of the centroid is zero.
+Since $f(x)=2x-x^2$ is symmetric about the vertical line $x=1$, the region has the same shape and mass on both sides of $x=1$.
+
+So the center of mass must lie on this line:
+
+$\bar{x}=1$
+
+Symmetry lets us find $\bar{x}$ without computing any moments.
+
+---
+
+## Example 3 x-Moment
+
+
+The area of the region is
+
+$m=\int_0^2 (2x-x^2)\,dx
+
+The moment about the $x$-axis is
+
+$M_x=\frac{1}{2}\int_0^2 (2x-x^2)^2\,dx$
+
+. . .
+
+$\bar{y}=\frac{M_x}{m}=\frac{8/15}{4/3}=\frac{2}{5}$
+
+So the centroid of the region is $(1,\frac{2}{5})$.
+
+---
+
+
+## Example 4
+
+Let $R$ be the region bounded above by $f(x)=4-x^2$ $g(x)=x^2$ below and to the right of the y-axis.
+
+The region is symmetric with respect to the line y=2.
+
+Therefore, the $y$-coordinate of the centroid is 2.
 
 $m=\int_{-2}^{2}(4-x^2)\,dx=\frac{32}{3}$
 
 ---
 
-## Example 3
+## Example 4
 
-We only need $M_x$:
+The moment about the $y$-axis is
 
-$M_x=\int_{-2}^{2}\frac{(4-x^2)^2}{2}\,dx$
+$M_y=\int_0^{\sqrt{2}} x\left[(4-x^2)-x^2\right]\,dx=2$
 
-$M_x=\frac{1}{2}\int_{-2}^{2}(16-8x^2+x^4)\,dx$
+The mass of the region is
 
-$M_x=\frac{256}{15}$
+$m=\int_0^{\sqrt{2}}\left[(4-x^2)-x^2\right]\,dx$
 
-Then
+. . . 
 
-$\bar{y}=\frac{M_x}{m}=\frac{256}{15}\cdot\frac{3}{32}=\frac{8}{5}$
+$\bar{x}=\frac{M_y}{m}=\frac{2}{8\sqrt{2}/3}=\frac{3\sqrt{2}}{8}$
 
-The centroid is $(0,8/5)$.
+The centroid is $\left(\frac{3\sqrt{2}}{8},2\right)$.
+
+---
+
 
 ## Table of Antiderivatives: Trig
 

@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <title>Math 151 - Calculus II – Moments Centers of Mass</title>
+  <title>Math 151 - Calculus II – Moments and Center of Mass</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,7 +129,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Moments Centers of Mass</h1>
+  <h1 class="title">Moments and Center of Mass</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -144,28 +144,32 @@
 <li>Use symmetry to help locate the centroid of a thin plate.</li>
 </ul>
 </section>
-<section id="core-idea-of-chapter-2" class="slide level2">
-<h2>Core Idea of Chapter 2</h2>
-<p><strong>Integration gives us a way to add up infinitely small pieces.</strong></p>
-<p>Definition of the Definite Integral:</p>
-<p><span class="math display">\[
-\int_a^b f(x)\,dx
-=
-\lim_{n\to\infty}
-\sum_{i=1}^{n} f(x_i^*)\,\Delta x
-\]</span></p>
-<p>where <span class="math inline">\(f(x_i^*)\Delta x\)</span> gives an approximation of a small “piece”.</p>
-<p>It can be a small piece of area, volume, mass, or work.</p>
+<section id="what-is-a-moment" class="slide level2">
+<h2>What is a Moment?</h2>
+<p>A <strong>moment</strong> measures how mass is distributed relative to a point.</p>
+<ul>
+<li>Mass farther from the origin has a greater effect than mass closer to the origin.</li>
+<li>The direction matters: mass on opposite sides of the origin contributes moments with opposite signs.</li>
+<li>For a point mass <span class="math inline">\(m\)</span> located at <span class="math inline">\(x\)</span>, its moment about the origin is <span class="math inline">\(mx\)</span>.</li>
+<li>For several masses, the total moment is the sum of their individual moments.</li>
+</ul>
+<p>The <strong>center of mass</strong> is the point where the system would balance.</p>
 </section>
-<section id="center-of-mass-on-a-line-formula" class="slide level2">
-<h2>Center of Mass on a Line Formula</h2>
+<section id="why-do-moments-matter-in-physics" class="slide level2">
+<h2>Why Do Moments Matter in Physics?</h2>
+<p>A <strong>moment</strong> measures how strongly a mass or force tends to produce rotation about a point.</p>
+<p>The farther the mass or force is from the axis of rotation, the greater its rotational effect.</p>
+<p>Both distance and mass affect the moment:</p>
+<p><span class="math inline">\(\text{moment} = \text{mass} \times \text{distance from the axis}\)</span></p>
+<p>Moments translate the geometry of where a mass is into the physics of how strongly it influences rotational motion.</p>
+</section>
+<section id="discrete-moments" class="slide level2">
+<h2>Discrete Moments</h2>
 <p>Let <span class="math inline">\(m_1,m_2,\ldots,m_n\)</span> be point masses placed on a number line at points <span class="math inline">\(x_1,x_2,\ldots,x_n\)</span>, respectively.</p>
-<p>The total mass is</p>
-<p><span class="math inline">\(m=\sum_{i=1}^n m_i\)</span></p>
-<p>The moment of the system with respect to the origin is</p>
-<p><span class="math inline">\(M=\sum_{i=1}^n m_ix_i\)</span></p>
-<p>The center of mass is</p>
-<p><span class="math inline">\(\bar{x}=\frac{M}{m}\)</span></p>
+<p>The moment of a system with respect to the origin is <span class="math inline">\(M=\sum_{i=1}^{n} m_i x_i\)</span></p>
+<p>The total mass of the system is <span class="math inline">\(m=\sum_{i=1}^{n} m_i\)</span>.</p>
+<p>The center of mass is <span class="math inline">\(\bar{x}=\frac{M}{m}\)</span>.</p>
+<p>The center of mass is the point where the total mass could be concentrated without changing the moment. It is a sort of average that takes into consideration both the location and amount of mass.</p>
 </section>
 <section id="center-of-mass-on-a-line-example" class="slide level2">
 <h2>Center of Mass on a Line Example</h2>
@@ -175,17 +179,9 @@
 <p><span class="math inline">\(m_3=10\)</span> kg at <span class="math inline">\(x_3=6\)</span> m</p>
 <p><span class="math inline">\(m_4=15\)</span> kg at <span class="math inline">\(x_4=-3\)</span> m</p>
 <p>Find the moment of the system and the center of mass.</p>
-</section>
-<section id="center-of-mass-on-a-line-example-1" class="slide level2">
-<h2>Center of Mass on a Line Example</h2>
-<p>First, calculate the moment:</p>
-<p><span class="math inline">\(M=\sum_{i=1}^4 m_ix_i\)</span></p>
-<p><span class="math inline">\(M=-60+15+60-45=-30\)</span></p>
-<p>The total mass is</p>
-<p><span class="math inline">\(m=30+5+10+15=60\)</span> kg</p>
-<p>Therefore,</p>
+<div class="fragment">
 <p><span class="math inline">\(\bar{x}=\frac{M}{m}=\frac{-30}{60}=-\frac{1}{2}\)</span></p>
-<p>The center of mass is located <span class="math inline">\(1/2\)</span> m to the left of the origin.</p>
+</div>
 </section>
 <section id="center-of-mass-on-a-plane-formula" class="slide level2">
 <h2>Center of Mass on a Plane Formula</h2>
@@ -205,93 +201,138 @@
 <p><span class="math inline">\(m_3=4\)</span> kg at <span class="math inline">\((2,-2)\)</span></p>
 <p>The total mass is</p>
 <p><span class="math inline">\(m=2+6+4=12\)</span> kg</p>
-</section>
-<section id="center-of-mass-on-a-plane-example-1" class="slide level2">
-<h2>Center of Mass on a Plane Example</h2>
-<p>Find the moments:</p>
-<p><span class="math inline">\(M_y=\sum_{i=1}^3 m_ix_i=-2+6+8=12\)</span></p>
-<p><span class="math inline">\(M_x=\sum_{i=1}^3 m_iy_i=6+6-8=4\)</span></p>
-<p>Then</p>
+<div class="fragment">
 <p><span class="math inline">\(\bar{x}=\frac{M_y}{m}=\frac{12}{12}=1\)</span></p>
 <p><span class="math inline">\(\bar{y}=\frac{M_x}{m}=\frac{4}{12}=\frac{1}{3}\)</span></p>
-<p>The center of mass is <span class="math inline">\((1,1/3)\)</span>, in meters.</p>
+</div>
 </section>
-<section id="generalizing-moment-formula-1" class="slide level2">
-<h2>Generalizing Moment Formula 1</h2>
+<section id="why-can-we-replace-a-2d-piece-with-a-point-mass" class="slide level2">
+<h2>Why Can We Replace a 2D Piece with a Point Mass?</h2>
+<p>For balance, the shape is not critical.</p>
+<p>What is important is the total mass of the piece, and how that mass is distributed relative to each axis</p>
+<p>The center of mass is the single point where the piece has the same balancing effect as the whole region.</p>
+<p>For moments, a region with mass can be replaced by a point mass located at its center of mass.</p>
+</section>
+<section id="continuous-moments" class="slide level2">
+<h2>Continuous Moments</h2>
 <p>Suppose a lamina is bounded above by <span class="math inline">\(f(x)\)</span>, below by the <span class="math inline">\(x\)</span>-axis, and on the left and right by <span class="math inline">\(x=a\)</span> and <span class="math inline">\(x=b\)</span>.</p>
-<p>Let <span class="math inline">\(\rho\)</span> denote the density of the associated lamina.</p>
+<p>Let <span class="math inline">\(\rho\)</span> denote the density of the associated lamina with respect to area.</p>
 <p>The mass of the lamina is</p>
 <p><span class="math inline">\(m=\rho\int_a^b f(x)\,dx\)</span></p>
 </section>
-<section id="generalizing-moment-formula-2" class="slide level2">
-<h2>Generalizing Moment Formula 2</h2>
+<section id="moment-with-respect-to-x-axis" class="slide level2">
+<h2>Moment with respect to x axis</h2>
 <p>A representative rectangle has height <span class="math inline">\(f(x_i^*)\)</span>.</p>
 <p>Its center of mass is</p>
 <p><span class="math inline">\((x_i^*,f(x_i^*)/2)\)</span></p>
 <p>The moment with respect to the <span class="math inline">\(x\)</span>-axis is</p>
 <p><span class="math inline">\(M_x=\rho\int_a^b \frac{[f(x)]^2}{2}\,dx\)</span></p>
 </section>
-<section id="generalizing-moment-formula-3" class="slide level2">
-<h2>Generalizing Moment Formula 3</h2>
+<section id="moment-with-respect-to-y-axis" class="slide level2">
+<h2>Moment with respect to y axis</h2>
 <p>The moment with respect to the <span class="math inline">\(y\)</span>-axis is</p>
 <p><span class="math inline">\(M_y=\rho\int_a^b xf(x)\,dx\)</span></p>
 <p>The coordinates of the center of mass are</p>
 <p><span class="math inline">\(\bar{x}=\frac{M_y}{m}\)</span> and <span class="math inline">\(\bar{y}=\frac{M_x}{m}\)</span></p>
-<p>Since <span class="math inline">\(\rho\)</span> cancels out, the centroid depends only on the shape of the region.</p>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example 1</h2>
+<section id="example-1-mass" class="slide level2">
+<h2>Example 1 Mass</h2>
 <p>Let <span class="math inline">\(R\)</span> be the region bounded above by <span class="math inline">\(f(x)=\sqrt{x}\)</span> and below by the <span class="math inline">\(x\)</span>-axis over <span class="math inline">\([0,4]\)</span>.</p>
 <p>Find the centroid of the region.</p>
 <p>Assume <span class="math inline">\(\rho=1\)</span>.</p>
+<div class="fragment">
 <p><span class="math inline">\(m=\int_0^4 \sqrt{x}\,dx=\left.\frac{2}{3}x^{3/2}\right|_0^4=\frac{16}{3}\)</span></p>
+</div>
 </section>
-<section id="example-1-1" class="slide level2">
-<h2>Example 1</h2>
+<section id="example-1-moments" class="slide level2">
+<h2>Example 1 Moments</h2>
 <p>Compute the moments:</p>
-<p><span class="math inline">\(M_x=\int_0^4 \frac{x}{2}\,dx=\left.\frac{1}{4}x^2\right|_0^4=4\)</span></p>
-<p><span class="math inline">\(M_y=\int_0^4 x\sqrt{x}\,dx=\int_0^4 x^{3/2}\,dx\)</span></p>
-<p><span class="math inline">\(M_y=\left.\frac{2}{5}x^{5/2}\right|_0^4=\frac{64}{5}\)</span></p>
-<p>Thus,</p>
+<p><span class="math inline">\(M_x=\int_0^4 \frac{x}{2}\,dx\)</span></p>
+<p><span class="math inline">\(M_y=\int_0^4 x\sqrt{x}\,dx\)</span></p>
+<div class="fragment">
 <p><span class="math inline">\(\bar{x}=\frac{64/5}{16/3}=\frac{12}{5}\)</span></p>
 <p><span class="math inline">\(\bar{y}=\frac{4}{16/3}=\frac{3}{4}\)</span></p>
 <p>The centroid is <span class="math inline">\((12/5,3/4)\)</span>.</p>
+</div>
+</section>
+<section id="moments-between-two-functions" class="slide level2">
+<h2>Moments between two functions</h2>
+<p>For a region between <span class="math inline">\(y=f(x)\)</span> and <span class="math inline">\(y=g(x)\)</span>, each thin slice has height <span class="math inline">\(f(x)-g(x)\)</span>.</p>
+<p>Its mass is represented by its area:</p>
+<p><span class="math inline">\(\text{Area}=(f(x^*_i)-g(x^*_i))\Delta x\)</span></p>
+<p>Center of mass of rectangle <span class="math inline">\(y\)</span>-axis: <span class="math inline">\((x^*_i, \frac{1}{2}(f(x^*_i)+g(x^*_i)))\)</span></p>
+</section>
+<section id="moments-between-two-functions-forumla" class="slide level2">
+<h2>Moments between two functions forumla</h2>
+<p>The moment about the <span class="math inline">\(y\)</span>-axis uses the slice’s horizontal position:</p>
+<p><span class="math inline">\(M_y=\int_a^b x(f(x)-g(x))\,dx\)</span></p>
+<p>The moment about the <span class="math inline">\(x\)</span>-axis uses the slice’s midpoint height:</p>
+<p><span class="math inline">\(M_x=\frac{1}{2}\int_a^b \left([f(x)]^2-[g(x)]^2\right)\,dx\)</span></p>
 </section>
 <section id="example-2" class="slide level2">
 <h2>Example 2</h2>
-<p>Let <span class="math inline">\(R\)</span> be the region bounded above by <span class="math inline">\(f(x)=1-x^2\)</span> and below by <span class="math inline">\(g(x)=x-1\)</span>.</p>
-<p>The graphs intersect at <span class="math inline">\((-2,-3)\)</span> and <span class="math inline">\((1,0)\)</span>, so integrate from <span class="math inline">\(-2\)</span> to <span class="math inline">\(1\)</span>.</p>
-<p><span class="math inline">\(m=\int_{-2}^{1}[1-x^2-(x-1)]\,dx\)</span></p>
-<p><span class="math inline">\(m=\int_{-2}^{1}(2-x^2-x)\,dx=\frac{9}{2}\)</span></p>
+<p>Let <span class="math inline">\(R\)</span> be the region bounded by <span class="math inline">\(f(x)=6-x^2\)</span> and <span class="math inline">\(g(x)=3-2x\)</span>. What is the centroid?</p>
+<div class="fragment">
+<p>First find the intersection points:</p>
+<p><span class="math inline">\(6-x^2=3-2x\)</span></p>
+<p><span class="math inline">\(x^2-2x-3=0\)</span></p>
+<p><span class="math inline">\((x-3)(x+1)=0\)</span></p>
+<p>So the region lies on <span class="math inline">\([-1,3]\)</span>. <span class="math inline">\(f(0)=6\)</span> and <span class="math inline">\(g(0)=3\)</span>. So <span class="math inline">\(f\)</span> is the upper bound and <span class="math inline">\(g\)</span> is the lower bound.</p>
+</div>
 </section>
 <section id="example-2-1" class="slide level2">
 <h2>Example 2</h2>
-<p>For a region between two functions,</p>
-<p><span class="math inline">\(M_x=\int_a^b \frac{1}{2}\left([f(x)]^2-[g(x)]^2\right)\,dx\)</span></p>
-<p><span class="math inline">\(M_y=\int_a^b x[f(x)-g(x)]\,dx\)</span></p>
-<p>For this region,</p>
-<p><span class="math inline">\(M_x=-\frac{27}{10}\)</span> and <span class="math inline">\(M_y=-\frac{9}{4}\)</span></p>
-<p>Therefore,</p>
-<p><span class="math inline">\(\bar{x}=\frac{M_y}{m}=-\frac{1}{2}\)</span></p>
-<p><span class="math inline">\(\bar{y}=\frac{M_x}{m}=-\frac{3}{5}\)</span></p>
-<p>The centroid is <span class="math inline">\((-1/2,-3/5)\)</span>.</p>
+<p><span class="math inline">\(m=\int_{-1}^{3}\left[(6-x^2)-(3-2x)\right]\,dx\)</span></p>
+<p><span class="math inline">\(M_y=\int_{-1}^{3}x\left[(6-x^2)-(3-2x)\right]\,dx\)</span></p>
+<p><span class="math inline">\(M_x=\frac{1}{2}\int_{-1}^{3}\left[(6-x^2)^2-(3-2x)^2\right]\,dx\)</span></p>
+<p><span class="math inline">\(\bar{x}=\frac{M_y}{m}=1\)</span>, <span class="math inline">\(\bar{y}=\frac{M_x}{m}=\frac{13}{5}\)</span></p>
+<div class="fragment">
+<p>The centroid is <span class="math inline">\((1,\frac{13}{5})\)</span>.</p>
+</div>
+</section>
+<section id="symmetry-principle" class="slide level2">
+<h2>Symmetry Principle</h2>
+<p>Symmetry lets us recognize when opposite parts of a region balance each other.</p>
+<p>If a region is symmetric about a line, then the center of mass must lie on that line. We can use symmetry to find one coordinate immediately.</p>
 </section>
 <section id="example-3" class="slide level2">
 <h2>Example 3</h2>
-<p>Let <span class="math inline">\(R\)</span> be the region bounded above by <span class="math inline">\(f(x)=4-x^2\)</span> and below by the <span class="math inline">\(x\)</span>-axis.</p>
-<p>The region is symmetric with respect to the <span class="math inline">\(y\)</span>-axis.</p>
-<p>Therefore, the <span class="math inline">\(x\)</span>-coordinate of the centroid is zero.</p>
+<p>What is the center of mass of the region under <span class="math inline">\(f(x)=2x-x^2\)</span> is bounded by the <span class="math inline">\(x\)</span>-axis from <span class="math inline">\(x=0\)</span> to <span class="math inline">\(x=2\)</span>.</p>
+<div class="fragment">
+<p>Since <span class="math inline">\(f(x)=2x-x^2\)</span> is symmetric about the vertical line <span class="math inline">\(x=1\)</span>, the region has the same shape and mass on both sides of <span class="math inline">\(x=1\)</span>.</p>
+<p>So the center of mass must lie on this line:</p>
+<p><span class="math inline">\(\bar{x}=1\)</span></p>
+<p>Symmetry lets us find <span class="math inline">\(\bar{x}\)</span> without computing any moments.</p>
+</div>
+</section>
+<section id="example-3-x-moment" class="slide level2">
+<h2>Example 3 x-Moment</h2>
+<p>The area of the region is</p>
+<p>$m=_0^2 (2x-x^2),dx</p>
+<p>The moment about the <span class="math inline">\(x\)</span>-axis is</p>
+<p><span class="math inline">\(M_x=\frac{1}{2}\int_0^2 (2x-x^2)^2\,dx\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(\bar{y}=\frac{M_x}{m}=\frac{8/15}{4/3}=\frac{2}{5}\)</span></p>
+<p>So the centroid of the region is <span class="math inline">\((1,\frac{2}{5})\)</span>.</p>
+</div>
+</section>
+<section id="example-4" class="slide level2">
+<h2>Example 4</h2>
+<p>Let <span class="math inline">\(R\)</span> be the region bounded above by <span class="math inline">\(f(x)=4-x^2\)</span> <span class="math inline">\(g(x)=x^2\)</span> below and to the right of the y-axis.</p>
+<p>The region is symmetric with respect to the line y=2.</p>
+<p>Therefore, the <span class="math inline">\(y\)</span>-coordinate of the centroid is 2.</p>
 <p><span class="math inline">\(m=\int_{-2}^{2}(4-x^2)\,dx=\frac{32}{3}\)</span></p>
 </section>
-<section id="example-3-1" class="slide level2">
-<h2>Example 3</h2>
-<p>We only need <span class="math inline">\(M_x\)</span>:</p>
-<p><span class="math inline">\(M_x=\int_{-2}^{2}\frac{(4-x^2)^2}{2}\,dx\)</span></p>
-<p><span class="math inline">\(M_x=\frac{1}{2}\int_{-2}^{2}(16-8x^2+x^4)\,dx\)</span></p>
-<p><span class="math inline">\(M_x=\frac{256}{15}\)</span></p>
-<p>Then</p>
-<p><span class="math inline">\(\bar{y}=\frac{M_x}{m}=\frac{256}{15}\cdot\frac{3}{32}=\frac{8}{5}\)</span></p>
-<p>The centroid is <span class="math inline">\((0,8/5)\)</span>.</p>
+<section id="example-4-1" class="slide level2">
+<h2>Example 4</h2>
+<p>The moment about the <span class="math inline">\(y\)</span>-axis is</p>
+<p><span class="math inline">\(M_y=\int_0^{\sqrt{2}} x\left[(4-x^2)-x^2\right]\,dx=2\)</span></p>
+<p>The mass of the region is</p>
+<p><span class="math inline">\(m=\int_0^{\sqrt{2}}\left[(4-x^2)-x^2\right]\,dx\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(\bar{x}=\frac{M_y}{m}=\frac{2}{8\sqrt{2}/3}=\frac{3\sqrt{2}}{8}\)</span></p>
+<p>The centroid is <span class="math inline">\(\left(\frac{3\sqrt{2}}{8},2\right)\)</span>.</p>
+</div>
 </section>
 <section id="table-of-antiderivatives-trig" class="slide level2">
 <h2>Table of Antiderivatives: Trig</h2>
