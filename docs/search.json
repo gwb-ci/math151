@@ -70,6 +70,468 @@
     ]
   },
   {
+    "objectID": "classes/14/slides.html#exponential-models",
+    "href": "classes/14/slides.html#exponential-models",
+    "title": "Exponential Models",
+    "section": "Exponential Models",
+    "text": "Exponential Models\nClass Session Goals:\n\nUse the exponential growth model in applications, including population growth.\nUse the exponential decay model in applications, including radioactive decay and Newton’s law of cooling.\nExplain the concept of half-life.",
+    "crumbs": [
+      "Class Material",
+      "Exponential Models"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#what-is-a-differential-equation",
+    "href": "classes/14/slides.html#what-is-a-differential-equation",
+    "title": "Exponential Models",
+    "section": "What is a Differential Equation?",
+    "text": "What is a Differential Equation?\n\\[\ny=y_0e^{kt}\n\\]\nwhere \\(y_0\\) represents the initial state of the system and \\(k&gt;0\\) is the growth constant.\nIf we take the derivative, we have\n\\[\ny'=ky_0e^{kt}=ky\n\\]\nThis says that rate of growth is proportional to the current function value. This is the feature that defines exponential growth. This equation involves derivatives and is called a differential equation.",
+    "crumbs": [
+      "Class Material",
+      "Exponential Models"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#change-in-amount-is-proportional-to-amount",
+    "href": "classes/14/slides.html#change-in-amount-is-proportional-to-amount",
+    "title": "Exponential Models",
+    "section": "Change in amount is proportional to amount",
+    "text": "Change in amount is proportional to amount\nIf a quantity \\(y\\) changes at a rate proportional to the current amount, then\n\\[\ny'=ky.\n\\]\nFor growth, \\(k&gt;0\\) and the model is\n\\[\ny=y_0e^{kt}.\n\\]\nFor decay, \\(k&gt;0\\) and the model is\n\\[\ny=y_0e^{-kt}.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Exponential Models"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#doubling-time",
+    "href": "classes/14/slides.html#doubling-time",
+    "title": "Exponential Models",
+    "section": "Doubling Time",
+    "text": "Doubling Time\nFor an exponential growth model \\(y(t)=y_0e^{kt}\\) with \\(k&gt;0\\), the doubling time \\(T\\) is the time required for the population to double.\nSet \\(P(T)=2P_0\\) and solve for \\(T\\).\n\\[T=\\frac{\\ln 2}{k}.\\]",
+    "crumbs": [
+      "Class Material",
+      "Exponential Models"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#population-growth-example",
+    "href": "classes/14/slides.html#population-growth-example",
+    "title": "Exponential Models",
+    "section": "Population Growth Example",
+    "text": "Population Growth Example\nConsider the population of bacteria described earlier. This population grows according to the function \\(f(t)=200e^{0.02t}\\), where \\(t\\) is measured in minutes.\n\nHow many bacteria are present in the population after \\(5\\) hours \\((300\\) minutes\\()\\)?\nWhen does the population reach \\(100,000\\) bacteria?\nWhat is the doubling time?\n\n\n\n\\(f(300)=200e^{0.02(300)}\\approx 80,686\\)\nThe population reaches \\(100,000\\) bacteria after \\(310.73\\) minutes.\n\\(T= \\frac{\\ln 2}{.002}\\)",
+    "crumbs": [
+      "Class Material",
+      "Exponential Models"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#exponential-decay",
+    "href": "classes/14/slides.html#exponential-decay",
+    "title": "Exponential Models",
+    "section": "Exponential Decay",
+    "text": "Exponential Decay\nExponential functions can also be used to model populations that shrink, or chemical compounds that break down over time.\nSystems that exhibit exponential decay behave according to the model\n\\[\ny=y_0e^{-kt},\n\\]\nwhere \\(y_0\\) represents the initial state of the system and \\(k&gt;0\\) is the decay constant.",
+    "crumbs": [
+      "Class Material",
+      "Exponential Models"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#half-life",
+    "href": "classes/14/slides.html#half-life",
+    "title": "Exponential Models",
+    "section": "Half-Life",
+    "text": "Half-Life\nFor an exponential decay model \\(y(t)=y_0e^{kt}\\) with \\(k&lt;0\\), the half-life \\(T\\) is the time required for the quantity to decrease to half its initial value.\nSet \\(P(T)=\\frac{1}{2}P_0\\) and solve for \\(T\\).\n\\[T=-\\frac{\\ln 2}{k}.\\]",
+    "crumbs": [
+      "Class Material",
+      "Exponential Models"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#radioactive-decay-example",
+    "href": "classes/14/slides.html#radioactive-decay-example",
+    "title": "Exponential Models",
+    "section": "Radioactive Decay Example",
+    "text": "Radioactive Decay Example\nThe half-life of carbon-\\(14\\) is approximately \\(5730\\) years. Suppose you have 100g of Carbon-14. How long until only 25g remaints?\nWe have\n\\[\n5730=\\frac{\\ln 2}{k},\\quad k=\\frac{\\ln 2}{5730}.\n\\]\nSo, \\(y=100e^{-(\\ln 2/5730)t}\\)\n\n\\(2t=100e^{-(\\ln 2/5730)t}\\) So \\(t=11460\\).",
+    "crumbs": [
+      "Class Material",
+      "Exponential Models"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#newtons-law-of-cooling",
+    "href": "classes/14/slides.html#newtons-law-of-cooling",
+    "title": "Exponential Models",
+    "section": "Newtons Law of Cooling",
+    "text": "Newtons Law of Cooling\nNewton’s law of cooling says that an object cools at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings.\nIf \\(T\\) represents the temperature of the object and \\(T_a\\) represents the ambient temperature in a room, then\n\\[\nT'=-k(T-T_a).\n\\]\nThe model is \\(T=(T_0-T_a)e^{-kt}+T_a\\) where \\(T_0\\) represents the initial temperature.",
+    "crumbs": [
+      "Class Material",
+      "Exponential Models"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#newtons-law-example",
+    "href": "classes/14/slides.html#newtons-law-example",
+    "title": "Exponential Models",
+    "section": "Newton’s Law Example",
+    "text": "Newton’s Law Example\nSuppose coffee is poured at a temperature of \\(196^\\circ\\text{F}\\), and after \\(2\\) minutes in a \\(76^\\circ\\text{F}\\) room it has cooled to \\(186^\\circ\\text{F}\\).\n\nCalculate \\(k\\)\nFind the model for tempature with respect to time\nWhen will the coffee be 170 degrees?\n\n\n\n\\(k=\\)\n\\(T(t)=50e^{t}+76\\)\n\\(t=\\)",
+    "crumbs": [
+      "Class Material",
+      "Exponential Models"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#trigonometric-techniques",
+    "href": "classes/13/slides.html#trigonometric-techniques",
+    "title": "Trigonometric Techniques",
+    "section": "Trigonometric Techniques",
+    "text": "Trigonometric Techniques\nClass Session Goals:\n\nUse the exponential growth model in applications, including population growth.\nUse the exponential decay model in applications, including radioactive decay and Newton’s law of cooling.\nExplain the concept of half-life.",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#what-is-a-differential-equation",
+    "href": "classes/13/slides.html#what-is-a-differential-equation",
+    "title": "Trigonometric Techniques",
+    "section": "What is a Differential Equation?",
+    "text": "What is a Differential Equation?\n\\[\ny=y_0e^{kt}\n\\]\nwhere \\(y_0\\) represents the initial state of the system and \\(k&gt;0\\) is the growth constant.\nIf we take the derivative, we have\n\\[\ny'=ky_0e^{kt}=ky\n\\]\nThis says that rate of growth is proportional to the current function value. This is the feature that defines exponential growth. This equation involves derivatives and is called a differential equation.",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#change-in-amount-is-proportional-to-amount",
+    "href": "classes/13/slides.html#change-in-amount-is-proportional-to-amount",
+    "title": "Trigonometric Techniques",
+    "section": "Change in amount is proportional to amount",
+    "text": "Change in amount is proportional to amount\nIf a quantity \\(y\\) changes at a rate proportional to the current amount, then\n\\[\ny'=ky.\n\\]\nFor growth, \\(k&gt;0\\) and the model is\n\\[\ny=y_0e^{kt}.\n\\]\nFor decay, \\(k&gt;0\\) and the model is\n\\[\ny=y_0e^{-kt}.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#doubling-time",
+    "href": "classes/13/slides.html#doubling-time",
+    "title": "Trigonometric Techniques",
+    "section": "Doubling Time",
+    "text": "Doubling Time\nFor an exponential growth model \\(y(t)=y_0e^{kt}\\) with \\(k&gt;0\\), the doubling time \\(T\\) is the time required for the population to double.\nSet \\(P(T)=2P_0\\) and solve for \\(T\\).\n\\[T=\\frac{\\ln 2}{k}.\\]",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#population-growth-example",
+    "href": "classes/13/slides.html#population-growth-example",
+    "title": "Trigonometric Techniques",
+    "section": "Population Growth Example",
+    "text": "Population Growth Example\nConsider the population of bacteria described earlier. This population grows according to the function \\(f(t)=200e^{0.02t}\\), where \\(t\\) is measured in minutes.\n\nHow many bacteria are present in the population after \\(5\\) hours \\((300\\) minutes\\()\\)?\nWhen does the population reach \\(100,000\\) bacteria?\nWhat is the doubling time?\n\n\n\n\\(f(300)=200e^{0.02(300)}\\approx 80,686\\)\nThe population reaches \\(100,000\\) bacteria after \\(310.73\\) minutes.\n\\(T= \\frac{\\ln 2}{.002}\\)",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#exponential-decay",
+    "href": "classes/13/slides.html#exponential-decay",
+    "title": "Trigonometric Techniques",
+    "section": "Exponential Decay",
+    "text": "Exponential Decay\nExponential functions can also be used to model populations that shrink, or chemical compounds that break down over time.\nSystems that exhibit exponential decay behave according to the model\n\\[\ny=y_0e^{-kt},\n\\]\nwhere \\(y_0\\) represents the initial state of the system and \\(k&gt;0\\) is the decay constant.",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#half-life",
+    "href": "classes/13/slides.html#half-life",
+    "title": "Trigonometric Techniques",
+    "section": "Half-Life",
+    "text": "Half-Life\nFor an exponential decay model \\(y(t)=y_0e^{kt}\\) with \\(k&lt;0\\), the half-life \\(T\\) is the time required for the quantity to decrease to half its initial value.\nSet \\(P(T)=\\frac{1}{2}P_0\\) and solve for \\(T\\).\n\\[T=-\\frac{\\ln 2}{k}.\\]",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#radioactive-decay-example",
+    "href": "classes/13/slides.html#radioactive-decay-example",
+    "title": "Trigonometric Techniques",
+    "section": "Radioactive Decay Example",
+    "text": "Radioactive Decay Example\nThe half-life of carbon-\\(14\\) is approximately \\(5730\\) years. Suppose you have 100g of Carbon-14. How long until only 25g remaints?\nWe have\n\\[\n5730=\\frac{\\ln 2}{k},\\quad k=\\frac{\\ln 2}{5730}.\n\\]\nSo, \\(y=100e^{-(\\ln 2/5730)t}\\)\n\n\\(2t=100e^{-(\\ln 2/5730)t}\\) So \\(t=11460\\).",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#newtons-law-of-cooling",
+    "href": "classes/13/slides.html#newtons-law-of-cooling",
+    "title": "Trigonometric Techniques",
+    "section": "Newtons Law of Cooling",
+    "text": "Newtons Law of Cooling\nNewton’s law of cooling says that an object cools at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings.\nIf \\(T\\) represents the temperature of the object and \\(T_a\\) represents the ambient temperature in a room, then\n\\[\nT'=-k(T-T_a).\n\\]\nThe model is \\(T=(T_0-T_a)e^{-kt}+T_a\\) where \\(T_0\\) represents the initial temperature.",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#newtons-law-example",
+    "href": "classes/13/slides.html#newtons-law-example",
+    "title": "Trigonometric Techniques",
+    "section": "Newton’s Law Example",
+    "text": "Newton’s Law Example\nSuppose coffee is poured at a temperature of \\(196^\\circ\\text{F}\\), and after \\(2\\) minutes in a \\(76^\\circ\\text{F}\\) room it has cooled to \\(186^\\circ\\text{F}\\).\n\nCalculate \\(k\\)\nFind the model for tempature with respect to time\nWhen will the coffee be 170 degrees?\n\n\n\n\\(k=\\)\n\\(T(t)=50e^{t}+76\\)\n\\(t=\\)",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#integration-by-parts",
+    "href": "classes/12/slides.html#integration-by-parts",
+    "title": "Integration by Parts",
+    "section": "Integration by Parts",
+    "text": "Integration by Parts\nClass Session Goals:\n\nRecognize when to use integration by parts.\nUse the integration-by-parts formula to solve integration problems.\nUse the integration-by-parts formula for definite integrals.",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#recall-the-product-rule",
+    "href": "classes/12/slides.html#recall-the-product-rule",
+    "title": "Integration by Parts",
+    "section": "Recall the Product Rule",
+    "text": "Recall the Product Rule\nTo take the derivative of the product of two functions, we uses the product rule.\n\\[(f(x)g(x))'=f'(x)g(x)+g'(x)f(x)\\]\n\nIntegration by parts is a technique based on the product rule for differentiation that allows us to exchange one integral for another.",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#derivation-of-integration-by-parts",
+    "href": "classes/12/slides.html#derivation-of-integration-by-parts",
+    "title": "Integration by Parts",
+    "section": "Derivation of Integration by Parts",
+    "text": "Derivation of Integration by Parts\nIntegrate both sidesof the product rule\n\\[\\int (f(x)g(x))'\\,dx=\\int \\left(g(x)f'(x)+f(x)g'(x)\\right)\\,dx.\\]\nThis gives us\n\\[f(x)g(x)=\\int g(x)f'(x)\\,dx+\\int f(x)g'(x)\\,dx.\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#theorem-3.1",
+    "href": "classes/12/slides.html#theorem-3.1",
+    "title": "Integration by Parts",
+    "section": "Theorem 3.1",
+    "text": "Theorem 3.1\nIntegration by Parts\nLet \\(u=f(x)\\) and \\(v=g(x)\\) be functions with continuous derivatives. Then, the integration-by-parts formula for the integral involving these two functions is:\n\\[\\int u\\,dv=uv-\\int v\\,du.\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#theorem-3.2",
+    "href": "classes/12/slides.html#theorem-3.2",
+    "title": "Integration by Parts",
+    "section": "Theorem 3.2",
+    "text": "Theorem 3.2\nIntegration by Parts for Definite Integrals\nLet \\(u=f(x)\\) and \\(v=g(x)\\) be functions with continuous derivatives on \\([a,b]\\). Then\n\\[\\int_a^b u\\,dv=uv\\bigg|_a^b-\\int_a^b v\\,du.\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#example-1",
+    "href": "classes/12/slides.html#example-1",
+    "title": "Integration by Parts",
+    "section": "Example 1",
+    "text": "Example 1\nUse integration by parts with \\(u=x\\) and \\(dv=\\sin x\\,dx\\) to evaluate \\(\\int x\\sin x\\,dx\\).\n\n\\(u=x\\), so \\(du=1\\,dx\\).\n\\(dv=\\sin x\\,dx\\), so \\(v=\\int \\sin x\\,dx=-\\cos x\\).\n\n\n\\[\\int x\\sin x\\,dx=-x\\cos x+\\sin x+C.\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#example-2",
+    "href": "classes/12/slides.html#example-2",
+    "title": "Integration by Parts",
+    "section": "Example 2",
+    "text": "Example 2\nEvaluate \\(\\int \\frac{\\ln x}{x^3}\\,dx\\).\n\n\\(u=\\ln x\\) and \\(dv=x^{-3}\\,dx\\).\n\\(du=\\frac{1}{x}\\,dx\\) and \\(v=\\int x^{-3}\\,dx=-\\frac{1}{2}x^{-2}\\).\n\n\n\\[\\int \\frac{\\ln x}{x^3}\\,dx=-\\frac{1}{2x^2}\\ln x-\\frac{1}{4x^2}+C.\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#liate",
+    "href": "classes/12/slides.html#liate",
+    "title": "Integration by Parts",
+    "section": "LIATE",
+    "text": "LIATE\nThe acronym LIATE can often help to take some of the guesswork out of our choices.\n\nLogarithmic Functions\nInverse Trigonometric Functions\nAlgebraic Functions\nTrigonometric Functions\nExponential Functions\n\nThe type of function in the integral that appears first in the list should be our first choice of \\(u\\).",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#using-parts-more-than-once",
+    "href": "classes/12/slides.html#using-parts-more-than-once",
+    "title": "Integration by Parts",
+    "section": "Using parts more than once",
+    "text": "Using parts more than once\nEvaluate \\(\\int x^2e^{3x}\\,dx\\).\n\n\\(u=x^2\\) and \\(dv=e^{3x}\\,dx\\).\n\\(du=2x\\,dx\\) and \\(v=\\frac{1}{3}e^{3x}\\).\n\n\n\\[\\int x^2e^{3x}\\,dx=\\frac{1}{3}x^2e^{3x}-\\frac{2}{9}xe^{3x}+\\frac{2}{27}e^{3x}+C.\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#activity",
+    "href": "classes/12/slides.html#activity",
+    "title": "Integration by Parts",
+    "section": "Activity",
+    "text": "Activity\nFor each problem below first identify \\(u\\) and \\(dv\\), then calculate \\(du\\) and \\(v\\), and then rewrite the integral using Theorem 3.1.\n\n\\(\\int x^3e^{2x}\\,dx\\)\n\\(\\int x^3\\ln(x)\\,dx\\)\n\\(\\int y^3\\cos y\\,dy\\)\n\\(\\int x^2\\arctan x\\,dx\\)\n\\(\\int e^{3x}\\sin(2x)\\,dx\\)",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#answers-to-activity-1",
+    "href": "classes/12/slides.html#answers-to-activity-1",
+    "title": "Integration by Parts",
+    "section": "Answers to activity 1",
+    "text": "Answers to activity 1\n\n\\(u=x^3\\), \\(dv=e^{2x}\\,dx\\), \\(du=3x^2\\,dx\\), \\(v=\\frac{1}{2}e^{2x}\\)\n\\(\\int x^3e^{2x}\\,dx=\\frac{1}{2}x^3e^{2x}-\\int \\frac{3}{2}x^2e^{2x}\\,dx\\)\n\\(u=\\ln x\\), \\(dv=x^3\\,dx\\), \\(du=\\frac{1}{x}\\,dx\\), \\(v=\\frac{x^4}{4}\\)\n\\(\\int x^3\\ln(x)\\,dx=\\frac{x^4}{4}\\ln x-\\int \\frac{x^3}{4}\\,dx\\)\n\\(u=y^3\\), \\(dv=\\cos y\\,dy\\), \\(du=3y^2\\,dy\\), \\(v=\\sin y\\)\n\\(\\int y^3\\cos y\\,dy=y^3\\sin y-\\int 3y^2\\sin y\\,dy\\)",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#answers-to-activity-2",
+    "href": "classes/12/slides.html#answers-to-activity-2",
+    "title": "Integration by Parts",
+    "section": "Answers to activity 2",
+    "text": "Answers to activity 2\n\n\\(u=\\arctan x\\), \\(dv=x^2\\,dx\\), \\(du=\\frac{1}{x^2+1}\\,dx\\), \\(v=\\frac{x^3}{3}\\)\n\\(\\int x^2\\arctan x\\,dx=\\frac{x^3}{3}\\arctan x-\\int \\frac{x^3}{3(x^2+1)}\\,dx\\)\n\\(u=\\sin(2x)\\), \\(dv=e^{3x}\\,dx\\), \\(du=2\\cos(2x)\\,dx\\), \\(v=\\frac{1}{3}e^{3x}\\)\n\\(\\int e^{3x}\\sin(2x)\\,dx=\\frac{1}{3}e^{3x}\\sin(2x)-\\int \\frac{2}{3}e^{3x}\\cos(2x)\\,dx\\)",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#ancient-egyptian-fractions",
+    "href": "classes/12/slides.html#ancient-egyptian-fractions",
+    "title": "Integration by Parts",
+    "section": "Ancient Egyptian Fractions",
+    "text": "Ancient Egyptian Fractions\nAncient Egyptians wrote fractions as sums of unit fractions, fractions with numerator \\(1\\).\nExample: rewrite \\(\\frac{5}{6}\\) as a sum of unit fractions.\nChoose the largest unit fraction less than \\(\\frac{5}{6}\\) which is \\(\\frac{1}{2}\\)\nSubtract:\\(\\frac{5}{6}-\\frac{1}{2}=\\frac{5}{6}-\\frac{3}{6}=\\frac{2}{6}=\\frac{1}{3}\\)\nSo, \\[\\frac{5}{6}=\\frac{1}{2}+\\frac{1}{3}\\]\n\nThis process is an exmple of the greedy algorithm.",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#ancient-egyptian-fractions-another-example",
+    "href": "classes/12/slides.html#ancient-egyptian-fractions-another-example",
+    "title": "Integration by Parts",
+    "section": "Ancient Egyptian Fractions: Another Example",
+    "text": "Ancient Egyptian Fractions: Another Example\nRewrite \\(\\frac{11}{12}\\) as a sum of unit fractions.\nChoose the largest unit fraction less than \\(\\frac{11}{12}\\): \\(\\frac{1}{2}\\)\nSubtract \\(\\frac{11}{12}-\\frac{1}{2}=\\frac{5}{12}\\)\nNext choose \\(\\frac{1}{3}\\) and subtract \\(\\frac{5}{12}-\\frac{1}{3}=\\frac{1}{12}\\) to get:\n\\[\\frac{11}{12}=\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{12}\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#finding-a-common-denominator",
+    "href": "classes/12/slides.html#finding-a-common-denominator",
+    "title": "Integration by Parts",
+    "section": "Finding a Common Denominator",
+    "text": "Finding a Common Denominator\nRecall how we add fractions:\n\\[\\frac{2}{x}+\\frac{3}{x+1}\n=\\frac{2(x+1)+3x}{x(x+1)}\n=\\frac{5x+2}{x(x+1)}\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#reversing-the-process",
+    "href": "classes/12/slides.html#reversing-the-process",
+    "title": "Integration by Parts",
+    "section": "Reversing the process",
+    "text": "Reversing the process\nPartial fraction decomposition reverses this process.\nStarting with \\(\\frac{5x+2}{x(x+1)}\\) we try to rewrite it as\n\\[\\frac{A}{x}+\\frac{B}{x+1}.\\]\nFinding partial fractions means determining the values of \\(A\\) and \\(B\\) so that the two expressions are equal.",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#example-of-partial-fractions-1",
+    "href": "classes/12/slides.html#example-of-partial-fractions-1",
+    "title": "Integration by Parts",
+    "section": "Example of Partial Fractions 1",
+    "text": "Example of Partial Fractions 1\nDecompose \\(\\frac{3x+1}{x^2-x-2}.\\)\n\\[\\frac{3x+1}{(x-2)(x+1)}\n=\\frac{A}{x-2}+\\frac{B}{x+1}.\\]\nMultiply by the common denominator:\n\\[3x+1=A(x+1)+B(x-2).\\]\n\n\\[\\frac{3x+1}{(x-2)(x+1)}\n=\\frac{7}{3(x-2)}+\\frac{2}{3(x+1)}.\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#using-example-1-to-integrate",
+    "href": "classes/12/slides.html#using-example-1-to-integrate",
+    "title": "Integration by Parts",
+    "section": "Using Example 1 to integrate",
+    "text": "Using Example 1 to integrate\nNow evaluate \\(\\int \\frac{3x+1}{x^2-x-2}\\,dx.\\)\nUsing the partial fraction decomposition,\n\\[\\int\\left(\n\\frac{7}{3(x-2)}\n+\\frac{2}{3(x+1)}\n\\right)\\,dx.\\]\n\n\\[\\frac{7}{3}\\ln|x-2|\n+\\frac{2}{3}\\ln|x+1|+C.\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#table-of-antiderivatives-trig",
+    "href": "classes/12/slides.html#table-of-antiderivatives-trig",
+    "title": "Integration by Parts",
+    "section": "Table of Antiderivatives: Trig",
+    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\sec^2 x\\,dx &= \\tan x+C \\\\\n\\int \\csc^2 x\\,dx &= -\\cot x+C \\\\\n\\int \\sec x\\tan x\\,dx &= \\sec x+C \\\\\n\\int \\csc x\\cot x\\,dx &= -\\csc x+C\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#table-of-antiderivatives-trig-1",
+    "href": "classes/12/slides.html#table-of-antiderivatives-trig-1",
+    "title": "Integration by Parts",
+    "section": "Table of Antiderivatives: Trig",
+    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\tan x\\,dx &= \\ln|\\sec x|+C \\\\\n\\int \\cot x\\,dx &= \\ln|\\sin x|+C \\\\\n\\int \\sec x\\,dx &= \\ln|\\sec x+\\tan x|+C \\\\\n\\int \\csc x\\,dx &= -\\ln|\\csc x+\\cot x|+C\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#table-of-antiderivatives-other",
+    "href": "classes/12/slides.html#table-of-antiderivatives-other",
+    "title": "Integration by Parts",
+    "section": "Table of Antiderivatives: Other",
+    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\log_a x\\,dx &= x\\log_a x-\\frac{x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\frac{1}{a^2+x^2}\\,dx &= \\frac{1}{a}\\tan^{-1}\\left(\\frac{x}{a}\\right)+C\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
+    "objectID": "classes/12/slides.html#table-of-antiderivatives-other-1",
+    "href": "classes/12/slides.html#table-of-antiderivatives-other-1",
+    "title": "Integration by Parts",
+    "section": "Table of Antiderivatives: Other",
+    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int \\frac{1}{\\sqrt{a^2-x^2}}\\,dx &= \\sin^{-1}\\left(\\frac{x}{a}\\right)+C \\\\\n\\int \\frac{1}{x\\sqrt{x^2-a^2}}\\,dx &= \\frac{1}{a}\\sec^{-1}\\left|\\frac{x}{a}\\right|+C \\\\\n\\int \\frac{1}{x^2-a^2}\\,dx &= \\frac{1}{2a}\\ln\\left|\\frac{x-a}{x+a}\\right|+C\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Integration by Parts"
+    ]
+  },
+  {
     "objectID": "classes/11/slides.html#exponential-models",
     "href": "classes/11/slides.html#exponential-models",
     "title": "Exponential Models",
@@ -2639,6 +3101,48 @@
   {
     "objectID": "classes/11/worksheet.html#null",
     "href": "classes/11/worksheet.html#null",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/12/worksheet.html",
+    "href": "classes/12/worksheet.html",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/12/worksheet.html#null",
+    "href": "classes/12/worksheet.html#null",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/13/worksheet.html",
+    "href": "classes/13/worksheet.html",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/13/worksheet.html#null",
+    "href": "classes/13/worksheet.html#null",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/14/worksheet.html",
+    "href": "classes/14/worksheet.html",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/14/worksheet.html#null",
+    "href": "classes/14/worksheet.html#null",
     "title": "TBD",
     "section": "",
     "text": "Hint"

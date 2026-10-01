@@ -1,0 +1,180 @@
+---
+title: "Trigonometric Techniques"
+
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    include-after-body:
+      text: |
+        <script>
+        (function useMathJaxSVG() {
+          if (window.MathJax && MathJax.Hub) {
+            MathJax.Hub.Queue(
+              ["setRenderer", MathJax.Hub, "SVG"],
+              ["Rerender", MathJax.Hub]
+            );
+          } else {
+            window.setTimeout(useMathJaxSVG, 50);
+          }
+        })();
+        </script>
+---
+
+
+
+
+## Trigonometric Techniques
+
+Class Session Goals:
+
+
+- Use the exponential growth model in applications, including population growth.
+- Use the exponential decay model in applications, including radioactive decay and Newton’s law of cooling.
+- Explain the concept of half-life.
+
+---
+
+## What is a Differential Equation?
+
+$$
+y=y_0e^{kt}
+$$
+
+where $y_0$ represents the initial state of the system and $k>0$ is the growth constant.
+
+If we take the derivative, we have 
+
+$$
+y'=ky_0e^{kt}=ky
+$$
+
+This says that  rate of growth is proportional to the current function value. This is the feature that defines exponential growth. This equation involves derivatives and is called a differential equation.
+
+---
+
+## Change in amount is proportional to amount
+
+If a quantity $y$ changes at a rate proportional to the current amount, then
+
+$$
+y'=ky.
+$$
+
+For growth, $k>0$ and the model is
+
+$$
+y=y_0e^{kt}.
+$$
+
+For decay, $k>0$ and the model is
+
+$$
+y=y_0e^{-kt}.
+$$
+
+---
+
+
+
+## Doubling Time
+
+For an exponential growth model $y(t)=y_0e^{kt}$ with $k>0$, the **doubling time** $T$ is the time required for the population to double.
+
+Set $P(T)=2P_0$ and solve for $T$.
+
+$$T=\frac{\ln 2}{k}.$$
+
+---
+
+## Population Growth Example
+
+Consider the population of bacteria described earlier. This population grows according to the function $f(t)=200e^{0.02t}$, where $t$ is measured in minutes.
+
+- How many bacteria are present in the population after $5$ hours $(300$ minutes$)$?
+- When does the population reach $100,000$ bacteria?
+- What is the doubling time?
+
+. . . 
+
+- $f(300)=200e^{0.02(300)}\approx 80,686$
+- The population reaches $100,000$ bacteria after $310.73$ minutes.
+- $T= \frac{\ln 2}{.002}$
+
+---
+
+## Exponential Decay
+
+Exponential functions can also be used to model populations that shrink, or chemical compounds that break down over time.
+
+Systems that exhibit exponential decay behave according to the model
+
+$$
+y=y_0e^{-kt},
+$$
+
+where $y_0$ represents the initial state of the system and $k>0$ is the decay constant.
+
+
+
+---
+
+## Half-Life
+
+For an exponential decay model $y(t)=y_0e^{kt}$ with $k<0$, the **half-life** $T$ is the time required for the quantity to decrease to half its initial value.
+
+Set $P(T)=\frac{1}{2}P_0$ and solve for $T$.
+
+$$T=-\frac{\ln 2}{k}.$$
+
+---
+
+
+## Radioactive Decay Example
+
+
+The half-life of carbon-$14$ is approximately $5730$ years.  Suppose you have 100g of Carbon-14.  How long until only 25g remaints?
+
+We have
+
+$$
+5730=\frac{\ln 2}{k},\quad k=\frac{\ln 2}{5730}.
+$$
+
+So, $y=100e^{-(\ln 2/5730)t}$
+
+. . . 
+
+$2t=100e^{-(\ln 2/5730)t}$ So $t=11460$.
+
+---
+
+## Newtons Law of Cooling
+
+Newton’s law of cooling says that an object cools at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings.
+
+If $T$ represents the temperature of the object and $T_a$ represents the ambient temperature in a room, then
+
+$$
+T'=-k(T-T_a).
+$$
+
+The model is $T=(T_0-T_a)e^{-kt}+T_a$ where $T_0$ represents the initial temperature.
+
+---
+
+## Newton's Law Example
+
+Suppose coffee is poured at a temperature of $196^\circ\text{F}$, and after $2$ minutes in a $76^\circ\text{F}$ room it has cooled to $186^\circ\text{F}$.
+
+- Calculate $k$
+- Find the model for tempature with respect to time
+- When will the coffee be 170 degrees?
+
+. . . 
+
+- $k=$
+- $T(t)=50e^{t}+76$
+- $t=$
+
+---
