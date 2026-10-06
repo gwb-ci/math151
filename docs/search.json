@@ -400,22 +400,22 @@
     ]
   },
   {
-    "objectID": "classes/13/slides.html#example-2",
-    "href": "classes/13/slides.html#example-2",
+    "objectID": "classes/13/slides.html#trig-integrals-with-odd-powers",
+    "href": "classes/13/slides.html#trig-integrals-with-odd-powers",
     "title": "Trigonometric Techniques",
-    "section": "Example 2",
-    "text": "Example 2\nEvaluate \\(\\int \\cos^2 x\\sin^3 x\\,dx\\).\n\n\\(=\\frac{1}{5}\\cos^5 x-\\frac{1}{3}\\cos^3 x+C\\)",
+    "section": "Trig Integrals with odd powers",
+    "text": "Trig Integrals with odd powers\nTo integrate \\(\\int \\cos^j x\\sin^k x\\,dx\\):\nIf \\(k\\) is odd, rewrite \\(\\sin^k x=\\sin^{k-1}x\\sin x\\) and use \\(\\sin^2 x=1-\\cos^2 x\\).\nIf \\(j\\) is odd, rewrite \\(\\cos^j x=\\cos^{j-1}x\\cos x\\) and use \\(\\cos^2 x=1-\\sin^2 x\\).",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
     ]
   },
   {
-    "objectID": "classes/13/slides.html#trig-integrals-with-odd-powers",
-    "href": "classes/13/slides.html#trig-integrals-with-odd-powers",
+    "objectID": "classes/13/slides.html#example-2",
+    "href": "classes/13/slides.html#example-2",
     "title": "Trigonometric Techniques",
-    "section": "Trig Integrals with odd powers",
-    "text": "Trig Integrals with odd powers\nTo integrate \\(\\int \\cos^j x\\sin^k x\\,dx\\):\nIf \\(k\\) is odd, rewrite \\(\\sin^k x=\\sin^{k-1}x\\sin x\\) and use \\(\\sin^2 x=1-\\cos^2 x\\).\nIf \\(j\\) is odd, rewrite \\(\\cos^j x=\\cos^{j-1}x\\cos x\\) and use \\(\\cos^2 x=1-\\sin^2 x\\).",
+    "section": "Example 2",
+    "text": "Example 2\nEvaluate \\(\\int \\cos^2 x\\sin^3 x\\,dx\\).\n\n\\(=\\frac{1}{5}\\cos^5 x-\\frac{1}{3}\\cos^3 x+C\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
@@ -470,7 +470,7 @@
     "href": "classes/13/slides.html#sec-and-tangent-example",
     "title": "Trigonometric Techniques",
     "section": "Sec and Tangent Example",
-    "text": "Sec and Tangent Example\nEvaluate \\(\\int \\sec^5 x\\tan x\\,dx\\).\nRewrite:\n\\(\\int \\sec^5 x\\tan x\\,dx\n=\\int \\sec^4 x(\\sec x\\tan x)\\,dx\\)\nLet \\(u=\\sec x\\), so \\(du=\\sec x\\tan x\\,dx\\).\n\\(\\int u^4\\,du=\\frac{1}{5}u^5+C\\)\nTherefore,\n\\(\\int \\sec^5 x\\tan x\\,dx=\\frac{1}{5}\\sec^5 x+C\\)",
+    "text": "Sec and Tangent Example\nEvaluate \\(\\int \\sec^5 x\\tan x\\,dx\\).\n\n\\(\\int \\sec^5 x\\tan x\\,dx\n=\\int \\sec^4 x(\\sec x\\tan x)\\,dx\\)\nLet \\(u=\\sec x\\), so \\(du=\\sec x\\tan x\\,dx\\).\n\\(\\int u^4\\,du=\\frac{1}{5}u^5+C\\)\nTherefore,\n\\(\\int \\sec^5 x\\tan x\\,dx=\\frac{1}{5}\\sec^5 x+C\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
@@ -514,7 +514,7 @@
     "href": "classes/13/slides.html#example-1-1",
     "title": "Trigonometric Techniques",
     "section": "Example 1",
-    "text": "Example 1\nEvaluate \\(\\int \\sqrt{9-x^2}\\,dx\\).\nUse \\(x=3\\sin\\theta\\) and \\(dx=3\\cos\\theta\\,d\\theta\\).\n\\(\\int \\sqrt{9-x^2}\\,dx=\\int 9\\cos^2\\theta\\,d\\theta\\)\n\\(=\\int 9\\left(\\frac{1}{2}+\\frac{1}{2}\\cos(2\\theta)\\right)d\\theta\\)\n\\(=\\frac{9}{2}\\theta+\\frac{9}{4}\\sin(2\\theta)+C\\)\n\\(=\\frac{9}{2}\\sin^{-1}\\left(\\frac{x}{3}\\right)+\\frac{x\\sqrt{9-x^2}}{2}+C\\)",
+    "text": "Example 1\nEvaluate \\(\\int \\sqrt{9-x^2}\\,dx\\) using \\(x=3\\sin\\theta\\) and \\(dx=3\\cos\\theta\\,d\\theta\\).\n\n\\(\\int \\sqrt{9-x^2}\\,dx=\\int 9\\cos^2\\theta\\,d\\theta\\)\n\\(=\\int 9\\left(\\frac{1}{2}+\\frac{1}{2}\\cos(2\\theta)\\right)d\\theta\\)\n\\(=\\frac{9}{2}\\theta+\\frac{9}{4}\\sin(2\\theta)+C\\)\n\\(=\\frac{9}{2}\\sin^{-1}\\left(\\frac{x}{3}\\right)+\\frac{x\\sqrt{9-x^2}}{2}+C\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
@@ -525,7 +525,7 @@
     "href": "classes/13/slides.html#expression-involving-sqrta2x2",
     "title": "Trigonometric Techniques",
     "section": "Expression Involving \\(\\sqrt{a^2+x^2}\\)",
-    "text": "Expression Involving \\(\\sqrt{a^2+x^2}\\)\nFor integrals containing \\(\\sqrt{a^2+x^2}\\), use\n\\(x=a\\tan\\theta\\)\nand\n\\(dx=a\\sec^2\\theta\\,d\\theta\\).\nThen\n$ =a$.",
+    "text": "Expression Involving \\(\\sqrt{a^2+x^2}\\)\nFor integrals containing \\(\\sqrt{a^2+x^2}\\), use\n\\(x=a\\tan\\theta\\)\nand\n\\(dx=a\\sec^2\\theta\\,d\\theta\\).\nThen\n\\(\\sqrt{a^2+x^2}=a\\sec\\theta\\).",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
@@ -547,7 +547,7 @@
     "href": "classes/13/slides.html#example-2-1",
     "title": "Trigonometric Techniques",
     "section": "Example 2",
-    "text": "Example 2\nEvaluate $ using \\(x=\\tan\\theta\\) and \\(dx=\\sec^2\\theta\\,d\\theta\\).\n\n\\(\\int \\frac{dx}{\\sqrt{1+x^2}}=\\int \\sec\\theta\\,d\\theta\\)\n\\(=\\ln|\\sec\\theta+\\tan\\theta|+C\\)\n\\(=\\ln|\\sqrt{1+x^2}+x|+C\\)",
+    "text": "Example 2\nEvaluate \\(\\int \\frac{dx}{\\sqrt{1+x^2}}\\) using \\(x=\\tan\\theta\\) and \\(dx=\\sec^2\\theta\\,d\\theta\\).\n\n\\(\\int \\frac{dx}{\\sqrt{1+x^2}}=\\int \\sec\\theta\\,d\\theta\\)\n\\(=\\ln|\\sec\\theta+\\tan\\theta|+C\\)\n\\(=\\ln|\\sqrt{1+x^2}+x|+C\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"

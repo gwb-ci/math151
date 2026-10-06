@@ -179,18 +179,18 @@
 <p><span class="math inline">\(=-\frac{1}{4}\cos^4 x+C\)</span></p>
 </div>
 </section>
+<section id="trig-integrals-with-odd-powers" class="slide level2">
+<h2>Trig Integrals with odd powers</h2>
+<p>To integrate <span class="math inline">\(\int \cos^j x\sin^k x\,dx\)</span>:</p>
+<p>If <span class="math inline">\(k\)</span> is odd, rewrite <span class="math inline">\(\sin^k x=\sin^{k-1}x\sin x\)</span> and use <span class="math inline">\(\sin^2 x=1-\cos^2 x\)</span>.</p>
+<p>If <span class="math inline">\(j\)</span> is odd, rewrite <span class="math inline">\(\cos^j x=\cos^{j-1}x\cos x\)</span> and use <span class="math inline">\(\cos^2 x=1-\sin^2 x\)</span>.</p>
+</section>
 <section id="example-2" class="slide level2">
 <h2>Example 2</h2>
 <p>Evaluate <span class="math inline">\(\int \cos^2 x\sin^3 x\,dx\)</span>.</p>
 <div class="fragment">
 <p><span class="math inline">\(=\frac{1}{5}\cos^5 x-\frac{1}{3}\cos^3 x+C\)</span></p>
 </div>
-</section>
-<section id="trig-integrals-with-odd-powers" class="slide level2">
-<h2>Trig Integrals with odd powers</h2>
-<p>To integrate <span class="math inline">\(\int \cos^j x\sin^k x\,dx\)</span>:</p>
-<p>If <span class="math inline">\(k\)</span> is odd, rewrite <span class="math inline">\(\sin^k x=\sin^{k-1}x\sin x\)</span> and use <span class="math inline">\(\sin^2 x=1-\cos^2 x\)</span>.</p>
-<p>If <span class="math inline">\(j\)</span> is odd, rewrite <span class="math inline">\(\cos^j x=\cos^{j-1}x\cos x\)</span> and use <span class="math inline">\(\cos^2 x=1-\sin^2 x\)</span>.</p>
 </section>
 <section id="power-reducing-identities" class="slide level2">
 <h2>Power reducing identities</h2>
@@ -229,13 +229,14 @@
 <section id="sec-and-tangent-example" class="slide level2">
 <h2>Sec and Tangent Example</h2>
 <p>Evaluate <span class="math inline">\(\int \sec^5 x\tan x\,dx\)</span>.</p>
-<p>Rewrite:</p>
+<div class="fragment">
 <p><span class="math inline">\(\int \sec^5 x\tan x\,dx
 =\int \sec^4 x(\sec x\tan x)\,dx\)</span></p>
 <p>Let <span class="math inline">\(u=\sec x\)</span>, so <span class="math inline">\(du=\sec x\tan x\,dx\)</span>.</p>
 <p><span class="math inline">\(\int u^4\,du=\frac{1}{5}u^5+C\)</span></p>
 <p>Therefore,</p>
 <p><span class="math inline">\(\int \sec^5 x\tan x\,dx=\frac{1}{5}\sec^5 x+C\)</span></p>
+</div>
 </section>
 <section id="trigonometric-substitutions" class="slide level2">
 <h2>Trigonometric Substitutions</h2>
@@ -264,12 +265,13 @@
 </section>
 <section id="example-1-1" class="slide level2">
 <h2>Example 1</h2>
-<p>Evaluate <span class="math inline">\(\int \sqrt{9-x^2}\,dx\)</span>.</p>
-<p>Use <span class="math inline">\(x=3\sin\theta\)</span> and <span class="math inline">\(dx=3\cos\theta\,d\theta\)</span>.</p>
+<p>Evaluate <span class="math inline">\(\int \sqrt{9-x^2}\,dx\)</span> using <span class="math inline">\(x=3\sin\theta\)</span> and <span class="math inline">\(dx=3\cos\theta\,d\theta\)</span>.</p>
+<div class="fragment">
 <p><span class="math inline">\(\int \sqrt{9-x^2}\,dx=\int 9\cos^2\theta\,d\theta\)</span></p>
 <p><span class="math inline">\(=\int 9\left(\frac{1}{2}+\frac{1}{2}\cos(2\theta)\right)d\theta\)</span></p>
 <p><span class="math inline">\(=\frac{9}{2}\theta+\frac{9}{4}\sin(2\theta)+C\)</span></p>
 <p><span class="math inline">\(=\frac{9}{2}\sin^{-1}\left(\frac{x}{3}\right)+\frac{x\sqrt{9-x^2}}{2}+C\)</span></p>
+</div>
 </section>
 <section id="expression-involving-sqrta2x2" class="slide level2">
 <h2>Expression Involving <span class="math inline">\(\sqrt{a^2+x^2}\)</span></h2>
@@ -278,7 +280,7 @@
 <p>and</p>
 <p><span class="math inline">\(dx=a\sec^2\theta\,d\theta\)</span>.</p>
 <p>Then</p>
-<p>$ =a$.</p>
+<p><span class="math inline">\(\sqrt{a^2+x^2}=a\sec\theta\)</span>.</p>
 </section>
 <section id="strategy-for-sqrta2x2" class="slide level2">
 <h2>Strategy for <span class="math inline">\(\sqrt{a^2+x^2}\)</span></h2>
@@ -292,7 +294,7 @@
 </section>
 <section id="example-2-1" class="slide level2">
 <h2>Example 2</h2>
-<p>Evaluate $ using <span class="math inline">\(x=\tan\theta\)</span> and <span class="math inline">\(dx=\sec^2\theta\,d\theta\)</span>.</p>
+<p>Evaluate <span class="math inline">\(\int \frac{dx}{\sqrt{1+x^2}}\)</span> using <span class="math inline">\(x=\tan\theta\)</span> and <span class="math inline">\(dx=\sec^2\theta\,d\theta\)</span>.</p>
 <div class="fragment">
 <p><span class="math inline">\(\int \frac{dx}{\sqrt{1+x^2}}=\int \sec\theta\,d\theta\)</span></p>
 <p><span class="math inline">\(=\ln|\sec\theta+\tan\theta|+C\)</span></p>
