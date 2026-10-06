@@ -360,7 +360,7 @@
     "href": "classes/13/slides.html#useful-trigonometric-identities",
     "title": "Trigonometric Techniques",
     "section": "Useful Trigonometric Identities",
-    "text": "Useful Trigonometric Identities\n\\(\\sin^2 x+\\cos^2 x=1\\)\n\\(\\sec^2 x=1+\\tan^2 x\\)\n\\(\\cos(2x)=\\cos^2 x-\\sin^2 x\\)\n\\(\\sin(2x)=2\\sin x\\cos x\\)\n\\(\\sin^2 x=\\frac{1-\\cos(2x)}{2}\\)\n\\(\\cos^2 x=\\frac{1+\\cos(2x)}{2}\\)\n\\(\\frac{1}{\\sin x}=\\csc x\\)\n\\(\\frac{1}{\\cos x}=\\sec x\\)\n\\(\\tan x=\\frac{\\sin x}{\\cos x}\\)",
+    "text": "Useful Trigonometric Identities\n\\(\\sin^2 x+\\cos^2 x=1\\)\n\\(\\sec^2 x=1+\\tan^2 x\\)\n\\(\\cos(2x)=\\cos^2 x-\\sin^2 x\\)\n\\(\\sin(2x)=2\\sin x\\cos x\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
