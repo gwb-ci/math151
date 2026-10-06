@@ -28,153 +28,279 @@ format:
 
 Class Session Goals:
 
-
-- Use the exponential growth model in applications, including population growth.
-- Use the exponential decay model in applications, including radioactive decay and Newton’s law of cooling.
-- Explain the concept of half-life.
-
----
-
-## What is a Differential Equation?
-
-$$
-y=y_0e^{kt}
-$$
-
-where $y_0$ represents the initial state of the system and $k>0$ is the growth constant.
-
-If we take the derivative, we have 
-
-$$
-y'=ky_0e^{kt}=ky
-$$
-
-This says that  rate of growth is proportional to the current function value. This is the feature that defines exponential growth. This equation involves derivatives and is called a differential equation.
+- Use trigonometric identities to simplify integrals.
+- Evaluate trigonometric integrals involving powers of sine, cosine, secant, and tangent.
+- Use trigonometric substitution for integrals involving square roots of quadratic expressions.
 
 ---
 
-## Change in amount is proportional to amount
+## Useful Trigonometric Identities
 
-If a quantity $y$ changes at a rate proportional to the current amount, then
+$\sin^2 x+\cos^2 x=1$
 
-$$
-y'=ky.
-$$
+$\sec^2 x=1+\tan^2 x$
 
-For growth, $k>0$ and the model is
+$\cos(2x)=\cos^2 x-\sin^2 x$
 
-$$
-y=y_0e^{kt}.
-$$
+$\sin(2x)=2\sin x\cos x$
 
-For decay, $k>0$ and the model is
+$\sin^2 x=\frac{1-\cos(2x)}{2}$
 
-$$
-y=y_0e^{-kt}.
-$$
+$\cos^2 x=\frac{1+\cos(2x)}{2}$
 
----
+$\frac{1}{\sin x}=\csc x$
 
+$\frac{1}{\cos x}=\sec x$
 
-
-## Doubling Time
-
-For an exponential growth model $y(t)=y_0e^{kt}$ with $k>0$, the **doubling time** $T$ is the time required for the population to double.
-
-Set $P(T)=2P_0$ and solve for $T$.
-
-$$T=\frac{\ln 2}{k}.$$
+$\tan x=\frac{\sin x}{\cos x}$
 
 ---
 
-## Population Growth Example
+## Antiderivatives for Trigonometric Functions
 
-Consider the population of bacteria described earlier. This population grows according to the function $f(t)=200e^{0.02t}$, where $t$ is measured in minutes.
+$\int \sin x\,dx=-\cos x+C$
 
-- How many bacteria are present in the population after $5$ hours $(300$ minutes$)$?
-- When does the population reach $100,000$ bacteria?
-- What is the doubling time?
+$\int \cos x\,dx=\sin x+C$
+
+$\int \sec^2 x\,dx=\tan x+C$
+
+$\int \sec x\tan x\,dx=\sec x+C$
+
+$\int \tan x\,dx=\ln|\sec x|+C$
+
+$\int \sec x\,dx=\ln|\sec x+\tan x|+C$
+
+---
+
+## What is a Trigonometric Integral?
+
+Trigonometric integrals are integrals involving products and powers of trigonometric functions.  For example
+$\int \cos^j x\sin^k x\,dx$.
+
+A key idea is rewriting expressions as sums and differences of integrals of the form
+
+$\int \sin^j x\cos x\,dx$ or $\int \cos^j x\sin x\,dx$
+
+and then using $u$-substitution.
+
+---
+
+## Example 1
+
+Evaluate $\int \cos^3 x\sin x\,dx$.
 
 . . . 
 
-- $f(300)=200e^{0.02(300)}\approx 80,686$
-- The population reaches $100,000$ bacteria after $310.73$ minutes.
-- $T= \frac{\ln 2}{.002}$
+
+
+$=-\frac{1}{4}\cos^4 x+C$
 
 ---
 
-## Exponential Decay
+## Example 2
 
-Exponential functions can also be used to model populations that shrink, or chemical compounds that break down over time.
-
-Systems that exhibit exponential decay behave according to the model
-
-$$
-y=y_0e^{-kt},
-$$
-
-where $y_0$ represents the initial state of the system and $k>0$ is the decay constant.
-
-
-
----
-
-## Half-Life
-
-For an exponential decay model $y(t)=y_0e^{kt}$ with $k<0$, the **half-life** $T$ is the time required for the quantity to decrease to half its initial value.
-
-Set $P(T)=\frac{1}{2}P_0$ and solve for $T$.
-
-$$T=-\frac{\ln 2}{k}.$$
-
----
-
-
-## Radioactive Decay Example
-
-
-The half-life of carbon-$14$ is approximately $5730$ years.  Suppose you have 100g of Carbon-14.  How long until only 25g remaints?
-
-We have
-
-$$
-5730=\frac{\ln 2}{k},\quad k=\frac{\ln 2}{5730}.
-$$
-
-So, $y=100e^{-(\ln 2/5730)t}$
+Evaluate $\int \cos^2 x\sin^3 x\,dx$.
 
 . . . 
 
-$2t=100e^{-(\ln 2/5730)t}$ So $t=11460$.
+
+$=\frac{1}{5}\cos^5 x-\frac{1}{3}\cos^3 x+C$
 
 ---
 
-## Newtons Law of Cooling
+## Trig Integrals with odd powers
 
-Newton’s law of cooling says that an object cools at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings.
+To integrate $\int \cos^j x\sin^k x\,dx$:
 
-If $T$ represents the temperature of the object and $T_a$ represents the ambient temperature in a room, then
+If $k$ is odd, rewrite $\sin^k x=\sin^{k-1}x\sin x$ and use $\sin^2 x=1-\cos^2 x$.
 
-$$
-T'=-k(T-T_a).
-$$
+If $j$ is odd, rewrite $\cos^j x=\cos^{j-1}x\cos x$ and use $\cos^2 x=1-\sin^2 x$.
 
-The model is $T=(T_0-T_a)e^{-kt}+T_a$ where $T_0$ represents the initial temperature.
 
 ---
 
-## Newton's Law Example
+## Power reducing identities
 
-Suppose coffee is poured at a temperature of $196^\circ\text{F}$, and after $2$ minutes in a $76^\circ\text{F}$ room it has cooled to $186^\circ\text{F}$.
+When powers of sine and cosine are both even, use
 
-- Calculate $k$
-- Find the model for tempature with respect to time
-- When will the coffee be 170 degrees?
+$\sin^2 x=\frac{1}{2}-\frac{1}{2}\cos(2x)$
+
+and
+
+$\cos^2 x=\frac{1}{2}+\frac{1}{2}\cos(2x)$.
+
+These are called power-reducing identities.
+
+---
+
+## Example with even powers
+
+Evaluate $\int \sin^4 x\,dx$ by using $\sin^2 x=\frac{1}{2}-\frac{1}{2}\cos(2x)$.
 
 . . . 
 
-- $k=$
-- $T(t)=50e^{t}+76$
-- $t=$
+
+$=\frac{3}{8}x-\frac{1}{4}\sin(2x)+\frac{1}{32}\sin(4x)+C$
+
+---
+
+## Strategy for Trig Integrals
+
+For $\int \cos^j x\sin^k x\,dx$:
+
+1. If $k$ is odd, save one $\sin x$ and convert remaining powers to cosine.
+2. If $j$ is odd, save one $\cos x$ and convert remaining powers to sine.
+3. If both $j$ and $k$ are even, use power-reducing identities.
+
+---
+
+## Integrals with Secant and Tangent
+
+Useful identities:
+$\sec^2 x=1+\tan^2 x$
+
+$\tan^2 x=\sec^2 x-1$
+
+For $\int \tan^k x\sec^j x\,dx$:
+
+- If $j$ is even and $j\ge 2$, save $\sec^2 x\,dx$ and use $u=\tan x$.
+- If $k$ is odd and $j\ge 1$, save $\sec x\tan x\,dx$ and use $u=\sec x$.
+
+---
+
+## Sec and Tangent Example
+
+Evaluate $\int \sec^5 x\tan x\,dx$.
+
+Rewrite:
+
+$\int \sec^5 x\tan x\,dx
+=\int \sec^4 x(\sec x\tan x)\,dx$
+
+Let $u=\sec x$, so $du=\sec x\tan x\,dx$.
+
+$\int u^4\,du=\frac{1}{5}u^5+C$
+
+Therefore,
+
+$\int \sec^5 x\tan x\,dx=\frac{1}{5}\sec^5 x+C$
+
+---
+
+## Trigonometric Substitutions
+
+Trigonometric substitution rewrites algebraic expressions as trigonometric integrals.
+
+Use:
+
+$\sqrt{a^2-x^2}: \quad x=a\sin\theta$
+
+$\sqrt{a^2+x^2}: \quad x=a\tan\theta$
+
+$\sqrt{x^2-a^2}: \quad x=a\sec\theta$
+
+---
+
+## Integrals with $\sqrt{a^2-x^2}$
+
+Make the substitution $x=a\sin\theta$ and $dx=a\cos\theta\,d\theta$.
+
+This gives
+
+$\sqrt{a^2-x^2}=a\cos\theta$
+
+for $-\frac{\pi}{2}\le\theta\le\frac{\pi}{2}$.
+
+---
+
+## Strategy for $\sqrt{a^2-x^2}$
+
+1. Check whether the integral can be evaluated easily in another way.
+2. Substitute $x=a\sin\theta$ and $dx=a\cos\theta\,d\theta$.
+3. Simplify the expression.
+4. Evaluate the trigonometric integral.
+5. Use a reference triangle to rewrite the result in terms of $x$
+
+---
+
+## Example 1
+
+Evaluate $\int \sqrt{9-x^2}\,dx$.
+
+Use $x=3\sin\theta$ and $dx=3\cos\theta\,d\theta$.
+
+$\int \sqrt{9-x^2}\,dx=\int 9\cos^2\theta\,d\theta$
+
+$=\int 9\left(\frac{1}{2}+\frac{1}{2}\cos(2\theta)\right)d\theta$
+
+$=\frac{9}{2}\theta+\frac{9}{4}\sin(2\theta)+C$
+
+$=\frac{9}{2}\sin^{-1}\left(\frac{x}{3}\right)+\frac{x\sqrt{9-x^2}}{2}+C$
+
+---
+
+
+
+
+## Expression Involving $\sqrt{a^2+x^2}$
+
+For integrals containing $\sqrt{a^2+x^2}$, use
+
+$x=a\tan\theta$
+
+and
+
+$dx=a\sec^2\theta\,d\theta$.
+
+Then
+
+$ \sqrt{a^2+x^2}=a\sec\theta$.
+
+---
+
+## Strategy for $\sqrt{a^2+x^2}$
+
+1. Check whether the integral can be evaluated easily by another method.
+2. Substitute $x=a\tan\theta$ and $dx=a\sec^2\theta\,d\theta$.
+3. Simplify the expression.
+4. Evaluate the trigonometric integral.
+5. Use a reference triangle to rewrite the result in terms of $x$.
+
+---
+
+
+## Example 2
+
+Evaluate $\int \frac{dx}{\sqrt{1+x^2}} using $x=\tan\theta$ and $dx=\sec^2\theta\,d\theta$.
+
+
+. . . 
+
+$\int \frac{dx}{\sqrt{1+x^2}}=\int \sec\theta\,d\theta$
+
+$=\ln|\sec\theta+\tan\theta|+C$
+
+$=\ln|\sqrt{1+x^2}+x|+C$
+
+---
+
+
+## Example 3
+
+Find the length of the curve $y=x^2$ over $[0,\frac{1}{2}]$.
+
+. . . 
+
+Since $\frac{dy}{dx}=2x$,
+
+$L=\int_0^{1/2}\sqrt{1+(2x)^2}\,dx$
+
+$=\int_0^{1/2}\sqrt{1+4x^2}\,dx$
+
+Use $x=\frac{1}{2}\tan\theta$.
+
+$L=\frac{1}{2}\int_0^{\pi/4}\sec^3\theta\,d\theta$
+
+$=\frac{1}{4}\left(\sqrt{2}+\ln(\sqrt{2}+1)\right)$
 
 ---

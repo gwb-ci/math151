@@ -70,113 +70,278 @@
     ]
   },
   {
-    "objectID": "classes/14/slides.html#exponential-models",
-    "href": "classes/14/slides.html#exponential-models",
-    "title": "Exponential Models",
-    "section": "Exponential Models",
-    "text": "Exponential Models\nClass Session Goals:\n\nUse the exponential growth model in applications, including population growth.\nUse the exponential decay model in applications, including radioactive decay and Newton’s law of cooling.\nExplain the concept of half-life.",
+    "objectID": "classes/14/slides.html#improper-integrals",
+    "href": "classes/14/slides.html#improper-integrals",
+    "title": "Inproper Integrals",
+    "section": "Improper Integrals",
+    "text": "Improper Integrals\nClass Session Goals:\n\nEvaluate an integral over an infinite interval.\nEvaluate an integral over a closed interval with an infinite discontinuity within the interval.\nUse the comparison theorem to determine whether a definite integral is convergent.",
     "crumbs": [
       "Class Material",
-      "Exponential Models"
+      "Inproper Integrals"
     ]
   },
   {
-    "objectID": "classes/14/slides.html#what-is-a-differential-equation",
-    "href": "classes/14/slides.html#what-is-a-differential-equation",
-    "title": "Exponential Models",
-    "section": "What is a Differential Equation?",
-    "text": "What is a Differential Equation?\n\\[\ny=y_0e^{kt}\n\\]\nwhere \\(y_0\\) represents the initial state of the system and \\(k&gt;0\\) is the growth constant.\nIf we take the derivative, we have\n\\[\ny'=ky_0e^{kt}=ky\n\\]\nThis says that rate of growth is proportional to the current function value. This is the feature that defines exponential growth. This equation involves derivatives and is called a differential equation.",
+    "objectID": "classes/14/slides.html#what-is-an-improper-integral",
+    "href": "classes/14/slides.html#what-is-an-improper-integral",
+    "title": "Inproper Integrals",
+    "section": "What is an Improper Integral?",
+    "text": "What is an Improper Integral?\nIn this section, we define integrals over an infinite interval as well as integrals of functions containing a discontinuity on the interval.\nIntegrals of these types are called improper integrals.\nWe examine several techniques for evaluating improper integrals, all of which involve taking limits.",
     "crumbs": [
       "Class Material",
-      "Exponential Models"
+      "Inproper Integrals"
     ]
   },
   {
-    "objectID": "classes/14/slides.html#change-in-amount-is-proportional-to-amount",
-    "href": "classes/14/slides.html#change-in-amount-is-proportional-to-amount",
-    "title": "Exponential Models",
-    "section": "Change in amount is proportional to amount",
-    "text": "Change in amount is proportional to amount\nIf a quantity \\(y\\) changes at a rate proportional to the current amount, then\n\\[\ny'=ky.\n\\]\nFor growth, \\(k&gt;0\\) and the model is\n\\[\ny=y_0e^{kt}.\n\\]\nFor decay, \\(k&gt;0\\) and the model is\n\\[\ny=y_0e^{-kt}.\n\\]",
+    "objectID": "classes/14/slides.html#integrating-over-an-infinite-interval",
+    "href": "classes/14/slides.html#integrating-over-an-infinite-interval",
+    "title": "Inproper Integrals",
+    "section": "Integrating over an Infinite Interval",
+    "text": "Integrating over an Infinite Interval\nTo integrate a function over an infinite interval, we consider the limit of the integral as the limit increases without bound.\nIf \\(f(x)\\) is continuous over \\([a,+\\infty)\\), then\n$ a^{+} f(x),dx={t+}_a^t f(x),dx$\nprovided this limit exists.",
     "crumbs": [
       "Class Material",
-      "Exponential Models"
+      "Inproper Integrals"
     ]
   },
   {
-    "objectID": "classes/14/slides.html#doubling-time",
-    "href": "classes/14/slides.html#doubling-time",
-    "title": "Exponential Models",
-    "section": "Doubling Time",
-    "text": "Doubling Time\nFor an exponential growth model \\(y(t)=y_0e^{kt}\\) with \\(k&gt;0\\), the doubling time \\(T\\) is the time required for the population to double.\nSet \\(P(T)=2P_0\\) and solve for \\(T\\).\n\\[T=\\frac{\\ln 2}{k}.\\]",
+    "objectID": "classes/14/slides.html#infinite-interval-to-the-left",
+    "href": "classes/14/slides.html#infinite-interval-to-the-left",
+    "title": "Inproper Integrals",
+    "section": "Infinite Interval to the Left",
+    "text": "Infinite Interval to the Left\nIf \\(f(x)\\) is continuous over \\((-\\infty,b]\\), then\n$ {-}^{b} f(x),dx={t-}_t^b f(x),dx$\nprovided this limit exists.\nIn each case, if the limit exists, then the improper integral is said to converge.\nIf the limit does not exist, then the improper integral is said to diverge.",
     "crumbs": [
       "Class Material",
-      "Exponential Models"
+      "Inproper Integrals"
     ]
   },
   {
-    "objectID": "classes/14/slides.html#population-growth-example",
-    "href": "classes/14/slides.html#population-growth-example",
-    "title": "Exponential Models",
-    "section": "Population Growth Example",
-    "text": "Population Growth Example\nConsider the population of bacteria described earlier. This population grows according to the function \\(f(t)=200e^{0.02t}\\), where \\(t\\) is measured in minutes.\n\nHow many bacteria are present in the population after \\(5\\) hours \\((300\\) minutes\\()\\)?\nWhen does the population reach \\(100,000\\) bacteria?\nWhat is the doubling time?\n\n\n\n\\(f(300)=200e^{0.02(300)}\\approx 80,686\\)\nThe population reaches \\(100,000\\) bacteria after \\(310.73\\) minutes.\n\\(T= \\frac{\\ln 2}{.002}\\)",
+    "objectID": "classes/14/slides.html#infinite-interval-in-both-directions",
+    "href": "classes/14/slides.html#infinite-interval-in-both-directions",
+    "title": "Inproper Integrals",
+    "section": "Infinite Interval in Both Directions",
+    "text": "Infinite Interval in Both Directions\nIf \\(f(x)\\) is continuous over \\((-\\infty,+\\infty)\\), then\n$ {-}^{+} f(x),dx={-}{0}f(x),dx+_{0}{+}f(x),dx$\nprovided that both integrals converge.\nIf either one or both of these two integrals diverge, then\n$ _{-}^{+} f(x),dx$\ndiverges.",
     "crumbs": [
       "Class Material",
-      "Exponential Models"
+      "Inproper Integrals"
     ]
   },
   {
-    "objectID": "classes/14/slides.html#exponential-decay",
-    "href": "classes/14/slides.html#exponential-decay",
-    "title": "Exponential Models",
-    "section": "Exponential Decay",
-    "text": "Exponential Decay\nExponential functions can also be used to model populations that shrink, or chemical compounds that break down over time.\nSystems that exhibit exponential decay behave according to the model\n\\[\ny=y_0e^{-kt},\n\\]\nwhere \\(y_0\\) represents the initial state of the system and \\(k&gt;0\\) is the decay constant.",
+    "objectID": "classes/14/slides.html#example-3.47-finding-an-area",
+    "href": "classes/14/slides.html#example-3.47-finding-an-area",
+    "title": "Inproper Integrals",
+    "section": "Example 3.47: Finding an Area",
+    "text": "Example 3.47: Finding an Area\nDetermine whether the area between the graph of \\(f(x)=\\frac{1}{x}\\) and the \\(x\\)-axis over the interval \\([1,+\\infty)\\) is finite or infinite.\n$ A=_1^,dx$\n\\(=\\lim_{t\\to+\\infty}\\int_1^t\\frac{1}{x}\\,dx\\)\n\\(=\\lim_{t\\to+\\infty}\\ln|x|\\bigg|_1^t\\)\n\\(=\\lim_{t\\to+\\infty}(\\ln|t|-\\ln 1)=+\\infty\\)\nSince the improper integral diverges to \\(+\\infty\\), the area of the region is infinite.",
     "crumbs": [
       "Class Material",
-      "Exponential Models"
+      "Inproper Integrals"
     ]
   },
   {
-    "objectID": "classes/14/slides.html#half-life",
-    "href": "classes/14/slides.html#half-life",
-    "title": "Exponential Models",
-    "section": "Half-Life",
-    "text": "Half-Life\nFor an exponential decay model \\(y(t)=y_0e^{kt}\\) with \\(k&lt;0\\), the half-life \\(T\\) is the time required for the quantity to decrease to half its initial value.\nSet \\(P(T)=\\frac{1}{2}P_0\\) and solve for \\(T\\).\n\\[T=-\\frac{\\ln 2}{k}.\\]",
+    "objectID": "classes/14/slides.html#example-3.48-finding-a-volume",
+    "href": "classes/14/slides.html#example-3.48-finding-a-volume",
+    "title": "Inproper Integrals",
+    "section": "Example 3.48: Finding a Volume",
+    "text": "Example 3.48: Finding a Volume\nFind the volume of the solid obtained by revolving the region bounded by the graph of \\(f(x)=\\frac{1}{x}\\) and the \\(x\\)-axis over \\([1,+\\infty)\\) about the \\(x\\)-axis.\nUsing the disk method,\n$ V=_1{+}\\frac{1}{x2},dx$\n\\(=\\pi\\lim_{t\\to+\\infty}\\int_1^t\\frac{1}{x^2}\\,dx\\)\n\\(=\\pi\\lim_{t\\to+\\infty}\\left(-\\frac{1}{x}\\right)\\bigg|_1^t\\)\n\\(=\\pi\\lim_{t\\to+\\infty}\\left(-\\frac{1}{t}+1\\right)=\\pi\\)",
     "crumbs": [
       "Class Material",
-      "Exponential Models"
+      "Inproper Integrals"
     ]
   },
   {
-    "objectID": "classes/14/slides.html#radioactive-decay-example",
-    "href": "classes/14/slides.html#radioactive-decay-example",
-    "title": "Exponential Models",
-    "section": "Radioactive Decay Example",
-    "text": "Radioactive Decay Example\nThe half-life of carbon-\\(14\\) is approximately \\(5730\\) years. Suppose you have 100g of Carbon-14. How long until only 25g remaints?\nWe have\n\\[\n5730=\\frac{\\ln 2}{k},\\quad k=\\frac{\\ln 2}{5730}.\n\\]\nSo, \\(y=100e^{-(\\ln 2/5730)t}\\)\n\n\\(2t=100e^{-(\\ln 2/5730)t}\\) So \\(t=11460\\).",
+    "objectID": "classes/14/slides.html#gabriels-horn",
+    "href": "classes/14/slides.html#gabriels-horn",
+    "title": "Inproper Integrals",
+    "section": "Gabriel’s Horn",
+    "text": "Gabriel’s Horn\nAlthough the area of the region between the \\(x\\)-axis and the graph of \\(f(x)=1/x\\) over \\([1,+\\infty)\\) is infinite, the volume of the solid generated by revolving this region about the \\(x\\)-axis is finite.\nThe solid generated is known as Gabriel’s Horn.",
     "crumbs": [
       "Class Material",
-      "Exponential Models"
+      "Inproper Integrals"
     ]
   },
   {
-    "objectID": "classes/14/slides.html#newtons-law-of-cooling",
-    "href": "classes/14/slides.html#newtons-law-of-cooling",
-    "title": "Exponential Models",
-    "section": "Newtons Law of Cooling",
-    "text": "Newtons Law of Cooling\nNewton’s law of cooling says that an object cools at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings.\nIf \\(T\\) represents the temperature of the object and \\(T_a\\) represents the ambient temperature in a room, then\n\\[\nT'=-k(T-T_a).\n\\]\nThe model is \\(T=(T_0-T_a)e^{-kt}+T_a\\) where \\(T_0\\) represents the initial temperature.",
+    "objectID": "classes/14/slides.html#example-3.50",
+    "href": "classes/14/slides.html#example-3.50",
+    "title": "Inproper Integrals",
+    "section": "Example 3.50",
+    "text": "Example 3.50\nEvaluate $ _{-}{0}\\frac{1}{x2+4},dx$.\n$ {-}{0}\\frac{1}{x2+4},dx={t-}_t0\\frac{1}{x2+4},dx$\n\\(=\\lim_{t\\to-\\infty}\\frac{1}{2}\\tan^{-1}\\left(\\frac{x}{2}\\right)\\bigg|_t^0\\)\n\\(=\\frac{1}{2}\\lim_{t\\to-\\infty}\\left(\\tan^{-1}0-\\tan^{-1}\\left(\\frac{t}{2}\\right)\\right)\\)\n\\(=\\frac{\\pi}{4}\\)\nThe improper integral converges to \\(\\frac{\\pi}{4}\\).",
     "crumbs": [
       "Class Material",
-      "Exponential Models"
+      "Inproper Integrals"
     ]
   },
   {
-    "objectID": "classes/14/slides.html#newtons-law-example",
-    "href": "classes/14/slides.html#newtons-law-example",
-    "title": "Exponential Models",
-    "section": "Newton’s Law Example",
-    "text": "Newton’s Law Example\nSuppose coffee is poured at a temperature of \\(196^\\circ\\text{F}\\), and after \\(2\\) minutes in a \\(76^\\circ\\text{F}\\) room it has cooled to \\(186^\\circ\\text{F}\\).\n\nCalculate \\(k\\)\nFind the model for tempature with respect to time\nWhen will the coffee be 170 degrees?\n\n\n\n\\(k=\\)\n\\(T(t)=50e^{t}+76\\)\n\\(t=\\)",
+    "objectID": "classes/14/slides.html#example-3.51",
+    "href": "classes/14/slides.html#example-3.51",
+    "title": "Inproper Integrals",
+    "section": "Example 3.51",
+    "text": "Example 3.51\nEvaluate $ _{-}{+}xex,dx$.\nStart by splitting up the integral:\n$ {-}{+}xex,dx={-}{0}xex,dx+_{0}{+}xex,dx$\nIf either integral diverges, then\n$ _{-}{+}xex,dx$\ndiverges.",
     "crumbs": [
       "Class Material",
-      "Exponential Models"
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#example-3.51-first-integral",
+    "href": "classes/14/slides.html#example-3.51-first-integral",
+    "title": "Inproper Integrals",
+    "section": "Example 3.51: First Integral",
+    "text": "Example 3.51: First Integral\n$ {-}{0}xex,dx={t-}_t0xex,dx$\n\\(=\\lim_{t\\to-\\infty}(xe^x-e^x)\\bigg|_t^0\\)\n\\(=\\lim_{t\\to-\\infty}(-1-te^t+e^t)\\)\n\\(=-1\\)\nThe first improper integral converges.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#example-3.51-second-integral",
+    "href": "classes/14/slides.html#example-3.51-second-integral",
+    "title": "Inproper Integrals",
+    "section": "Example 3.51: Second Integral",
+    "text": "Example 3.51: Second Integral\n$ 0{+}xex,dx={t+}_0^t xe^x,dx$\n\\(=\\lim_{t\\to+\\infty}(xe^x-e^x)\\bigg|_0^t\\)\n\\(=\\lim_{t\\to+\\infty}(te^t-e^t+1)\\)\n\\(=\\lim_{t\\to+\\infty}((t-1)e^t+1)=+\\infty\\)\nThus, $ _0{+}xex,dx$ diverges.\nTherefore, $ _{-}{+}xex,dx$ diverges.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#checkpoint-3.27",
+    "href": "classes/14/slides.html#checkpoint-3.27",
+    "title": "Inproper Integrals",
+    "section": "Checkpoint 3.27",
+    "text": "Checkpoint 3.27\nEvaluate\n$ _{-3}{+}e{-x},dx$\nState whether the improper integral converges or diverges.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#integrating-a-discontinuous-integrand",
+    "href": "classes/14/slides.html#integrating-a-discontinuous-integrand",
+    "title": "Inproper Integrals",
+    "section": "Integrating a Discontinuous Integrand",
+    "text": "Integrating a Discontinuous Integrand\nNow let’s examine integrals of functions containing an infinite discontinuity in the interval over which the integration occurs.\nIf \\(f(x)\\) is continuous over \\([a,b)\\), then\n$ a^b f(x),dx={tb-}_at f(x),dx$\nIf \\(f(x)\\) is continuous over \\((a,b]\\), then\n$ a^b f(x),dx={ta+}_tb f(x),dx$",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#discontinuity-inside-the-interval",
+    "href": "classes/14/slides.html#discontinuity-inside-the-interval",
+    "title": "Inproper Integrals",
+    "section": "Discontinuity Inside the Interval",
+    "text": "Discontinuity Inside the Interval\nIf \\(f(x)\\) is continuous over \\([a,b]\\) except at a point \\(c\\) in \\((a,b)\\), then\n$ _a^b f(x),dx=_a^c f(x),dx+_c^b f(x),dx$\nprovided both integrals converge.\nIf either of these integrals diverges, then\n$ _a^b f(x),dx$\ndiverges.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#example-3.52",
+    "href": "classes/14/slides.html#example-3.52",
+    "title": "Inproper Integrals",
+    "section": "Example 3.52",
+    "text": "Example 3.52\nEvaluate $ _0^4 ,dx$.\nThe function \\(f(x)=\\frac{1}{\\sqrt{4-x}}\\) is continuous over \\([0,4)\\) and discontinuous at \\(4\\).\n$ 0^4 ,dx={t-}_0t,dx$\n\\(=\\lim_{t\\to4^-}\\left(-2\\sqrt{4-x}\\right)\\bigg|_0^t\\)\n\\(=\\lim_{t\\to4^-}\\left(-2\\sqrt{4-t}+4\\right)=4\\)\nThe improper integral converges.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#example-3.53",
+    "href": "classes/14/slides.html#example-3.53",
+    "title": "Inproper Integrals",
+    "section": "Example 3.53",
+    "text": "Example 3.53\nEvaluate $ _0^2 xx,dx$.\nSince \\(f(x)=x\\ln x\\) is continuous over \\((0,2]\\) and is discontinuous at zero,\n$ 0^2 xx,dx={t+}_t2 xx,dx$\nUsing integration by parts,\n\\(=\\lim_{t\\to0^+}\\left(\\frac{1}{2}x^2\\ln x-\\frac{1}{4}x^2\\right)\\bigg|_t^2\\)\n\\(=\\lim_{t\\to0^+}\\left(2\\ln2-1-\\frac{1}{2}t^2\\ln t+\\frac{1}{4}t^2\\right)\\)\n\\(=2\\ln2-1\\)\nThe improper integral converges.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#example-3.54",
+    "href": "classes/14/slides.html#example-3.54",
+    "title": "Inproper Integrals",
+    "section": "Example 3.54",
+    "text": "Example 3.54\nEvaluate $ _{-1}{1}\\frac{1}{x3},dx$.\nSince \\(f(x)=1/x^3\\) is discontinuous at zero,\n$ {-1}{1}\\frac{1}{x3},dx={-1}{0}\\frac{1}{x3},dx+_01\\frac{1}{x3},dx$\nBegin with\n$ {-1}{0}\\frac{1}{x3},dx={t-}_{-1}{t},dx$\n\\(=\\lim_{t\\to0^-}\\left(-\\frac{1}{2x^2}\\right)\\bigg|_{-1}^{t}\\)\n\\(=\\lim_{t\\to0^-}\\left(-\\frac{1}{2t^2}+\\frac{1}{2}\\right)=-\\infty\\)\nTherefore, $ _{-1}{1}\\frac{1}{x3},dx$ diverges.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#checkpoint-3.28",
+    "href": "classes/14/slides.html#checkpoint-3.28",
+    "title": "Inproper Integrals",
+    "section": "Checkpoint 3.28",
+    "text": "Checkpoint 3.28\nEvaluate\n$ _0^2 ,dx$\nState whether the integral converges or diverges.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#a-comparison-theorem",
+    "href": "classes/14/slides.html#a-comparison-theorem",
+    "title": "Inproper Integrals",
+    "section": "A Comparison Theorem",
+    "text": "A Comparison Theorem\nIt is not always easy or even possible to evaluate an improper integral directly.\nBy comparing it with another carefully chosen integral, it may be possible to determine its convergence or divergence.\nSuppose \\(f(x)\\) and \\(g(x)\\) are continuous over \\([a,+\\infty)\\) and\n\\(0\\le f(x)\\le g(x)\\)\nfor \\(x\\ge a\\).",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#theorem-3.7-a-comparison-theorem",
+    "href": "classes/14/slides.html#theorem-3.7-a-comparison-theorem",
+    "title": "Inproper Integrals",
+    "section": "Theorem 3.7: A Comparison Theorem",
+    "text": "Theorem 3.7: A Comparison Theorem\nLet \\(f(x)\\) and \\(g(x)\\) be continuous over \\([a,+\\infty)\\).\nAssume that \\(0\\le f(x)\\le g(x)\\) for \\(x\\ge a\\).\n\nIf $ _a^{+} f(x),dx=+$, then $ _a^{+} g(x),dx=+$.\nIf $ _a^{+} g(x),dx=L$, where \\(L\\) is a real number, then $ _a^{+} f(x),dx=M$ for some real number \\(M\\le L\\).",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#example-3.55",
+    "href": "classes/14/slides.html#example-3.55",
+    "title": "Inproper Integrals",
+    "section": "Example 3.55",
+    "text": "Example 3.55\nUse a comparison to show that\n$ _1{+}\\frac{1}{xex},dx$\nconverges.\nWe can see that\n\\(0\\le \\frac{1}{xe^x}\\le \\frac{1}{e^x}=e^{-x}\\)\nso if $ _1{+}e{-x},dx$ converges, then so does\n$ _1{+}\\frac{1}{xex},dx$.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#example-3.55-comparison-integral",
+    "href": "classes/14/slides.html#example-3.55-comparison-integral",
+    "title": "Inproper Integrals",
+    "section": "Example 3.55: Comparison Integral",
+    "text": "Example 3.55: Comparison Integral\n$ 1{+}e{-x},dx={t+}_1^t e^{-x},dx$\n\\(=\\lim_{t\\to+\\infty}(-e^{-x})\\bigg|_1^t\\)\n\\(=\\lim_{t\\to+\\infty}(-e^{-t}+e^{-1})\\)\n\\(=e^{-1}\\)\nSince $ _1{+}e{-x},dx$ converges, so does\n$ _1{+}\\frac{1}{xex},dx$.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#example-3.56",
+    "href": "classes/14/slides.html#example-3.56",
+    "title": "Inproper Integrals",
+    "section": "Example 3.56",
+    "text": "Example 3.56\nUse the comparison theorem to show that\n$ _1{+}\\frac{1}{xp},dx$\ndiverges for all \\(p&lt;1\\).\nFor \\(p&lt;1\\),\n$ $\nover \\([1,+\\infty)\\).\nWe showed that\n$ _1^{+},dx=+$\nTherefore,\n$ _1{+}\\frac{1}{xp},dx$\ndiverges for all \\(p&lt;1\\).",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/14/slides.html#checkpoint-3.29",
+    "href": "classes/14/slides.html#checkpoint-3.29",
+    "title": "Inproper Integrals",
+    "section": "Checkpoint 3.29",
+    "text": "Checkpoint 3.29\nUse a comparison to show that\n$ _e^{+},dx$\ndiverges.",
+    "crumbs": [
+      "Class Material",
+      "Inproper Integrals"
     ]
   },
   {
@@ -184,106 +349,216 @@
     "href": "classes/13/slides.html#trigonometric-techniques",
     "title": "Trigonometric Techniques",
     "section": "Trigonometric Techniques",
-    "text": "Trigonometric Techniques\nClass Session Goals:\n\nUse the exponential growth model in applications, including population growth.\nUse the exponential decay model in applications, including radioactive decay and Newton’s law of cooling.\nExplain the concept of half-life.",
+    "text": "Trigonometric Techniques\nClass Session Goals:\n\nUse trigonometric identities to simplify integrals.\nEvaluate trigonometric integrals involving powers of sine, cosine, secant, and tangent.\nUse trigonometric substitution for integrals involving square roots of quadratic expressions.",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
     ]
   },
   {
-    "objectID": "classes/13/slides.html#what-is-a-differential-equation",
-    "href": "classes/13/slides.html#what-is-a-differential-equation",
+    "objectID": "classes/13/slides.html#useful-trigonometric-identities",
+    "href": "classes/13/slides.html#useful-trigonometric-identities",
     "title": "Trigonometric Techniques",
-    "section": "What is a Differential Equation?",
-    "text": "What is a Differential Equation?\n\\[\ny=y_0e^{kt}\n\\]\nwhere \\(y_0\\) represents the initial state of the system and \\(k&gt;0\\) is the growth constant.\nIf we take the derivative, we have\n\\[\ny'=ky_0e^{kt}=ky\n\\]\nThis says that rate of growth is proportional to the current function value. This is the feature that defines exponential growth. This equation involves derivatives and is called a differential equation.",
+    "section": "Useful Trigonometric Identities",
+    "text": "Useful Trigonometric Identities\n\\(\\sin^2 x+\\cos^2 x=1\\)\n\\(\\sec^2 x=1+\\tan^2 x\\)\n\\(\\cos(2x)=\\cos^2 x-\\sin^2 x\\)\n\\(\\sin(2x)=2\\sin x\\cos x\\)\n\\(\\sin^2 x=\\frac{1-\\cos(2x)}{2}\\)\n\\(\\cos^2 x=\\frac{1+\\cos(2x)}{2}\\)\n\\(\\frac{1}{\\sin x}=\\csc x\\)\n\\(\\frac{1}{\\cos x}=\\sec x\\)\n\\(\\tan x=\\frac{\\sin x}{\\cos x}\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
     ]
   },
   {
-    "objectID": "classes/13/slides.html#change-in-amount-is-proportional-to-amount",
-    "href": "classes/13/slides.html#change-in-amount-is-proportional-to-amount",
+    "objectID": "classes/13/slides.html#antiderivatives-for-trigonometric-functions",
+    "href": "classes/13/slides.html#antiderivatives-for-trigonometric-functions",
     "title": "Trigonometric Techniques",
-    "section": "Change in amount is proportional to amount",
-    "text": "Change in amount is proportional to amount\nIf a quantity \\(y\\) changes at a rate proportional to the current amount, then\n\\[\ny'=ky.\n\\]\nFor growth, \\(k&gt;0\\) and the model is\n\\[\ny=y_0e^{kt}.\n\\]\nFor decay, \\(k&gt;0\\) and the model is\n\\[\ny=y_0e^{-kt}.\n\\]",
+    "section": "Antiderivatives for Trigonometric Functions",
+    "text": "Antiderivatives for Trigonometric Functions\n\\(\\int \\sin x\\,dx=-\\cos x+C\\)\n\\(\\int \\cos x\\,dx=\\sin x+C\\)\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\tan x\\,dx=\\ln|\\sec x|+C\\)\n\\(\\int \\sec x\\,dx=\\ln|\\sec x+\\tan x|+C\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
     ]
   },
   {
-    "objectID": "classes/13/slides.html#doubling-time",
-    "href": "classes/13/slides.html#doubling-time",
+    "objectID": "classes/13/slides.html#what-is-a-trigonometric-integral",
+    "href": "classes/13/slides.html#what-is-a-trigonometric-integral",
     "title": "Trigonometric Techniques",
-    "section": "Doubling Time",
-    "text": "Doubling Time\nFor an exponential growth model \\(y(t)=y_0e^{kt}\\) with \\(k&gt;0\\), the doubling time \\(T\\) is the time required for the population to double.\nSet \\(P(T)=2P_0\\) and solve for \\(T\\).\n\\[T=\\frac{\\ln 2}{k}.\\]",
+    "section": "What is a Trigonometric Integral?",
+    "text": "What is a Trigonometric Integral?\nTrigonometric integrals are integrals involving products and powers of trigonometric functions. For example \\(\\int \\cos^j x\\sin^k x\\,dx\\).\nA key idea is rewriting expressions as sums and differences of integrals of the form\n\\(\\int \\sin^j x\\cos x\\,dx\\) or \\(\\int \\cos^j x\\sin x\\,dx\\)\nand then using \\(u\\)-substitution.",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
     ]
   },
   {
-    "objectID": "classes/13/slides.html#population-growth-example",
-    "href": "classes/13/slides.html#population-growth-example",
+    "objectID": "classes/13/slides.html#example-1",
+    "href": "classes/13/slides.html#example-1",
     "title": "Trigonometric Techniques",
-    "section": "Population Growth Example",
-    "text": "Population Growth Example\nConsider the population of bacteria described earlier. This population grows according to the function \\(f(t)=200e^{0.02t}\\), where \\(t\\) is measured in minutes.\n\nHow many bacteria are present in the population after \\(5\\) hours \\((300\\) minutes\\()\\)?\nWhen does the population reach \\(100,000\\) bacteria?\nWhat is the doubling time?\n\n\n\n\\(f(300)=200e^{0.02(300)}\\approx 80,686\\)\nThe population reaches \\(100,000\\) bacteria after \\(310.73\\) minutes.\n\\(T= \\frac{\\ln 2}{.002}\\)",
+    "section": "Example 1",
+    "text": "Example 1\nEvaluate \\(\\int \\cos^3 x\\sin x\\,dx\\).\n\n\\(=-\\frac{1}{4}\\cos^4 x+C\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
     ]
   },
   {
-    "objectID": "classes/13/slides.html#exponential-decay",
-    "href": "classes/13/slides.html#exponential-decay",
+    "objectID": "classes/13/slides.html#example-2",
+    "href": "classes/13/slides.html#example-2",
     "title": "Trigonometric Techniques",
-    "section": "Exponential Decay",
-    "text": "Exponential Decay\nExponential functions can also be used to model populations that shrink, or chemical compounds that break down over time.\nSystems that exhibit exponential decay behave according to the model\n\\[\ny=y_0e^{-kt},\n\\]\nwhere \\(y_0\\) represents the initial state of the system and \\(k&gt;0\\) is the decay constant.",
+    "section": "Example 2",
+    "text": "Example 2\nEvaluate \\(\\int \\cos^2 x\\sin^3 x\\,dx\\).\n\n\\(=\\frac{1}{5}\\cos^5 x-\\frac{1}{3}\\cos^3 x+C\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
     ]
   },
   {
-    "objectID": "classes/13/slides.html#half-life",
-    "href": "classes/13/slides.html#half-life",
+    "objectID": "classes/13/slides.html#trig-integrals-with-odd-powers",
+    "href": "classes/13/slides.html#trig-integrals-with-odd-powers",
     "title": "Trigonometric Techniques",
-    "section": "Half-Life",
-    "text": "Half-Life\nFor an exponential decay model \\(y(t)=y_0e^{kt}\\) with \\(k&lt;0\\), the half-life \\(T\\) is the time required for the quantity to decrease to half its initial value.\nSet \\(P(T)=\\frac{1}{2}P_0\\) and solve for \\(T\\).\n\\[T=-\\frac{\\ln 2}{k}.\\]",
+    "section": "Trig Integrals with odd powers",
+    "text": "Trig Integrals with odd powers\nTo integrate \\(\\int \\cos^j x\\sin^k x\\,dx\\):\nIf \\(k\\) is odd, rewrite \\(\\sin^k x=\\sin^{k-1}x\\sin x\\) and use \\(\\sin^2 x=1-\\cos^2 x\\).\nIf \\(j\\) is odd, rewrite \\(\\cos^j x=\\cos^{j-1}x\\cos x\\) and use \\(\\cos^2 x=1-\\sin^2 x\\).",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
     ]
   },
   {
-    "objectID": "classes/13/slides.html#radioactive-decay-example",
-    "href": "classes/13/slides.html#radioactive-decay-example",
+    "objectID": "classes/13/slides.html#power-reducing-identities",
+    "href": "classes/13/slides.html#power-reducing-identities",
     "title": "Trigonometric Techniques",
-    "section": "Radioactive Decay Example",
-    "text": "Radioactive Decay Example\nThe half-life of carbon-\\(14\\) is approximately \\(5730\\) years. Suppose you have 100g of Carbon-14. How long until only 25g remaints?\nWe have\n\\[\n5730=\\frac{\\ln 2}{k},\\quad k=\\frac{\\ln 2}{5730}.\n\\]\nSo, \\(y=100e^{-(\\ln 2/5730)t}\\)\n\n\\(2t=100e^{-(\\ln 2/5730)t}\\) So \\(t=11460\\).",
+    "section": "Power reducing identities",
+    "text": "Power reducing identities\nWhen powers of sine and cosine are both even, use\n\\(\\sin^2 x=\\frac{1}{2}-\\frac{1}{2}\\cos(2x)\\)\nand\n\\(\\cos^2 x=\\frac{1}{2}+\\frac{1}{2}\\cos(2x)\\).\nThese are called power-reducing identities.",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
     ]
   },
   {
-    "objectID": "classes/13/slides.html#newtons-law-of-cooling",
-    "href": "classes/13/slides.html#newtons-law-of-cooling",
+    "objectID": "classes/13/slides.html#example-with-even-powers",
+    "href": "classes/13/slides.html#example-with-even-powers",
     "title": "Trigonometric Techniques",
-    "section": "Newtons Law of Cooling",
-    "text": "Newtons Law of Cooling\nNewton’s law of cooling says that an object cools at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings.\nIf \\(T\\) represents the temperature of the object and \\(T_a\\) represents the ambient temperature in a room, then\n\\[\nT'=-k(T-T_a).\n\\]\nThe model is \\(T=(T_0-T_a)e^{-kt}+T_a\\) where \\(T_0\\) represents the initial temperature.",
+    "section": "Example with even powers",
+    "text": "Example with even powers\nEvaluate \\(\\int \\sin^4 x\\,dx\\) by using \\(\\sin^2 x=\\frac{1}{2}-\\frac{1}{2}\\cos(2x)\\).\n\n\\(=\\frac{3}{8}x-\\frac{1}{4}\\sin(2x)+\\frac{1}{32}\\sin(4x)+C\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"
     ]
   },
   {
-    "objectID": "classes/13/slides.html#newtons-law-example",
-    "href": "classes/13/slides.html#newtons-law-example",
+    "objectID": "classes/13/slides.html#strategy-for-trig-integrals",
+    "href": "classes/13/slides.html#strategy-for-trig-integrals",
     "title": "Trigonometric Techniques",
-    "section": "Newton’s Law Example",
-    "text": "Newton’s Law Example\nSuppose coffee is poured at a temperature of \\(196^\\circ\\text{F}\\), and after \\(2\\) minutes in a \\(76^\\circ\\text{F}\\) room it has cooled to \\(186^\\circ\\text{F}\\).\n\nCalculate \\(k\\)\nFind the model for tempature with respect to time\nWhen will the coffee be 170 degrees?\n\n\n\n\\(k=\\)\n\\(T(t)=50e^{t}+76\\)\n\\(t=\\)",
+    "section": "Strategy for Trig Integrals",
+    "text": "Strategy for Trig Integrals\nFor \\(\\int \\cos^j x\\sin^k x\\,dx\\):\n\nIf \\(k\\) is odd, save one \\(\\sin x\\) and convert remaining powers to cosine.\nIf \\(j\\) is odd, save one \\(\\cos x\\) and convert remaining powers to sine.\nIf both \\(j\\) and \\(k\\) are even, use power-reducing identities.",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#integrals-with-secant-and-tangent",
+    "href": "classes/13/slides.html#integrals-with-secant-and-tangent",
+    "title": "Trigonometric Techniques",
+    "section": "Integrals with Secant and Tangent",
+    "text": "Integrals with Secant and Tangent\nUseful identities: \\(\\sec^2 x=1+\\tan^2 x\\)\n\\(\\tan^2 x=\\sec^2 x-1\\)\nFor \\(\\int \\tan^k x\\sec^j x\\,dx\\):\n\nIf \\(j\\) is even and \\(j\\ge 2\\), save \\(\\sec^2 x\\,dx\\) and use \\(u=\\tan x\\).\nIf \\(k\\) is odd and \\(j\\ge 1\\), save \\(\\sec x\\tan x\\,dx\\) and use \\(u=\\sec x\\).",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#sec-and-tangent-example",
+    "href": "classes/13/slides.html#sec-and-tangent-example",
+    "title": "Trigonometric Techniques",
+    "section": "Sec and Tangent Example",
+    "text": "Sec and Tangent Example\nEvaluate \\(\\int \\sec^5 x\\tan x\\,dx\\).\nRewrite:\n\\(\\int \\sec^5 x\\tan x\\,dx\n=\\int \\sec^4 x(\\sec x\\tan x)\\,dx\\)\nLet \\(u=\\sec x\\), so \\(du=\\sec x\\tan x\\,dx\\).\n\\(\\int u^4\\,du=\\frac{1}{5}u^5+C\\)\nTherefore,\n\\(\\int \\sec^5 x\\tan x\\,dx=\\frac{1}{5}\\sec^5 x+C\\)",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#trigonometric-substitutions",
+    "href": "classes/13/slides.html#trigonometric-substitutions",
+    "title": "Trigonometric Techniques",
+    "section": "Trigonometric Substitutions",
+    "text": "Trigonometric Substitutions\nTrigonometric substitution rewrites algebraic expressions as trigonometric integrals.\nUse:\n\\(\\sqrt{a^2-x^2}: \\quad x=a\\sin\\theta\\)\n\\(\\sqrt{a^2+x^2}: \\quad x=a\\tan\\theta\\)\n\\(\\sqrt{x^2-a^2}: \\quad x=a\\sec\\theta\\)",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#integrals-with-sqrta2-x2",
+    "href": "classes/13/slides.html#integrals-with-sqrta2-x2",
+    "title": "Trigonometric Techniques",
+    "section": "Integrals with \\(\\sqrt{a^2-x^2}\\)",
+    "text": "Integrals with \\(\\sqrt{a^2-x^2}\\)\nMake the substitution \\(x=a\\sin\\theta\\) and \\(dx=a\\cos\\theta\\,d\\theta\\).\nThis gives\n\\(\\sqrt{a^2-x^2}=a\\cos\\theta\\)\nfor \\(-\\frac{\\pi}{2}\\le\\theta\\le\\frac{\\pi}{2}\\).",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#strategy-for-sqrta2-x2",
+    "href": "classes/13/slides.html#strategy-for-sqrta2-x2",
+    "title": "Trigonometric Techniques",
+    "section": "Strategy for \\(\\sqrt{a^2-x^2}\\)",
+    "text": "Strategy for \\(\\sqrt{a^2-x^2}\\)\n\nCheck whether the integral can be evaluated easily in another way.\nSubstitute \\(x=a\\sin\\theta\\) and \\(dx=a\\cos\\theta\\,d\\theta\\).\nSimplify the expression.\nEvaluate the trigonometric integral.\nUse a reference triangle to rewrite the result in terms of \\(x\\)",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#example-1-1",
+    "href": "classes/13/slides.html#example-1-1",
+    "title": "Trigonometric Techniques",
+    "section": "Example 1",
+    "text": "Example 1\nEvaluate \\(\\int \\sqrt{9-x^2}\\,dx\\).\nUse \\(x=3\\sin\\theta\\) and \\(dx=3\\cos\\theta\\,d\\theta\\).\n\\(\\int \\sqrt{9-x^2}\\,dx=\\int 9\\cos^2\\theta\\,d\\theta\\)\n\\(=\\int 9\\left(\\frac{1}{2}+\\frac{1}{2}\\cos(2\\theta)\\right)d\\theta\\)\n\\(=\\frac{9}{2}\\theta+\\frac{9}{4}\\sin(2\\theta)+C\\)\n\\(=\\frac{9}{2}\\sin^{-1}\\left(\\frac{x}{3}\\right)+\\frac{x\\sqrt{9-x^2}}{2}+C\\)",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#expression-involving-sqrta2x2",
+    "href": "classes/13/slides.html#expression-involving-sqrta2x2",
+    "title": "Trigonometric Techniques",
+    "section": "Expression Involving \\(\\sqrt{a^2+x^2}\\)",
+    "text": "Expression Involving \\(\\sqrt{a^2+x^2}\\)\nFor integrals containing \\(\\sqrt{a^2+x^2}\\), use\n\\(x=a\\tan\\theta\\)\nand\n\\(dx=a\\sec^2\\theta\\,d\\theta\\).\nThen\n$ =a$.",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#strategy-for-sqrta2x2",
+    "href": "classes/13/slides.html#strategy-for-sqrta2x2",
+    "title": "Trigonometric Techniques",
+    "section": "Strategy for \\(\\sqrt{a^2+x^2}\\)",
+    "text": "Strategy for \\(\\sqrt{a^2+x^2}\\)\n\nCheck whether the integral can be evaluated easily by another method.\nSubstitute \\(x=a\\tan\\theta\\) and \\(dx=a\\sec^2\\theta\\,d\\theta\\).\nSimplify the expression.\nEvaluate the trigonometric integral.\nUse a reference triangle to rewrite the result in terms of \\(x\\).",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#example-2-1",
+    "href": "classes/13/slides.html#example-2-1",
+    "title": "Trigonometric Techniques",
+    "section": "Example 2",
+    "text": "Example 2\nEvaluate $ using \\(x=\\tan\\theta\\) and \\(dx=\\sec^2\\theta\\,d\\theta\\).\n\n\\(\\int \\frac{dx}{\\sqrt{1+x^2}}=\\int \\sec\\theta\\,d\\theta\\)\n\\(=\\ln|\\sec\\theta+\\tan\\theta|+C\\)\n\\(=\\ln|\\sqrt{1+x^2}+x|+C\\)",
+    "crumbs": [
+      "Class Material",
+      "Trigonometric Techniques"
+    ]
+  },
+  {
+    "objectID": "classes/13/slides.html#example-3",
+    "href": "classes/13/slides.html#example-3",
+    "title": "Trigonometric Techniques",
+    "section": "Example 3",
+    "text": "Example 3\nFind the length of the curve \\(y=x^2\\) over \\([0,\\frac{1}{2}]\\).\n\nSince \\(\\frac{dy}{dx}=2x\\),\n\\(L=\\int_0^{1/2}\\sqrt{1+(2x)^2}\\,dx\\)\n\\(=\\int_0^{1/2}\\sqrt{1+4x^2}\\,dx\\)\nUse \\(x=\\frac{1}{2}\\tan\\theta\\).\n\\(L=\\frac{1}{2}\\int_0^{\\pi/4}\\sec^3\\theta\\,d\\theta\\)\n\\(=\\frac{1}{4}\\left(\\sqrt{2}+\\ln(\\sqrt{2}+1)\\right)\\)",
     "crumbs": [
       "Class Material",
       "Trigonometric Techniques"

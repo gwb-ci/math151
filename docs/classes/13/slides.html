@@ -139,110 +139,176 @@
 <h2>Trigonometric Techniques</h2>
 <p>Class Session Goals:</p>
 <ul>
-<li>Use the exponential growth model in applications, including population growth.</li>
-<li>Use the exponential decay model in applications, including radioactive decay and Newton’s law of cooling.</li>
-<li>Explain the concept of half-life.</li>
+<li>Use trigonometric identities to simplify integrals.</li>
+<li>Evaluate trigonometric integrals involving powers of sine, cosine, secant, and tangent.</li>
+<li>Use trigonometric substitution for integrals involving square roots of quadratic expressions.</li>
 </ul>
 </section>
-<section id="what-is-a-differential-equation" class="slide level2">
-<h2>What is a Differential Equation?</h2>
-<p><span class="math display">\[
-y=y_0e^{kt}
-\]</span></p>
-<p>where <span class="math inline">\(y_0\)</span> represents the initial state of the system and <span class="math inline">\(k&gt;0\)</span> is the growth constant.</p>
-<p>If we take the derivative, we have</p>
-<p><span class="math display">\[
-y'=ky_0e^{kt}=ky
-\]</span></p>
-<p>This says that rate of growth is proportional to the current function value. This is the feature that defines exponential growth. This equation involves derivatives and is called a differential equation.</p>
+<section id="useful-trigonometric-identities" class="slide level2">
+<h2>Useful Trigonometric Identities</h2>
+<p><span class="math inline">\(\sin^2 x+\cos^2 x=1\)</span></p>
+<p><span class="math inline">\(\sec^2 x=1+\tan^2 x\)</span></p>
+<p><span class="math inline">\(\cos(2x)=\cos^2 x-\sin^2 x\)</span></p>
+<p><span class="math inline">\(\sin(2x)=2\sin x\cos x\)</span></p>
+<p><span class="math inline">\(\sin^2 x=\frac{1-\cos(2x)}{2}\)</span></p>
+<p><span class="math inline">\(\cos^2 x=\frac{1+\cos(2x)}{2}\)</span></p>
+<p><span class="math inline">\(\frac{1}{\sin x}=\csc x\)</span></p>
+<p><span class="math inline">\(\frac{1}{\cos x}=\sec x\)</span></p>
+<p><span class="math inline">\(\tan x=\frac{\sin x}{\cos x}\)</span></p>
 </section>
-<section id="change-in-amount-is-proportional-to-amount" class="slide level2">
-<h2>Change in amount is proportional to amount</h2>
-<p>If a quantity <span class="math inline">\(y\)</span> changes at a rate proportional to the current amount, then</p>
-<p><span class="math display">\[
-y'=ky.
-\]</span></p>
-<p>For growth, <span class="math inline">\(k&gt;0\)</span> and the model is</p>
-<p><span class="math display">\[
-y=y_0e^{kt}.
-\]</span></p>
-<p>For decay, <span class="math inline">\(k&gt;0\)</span> and the model is</p>
-<p><span class="math display">\[
-y=y_0e^{-kt}.
-\]</span></p>
+<section id="antiderivatives-for-trigonometric-functions" class="slide level2">
+<h2>Antiderivatives for Trigonometric Functions</h2>
+<p><span class="math inline">\(\int \sin x\,dx=-\cos x+C\)</span></p>
+<p><span class="math inline">\(\int \cos x\,dx=\sin x+C\)</span></p>
+<p><span class="math inline">\(\int \sec^2 x\,dx=\tan x+C\)</span></p>
+<p><span class="math inline">\(\int \sec x\tan x\,dx=\sec x+C\)</span></p>
+<p><span class="math inline">\(\int \tan x\,dx=\ln|\sec x|+C\)</span></p>
+<p><span class="math inline">\(\int \sec x\,dx=\ln|\sec x+\tan x|+C\)</span></p>
 </section>
-<section id="doubling-time" class="slide level2">
-<h2>Doubling Time</h2>
-<p>For an exponential growth model <span class="math inline">\(y(t)=y_0e^{kt}\)</span> with <span class="math inline">\(k&gt;0\)</span>, the <strong>doubling time</strong> <span class="math inline">\(T\)</span> is the time required for the population to double.</p>
-<p>Set <span class="math inline">\(P(T)=2P_0\)</span> and solve for <span class="math inline">\(T\)</span>.</p>
-<p><span class="math display">\[T=\frac{\ln 2}{k}.\]</span></p>
+<section id="what-is-a-trigonometric-integral" class="slide level2">
+<h2>What is a Trigonometric Integral?</h2>
+<p>Trigonometric integrals are integrals involving products and powers of trigonometric functions. For example <span class="math inline">\(\int \cos^j x\sin^k x\,dx\)</span>.</p>
+<p>A key idea is rewriting expressions as sums and differences of integrals of the form</p>
+<p><span class="math inline">\(\int \sin^j x\cos x\,dx\)</span> or <span class="math inline">\(\int \cos^j x\sin x\,dx\)</span></p>
+<p>and then using <span class="math inline">\(u\)</span>-substitution.</p>
 </section>
-<section id="population-growth-example" class="slide level2">
-<h2>Population Growth Example</h2>
-<p>Consider the population of bacteria described earlier. This population grows according to the function <span class="math inline">\(f(t)=200e^{0.02t}\)</span>, where <span class="math inline">\(t\)</span> is measured in minutes.</p>
-<ul>
-<li>How many bacteria are present in the population after <span class="math inline">\(5\)</span> hours <span class="math inline">\((300\)</span> minutes<span class="math inline">\()\)</span>?</li>
-<li>When does the population reach <span class="math inline">\(100,000\)</span> bacteria?</li>
-<li>What is the doubling time?</li>
-</ul>
+<section id="example-1" class="slide level2">
+<h2>Example 1</h2>
+<p>Evaluate <span class="math inline">\(\int \cos^3 x\sin x\,dx\)</span>.</p>
 <div class="fragment">
-<ul>
-<li><span class="math inline">\(f(300)=200e^{0.02(300)}\approx 80,686\)</span></li>
-<li>The population reaches <span class="math inline">\(100,000\)</span> bacteria after <span class="math inline">\(310.73\)</span> minutes.</li>
-<li><span class="math inline">\(T= \frac{\ln 2}{.002}\)</span></li>
-</ul>
+<p><span class="math inline">\(=-\frac{1}{4}\cos^4 x+C\)</span></p>
 </div>
 </section>
-<section id="exponential-decay" class="slide level2">
-<h2>Exponential Decay</h2>
-<p>Exponential functions can also be used to model populations that shrink, or chemical compounds that break down over time.</p>
-<p>Systems that exhibit exponential decay behave according to the model</p>
-<p><span class="math display">\[
-y=y_0e^{-kt},
-\]</span></p>
-<p>where <span class="math inline">\(y_0\)</span> represents the initial state of the system and <span class="math inline">\(k&gt;0\)</span> is the decay constant.</p>
-</section>
-<section id="half-life" class="slide level2">
-<h2>Half-Life</h2>
-<p>For an exponential decay model <span class="math inline">\(y(t)=y_0e^{kt}\)</span> with <span class="math inline">\(k&lt;0\)</span>, the <strong>half-life</strong> <span class="math inline">\(T\)</span> is the time required for the quantity to decrease to half its initial value.</p>
-<p>Set <span class="math inline">\(P(T)=\frac{1}{2}P_0\)</span> and solve for <span class="math inline">\(T\)</span>.</p>
-<p><span class="math display">\[T=-\frac{\ln 2}{k}.\]</span></p>
-</section>
-<section id="radioactive-decay-example" class="slide level2">
-<h2>Radioactive Decay Example</h2>
-<p>The half-life of carbon-<span class="math inline">\(14\)</span> is approximately <span class="math inline">\(5730\)</span> years. Suppose you have 100g of Carbon-14. How long until only 25g remaints?</p>
-<p>We have</p>
-<p><span class="math display">\[
-5730=\frac{\ln 2}{k},\quad k=\frac{\ln 2}{5730}.
-\]</span></p>
-<p>So, <span class="math inline">\(y=100e^{-(\ln 2/5730)t}\)</span></p>
+<section id="example-2" class="slide level2">
+<h2>Example 2</h2>
+<p>Evaluate <span class="math inline">\(\int \cos^2 x\sin^3 x\,dx\)</span>.</p>
 <div class="fragment">
-<p><span class="math inline">\(2t=100e^{-(\ln 2/5730)t}\)</span> So <span class="math inline">\(t=11460\)</span>.</p>
+<p><span class="math inline">\(=\frac{1}{5}\cos^5 x-\frac{1}{3}\cos^3 x+C\)</span></p>
 </div>
 </section>
-<section id="newtons-law-of-cooling" class="slide level2">
-<h2>Newtons Law of Cooling</h2>
-<p>Newton’s law of cooling says that an object cools at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings.</p>
-<p>If <span class="math inline">\(T\)</span> represents the temperature of the object and <span class="math inline">\(T_a\)</span> represents the ambient temperature in a room, then</p>
-<p><span class="math display">\[
-T'=-k(T-T_a).
-\]</span></p>
-<p>The model is <span class="math inline">\(T=(T_0-T_a)e^{-kt}+T_a\)</span> where <span class="math inline">\(T_0\)</span> represents the initial temperature.</p>
+<section id="trig-integrals-with-odd-powers" class="slide level2">
+<h2>Trig Integrals with odd powers</h2>
+<p>To integrate <span class="math inline">\(\int \cos^j x\sin^k x\,dx\)</span>:</p>
+<p>If <span class="math inline">\(k\)</span> is odd, rewrite <span class="math inline">\(\sin^k x=\sin^{k-1}x\sin x\)</span> and use <span class="math inline">\(\sin^2 x=1-\cos^2 x\)</span>.</p>
+<p>If <span class="math inline">\(j\)</span> is odd, rewrite <span class="math inline">\(\cos^j x=\cos^{j-1}x\cos x\)</span> and use <span class="math inline">\(\cos^2 x=1-\sin^2 x\)</span>.</p>
 </section>
-<section id="newtons-law-example" class="slide level2">
-<h2>Newton’s Law Example</h2>
-<p>Suppose coffee is poured at a temperature of <span class="math inline">\(196^\circ\text{F}\)</span>, and after <span class="math inline">\(2\)</span> minutes in a <span class="math inline">\(76^\circ\text{F}\)</span> room it has cooled to <span class="math inline">\(186^\circ\text{F}\)</span>.</p>
-<ul>
-<li>Calculate <span class="math inline">\(k\)</span></li>
-<li>Find the model for tempature with respect to time</li>
-<li>When will the coffee be 170 degrees?</li>
-</ul>
+<section id="power-reducing-identities" class="slide level2">
+<h2>Power reducing identities</h2>
+<p>When powers of sine and cosine are both even, use</p>
+<p><span class="math inline">\(\sin^2 x=\frac{1}{2}-\frac{1}{2}\cos(2x)\)</span></p>
+<p>and</p>
+<p><span class="math inline">\(\cos^2 x=\frac{1}{2}+\frac{1}{2}\cos(2x)\)</span>.</p>
+<p>These are called power-reducing identities.</p>
+</section>
+<section id="example-with-even-powers" class="slide level2">
+<h2>Example with even powers</h2>
+<p>Evaluate <span class="math inline">\(\int \sin^4 x\,dx\)</span> by using <span class="math inline">\(\sin^2 x=\frac{1}{2}-\frac{1}{2}\cos(2x)\)</span>.</p>
 <div class="fragment">
+<p><span class="math inline">\(=\frac{3}{8}x-\frac{1}{4}\sin(2x)+\frac{1}{32}\sin(4x)+C\)</span></p>
+</div>
+</section>
+<section id="strategy-for-trig-integrals" class="slide level2">
+<h2>Strategy for Trig Integrals</h2>
+<p>For <span class="math inline">\(\int \cos^j x\sin^k x\,dx\)</span>:</p>
+<ol type="1">
+<li>If <span class="math inline">\(k\)</span> is odd, save one <span class="math inline">\(\sin x\)</span> and convert remaining powers to cosine.</li>
+<li>If <span class="math inline">\(j\)</span> is odd, save one <span class="math inline">\(\cos x\)</span> and convert remaining powers to sine.</li>
+<li>If both <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span> are even, use power-reducing identities.</li>
+</ol>
+</section>
+<section id="integrals-with-secant-and-tangent" class="slide level2">
+<h2>Integrals with Secant and Tangent</h2>
+<p>Useful identities: <span class="math inline">\(\sec^2 x=1+\tan^2 x\)</span></p>
+<p><span class="math inline">\(\tan^2 x=\sec^2 x-1\)</span></p>
+<p>For <span class="math inline">\(\int \tan^k x\sec^j x\,dx\)</span>:</p>
 <ul>
-<li><span class="math inline">\(k=\)</span></li>
-<li><span class="math inline">\(T(t)=50e^{t}+76\)</span></li>
-<li><span class="math inline">\(t=\)</span></li>
+<li>If <span class="math inline">\(j\)</span> is even and <span class="math inline">\(j\ge 2\)</span>, save <span class="math inline">\(\sec^2 x\,dx\)</span> and use <span class="math inline">\(u=\tan x\)</span>.</li>
+<li>If <span class="math inline">\(k\)</span> is odd and <span class="math inline">\(j\ge 1\)</span>, save <span class="math inline">\(\sec x\tan x\,dx\)</span> and use <span class="math inline">\(u=\sec x\)</span>.</li>
 </ul>
+</section>
+<section id="sec-and-tangent-example" class="slide level2">
+<h2>Sec and Tangent Example</h2>
+<p>Evaluate <span class="math inline">\(\int \sec^5 x\tan x\,dx\)</span>.</p>
+<p>Rewrite:</p>
+<p><span class="math inline">\(\int \sec^5 x\tan x\,dx
+=\int \sec^4 x(\sec x\tan x)\,dx\)</span></p>
+<p>Let <span class="math inline">\(u=\sec x\)</span>, so <span class="math inline">\(du=\sec x\tan x\,dx\)</span>.</p>
+<p><span class="math inline">\(\int u^4\,du=\frac{1}{5}u^5+C\)</span></p>
+<p>Therefore,</p>
+<p><span class="math inline">\(\int \sec^5 x\tan x\,dx=\frac{1}{5}\sec^5 x+C\)</span></p>
+</section>
+<section id="trigonometric-substitutions" class="slide level2">
+<h2>Trigonometric Substitutions</h2>
+<p>Trigonometric substitution rewrites algebraic expressions as trigonometric integrals.</p>
+<p>Use:</p>
+<p><span class="math inline">\(\sqrt{a^2-x^2}: \quad x=a\sin\theta\)</span></p>
+<p><span class="math inline">\(\sqrt{a^2+x^2}: \quad x=a\tan\theta\)</span></p>
+<p><span class="math inline">\(\sqrt{x^2-a^2}: \quad x=a\sec\theta\)</span></p>
+</section>
+<section id="integrals-with-sqrta2-x2" class="slide level2">
+<h2>Integrals with <span class="math inline">\(\sqrt{a^2-x^2}\)</span></h2>
+<p>Make the substitution <span class="math inline">\(x=a\sin\theta\)</span> and <span class="math inline">\(dx=a\cos\theta\,d\theta\)</span>.</p>
+<p>This gives</p>
+<p><span class="math inline">\(\sqrt{a^2-x^2}=a\cos\theta\)</span></p>
+<p>for <span class="math inline">\(-\frac{\pi}{2}\le\theta\le\frac{\pi}{2}\)</span>.</p>
+</section>
+<section id="strategy-for-sqrta2-x2" class="slide level2">
+<h2>Strategy for <span class="math inline">\(\sqrt{a^2-x^2}\)</span></h2>
+<ol type="1">
+<li>Check whether the integral can be evaluated easily in another way.</li>
+<li>Substitute <span class="math inline">\(x=a\sin\theta\)</span> and <span class="math inline">\(dx=a\cos\theta\,d\theta\)</span>.</li>
+<li>Simplify the expression.</li>
+<li>Evaluate the trigonometric integral.</li>
+<li>Use a reference triangle to rewrite the result in terms of <span class="math inline">\(x\)</span></li>
+</ol>
+</section>
+<section id="example-1-1" class="slide level2">
+<h2>Example 1</h2>
+<p>Evaluate <span class="math inline">\(\int \sqrt{9-x^2}\,dx\)</span>.</p>
+<p>Use <span class="math inline">\(x=3\sin\theta\)</span> and <span class="math inline">\(dx=3\cos\theta\,d\theta\)</span>.</p>
+<p><span class="math inline">\(\int \sqrt{9-x^2}\,dx=\int 9\cos^2\theta\,d\theta\)</span></p>
+<p><span class="math inline">\(=\int 9\left(\frac{1}{2}+\frac{1}{2}\cos(2\theta)\right)d\theta\)</span></p>
+<p><span class="math inline">\(=\frac{9}{2}\theta+\frac{9}{4}\sin(2\theta)+C\)</span></p>
+<p><span class="math inline">\(=\frac{9}{2}\sin^{-1}\left(\frac{x}{3}\right)+\frac{x\sqrt{9-x^2}}{2}+C\)</span></p>
+</section>
+<section id="expression-involving-sqrta2x2" class="slide level2">
+<h2>Expression Involving <span class="math inline">\(\sqrt{a^2+x^2}\)</span></h2>
+<p>For integrals containing <span class="math inline">\(\sqrt{a^2+x^2}\)</span>, use</p>
+<p><span class="math inline">\(x=a\tan\theta\)</span></p>
+<p>and</p>
+<p><span class="math inline">\(dx=a\sec^2\theta\,d\theta\)</span>.</p>
+<p>Then</p>
+<p>$ =a$.</p>
+</section>
+<section id="strategy-for-sqrta2x2" class="slide level2">
+<h2>Strategy for <span class="math inline">\(\sqrt{a^2+x^2}\)</span></h2>
+<ol type="1">
+<li>Check whether the integral can be evaluated easily by another method.</li>
+<li>Substitute <span class="math inline">\(x=a\tan\theta\)</span> and <span class="math inline">\(dx=a\sec^2\theta\,d\theta\)</span>.</li>
+<li>Simplify the expression.</li>
+<li>Evaluate the trigonometric integral.</li>
+<li>Use a reference triangle to rewrite the result in terms of <span class="math inline">\(x\)</span>.</li>
+</ol>
+</section>
+<section id="example-2-1" class="slide level2">
+<h2>Example 2</h2>
+<p>Evaluate $ using <span class="math inline">\(x=\tan\theta\)</span> and <span class="math inline">\(dx=\sec^2\theta\,d\theta\)</span>.</p>
+<div class="fragment">
+<p><span class="math inline">\(\int \frac{dx}{\sqrt{1+x^2}}=\int \sec\theta\,d\theta\)</span></p>
+<p><span class="math inline">\(=\ln|\sec\theta+\tan\theta|+C\)</span></p>
+<p><span class="math inline">\(=\ln|\sqrt{1+x^2}+x|+C\)</span></p>
+</div>
+</section>
+<section id="example-3" class="slide level2">
+<h2>Example 3</h2>
+<p>Find the length of the curve <span class="math inline">\(y=x^2\)</span> over <span class="math inline">\([0,\frac{1}{2}]\)</span>.</p>
+<div class="fragment">
+<p>Since <span class="math inline">\(\frac{dy}{dx}=2x\)</span>,</p>
+<p><span class="math inline">\(L=\int_0^{1/2}\sqrt{1+(2x)^2}\,dx\)</span></p>
+<p><span class="math inline">\(=\int_0^{1/2}\sqrt{1+4x^2}\,dx\)</span></p>
+<p>Use <span class="math inline">\(x=\frac{1}{2}\tan\theta\)</span>.</p>
+<p><span class="math inline">\(L=\frac{1}{2}\int_0^{\pi/4}\sec^3\theta\,d\theta\)</span></p>
+<p><span class="math inline">\(=\frac{1}{4}\left(\sqrt{2}+\ln(\sqrt{2}+1)\right)\)</span></p>
 </div>
 </section>
 <section class="slide level2">

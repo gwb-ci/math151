@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <title>Math 151 - Calculus II – Exponential Models</title>
+  <title>Math 151 - Calculus II – Inproper Integrals</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,121 +129,224 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Exponential Models</h1>
+  <h1 class="title">Inproper Integrals</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="exponential-models" class="slide level2">
-<h2>Exponential Models</h2>
+<section id="improper-integrals" class="slide level2">
+<h2>Improper Integrals</h2>
 <p>Class Session Goals:</p>
 <ul>
-<li>Use the exponential growth model in applications, including population growth.</li>
-<li>Use the exponential decay model in applications, including radioactive decay and Newton’s law of cooling.</li>
-<li>Explain the concept of half-life.</li>
+<li>Evaluate an integral over an infinite interval.</li>
+<li>Evaluate an integral over a closed interval with an infinite discontinuity within the interval.</li>
+<li>Use the comparison theorem to determine whether a definite integral is convergent.</li>
 </ul>
 </section>
-<section id="what-is-a-differential-equation" class="slide level2">
-<h2>What is a Differential Equation?</h2>
-<p><span class="math display">\[
-y=y_0e^{kt}
-\]</span></p>
-<p>where <span class="math inline">\(y_0\)</span> represents the initial state of the system and <span class="math inline">\(k&gt;0\)</span> is the growth constant.</p>
-<p>If we take the derivative, we have</p>
-<p><span class="math display">\[
-y'=ky_0e^{kt}=ky
-\]</span></p>
-<p>This says that rate of growth is proportional to the current function value. This is the feature that defines exponential growth. This equation involves derivatives and is called a differential equation.</p>
+<section id="what-is-an-improper-integral" class="slide level2">
+<h2>What is an Improper Integral?</h2>
+<p>In this section, we define integrals over an infinite interval as well as integrals of functions containing a discontinuity on the interval.</p>
+<p>Integrals of these types are called improper integrals.</p>
+<p>We examine several techniques for evaluating improper integrals, all of which involve taking limits.</p>
 </section>
-<section id="change-in-amount-is-proportional-to-amount" class="slide level2">
-<h2>Change in amount is proportional to amount</h2>
-<p>If a quantity <span class="math inline">\(y\)</span> changes at a rate proportional to the current amount, then</p>
-<p><span class="math display">\[
-y'=ky.
-\]</span></p>
-<p>For growth, <span class="math inline">\(k&gt;0\)</span> and the model is</p>
-<p><span class="math display">\[
-y=y_0e^{kt}.
-\]</span></p>
-<p>For decay, <span class="math inline">\(k&gt;0\)</span> and the model is</p>
-<p><span class="math display">\[
-y=y_0e^{-kt}.
-\]</span></p>
+<section id="integrating-over-an-infinite-interval" class="slide level2">
+<h2>Integrating over an Infinite Interval</h2>
+<p>To integrate a function over an infinite interval, we consider the limit of the integral as the limit increases without bound.</p>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\([a,+\infty)\)</span>, then</p>
+<p>$ <em>a^{+} f(x),dx=</em>{t+}_a^t f(x),dx$</p>
+<p>provided this limit exists.</p>
 </section>
-<section id="doubling-time" class="slide level2">
-<h2>Doubling Time</h2>
-<p>For an exponential growth model <span class="math inline">\(y(t)=y_0e^{kt}\)</span> with <span class="math inline">\(k&gt;0\)</span>, the <strong>doubling time</strong> <span class="math inline">\(T\)</span> is the time required for the population to double.</p>
-<p>Set <span class="math inline">\(P(T)=2P_0\)</span> and solve for <span class="math inline">\(T\)</span>.</p>
-<p><span class="math display">\[T=\frac{\ln 2}{k}.\]</span></p>
+<section id="infinite-interval-to-the-left" class="slide level2">
+<h2>Infinite Interval to the Left</h2>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\((-\infty,b]\)</span>, then</p>
+<p>$ <em>{-}^{b} f(x),dx=</em>{t-}_t^b f(x),dx$</p>
+<p>provided this limit exists.</p>
+<p>In each case, if the limit exists, then the improper integral is said to converge.</p>
+<p>If the limit does not exist, then the improper integral is said to diverge.</p>
 </section>
-<section id="population-growth-example" class="slide level2">
-<h2>Population Growth Example</h2>
-<p>Consider the population of bacteria described earlier. This population grows according to the function <span class="math inline">\(f(t)=200e^{0.02t}\)</span>, where <span class="math inline">\(t\)</span> is measured in minutes.</p>
-<ul>
-<li>How many bacteria are present in the population after <span class="math inline">\(5\)</span> hours <span class="math inline">\((300\)</span> minutes<span class="math inline">\()\)</span>?</li>
-<li>When does the population reach <span class="math inline">\(100,000\)</span> bacteria?</li>
-<li>What is the doubling time?</li>
-</ul>
-<div class="fragment">
-<ul>
-<li><span class="math inline">\(f(300)=200e^{0.02(300)}\approx 80,686\)</span></li>
-<li>The population reaches <span class="math inline">\(100,000\)</span> bacteria after <span class="math inline">\(310.73\)</span> minutes.</li>
-<li><span class="math inline">\(T= \frac{\ln 2}{.002}\)</span></li>
-</ul>
-</div>
+<section id="infinite-interval-in-both-directions" class="slide level2">
+<h2>Infinite Interval in Both Directions</h2>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\((-\infty,+\infty)\)</span>, then</p>
+<p>$ <em>{-}^{+} f(x),dx=</em>{-}<sup>{0}f(x),dx+_{0}</sup>{+}f(x),dx$</p>
+<p>provided that both integrals converge.</p>
+<p>If either one or both of these two integrals diverge, then</p>
+<p>$ _{-}^{+} f(x),dx$</p>
+<p>diverges.</p>
 </section>
-<section id="exponential-decay" class="slide level2">
-<h2>Exponential Decay</h2>
-<p>Exponential functions can also be used to model populations that shrink, or chemical compounds that break down over time.</p>
-<p>Systems that exhibit exponential decay behave according to the model</p>
-<p><span class="math display">\[
-y=y_0e^{-kt},
-\]</span></p>
-<p>where <span class="math inline">\(y_0\)</span> represents the initial state of the system and <span class="math inline">\(k&gt;0\)</span> is the decay constant.</p>
+<section id="example-3.47-finding-an-area" class="slide level2">
+<h2>Example 3.47: Finding an Area</h2>
+<p>Determine whether the area between the graph of <span class="math inline">\(f(x)=\frac{1}{x}\)</span> and the <span class="math inline">\(x\)</span>-axis over the interval <span class="math inline">\([1,+\infty)\)</span> is finite or infinite.</p>
+<p>$ A=_1^,dx$</p>
+<p><span class="math inline">\(=\lim_{t\to+\infty}\int_1^t\frac{1}{x}\,dx\)</span></p>
+<p><span class="math inline">\(=\lim_{t\to+\infty}\ln|x|\bigg|_1^t\)</span></p>
+<p><span class="math inline">\(=\lim_{t\to+\infty}(\ln|t|-\ln 1)=+\infty\)</span></p>
+<p>Since the improper integral diverges to <span class="math inline">\(+\infty\)</span>, the area of the region is infinite.</p>
 </section>
-<section id="half-life" class="slide level2">
-<h2>Half-Life</h2>
-<p>For an exponential decay model <span class="math inline">\(y(t)=y_0e^{kt}\)</span> with <span class="math inline">\(k&lt;0\)</span>, the <strong>half-life</strong> <span class="math inline">\(T\)</span> is the time required for the quantity to decrease to half its initial value.</p>
-<p>Set <span class="math inline">\(P(T)=\frac{1}{2}P_0\)</span> and solve for <span class="math inline">\(T\)</span>.</p>
-<p><span class="math display">\[T=-\frac{\ln 2}{k}.\]</span></p>
+<section id="example-3.48-finding-a-volume" class="slide level2">
+<h2>Example 3.48: Finding a Volume</h2>
+<p>Find the volume of the solid obtained by revolving the region bounded by the graph of <span class="math inline">\(f(x)=\frac{1}{x}\)</span> and the <span class="math inline">\(x\)</span>-axis over <span class="math inline">\([1,+\infty)\)</span> about the <span class="math inline">\(x\)</span>-axis.</p>
+<p>Using the disk method,</p>
+<p>$ V=_1<sup>{+}\frac{1}{x</sup>2},dx$</p>
+<p><span class="math inline">\(=\pi\lim_{t\to+\infty}\int_1^t\frac{1}{x^2}\,dx\)</span></p>
+<p><span class="math inline">\(=\pi\lim_{t\to+\infty}\left(-\frac{1}{x}\right)\bigg|_1^t\)</span></p>
+<p><span class="math inline">\(=\pi\lim_{t\to+\infty}\left(-\frac{1}{t}+1\right)=\pi\)</span></p>
 </section>
-<section id="radioactive-decay-example" class="slide level2">
-<h2>Radioactive Decay Example</h2>
-<p>The half-life of carbon-<span class="math inline">\(14\)</span> is approximately <span class="math inline">\(5730\)</span> years. Suppose you have 100g of Carbon-14. How long until only 25g remaints?</p>
-<p>We have</p>
-<p><span class="math display">\[
-5730=\frac{\ln 2}{k},\quad k=\frac{\ln 2}{5730}.
-\]</span></p>
-<p>So, <span class="math inline">\(y=100e^{-(\ln 2/5730)t}\)</span></p>
-<div class="fragment">
-<p><span class="math inline">\(2t=100e^{-(\ln 2/5730)t}\)</span> So <span class="math inline">\(t=11460\)</span>.</p>
-</div>
+<section id="gabriels-horn" class="slide level2">
+<h2>Gabriel’s Horn</h2>
+<p>Although the area of the region between the <span class="math inline">\(x\)</span>-axis and the graph of <span class="math inline">\(f(x)=1/x\)</span> over <span class="math inline">\([1,+\infty)\)</span> is infinite, the volume of the solid generated by revolving this region about the <span class="math inline">\(x\)</span>-axis is finite.</p>
+<p>The solid generated is known as Gabriel’s Horn.</p>
 </section>
-<section id="newtons-law-of-cooling" class="slide level2">
-<h2>Newtons Law of Cooling</h2>
-<p>Newton’s law of cooling says that an object cools at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings.</p>
-<p>If <span class="math inline">\(T\)</span> represents the temperature of the object and <span class="math inline">\(T_a\)</span> represents the ambient temperature in a room, then</p>
-<p><span class="math display">\[
-T'=-k(T-T_a).
-\]</span></p>
-<p>The model is <span class="math inline">\(T=(T_0-T_a)e^{-kt}+T_a\)</span> where <span class="math inline">\(T_0\)</span> represents the initial temperature.</p>
+<section id="example-3.50" class="slide level2">
+<h2>Example 3.50</h2>
+<p>Evaluate $ _{-}<sup>{0}\frac{1}{x</sup>2+4},dx$.</p>
+<p>$ <em>{-}<sup>{0}\frac{1}{x</sup>2+4},dx=</em>{t-}_t<sup>0\frac{1}{x</sup>2+4},dx$</p>
+<p><span class="math inline">\(=\lim_{t\to-\infty}\frac{1}{2}\tan^{-1}\left(\frac{x}{2}\right)\bigg|_t^0\)</span></p>
+<p><span class="math inline">\(=\frac{1}{2}\lim_{t\to-\infty}\left(\tan^{-1}0-\tan^{-1}\left(\frac{t}{2}\right)\right)\)</span></p>
+<p><span class="math inline">\(=\frac{\pi}{4}\)</span></p>
+<p>The improper integral converges to <span class="math inline">\(\frac{\pi}{4}\)</span>.</p>
 </section>
-<section id="newtons-law-example" class="slide level2">
-<h2>Newton’s Law Example</h2>
-<p>Suppose coffee is poured at a temperature of <span class="math inline">\(196^\circ\text{F}\)</span>, and after <span class="math inline">\(2\)</span> minutes in a <span class="math inline">\(76^\circ\text{F}\)</span> room it has cooled to <span class="math inline">\(186^\circ\text{F}\)</span>.</p>
-<ul>
-<li>Calculate <span class="math inline">\(k\)</span></li>
-<li>Find the model for tempature with respect to time</li>
-<li>When will the coffee be 170 degrees?</li>
-</ul>
-<div class="fragment">
-<ul>
-<li><span class="math inline">\(k=\)</span></li>
-<li><span class="math inline">\(T(t)=50e^{t}+76\)</span></li>
-<li><span class="math inline">\(t=\)</span></li>
-</ul>
-</div>
+<section id="example-3.51" class="slide level2">
+<h2>Example 3.51</h2>
+<p>Evaluate $ _{-}<sup>{+}xe</sup>x,dx$.</p>
+<p>Start by splitting up the integral:</p>
+<p>$ <em>{-}<sup>{+}xe</sup>x,dx=</em>{-}<sup>{0}xe</sup>x,dx+_{0}<sup>{+}xe</sup>x,dx$</p>
+<p>If either integral diverges, then</p>
+<p>$ _{-}<sup>{+}xe</sup>x,dx$</p>
+<p>diverges.</p>
+</section>
+<section id="example-3.51-first-integral" class="slide level2">
+<h2>Example 3.51: First Integral</h2>
+<p>$ <em>{-}<sup>{0}xe</sup>x,dx=</em>{t-}_t<sup>0xe</sup>x,dx$</p>
+<p><span class="math inline">\(=\lim_{t\to-\infty}(xe^x-e^x)\bigg|_t^0\)</span></p>
+<p><span class="math inline">\(=\lim_{t\to-\infty}(-1-te^t+e^t)\)</span></p>
+<p><span class="math inline">\(=-1\)</span></p>
+<p>The first improper integral converges.</p>
+</section>
+<section id="example-3.51-second-integral" class="slide level2">
+<h2>Example 3.51: Second Integral</h2>
+<p>$ <em>0<sup>{+}xe</sup>x,dx=</em>{t+}_0^t xe^x,dx$</p>
+<p><span class="math inline">\(=\lim_{t\to+\infty}(xe^x-e^x)\bigg|_0^t\)</span></p>
+<p><span class="math inline">\(=\lim_{t\to+\infty}(te^t-e^t+1)\)</span></p>
+<p><span class="math inline">\(=\lim_{t\to+\infty}((t-1)e^t+1)=+\infty\)</span></p>
+<p>Thus, $ _0<sup>{+}xe</sup>x,dx$ diverges.</p>
+<p>Therefore, $ _{-}<sup>{+}xe</sup>x,dx$ diverges.</p>
+</section>
+<section id="checkpoint-3.27" class="slide level2">
+<h2>Checkpoint 3.27</h2>
+<p>Evaluate</p>
+<p>$ _{-3}<sup>{+}e</sup>{-x},dx$</p>
+<p>State whether the improper integral converges or diverges.</p>
+</section>
+<section id="integrating-a-discontinuous-integrand" class="slide level2">
+<h2>Integrating a Discontinuous Integrand</h2>
+<p>Now let’s examine integrals of functions containing an infinite discontinuity in the interval over which the integration occurs.</p>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\([a,b)\)</span>, then</p>
+<p>$ <em>a^b f(x),dx=</em>{tb<sup>-}_a</sup>t f(x),dx$</p>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\((a,b]\)</span>, then</p>
+<p>$ <em>a^b f(x),dx=</em>{ta<sup>+}_t</sup>b f(x),dx$</p>
+</section>
+<section id="discontinuity-inside-the-interval" class="slide level2">
+<h2>Discontinuity Inside the Interval</h2>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\([a,b]\)</span> except at a point <span class="math inline">\(c\)</span> in <span class="math inline">\((a,b)\)</span>, then</p>
+<p>$ _a^b f(x),dx=_a^c f(x),dx+_c^b f(x),dx$</p>
+<p>provided both integrals converge.</p>
+<p>If either of these integrals diverges, then</p>
+<p>$ _a^b f(x),dx$</p>
+<p>diverges.</p>
+</section>
+<section id="example-3.52" class="slide level2">
+<h2>Example 3.52</h2>
+<p>Evaluate $ _0^4 ,dx$.</p>
+<p>The function <span class="math inline">\(f(x)=\frac{1}{\sqrt{4-x}}\)</span> is continuous over <span class="math inline">\([0,4)\)</span> and discontinuous at <span class="math inline">\(4\)</span>.</p>
+<p>$ <em>0^4 ,dx=</em>{t<sup>-}_0</sup>t,dx$</p>
+<p><span class="math inline">\(=\lim_{t\to4^-}\left(-2\sqrt{4-x}\right)\bigg|_0^t\)</span></p>
+<p><span class="math inline">\(=\lim_{t\to4^-}\left(-2\sqrt{4-t}+4\right)=4\)</span></p>
+<p>The improper integral converges.</p>
+</section>
+<section id="example-3.53" class="slide level2">
+<h2>Example 3.53</h2>
+<p>Evaluate $ _0^2 xx,dx$.</p>
+<p>Since <span class="math inline">\(f(x)=x\ln x\)</span> is continuous over <span class="math inline">\((0,2]\)</span> and is discontinuous at zero,</p>
+<p>$ <em>0^2 xx,dx=</em>{t<sup>+}_t</sup>2 xx,dx$</p>
+<p>Using integration by parts,</p>
+<p><span class="math inline">\(=\lim_{t\to0^+}\left(\frac{1}{2}x^2\ln x-\frac{1}{4}x^2\right)\bigg|_t^2\)</span></p>
+<p><span class="math inline">\(=\lim_{t\to0^+}\left(2\ln2-1-\frac{1}{2}t^2\ln t+\frac{1}{4}t^2\right)\)</span></p>
+<p><span class="math inline">\(=2\ln2-1\)</span></p>
+<p>The improper integral converges.</p>
+</section>
+<section id="example-3.54" class="slide level2">
+<h2>Example 3.54</h2>
+<p>Evaluate $ _{-1}<sup>{1}\frac{1}{x</sup>3},dx$.</p>
+<p>Since <span class="math inline">\(f(x)=1/x^3\)</span> is discontinuous at zero,</p>
+<p>$ <em>{-1}<sup>{1}\frac{1}{x</sup>3},dx=</em>{-1}<sup>{0}\frac{1}{x</sup>3},dx+_0<sup>1\frac{1}{x</sup>3},dx$</p>
+<p>Begin with</p>
+<p>$ <em>{-1}<sup>{0}\frac{1}{x</sup>3},dx=</em>{t<sup>-}_{-1}</sup>{t},dx$</p>
+<p><span class="math inline">\(=\lim_{t\to0^-}\left(-\frac{1}{2x^2}\right)\bigg|_{-1}^{t}\)</span></p>
+<p><span class="math inline">\(=\lim_{t\to0^-}\left(-\frac{1}{2t^2}+\frac{1}{2}\right)=-\infty\)</span></p>
+<p>Therefore, $ _{-1}<sup>{1}\frac{1}{x</sup>3},dx$ diverges.</p>
+</section>
+<section id="checkpoint-3.28" class="slide level2">
+<h2>Checkpoint 3.28</h2>
+<p>Evaluate</p>
+<p>$ _0^2 ,dx$</p>
+<p>State whether the integral converges or diverges.</p>
+</section>
+<section id="a-comparison-theorem" class="slide level2">
+<h2>A Comparison Theorem</h2>
+<p>It is not always easy or even possible to evaluate an improper integral directly.</p>
+<p>By comparing it with another carefully chosen integral, it may be possible to determine its convergence or divergence.</p>
+<p>Suppose <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> are continuous over <span class="math inline">\([a,+\infty)\)</span> and</p>
+<p><span class="math inline">\(0\le f(x)\le g(x)\)</span></p>
+<p>for <span class="math inline">\(x\ge a\)</span>.</p>
+</section>
+<section id="theorem-3.7-a-comparison-theorem" class="slide level2">
+<h2>Theorem 3.7: A Comparison Theorem</h2>
+<p>Let <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> be continuous over <span class="math inline">\([a,+\infty)\)</span>.</p>
+<p>Assume that <span class="math inline">\(0\le f(x)\le g(x)\)</span> for <span class="math inline">\(x\ge a\)</span>.</p>
+<ol type="1">
+<li><p>If $ _a^{+} f(x),dx=+$, then $ _a^{+} g(x),dx=+$.</p></li>
+<li><p>If $ _a^{+} g(x),dx=L$, where <span class="math inline">\(L\)</span> is a real number, then $ _a^{+} f(x),dx=M$ for some real number <span class="math inline">\(M\le L\)</span>.</p></li>
+</ol>
+</section>
+<section id="example-3.55" class="slide level2">
+<h2>Example 3.55</h2>
+<p>Use a comparison to show that</p>
+<p>$ _1<sup>{+}\frac{1}{xe</sup>x},dx$</p>
+<p>converges.</p>
+<p>We can see that</p>
+<p><span class="math inline">\(0\le \frac{1}{xe^x}\le \frac{1}{e^x}=e^{-x}\)</span></p>
+<p>so if $ _1<sup>{+}e</sup>{-x},dx$ converges, then so does</p>
+<p>$ _1<sup>{+}\frac{1}{xe</sup>x},dx$.</p>
+</section>
+<section id="example-3.55-comparison-integral" class="slide level2">
+<h2>Example 3.55: Comparison Integral</h2>
+<p>$ <em>1<sup>{+}e</sup>{-x},dx=</em>{t+}_1^t e^{-x},dx$</p>
+<p><span class="math inline">\(=\lim_{t\to+\infty}(-e^{-x})\bigg|_1^t\)</span></p>
+<p><span class="math inline">\(=\lim_{t\to+\infty}(-e^{-t}+e^{-1})\)</span></p>
+<p><span class="math inline">\(=e^{-1}\)</span></p>
+<p>Since $ _1<sup>{+}e</sup>{-x},dx$ converges, so does</p>
+<p>$ _1<sup>{+}\frac{1}{xe</sup>x},dx$.</p>
+</section>
+<section id="example-3.56" class="slide level2">
+<h2>Example 3.56</h2>
+<p>Use the comparison theorem to show that</p>
+<p>$ _1<sup>{+}\frac{1}{x</sup>p},dx$</p>
+<p>diverges for all <span class="math inline">\(p&lt;1\)</span>.</p>
+<p>For <span class="math inline">\(p&lt;1\)</span>,</p>
+<p>$ $</p>
+<p>over <span class="math inline">\([1,+\infty)\)</span>.</p>
+<p>We showed that</p>
+<p>$ _1^{+},dx=+$</p>
+<p>Therefore,</p>
+<p>$ _1<sup>{+}\frac{1}{x</sup>p},dx$</p>
+<p>diverges for all <span class="math inline">\(p&lt;1\)</span>.</p>
+</section>
+<section id="checkpoint-3.29" class="slide level2">
+<h2>Checkpoint 3.29</h2>
+<p>Use a comparison to show that</p>
+<p>$ _e^{+},dx$</p>
+<p>diverges.</p>
 </section>
 <section class="slide level2">
 
