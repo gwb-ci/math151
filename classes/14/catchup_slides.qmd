@@ -1,0 +1,119 @@
+---
+title: "Lingering Calculation"
+
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    include-after-body:
+      text: |
+        <script>
+        (function useMathJaxSVG() {
+          if (window.MathJax && MathJax.Hub) {
+            MathJax.Hub.Queue(
+              ["setRenderer", MathJax.Hub, "SVG"],
+              ["Rerender", MathJax.Hub]
+            );
+          } else {
+            window.setTimeout(useMathJaxSVG, 50);
+          }
+        })();
+        </script>
+---
+
+
+## Antiderivatives for Trigonometric Functions
+
+$\int \sin x\,dx=-\cos x+C$
+
+$\int \cos x\,dx=\sin x+C$
+
+$\int \sec^2 x\,dx=\tan x+C$
+
+$\int \sec x\tan x\,dx=\sec x+C$
+
+$\int \tan x\,dx=\ln|\sec x|+C$
+
+$\int \sec x\,dx=\ln|\sec x+\tan x|+C$
+
+---
+
+## Integrals with Secant and Tangent
+
+Useful identities:
+$\sec^2 x=1+\tan^2 x$
+
+$\tan^2 x=\sec^2 x-1$
+
+For $\int \tan^k x\sec^j x\,dx$:
+
+- If $j$ is even and $j\ge 2$, save $\sec^2 x\,dx$ and use $u=\tan x$.
+- If $k$ is odd and $j\ge 1$, save $\sec x\tan x\,dx$ and use $u=\sec x$.
+
+---
+
+
+## Outlier Example
+
+Evaluate $\int \sec^3\theta\,d\theta$.
+
+. . .
+
+Use integration by parts.
+
+Let $u=\sec\theta$ and $dv=\sec^2\theta\,d\theta$.
+
+Then $du=\sec\theta\tan\theta\,d\theta$ and $v=\tan\theta$.
+
+. . .
+
+Applying integration by parts,
+
+$$
+\begin{aligned}
+\int\sec^3\theta\,d\theta
+&=\sec\theta\tan\theta-\int\sec\theta\tan^2\theta\,d\theta\\
+&=\sec\theta\tan\theta-\int\sec\theta(\sec^2\theta-1)\,d\theta\\
+&=\sec\theta\tan\theta-\int\sec^3\theta\,d\theta+\int\sec\theta\,d\theta.
+\end{aligned}
+$$
+
+. . .
+
+Adding $\int\sec^3\theta\,d\theta$ to both sides,
+
+$$
+2\int\sec^3\theta\,d\theta
+=\sec\theta\tan\theta+\ln|\sec\theta+\tan\theta|+C.
+$$
+
+
+## New Integration Formula
+
+$$
+\int\sec^3\theta\,d\theta
+=\frac12\sec\theta\tan\theta
++\frac12\ln|\sec\theta+\tan\theta|+C
+$$
+
+---
+
+## Example 3
+
+Find the length of the curve $y=x^2$ over $[0,\frac{1}{2}]$.
+
+. . . 
+
+Since $\frac{dy}{dx}=2x$,
+
+$L=\int_0^{1/2}\sqrt{1+(2x)^2}\,dx$
+
+$=\int_0^{1/2}\sqrt{1+4x^2}\,dx$
+
+Use $x=\frac{1}{2}\tan\theta$.
+
+$L=\frac{1}{2}\int_0^{\pi/4}\sec^3\theta\,d\theta$
+
+$=\frac{1}{4}\left(\sqrt{2}+\ln(\sqrt{2}+1)\right)$
+
+---                                                                                                                                                                                                                  

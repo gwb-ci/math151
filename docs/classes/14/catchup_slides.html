@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <title>Math 151 - Calculus II – Improper Integrals</title>
+  <title>Math 151 - Calculus II – Lingering Calculation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,210 +129,80 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Improper Integrals</h1>
+  <h1 class="title">Lingering Calculation</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="improper-integrals" class="slide level2">
-<h2>Improper Integrals</h2>
-<p>Class Session Goals:</p>
+<section id="antiderivatives-for-trigonometric-functions" class="slide level2">
+<h2>Antiderivatives for Trigonometric Functions</h2>
+<p><span class="math inline">\(\int \sin x\,dx=-\cos x+C\)</span></p>
+<p><span class="math inline">\(\int \cos x\,dx=\sin x+C\)</span></p>
+<p><span class="math inline">\(\int \sec^2 x\,dx=\tan x+C\)</span></p>
+<p><span class="math inline">\(\int \sec x\tan x\,dx=\sec x+C\)</span></p>
+<p><span class="math inline">\(\int \tan x\,dx=\ln|\sec x|+C\)</span></p>
+<p><span class="math inline">\(\int \sec x\,dx=\ln|\sec x+\tan x|+C\)</span></p>
+</section>
+<section id="integrals-with-secant-and-tangent" class="slide level2">
+<h2>Integrals with Secant and Tangent</h2>
+<p>Useful identities: <span class="math inline">\(\sec^2 x=1+\tan^2 x\)</span></p>
+<p><span class="math inline">\(\tan^2 x=\sec^2 x-1\)</span></p>
+<p>For <span class="math inline">\(\int \tan^k x\sec^j x\,dx\)</span>:</p>
 <ul>
-<li>Evaluate an integral over an infinite interval.</li>
-<li>Evaluate an integral over a closed interval with an infinite discontinuity within the interval.</li>
-<li>Use the comparison theorem to determine whether a definite integral is convergent.</li>
+<li>If <span class="math inline">\(j\)</span> is even and <span class="math inline">\(j\ge 2\)</span>, save <span class="math inline">\(\sec^2 x\,dx\)</span> and use <span class="math inline">\(u=\tan x\)</span>.</li>
+<li>If <span class="math inline">\(k\)</span> is odd and <span class="math inline">\(j\ge 1\)</span>, save <span class="math inline">\(\sec x\tan x\,dx\)</span> and use <span class="math inline">\(u=\sec x\)</span>.</li>
 </ul>
 </section>
-<section id="what-is-an-improper-integral" class="slide level2">
-<h2>What is an Improper Integral?</h2>
-<p>Integrals over an infinite interval as well as integrals of functions containing a discontinuity on the interval are called improper integrals.</p>
-<p><span class="math display">\[\int_a^{\infty} f(x)\,dx\]</span></p>
-</section>
-<section id="integrating-over-an-infinite-interval" class="slide level2">
-<h2>Integrating over an Infinite Interval</h2>
-<p>To integrate a function over an infinite interval, we consider the limit of the integral as the limit increases without bound.</p>
-<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\([a,\infty)\)</span>, then</p>
-<p><span class="math display">\[\int_a^{\infty} f(x)\,dx=\lim_{t\to\infty}\int_a^t f(x)\,dx\]</span></p>
-<p>provided this limit exists.</p>
-</section>
-<section id="infinite-interval-to-the-left" class="slide level2">
-<h2>Infinite Interval to the Left</h2>
-<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\((-\infty,b]\)</span>, then</p>
-<p><span class="math display">\[\int_{-\infty}^{b} f(x)\,dx=\lim_{t\to-\infty}\int_t^b f(x)\,dx\]</span></p>
-<p>provided this limit exists.</p>
-<p>In each case, if the limit exists, then the improper integral is said to converge.</p>
-<p>If the limit does not exist, then the improper integral is said to diverge.</p>
-</section>
-<section id="infinite-interval-in-both-directions" class="slide level2">
-<h2>Infinite Interval in Both Directions</h2>
-<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\((-\infty,\infty)\)</span>, then</p>
-<p><span class="math display">\[\int_{-\infty}^{\infty} f(x)\,dx=\int_{-\infty}^{0}f(x)\,dx+\int_{0}^{\infty}f(x)\,dx\]</span></p>
-<p>provided that both integrals converge.</p>
-</section>
-<section id="example-finding-an-area" class="slide level2">
-<h2>Example: Finding an Area</h2>
-<p>Determine whether the area between the graph of <span class="math inline">\(f(x)=\frac{1}{x}\)</span> and the <span class="math inline">\(x\)</span>-axis over the interval <span class="math inline">\([1,\infty)\)</span> is finite or infinite.</p>
-<p><span class="math inline">\(A=\int_1^\infty \frac{1}{x}\,dx\)</span></p>
-<p><span class="math inline">\(=\lim_{t\to\infty}\int_1^t\frac{1}{x}\,dx\)</span></p>
+<section id="outlier-example" class="slide level2">
+<h2>Outlier Example</h2>
+<p>Evaluate <span class="math inline">\(\int \sec^3\theta\,d\theta\)</span>.</p>
 <div class="fragment">
-<p><span class="math inline">\(=\lim_{t\to\infty}\ln|x|\bigg|_1^t\)</span></p>
-<p><span class="math inline">\(=\lim_{t\to\infty}(\ln|t|-\ln 1)=\infty\)</span></p>
-<p>Since the improper integral diverges to <span class="math inline">\(\infty\)</span>, the area of the region is infinite.</p>
+<p>Use integration by parts.</p>
+<p>Let <span class="math inline">\(u=\sec\theta\)</span> and <span class="math inline">\(dv=\sec^2\theta\,d\theta\)</span>.</p>
+<p>Then <span class="math inline">\(du=\sec\theta\tan\theta\,d\theta\)</span> and <span class="math inline">\(v=\tan\theta\)</span>.</p>
 </div>
-</section>
-<section id="example-finding-a-volume" class="slide level2">
-<h2>Example: Finding a Volume</h2>
-<p>Find the volume of the solid obtained by revolving the region bounded by the graph of <span class="math inline">\(f(x)=\frac{1}{x}\)</span> and the <span class="math inline">\(x\)</span>-axis over <span class="math inline">\([1,\infty)\)</span> about the <span class="math inline">\(x\)</span>-axis.</p>
-<p>Using the disk method,</p>
-<p><span class="math inline">\(V=\pi\int_1^{\infty}\frac{1}{x^2}\,dx\)</span></p>
 <div class="fragment">
-<p><span class="math inline">\(=\pi\lim_{t\to\infty}\int_1^t\frac{1}{x^2}\,dx\)</span></p>
-<p><span class="math inline">\(=\pi\lim_{t\to\infty}\left(-\frac{1}{x}\right)\bigg|_1^t\)</span></p>
-<p><span class="math inline">\(=\pi\lim_{t\to\infty}\left(-\frac{1}{t}+1\right)=\pi\)</span></p>
-</div>
-</section>
-<section id="gabriels-horn" class="slide level2">
-<h2>Gabriel’s Horn</h2>
-<p>Area of the region between the <span class="math inline">\(x\)</span>-axis and the graph of <span class="math inline">\(f(x)=1/x\)</span> over <span class="math inline">\([1,\infty)\)</span> is infinite.</p>
-<p>Surface area of the solid generated by revolving this region about the <span class="math inline">\(x\)</span>-axis is infinite. This is a more challenging integral to evaluate, but we will show it is infinite in a later example.</p>
-<p>Volume of the solid generated by revolving this region about the <span class="math inline">\(x\)</span>-axis is finite.</p>
-<p>The solid generated is known as Gabriel’s Horn. an object with infinite cross-sectional area but finite volume.</p>
-</section>
-<section id="recall-lhôpitals-rule" class="slide level2">
-<h2>Recall L’Hôpital’s Rule</h2>
-<p>Suppose <span class="math inline">\(\lim_{x\to a}f(x)=0\)</span> and <span class="math inline">\(\lim_{x\to a}g(x)=0\)</span>, or both limits are <span class="math inline">\(\pm\infty\)</span>.</p>
-<p>If <span class="math inline">\(\lim_{x\to a}\frac{f'(x)}{g'(x)}\)</span> exists (or is <span class="math inline">\(\pm\infty\)</span>), then</p>
+<p>Applying integration by parts,</p>
 <p><span class="math display">\[
-\lim_{x\to a}\frac{f(x)}{g(x)}
-=\lim_{x\to a}\frac{f'(x)}{g'(x)}
+\begin{aligned}
+\int\sec^3\theta\,d\theta
+&amp;=\sec\theta\tan\theta-\int\sec\theta\tan^2\theta\,d\theta\\
+&amp;=\sec\theta\tan\theta-\int\sec\theta(\sec^2\theta-1)\,d\theta\\
+&amp;=\sec\theta\tan\theta-\int\sec^3\theta\,d\theta+\int\sec\theta\,d\theta.
+\end{aligned}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>Adding <span class="math inline">\(\int\sec^3\theta\,d\theta\)</span> to both sides,</p>
+<p><span class="math display">\[
+2\int\sec^3\theta\,d\theta
+=\sec\theta\tan\theta+\ln|\sec\theta+\tan\theta|+C.
+\]</span></p>
+</div>
+</section>
+<section id="new-integration-formula" class="slide level2">
+<h2>New Integration Formula</h2>
+<p><span class="math display">\[
+\int\sec^3\theta\,d\theta
+=\frac12\sec\theta\tan\theta
++\frac12\ln|\sec\theta+\tan\theta|+C
 \]</span></p>
 </section>
-<section id="some-indeterminate-forms" class="slide level2">
-<h2>Some Indeterminate Forms</h2>
-<ul>
-<li><span class="math inline">\(\frac{0}{0}\)</span></li>
-<li><span class="math inline">\(\frac{\infty}{\infty}\)</span></li>
-<li><span class="math inline">\(\infty\cdot 0\)</span></li>
-</ul>
-</section>
-<section id="example-doubly-infinite-intervals" class="slide level2">
-<h2>Example: Doubly Infinite Intervals</h2>
-<p>Evaluate <span class="math display">\[\int_{-\infty}^{\infty}xe^x\,dx\]</span></p>
-<p>Start by splitting up the integral:</p>
-<p><span class="math display">\[\int_{-\infty}^{\infty}xe^x\,dx=\int_{-\infty}^{0}xe^x\,dx+\int_{0}^{\infty}xe^x\,dx\]</span></p>
-<p>If either integral diverges, then the who integral diverges</p>
-</section>
-<section id="example-first-integral" class="slide level2">
-<h2>Example: First Integral</h2>
-<p><span class="math inline">\(\int_{-\infty}^{0}xe^x\,dx=\lim_{t\to-\infty}\int_t^0xe^x\,dx\)</span></p>
-<p><span class="math inline">\(=\lim_{t\to-\infty}(xe^x-e^x)\bigg|_t^0\)</span></p>
-<p><span class="math inline">\(=\lim_{t\to-\infty}(-1-te^t+e^t)\)</span></p>
-<p><span class="math inline">\(=-1\)</span></p>
-<p>The first improper integral converges.</p>
-</section>
-<section id="example-second-integral" class="slide level2">
-<h2>Example: Second Integral</h2>
-<p><span class="math inline">\(\int_0^{\infty}xe^x\,dx=\lim_{t\to\infty}\int_0^t xe^x\,dx\)</span></p>
+<section id="example-3" class="slide level2">
+<h2>Example 3</h2>
+<p>Find the length of the curve <span class="math inline">\(y=x^2\)</span> over <span class="math inline">\([0,\frac{1}{2}]\)</span>.</p>
 <div class="fragment">
-<p><span class="math inline">\(=\lim_{t\to\infty}(xe^x-e^x)\bigg|_0^t\)</span></p>
-<p><span class="math inline">\(=\lim_{t\to\infty}(te^t-e^t+1)=\infty\)</span></p>
-<p>Thus, <span class="math inline">\(\int_0^{\infty}xe^x\,dx\)</span> diverges.</p>
-<p>Therefore, <span class="math inline">\(\int_{-\infty}^{\infty}xe^x\,dx\)</span> diverges.</p>
-</div>
-</section>
-<section id="integrating-a-discontinuous-integrand" class="slide level2">
-<h2>Integrating a Discontinuous Integrand</h2>
-<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\([a,b)\)</span>, then</p>
-<p><span class="math display">\[\int_a^b f(x)\,dx=\lim_{t\to b^-}\int_a^t f(x)\,dx\]</span></p>
-<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\((a,b]\)</span>, then</p>
-<p><span class="math display">\[\int_a^b f(x)\,dx=\lim_{t\to a^+}\int_t^b f(x)\,dx\]</span></p>
-</section>
-<section id="discontinuity-inside-the-interval" class="slide level2">
-<h2>Discontinuity Inside the Interval</h2>
-<p>If <span class="math inline">\(f(x)\)</span> is continuous over <span class="math inline">\([a,b]\)</span> except at a point <span class="math inline">\(c\)</span> in <span class="math inline">\((a,b)\)</span>, then</p>
-<p><span class="math display">\[\int_a^b f(x)\,dx=\int_a^c f(x)\,dx+\int_c^b f(x)\,dx\]</span></p>
-<p>provided both integrals converge.</p>
-<p>If either of these integrals diverges, then <span class="math inline">\(\int_a^b f(x)\,dx\)</span> diverges.</p>
-</section>
-<section id="example-1-discontinuities" class="slide level2">
-<h2>Example 1: Discontinuities</h2>
-<p>Evaluate <span class="math inline">\(\int_0^4 \frac{1}{\sqrt{4-x}}\,dx\)</span>.</p>
-<p>The function <span class="math inline">\(f(x)=\frac{1}{\sqrt{4-x}}\)</span> is continuous over <span class="math inline">\([0,4)\)</span> and discontinuous at <span class="math inline">\(4\)</span>.</p>
-<div class="fragment">
-<p><span class="math inline">\(\int_0^4 \frac{1}{\sqrt{4-x}}\,dx=\lim_{t\to4^-}\int_0^t\frac{1}{\sqrt{4-x}}\,dx=4\)</span></p>
-</div>
-</section>
-<section id="example-2-discontinuities" class="slide level2">
-<h2>Example 2: Discontinuities</h2>
-<p>Evaluate <span class="math inline">\(\int_0^2 x\ln x\,dx\)</span> where <span class="math inline">\(f(x)=x\ln x\)</span> is continuous over <span class="math inline">\((0,2]\)</span> and is discontinuous at zero,</p>
-<p><span class="math display">\[\int_0^2 x\ln x\,dx=\lim_{t\to0^+}\int_t^2 x\ln x\,dx\]</span></p>
-<div class="fragment">
-<p>Using integration by parts to get <span class="math inline">\(2\ln2-1\)</span>.</p>
-</div>
-</section>
-<section id="theorem-3.7-a-comparison-theorem" class="slide level2">
-<h2>Theorem 3.7: A Comparison Theorem</h2>
-<p>Let <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> be continuous over <span class="math inline">\([a,\infty)\)</span>.</p>
-<p>Assume that <span class="math inline">\(0\le f(x)\le g(x)\)</span> for <span class="math inline">\(x\ge a\)</span>.</p>
-<ol type="1">
-<li><p>If <span class="math inline">\(\int_a^{\infty} f(x)\,dx=\infty\)</span>, then <span class="math inline">\(\int_a^{\infty} g(x)\,dx=\infty\)</span>.</p></li>
-<li><p>If <span class="math inline">\(\int_a^{\infty} g(x)\,dx=L\)</span>, where <span class="math inline">\(L\)</span> is a real number, then <span class="math inline">\(\int_a^{\infty} f(x)\,dx=M\)</span> for some real number <span class="math inline">\(M\le L\)</span>.</p></li>
-</ol>
-</section>
-<section id="example-comparison-theorem" class="slide level2">
-<h2>Example: Comparison Theorem</h2>
-<p>Use a comparison to show <span class="math inline">\(\int_1^{\infty}2\pi \frac{1}{x}{\sqrt{1+\frac{1}{x^4}}}\,dx\)</span> diverges.</p>
-<div class="fragment">
-<p>Since <span class="math inline">\(\sqrt{1+\frac{1}{x^4}}\geq 1\)</span> for <span class="math inline">\(x\geq 1\)</span>,</p>
-<p>$ 2_1<sup>\frac{1}{x}{\sqrt{1+\frac{1}{x</sup>4}}}_1^,dx$</p>
-<p>We have already shown that <span class="math inline">\(\int_1^\infty\frac{1}{x}\,dx\)</span> diverges.</p>
+<p>Since <span class="math inline">\(\frac{dy}{dx}=2x\)</span>,</p>
+<p><span class="math inline">\(L=\int_0^{1/2}\sqrt{1+(2x)^2}\,dx\)</span></p>
+<p><span class="math inline">\(=\int_0^{1/2}\sqrt{1+4x^2}\,dx\)</span></p>
+<p>Use <span class="math inline">\(x=\frac{1}{2}\tan\theta\)</span>.</p>
+<p><span class="math inline">\(L=\frac{1}{2}\int_0^{\pi/4}\sec^3\theta\,d\theta\)</span></p>
+<p><span class="math inline">\(=\frac{1}{4}\left(\sqrt{2}+\ln(\sqrt{2}+1)\right)\)</span></p>
 </div>
 </section>
 <section class="slide level2">
 
-</section>
-<section id="table-of-antiderivatives-trig" class="slide level2">
-<h2>Table of Antiderivatives: Trig</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\int \sec^2 x\,dx &amp;= \tan x+C \\
-\int \csc^2 x\,dx &amp;= -\cot x+C \\
-\int \sec x\tan x\,dx &amp;= \sec x+C \\
-\int \csc x\cot x\,dx &amp;= -\csc x+C
-\end{aligned}
-\]</span></p>
-</section>
-<section id="table-of-antiderivatives-trig-1" class="slide level2">
-<h2>Table of Antiderivatives: Trig</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\int \tan x\,dx &amp;= \ln|\sec x|+C \\
-\int \cot x\,dx &amp;= \ln|\sin x|+C \\
-\int \sec x\,dx &amp;= \ln|\sec x+\tan x|+C \\
-\int \csc x\,dx &amp;= -\ln|\csc x+\cot x|+C
-\end{aligned}
-\]</span></p>
-</section>
-<section id="table-of-antiderivatives-other" class="slide level2">
-<h2>Table of Antiderivatives: Other</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\int a^x\,dx &amp;= \frac{a^x}{\ln a}+C,\quad a&gt;0,\ a\neq1 \\
-\int \log_a x\,dx &amp;= x\log_a x-\frac{x}{\ln a}+C,\quad a&gt;0,\ a\neq1 \\
-\int \frac{1}{a^2+x^2}\,dx &amp;= \frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)+C
-\end{aligned}
-\]</span></p>
-</section>
-<section id="table-of-antiderivatives-other-1" class="slide level2">
-<h2>Table of Antiderivatives: Other</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\int \frac{1}{\sqrt{a^2-x^2}}\,dx &amp;= \sin^{-1}\left(\frac{x}{a}\right)+C \\
-\int \frac{1}{x\sqrt{x^2-a^2}}\,dx &amp;= \frac{1}{a}\sec^{-1}\left|\frac{x}{a}\right|+C \\
-\int \frac{1}{x^2-a^2}\,dx &amp;= \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|+C
-\end{aligned}
-\]</span></p>
 
 
 </section>
