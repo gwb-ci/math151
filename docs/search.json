@@ -272,7 +272,7 @@
     "href": "classes/14/slides.html#example-comparison-theorem",
     "title": "Improper Integrals",
     "section": "Example: Comparison Theorem",
-    "text": "Example: Comparison Theorem\nUse a comparison to show \\(\\int_1^{\\infty}2\\pi \\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\,dx\\) diverges.\n\nSince \\(\\sqrt{1+\\frac{1}{x^4}}\\geq 1\\) for \\(x\\geq 1\\),\n$ 2_1\\frac{1}{x}{\\sqrt{1+\\frac{1}{x4}}}_1^,dx$\nWe have already shown that \\(\\int_1^\\infty\\frac{1}{x}\\,dx\\) diverges.",
+    "text": "Example: Comparison Theorem\nUse a comparison to show \\(\\int_1^{\\infty}2\\pi \\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\,dx\\) diverges.\n\nSince \\(\\sqrt{1+\\frac{1}{x^4}}\\geq 1\\) for \\(x\\geq 1\\),\n\\(2\\pi\\int_1^\\infty\\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\geq 2\\pi\\int_1^\\infty\\frac{1}{x}\\,dx\\)\nWe have already shown that \\(\\int_1^\\infty\\frac{1}{x}\\,dx\\) diverges.",
     "crumbs": [
       "Class Material",
       "Improper Integrals"
@@ -3413,7 +3413,18 @@
     "href": "classes/14/catchup_slides.html#outlier-example",
     "title": "Lingering Calculation",
     "section": "Outlier Example",
-    "text": "Outlier Example\nEvaluate \\(\\int \\sec^3\\theta\\,d\\theta\\).\n\nUse integration by parts.\nLet \\(u=\\sec\\theta\\) and \\(dv=\\sec^2\\theta\\,d\\theta\\).\nThen \\(du=\\sec\\theta\\tan\\theta\\,d\\theta\\) and \\(v=\\tan\\theta\\).\n\n\nApplying integration by parts,\n\\[\n\\begin{aligned}\n\\int\\sec^3\\theta\\,d\\theta\n&=\\sec\\theta\\tan\\theta-\\int\\sec\\theta\\tan^2\\theta\\,d\\theta\\\\\n&=\\sec\\theta\\tan\\theta-\\int\\sec\\theta(\\sec^2\\theta-1)\\,d\\theta\\\\\n&=\\sec\\theta\\tan\\theta-\\int\\sec^3\\theta\\,d\\theta+\\int\\sec\\theta\\,d\\theta.\n\\end{aligned}\n\\]\n\n\nAdding \\(\\int\\sec^3\\theta\\,d\\theta\\) to both sides,\n\\[\n2\\int\\sec^3\\theta\\,d\\theta\n=\\sec\\theta\\tan\\theta+\\ln|\\sec\\theta+\\tan\\theta|+C.\n\\]",
+    "text": "Outlier Example\nEvaluate \\(\\int \\sec^3\\theta\\,d\\theta\\).\n\nUse integration by parts.\nLet \\(u=\\sec\\theta\\) and \\(dv=\\sec^2\\theta\\,d\\theta\\).\nThen \\(du=\\sec\\theta\\tan\\theta\\,d\\theta\\) and \\(v=\\tan\\theta\\).",
+    "crumbs": [
+      "Class Material",
+      "Lingering Calculation"
+    ]
+  },
+  {
+    "objectID": "classes/14/catchup_slides.html#applying-integration-by-parts",
+    "href": "classes/14/catchup_slides.html#applying-integration-by-parts",
+    "title": "Lingering Calculation",
+    "section": "Applying integration by parts,",
+    "text": "Applying integration by parts,\n\\[\n\\begin{aligned}\n\\int\\sec^3\\theta\\,d\\theta\n&=\\sec\\theta\\tan\\theta-\\int\\sec\\theta\\tan^2\\theta\\,d\\theta\\\\\n&=\\sec\\theta\\tan\\theta-\\int\\sec\\theta(\\sec^2\\theta-1)\\,d\\theta\\\\\n&=\\sec\\theta\\tan\\theta-\\int\\sec^3\\theta\\,d\\theta+\\int\\sec\\theta\\,d\\theta.\n\\end{aligned}\n\\]",
     "crumbs": [
       "Class Material",
       "Lingering Calculation"

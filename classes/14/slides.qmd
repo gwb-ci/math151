@@ -273,7 +273,7 @@ Use a comparison to show $\int_1^{\infty}2\pi \frac{1}{x}{\sqrt{1+\frac{1}{x^4}}
 
 Since $\sqrt{1+\frac{1}{x^4}}\geq 1$ for $x\geq 1$,
 
-$ 2\pi\int_1^\infty\frac{1}{x}{\sqrt{1+\frac{1}{x^4}}}\geq 2\pi\int_1^\infty\frac{1}{x}\,dx$
+$2\pi\int_1^\infty\frac{1}{x}{\sqrt{1+\frac{1}{x^4}}}\geq 2\pi\int_1^\infty\frac{1}{x}\,dx$
 
 We have already shown that $\int_1^\infty\frac{1}{x}\,dx$ diverges.
 

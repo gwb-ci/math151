@@ -65,9 +65,9 @@ Let $u=\sec\theta$ and $dv=\sec^2\theta\,d\theta$.
 
 Then $du=\sec\theta\tan\theta\,d\theta$ and $v=\tan\theta$.
 
-. . .
+---
 
-Applying integration by parts,
+## Applying integration by parts,
 
 $$
 \begin{aligned}
@@ -78,14 +78,7 @@ $$
 \end{aligned}
 $$
 
-. . .
-
-Adding $\int\sec^3\theta\,d\theta$ to both sides,
-
-$$
-2\int\sec^3\theta\,d\theta
-=\sec\theta\tan\theta+\ln|\sec\theta+\tan\theta|+C.
-$$
+---
 
 
 ## New Integration Formula
