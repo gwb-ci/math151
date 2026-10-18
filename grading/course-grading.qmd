@@ -22,8 +22,7 @@ To successfully learn the Calculus, you need to demonstrate that you understand 
 
 - **A**: Applications of integration  
 - **I**: Fundamental Concepts and Techniques in Integration
-- **N**: Numerican Integration
-- **S**: Sequences and Series
+- ~~**S**: Sequences and Series~~
 - **P**: Power Series 
 
 Each of these groups are described in detail below. Learning Targets whose abbreviations are marked with a \* are Supplemental Learning Targets. The Learning Targets with an 'MP' in their abbreviation are Mathematical Practice Learning Targets. The rest are Core Learning Targets. Your grade in the course will be calcualted, primarily, from the number and type of learning targets you master.
@@ -54,8 +53,8 @@ We can't let computer algebra systems, like SageMath, have all the fun. We need 
 
 When we can't use the Fundamental Theorem of Calculus to calculate definite integral of a function, we use numerial methods.
 
-- **N1**: What it means for definite integral of continuous integrand on a closed interval to be approximated by a numerical method.
-- **N2**: Bounded functions and bounding errors
+- ~~**N1**: What it means for definite integral of continuous integrand on a closed interval to be approximated by a numerical method.~~
+- ~~**N2**: Bounded functions and bounding errors~~
 
 ### (S) Sequences and Series
 
@@ -120,30 +119,30 @@ You will demonstrate your understanding of Learning Targeets through weekly or b
 
 To succeed in this course, you will need to demonstrate to me that you understand a significant subset of this course's 18 Learning Targets. These learning targets consist of
 
- - 12 Core Learning Targets, and 
+ - ~~12~~ 10 Core Learning Targets, and 
  - 6 Supplementary Learning Targets 
  
 To pass the class you need to: 
 
-1. Demonstrate mastery on 5 Core Learning Targets one from each of the areas A, I, N, S, and P, and
+1. Demonstrate mastery on ~~5~~ 4 Core Learning Targets one from each of the areas A, I, ~~N~~, S, and P, and
 2. Complete the Final Exam with a score of S on at least 2 of the 6 final exam learning targets.
 
 To earn an C you need to:
 
 1. Meet the requirements for passing the class, and
-2. Demonstrate mastery on at least 8 Core Learning Targets.  
+2. Demonstrate mastery on at least ~~8~~ 6 Core Learning Targets.  
 3. demonstrate mastery on at least 1 Supplementary Learning Targets.
 
 To earn an B you need to:
 
 1. Meet the requirements for passing the class, and
-2. Demonstrate mastery on at least 10 Core Learning Targets.
+2. Demonstrate mastery on at least ~~10~~ 8 Core Learning Targets.
 3. demonstrate mastery on at least 3 Supplementary Learning Targets.
 
 To earn an A you need to:
 
 1. Meet the requirements for passing the class, and
-2. Demonstrate mastery on all 12 Core Learning Targets.
+2. Demonstrate mastery on all ~~12~~ 10 Core Learning Targets.
 3. demonstrate mastery on at least 5 Supplementary Learning Targets.
 
 
