@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <title>Math 151 - Calculus II – Improper Integrals</title>
+  <title>Math 151 - Calculus II – Numerical Integration</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,7 +129,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Improper Integrals</h1>
+  <h1 class="title">Numerical Integration</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -144,13 +144,13 @@
 <li>Error bounds for numerical integration</li>
 </ul>
 </section>
-<section id="where-do-function-come-from" class="slide level2">
-<h2>Where do function come from?</h2>
+<section id="where-do-functions-come-from" class="slide level2">
+<h2>Where do functions come from?</h2>
 <ul>
-<li>Theory: <span class="math inline">\(e^{ax}\)</span> is a solution to the differential equation <span class="math inline">\(\frac{dy}{dx}=ay\)</span>.</li>
-<li>Measurement: read the acceration data from a chip 1000 times a second.</li>
+<li><strong>Theory</strong>: <span class="math inline">\(e^{ax}\)</span> is a solution to the differential equation <span class="math inline">\(\frac{dy}{dx}=ay\)</span>.</li>
+<li><strong>Measurement</strong>: read the acceration data from a chip 1000 times a second.</li>
 </ul>
-<p>Both are useful, but we need to be able to do calculus on both.</p>
+<p>Both are useful, and we need to be able to do calculus on both.</p>
 </section>
 <section class="slide level2">
 
@@ -215,10 +215,8 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 </section>
 <section id="rocketry-acceleration-data" class="slide level2">
 <h2>Rocketry: Acceleration Data</h2>
-<svg viewbox="0 0 800 440" width="100%" xmlns="http://www.w3.org/2000/svg">
-<rect width="800" height="440" fill="white"></rect> <g stroke="#ddd"> <path d="M80 290H740 M80 180H740 M80 70H740"></path> </g> <path d="M80 40V400H750" stroke="black" stroke-width="2" fill="none"></path> <g font-family="Arial" font-size="16" fill="black"> <text x="60" y="406">0</text> <text x="47" y="296">10</text> <text x="47" y="186">20</text> <text x="47" y="76">30</text> <text x="76" y="425">0</text> <text x="204" y="425">.02</text> <text x="336" y="425">.04</text> <text x="468" y="425">.06</text> <text x="600" y="425">.08</text> <text x="728" y="425">.10</text> <text x="350" y="439">Time (seconds)</text> </g> <polyline points="80,400 146,400 212,400 278,400 344,392.52 410,361.06 476,305.18 542,249.41 608,193.67 674,137.76 740,81.88" fill="none" stroke="#1769aa" stroke-width="3"></polyline> <g fill="#1769aa"> <circle cx="80" cy="400" r="4"></circle> <circle cx="146" cy="400" r="4"></circle> <circle cx="212" cy="400" r="4"></circle> <circle cx="278" cy="400" r="4"></circle> <circle cx="344" cy="392.52" r="4"></circle> <circle cx="410" cy="361.06" r="4"></circle> <circle cx="476" cy="305.18" r="4"></circle> <circle cx="542" cy="249.41" r="4"></circle> <circle cx="608" cy="193.67" r="4"></circle> <circle cx="674" cy="137.76" r="4"></circle> <circle cx="740" cy="81.88" r="4"></circle> </g>
-</svg>
-</section>
+
+<img data-src="rocketry-acceleration.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:85.0%"></section>
 <section id="notation-for-numerical-integration" class="slide level2">
 <h2>Notation for numerical integration</h2>
 <p>Divide <span class="math inline">\([a,b]\)</span> into <span class="math inline">\(n\)</span> subintervals of equal width:</p>
@@ -288,10 +286,8 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 <img data-src="trapezoid.svg" style="width:90.0%" class="r-stretch"></section>
 <section id="error-estimate-formulas" class="slide level2">
 <h2>Error Estimate Formulas</h2>
-<p><strong>Left Endpoint Rule Error Bound:</strong> Suppose <span class="math inline">\(|f'(x)|\leq K\)</span> for all <span class="math inline">\(x\in[a,b]\)</span>.</p>
-<p><span class="math inline">\(\displaystyle |E_L|\leq \frac{K(b-a)^2}{2n}\)</span></p>
-<p><strong>Right Endpoint Rule Error Bound:</strong> Suppose <span class="math inline">\(|f'(x)|\leq K\)</span> for all <span class="math inline">\(x\in[a,b]\)</span>.</p>
-<p><span class="math inline">\(\displaystyle |E_R|\leq \frac{K(b-a)^2}{2n}\)</span></p>
+<p><strong>Left &amp; Right Endpoint Rule Error Bound:</strong> Suppose <span class="math inline">\(|f'(x)|\leq K\)</span> for all <span class="math inline">\(x\in[a,b]\)</span>.</p>
+<p><span class="math inline">\(\displaystyle |E_R|=|E_L|\leq \frac{K(b-a)^2}{2n}\)</span></p>
 <p><strong>Trapezoidal Rule Error Bound:</strong> Suppose <span class="math inline">\(|f''(x)|\leq K\)</span> for all <span class="math inline">\(x\in[a,b]\)</span>.</p>
 <p><span class="math inline">\(\displaystyle |E_T|\leq \frac{K(b-a)^3}{12n^2}\)</span></p>
 </section>
@@ -301,11 +297,7 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 <p>Estimate the maximum first derivative using the data:</p>
 <p><span class="math inline">\(K\approx \max\left|\dfrac{\Delta a}{\Delta t}\right|=\dfrac{5.08}{.01}=508\)</span></p>
 <p>Assuming <span class="math inline">\(|a'(t)|\leq 508\)</span>, the Left Endpoint Rule error satisfies</p>
-<p><span class="math inline">\(\displaystyle |E_L|\leq \frac{K_1(b-a)^2}{2n}\)</span></p>
-<p>Substituting,</p>
-<p><span class="math inline">\(\displaystyle |E_L|\leq \frac{508(.10)^2}{2(10)}\)</span></p>
-<p><span class="math inline">\(\displaystyle \boxed{|E_L|\leq .254\ \mathrm{m/s}}\)</span></p>
-<p>Our approximation was <span class="math inline">\(L_{10}=.6914\ \mathrm{m/s}\)</span>. Since <span class="math inline">\(E_R\)</span> uses the same formuala, <span class="math inline">\(R_{10}=.9806\ \mathrm{m/s}\)</span>.</p>
+<p><span class="math inline">\(\displaystyle |E_R|=|E_L|\leq \frac{K_1(b-a)^2}{2n}\leq \frac{508(.10)^2}{2(10)}\leq .254\ \mathrm{m/s}\)</span></p>
 </section>
 <section id="what-if-we-measure-10-times-more-frequently" class="slide level2">
 <h2>What if We Measure 10 Times More Frequently?</h2>
@@ -317,11 +309,13 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 </ul>
 <p>The Left and Right Endpoint Rule error bounds are</p>
 <p><span class="math inline">\(\displaystyle |E_L|,\ |E_R|\leq\frac{K(b-a)^2}{2n}\)</span></p>
-<p>Substituting <span class="math inline">\(n=100\)</span>,</p>
-<p><span class="math inline">\(\displaystyle |E_L|,\ |E_R|\leq\frac{508(.10)^2}{2(100)}\)</span></p>
-<p><span class="math inline">\(\displaystyle \boxed{|E_L|,\ |E_R|\leq .0254\ \mathrm{m/s}}\)</span></p>
+</section>
+<section id="substituting-n100" class="slide level2">
+<h2>Substituting <span class="math inline">\(n=100\)</span></h2>
+<p><span class="math inline">\(\displaystyle |E_L|,\ |E_R|\leq\frac{508(.10)^2}{2(100)}\leq .0254\ \mathrm{m/s}\)</span></p>
 <p>Compare with the original error bound:</p>
 <p><span class="math inline">\(\displaystyle \frac{.254}{.0254}=10\)</span></p>
+<p>10 times the samples 10 times the accuracy.</p>
 </section>
 <section id="error-bound-trapezoidal-rule" class="slide level2">
 <h2>Error Bound: Trapezoidal Rule</h2>
@@ -330,10 +324,13 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 <p>For example, using <span class="math inline">\(t=.05\)</span>,</p>
 <p><span class="math inline">\(\displaystyle a''(.05)\approx\frac{8.62-2(3.54)+.68}{(.01)^2}=22{,}200\)</span></p>
 <p>The largest observed second difference gives <span class="math inline">\(K\approx22{,}200\)</span>.</p>
+</section>
+<section id="error-bound-trapezoidal-rule-calculation" class="slide level2">
+<h2>Error Bound: Trapezoidal Rule Calculation</h2>
 <p>Assuming <span class="math inline">\(|a''(t)|\leq22{,}200\)</span>,</p>
 <p><span class="math inline">\(\displaystyle |E_T|\leq\frac{K(b-a)^3}{12n^2}\)</span></p>
 <p><span class="math inline">\(\displaystyle |E_T|\leq\frac{22{,}200(.10)^3}{12(10)^2}\)</span></p>
-<p><span class="math inline">\(\displaystyle \boxed{|E_T|\leq .0185\ \mathrm{m/s}}\)</span></p>
+<p><span class="math inline">\(\displaystyle |E_T|\leq .0185\ \mathrm{m/s}\)</span></p>
 <p>Our approximation was <span class="math inline">\(T_{10}=.8360\ \mathrm{m/s}\)</span>.</p>
 </section>
 <section id="what-if-we-measure-10-times-more-frequently-1" class="slide level2">
@@ -346,11 +343,15 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 </ul>
 <p>The Trapezoidal Rule error bound is</p>
 <p><span class="math inline">\(\displaystyle |E_T|\leq\frac{K(b-a)^3}{12n^2}\)</span></p>
-<p>Substituting <span class="math inline">\(n=100\)</span>,</p>
-<p><span class="math inline">\(\displaystyle |E_T|\leq\frac{22{,}200(.10)^3}{12(100)^2}\)</span></p>
-<p><span class="math inline">\(\displaystyle \boxed{|E_T|\leq .000185\ \mathrm{m/s}}\)</span></p>
+</section>
+<section id="substituting-n100-1" class="slide level2">
+<h2>Substituting <span class="math inline">\(n=100\)</span></h2>
+<p><span class="math inline">\(\displaystyle |E_T|\leq\frac{22{,}200(.10)^3}{12(100)^2}\leq .000185\ \mathrm{m/s}\)</span></p>
 <p>Compare with the original estimate:</p>
 <p><span class="math inline">\(\displaystyle \frac{.0185}{.000185}=100\)</span></p>
+</section>
+<section id="times-the-sample-100-times-the-accuracy." class="slide level2">
+<h2>10 times the sample 100 times the accuracy.</h2>
 </section>
 <section id="faster-sampling-lsm303agr-accelerometer" class="slide level2">
 <h2>Faster Sampling: LSM303AGR Accelerometer</h2>
@@ -382,12 +383,7 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 </tr>
 </tbody>
 </table>
-<p>Recall the Trapezoidal Rule error bound:</p>
-<p><span class="math inline">\(\displaystyle |E_T|\leq\frac{K(b-a)^3}{12n^2}\)</span></p>
-<p>Using <span class="math inline">\(K=22{,}200\)</span> and <span class="math inline">\(n=134\)</span>,</p>
-<p><span class="math inline">\(\displaystyle |E_T|\leq\frac{22{,}200(.10)^3}{12(134)^2}\)</span></p>
-<p><span class="math inline">\(\displaystyle \boxed{|E_T|\leq .000103\ \mathrm{m/s}}\)</span></p>
-<p><strong>The estimated error bound is approximately 180 times smaller!</strong></p>
+<p><span class="math inline">\(\displaystyle |E_T|\leq\frac{22{,}200(.10)^3}{12(134)^2}\leq .000103\ \mathrm{m/s}\)</span></p>
 </section>
 <section id="why-the-trapezoidal-rule-is-an-average" class="slide level2">
 <h2>Why the Trapezoidal Rule is an average</h2>
@@ -395,71 +391,52 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 <p><span class="math inline">\(\dfrac{\Delta x}{2}[f(x_{i-1})+f(x_i)].\)</span></p>
 <p>Adding these trapezoidal areas gives</p>
 <p><span class="math inline">\(T_n=\dfrac{L_n+R_n}{2}.\)</span></p>
-<p>For our example,</p>
-<p><span class="math inline">\(T_4=\dfrac{11+19}{2}=15\ \mathrm{m/s}.\)</span></p>
-<p>Averaging the left and right sums reduces the error in this example but does not necessarily eliminate it.</p>
-</section>
-<section id="absolute-and-relative-error" class="slide level2">
-<h2>Absolute and relative error</h2>
-<p>If <span class="math inline">\(A\)</span> is the actual value and <span class="math inline">\(B\)</span> is an approximation, then</p>
-<p><span class="math inline">\(\text{Absolute error}=|A-B|.\)</span></p>
-<p>The relative error is</p>
-<p><span class="math inline">\(\text{Relative error}=\dfrac{|A-B|}{|A|},\quad A\ne0.\)</span></p>
-<p>To express relative error as a percentage, multiply by <span class="math inline">\(100\%\)</span>.</p>
-<p>For <span class="math inline">\(T_4=15\)</span> and exact value <span class="math inline">\(44/3\)</span>,</p>
-<p><span class="math inline">\(\text{Absolute error}=\left|\frac{44}{3}-15\right|=\frac13\ \mathrm{m/s}.\)</span></p>
+<p>Averaging the left and right sums reduces the error.</p>
 </section>
 <section id="falling-object-with-air-resistance" class="slide level2">
 <h2>Falling Object with Air Resistance</h2>
 <p>Suppose an object falls from rest under gravity with quadratic air resistance.</p>
-<p>Newton’s Second Law gives</p>
-<p><span class="math inline">\(m\dfrac{dv}{dt}=mg-cv^2\)</span></p>
-<p>where</p>
+<p>Newton’s Second Law gives <span class="math inline">\(m\dfrac{dv}{dt}=mg-cv^2\)</span> where</p>
 <ul>
 <li><span class="math inline">\(v(t)\)</span> is the downward velocity.</li>
 <li><span class="math inline">\(mg\)</span> is the gravitational force.</li>
 <li><span class="math inline">\(cv^2\)</span> is the force of air resistance.</li>
 </ul>
-<p>For our example, take <span class="math inline">\(g=10\)</span> and <span class="math inline">\(c/m=0.1\)</span>.</p>
-<p>Then</p>
-<p><span class="math inline">\(\displaystyle \boxed{\frac{dv}{dt}=10-0.1v^2}\)</span></p>
-<p>Assume <span class="math inline">\(v(0)=0\)</span>.</p>
-<p><strong>What is the velocity after one second?</strong></p>
+<p>For our example, take <span class="math inline">\(g=10\)</span> and <span class="math inline">\(c/m=0.1\)</span>, then <span class="math inline">\(\frac{dv}{dt}=10-0.1v^2\)</span> Assume <span class="math inline">\(v(0)=0\)</span>. We will find <span class="math inline">\(v(1)\)</span>.</p>
 </section>
 <section id="from-a-differential-equation-to-an-integral" class="slide level2">
 <h2>From a Differential Equation to an Integral</h2>
-<p>Our differential equation is</p>
-<p><span class="math inline">\(\dfrac{dv}{dt}=10-0.1v^2.\)</span></p>
+<p>Our differential equation is <span class="math inline">\(\dfrac{dv}{dt}=10-0.1v^2.\)</span></p>
 <p>Integrating from <span class="math inline">\(0\)</span> to <span class="math inline">\(t\)</span>,</p>
 <p><span class="math inline">\(\displaystyle v(t)-v(0)=\int_0^t(10-0.1v(s)^2)\,ds\)</span></p>
-<p>Since <span class="math inline">\(v(0)=0\)</span>,</p>
-<p><span class="math inline">\(\displaystyle v(t)=\int_0^t(10-0.1v(s)^2)\,ds\)</span></p>
-<p>We want to approximate</p>
-<p><span class="math inline">\(\displaystyle v(1)=\int_0^1(10-0.1v(s)^2)\,ds\)</span></p>
-<p>The difficulty is that we do not know <span class="math inline">\(v(t)\)</span>.</p>
-<p>We will use numerical integration to approximate it.</p>
+<p>We want to approximate <span class="math inline">\(\displaystyle v(1)=\int_0^1(10-0.1v(s)^2)\,ds\)</span></p>
+<p>The difficulty is that we do not know a formula for <span class="math inline">\(v\)</span>. We will use numerical integration to approximate it.</p>
 </section>
-<section id="applying-the-trapezoidal-rule" class="slide level2">
-<h2>Applying the Trapezoidal Rule</h2>
-<p>Divide <span class="math inline">\([0,1]\)</span> into <span class="math inline">\(n\)</span> subintervals of width</p>
-<p><span class="math inline">\(\Delta t=\dfrac{1}{n}.\)</span></p>
-<p>On each subinterval,</p>
-<p><span class="math inline">\(\displaystyle v_{i+1}\approx v_i+\int_{t_i}^{t_{i+1}}(10-0.1v^2)\,dt\)</span></p>
-<p>Using the Trapezoidal Rule,</p>
+<section id="approximation-setup" class="slide level2">
+<h2>Approximation setup</h2>
+<p>Divide <span class="math inline">\([0,1]\)</span> into <span class="math inline">\(n\)</span> subintervals of width <span class="math inline">\(\Delta t=\dfrac{1}{n}.\)</span></p>
+<p>by FTC, <span class="math inline">\(\displaystyle v(t_{i+1})- v(t_i)=\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\,ds\)</span></p>
+<p><span class="math inline">\(v_i \approx v(t_i)\)</span> so <span class="math inline">\(v_{i+1} \approx v(t_{i+1})\)</span></p>
+<p><span class="math inline">\(\displaystyle v_{i+1}\approx v_i+\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\,ds\)</span></p>
+</section>
+<section id="using-the-trapezoidal-rule" class="slide level2">
+<h2>Using the Trapezoidal Rule</h2>
+<p><span class="math inline">\(\displaystyle v_{i+1}\approx v_i+\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\,ds\)</span></p>
+<p>becomes</p>
 <p><span class="math inline">\(\displaystyle v_{i+1}=v_i+\frac{\Delta t}{2}[(10-0.1v_i^2)+(10-0.1v_{i+1}^2)]\)</span></p>
 <p>Simplifying,</p>
 <p><span class="math inline">\(\displaystyle v_{i+1}=v_i+10\Delta t-\frac{.1\Delta t}{2}(v_i^2+v_{i+1}^2)\)</span></p>
-<p>Notice that <span class="math inline">\(v_{i+1}\)</span> appears on both sides.</p>
-<p><strong>We must solve a quadratic equation at each step.</strong></p>
 </section>
 <section id="quadratic-drag-10-subintervals" class="slide level2">
 <h2>Quadratic Drag: 10 Subintervals</h2>
-<p>For <span class="math inline">\(n=10\)</span>,</p>
-<p><span class="math inline">\(\Delta t=.1.\)</span></p>
+<p>For <span class="math inline">\(n=10\)</span>, <span class="math inline">\(\Delta t=.1\)</span></p>
 <p>Our formula becomes</p>
 <p><span class="math inline">\(\displaystyle v_{i+1}=v_i+1-.005(v_i^2+v_{i+1}^2)\)</span></p>
 <p>Rearranging,</p>
 <p><span class="math inline">\(\displaystyle .005v_{i+1}^2+v_{i+1}=v_i+1-.005v_i^2\)</span></p>
+</section>
+<section id="calculating-v_1" class="slide level2">
+<h2>Calculating <span class="math inline">\(v_1\)</span></h2>
 <p>Starting with <span class="math inline">\(v_0=0\)</span>,</p>
 <p><span class="math inline">\(\displaystyle .005v_1^2+v_1=1\)</span></p>
 <p>Using the quadratic formula and taking the positive root,</p>
@@ -467,14 +444,25 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 <p><span class="math inline">\(\displaystyle v_1\approx .995049\ \mathrm{m/s}\)</span></p>
 <p>Repeating this process gives the velocity at each time.</p>
 </section>
+<section id="calculating-v_2" class="slide level2">
+<h2>Calculating <span class="math inline">\(v_2\)</span></h2>
+<p>Starting with <span class="math inline">\(v_1 \approx .995049\)</span>,</p>
+<p><span class="math inline">\(\displaystyle .005v_2^2+v_2=v_1+1-.005v_1^2\)</span></p>
+<p>Substituting <span class="math inline">\(v_1\)</span>,</p>
+<p><span class="math inline">\(\displaystyle .005v_2^2+v_2=.995049+1-.005(.995049)^2=1.990099\)</span></p>
+<p>Using the quadratic formula and taking the positive root,</p>
+<p><span class="math inline">\(\displaystyle v_2=\frac{-1+\sqrt{1+4(.005)(1.990099)}}{.01}\approx 1.970681\ \mathrm{m/s}\)</span></p>
+</section>
 <section id="quadratic-drag-numerical-results" class="slide level2">
 <h2>Quadratic Drag: Numerical Results</h2>
 <p>Using <span class="math inline">\(n=10\)</span> and <span class="math inline">\(\Delta t=.1\)</span>:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th style="text-align: left;"><span class="math inline">\(t\)</span> (s)</th>
-<th style="text-align: right;"><span class="math inline">\(v(t)\)</span> (m/s)</th>
+<th style="text-align: left;"><span class="math inline">\(t_i\)</span> (s)</th>
+<th style="text-align: right;"><span class="math inline">\(v_i_\)</span> (m/s)</th>
 </tr>
 </thead>
 <tbody>
@@ -502,6 +490,17 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 <td style="text-align: left;">0.5</td>
 <td style="text-align: right;">4.616107</td>
 </tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span class="math inline">\(t_i\)</span> (s)</th>
+<th style="text-align: right;"><span class="math inline">\(v_i_\)</span> (m/s)</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
 <td style="text-align: left;">0.6</td>
 <td style="text-align: right;">5.365616</td>
@@ -524,9 +523,7 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 </tr>
 </tbody>
 </table>
-<p>Thus,</p>
-<p><span class="math inline">\(\displaystyle \boxed{v(1)\approx7.613940\ \mathrm{m/s}}\)</span></p>
-<p>Notice that the velocity increases, but the acceleration decreases as air resistance grows.</p>
+</div></div>
 </section>
 <section id="quadratic-drag-100-subintervals" class="slide level2">
 <h2>Quadratic Drag: 100 Subintervals</h2>
@@ -559,20 +556,17 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 </table>
 <p>Our Trapezoidal Rule equation becomes</p>
 <p><span class="math inline">\(\displaystyle v_{i+1}=v_i+.1-.0005(v_i^2+v_{i+1}^2)\)</span></p>
-<p>Starting with <span class="math inline">\(v_0=0\)</span>, repeat the calculation 100 times.</p>
-<p>The resulting approximation is</p>
 <p><span class="math inline">\(\displaystyle \boxed{v(1)\approx7.615922\ \mathrm{m/s}}\)</span></p>
-<p><strong>How much more accurate is this approximation?</strong></p>
 </section>
 <section id="quadratic-drag-exact-solution" class="slide level2">
 <h2>Quadratic Drag: Exact Solution</h2>
 <p>The differential equation</p>
 <p><span class="math inline">\(\displaystyle \frac{dv}{dt}=10-0.1v^2\)</span></p>
-<p>with <span class="math inline">\(v(0)=0\)</span> has the exact solution</p>
-<p><span class="math inline">\(v(t)=10\tanh(t).\)</span></p>
-<p>Therefore,</p>
-<p><span class="math inline">\(\displaystyle v(1)=10\tanh(1)\)</span></p>
-<p><span class="math inline">\(\displaystyle \boxed{v(1)\approx7.615942\ \mathrm{m/s}}\)</span></p>
+<p>with <span class="math inline">\(v(0)=0\)</span> has the exact solution <span class="math inline">\(v(t)=10\tanh(t).\)</span></p>
+<p>Therefore, <span class="math inline">\(\displaystyle v(1)=10\tanh(1)\approx7.615942\ \mathrm{m/s}\)</span></p>
+</section>
+<section id="compare" class="slide level2">
+<h2>Compare</h2>
 <p>Compare our approximations:</p>
 <table class="caption-top">
 <thead>
@@ -596,32 +590,7 @@ x(t)-x(0)=\int_0^t v(s)\,ds
 </tr>
 </tbody>
 </table>
-<p>Both numerical approximations underestimate the exact velocity.</p>
-</section>
-<section id="quadratic-drag-error-analysis" class="slide level2">
-<h2>Quadratic Drag: Error Analysis</h2>
-<p>The absolute error is</p>
-<p><span class="math inline">\(\text{Error}=|\text{Exact Value}-\text{Approximation}|\)</span></p>
-<p>For <span class="math inline">\(n=10\)</span>,</p>
-<p><span class="math inline">\(|E_{10}|\approx .00200135\ \mathrm{m/s}\)</span></p>
-<p>For <span class="math inline">\(n=100\)</span>,</p>
-<p><span class="math inline">\(|E_{100}|\approx .00001993\ \mathrm{m/s}\)</span></p>
-<p>Compare the errors:</p>
-<p><span class="math inline">\(\displaystyle \frac{|E_{10}|}{|E_{100}|}\approx100.4\)</span></p>
-<p><strong>Increasing the number of subintervals by a factor of 10 reduces the error by approximately a factor of 100.</strong></p>
-<p>This illustrates second-order convergence of the Trapezoidal Rule for this differential equation.</p>
-</section>
-<section id="terminal-velocity" class="slide level2">
-<h2>Terminal Velocity</h2>
-<p>Recall the equation</p>
-<p><span class="math inline">\(\displaystyle \frac{dv}{dt}=10-0.1v^2.\)</span></p>
-<p>As the object speeds up, air resistance increases.</p>
-<p>Eventually, gravitational force and drag balance, so acceleration approaches zero:</p>
-<p><span class="math inline">\(0=10-0.1v^2\)</span></p>
-<p>Solving,</p>
-<p><span class="math inline">\(v^2=100\)</span></p>
-<p><span class="math inline">\(\displaystyle \boxed{v_{\mathrm{terminal}}=10\ \mathrm{m/s}}\)</span></p>
-<p>The velocity approaches <span class="math inline">\(10\ \mathrm{m/s}\)</span> but never exceeds it.</p>
+<p>Rule of Thumb for Trapazoidal Rule: Squaring the number of intervals doubles the number of decimal digits of accuracy.</p>
 </section>
 <section class="slide level2">
 

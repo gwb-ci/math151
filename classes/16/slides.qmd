@@ -1,5 +1,5 @@
 ---
-title: "Improper Integrals"
+title: "Numerical Integration"
 
 format:
   revealjs:
@@ -33,12 +33,12 @@ format:
 
 ---
 
-## Where do function come from?
+## Where do functions come from?
 
-- Theory: $e^{ax}$ is a solution to the differential equation $\frac{dy}{dx}=ay$.
-- Measurement: read the acceration data from a chip 1000 times a second.
+- **Theory**: $e^{ax}$ is a solution to the differential equation $\frac{dy}{dx}=ay$.
+- **Measurement**: read the acceration data from a chip 1000 times a second.
 
-Both are useful, but we need to be able to do calculus on both.
+Both are useful, and we need to be able to do calculus on both.
 
 ---
 
@@ -73,43 +73,13 @@ $$
 
 Assume $v(0)=x(0)=0$.
 
+
 ## Rocketry: Acceleration Data
 
-<svg viewBox="0 0 800 440" width="100%" xmlns="http://www.w3.org/2000/svg">
-<rect width="800" height="440" fill="white"/>
-<g stroke="#ddd">
-<path d="M80 290H740 M80 180H740 M80 70H740"/>
-</g>
-<path d="M80 40V400H750" stroke="black" stroke-width="2" fill="none"/>
-<g font-family="Arial" font-size="16" fill="black">
-<text x="60" y="406">0</text>
-<text x="47" y="296">10</text>
-<text x="47" y="186">20</text>
-<text x="47" y="76">30</text>
-<text x="76" y="425">0</text>
-<text x="204" y="425">.02</text>
-<text x="336" y="425">.04</text>
-<text x="468" y="425">.06</text>
-<text x="600" y="425">.08</text>
-<text x="728" y="425">.10</text>
-<text x="350" y="439">Time (seconds)</text>
-</g>
-<polyline points="80,400 146,400 212,400 278,400 344,392.52 410,361.06 476,305.18 542,249.41 608,193.67 674,137.76 740,81.88"
- fill="none" stroke="#1769aa" stroke-width="3"/>
-<g fill="#1769aa">
-<circle cx="80" cy="400" r="4"/>
-<circle cx="146" cy="400" r="4"/>
-<circle cx="212" cy="400" r="4"/>
-<circle cx="278" cy="400" r="4"/>
-<circle cx="344" cy="392.52" r="4"/>
-<circle cx="410" cy="361.06" r="4"/>
-<circle cx="476" cy="305.18" r="4"/>
-<circle cx="542" cy="249.41" r="4"/>
-<circle cx="608" cy="193.67" r="4"/>
-<circle cx="674" cy="137.76" r="4"/>
-<circle cx="740" cy="81.88" r="4"/>
-</g>
-</svg>
+![](rocketry-acceleration.svg){width="85%" fig-align="center"}
+
+---
+
 
 ## Notation for numerical integration
 
@@ -284,16 +254,10 @@ $v(.1)\approx .8360\ \mathrm{m/s}$.
 
 ## Error Estimate Formulas
 
-**Left Endpoint Rule Error Bound:**
+**Left & Right Endpoint Rule Error Bound:**
 Suppose $|f'(x)|\leq K$ for all $x\in[a,b]$.
 
-$\displaystyle |E_L|\leq \frac{K(b-a)^2}{2n}$
-
-**Right Endpoint Rule Error Bound:**
-Suppose $|f'(x)|\leq K$ for all $x\in[a,b]$.
-
-$\displaystyle |E_R|\leq \frac{K(b-a)^2}{2n}$
-
+$\displaystyle |E_R|=|E_L|\leq \frac{K(b-a)^2}{2n}$
 
 
 **Trapezoidal Rule Error Bound:**
@@ -314,15 +278,9 @@ $K\approx \max\left|\dfrac{\Delta a}{\Delta t}\right|=\dfrac{5.08}{.01}=508$
 
 Assuming $|a'(t)|\leq 508$, the Left Endpoint Rule error satisfies
 
-$\displaystyle |E_L|\leq \frac{K_1(b-a)^2}{2n}$
+$\displaystyle |E_R|=|E_L|\leq \frac{K_1(b-a)^2}{2n}\leq \frac{508(.10)^2}{2(10)}\leq .254\ \mathrm{m/s}$
 
-Substituting,
 
-$\displaystyle |E_L|\leq \frac{508(.10)^2}{2(10)}$
-
-$\displaystyle \boxed{|E_L|\leq .254\ \mathrm{m/s}}$
-
-Our approximation was $L_{10}=.6914\ \mathrm{m/s}$.  Since $E_R$ uses the same formuala, $R_{10}=.9806\ \mathrm{m/s}$.
 
 ---
 
@@ -340,18 +298,22 @@ The Left and Right Endpoint Rule error bounds are
 
 $\displaystyle |E_L|,\ |E_R|\leq\frac{K(b-a)^2}{2n}$
 
-Substituting $n=100$,
+---
 
-$\displaystyle |E_L|,\ |E_R|\leq\frac{508(.10)^2}{2(100)}$
+## Substituting $n=100$
 
-$\displaystyle \boxed{|E_L|,\ |E_R|\leq .0254\ \mathrm{m/s}}$
+
+
+$\displaystyle |E_L|,\ |E_R|\leq\frac{508(.10)^2}{2(100)}\leq .0254\ \mathrm{m/s}$
+
+
 
 Compare with the original error bound:
 
 $\displaystyle \frac{.254}{.0254}=10$
 
 
-
+10 times the samples 10 times the accuracy.
 
 
 ---
@@ -368,13 +330,18 @@ $\displaystyle a''(.05)\approx\frac{8.62-2(3.54)+.68}{(.01)^2}=22{,}200$
 
 The largest observed second difference gives $K\approx22{,}200$.
 
+
+---
+
+## Error Bound: Trapezoidal Rule Calculation
+
 Assuming $|a''(t)|\leq22{,}200$,
 
 $\displaystyle |E_T|\leq\frac{K(b-a)^3}{12n^2}$
 
 $\displaystyle |E_T|\leq\frac{22{,}200(.10)^3}{12(10)^2}$
 
-$\displaystyle \boxed{|E_T|\leq .0185\ \mathrm{m/s}}$
+$\displaystyle |E_T|\leq .0185\ \mathrm{m/s}$
 
 Our approximation was $T_{10}=.8360\ \mathrm{m/s}$.
 
@@ -395,18 +362,20 @@ The Trapezoidal Rule error bound is
 
 $\displaystyle |E_T|\leq\frac{K(b-a)^3}{12n^2}$
 
-Substituting $n=100$,
+---
 
-$\displaystyle |E_T|\leq\frac{22{,}200(.10)^3}{12(100)^2}$
+## Substituting $n=100$
 
-$\displaystyle \boxed{|E_T|\leq .000185\ \mathrm{m/s}}$
+
+$\displaystyle |E_T|\leq\frac{22{,}200(.10)^3}{12(100)^2}\leq .000185\ \mathrm{m/s}$
+
 
 Compare with the original estimate:
 
 $\displaystyle \frac{.0185}{.000185}=100$
 
 
-
+10 times the sample 100 times the accuracy.
 ---
 
 
@@ -423,17 +392,10 @@ For the same $.10$ second interval:
 | $\Delta t$ | .010 s | .000744 s |
 | Subintervals | 10 | $\approx 134$ |
 
-Recall the Trapezoidal Rule error bound:
 
-$\displaystyle |E_T|\leq\frac{K(b-a)^3}{12n^2}$
+$\displaystyle |E_T|\leq\frac{22{,}200(.10)^3}{12(134)^2}\leq .000103\ \mathrm{m/s}$
 
-Using $K=22{,}200$ and $n=134$,
 
-$\displaystyle |E_T|\leq\frac{22{,}200(.10)^3}{12(134)^2}$
-
-$\displaystyle \boxed{|E_T|\leq .000103\ \mathrm{m/s}}$
-
-**The estimated error bound is approximately 180 times smaller!**
 
 ---
 
@@ -451,31 +413,14 @@ Adding these trapezoidal areas gives
 
 $T_n=\dfrac{L_n+R_n}{2}.$
 
-For our example,
 
-$T_4=\dfrac{11+19}{2}=15\ \mathrm{m/s}.$
-
-Averaging the left and right sums reduces the error in this example but does not necessarily eliminate it.
+Averaging the left and right sums reduces the error.
 
 
 
-## Absolute and relative error
-
-If $A$ is the actual value and $B$ is an approximation, then
-
-$\text{Absolute error}=|A-B|.$
-
-The relative error is
-
-$\text{Relative error}=\dfrac{|A-B|}{|A|},\quad A\ne0.$
-
-To express relative error as a percentage, multiply by $100\%$.
-
-For $T_4=15$ and exact value $44/3$,
-
-$\text{Absolute error}=\left|\frac{44}{3}-15\right|=\frac13\ \mathrm{m/s}.$
 
 
+---
 
 
 
@@ -483,63 +428,47 @@ $\text{Absolute error}=\left|\frac{44}{3}-15\right|=\frac13\ \mathrm{m/s}.$
 
 Suppose an object falls from rest under gravity with quadratic air resistance.
 
-Newton's Second Law gives
-
-$m\dfrac{dv}{dt}=mg-cv^2$
-
-where
+Newton's Second Law gives $m\dfrac{dv}{dt}=mg-cv^2$ where
 
 - $v(t)$ is the downward velocity.
 - $mg$ is the gravitational force.
 - $cv^2$ is the force of air resistance.
 
-For our example, take $g=10$ and $c/m=0.1$.
+For our example, take $g=10$ and $c/m=0.1$, then $\frac{dv}{dt}=10-0.1v^2$ Assume $v(0)=0$.  We will find $v(1)$.
 
-Then
-
-$\displaystyle \boxed{\frac{dv}{dt}=10-0.1v^2}$
-
-Assume $v(0)=0$.
-
-**What is the velocity after one second?**
 
 ---
 
 ## From a Differential Equation to an Integral
 
-Our differential equation is
-
-$\dfrac{dv}{dt}=10-0.1v^2.$
+Our differential equation is $\dfrac{dv}{dt}=10-0.1v^2.$
 
 Integrating from $0$ to $t$,
 
 $\displaystyle v(t)-v(0)=\int_0^t(10-0.1v(s)^2)\,ds$
 
-Since $v(0)=0$,
 
-$\displaystyle v(t)=\int_0^t(10-0.1v(s)^2)\,ds$
+We want to approximate $\displaystyle v(1)=\int_0^1(10-0.1v(s)^2)\,ds$
 
-We want to approximate
-
-$\displaystyle v(1)=\int_0^1(10-0.1v(s)^2)\,ds$
-
-The difficulty is that we do not know $v(t)$.
-
-We will use numerical integration to approximate it.
+The difficulty is that we do not know a formula for $v$. We will use numerical integration to approximate it.
 
 ---
 
-## Applying the Trapezoidal Rule
+## Approximation setup
 
-Divide $[0,1]$ into $n$ subintervals of width
+Divide $[0,1]$ into $n$ subintervals of width $\Delta t=\dfrac{1}{n}.$
 
-$\Delta t=\dfrac{1}{n}.$
+by FTC, $\displaystyle v(t_{i+1})- v(t_i)=\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\,ds$
 
-On each subinterval,
+$v_i \approx v(t_i)$ so $v_{i+1} \approx v(t_{i+1})$
 
-$\displaystyle v_{i+1}\approx v_i+\int_{t_i}^{t_{i+1}}(10-0.1v^2)\,dt$
+$\displaystyle v_{i+1}\approx v_i+\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\,ds$
 
-Using the Trapezoidal Rule,
+## Using the Trapezoidal Rule
+
+$\displaystyle v_{i+1}\approx v_i+\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\,ds$
+
+becomes
 
 $\displaystyle v_{i+1}=v_i+\frac{\Delta t}{2}[(10-0.1v_i^2)+(10-0.1v_{i+1}^2)]$
 
@@ -547,17 +476,12 @@ Simplifying,
 
 $\displaystyle v_{i+1}=v_i+10\Delta t-\frac{.1\Delta t}{2}(v_i^2+v_{i+1}^2)$
 
-Notice that $v_{i+1}$ appears on both sides.
-
-**We must solve a quadratic equation at each step.**
 
 ---
 
 ## Quadratic Drag: 10 Subintervals
 
-For $n=10$,
-
-$\Delta t=.1.$
+For $n=10$, $\Delta t=.1$
 
 Our formula becomes
 
@@ -566,6 +490,9 @@ $\displaystyle v_{i+1}=v_i+1-.005(v_i^2+v_{i+1}^2)$
 Rearranging,
 
 $\displaystyle .005v_{i+1}^2+v_{i+1}=v_i+1-.005v_i^2$
+
+
+## Calculating $v_1$
 
 Starting with $v_0=0$,
 
@@ -581,11 +508,35 @@ Repeating this process gives the velocity at each time.
 
 ---
 
+
+## Calculating $v_2$
+
+Starting with $v_1 \approx .995049$,
+
+$\displaystyle .005v_2^2+v_2=v_1+1-.005v_1^2$
+
+Substituting $v_1$,
+
+$\displaystyle .005v_2^2+v_2=.995049+1-.005(.995049)^2=1.990099$
+
+
+Using the quadratic formula and taking the positive root,
+
+$\displaystyle v_2=\frac{-1+\sqrt{1+4(.005)(1.990099)}}{.01}\approx 1.970681\ \mathrm{m/s}$
+
+
+---
+
+
 ## Quadratic Drag: Numerical Results
 
 Using $n=10$ and $\Delta t=.1$:
 
-| $t$ (s) | $v(t)$ (m/s) |
+:::: {.columns}
+
+::: {.column width="50%"}
+
+| $t_i$ (s) | $v_i_$ (m/s) |
 |:--|--:|
 | 0.0 | 0.000000 |
 | 0.1 | 0.995049 |
@@ -593,19 +544,23 @@ Using $n=10$ and $\Delta t=.1$:
 | 0.3 | 2.908953 |
 | 0.4 | 3.794646 |
 | 0.5 | 4.616107 |
+
+:::
+
+::: {.column width="50%"}
+
+| $t_i$ (s) | $v_i_$ (m/s) |
+|:--|--:|
 | 0.6 | 5.365616 |
 | 0.7 | 6.039301 |
 | 0.8 | 6.636706 |
 | 0.9 | 7.160139 |
 | 1.0 | 7.613940 |
 
-Thus,
+:::
 
-$\displaystyle \boxed{v(1)\approx7.613940\ \mathrm{m/s}}$
+::::
 
-Notice that the velocity increases, but the acceleration decreases as air resistance grows.
-
----
 
 ## Quadratic Drag: 100 Subintervals
 
@@ -621,13 +576,9 @@ Our Trapezoidal Rule equation becomes
 
 $\displaystyle v_{i+1}=v_i+.1-.0005(v_i^2+v_{i+1}^2)$
 
-Starting with $v_0=0$, repeat the calculation 100 times.
-
-The resulting approximation is
-
 $\displaystyle \boxed{v(1)\approx7.615922\ \mathrm{m/s}}$
 
-**How much more accurate is this approximation?**
+
 
 ---
 
@@ -637,15 +588,13 @@ The differential equation
 
 $\displaystyle \frac{dv}{dt}=10-0.1v^2$
 
-with $v(0)=0$ has the exact solution
+with $v(0)=0$ has the exact solution $v(t)=10\tanh(t).$
 
-$v(t)=10\tanh(t).$
+Therefore, $\displaystyle v(1)=10\tanh(1)\approx7.615942\ \mathrm{m/s}$
 
-Therefore,
+---
 
-$\displaystyle v(1)=10\tanh(1)$
-
-$\displaystyle \boxed{v(1)\approx7.615942\ \mathrm{m/s}}$
+## Compare
 
 Compare our approximations:
 
@@ -655,52 +604,7 @@ Compare our approximations:
 | Trapezoidal, $n=100$ | 7.615922 |
 | Exact | 7.615942 |
 
-Both numerical approximations underestimate the exact velocity.
+Rule of Thumb for Trapazoidal Rule: Squaring the number of intervals doubles the number of decimal digits of accuracy.
 
 ---
 
-## Quadratic Drag: Error Analysis
-
-The absolute error is
-
-$\text{Error}=|\text{Exact Value}-\text{Approximation}|$
-
-For $n=10$,
-
-$|E_{10}|\approx .00200135\ \mathrm{m/s}$
-
-For $n=100$,
-
-$|E_{100}|\approx .00001993\ \mathrm{m/s}$
-
-Compare the errors:
-
-$\displaystyle \frac{|E_{10}|}{|E_{100}|}\approx100.4$
-
-**Increasing the number of subintervals by a factor of 10 reduces the error by approximately a factor of 100.**
-
-This illustrates second-order convergence of the Trapezoidal Rule for this differential equation.
-
----
-
-## Terminal Velocity
-
-Recall the equation
-
-$\displaystyle \frac{dv}{dt}=10-0.1v^2.$
-
-As the object speeds up, air resistance increases.
-
-Eventually, gravitational force and drag balance, so acceleration approaches zero:
-
-$0=10-0.1v^2$
-
-Solving,
-
-$v^2=100$
-
-$\displaystyle \boxed{v_{\mathrm{terminal}}=10\ \mathrm{m/s}}$
-
-The velocity approaches $10\ \mathrm{m/s}$ but never exceeds it.
-
----
