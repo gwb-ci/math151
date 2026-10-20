@@ -256,7 +256,7 @@
     "href": "classes/16/numerical_integration_accelerometer.html#numerical-integration-methods",
     "title": "Numerical Integration",
     "section": "Numerical integration methods",
-    "text": "Numerical integration methods\nWe will study:\n\nLeft and right Riemann sums\nThe midpoint rule\nThe trapezoidal rule\nSimpson’s rule\nError bounds for numerical integration\nApplications to velocity and position"
+    "text": "Numerical integration methods\nWe will study:\n\nLeft and right Riemann sum approximations\nThe trapezoidal rule\nSimpson’s rule\nError bounds for numerical integration\nApplications to velocity and position"
   },
   {
     "objectID": "classes/16/numerical_integration_accelerometer.html#what-an-acceleration-sample-can-tell-us",
@@ -4160,165 +4160,323 @@
     "text": "Hint"
   },
   {
-    "objectID": "classes/16/slides.html#improper-integrals",
-    "href": "classes/16/slides.html#improper-integrals",
+    "objectID": "classes/16/slides.html#numerical-integration",
+    "href": "classes/16/slides.html#numerical-integration",
     "title": "Improper Integrals",
-    "section": "Improper Integrals",
-    "text": "Improper Integrals\nClass Session Goals:\n\nEvaluate an integral over an infinite interval.\nEvaluate an integral over a closed interval with an infinite discontinuity within the interval.\nUse the comparison theorem to determine whether a definite integral is convergent."
+    "section": "Numerical Integration",
+    "text": "Numerical Integration\n\nLeft and right Riemann sum approximations\nThe trapezoidal rule\nSimpson’s rule\nError bounds for numerical integration",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#what-is-an-improper-integral",
-    "href": "classes/16/slides.html#what-is-an-improper-integral",
+    "objectID": "classes/16/slides.html#where-do-function-come-from",
+    "href": "classes/16/slides.html#where-do-function-come-from",
     "title": "Improper Integrals",
-    "section": "What is an Improper Integral?",
-    "text": "What is an Improper Integral?\nIntegrals over an infinite interval as well as integrals of functions containing a discontinuity on the interval are called improper integrals.\n\\[\\int_a^{\\infty} f(x)\\,dx\\]"
+    "section": "Where do function come from?",
+    "text": "Where do function come from?\n\nTheory: \\(e^{ax}\\) is a solution to the differential equation \\(\\frac{dy}{dx}=ay\\).\nMeasurement: read the acceration data from a chip 1000 times a second.\n\nBoth are useful, but we need to be able to do calculus on both.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#integrating-over-an-infinite-interval",
-    "href": "classes/16/slides.html#integrating-over-an-infinite-interval",
+    "objectID": "classes/16/slides.html#rocketry-data",
+    "href": "classes/16/slides.html#rocketry-data",
     "title": "Improper Integrals",
-    "section": "Integrating over an Infinite Interval",
-    "text": "Integrating over an Infinite Interval\nTo integrate a function over an infinite interval, we consider the limit of the integral as the limit increases without bound.\nIf \\(f(x)\\) is continuous over \\([a,\\infty)\\), then\n\\[\\int_a^{\\infty} f(x)\\,dx=\\lim_{t\\to\\infty}\\int_a^t f(x)\\,dx\\]\nprovided this limit exists."
+    "section": "Rocketry Data",
+    "text": "Rocketry Data\n\n\n\n\\(t\\) (s)\n.01\n.02\n.03\n.04\n.05\n\n\n\n\n\\(a(t)\\) (\\(\\mathrm{m/s^2}\\))\n0.00\n0.00\n0.00\n0.68\n3.54\n\n\n\n\n\n\n\\(t\\) (s)\n.06\n.07\n.08\n.09\n.10\n\n\n\n\n\\(a(t)\\) (\\(\\mathrm{m/s^2}\\))\n8.62\n13.69\n18.77\n23.84\n28.92\n\n\n\nAssume \\(v(0)=x(0)=0\\).",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#infinite-interval-to-the-left",
-    "href": "classes/16/slides.html#infinite-interval-to-the-left",
+    "objectID": "classes/16/slides.html#rocketry-acceleration-data",
+    "href": "classes/16/slides.html#rocketry-acceleration-data",
     "title": "Improper Integrals",
-    "section": "Infinite Interval to the Left",
-    "text": "Infinite Interval to the Left\nIf \\(f(x)\\) is continuous over \\((-\\infty,b]\\), then\n\\[\\int_{-\\infty}^{b} f(x)\\,dx=\\lim_{t\\to-\\infty}\\int_t^b f(x)\\,dx\\]\nprovided this limit exists.\nIn each case, if the limit exists, then the improper integral is said to converge.\nIf the limit does not exist, then the improper integral is said to diverge."
+    "section": "Rocketry: Acceleration Data",
+    "text": "Rocketry: Acceleration Data\n\n      0 10 20 30 0 .02 .04 .06 .08 .10 Time (seconds)",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#infinite-interval-in-both-directions",
-    "href": "classes/16/slides.html#infinite-interval-in-both-directions",
+    "objectID": "classes/16/slides.html#notation-for-numerical-integration",
+    "href": "classes/16/slides.html#notation-for-numerical-integration",
     "title": "Improper Integrals",
-    "section": "Infinite Interval in Both Directions",
-    "text": "Infinite Interval in Both Directions\nIf \\(f(x)\\) is continuous over \\((-\\infty,\\infty)\\), then\n\\[\\int_{-\\infty}^{\\infty} f(x)\\,dx=\\int_{-\\infty}^{0}f(x)\\,dx+\\int_{0}^{\\infty}f(x)\\,dx\\]\nprovided that both integrals converge."
+    "section": "Notation for numerical integration",
+    "text": "Notation for numerical integration\nDivide \\([a,b]\\) into \\(n\\) subintervals of equal width:\n\\(\\Delta x=\\dfrac{b-a}{n}\\)\nThe partition points are\n\\(x_i=a+i\\Delta x,\\quad i=0,1,\\ldots,n.\\)\nFor the acceleration example, the interval is \\([0,.1]\\), \\(n=10\\), and \\(\\Delta t=.01\\) second.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#example-finding-an-area",
-    "href": "classes/16/slides.html#example-finding-an-area",
+    "objectID": "classes/16/slides.html#left-endpoint-rule",
+    "href": "classes/16/slides.html#left-endpoint-rule",
     "title": "Improper Integrals",
-    "section": "Example: Finding an Area",
-    "text": "Example: Finding an Area\nDetermine whether the area between the graph of \\(f(x)=\\frac{1}{x}\\) and the \\(x\\)-axis over the interval \\([1,\\infty)\\) is finite or infinite.\n\\(A=\\int_1^\\infty \\frac{1}{x}\\,dx\\)\n\\(=\\lim_{t\\to\\infty}\\int_1^t\\frac{1}{x}\\,dx\\)\n\n\\(=\\lim_{t\\to\\infty}\\ln|x|\\bigg|_1^t\\)\n\\(=\\lim_{t\\to\\infty}(\\ln|t|-\\ln 1)=\\infty\\)\nSince the improper integral diverges to \\(\\infty\\), the area of the region is infinite."
+    "section": "Left endpoint rule",
+    "text": "Left endpoint rule\nThe Left Endpoint Rule approximates the integral using the function value at the left endpoint of each subinterval.\n\\(L_n=\\Delta x[f(x_0)+f(x_1)+\\cdots+f(x_{n-1})]\\)\n\nFor the rocketry data, using \\(a(0)=0\\):\n\\(L_{10}=.01[a(0)+a(.01)+\\cdots+a(.09)]\\)\n\\(L_{10}=.01[0+0+0+0+.68+3.54\\)\n\\(\\qquad\\qquad +8.62+13.69+18.77+23.84]\\)\n\\(L_{10}=.6914\\ \\mathrm{m/s}\\)",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#example-finding-a-volume",
-    "href": "classes/16/slides.html#example-finding-a-volume",
+    "objectID": "classes/16/slides.html#rocketry-left-endpoint-rule",
+    "href": "classes/16/slides.html#rocketry-left-endpoint-rule",
     "title": "Improper Integrals",
-    "section": "Example: Finding a Volume",
-    "text": "Example: Finding a Volume\nFind the volume of the solid obtained by revolving the region bounded by the graph of \\(f(x)=\\frac{1}{x}\\) and the \\(x\\)-axis over \\([1,\\infty)\\) about the \\(x\\)-axis.\nUsing the disk method,\n\\(V=\\pi\\int_1^{\\infty}\\frac{1}{x^2}\\,dx\\)\n\n\\(=\\pi\\lim_{t\\to\\infty}\\int_1^t\\frac{1}{x^2}\\,dx\\)\n\\(=\\pi\\lim_{t\\to\\infty}\\left(-\\frac{1}{x}\\right)\\bigg|_1^t\\)\n\\(=\\pi\\lim_{t\\to\\infty}\\left(-\\frac{1}{t}+1\\right)=\\pi\\)"
+    "section": "Rocketry: Left Endpoint Rule",
+    "text": "Rocketry: Left Endpoint Rule\n\n              0 10 20 30 0 .02 .04 .06 .08 .10 Time (seconds)",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#gabriels-horn",
-    "href": "classes/16/slides.html#gabriels-horn",
+    "objectID": "classes/16/slides.html#right-endpoint-rule",
+    "href": "classes/16/slides.html#right-endpoint-rule",
     "title": "Improper Integrals",
-    "section": "Gabriel’s Horn",
-    "text": "Gabriel’s Horn\nArea of the region between the \\(x\\)-axis and the graph of \\(f(x)=1/x\\) over \\([1,\\infty)\\) is infinite.\nSurface area of the solid generated by revolving this region about the \\(x\\)-axis is infinite. This is a more challenging integral to evaluate, but we will show it is infinite in a later example.\nVolume of the solid generated by revolving this region about the \\(x\\)-axis is finite.\nThe solid generated is known as Gabriel’s Horn. an object with infinite cross-sectional area but finite volume."
+    "section": "Right endpoint rule",
+    "text": "Right endpoint rule\nThe Right Endpoint Rule approximates the integral using the function value at the right endpoint of each subinterval.\n\n\\(R_n=\\Delta x[f(x_1)+f(x_2)+\\cdots+f(x_n)]\\)\nFor the rocketry data:\n\\(R_{10}=.01[a(.01)+a(.02)+\\cdots+a(.10)]\\)\n\\(R_{10}=.01[0+0+0+.68+3.54+8.62\\)\n\\(\\qquad\\qquad +13.69+18.77+23.84+28.92]\\)\n\\(R_{10}=.9806\\ \\mathrm{m/s}\\)",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#recall-lhôpitals-rule",
-    "href": "classes/16/slides.html#recall-lhôpitals-rule",
+    "objectID": "classes/16/slides.html#rocketry-right-endpoint-rule",
+    "href": "classes/16/slides.html#rocketry-right-endpoint-rule",
     "title": "Improper Integrals",
-    "section": "Recall L’Hôpital’s Rule",
-    "text": "Recall L’Hôpital’s Rule\nSuppose \\(\\lim_{x\\to a}f(x)=0\\) and \\(\\lim_{x\\to a}g(x)=0\\), or both limits are \\(\\pm\\infty\\).\nIf \\(\\lim_{x\\to a}\\frac{f'(x)}{g'(x)}\\) exists (or is \\(\\pm\\infty\\)), then\n\\[\n\\lim_{x\\to a}\\frac{f(x)}{g(x)}\n=\\lim_{x\\to a}\\frac{f'(x)}{g'(x)}\n\\]"
+    "section": "Rocketry: Right Endpoint Rule",
+    "text": "Rocketry: Right Endpoint Rule\n\n               0 10 20 30 0 .02 .04 .06 .08 .10 Time (seconds)",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#some-indeterminate-forms",
-    "href": "classes/16/slides.html#some-indeterminate-forms",
+    "objectID": "classes/16/slides.html#error-analysis",
+    "href": "classes/16/slides.html#error-analysis",
     "title": "Improper Integrals",
-    "section": "Some Indeterminate Forms",
-    "text": "Some Indeterminate Forms\n\n\\(\\frac{0}{0}\\)\n\\(\\frac{\\infty}{\\infty}\\)\n\\(\\infty\\cdot 0\\)"
+    "section": "Error Analysis",
+    "text": "Error Analysis\nFor an increasing function:\n\nThe Left Endpoint Rule gives an underestimate.\nThe Right Endpoint Rule gives an overestimate.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#example-doubly-infinite-intervals",
-    "href": "classes/16/slides.html#example-doubly-infinite-intervals",
+    "objectID": "classes/16/slides.html#the-trapezoidal-rule",
+    "href": "classes/16/slides.html#the-trapezoidal-rule",
     "title": "Improper Integrals",
-    "section": "Example: Doubly Infinite Intervals",
-    "text": "Example: Doubly Infinite Intervals\nEvaluate \\[\\int_{-\\infty}^{\\infty}xe^x\\,dx\\]\nStart by splitting up the integral:\n\\[\\int_{-\\infty}^{\\infty}xe^x\\,dx=\\int_{-\\infty}^{0}xe^x\\,dx+\\int_{0}^{\\infty}xe^x\\,dx\\]\nIf either integral diverges, then the who integral diverges"
+    "section": "The Trapezoidal Rule",
+    "text": "The Trapezoidal Rule\nThe Trapezoidal Rule approximates the integral by using trapezoids instead of rectangles.\n\\(T_n=\\dfrac{\\Delta x}{2}[f(x_0)+2f(x_1)+\\cdots+2f(x_{n-1})+f(x_n)]\\)\n\nFor the rocketry data:\n\\(T_{10}=.8360\\ \\mathrm{m/s}\\)\nThus, the approximate velocity at \\(t=.1\\) second is\n\\(v(.1)\\approx .8360\\ \\mathrm{m/s}\\).",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#example-first-integral",
-    "href": "classes/16/slides.html#example-first-integral",
+    "objectID": "classes/16/slides.html#rocketry-trapezoidal-rule",
+    "href": "classes/16/slides.html#rocketry-trapezoidal-rule",
     "title": "Improper Integrals",
-    "section": "Example: First Integral",
-    "text": "Example: First Integral\n\\(\\int_{-\\infty}^{0}xe^x\\,dx=\\lim_{t\\to-\\infty}\\int_t^0xe^x\\,dx\\)\n\\(=\\lim_{t\\to-\\infty}(xe^x-e^x)\\bigg|_t^0\\)\n\\(=\\lim_{t\\to-\\infty}(-1-te^t+e^t)\\)\n\\(=-1\\)\nThe first improper integral converges."
+    "section": "Rocketry: Trapezoidal Rule",
+    "text": "Rocketry: Trapezoidal Rule",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#example-second-integral",
-    "href": "classes/16/slides.html#example-second-integral",
+    "objectID": "classes/16/slides.html#error-estimate-formulas",
+    "href": "classes/16/slides.html#error-estimate-formulas",
     "title": "Improper Integrals",
-    "section": "Example: Second Integral",
-    "text": "Example: Second Integral\n\\(\\int_0^{\\infty}xe^x\\,dx=\\lim_{t\\to\\infty}\\int_0^t xe^x\\,dx\\)\n\n\\(=\\lim_{t\\to\\infty}(xe^x-e^x)\\bigg|_0^t\\)\n\\(=\\lim_{t\\to\\infty}(te^t-e^t+1)=\\infty\\)\nThus, \\(\\int_0^{\\infty}xe^x\\,dx\\) diverges.\nTherefore, \\(\\int_{-\\infty}^{\\infty}xe^x\\,dx\\) diverges."
+    "section": "Error Estimate Formulas",
+    "text": "Error Estimate Formulas\nLeft Endpoint Rule Error Bound: Suppose \\(|f'(x)|\\leq K\\) for all \\(x\\in[a,b]\\).\n\\(\\displaystyle |E_L|\\leq \\frac{K(b-a)^2}{2n}\\)\nRight Endpoint Rule Error Bound: Suppose \\(|f'(x)|\\leq K\\) for all \\(x\\in[a,b]\\).\n\\(\\displaystyle |E_R|\\leq \\frac{K(b-a)^2}{2n}\\)\nTrapezoidal Rule Error Bound: Suppose \\(|f''(x)|\\leq K\\) for all \\(x\\in[a,b]\\).\n\\(\\displaystyle |E_T|\\leq \\frac{K(b-a)^3}{12n^2}\\)",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#integrating-a-discontinuous-integrand",
-    "href": "classes/16/slides.html#integrating-a-discontinuous-integrand",
+    "objectID": "classes/16/slides.html#error-bound-endpoint-rules",
+    "href": "classes/16/slides.html#error-bound-endpoint-rules",
     "title": "Improper Integrals",
-    "section": "Integrating a Discontinuous Integrand",
-    "text": "Integrating a Discontinuous Integrand\nIf \\(f(x)\\) is continuous over \\([a,b)\\), then\n\\[\\int_a^b f(x)\\,dx=\\lim_{t\\to b^-}\\int_a^t f(x)\\,dx\\]\nIf \\(f(x)\\) is continuous over \\((a,b]\\), then\n\\[\\int_a^b f(x)\\,dx=\\lim_{t\\to a^+}\\int_t^b f(x)\\,dx\\]"
+    "section": "Error Bound: Endpoint Rules",
+    "text": "Error Bound: Endpoint Rules\nFor the acceleration data, \\(0\\leq t\\leq .10\\) and \\(n=10\\).\nEstimate the maximum first derivative using the data:\n\\(K\\approx \\max\\left|\\dfrac{\\Delta a}{\\Delta t}\\right|=\\dfrac{5.08}{.01}=508\\)\nAssuming \\(|a'(t)|\\leq 508\\), the Left Endpoint Rule error satisfies\n\\(\\displaystyle |E_L|\\leq \\frac{K_1(b-a)^2}{2n}\\)\nSubstituting,\n\\(\\displaystyle |E_L|\\leq \\frac{508(.10)^2}{2(10)}\\)\n\\(\\displaystyle \\boxed{|E_L|\\leq .254\\ \\mathrm{m/s}}\\)\nOur approximation was \\(L_{10}=.6914\\ \\mathrm{m/s}\\). Since \\(E_R\\) uses the same formuala, \\(R_{10}=.9806\\ \\mathrm{m/s}\\).",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#discontinuity-inside-the-interval",
-    "href": "classes/16/slides.html#discontinuity-inside-the-interval",
+    "objectID": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently",
+    "href": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently",
     "title": "Improper Integrals",
-    "section": "Discontinuity Inside the Interval",
-    "text": "Discontinuity Inside the Interval\nIf \\(f(x)\\) is continuous over \\([a,b]\\) except at a point \\(c\\) in \\((a,b)\\), then\n\\[\\int_a^b f(x)\\,dx=\\int_a^c f(x)\\,dx+\\int_c^b f(x)\\,dx\\]\nprovided both integrals converge.\nIf either of these integrals diverges, then \\(\\int_a^b f(x)\\,dx\\) diverges."
+    "section": "What if We Measure 10 Times More Frequently?",
+    "text": "What if We Measure 10 Times More Frequently?\nKeep the same time interval \\([0,.10]\\) and derivative bound \\(K=508\\).\nIncreasing the sampling frequency by a factor of \\(10\\) gives:\n\n\\(n=100\\) instead of \\(n=10\\).\n\\(\\Delta t=.001\\) instead of \\(\\Delta t=.01\\).\n\nThe Left and Right Endpoint Rule error bounds are\n\\(\\displaystyle |E_L|,\\ |E_R|\\leq\\frac{K(b-a)^2}{2n}\\)\nSubstituting \\(n=100\\),\n\\(\\displaystyle |E_L|,\\ |E_R|\\leq\\frac{508(.10)^2}{2(100)}\\)\n\\(\\displaystyle \\boxed{|E_L|,\\ |E_R|\\leq .0254\\ \\mathrm{m/s}}\\)\nCompare with the original error bound:\n\\(\\displaystyle \\frac{.254}{.0254}=10\\)",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#example-1-discontinuities",
-    "href": "classes/16/slides.html#example-1-discontinuities",
+    "objectID": "classes/16/slides.html#error-bound-trapezoidal-rule",
+    "href": "classes/16/slides.html#error-bound-trapezoidal-rule",
     "title": "Improper Integrals",
-    "section": "Example 1: Discontinuities",
-    "text": "Example 1: Discontinuities\nEvaluate \\(\\int_0^4 \\frac{1}{\\sqrt{4-x}}\\,dx\\).\nThe function \\(f(x)=\\frac{1}{\\sqrt{4-x}}\\) is continuous over \\([0,4)\\) and discontinuous at \\(4\\).\n\n\\(\\int_0^4 \\frac{1}{\\sqrt{4-x}}\\,dx=\\lim_{t\\to4^-}\\int_0^t\\frac{1}{\\sqrt{4-x}}\\,dx=4\\)"
+    "section": "Error Bound: Trapezoidal Rule",
+    "text": "Error Bound: Trapezoidal Rule\nAssuming acceleration is sufficiently smooth and approximately quadratic, estimate the second derivative using consecutive measurements:\n\\(\\displaystyle a''(t)\\approx\\frac{a(t+.01)-2a(t)+a(t-.01)}{(.01)^2}\\)\nFor example, using \\(t=.05\\),\n\\(\\displaystyle a''(.05)\\approx\\frac{8.62-2(3.54)+.68}{(.01)^2}=22{,}200\\)\nThe largest observed second difference gives \\(K\\approx22{,}200\\).\nAssuming \\(|a''(t)|\\leq22{,}200\\),\n\\(\\displaystyle |E_T|\\leq\\frac{K(b-a)^3}{12n^2}\\)\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(10)^2}\\)\n\\(\\displaystyle \\boxed{|E_T|\\leq .0185\\ \\mathrm{m/s}}\\)\nOur approximation was \\(T_{10}=.8360\\ \\mathrm{m/s}\\).",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#example-2-discontinuities",
-    "href": "classes/16/slides.html#example-2-discontinuities",
+    "objectID": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently-1",
+    "href": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently-1",
     "title": "Improper Integrals",
-    "section": "Example 2: Discontinuities",
-    "text": "Example 2: Discontinuities\nEvaluate \\(\\int_0^2 x\\ln x\\,dx\\) where \\(f(x)=x\\ln x\\) is continuous over \\((0,2]\\) and is discontinuous at zero,\n\\[\\int_0^2 x\\ln x\\,dx=\\lim_{t\\to0^+}\\int_t^2 x\\ln x\\,dx\\]\n\nUsing integration by parts to get \\(2\\ln2-1\\)."
+    "section": "What if We Measure 10 Times More Frequently?",
+    "text": "What if We Measure 10 Times More Frequently?\nKeep the same time interval \\([0,.10]\\) and derivative bound \\(K=22{,}200\\).\nIncreasing the sampling frequency by a factor of \\(10\\) gives:\n\n\\(n=100\\) instead of \\(n=10\\).\n\\(\\Delta t=.001\\) instead of \\(\\Delta t=.01\\).\n\nThe Trapezoidal Rule error bound is\n\\(\\displaystyle |E_T|\\leq\\frac{K(b-a)^3}{12n^2}\\)\nSubstituting \\(n=100\\),\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(100)^2}\\)\n\\(\\displaystyle \\boxed{|E_T|\\leq .000185\\ \\mathrm{m/s}}\\)\nCompare with the original estimate:\n\\(\\displaystyle \\frac{.0185}{.000185}=100\\)",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#theorem-3.7-a-comparison-theorem",
-    "href": "classes/16/slides.html#theorem-3.7-a-comparison-theorem",
+    "objectID": "classes/16/slides.html#faster-sampling-lsm303agr-accelerometer",
+    "href": "classes/16/slides.html#faster-sampling-lsm303agr-accelerometer",
     "title": "Improper Integrals",
-    "section": "Theorem 3.7: A Comparison Theorem",
-    "text": "Theorem 3.7: A Comparison Theorem\nLet \\(f(x)\\) and \\(g(x)\\) be continuous over \\([a,\\infty)\\).\nAssume that \\(0\\le f(x)\\le g(x)\\) for \\(x\\ge a\\).\n\nIf \\(\\int_a^{\\infty} f(x)\\,dx=\\infty\\), then \\(\\int_a^{\\infty} g(x)\\,dx=\\infty\\).\nIf \\(\\int_a^{\\infty} g(x)\\,dx=L\\), where \\(L\\) is a real number, then \\(\\int_a^{\\infty} f(x)\\,dx=M\\) for some real number \\(M\\le L\\)."
+    "section": "Faster Sampling: LSM303AGR Accelerometer",
+    "text": "Faster Sampling: LSM303AGR Accelerometer\nThe LSM303AGR is a consumer grade accerometer that can measure accelleration at 1,344 sample per second.\nFor the same \\(.10\\) second interval:\n\n\n\n\nOriginal\nLSM303AGR\n\n\n\n\nSampling rate\n100 Hz\n1,344 Hz\n\n\n\\(\\Delta t\\)\n.010 s\n.000744 s\n\n\nSubintervals\n10\n\\(\\approx 134\\)\n\n\n\nRecall the Trapezoidal Rule error bound:\n\\(\\displaystyle |E_T|\\leq\\frac{K(b-a)^3}{12n^2}\\)\nUsing \\(K=22{,}200\\) and \\(n=134\\),\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(134)^2}\\)\n\\(\\displaystyle \\boxed{|E_T|\\leq .000103\\ \\mathrm{m/s}}\\)\nThe estimated error bound is approximately 180 times smaller!",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#example-comparison-theorem",
-    "href": "classes/16/slides.html#example-comparison-theorem",
+    "objectID": "classes/16/slides.html#why-the-trapezoidal-rule-is-an-average",
+    "href": "classes/16/slides.html#why-the-trapezoidal-rule-is-an-average",
     "title": "Improper Integrals",
-    "section": "Example: Comparison Theorem",
-    "text": "Example: Comparison Theorem\nUse a comparison to show \\(\\int_1^{\\infty}2\\pi \\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\,dx\\) diverges.\n\nSince \\(\\sqrt{1+\\frac{1}{x^4}}\\geq 1\\) for \\(x\\geq 1\\),\n\\(2\\pi\\int_1^\\infty\\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\geq 2\\pi\\int_1^\\infty\\frac{1}{x}\\,dx\\)\nWe have already shown that \\(\\int_1^\\infty\\frac{1}{x}\\,dx\\) diverges."
+    "section": "Why the Trapezoidal Rule is an average",
+    "text": "Why the Trapezoidal Rule is an average\nOn \\([x_{i-1},x_i]\\), the area of the trapezoid is\n\\(\\dfrac{\\Delta x}{2}[f(x_{i-1})+f(x_i)].\\)\nAdding these trapezoidal areas gives\n\\(T_n=\\dfrac{L_n+R_n}{2}.\\)\nFor our example,\n\\(T_4=\\dfrac{11+19}{2}=15\\ \\mathrm{m/s}.\\)\nAveraging the left and right sums reduces the error in this example but does not necessarily eliminate it.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#table-of-antiderivatives-trig",
-    "href": "classes/16/slides.html#table-of-antiderivatives-trig",
+    "objectID": "classes/16/slides.html#absolute-and-relative-error",
+    "href": "classes/16/slides.html#absolute-and-relative-error",
     "title": "Improper Integrals",
-    "section": "Table of Antiderivatives: Trig",
-    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\sec^2 x\\,dx &= \\tan x+C \\\\\n\\int \\csc^2 x\\,dx &= -\\cot x+C \\\\\n\\int \\sec x\\tan x\\,dx &= \\sec x+C \\\\\n\\int \\csc x\\cot x\\,dx &= -\\csc x+C\n\\end{aligned}\n\\]"
+    "section": "Absolute and relative error",
+    "text": "Absolute and relative error\nIf \\(A\\) is the actual value and \\(B\\) is an approximation, then\n\\(\\text{Absolute error}=|A-B|.\\)\nThe relative error is\n\\(\\text{Relative error}=\\dfrac{|A-B|}{|A|},\\quad A\\ne0.\\)\nTo express relative error as a percentage, multiply by \\(100\\%\\).\nFor \\(T_4=15\\) and exact value \\(44/3\\),\n\\(\\text{Absolute error}=\\left|\\frac{44}{3}-15\\right|=\\frac13\\ \\mathrm{m/s}.\\)",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#table-of-antiderivatives-trig-1",
-    "href": "classes/16/slides.html#table-of-antiderivatives-trig-1",
+    "objectID": "classes/16/slides.html#falling-object-with-air-resistance",
+    "href": "classes/16/slides.html#falling-object-with-air-resistance",
     "title": "Improper Integrals",
-    "section": "Table of Antiderivatives: Trig",
-    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\tan x\\,dx &= \\ln|\\sec x|+C \\\\\n\\int \\cot x\\,dx &= \\ln|\\sin x|+C \\\\\n\\int \\sec x\\,dx &= \\ln|\\sec x+\\tan x|+C \\\\\n\\int \\csc x\\,dx &= -\\ln|\\csc x+\\cot x|+C\n\\end{aligned}\n\\]"
+    "section": "Falling Object with Air Resistance",
+    "text": "Falling Object with Air Resistance\nSuppose an object falls from rest under gravity with quadratic air resistance.\nNewton’s Second Law gives\n\\(m\\dfrac{dv}{dt}=mg-cv^2\\)\nwhere\n\n\\(v(t)\\) is the downward velocity.\n\\(mg\\) is the gravitational force.\n\\(cv^2\\) is the force of air resistance.\n\nFor our example, take \\(g=10\\) and \\(c/m=0.1\\).\nThen\n\\(\\displaystyle \\boxed{\\frac{dv}{dt}=10-0.1v^2}\\)\nAssume \\(v(0)=0\\).\nWhat is the velocity after one second?",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#table-of-antiderivatives-other",
-    "href": "classes/16/slides.html#table-of-antiderivatives-other",
+    "objectID": "classes/16/slides.html#from-a-differential-equation-to-an-integral",
+    "href": "classes/16/slides.html#from-a-differential-equation-to-an-integral",
     "title": "Improper Integrals",
-    "section": "Table of Antiderivatives: Other",
-    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\log_a x\\,dx &= x\\log_a x-\\frac{x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\frac{1}{a^2+x^2}\\,dx &= \\frac{1}{a}\\tan^{-1}\\left(\\frac{x}{a}\\right)+C\n\\end{aligned}\n\\]"
+    "section": "From a Differential Equation to an Integral",
+    "text": "From a Differential Equation to an Integral\nOur differential equation is\n\\(\\dfrac{dv}{dt}=10-0.1v^2.\\)\nIntegrating from \\(0\\) to \\(t\\),\n\\(\\displaystyle v(t)-v(0)=\\int_0^t(10-0.1v(s)^2)\\,ds\\)\nSince \\(v(0)=0\\),\n\\(\\displaystyle v(t)=\\int_0^t(10-0.1v(s)^2)\\,ds\\)\nWe want to approximate\n\\(\\displaystyle v(1)=\\int_0^1(10-0.1v(s)^2)\\,ds\\)\nThe difficulty is that we do not know \\(v(t)\\).\nWe will use numerical integration to approximate it.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
-    "objectID": "classes/16/slides.html#table-of-antiderivatives-other-1",
-    "href": "classes/16/slides.html#table-of-antiderivatives-other-1",
+    "objectID": "classes/16/slides.html#applying-the-trapezoidal-rule",
+    "href": "classes/16/slides.html#applying-the-trapezoidal-rule",
     "title": "Improper Integrals",
-    "section": "Table of Antiderivatives: Other",
-    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int \\frac{1}{\\sqrt{a^2-x^2}}\\,dx &= \\sin^{-1}\\left(\\frac{x}{a}\\right)+C \\\\\n\\int \\frac{1}{x\\sqrt{x^2-a^2}}\\,dx &= \\frac{1}{a}\\sec^{-1}\\left|\\frac{x}{a}\\right|+C \\\\\n\\int \\frac{1}{x^2-a^2}\\,dx &= \\frac{1}{2a}\\ln\\left|\\frac{x-a}{x+a}\\right|+C\n\\end{aligned}\n\\]"
+    "section": "Applying the Trapezoidal Rule",
+    "text": "Applying the Trapezoidal Rule\nDivide \\([0,1]\\) into \\(n\\) subintervals of width\n\\(\\Delta t=\\dfrac{1}{n}.\\)\nOn each subinterval,\n\\(\\displaystyle v_{i+1}\\approx v_i+\\int_{t_i}^{t_{i+1}}(10-0.1v^2)\\,dt\\)\nUsing the Trapezoidal Rule,\n\\(\\displaystyle v_{i+1}=v_i+\\frac{\\Delta t}{2}[(10-0.1v_i^2)+(10-0.1v_{i+1}^2)]\\)\nSimplifying,\n\\(\\displaystyle v_{i+1}=v_i+10\\Delta t-\\frac{.1\\Delta t}{2}(v_i^2+v_{i+1}^2)\\)\nNotice that \\(v_{i+1}\\) appears on both sides.\nWe must solve a quadratic equation at each step.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#quadratic-drag-10-subintervals",
+    "href": "classes/16/slides.html#quadratic-drag-10-subintervals",
+    "title": "Improper Integrals",
+    "section": "Quadratic Drag: 10 Subintervals",
+    "text": "Quadratic Drag: 10 Subintervals\nFor \\(n=10\\),\n\\(\\Delta t=.1.\\)\nOur formula becomes\n\\(\\displaystyle v_{i+1}=v_i+1-.005(v_i^2+v_{i+1}^2)\\)\nRearranging,\n\\(\\displaystyle .005v_{i+1}^2+v_{i+1}=v_i+1-.005v_i^2\\)\nStarting with \\(v_0=0\\),\n\\(\\displaystyle .005v_1^2+v_1=1\\)\nUsing the quadratic formula and taking the positive root,\n\\(\\displaystyle v_1=\\frac{-1+\\sqrt{1.02}}{.01}\\)\n\\(\\displaystyle v_1\\approx .995049\\ \\mathrm{m/s}\\)\nRepeating this process gives the velocity at each time.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#quadratic-drag-numerical-results",
+    "href": "classes/16/slides.html#quadratic-drag-numerical-results",
+    "title": "Improper Integrals",
+    "section": "Quadratic Drag: Numerical Results",
+    "text": "Quadratic Drag: Numerical Results\nUsing \\(n=10\\) and \\(\\Delta t=.1\\):\n\n\n\n\\(t\\) (s)\n\\(v(t)\\) (m/s)\n\n\n\n\n0.0\n0.000000\n\n\n0.1\n0.995049\n\n\n0.2\n1.970681\n\n\n0.3\n2.908953\n\n\n0.4\n3.794646\n\n\n0.5\n4.616107\n\n\n0.6\n5.365616\n\n\n0.7\n6.039301\n\n\n0.8\n6.636706\n\n\n0.9\n7.160139\n\n\n1.0\n7.613940\n\n\n\nThus,\n\\(\\displaystyle \\boxed{v(1)\\approx7.613940\\ \\mathrm{m/s}}\\)\nNotice that the velocity increases, but the acceleration decreases as air resistance grows.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#quadratic-drag-100-subintervals",
+    "href": "classes/16/slides.html#quadratic-drag-100-subintervals",
+    "title": "Improper Integrals",
+    "section": "Quadratic Drag: 100 Subintervals",
+    "text": "Quadratic Drag: 100 Subintervals\nNow increase the number of subintervals by a factor of \\(10\\).\n\n\n\n\nFirst calculation\nSecond calculation\n\n\n\n\nInterval\n\\([0,1]\\)\n\\([0,1]\\)\n\n\n\\(n\\)\n10\n100\n\n\n\\(\\Delta t\\)\n.1\n.01\n\n\n\nOur Trapezoidal Rule equation becomes\n\\(\\displaystyle v_{i+1}=v_i+.1-.0005(v_i^2+v_{i+1}^2)\\)\nStarting with \\(v_0=0\\), repeat the calculation 100 times.\nThe resulting approximation is\n\\(\\displaystyle \\boxed{v(1)\\approx7.615922\\ \\mathrm{m/s}}\\)\nHow much more accurate is this approximation?",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#quadratic-drag-exact-solution",
+    "href": "classes/16/slides.html#quadratic-drag-exact-solution",
+    "title": "Improper Integrals",
+    "section": "Quadratic Drag: Exact Solution",
+    "text": "Quadratic Drag: Exact Solution\nThe differential equation\n\\(\\displaystyle \\frac{dv}{dt}=10-0.1v^2\\)\nwith \\(v(0)=0\\) has the exact solution\n\\(v(t)=10\\tanh(t).\\)\nTherefore,\n\\(\\displaystyle v(1)=10\\tanh(1)\\)\n\\(\\displaystyle \\boxed{v(1)\\approx7.615942\\ \\mathrm{m/s}}\\)\nCompare our approximations:\n\n\n\nMethod\nVelocity (m/s)\n\n\n\n\nTrapezoidal, \\(n=10\\)\n7.613940\n\n\nTrapezoidal, \\(n=100\\)\n7.615922\n\n\nExact\n7.615942\n\n\n\nBoth numerical approximations underestimate the exact velocity.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#quadratic-drag-error-analysis",
+    "href": "classes/16/slides.html#quadratic-drag-error-analysis",
+    "title": "Improper Integrals",
+    "section": "Quadratic Drag: Error Analysis",
+    "text": "Quadratic Drag: Error Analysis\nThe absolute error is\n\\(\\text{Error}=|\\text{Exact Value}-\\text{Approximation}|\\)\nFor \\(n=10\\),\n\\(|E_{10}|\\approx .00200135\\ \\mathrm{m/s}\\)\nFor \\(n=100\\),\n\\(|E_{100}|\\approx .00001993\\ \\mathrm{m/s}\\)\nCompare the errors:\n\\(\\displaystyle \\frac{|E_{10}|}{|E_{100}|}\\approx100.4\\)\nIncreasing the number of subintervals by a factor of 10 reduces the error by approximately a factor of 100.\nThis illustrates second-order convergence of the Trapezoidal Rule for this differential equation.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#terminal-velocity",
+    "href": "classes/16/slides.html#terminal-velocity",
+    "title": "Improper Integrals",
+    "section": "Terminal Velocity",
+    "text": "Terminal Velocity\nRecall the equation\n\\(\\displaystyle \\frac{dv}{dt}=10-0.1v^2.\\)\nAs the object speeds up, air resistance increases.\nEventually, gravitational force and drag balance, so acceleration approaches zero:\n\\(0=10-0.1v^2\\)\nSolving,\n\\(v^2=100\\)\n\\(\\displaystyle \\boxed{v_{\\mathrm{terminal}}=10\\ \\mathrm{m/s}}\\)\nThe velocity approaches \\(10\\ \\mathrm{m/s}\\) but never exceeds it.",
+    "crumbs": [
+      "Class Material",
+      "Improper Integrals"
+    ]
   },
   {
     "objectID": "classes/17/catchup_slides.html#antiderivatives-for-trigonometric-functions",

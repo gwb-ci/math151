@@ -35,8 +35,7 @@ Each arrow requires integration. We will approximate these integrals from sample
 
 We will study:
 
-- Left and right Riemann sums
-- The midpoint rule
+- Left and right Riemann sum approximations
 - The trapezoidal rule
 - Simpson's rule
 - Error bounds for numerical integration

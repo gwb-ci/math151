@@ -1,0 +1,53 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800" height="440" viewBox="0 0 800 440">
+
+<rect x="0" y="0" width="800" height="440" fill="white"/>
+
+<!-- Grid -->
+<g stroke="#dddddd" stroke-width="1">
+  <path d="M80 290 H740"/>
+  <path d="M80 180 H740"/>
+  <path d="M80 70 H740"/>
+</g>
+
+<!-- Trapezoidal areas -->
+<g fill="#8bbce0" fill-opacity="0.5"
+   stroke="#1769aa" stroke-width="1.5">
+  <polygon points="278,400 344,392.52 344,400"/>
+  <polygon points="344,392.52 410,361.06 410,400 344,400"/>
+  <polygon points="410,361.06 476,305.18 476,400 410,400"/>
+  <polygon points="476,305.18 542,249.41 542,400 476,400"/>
+  <polygon points="542,249.41 608,193.76 608,400 542,400"/>
+  <polygon points="608,193.76 674,137.76 674,400 608,400"/>
+  <polygon points="674,137.76 740,81.88 740,400 674,400"/>
+</g>
+
+<!-- Axes -->
+<path d="M80 40 V400 H750"
+      fill="none" stroke="black" stroke-width="2"/>
+
+<!-- Axis labels -->
+<g font-family="Arial" font-size="16" fill="black">
+  <text x="60" y="406">0</text>
+  <text x="47" y="296">10</text>
+  <text x="47" y="186">20</text>
+  <text x="47" y="76">30</text>
+
+  <text x="76" y="425">0</text>
+  <text x="204" y="425">.02</text>
+  <text x="336" y="425">.04</text>
+  <text x="468" y="425">.06</text>
+  <text x="600" y="425">.08</text>
+  <text x="728" y="425">.10</text>
+  <text x="350" y="439">Time (seconds)</text>
+</g>
+
+<!-- Piecewise linear acceleration curve -->
+<polyline
+  points="80,400 146,400 212,400 278,400 344,392.52
+          410,361.06 476,305.18 542,249.41 608,193.76
+          674,137.76 740,81.88"
+  fill="none" stroke="#1769aa" stroke-width="3"/>
+
+</svg>
