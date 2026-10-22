@@ -34,6 +34,8 @@ website:
           - file: classes/14/catchup_slides.qmd
           - file: classes/14/slides.qmd
           - file: classes/16/slides.qmd
+          - file: classes/18/slides.qmd
+          - file: classes/19/slides.qmd
 format:
   html:
     theme: cosmo

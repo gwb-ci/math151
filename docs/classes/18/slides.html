@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <title>Math 151 - Calculus II – Sequences</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-1a8385bbf955fbb4448938bc10efacf4.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Sequences</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="sequences" class="slide level2">
+<h2>Sequences</h2>
+<p>Class Session Goals:</p>
+<ul>
+<li>Find a formula for the general term of a sequence.</li>
+<li>Calculate the limit of a sequence, if it exists.</li>
+<li>Determine whether a sequence converges or diverges.</li>
+<li>Use boundedness and monotonicity to establish convergence.</li>
+</ul>
+</section>
+<section id="taylors-theorem-and-motivation" class="slide level2">
+<h2>Taylor’s Theorem and Motivation</h2>
+<p>Can we approximate a function using polynomials?</p>
+<p>If <span class="math inline">\(f\)</span> has continuous derivatives through order <span class="math inline">\(n+1\)</span> on an interval containing <span class="math inline">\(a\)</span> and <span class="math inline">\(x\)</span>, Taylor’s Theorem gives</p>
+<p><span class="math inline">\(\displaystyle f(x)=\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x-a)^k+R_n(x)\)</span>,</p>
+<p>where <span class="math inline">\(\displaystyle R_n(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}\)</span> for some <span class="math inline">\(c\)</span> between <span class="math inline">\(a\)</span> and <span class="math inline">\(x\)</span>.</p>
+</section>
+<section id="gamma-function" class="slide level2">
+<h2>Gamma Function</h2>
+
+<img data-src="gamma.png" class="quarto-figure quarto-figure-center r-stretch" style="width:85.0%"></section>
+<section id="infinite-series" class="slide level2">
+<h2>Infinite Series</h2>
+<p>As <span class="math inline">\(n\)</span> increases, the Taylor polynomials form a <strong>sequence</strong>.</p>
+<p>If <span class="math inline">\(R_n(x)\to0\)</span>, then</p>
+<p><span class="math inline">\(\displaystyle f(x)=\sum_{k=0}^{\infty}\frac{f^{(k)}(a)}{k!}(x-a)^k.\)</span></p>
+<p>When does this <strong>infinite series</strong> converge, and when does it equal <span class="math inline">\(f(x)\)</span>?</p>
+</section>
+<section id="what-is-a-sequence" class="slide level2">
+<h2>What is a Sequence?</h2>
+<p>An <strong>infinite sequence</strong> is an ordered list of numbers:</p>
+<p><span class="math inline">\(a_1,a_2,a_3,\ldots,a_n,\ldots\)</span></p>
+<p>Each number <span class="math inline">\(a_n\)</span> is a <strong>term</strong>. The integer <span class="math inline">\(n\)</span> is the <strong>index</strong>.</p>
+<p>We write <span class="math inline">\(\{a_n\}_{n=1}^{\infty}\)</span>, or simply <span class="math inline">\(\{a_n\}\)</span>.</p>
+<p>For example, <span class="math inline">\(\{2^n\}_{n=1}^{\infty}=\{2,4,8,16,\ldots\}\)</span>.</p>
+</section>
+<section id="two-ways-to-define-a-sequence" class="slide level2">
+<h2>Two Ways to Define a Sequence</h2>
+<p>1.<strong>Explicit formula</strong> gives a term directly from its index as a function of the index:</p>
+<p><span class="math inline">\(a_n=2^n,\quad n\ge 1.\)</span></p>
+<ol start="2" type="1">
+<li><strong>Recurrence relation</strong> gives a term using preceding terms:</li>
+</ol>
+<p><span class="math inline">\(b_1=2,\quad b_n=2b_{n-1},\quad n\ge 2.\)</span></p>
+<p>Here <span class="math inline">\(\{a_n\}=\{b_n\}\)</span> since each term is the same.</p>
+</section>
+<section id="arithmetic-sequences" class="slide level2">
+<h2>Arithmetic Sequences</h2>
+<p>An <strong>arithmetic sequence</strong> has a constant difference between consecutive terms.</p>
+<p><span class="math inline">\(3,7,11,15,19,\ldots\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(a_1=3,\quad a_n=a_{n-1}+4,\quad n\ge 2.\)</span></p>
+<p><span class="math inline">\(a_n=3+4(n-1)=4n-1.\)</span></p>
+<p>In general, <span class="math inline">\(a_n=a_1+(n-1)d\)</span>, where <span class="math inline">\(d\)</span> is the common difference.</p>
+</div>
+</section>
+<section id="geometric-sequences" class="slide level2">
+<h2>Geometric Sequences</h2>
+<p>A <strong>geometric sequence</strong> has a constant ratio between consecutive nonzero terms.</p>
+<p><span class="math inline">\(2,-\frac{2}{3},\frac{2}{9},-\frac{2}{27},\frac{2}{81},\ldots\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(a_1=2,\quad a_n=-\frac{1}{3}a_{n-1},\quad n\ge 2.\)</span></p>
+<p><span class="math inline">\(a_n=2\left(-\frac{1}{3}\right)^{n-1}.\)</span></p>
+<p>In general, <span class="math inline">\(a_n=a_1r^{n-1}\)</span>, where <span class="math inline">\(r\)</span> is the common ratio.</p>
+</div>
+</section>
+<section id="finding-an-explicit-formula" class="slide level2">
+<h2>Finding an Explicit Formula</h2>
+<p>Find a formula for the <span class="math inline">\(n\)</span>th term, starting with <span class="math inline">\(n=1\)</span>:</p>
+<p><span class="math inline">\(-\frac{1}{2},\frac{2}{3},-\frac{3}{4},\frac{4}{5},-\frac{5}{6},\ldots\)</span></p>
+<div class="fragment">
+<p>The numerators are <span class="math inline">\(n\)</span>, and the denominators are <span class="math inline">\(n+1\)</span>.</p>
+<p>The factor <span class="math inline">\((-1)^n\)</span> gives a negative sign when <span class="math inline">\(n\)</span> is odd.</p>
+<p><span class="math inline">\(a_n=\dfrac{(-1)^n n}{n+1}.\)</span></p>
+</div>
+</section>
+<section id="another-explicit-formula" class="slide level2">
+<h2>Another Explicit Formula</h2>
+<p>Find a formula for the <span class="math inline">\(n\)</span>th term, starting with <span class="math inline">\(n=1\)</span>:</p>
+<p><span class="math inline">\(\frac{3}{4},\frac{9}{7},\frac{27}{10},\frac{81}{13},\frac{243}{16},\ldots\)</span></p>
+<div class="fragment">
+<p>The numerators form a geometric sequence: <span class="math inline">\(3^n\)</span>.</p>
+<p>The denominators form an arithmetic sequence: <span class="math inline">\(4+3(n-1)=3n+1\)</span>.</p>
+<p><span class="math inline">\(a_n=\dfrac{3^n}{3n+1}.\)</span></p>
+</div>
+</section>
+<section id="from-a-recurrence-to-a-formula" class="slide level2">
+<h2>From a Recurrence to a Formula</h2>
+<p>Suppose <span class="math inline">\(a_1=\frac{1}{2}\)</span> and <span class="math inline">\(a_n=a_{n-1}+\left(\frac{1}{2}\right)^n\)</span> for <span class="math inline">\(n\ge 2\)</span>.</p>
+<p>Write the first four terms and look for a formula.</p>
+<div class="fragment">
+<p><span class="math inline">\(a_1=\frac{1}{2},\quad a_2=\frac{3}{4},\quad a_3=\frac{7}{8},\quad a_4=\frac{15}{16}.\)</span></p>
+<p><span class="math inline">\(a_n=\dfrac{2^n-1}{2^n}=1-\dfrac{1}{2^n}.\)</span></p>
+<p>Substitution verifies the initial value and recurrence.</p>
+</div>
+</section>
+<section id="graphing-a-sequence" class="slide level2">
+<h2>Graphing a Sequence</h2>
+<p>We graph the points <span class="math inline">\((n,a_n)\)</span> with <span class="math inline">\(n\)</span> on the horizonal axis and the value of the sequence on the vertical axis.</p>
+<p>For <span class="math inline">\(a_n=1-\dfrac{1}{2^n}\)</span>:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+<th style="text-align: right;">5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(a_n\)</span></td>
+<td style="text-align: right;">.5</td>
+<td style="text-align: right;">.75</td>
+<td style="text-align: right;">.875</td>
+<td style="text-align: right;">.9375</td>
+<td style="text-align: right;">.96875</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="behavior-of-sequences" class="slide level2">
+<h2>Behavior of Sequences</h2>
+<svg role="img" aria-labelledby="converging-title converging-desc" xlink="http://www.w3.org/1999/xlink" width="100%" viewbox="0 0 601.3875 231.006" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<title id="converging-title">
+A sequence approaching one
+</title>
+<desc id="converging-desc">Discrete points for a_n = 1 minus 1 divided by 2 to the n, for n from 1 to 10. The points increase toward the dashed horizontal line at one.</desc> <metadata> <rdf:rdf xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <cc:work> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:date>2026-10-20T19:33:58.151918</dc:date> <dc:format>image/svg+xml</dc:format> <dc:creator> <cc:agent> <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title> </cc:agent> </dc:creator> </cc:work> </rdf:rdf> </metadata> <defs> <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style> </defs> <g id="figure_1"> <g id="patch_1"> <path d="M -0 231.006 
+L 601.3875 231.006 
+L 601.3875 0 
+L -0 0 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="axes_1"> <g id="patch_2"> <path d="M 58.5075 181.836 
+L 594.1875 181.836 
+L 594.1875 7.2 
+L 58.5075 7.2 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="matplotlib.axis_1"> <g id="xtick_1"> <g id="line2d_1"> <path d="M 58.5075 181.836 
+L 58.5075 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_2"> <defs> <path id="m08167102fe" d="M 0 0 
+L 0 3.5 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#m08167102fe" x="58.5075" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_1"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="58.5075" y="200.233656" transform="rotate(-0 58.5075 200.233656)">0</text> </g> </g> <g id="xtick_2"> <g id="line2d_3"> <path d="M 159.579198 181.836 
+L 159.579198 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_4"> <g> <use href="#m08167102fe" x="159.579198" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_2"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="159.579198" y="200.233656" transform="rotate(-0 159.579198 200.233656)">2</text> </g> </g> <g id="xtick_3"> <g id="line2d_5"> <path d="M 260.650896 181.836 
+L 260.650896 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_6"> <g> <use href="#m08167102fe" x="260.650896" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_3"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="260.650896" y="200.233656" transform="rotate(-0 260.650896 200.233656)">4</text> </g> </g> <g id="xtick_4"> <g id="line2d_7"> <path d="M 361.722594 181.836 
+L 361.722594 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_8"> <g> <use href="#m08167102fe" x="361.722594" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_4"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="361.722594" y="200.233656" transform="rotate(-0 361.722594 200.233656)">6</text> </g> </g> <g id="xtick_5"> <g id="line2d_9"> <path d="M 462.794292 181.836 
+L 462.794292 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_10"> <g> <use href="#m08167102fe" x="462.794292" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_5"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="462.794292" y="200.233656" transform="rotate(-0 462.794292 200.233656)">8</text> </g> </g> <g id="xtick_6"> <g id="line2d_11"> <path d="M 563.865991 181.836 
+L 563.865991 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_12"> <g> <use href="#m08167102fe" x="563.865991" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_6"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="563.865991" y="200.233656" transform="rotate(-0 563.865991 200.233656)">10</text> </g> </g> <g id="text_7"> <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="326.3475" y="220.270531" transform="rotate(-0 326.3475 220.270531)">n</text> </g> </g> <g id="matplotlib.axis_2"> <g id="ytick_1"> <g id="line2d_13"> <path d="M 58.5075 181.836 
+L 594.1875 181.836 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_14"> <defs> <path id="ma5e7f79151" d="M 0 0 
+L -3.5 0 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#ma5e7f79151" x="58.5075" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_8"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="51.5075" y="187.534828" transform="rotate(-0 51.5075 187.534828)">0.0</text> </g> </g> <g id="ytick_2"> <g id="line2d_15"> <path d="M 58.5075 103.8735 
+L 594.1875 103.8735 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_16"> <g> <use href="#ma5e7f79151" x="58.5075" y="103.8735" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_9"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="51.5075" y="109.572328" transform="rotate(-0 51.5075 109.572328)">0.5</text> </g> </g> <g id="ytick_3"> <g id="line2d_17"> <path d="M 58.5075 25.911 
+L 594.1875 25.911 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_18"> <g> <use href="#ma5e7f79151" x="58.5075" y="25.911" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_10"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="51.5075" y="31.609828" transform="rotate(-0 51.5075 31.609828)">1.0</text> </g> </g> <g id="text_11"> <!-- $a_n$ --> <g style="fill: #586e75" transform="translate(20.117344 103.783) rotate(-90)"> <text> <tspan x="0" y="-0.484375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #586e75">a</tspan> <tspan x="10.41748" y="2.304688" style="font-style: oblique; font-size: 11.9px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> </text> </g> </g> </g> <g id="line2d_19"> <path d="M 58.5075 25.911 
+L 594.1875 25.911 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #cb4b16; stroke-width: 2"></path> </g> <g id="patch_3"> <path d="M 58.5075 181.836 
+L 58.5075 7.2 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="patch_4"> <path d="M 58.5075 181.836 
+L 594.1875 181.836 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="PathCollection_1"> <defs> <path id="m026b0b53a6" d="M 0 3.708099 
+C 0.983399 3.708099 1.926654 3.317391 2.622022 2.622022 
+C 3.317391 1.926654 3.708099 0.983399 3.708099 0 
+C 3.708099 -0.983399 3.317391 -1.926654 2.622022 -2.622022 
+C 1.926654 -3.317391 0.983399 -3.708099 0 -3.708099 
+C -0.983399 -3.708099 -1.926654 -3.317391 -2.622022 -2.622022 
+C -3.317391 -1.926654 -3.708099 -0.983399 -3.708099 0 
+C -3.708099 0.983399 -3.317391 1.926654 -2.622022 2.622022 
+C -1.926654 3.317391 -0.983399 3.708099 0 3.708099 
+z
+" style="stroke: #268bd2"></path> </defs> <g clip-path="url(#p4e405a8059)"> <use href="#m026b0b53a6" x="109.043349" y="103.8735" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m026b0b53a6" x="159.579198" y="64.89225" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m026b0b53a6" x="210.115047" y="45.401625" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m026b0b53a6" x="260.650896" y="35.656313" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m026b0b53a6" x="311.186745" y="30.783656" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m026b0b53a6" x="361.722594" y="28.347328" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m026b0b53a6" x="412.258443" y="27.129164" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m026b0b53a6" x="462.794292" y="26.520082" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m026b0b53a6" x="513.330142" y="26.215541" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m026b0b53a6" x="563.865991" y="26.063271" style="fill: #268bd2; stroke: #268bd2"></use> </g> </g> <g id="text_12"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #cb4b16" x="493.115802" y="20.453625" transform="rotate(-0 493.115802 20.453625)">L = 1</text> </g> </g> </g> <defs> <clippath id="p4e405a8059"> <rect x="58.5075" y="7.2" width="535.68" height="174.636"></rect> </clippath> </defs>
+</svg>
+</section>
+<section id="convergence-and-divergence" class="slide level2">
+<h2>Convergence and Divergence</h2>
+<p>A sequence <strong>converges</strong> if its terms approach a finite number <span class="math inline">\(L\)</span> as <span class="math inline">\(n\)</span> increases.</p>
+<p>We write <span class="math inline">\(\displaystyle \lim_{n\to\infty}a_n=L\)</span>, or <span class="math inline">\(a_n\to L\)</span>.</p>
+<p>A sequence that does not converge <strong>diverges</strong>.</p>
+</section>
+<section id="different-long-term-behaviors" class="slide level2">
+<h2>Different Long-Term Behaviors</h2>
+<p>What is the behavior of each sequence as <span class="math inline">\(n \to \infty\)</span>?</p>
+<ol type="1">
+<li><span class="math inline">\(a_n=1+3n\)</span></li>
+<li><span class="math inline">\(b_n=1-(1/2)^n\)</span></li>
+<li><span class="math inline">\(c_n=(-1)^n\)</span></li>
+<li><span class="math inline">\(d_n=(-1)^n/n\)</span></li>
+</ol>
+</section>
+<section id="a_n13n" class="slide level2">
+<h2><span class="math inline">\(a_n=1+3n\)</span></h2>
+<svg role="img" aria-labelledby="seq-a-title seq-a-desc" xlink="http://www.w3.org/1999/xlink" width="100%" viewbox="0 0 734.4 288" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<title id="seq-a-title">
+Graph of sequence a
+</title>
+<desc id="seq-a-desc">The points rise along a straight pattern from (1,4) through (20,61). The graph shows discrete points at the integer indices one through twenty.</desc> <metadata> <rdf:rdf xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <cc:work> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:date>2026-10-22T11:08:22.575099</dc:date> <dc:format>image/svg+xml</dc:format> <dc:creator> <cc:agent> <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title> </cc:agent> </dc:creator> </cc:work> </rdf:rdf> </metadata> <defs> <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style> </defs> <g id="figure_1"> <g id="patch_1"> <path d="M 0 288 
+L 734.4 288 
+L 734.4 0 
+L 0 0 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="axes_1"> <g id="patch_2"> <path d="M 67.43 226.6 
+L 717.12 226.6 
+L 717.12 17.28 
+L 67.43 17.28 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="matplotlib.axis_1"> <g id="xtick_1"> <g id="line2d_1"> <path d="M 98.367619 226.6 
+L 98.367619 17.28 
+" clip-path="url(#p2755d9d70f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_2"> <defs> <path id="m4502cff4d2" d="M 0 0 
+L 0 3.5 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#m4502cff4d2" x="98.367619" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_1"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="98.367619" y="245.7575" transform="rotate(-0 98.367619 245.7575)">1</text> </g> </g> <g id="xtick_2"> <g id="line2d_3"> <path d="M 222.118095 226.6 
+L 222.118095 17.28 
+" clip-path="url(#p2755d9d70f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_4"> <g> <use href="#m4502cff4d2" x="222.118095" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_2"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="222.118095" y="245.7575" transform="rotate(-0 222.118095 245.7575)">5</text> </g> </g> <g id="xtick_3"> <g id="line2d_5"> <path d="M 376.80619 226.6 
+L 376.80619 17.28 
+" clip-path="url(#p2755d9d70f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_6"> <g> <use href="#m4502cff4d2" x="376.80619" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_3"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="376.80619" y="245.7575" transform="rotate(-0 376.80619 245.7575)">10</text> </g> </g> <g id="xtick_4"> <g id="line2d_7"> <path d="M 531.494286 226.6 
+L 531.494286 17.28 
+" clip-path="url(#p2755d9d70f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_8"> <g> <use href="#m4502cff4d2" x="531.494286" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_4"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="531.494286" y="245.7575" transform="rotate(-0 531.494286 245.7575)">15</text> </g> </g> <g id="xtick_5"> <g id="line2d_9"> <path d="M 686.182381 226.6 
+L 686.182381 17.28 
+" clip-path="url(#p2755d9d70f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_10"> <g> <use href="#m4502cff4d2" x="686.182381" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_5"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="686.182381" y="245.7575" transform="rotate(-0 686.182381 245.7575)">20</text> </g> </g> <g id="text_6"> <!-- $n$ --> <g style="fill: #586e75" transform="translate(386.195 267.522031)"> <text> <tspan x="0" y="-0.359375" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> </text> </g> </g> </g> <g id="matplotlib.axis_2"> <g id="ytick_1"> <g id="line2d_11"> <path d="M 67.43 226.6 
+L 717.12 226.6 
+" clip-path="url(#p2755d9d70f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_12"> <defs> <path id="mbaed5588aa" d="M 0 0 
+L -3.5 0 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#mbaed5588aa" x="67.43" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_7"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="60.43" y="232.67875" transform="rotate(-0 60.43 232.67875)">0</text> </g> </g> <g id="ytick_2"> <g id="line2d_13"> <path d="M 67.43 163.169697 
+L 717.12 163.169697 
+" clip-path="url(#p2755d9d70f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_14"> <g> <use href="#mbaed5588aa" x="67.43" y="163.169697" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_8"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="60.43" y="169.248447" transform="rotate(-0 60.43 169.248447)">20</text> </g> </g> <g id="ytick_3"> <g id="line2d_15"> <path d="M 67.43 99.739394 
+L 717.12 99.739394 
+" clip-path="url(#p2755d9d70f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_16"> <g> <use href="#mbaed5588aa" x="67.43" y="99.739394" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_9"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="60.43" y="105.818144" transform="rotate(-0 60.43 105.818144)">40</text> </g> </g> <g id="ytick_4"> <g id="line2d_17"> <path d="M 67.43 36.309091 
+L 717.12 36.309091 
+" clip-path="url(#p2755d9d70f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_18"> <g> <use href="#mbaed5588aa" x="67.43" y="36.309091" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_10"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="60.43" y="42.387841" transform="rotate(-0 60.43 42.387841)">60</text> </g> </g> <g id="text_11"> <!-- $a_n$ --> <g style="fill: #586e75" transform="translate(32.118594 132.295) rotate(-90)"> <text> <tspan x="0" y="-0.359375" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">a</tspan> <tspan x="11.643066" y="2.757812" style="font-style: oblique; font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> </text> </g> </g> </g> <g id="patch_3"> <path d="M 67.43 226.6 
+L 67.43 17.28 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="patch_4"> <path d="M 67.43 226.6 
+L 717.12 226.6 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="PathCollection_1"> <defs> <path id="mf26546fbbb" d="M 0 3.708099 
+C 0.983399 3.708099 1.926654 3.317391 2.622022 2.622022 
+C 3.317391 1.926654 3.708099 0.983399 3.708099 0 
+C 3.708099 -0.983399 3.317391 -1.926654 2.622022 -2.622022 
+C 1.926654 -3.317391 0.983399 -3.708099 0 -3.708099 
+C -0.983399 -3.708099 -1.926654 -3.317391 -2.622022 -2.622022 
+C -3.317391 -1.926654 -3.708099 -0.983399 -3.708099 0 
+C -3.708099 0.983399 -3.317391 1.926654 -2.622022 2.622022 
+C -1.926654 3.317391 -0.983399 3.708099 0 3.708099 
+z
+" style="stroke: #268bd2"></path> </defs> <g clip-path="url(#p2755d9d70f)"> <use href="#mf26546fbbb" x="98.367619" y="213.913939" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="129.305238" y="204.399394" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="160.242857" y="194.884848" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="191.180476" y="185.370303" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="222.118095" y="175.855758" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="253.055714" y="166.341212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="283.993333" y="156.826667" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="314.930952" y="147.312121" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="345.868571" y="137.797576" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="376.80619" y="128.28303" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="407.74381" y="118.768485" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="438.681429" y="109.253939" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="469.619048" y="99.739394" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="500.556667" y="90.224848" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="531.494286" y="80.710303" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="562.431905" y="71.195758" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="593.369524" y="61.681212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="624.307143" y="52.166667" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="655.244762" y="42.652121" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mf26546fbbb" x="686.182381" y="33.137576" style="fill: #268bd2; stroke: #268bd2"></use> </g> </g> </g> </g> <defs> <clippath id="p2755d9d70f"> <rect x="67.43" y="17.28" width="649.69" height="209.32"></rect> </clippath> </defs>
+</svg>
+<div class="fragment">
+<p>The terms grow without bound. The sequence <strong>diverges to <span class="math inline">\(\infty\)</span></strong>.</p>
+</div>
+</section>
+<section id="b_n1-12n" class="slide level2">
+<h2><span class="math inline">\(b_n=1-(1/2)^n\)</span></h2>
+<svg role="img" aria-labelledby="seq-b-title seq-b-desc" xlink="http://www.w3.org/1999/xlink" width="100%" viewbox="0 0 734.4 288" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<title id="seq-b-title">
+Graph of sequence b
+</title>
+<desc id="seq-b-desc">The points increase from (1,0.5) toward a dashed horizontal line at one. The graph shows discrete points at the integer indices one through twenty.</desc> <metadata> <rdf:rdf xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <cc:work> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:date>2026-10-22T11:08:22.701989</dc:date> <dc:format>image/svg+xml</dc:format> <dc:creator> <cc:agent> <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title> </cc:agent> </dc:creator> </cc:work> </rdf:rdf> </metadata> <defs> <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style> </defs> <g id="figure_1"> <g id="patch_1"> <path d="M 0 288 
+L 734.4 288 
+L 734.4 0 
+L 0 0 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="axes_1"> <g id="patch_2"> <path d="M 74.36 226.6 
+L 717.12 226.6 
+L 717.12 17.28 
+L 74.36 17.28 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="line2d_1"> <path d="M 74.36 46.151724 
+L 717.12 46.151724 
+" clip-path="url(#p8b7f0783c1)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #cb4b16; stroke-width: 2"></path> </g> <g id="matplotlib.axis_1"> <g id="xtick_1"> <g id="line2d_2"> <path d="M 104.967619 226.6 
+L 104.967619 17.28 
+" clip-path="url(#p8b7f0783c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_3"> <defs> <path id="m60fd829a8d" d="M 0 0 
+L 0 3.5 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#m60fd829a8d" x="104.967619" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_1"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="104.967619" y="245.7575" transform="rotate(-0 104.967619 245.7575)">1</text> </g> </g> <g id="xtick_2"> <g id="line2d_4"> <path d="M 227.398095 226.6 
+L 227.398095 17.28 
+" clip-path="url(#p8b7f0783c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_5"> <g> <use href="#m60fd829a8d" x="227.398095" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_2"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="227.398095" y="245.7575" transform="rotate(-0 227.398095 245.7575)">5</text> </g> </g> <g id="xtick_3"> <g id="line2d_6"> <path d="M 380.43619 226.6 
+L 380.43619 17.28 
+" clip-path="url(#p8b7f0783c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_7"> <g> <use href="#m60fd829a8d" x="380.43619" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_3"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="380.43619" y="245.7575" transform="rotate(-0 380.43619 245.7575)">10</text> </g> </g> <g id="xtick_4"> <g id="line2d_8"> <path d="M 533.474286 226.6 
+L 533.474286 17.28 
+" clip-path="url(#p8b7f0783c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_9"> <g> <use href="#m60fd829a8d" x="533.474286" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_4"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="533.474286" y="245.7575" transform="rotate(-0 533.474286 245.7575)">15</text> </g> </g> <g id="xtick_5"> <g id="line2d_10"> <path d="M 686.512381 226.6 
+L 686.512381 17.28 
+" clip-path="url(#p8b7f0783c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_11"> <g> <use href="#m60fd829a8d" x="686.512381" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_5"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="686.512381" y="245.7575" transform="rotate(-0 686.512381 245.7575)">20</text> </g> </g> <g id="text_6"> <!-- $n$ --> <g style="fill: #586e75" transform="translate(389.66 267.522031)"> <text> <tspan x="0" y="-0.359375" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> </text> </g> </g> </g> <g id="matplotlib.axis_2"> <g id="ytick_1"> <g id="line2d_12"> <path d="M 74.36 226.6 
+L 717.12 226.6 
+" clip-path="url(#p8b7f0783c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_13"> <defs> <path id="madb11712a7" d="M 0 0 
+L -3.5 0 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#madb11712a7" x="74.36" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_7"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="67.36" y="232.67875" transform="rotate(-0 67.36 232.67875)">0.0</text> </g> </g> <g id="ytick_2"> <g id="line2d_14"> <path d="M 74.36 136.375862 
+L 717.12 136.375862 
+" clip-path="url(#p8b7f0783c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_15"> <g> <use href="#madb11712a7" x="74.36" y="136.375862" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_8"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="67.36" y="142.454612" transform="rotate(-0 67.36 142.454612)">0.5</text> </g> </g> <g id="ytick_3"> <g id="line2d_16"> <path d="M 74.36 46.151724 
+L 717.12 46.151724 
+" clip-path="url(#p8b7f0783c1)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_17"> <g> <use href="#madb11712a7" x="74.36" y="46.151724" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_9"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="67.36" y="52.230474" transform="rotate(-0 67.36 52.230474)">1.0</text> </g> </g> <g id="text_10"> <!-- $b_n$ --> <g style="fill: #586e75" transform="translate(33.963594 132.485) rotate(-90)"> <text> <tspan x="0" y="-0.5625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">b</tspan> <tspan x="12.060547" y="2.554688" style="font-style: oblique; font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> </text> </g> </g> </g> <g id="patch_3"> <path d="M 74.36 226.6 
+L 74.36 17.28 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="patch_4"> <path d="M 74.36 226.6 
+L 717.12 226.6 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="text_11"> <!-- $L=1$ --> <g style="fill: #cb4b16" transform="translate(621.160952 36.732324)"> <text> <tspan x="0" y="-0.328125" style="font-style: oblique; font-size: 16px; font-family: 'DejaVu Sans'; fill: #cb4b16">L</tspan> <tspan x="12.03125" y="-0.328125" style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #cb4b16">=</tspan> <tspan x="28.554688" y="-0.328125" style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #cb4b16">1</tspan> </text> </g> </g> <g id="PathCollection_1"> <defs> <path id="m822df91049" d="M 0 3.708099 
+C 0.983399 3.708099 1.926654 3.317391 2.622022 2.622022 
+C 3.317391 1.926654 3.708099 0.983399 3.708099 0 
+C 3.708099 -0.983399 3.317391 -1.926654 2.622022 -2.622022 
+C 1.926654 -3.317391 0.983399 -3.708099 0 -3.708099 
+C -0.983399 -3.708099 -1.926654 -3.317391 -2.622022 -2.622022 
+C -3.317391 -1.926654 -3.708099 -0.983399 -3.708099 0 
+C -3.708099 0.983399 -3.317391 1.926654 -2.622022 2.622022 
+C -1.926654 3.317391 -0.983399 3.708099 0 3.708099 
+z
+" style="stroke: #268bd2"></path> </defs> <g clip-path="url(#p8b7f0783c1)"> <use href="#m822df91049" x="104.967619" y="136.375862" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="135.575238" y="91.263793" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="166.182857" y="68.707759" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="196.790476" y="57.429741" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="227.398095" y="51.790733" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="258.005714" y="48.971228" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="288.613333" y="47.561476" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="319.220952" y="46.8566" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="349.828571" y="46.504162" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="380.43619" y="46.327943" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="411.04381" y="46.239834" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="441.651429" y="46.195779" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="472.259048" y="46.173752" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="502.866667" y="46.162738" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="533.474286" y="46.157231" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="564.081905" y="46.154478" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="594.689524" y="46.153101" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="625.297143" y="46.152412" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="655.904762" y="46.152068" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m822df91049" x="686.512381" y="46.151896" style="fill: #268bd2; stroke: #268bd2"></use> </g> </g> </g> </g> <defs> <clippath id="p8b7f0783c1"> <rect x="74.36" y="17.28" width="642.76" height="209.32"></rect> </clippath> </defs>
+</svg>
+<div class="fragment">
+<p>The terms approach <span class="math inline">\(1\)</span>. The sequence <strong>converges to <span class="math inline">\(1\)</span></strong>.</p>
+</div>
+</section>
+<section id="c_n-1n" class="slide level2">
+<h2><span class="math inline">\(c_n=(-1)^n\)</span></h2>
+<svg role="img" aria-labelledby="seq-c-title seq-c-desc" xlink="http://www.w3.org/1999/xlink" width="100%" viewbox="0 0 734.4 288" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<title id="seq-c-title">
+Graph of sequence c
+</title>
+<desc id="seq-c-desc">Points at odd indices have value minus one; points at even indices have value one. The graph shows discrete points at the integer indices one through twenty.</desc> <metadata> <rdf:rdf xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <cc:work> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:date>2026-10-22T11:08:22.804559</dc:date> <dc:format>image/svg+xml</dc:format> <dc:creator> <cc:agent> <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title> </cc:agent> </dc:creator> </cc:work> </rdf:rdf> </metadata> <defs> <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style> </defs> <g id="figure_1"> <g id="patch_1"> <path d="M 0 288 
+L 734.4 288 
+L 734.4 0 
+L 0 0 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="axes_1"> <g id="patch_2"> <path d="M 70.58 226.6 
+L 717.12 226.6 
+L 717.12 17.28 
+L 70.58 17.28 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="matplotlib.axis_1"> <g id="xtick_1"> <g id="line2d_1"> <path d="M 101.367619 226.6 
+L 101.367619 17.28 
+" clip-path="url(#peb126cbea6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_2"> <defs> <path id="m5749707df2" d="M 0 0 
+L 0 3.5 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#m5749707df2" x="101.367619" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_1"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="101.367619" y="245.7575" transform="rotate(-0 101.367619 245.7575)">1</text> </g> </g> <g id="xtick_2"> <g id="line2d_3"> <path d="M 224.518095 226.6 
+L 224.518095 17.28 
+" clip-path="url(#peb126cbea6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_4"> <g> <use href="#m5749707df2" x="224.518095" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_2"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="224.518095" y="245.7575" transform="rotate(-0 224.518095 245.7575)">5</text> </g> </g> <g id="xtick_3"> <g id="line2d_5"> <path d="M 378.45619 226.6 
+L 378.45619 17.28 
+" clip-path="url(#peb126cbea6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_6"> <g> <use href="#m5749707df2" x="378.45619" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_3"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="378.45619" y="245.7575" transform="rotate(-0 378.45619 245.7575)">10</text> </g> </g> <g id="xtick_4"> <g id="line2d_7"> <path d="M 532.394286 226.6 
+L 532.394286 17.28 
+" clip-path="url(#peb126cbea6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_8"> <g> <use href="#m5749707df2" x="532.394286" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_4"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="532.394286" y="245.7575" transform="rotate(-0 532.394286 245.7575)">15</text> </g> </g> <g id="xtick_5"> <g id="line2d_9"> <path d="M 686.332381 226.6 
+L 686.332381 17.28 
+" clip-path="url(#peb126cbea6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_10"> <g> <use href="#m5749707df2" x="686.332381" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_5"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="686.332381" y="245.7575" transform="rotate(-0 686.332381 245.7575)">20</text> </g> </g> <g id="text_6"> <!-- $n$ --> <g style="fill: #586e75" transform="translate(387.77 267.522031)"> <text> <tspan x="0" y="-0.359375" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> </text> </g> </g> </g> <g id="matplotlib.axis_2"> <g id="ytick_1"> <g id="line2d_11"> <path d="M 70.58 205.668 
+L 717.12 205.668 
+" clip-path="url(#peb126cbea6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_12"> <defs> <path id="mc2958307c9" d="M 0 0 
+L -3.5 0 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#mc2958307c9" x="70.58" y="205.668" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_7"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="63.58" y="211.74675" transform="rotate(-0 63.58 211.74675)">−1</text> </g> </g> <g id="ytick_2"> <g id="line2d_13"> <path d="M 70.58 121.94 
+L 717.12 121.94 
+" clip-path="url(#peb126cbea6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_14"> <g> <use href="#mc2958307c9" x="70.58" y="121.94" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_8"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="63.58" y="128.01875" transform="rotate(-0 63.58 128.01875)">0</text> </g> </g> <g id="ytick_3"> <g id="line2d_15"> <path d="M 70.58 38.212 
+L 717.12 38.212 
+" clip-path="url(#peb126cbea6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_16"> <g> <use href="#mc2958307c9" x="70.58" y="38.212" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_9"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="63.58" y="44.29075" transform="rotate(-0 63.58 44.29075)">1</text> </g> </g> <g id="text_10"> <!-- $c_n$ --> <g style="fill: #586e75" transform="translate(32.041094 131.725) rotate(-90)"> <text> <tspan x="0" y="-0.359375" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">c</tspan> <tspan x="10.446289" y="2.757812" style="font-style: oblique; font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> </text> </g> </g> </g> <g id="patch_3"> <path d="M 70.58 226.6 
+L 70.58 17.28 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="patch_4"> <path d="M 70.58 226.6 
+L 717.12 226.6 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="PathCollection_1"> <defs> <path id="m9d8190c6b8" d="M 0 3.708099 
+C 0.983399 3.708099 1.926654 3.317391 2.622022 2.622022 
+C 3.317391 1.926654 3.708099 0.983399 3.708099 0 
+C 3.708099 -0.983399 3.317391 -1.926654 2.622022 -2.622022 
+C 1.926654 -3.317391 0.983399 -3.708099 0 -3.708099 
+C -0.983399 -3.708099 -1.926654 -3.317391 -2.622022 -2.622022 
+C -3.317391 -1.926654 -3.708099 -0.983399 -3.708099 0 
+C -3.708099 0.983399 -3.317391 1.926654 -2.622022 2.622022 
+C -1.926654 3.317391 -0.983399 3.708099 0 3.708099 
+z
+" style="stroke: #268bd2"></path> </defs> <g clip-path="url(#peb126cbea6)"> <use href="#m9d8190c6b8" x="101.367619" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="132.155238" y="38.212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="162.942857" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="193.730476" y="38.212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="224.518095" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="255.305714" y="38.212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="286.093333" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="316.880952" y="38.212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="347.668571" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="378.45619" y="38.212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="409.24381" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="440.031429" y="38.212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="470.819048" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="501.606667" y="38.212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="532.394286" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="563.181905" y="38.212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="593.969524" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="624.757143" y="38.212" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="655.544762" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m9d8190c6b8" x="686.332381" y="38.212" style="fill: #268bd2; stroke: #268bd2"></use> </g> </g> </g> </g> <defs> <clippath id="peb126cbea6"> <rect x="70.58" y="17.28" width="646.54" height="209.32"></rect> </clippath> </defs>
+</svg>
+<div class="fragment">
+<p>The terms alternate between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span>. The sequence <strong>diverges</strong>.</p>
+</div>
+</section>
+<section id="d_n-1nn" class="slide level2">
+<h2><span class="math inline">\(d_n=(-1)^n/n\)</span></h2>
+<svg role="img" aria-labelledby="seq-d-title seq-d-desc" xlink="http://www.w3.org/1999/xlink" width="100%" viewbox="0 0 734.4 288" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<title id="seq-d-title">
+Graph of sequence d
+</title>
+<desc id="seq-d-desc">The points alternate below and above zero, with magnitudes decreasing from one to one twentieth. A dashed line marks zero. The graph shows discrete points at the integer indices one through twenty.</desc> <metadata> <rdf:rdf xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <cc:work> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:date>2026-10-22T11:08:22.934034</dc:date> <dc:format>image/svg+xml</dc:format> <dc:creator> <cc:agent> <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title> </cc:agent> </dc:creator> </cc:work> </rdf:rdf> </metadata> <defs> <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style> </defs> <g id="figure_1"> <g id="patch_1"> <path d="M 0 288 
+L 734.4 288 
+L 734.4 0 
+L 0 0 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="axes_1"> <g id="patch_2"> <path d="M 72.38 226.6 
+L 717.12 226.6 
+L 717.12 17.28 
+L 72.38 17.28 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="line2d_1"> <path d="M 72.38 121.94 
+L 717.12 121.94 
+" clip-path="url(#pa60ee6e90d)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #cb4b16; stroke-width: 2"></path> </g> <g id="matplotlib.axis_1"> <g id="xtick_1"> <g id="line2d_2"> <path d="M 103.081905 226.6 
+L 103.081905 17.28 
+" clip-path="url(#pa60ee6e90d)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_3"> <defs> <path id="m6a7a9b8ff7" d="M 0 0 
+L 0 3.5 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#m6a7a9b8ff7" x="103.081905" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_1"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="103.081905" y="245.7575" transform="rotate(-0 103.081905 245.7575)">1</text> </g> </g> <g id="xtick_2"> <g id="line2d_4"> <path d="M 225.889524 226.6 
+L 225.889524 17.28 
+" clip-path="url(#pa60ee6e90d)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_5"> <g> <use href="#m6a7a9b8ff7" x="225.889524" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_2"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="225.889524" y="245.7575" transform="rotate(-0 225.889524 245.7575)">5</text> </g> </g> <g id="xtick_3"> <g id="line2d_6"> <path d="M 379.399048 226.6 
+L 379.399048 17.28 
+" clip-path="url(#pa60ee6e90d)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_7"> <g> <use href="#m6a7a9b8ff7" x="379.399048" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_3"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="379.399048" y="245.7575" transform="rotate(-0 379.399048 245.7575)">10</text> </g> </g> <g id="xtick_4"> <g id="line2d_8"> <path d="M 532.908571 226.6 
+L 532.908571 17.28 
+" clip-path="url(#pa60ee6e90d)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_9"> <g> <use href="#m6a7a9b8ff7" x="532.908571" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_4"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="532.908571" y="245.7575" transform="rotate(-0 532.908571 245.7575)">15</text> </g> </g> <g id="xtick_5"> <g id="line2d_10"> <path d="M 686.418095 226.6 
+L 686.418095 17.28 
+" clip-path="url(#pa60ee6e90d)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_11"> <g> <use href="#m6a7a9b8ff7" x="686.418095" y="226.6" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_5"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="686.418095" y="245.7575" transform="rotate(-0 686.418095 245.7575)">20</text> </g> </g> <g id="text_6"> <!-- $n$ --> <g style="fill: #586e75" transform="translate(388.67 267.522031)"> <text> <tspan x="0" y="-0.359375" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> </text> </g> </g> </g> <g id="matplotlib.axis_2"> <g id="ytick_1"> <g id="line2d_12"> <path d="M 72.38 205.668 
+L 717.12 205.668 
+" clip-path="url(#pa60ee6e90d)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_13"> <defs> <path id="me889aadca0" d="M 0 0 
+L -3.5 0 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#me889aadca0" x="72.38" y="205.668" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_7"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="65.38" y="211.74675" transform="rotate(-0 65.38 211.74675)">−1</text> </g> </g> <g id="ytick_2"> <g id="line2d_14"> <path d="M 72.38 121.94 
+L 717.12 121.94 
+" clip-path="url(#pa60ee6e90d)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_15"> <g> <use href="#me889aadca0" x="72.38" y="121.94" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_8"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="65.38" y="128.01875" transform="rotate(-0 65.38 128.01875)">0</text> </g> </g> <g id="ytick_3"> <g id="line2d_16"> <path d="M 72.38 38.212 
+L 717.12 38.212 
+" clip-path="url(#pa60ee6e90d)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_17"> <g> <use href="#me889aadca0" x="72.38" y="38.212" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_9"> <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="65.38" y="44.29075" transform="rotate(-0 65.38 44.29075)">1</text> </g> </g> <g id="text_10"> <!-- $d_n$ --> <g style="fill: #586e75" transform="translate(33.841094 132.485) rotate(-90)"> <text> <tspan x="0" y="-0.5625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">d</tspan> <tspan x="12.060547" y="2.554688" style="font-style: oblique; font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> </text> </g> </g> </g> <g id="patch_3"> <path d="M 72.38 226.6 
+L 72.38 17.28 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="patch_4"> <path d="M 72.38 226.6 
+L 717.12 226.6 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="text_11"> <!-- $L=0$ --> <g style="fill: #cb4b16" transform="translate(620.925238 112.5206)"> <text> <tspan x="0" y="-0.125" style="font-style: oblique; font-size: 16px; font-family: 'DejaVu Sans'; fill: #cb4b16">L</tspan> <tspan x="12.03125" y="-0.125" style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #cb4b16">=</tspan> <tspan x="28.554688" y="-0.125" style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #cb4b16">0</tspan> </text> </g> </g> <g id="PathCollection_1"> <defs> <path id="m0eccb61e3f" d="M 0 3.708099 
+C 0.983399 3.708099 1.926654 3.317391 2.622022 2.622022 
+C 3.317391 1.926654 3.708099 0.983399 3.708099 0 
+C 3.708099 -0.983399 3.317391 -1.926654 2.622022 -2.622022 
+C 1.926654 -3.317391 0.983399 -3.708099 0 -3.708099 
+C -0.983399 -3.708099 -1.926654 -3.317391 -2.622022 -2.622022 
+C -3.317391 -1.926654 -3.708099 -0.983399 -3.708099 0 
+C -3.708099 0.983399 -3.317391 1.926654 -2.622022 2.622022 
+C -1.926654 3.317391 -0.983399 3.708099 0 3.708099 
+z
+" style="stroke: #268bd2"></path> </defs> <g clip-path="url(#pa60ee6e90d)"> <use href="#m0eccb61e3f" x="103.081905" y="205.668" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="133.78381" y="80.076" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="164.485714" y="149.849333" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="195.187619" y="101.008" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="225.889524" y="138.6856" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="256.591429" y="107.985333" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="287.293333" y="133.901143" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="317.995238" y="111.474" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="348.697143" y="131.243111" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="379.399048" y="113.5672" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="410.100952" y="129.551636" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="440.802857" y="114.962667" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="471.504762" y="128.380615" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="502.206667" y="115.959429" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="532.908571" y="127.521867" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="563.610476" y="116.707" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="594.312381" y="126.865176" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="625.014286" y="117.288444" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="655.71619" y="126.346737" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#m0eccb61e3f" x="686.418095" y="117.7536" style="fill: #268bd2; stroke: #268bd2"></use> </g> </g> </g> </g> <defs> <clippath id="pa60ee6e90d"> <rect x="72.38" y="17.28" width="644.74" height="209.32"></rect> </clippath> </defs>
+</svg>
+<div class="fragment">
+<p>The signs alternate, but the magnitudes approach <span class="math inline">\(0\)</span>. The sequence <strong>converges to <span class="math inline">\(0\)</span></strong>.</p>
+</div>
+</section>
+<section id="alternating-example" class="slide level2">
+<h2>Alternating Example</h2>
+<svg role="img" aria-labelledby="alternating-title alternating-desc" xlink="http://www.w3.org/1999/xlink" width="100%" viewbox="0 0 672.346094 198.871188" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<title id="alternating-title">
+Two alternating sequences
+</title>
+<desc id="alternating-desc">The left graph alternates between minus one and one. The right graph alternates above and below zero with magnitudes one divided by n, shrinking toward zero.</desc> <metadata> <rdf:rdf xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <cc:work> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:date>2026-10-20T19:33:58.227760</dc:date> <dc:format>image/svg+xml</dc:format> <dc:creator> <cc:agent> <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title> </cc:agent> </dc:creator> </cc:work> </rdf:rdf> </metadata> <defs> <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style> </defs> <g id="figure_1"> <g id="patch_1"> <path d="M 0 198.871188 
+L 672.346094 198.871188 
+L 672.346094 0 
+L 0 0 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="axes_1"> <g id="patch_2"> <path d="M 56.766094 149.701188 
+L 350.471094 149.701188 
+L 350.471094 26.877188 
+L 56.766094 26.877188 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="matplotlib.axis_1"> <g id="xtick_1"> <g id="line2d_1"> <path d="M 56.766094 149.701188 
+L 56.766094 26.877188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_2"> <defs> <path id="m6984a86055" d="M 0 0 
+L 0 3.5 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#m6984a86055" x="56.766094" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_1"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="56.766094" y="168.098844" transform="rotate(-0 56.766094 168.098844)">0</text> </g> </g> <g id="xtick_2"> <g id="line2d_3"> <path d="M 147.136863 149.701188 
+L 147.136863 26.877188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_4"> <g> <use href="#m6984a86055" x="147.136863" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_2"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="147.136863" y="168.098844" transform="rotate(-0 147.136863 168.098844)">4</text> </g> </g> <g id="xtick_3"> <g id="line2d_5"> <path d="M 237.507632 149.701188 
+L 237.507632 26.877188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_6"> <g> <use href="#m6984a86055" x="237.507632" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_3"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="237.507632" y="168.098844" transform="rotate(-0 237.507632 168.098844)">8</text> </g> </g> <g id="xtick_4"> <g id="line2d_7"> <path d="M 327.878401 149.701188 
+L 327.878401 26.877188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_8"> <g> <use href="#m6984a86055" x="327.878401" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_4"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="327.878401" y="168.098844" transform="rotate(-0 327.878401 168.098844)">12</text> </g> </g> <g id="text_5"> <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="203.618594" y="188.135719" transform="rotate(-0 203.618594 188.135719)">n</text> </g> </g> <g id="matplotlib.axis_2"> <g id="ytick_1"> <g id="line2d_9"> <path d="M 56.766094 135.529188 
+L 350.471094 135.529188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_10"> <defs> <path id="m449c0eef3d" d="M 0 0 
+L -3.5 0 
+" style="stroke: #586e75; stroke-width: 0.8"></path> </defs> <g> <use href="#m449c0eef3d" x="56.766094" y="135.529188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_6"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="49.766094" y="141.228016" transform="rotate(-0 49.766094 141.228016)">−1</text> </g> </g> <g id="ytick_2"> <g id="line2d_11"> <path d="M 56.766094 88.289188 
+L 350.471094 88.289188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_12"> <g> <use href="#m449c0eef3d" x="56.766094" y="88.289188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_7"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="49.766094" y="93.988016" transform="rotate(-0 49.766094 93.988016)">0</text> </g> </g> <g id="ytick_3"> <g id="line2d_13"> <path d="M 56.766094 41.049188 
+L 350.471094 41.049188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_14"> <g> <use href="#m449c0eef3d" x="56.766094" y="41.049188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_8"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="49.766094" y="46.748016" transform="rotate(-0 49.766094 46.748016)">1</text> </g> </g> <g id="text_9"> <!-- $a_n$ --> <g style="fill: #586e75" transform="translate(20.117344 97.554188) rotate(-90)"> <text> <tspan x="0" y="-0.484375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #586e75">a</tspan> <tspan x="10.41748" y="2.304688" style="font-style: oblique; font-size: 11.9px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> </text> </g> </g> </g> <g id="line2d_15"> <path d="M 56.766094 88.289188 
+L 350.471094 88.289188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #cb4b16; stroke-width: 1.5"></path> </g> <g id="patch_3"> <path d="M 56.766094 149.701188 
+L 56.766094 26.877188 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="patch_4"> <path d="M 56.766094 149.701188 
+L 350.471094 149.701188 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="PathCollection_1"> <defs> <path id="mb8197ad1a6" d="M 0 3.24037 
+C 0.859356 3.24037 1.683631 2.898944 2.291288 2.291288 
+C 2.898944 1.683631 3.24037 0.859356 3.24037 0 
+C 3.24037 -0.859356 2.898944 -1.683631 2.291288 -2.291288 
+C 1.683631 -2.898944 0.859356 -3.24037 0 -3.24037 
+C -0.859356 -3.24037 -1.683631 -2.898944 -2.291288 -2.291288 
+C -2.898944 -1.683631 -3.24037 -0.859356 -3.24037 0 
+C -3.24037 0.859356 -2.898944 1.683631 -2.291288 2.291288 
+C -1.683631 2.898944 -0.859356 3.24037 0 3.24037 
+z
+" style="stroke: #268bd2"></path> </defs> <g clip-path="url(#p5e46cac5f0)"> <use href="#mb8197ad1a6" x="79.358786" y="135.529188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="101.951478" y="41.049188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="124.544171" y="135.529188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="147.136863" y="41.049188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="169.729555" y="135.529188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="192.322248" y="41.049188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="214.91494" y="135.529188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="237.507632" y="41.049188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="260.100325" y="135.529188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="282.693017" y="41.049188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="305.285709" y="135.529188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="327.878401" y="41.049188" style="fill: #268bd2; stroke: #268bd2"></use> </g> </g> <g id="text_10"> <!-- $a_n=(-1)^n$ --> <g style="fill: #586e75" transform="translate(158.168594 20.877188)"> <text> <tspan x="0" y="-0.054688" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">a</tspan> <tspan x="11.030273" y="2.898438" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> <tspan x="82.355273" y="-6.945312" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> <tspan x="23.015039" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">=</tspan> <tspan x="41.603906" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">(</tspan> <tspan x="48.626367" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">−</tspan> <tspan x="63.708398" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">1</tspan> <tspan x="75.160547" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">)</tspan> </text> </g> </g> </g> <g id="axes_2"> <g id="patch_5"> <path d="M 371.441094 149.701188 
+L 665.146094 149.701188 
+L 665.146094 26.877188 
+L 371.441094 26.877188 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="matplotlib.axis_3"> <g id="xtick_5"> <g id="line2d_16"> <path d="M 371.441094 149.701188 
+L 371.441094 26.877188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_17"> <g> <use href="#m6984a86055" x="371.441094" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_11"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="371.441094" y="168.098844" transform="rotate(-0 371.441094 168.098844)">0</text> </g> </g> <g id="xtick_6"> <g id="line2d_18"> <path d="M 461.811863 149.701188 
+L 461.811863 26.877188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_19"> <g> <use href="#m6984a86055" x="461.811863" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_12"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="461.811863" y="168.098844" transform="rotate(-0 461.811863 168.098844)">4</text> </g> </g> <g id="xtick_7"> <g id="line2d_20"> <path d="M 552.182632 149.701188 
+L 552.182632 26.877188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_21"> <g> <use href="#m6984a86055" x="552.182632" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_13"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="552.182632" y="168.098844" transform="rotate(-0 552.182632 168.098844)">8</text> </g> </g> <g id="xtick_8"> <g id="line2d_22"> <path d="M 642.553401 149.701188 
+L 642.553401 26.877188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_23"> <g> <use href="#m6984a86055" x="642.553401" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> <g id="text_14"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="642.553401" y="168.098844" transform="rotate(-0 642.553401 168.098844)">12</text> </g> </g> <g id="text_15"> <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="518.293594" y="188.135719" transform="rotate(-0 518.293594 188.135719)">n</text> </g> </g> <g id="matplotlib.axis_4"> <g id="ytick_4"> <g id="line2d_24"> <path d="M 371.441094 135.529188 
+L 665.146094 135.529188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_25"> <g> <use href="#m449c0eef3d" x="371.441094" y="135.529188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> </g> <g id="ytick_5"> <g id="line2d_26"> <path d="M 371.441094 88.289188 
+L 665.146094 88.289188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_27"> <g> <use href="#m449c0eef3d" x="371.441094" y="88.289188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> </g> <g id="ytick_6"> <g id="line2d_28"> <path d="M 371.441094 41.049188 
+L 665.146094 41.049188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path> </g> <g id="line2d_29"> <g> <use href="#m449c0eef3d" x="371.441094" y="41.049188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"></use> </g> </g> </g> </g> <g id="line2d_30"> <path d="M 371.441094 88.289188 
+L 665.146094 88.289188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #cb4b16; stroke-width: 1.5"></path> </g> <g id="patch_6"> <path d="M 371.441094 149.701188 
+L 371.441094 26.877188 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="patch_7"> <path d="M 371.441094 149.701188 
+L 665.146094 149.701188 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path> </g> <g id="PathCollection_2"> <g clip-path="url(#pbf80a0a605)"> <use href="#mb8197ad1a6" x="394.033786" y="135.529188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="416.626478" y="64.669188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="439.219171" y="104.035854" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="461.811863" y="76.479188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="484.404555" y="97.737188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="506.997248" y="80.415854" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="529.58994" y="95.037759" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="552.182632" y="82.384188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="574.775325" y="93.538076" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="597.368017" y="83.565188" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="619.960709" y="92.583733" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mb8197ad1a6" x="642.553401" y="84.352521" style="fill: #268bd2; stroke: #268bd2"></use> </g> </g> <g id="text_16"> <!-- $a_n=(-1)^n/n$ --> <g style="fill: #586e75" transform="translate(464.113594 20.877188)"> <text> <tspan x="0" y="-0.054688" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">a</tspan> <tspan x="96.897656" y="-0.054688" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> <tspan x="11.030273" y="2.898438" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> <tspan x="82.355273" y="-6.945312" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan> <tspan x="23.015039" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">=</tspan> <tspan x="41.603906" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">(</tspan> <tspan x="48.626367" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">−</tspan> <tspan x="63.708398" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">1</tspan> <tspan x="75.160547" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">)</tspan> <tspan x="90.833203" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">/</tspan> </text> </g> </g> </g> </g> <defs> <clippath id="p5e46cac5f0"> <rect x="56.766094" y="26.877188" width="293.705" height="122.824"></rect> </clippath> <clippath id="pbf80a0a605"> <rect x="371.441094" y="26.877188" width="293.705" height="122.824"></rect> </clippath> </defs>
+</svg>
+</section>
+<section id="definition-of-limit" class="slide level2">
+<h2>Definition of Limit</h2>
+<p>A sequence <span class="math inline">\(\{a_n\}\)</span> converges to <span class="math inline">\(L\)</span> if, for every <span class="math inline">\(\epsilon&gt;0\)</span>, there is an integer <span class="math inline">\(N\)</span> such that</p>
+<p><span class="math inline">\(|a_n-L|&lt;\epsilon\quad\text{for all }n\ge N.\)</span></p>
+</section>
+<section id="divergence-to-infinity" class="slide level2">
+<h2>Divergence to Infinity</h2>
+<p>If the terms grow without bound, we write</p>
+<p><span class="math inline">\(\displaystyle \lim_{n\to\infty}(1+3n)=\infty.\)</span></p>
+<p>If the terms decrease without bound, we write</p>
+<p><span class="math inline">\(\displaystyle \lim_{n\to\infty}(-5n+2)=-\infty.\)</span></p>
+</section>
+<section id="using-functions-to-calculate-limits-of-sequences" class="slide level2">
+<h2>Using Functions to Calculate Limits of Sequences</h2>
+<p>Suppose <span class="math inline">\(a_n=f(n)\)</span> for <span class="math inline">\(n\ge 1\)</span>.</p>
+<p>If <span class="math inline">\(\displaystyle \lim_{x\to\infty}f(x)=L\)</span> for a finite number <span class="math inline">\(L\)</span>, then</p>
+<p><span class="math inline">\(\displaystyle \lim_{n\to\infty}a_n=L.\)</span></p>
+</section>
+<section id="algebraic-limit-rules" class="slide level2">
+<h2>Algebraic Limit Rules</h2>
+<p>Suppose <span class="math inline">\(a_n\to A\)</span> and <span class="math inline">\(b_n\to B\)</span>, with <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> finite.</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \lim_{n\to\infty}c=c\)</span></li>
+<li><span class="math inline">\(\displaystyle \lim_{n\to\infty}(ca_n)=cA\)</span></li>
+<li><span class="math inline">\(\displaystyle \lim_{n\to\infty}(a_n\pm b_n)=A\pm B\)</span></li>
+<li><span class="math inline">\(\displaystyle \lim_{n\to\infty}(a_nb_n)=AB\)</span></li>
+<li><span class="math inline">\(\displaystyle \lim_{n\to\infty}\frac{a_n}{b_n}=\frac{A}{B}\)</span>, provided <span class="math inline">\(B\ne0\)</span> and <span class="math inline">\(b_n\ne0\)</span>.</li>
+</ul>
+</section>
+<section id="a-first-limit-example" class="slide level2">
+<h2>A First Limit Example</h2>
+<p>Determine whether <span class="math inline">\(\left\{5-\dfrac{3}{n^2}\right\}\)</span> converges. If so, find its limit.</p>
+</section>
+<section id="a-rational-sequence" class="slide level2">
+<h2>A Rational Sequence</h2>
+<p>Determine whether <span class="math inline">\(\left\{\dfrac{3n^4-7n^2+5}{6-4n^4}\right\}\)</span> converges.</p>
+</section>
+<section id="another-limit" class="slide level2">
+<h2>Another Limit</h2>
+<p>Determine whether <span class="math inline">\(\left\{\dfrac{2^n}{n^2}\right\}\)</span> converges.</p>
+</section>
+<section id="function-raised-to-the-n-power" class="slide level2">
+<h2>Function raised to the <span class="math inline">\(n\)</span> power</h2>
+<p>Find <span class="math inline">\(\displaystyle \lim_{n\to\infty}\left(1+\frac{4}{n}\right)^n\)</span>.</p>
+</section>
+<section id="squeeze-theorem-for-sequences" class="slide level2">
+<h2>Squeeze Theorem for Sequences</h2>
+<p>Suppose <span class="math inline">\(a_n\le b_n\le c_n\)</span> for all sufficiently large <span class="math inline">\(n\)</span>.</p>
+<p>If <span class="math inline">\(a_n\to L\)</span> and <span class="math inline">\(c_n\to L\)</span>, then <span class="math inline">\(b_n\to L\)</span>.</p>
+<div class="fragment">
+<p>A useful special case is</p>
+<p><span class="math inline">\(-|b_n|\le b_n\le |b_n|.\)</span></p>
+<p>If <span class="math inline">\(|b_n|\to0\)</span>, then <span class="math inline">\(b_n\to0\)</span>.</p>
+</div>
+</section>
+<section id="squeeze-theorem-example" class="slide level2">
+<h2>Squeeze Theorem Example</h2>
+<p>Find <span class="math inline">\(\displaystyle \lim_{n\to\infty}\frac{\cos n}{n^2}\)</span>.</p>
+<div class="fragment">
+<p>Since <span class="math inline">\(-1\le\cos n\le1\)</span>,</p>
+<p><span class="math inline">\(\displaystyle -\frac{1}{n^2}\le\frac{\cos n}{n^2}\le\frac{1}{n^2}.\)</span></p>
+<p>Both bounding sequences approach <span class="math inline">\(0\)</span>.</p>
+<p><span class="math inline">\(\displaystyle \lim_{n\to\infty}\frac{\cos n}{n^2}=0.\)</span></p>
+</div>
+</section>
+<section id="another-squeeze-theorem-example" class="slide level2">
+<h2>Another Squeeze THeorem Example</h2>
+<p>Find <span class="math inline">\(\displaystyle \lim_{n\to\infty}\left(-\frac{1}{2}\right)^n\)</span>.</p>
+<div class="fragment">
+<p><span class="math inline">\(\displaystyle -\frac{1}{2^n}\le\left(-\frac{1}{2}\right)^n\le\frac{1}{2^n}.\)</span></p>
+<p>Since both bounds approach <span class="math inline">\(0\)</span>, the Squeeze Theorem gives</p>
+<p><span class="math inline">\(\displaystyle \lim_{n\to\infty}\left(-\frac{1}{2}\right)^n=0.\)</span></p>
+</div>
+</section>
+<section id="limits-of-geometric-sequences" class="slide level2">
+<h2>Limits of Geometric Sequences</h2>
+<p>For <span class="math inline">\(\{r^n\}_{n=1}^{\infty}\)</span>:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Value of <span class="math inline">\(r\)</span></th>
+<th style="text-align: left;">Behavior as <span class="math inline">\(n\to\infty\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(|r|&lt;1\)</span></td>
+<td style="text-align: left;">Converges to <span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(r=1\)</span></td>
+<td style="text-align: left;">Converges to <span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(r&gt;1\)</span></td>
+<td style="text-align: left;">Diverges to <span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(r=-1\)</span></td>
+<td style="text-align: left;">Diverges</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(r&lt;-1\)</span></td>
+<td style="text-align: left;">Diverges</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bounded-sequences" class="slide level2">
+<h2>Bounded Sequences</h2>
+<p>A sequence is <strong>bounded above</strong> if some number <span class="math inline">\(M\)</span> satisfies <span class="math inline">\(a_n\le M\)</span> for every <span class="math inline">\(n\)</span>.</p>
+<p>It is <strong>bounded below</strong> if some number <span class="math inline">\(m\)</span> satisfies <span class="math inline">\(m\le a_n\)</span> for every <span class="math inline">\(n\)</span>.</p>
+<p>It is <strong>bounded</strong> if it is bounded above and below:</p>
+<p><span class="math inline">\(m\le a_n\le M\quad\text{for every }n.\)</span></p>
+<div class="fragment">
+<p>For example, <span class="math inline">\(0&lt;1/n\le1\)</span>, so <span class="math inline">\(\{1/n\}\)</span> is bounded.</p>
+</div>
+</section>
+<section id="does-bounded-mean-convergent" class="slide level2">
+<h2>Does Bounded Mean Convergent?</h2>
+<p>Every convergent sequence is bounded.</p>
+<p>Does every bounded sequence converge?</p>
+<div class="fragment">
+<p>Consider <span class="math inline">\(a_n=(-1)^n\)</span>.</p>
+<p><span class="math inline">\(-1\le a_n\le1\)</span>, but the terms do not approach one value.</p>
+<p>Boundedness alone does not guarantee convergence.</p>
+</div>
+</section>
+<section id="monotone-sequences" class="slide level2">
+<h2>Monotone Sequences</h2>
+<p>A sequence is <strong>increasing</strong> if <span class="math inline">\(a_n\le a_{n+1}\)</span> for every <span class="math inline">\(n\)</span>.</p>
+<p>It is <strong>decreasing</strong> if <span class="math inline">\(a_n\ge a_{n+1}\)</span> for every <span class="math inline">\(n\)</span>.</p>
+<p>A sequence that is increasing or decreasing is <strong>monotone</strong>.</p>
+<div class="fragment">
+<p>If the inequalities hold for all <span class="math inline">\(n\ge n_0\)</span>, the sequence is <strong>eventually monotone</strong>.</p>
+<p>Equality is allowed in these definitions.</p>
+</div>
+</section>
+<section id="checking-monotonicity" class="slide level2">
+<h2>Checking Monotonicity</h2>
+<p>To compare consecutive terms, examine <span class="math inline">\(a_{n+1}-a_n\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(a_{n+1}-a_n\ge0\)</span>, the sequence is increasing.</li>
+<li>If <span class="math inline">\(a_{n+1}-a_n\le0\)</span>, the sequence is decreasing.</li>
+</ul>
+<p>For positive sequences <span class="math inline">\(a_n\ge0\)</span>, we can compare <span class="math inline">\(a_{n+1}/a_n\)</span> with <span class="math inline">\(1\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(a_{n+1}/a_n&lt;1\)</span> the sequence is decreasing.</li>
+<li>If <span class="math inline">\(a_{n+1}/a_n&lt;1\)</span> the sequence is decreasing.</li>
+</ul>
+</section>
+<section id="monotone-convergence-theorem" class="slide level2">
+<h2>Monotone Convergence Theorem</h2>
+<p>A bounded sequence that is eventually monotone converges.</p>
+<p>In particular:</p>
+<ul>
+<li>An increasing sequence that is bounded above converges.</li>
+<li>A decreasing sequence that is bounded below converges</li>
+</ul>
+<p>This is a tool to establish that a limit exists.</p>
+</section>
+<section id="a-sequence-that-eventually-decreases" class="slide level2">
+<h2>A Sequence That Eventually Decreases</h2>
+<p>Use the Monotone Convergence Theorem for <span class="math inline">\(a_n=\dfrac{4^n}{n!}\)</span>.</p>
+<p>The first few terms are <span class="math inline">\(4,8,\dfrac{32}{3},\dfrac{32}{3},\dfrac{128}{15},\ldots\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(\displaystyle \frac{a_{n+1}}{a_n}=\frac{4}{n+1}\le1\quad\text{when }n\ge3.\)</span></p>
+<p>The sequence is decreasing for <span class="math inline">\(n\ge3\)</span> and bounded below by <span class="math inline">\(0\)</span>.</p>
+<p>Therefore, the sequence converges.</p>
+</div>
+</section>
+<section id="finding-the-factorial-sequence-limit" class="slide level2">
+<h2>Finding the Factorial Sequence Limit</h2>
+<p>We have established convergence. Let <span class="math inline">\(a_n\to L\)</span>.</p>
+<p>Omitting the first term does not change the limit, so <span class="math inline">\(a_{n+1}\to L\)</span>.</p>
+<div class="fragment">
+<p><span class="math inline">\(\displaystyle a_{n+1}=\frac{4}{n+1}a_n.\)</span></p>
+<p>Taking limits gives <span class="math inline">\(L=0\cdot L=0\)</span>.</p>
+<p><span class="math inline">\(\displaystyle \lim_{n\to\infty}\frac{4^n}{n!}=0.\)</span></p>
+</div>
+</section>
+<section id="a-recursive-sequence" class="slide level2">
+<h2>A Recursive Sequence</h2>
+<p>Let <span class="math inline">\(a_1=2\)</span> and <span class="math inline">\(\displaystyle a_{n+1}=\frac{a_n}{2}+\frac{1}{2a_n}\)</span> for <span class="math inline">\(n\ge1\)</span>.</p>
+<p>Write the first four terms. What do they suggest?</p>
+<div class="fragment">
+<p><span class="math inline">\(\displaystyle 2,\frac{5}{4},\frac{41}{40},\frac{3281}{3280},\ldots\)</span></p>
+<p>The terms appear to decrease toward <span class="math inline">\(1\)</span>.</p>
+<p>We will establish a lower bound and prove monotonicity.</p>
+</div>
+</section>
+<section id="recursive-sequence-a-lower-bound" class="slide level2">
+<h2>Recursive Sequence: A Lower Bound</h2>
+<p>Since <span class="math inline">\(a_1&gt;0\)</span>, the recurrence gives <span class="math inline">\(a_n&gt;0\)</span> for every <span class="math inline">\(n\)</span>.</p>
+<p>Now calculate</p>
+<p><span class="math inline">\(\displaystyle a_{n+1}-1=\frac{a_n^2+1-2a_n}{2a_n}=\frac{(a_n-1)^2}{2a_n}\ge0.\)</span></p>
+<div class="fragment">
+<p>Therefore, <span class="math inline">\(a_{n+1}\ge1\)</span>.</p>
+<p>Together with <span class="math inline">\(a_1=2\)</span>, this gives <span class="math inline">\(a_n\ge1\)</span> for every <span class="math inline">\(n\)</span>.</p>
+</div>
+</section>
+<section id="recursive-sequence-decreasing-terms" class="slide level2">
+<h2>Recursive Sequence: Decreasing Terms</h2>
+<p>Using <span class="math inline">\(a_n\ge1\)</span>,</p>
+<p><span class="math inline">\(\displaystyle a_{n+1}-a_n=\frac{a_n}{2}+\frac{1}{2a_n}-a_n\)</span></p>
+<p><span class="math inline">\(\displaystyle =\frac{1-a_n^2}{2a_n}\le0.\)</span></p>
+<div class="fragment">
+<p>The sequence is decreasing and bounded below by <span class="math inline">\(1\)</span>.</p>
+<p>The Monotone Convergence Theorem guarantees convergence.</p>
+</div>
+</section>
+<section id="recursive-sequence-finding-the-limit" class="slide level2">
+<h2>Recursive Sequence: Finding the Limit</h2>
+<p>Let <span class="math inline">\(a_n\to L\)</span>. Since <span class="math inline">\(a_n\ge1\)</span>, we have <span class="math inline">\(L\ge1\)</span>.</p>
+<p>Taking limits in the recurrence gives</p>
+<p><span class="math inline">\(\displaystyle L=\frac{L}{2}+\frac{1}{2L}.\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(2L^2=L^2+1\)</span>, so <span class="math inline">\(L^2=1\)</span>.</p>
+<p>Since <span class="math inline">\(L\ge1\)</span>, the limit is <span class="math inline">\(L=1\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script>
+    (function useMathJaxSVG() {
+      if (window.MathJax && MathJax.Hub) {
+        MathJax.Hub.Queue(
+          ["setRenderer", MathJax.Hub, "SVG"],
+          ["Rerender", MathJax.Hub]
+        );
+      } else {
+        window.setTimeout(useMathJaxSVG, 50);
+      }
+    })();
+    </script>
+    
+
+</body></html>

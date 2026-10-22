@@ -1,0 +1,1251 @@
+---
+title: "Sequences"
+
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    html-math-method: mathjax
+---
+
+## Sequences
+
+Class Session Goals:
+
+- Find a formula for the general term of a sequence.
+- Calculate the limit of a sequence, if it exists.
+- Determine whether a sequence converges or diverges.
+- Use boundedness and monotonicity to establish convergence.
+
+---
+
+## What is a Sequence?
+
+An **infinite sequence** is an ordered list of numbers:
+
+$a_1,a_2,a_3,\ldots,a_n,\ldots$
+
+Each number $a_n$ is a **term**. The integer $n$ is the **index**.
+
+We write $\{a_n\}_{n=1}^{\infty}$, or simply $\{a_n\}$.
+
+For example, $\{2^n\}_{n=1}^{\infty}=\{2,4,8,16,\ldots\}$.
+
+---
+
+## Two Ways to Define a Sequence
+
+An **explicit formula** gives a term directly from its index:
+
+$a_n=2^n,\quad n\ge 1.$
+
+A **recurrence relation** gives a term using earlier terms:
+
+$b_1=2,\quad b_n=ba_{n-1},\quad n\ge 2.$
+
+Here $\{a_n\}=\{b_n\}$ since each term is the same.
+
+
+---
+
+## Arithmetic Sequences
+
+An **arithmetic sequence** has a constant difference between consecutive terms.
+
+$3,7,11,15,19,\ldots$
+
+. . .
+
+$a_1=3,\quad a_n=a_{n-1}+4,\quad n\ge 2.$
+
+$a_n=3+4(n-1)=4n-1.$
+
+In general, $a_n=a_1+(n-1)d$, where $d$ is the common difference.
+
+---
+
+## Geometric Sequences
+
+A **geometric sequence** has a constant ratio between consecutive nonzero terms.
+
+$2,-\frac{2}{3},\frac{2}{9},-\frac{2}{27},\frac{2}{81},\ldots$
+
+. . .
+
+$a_1=2,\quad a_n=-\frac{1}{3}a_{n-1},\quad n\ge 2.$
+
+$a_n=2\left(-\frac{1}{3}\right)^{n-1}.$
+
+In general, $a_n=a_1r^{n-1}$, where $r$ is the common ratio.
+
+---
+
+## Finding an Explicit Formula
+
+Find a formula for the $n$th term, starting with $n=1$:
+
+$-\frac{1}{2},\frac{2}{3},-\frac{3}{4},\frac{4}{5},-\frac{5}{6},\ldots$
+
+. . .
+
+The numerators are $n$, and the denominators are $n+1$.
+
+The factor $(-1)^n$ gives a negative sign when $n$ is odd.
+
+$a_n=\dfrac{(-1)^n n}{n+1}.$
+
+---
+
+## Another Explicit Formula
+
+Find a formula for the $n$th term, starting with $n=1$:
+
+$\frac{3}{4},\frac{9}{7},\frac{27}{10},\frac{81}{13},\frac{243}{16},\ldots$
+
+. . .
+
+The numerators form a geometric sequence: $3^n$.
+
+The denominators form an arithmetic sequence: $4+3(n-1)=3n+1$.
+
+$a_n=\dfrac{3^n}{3n+1}.$
+
+---
+
+## From a Recurrence to a Formula
+
+Suppose $a_1=\frac{1}{2}$ and $a_n=a_{n-1}+\left(\frac{1}{2}\right)^n$ for $n\ge 2$.
+
+Write the first four terms and look for a formula.
+
+. . .
+
+$a_1=\frac{1}{2},\quad a_2=\frac{3}{4},\quad a_3=\frac{7}{8},\quad a_4=\frac{15}{16}.$
+
+$a_n=\dfrac{2^n-1}{2^n}=1-\dfrac{1}{2^n}.$
+
+Substitution verifies the initial value and recurrence.
+
+---
+
+## Graphing a Sequence
+
+A sequence is a function defined at integer indices.
+
+Its graph consists of the points $(n,a_n)$.
+
+For $a_n=1-\dfrac{1}{2^n}$:
+
+| $n$ | 1 | 2 | 3 | 4 | 5 |
+|:--|--:|--:|--:|--:|--:|
+| $a_n$ | .5 | .75 | .875 | .9375 | .96875 |
+
+What happens to $a_n$ as $n$ increases?
+
+---
+
+## Approaching a Limit
+
+<svg role="img" aria-labelledby="converging-title converging-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" viewBox="0 0 601.3875 231.006" xmlns="http://www.w3.org/2000/svg" version="1.1"><title id="converging-title">A sequence approaching one</title><desc id="converging-desc">Discrete points for a_n = 1 minus 1 divided by 2 to the n, for n from 1 to 10. The points increase toward the dashed horizontal line at one.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-20T19:33:58.151918</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 231.006 
+L 601.3875 231.006 
+L 601.3875 0 
+L -0 0 
+z
+" style="fill: #fdf6e3"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 58.5075 181.836 
+L 594.1875 181.836 
+L 594.1875 7.2 
+L 58.5075 7.2 
+z
+" style="fill: #fdf6e3"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 58.5075 181.836 
+L 58.5075 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m08167102fe" d="M 0 0 
+L 0 3.5 
+" style="stroke: #586e75; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m08167102fe" x="58.5075" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="58.5075" y="200.233656" transform="rotate(-0 58.5075 200.233656)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 159.579198 181.836 
+L 159.579198 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m08167102fe" x="159.579198" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="159.579198" y="200.233656" transform="rotate(-0 159.579198 200.233656)">2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 260.650896 181.836 
+L 260.650896 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m08167102fe" x="260.650896" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="260.650896" y="200.233656" transform="rotate(-0 260.650896 200.233656)">4</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 361.722594 181.836 
+L 361.722594 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m08167102fe" x="361.722594" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="361.722594" y="200.233656" transform="rotate(-0 361.722594 200.233656)">6</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 462.794292 181.836 
+L 462.794292 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m08167102fe" x="462.794292" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="462.794292" y="200.233656" transform="rotate(-0 462.794292 200.233656)">8</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 563.865991 181.836 
+L 563.865991 7.2 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m08167102fe" x="563.865991" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="563.865991" y="200.233656" transform="rotate(-0 563.865991 200.233656)">10</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="326.3475" y="220.270531" transform="rotate(-0 326.3475 220.270531)">n</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13">
+      <path d="M 58.5075 181.836 
+L 594.1875 181.836 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <defs>
+       <path id="ma5e7f79151" d="M 0 0 
+L -3.5 0 
+" style="stroke: #586e75; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma5e7f79151" x="58.5075" y="181.836" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="51.5075" y="187.534828" transform="rotate(-0 51.5075 187.534828)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_15">
+      <path d="M 58.5075 103.8735 
+L 594.1875 103.8735 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#ma5e7f79151" x="58.5075" y="103.8735" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="51.5075" y="109.572328" transform="rotate(-0 51.5075 109.572328)">0.5</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_17">
+      <path d="M 58.5075 25.911 
+L 594.1875 25.911 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#ma5e7f79151" x="58.5075" y="25.911" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="51.5075" y="31.609828" transform="rotate(-0 51.5075 31.609828)">1.0</text>
+     </g>
+    </g>
+    <g id="text_11">
+     <!-- $a_n$ -->
+     <g style="fill: #586e75" transform="translate(20.117344 103.783) rotate(-90)">
+      <text>
+       <tspan x="0" y="-0.484375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #586e75">a</tspan>
+       <tspan x="10.41748" y="2.304688" style="font-style: oblique; font-size: 11.9px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_19">
+    <path d="M 58.5075 25.911 
+L 594.1875 25.911 
+" clip-path="url(#p4e405a8059)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #cb4b16; stroke-width: 2"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 58.5075 181.836 
+L 58.5075 7.2 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 58.5075 181.836 
+L 594.1875 181.836 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m026b0b53a6" d="M 0 3.708099 
+C 0.983399 3.708099 1.926654 3.317391 2.622022 2.622022 
+C 3.317391 1.926654 3.708099 0.983399 3.708099 0 
+C 3.708099 -0.983399 3.317391 -1.926654 2.622022 -2.622022 
+C 1.926654 -3.317391 0.983399 -3.708099 0 -3.708099 
+C -0.983399 -3.708099 -1.926654 -3.317391 -2.622022 -2.622022 
+C -3.317391 -1.926654 -3.708099 -0.983399 -3.708099 0 
+C -3.708099 0.983399 -3.317391 1.926654 -2.622022 2.622022 
+C -1.926654 3.317391 -0.983399 3.708099 0 3.708099 
+z
+" style="stroke: #268bd2"/>
+    </defs>
+    <g clip-path="url(#p4e405a8059)">
+     <use xlink:href="#m026b0b53a6" x="109.043349" y="103.8735" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#m026b0b53a6" x="159.579198" y="64.89225" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#m026b0b53a6" x="210.115047" y="45.401625" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#m026b0b53a6" x="260.650896" y="35.656313" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#m026b0b53a6" x="311.186745" y="30.783656" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#m026b0b53a6" x="361.722594" y="28.347328" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#m026b0b53a6" x="412.258443" y="27.129164" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#m026b0b53a6" x="462.794292" y="26.520082" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#m026b0b53a6" x="513.330142" y="26.215541" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#m026b0b53a6" x="563.865991" y="26.063271" style="fill: #268bd2; stroke: #268bd2"/>
+    </g>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #cb4b16" x="493.115802" y="20.453625" transform="rotate(-0 493.115802 20.453625)">L = 1</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4e405a8059">
+   <rect x="58.5075" y="7.2" width="535.68" height="174.636"/>
+  </clipPath>
+ </defs>
+</svg>
+
+
+The terms approach $1$ as $n$ increases.
+
+$\displaystyle \lim_{n\to\infty}\left(1-\frac{1}{2^n}\right)=1.$
+
+---
+
+## Convergence and Divergence
+
+A sequence **converges** if its terms approach a finite number $L$ as $n$ increases.
+
+We write $\displaystyle \lim_{n\to\infty}a_n=L$, or $a_n\to L$.
+
+A sequence that does not converge **diverges**.
+
+. . .
+
+Changing or removing finitely many initial terms does not change convergence or the limit.
+
+---
+
+## Different Long-Term Behaviors
+
+Determine whether each sequence converges or diverges.
+
+| Sequence | First few terms |
+|:--|:--|
+| $a_n=1+3n$ | $4,7,10,13,\ldots$ |
+| $b_n=1-(1/2)^n$ | $1/2,3/4,7/8,15/16,\ldots$ |
+| $c_n=(-1)^n$ | $-1,1,-1,1,\ldots$ |
+| $d_n=(-1)^n/n$ | $-1,1/2,-1/3,1/4,\ldots$ |
+
+. . .
+
+In order: diverges to $\infty$; converges to $1$; diverges; converges to $0$.
+
+---
+
+## Alternating Does Not Mean Divergent
+
+<svg role="img" aria-labelledby="alternating-title alternating-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" viewBox="0 0 672.346094 198.871188" xmlns="http://www.w3.org/2000/svg" version="1.1"><title id="alternating-title">Two alternating sequences</title><desc id="alternating-desc">The left graph alternates between minus one and one. The right graph alternates above and below zero with magnitudes one divided by n, shrinking toward zero.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-20T19:33:58.227760</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 198.871188 
+L 672.346094 198.871188 
+L 672.346094 0 
+L 0 0 
+z
+" style="fill: #fdf6e3"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 56.766094 149.701188 
+L 350.471094 149.701188 
+L 350.471094 26.877188 
+L 56.766094 26.877188 
+z
+" style="fill: #fdf6e3"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 56.766094 149.701188 
+L 56.766094 26.877188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m6984a86055" d="M 0 0 
+L 0 3.5 
+" style="stroke: #586e75; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m6984a86055" x="56.766094" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="56.766094" y="168.098844" transform="rotate(-0 56.766094 168.098844)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 147.136863 149.701188 
+L 147.136863 26.877188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m6984a86055" x="147.136863" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="147.136863" y="168.098844" transform="rotate(-0 147.136863 168.098844)">4</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 237.507632 149.701188 
+L 237.507632 26.877188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m6984a86055" x="237.507632" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="237.507632" y="168.098844" transform="rotate(-0 237.507632 168.098844)">8</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 327.878401 149.701188 
+L 327.878401 26.877188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m6984a86055" x="327.878401" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="327.878401" y="168.098844" transform="rotate(-0 327.878401 168.098844)">12</text>
+     </g>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="203.618594" y="188.135719" transform="rotate(-0 203.618594 188.135719)">n</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9">
+      <path d="M 56.766094 135.529188 
+L 350.471094 135.529188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <defs>
+       <path id="m449c0eef3d" d="M 0 0 
+L -3.5 0 
+" style="stroke: #586e75; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m449c0eef3d" x="56.766094" y="135.529188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="49.766094" y="141.228016" transform="rotate(-0 49.766094 141.228016)">−1</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_11">
+      <path d="M 56.766094 88.289188 
+L 350.471094 88.289188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m449c0eef3d" x="56.766094" y="88.289188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="49.766094" y="93.988016" transform="rotate(-0 49.766094 93.988016)">0</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <path d="M 56.766094 41.049188 
+L 350.471094 41.049188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m449c0eef3d" x="56.766094" y="41.049188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #586e75" x="49.766094" y="46.748016" transform="rotate(-0 49.766094 46.748016)">1</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <!-- $a_n$ -->
+     <g style="fill: #586e75" transform="translate(20.117344 97.554188) rotate(-90)">
+      <text>
+       <tspan x="0" y="-0.484375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #586e75">a</tspan>
+       <tspan x="10.41748" y="2.304688" style="font-style: oblique; font-size: 11.9px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_15">
+    <path d="M 56.766094 88.289188 
+L 350.471094 88.289188 
+" clip-path="url(#p5e46cac5f0)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #cb4b16; stroke-width: 1.5"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 56.766094 149.701188 
+L 56.766094 26.877188 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 56.766094 149.701188 
+L 350.471094 149.701188 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="mb8197ad1a6" d="M 0 3.24037 
+C 0.859356 3.24037 1.683631 2.898944 2.291288 2.291288 
+C 2.898944 1.683631 3.24037 0.859356 3.24037 0 
+C 3.24037 -0.859356 2.898944 -1.683631 2.291288 -2.291288 
+C 1.683631 -2.898944 0.859356 -3.24037 0 -3.24037 
+C -0.859356 -3.24037 -1.683631 -2.898944 -2.291288 -2.291288 
+C -2.898944 -1.683631 -3.24037 -0.859356 -3.24037 0 
+C -3.24037 0.859356 -2.898944 1.683631 -2.291288 2.291288 
+C -1.683631 2.898944 -0.859356 3.24037 0 3.24037 
+z
+" style="stroke: #268bd2"/>
+    </defs>
+    <g clip-path="url(#p5e46cac5f0)">
+     <use xlink:href="#mb8197ad1a6" x="79.358786" y="135.529188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="101.951478" y="41.049188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="124.544171" y="135.529188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="147.136863" y="41.049188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="169.729555" y="135.529188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="192.322248" y="41.049188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="214.91494" y="135.529188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="237.507632" y="41.049188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="260.100325" y="135.529188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="282.693017" y="41.049188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="305.285709" y="135.529188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="327.878401" y="41.049188" style="fill: #268bd2; stroke: #268bd2"/>
+    </g>
+   </g>
+   <g id="text_10">
+    <!-- $a_n=(-1)^n$ -->
+    <g style="fill: #586e75" transform="translate(158.168594 20.877188)">
+     <text>
+      <tspan x="0" y="-0.054688" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">a</tspan>
+      <tspan x="11.030273" y="2.898438" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan>
+      <tspan x="82.355273" y="-6.945312" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan>
+      <tspan x="23.015039" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">=</tspan>
+      <tspan x="41.603906" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">(</tspan>
+      <tspan x="48.626367" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">−</tspan>
+      <tspan x="63.708398" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">1</tspan>
+      <tspan x="75.160547" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">)</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 371.441094 149.701188 
+L 665.146094 149.701188 
+L 665.146094 26.877188 
+L 371.441094 26.877188 
+z
+" style="fill: #fdf6e3"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_16">
+      <path d="M 371.441094 149.701188 
+L 371.441094 26.877188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m6984a86055" x="371.441094" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="371.441094" y="168.098844" transform="rotate(-0 371.441094 168.098844)">0</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_18">
+      <path d="M 461.811863 149.701188 
+L 461.811863 26.877188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m6984a86055" x="461.811863" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="461.811863" y="168.098844" transform="rotate(-0 461.811863 168.098844)">4</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_20">
+      <path d="M 552.182632 149.701188 
+L 552.182632 26.877188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m6984a86055" x="552.182632" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="552.182632" y="168.098844" transform="rotate(-0 552.182632 168.098844)">8</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_22">
+      <path d="M 642.553401 149.701188 
+L 642.553401 26.877188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m6984a86055" x="642.553401" y="149.701188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="642.553401" y="168.098844" transform="rotate(-0 642.553401 168.098844)">12</text>
+     </g>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #586e75" x="518.293594" y="188.135719" transform="rotate(-0 518.293594 188.135719)">n</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_4">
+     <g id="line2d_24">
+      <path d="M 371.441094 135.529188 
+L 665.146094 135.529188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#m449c0eef3d" x="371.441094" y="135.529188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_26">
+      <path d="M 371.441094 88.289188 
+L 665.146094 88.289188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#m449c0eef3d" x="371.441094" y="88.289188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_28">
+      <path d="M 371.441094 41.049188 
+L 665.146094 41.049188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#m449c0eef3d" x="371.441094" y="41.049188" style="fill: #586e75; stroke: #586e75; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_30">
+    <path d="M 371.441094 88.289188 
+L 665.146094 88.289188 
+" clip-path="url(#pbf80a0a605)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #cb4b16; stroke-width: 1.5"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 371.441094 149.701188 
+L 371.441094 26.877188 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 371.441094 149.701188 
+L 665.146094 149.701188 
+" style="fill: none; stroke: #586e75; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_2">
+    <g clip-path="url(#pbf80a0a605)">
+     <use xlink:href="#mb8197ad1a6" x="394.033786" y="135.529188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="416.626478" y="64.669188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="439.219171" y="104.035854" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="461.811863" y="76.479188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="484.404555" y="97.737188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="506.997248" y="80.415854" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="529.58994" y="95.037759" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="552.182632" y="82.384188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="574.775325" y="93.538076" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="597.368017" y="83.565188" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="619.960709" y="92.583733" style="fill: #268bd2; stroke: #268bd2"/>
+     <use xlink:href="#mb8197ad1a6" x="642.553401" y="84.352521" style="fill: #268bd2; stroke: #268bd2"/>
+    </g>
+   </g>
+   <g id="text_16">
+    <!-- $a_n=(-1)^n/n$ -->
+    <g style="fill: #586e75" transform="translate(464.113594 20.877188)">
+     <text>
+      <tspan x="0" y="-0.054688" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">a</tspan>
+      <tspan x="96.897656" y="-0.054688" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan>
+      <tspan x="11.030273" y="2.898438" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan>
+      <tspan x="82.355273" y="-6.945312" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #586e75">n</tspan>
+      <tspan x="23.015039" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">=</tspan>
+      <tspan x="41.603906" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">(</tspan>
+      <tspan x="48.626367" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">−</tspan>
+      <tspan x="63.708398" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">1</tspan>
+      <tspan x="75.160547" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">)</tspan>
+      <tspan x="90.833203" y="-0.054688" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #586e75">/</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5e46cac5f0">
+   <rect x="56.766094" y="26.877188" width="293.705" height="122.824"/>
+  </clipPath>
+  <clipPath id="pbf80a0a605">
+   <rect x="371.441094" y="26.877188" width="293.705" height="122.824"/>
+  </clipPath>
+ </defs>
+</svg>
+
+
+$(-1)^n$ keeps alternating between $-1$ and $1$.
+
+$\dfrac{(-1)^n}{n}$ alternates, but its distance from $0$ approaches $0$.
+
+---
+
+## A Precise Definition of Limit
+
+A sequence $\{a_n\}$ converges to $L$ if, for every $\epsilon>0$, there is an integer $N$ such that
+
+$|a_n-L|<\epsilon\quad\text{for all }n\ge N.$
+
+Every sufficiently late term lies within $\epsilon$ of $L$.
+
+. . .
+
+For $a_n=1/n$ and $L=0$, choose any integer $N>1/\epsilon$.
+
+Then $n\ge N$ implies $|1/n-0|\le 1/N<\epsilon$.
+
+---
+
+## Divergence to Infinity
+
+If the terms grow without bound, we write
+
+$\displaystyle \lim_{n\to\infty}(1+3n)=\infty.$
+
+If the terms decrease without bound, we write
+
+$\displaystyle \lim_{n\to\infty}(-5n+2)=-\infty.$
+
+
+
+---
+
+## Using Limits of Functions
+
+Suppose $a_n=f(n)$ for $n\ge 1$.
+
+If $\displaystyle \lim_{x\to\infty}f(x)=L$ for a finite number $L$, then
+
+$\displaystyle \lim_{n\to\infty}a_n=L.$
+
+. . .
+
+For example, $\displaystyle \lim_{x\to\infty}\frac{1}{x}=0$ gives $\displaystyle \lim_{n\to\infty}\frac{1}{n}=0$.
+
+
+. . . 
+
+The reverse implication need not hold: $\sin(2\pi n)=0$, while $\sin(2\pi x)$ has no limit as $x\to\infty$.
+
+---
+
+## Algebraic Limit Laws
+
+Suppose $a_n\to A$ and $b_n\to B$, with $A$ and $B$ finite.
+
+- $\displaystyle \lim_{n\to\infty}c=c$
+- $\displaystyle \lim_{n\to\infty}(ca_n)=cA$
+- $\displaystyle \lim_{n\to\infty}(a_n\pm b_n)=A\pm B$
+- $\displaystyle \lim_{n\to\infty}(a_nb_n)=AB$
+- $\displaystyle \lim_{n\to\infty}\frac{a_n}{b_n}=\frac{A}{B}$, provided $B\ne0$ and $b_n\ne0$.
+
+---
+
+## A First Limit Example
+
+Determine whether $\left\{5-\dfrac{3}{n^2}\right\}$ converges. If so, find its limit.
+
+. . .
+
+$\displaystyle \lim_{n\to\infty}\frac{1}{n^2}=0.$
+
+Therefore,
+
+$\displaystyle \lim_{n\to\infty}\left(5-\frac{3}{n^2}\right)=5-3(0)=5.$
+
+The sequence converges to $5$.
+
+---
+
+## A Rational Sequence
+
+Determine whether $\left\{\dfrac{3n^4-7n^2+5}{6-4n^4}\right\}$ converges.
+
+. . .
+
+Divide the numerator and denominator by $n^4$:
+
+$\displaystyle \frac{3n^4-7n^2+5}{6-4n^4}=\frac{3-7/n^2+5/n^4}{6/n^4-4}.$
+
+$\displaystyle \lim_{n\to\infty}\frac{3n^4-7n^2+5}{6-4n^4}=\frac{3-0+0}{0-4}=-\frac{3}{4}.$
+
+---
+
+## Exponential Growth and Polynomial Growth
+
+Determine whether $\left\{\dfrac{2^n}{n^2}\right\}$ converges.
+
+. . .
+
+Use $f(x)=2^x/x^2$ and apply L'Hôpital's rule twice:
+
+$\displaystyle \lim_{x\to\infty}\frac{2^x}{x^2}=\lim_{x\to\infty}\frac{2^x\ln 2}{2x}$
+
+$\displaystyle =\lim_{x\to\infty}\frac{2^x(\ln 2)^2}{2}=\infty.$
+
+The sequence diverges to $\infty$.
+
+---
+
+## An Indeterminate Power
+
+Find $\displaystyle \lim_{n\to\infty}\left(1+\frac{4}{n}\right)^n$.
+
+The base approaches $1$, but the exponent grows without bound.
+
+. . .
+
+For $f(x)=(1+4/x)^x$, take the logarithm:
+
+$\displaystyle \ln f(x)=x\ln\left(1+\frac{4}{x}\right)=\frac{\ln(1+4/x)}{1/x}.$
+
+This is a $0/0$ form as $x\to\infty$.
+
+---
+
+## Evaluating the Logarithmic Limit
+
+Apply L'Hôpital's rule:
+
+$\displaystyle \lim_{x\to\infty}\ln f(x)=\lim_{x\to\infty}\frac{(-4/x^2)/(1+4/x)}{-1/x^2}$
+
+$\displaystyle =\lim_{x\to\infty}\frac{4}{1+4/x}=4.$
+
+. . .
+
+Since the exponential function is continuous,
+
+$\displaystyle \lim_{n\to\infty}\left(1+\frac{4}{n}\right)^n=e^4.$
+
+---
+
+## Continuous Functions and Sequences
+
+If $a_n\to L$ and $f$ is continuous at $L$, then $f(a_n)\to f(L)$.
+
+For example, find $\displaystyle \lim_{n\to\infty}\cos\left(\frac{3}{n^2}\right)$.
+
+. . .
+
+$\displaystyle \frac{3}{n^2}\to0.$
+
+Since cosine is continuous at $0$,
+
+$\displaystyle \lim_{n\to\infty}\cos\left(\frac{3}{n^2}\right)=\cos(0)=1.$
+
+---
+
+## Squeeze Theorem for Sequences
+
+Suppose $a_n\le b_n\le c_n$ for all sufficiently large $n$.
+
+If $a_n\to L$ and $c_n\to L$, then $b_n\to L$.
+
+. . .
+
+A useful special case is
+
+$-|b_n|\le b_n\le |b_n|.$
+
+If $|b_n|\to0$, then $b_n\to0$.
+
+---
+
+## Squeeze Theorem Example
+
+Find $\displaystyle \lim_{n\to\infty}\frac{\cos n}{n^2}$.
+
+. . .
+
+Since $-1\le\cos n\le1$,
+
+$\displaystyle -\frac{1}{n^2}\le\frac{\cos n}{n^2}\le\frac{1}{n^2}.$
+
+Both bounding sequences approach $0$.
+
+$\displaystyle \lim_{n\to\infty}\frac{\cos n}{n^2}=0.$
+
+---
+
+## A Negative Geometric Ratio
+
+Find $\displaystyle \lim_{n\to\infty}\left(-\frac{1}{2}\right)^n$.
+
+. . .
+
+$\displaystyle -\frac{1}{2^n}\le\left(-\frac{1}{2}\right)^n\le\frac{1}{2^n}.$
+
+Since both bounds approach $0$, the Squeeze Theorem gives
+
+$\displaystyle \lim_{n\to\infty}\left(-\frac{1}{2}\right)^n=0.$
+
+---
+
+## Limits of Geometric Sequences
+
+For $\{r^n\}_{n=1}^{\infty}$:
+
+| Value of $r$ | Behavior as $n\to\infty$ |
+|:--|:--|
+| $|r|<1$ | Converges to $0$ |
+| $r=1$ | Converges to $1$ |
+| $r>1$ | Diverges to $\infty$ |
+| $r=-1$ | Diverges by oscillation |
+| $r<-1$ | Diverges; magnitude grows and signs alternate |
+
+---
+
+## Bounded Sequences
+
+A sequence is **bounded above** if some number $M$ satisfies $a_n\le M$ for every $n$.
+
+It is **bounded below** if some number $m$ satisfies $m\le a_n$ for every $n$.
+
+It is **bounded** if it is bounded above and below:
+
+$m\le a_n\le M\quad\text{for every }n.$
+
+. . .
+
+For example, $0<1/n\le1$, so $\{1/n\}$ is bounded.
+
+---
+
+## Does Bounded Mean Convergent?
+
+Every convergent sequence is bounded.
+
+Does every bounded sequence converge?
+
+. . .
+
+Consider $a_n=(-1)^n$.
+
+$-1\le a_n\le1$, but the terms do not approach one value.
+
+Boundedness alone does not guarantee convergence.
+
+---
+
+## Monotone Sequences
+
+A sequence is **increasing** if $a_n\le a_{n+1}$ for every $n$.
+
+It is **decreasing** if $a_n\ge a_{n+1}$ for every $n$.
+
+A sequence that is increasing or decreasing is **monotone**.
+
+. . .
+
+If the inequalities hold for all $n\ge n_0$, the sequence is **eventually monotone**.
+
+Equality is allowed in these definitions.
+
+---
+
+## Checking Monotonicity
+
+To compare consecutive terms, examine $a_{n+1}-a_n$.
+
+- If $a_{n+1}-a_n\ge0$, the sequence is increasing.
+- If $a_{n+1}-a_n\le0$, the sequence is decreasing.
+
+For a positive sequence, comparing $a_{n+1}/a_n$ with $1$ is also useful.
+
+. . .
+
+For $a_n=1/n$, $\displaystyle a_{n+1}-a_n=-\frac{1}{n(n+1)}<0$.
+
+---
+
+## Monotone Convergence Theorem
+
+A bounded sequence that is eventually monotone converges.
+
+In particular:
+
+- An increasing sequence that is bounded above converges.
+- A decreasing sequence that is bounded below converges.
+
+. . .
+
+This establishes the existence of a limit. Finding its value may require another step.
+
+---
+
+## A Sequence That Eventually Decreases
+
+Use the Monotone Convergence Theorem for $a_n=\dfrac{4^n}{n!}$.
+
+The first few terms are $4,8,\dfrac{32}{3},\dfrac{32}{3},\dfrac{128}{15},\ldots$
+
+. . .
+
+$\displaystyle \frac{a_{n+1}}{a_n}=\frac{4}{n+1}\le1\quad\text{when }n\ge3.$
+
+The sequence is decreasing for $n\ge3$ and bounded below by $0$.
+
+Therefore, the sequence converges.
+
+---
+
+## Finding the Factorial Sequence Limit
+
+We have established convergence. Let $a_n\to L$.
+
+Omitting the first term does not change the limit, so $a_{n+1}\to L$.
+
+. . .
+
+$\displaystyle a_{n+1}=\frac{4}{n+1}a_n.$
+
+Taking limits gives $L=0\cdot L=0$.
+
+$\displaystyle \lim_{n\to\infty}\frac{4^n}{n!}=0.$
+
+---
+
+## A Recursive Sequence
+
+Let $a_1=2$ and $\displaystyle a_{n+1}=\frac{a_n}{2}+\frac{1}{2a_n}$ for $n\ge1$.
+
+Write the first four terms. What do they suggest?
+
+. . .
+
+$\displaystyle 2,\frac{5}{4},\frac{41}{40},\frac{3281}{3280},\ldots$
+
+The terms appear to decrease toward $1$.
+
+We will establish a lower bound and prove monotonicity.
+
+---
+
+## Recursive Sequence: A Lower Bound
+
+Since $a_1>0$, the recurrence gives $a_n>0$ for every $n$.
+
+Now calculate
+
+$\displaystyle a_{n+1}-1=\frac{a_n^2+1-2a_n}{2a_n}=\frac{(a_n-1)^2}{2a_n}\ge0.$
+
+. . .
+
+Therefore, $a_{n+1}\ge1$.
+
+Together with $a_1=2$, this gives $a_n\ge1$ for every $n$.
+
+---
+
+## Recursive Sequence: Decreasing Terms
+
+Using $a_n\ge1$,
+
+$\displaystyle a_{n+1}-a_n=\frac{a_n}{2}+\frac{1}{2a_n}-a_n$
+
+$\displaystyle =\frac{1-a_n^2}{2a_n}\le0.$
+
+. . .
+
+The sequence is decreasing and bounded below by $1$.
+
+The Monotone Convergence Theorem guarantees convergence.
+
+---
+
+## Recursive Sequence: Finding the Limit
+
+Let $a_n\to L$. Since $a_n\ge1$, we have $L\ge1$.
+
+Taking limits in the recurrence gives
+
+$\displaystyle L=\frac{L}{2}+\frac{1}{2L}.$
+
+. . .
+
+$2L^2=L^2+1$, so $L^2=1$.
+
+Since $L\ge1$, the limit is $L=1$.
+
+---
+
+## Strategy for Sequence Limits
+
+1. Identify the formula or recurrence and the starting index.
+2. Try limit laws, a related function, or continuity.
+3. For oscillating terms, look for bounds and use the Squeeze Theorem.
+4. For geometric terms, check the ratio $r$.
+5. For a recurrence, establish convergence before solving for a possible limit.
+
+---
+
+## Practice
+
+1. Find a formula for $\frac{2}{3},-\frac{4}{5},\frac{6}{7},-\frac{8}{9},\ldots$, starting at $n=1$.
+2. Find $\displaystyle \lim_{n\to\infty}\frac{7n^2-3}{2n^2+5}$.
+3. Find $\displaystyle \lim_{n\to\infty}\frac{\sin n}{n}$.
+4. Let $a_1=3$ and $a_{n+1}=(a_n+2)/2$ for $n\ge1$. Show that the sequence converges and find its limit.
+

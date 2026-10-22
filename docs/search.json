@@ -70,179 +70,1102 @@
     ]
   },
   {
-    "objectID": "classes/17/slides.html#improper-integrals",
-    "href": "classes/17/slides.html#improper-integrals",
-    "title": "Improper Integrals",
-    "section": "Improper Integrals",
-    "text": "Improper Integrals\nClass Session Goals:\n\nEvaluate an integral over an infinite interval.\nEvaluate an integral over a closed interval with an infinite discontinuity within the interval.\nUse the comparison theorem to determine whether a definite integral is convergent."
+    "objectID": "classes/19/slides.html#infinite-series",
+    "href": "classes/19/slides.html#infinite-series",
+    "title": "Series",
+    "section": "Infinite Series",
+    "text": "Infinite Series\nClass Session Goals:\n\nExplain the meaning of the sum of an infinite series.\nDetermine convergence using the sequence of partial sums.\nCalculate the sum of a geometric series.\nEvaluate a telescoping series.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#what-is-an-improper-integral",
-    "href": "classes/17/slides.html#what-is-an-improper-integral",
-    "title": "Improper Integrals",
-    "section": "What is an Improper Integral?",
-    "text": "What is an Improper Integral?\nIntegrals over an infinite interval as well as integrals of functions containing a discontinuity on the interval are called improper integrals.\n\\[\\int_a^{\\infty} f(x)\\,dx\\]"
+    "objectID": "classes/19/slides.html#from-sequences-to-series",
+    "href": "classes/19/slides.html#from-sequences-to-series",
+    "title": "Series",
+    "section": "From Sequences to Series",
+    "text": "From Sequences to Series\nA sequence is an ordered list of terms:\n\\(a_1,a_2,a_3,\\ldots\\)\nAn infinite series adds the terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=a_1+a_2+a_3+\\cdots\\)\nWhat does it mean to add infinitely many numbers?",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#integrating-over-an-infinite-interval",
-    "href": "classes/17/slides.html#integrating-over-an-infinite-interval",
-    "title": "Improper Integrals",
-    "section": "Integrating over an Infinite Interval",
-    "text": "Integrating over an Infinite Interval\nTo integrate a function over an infinite interval, we consider the limit of the integral as the limit increases without bound.\nIf \\(f(x)\\) is continuous over \\([a,\\infty)\\), then\n\\[\\int_a^{\\infty} f(x)\\,dx=\\lim_{t\\to\\infty}\\int_a^t f(x)\\,dx\\]\nprovided this limit exists."
+    "objectID": "classes/19/slides.html#partial-sums",
+    "href": "classes/19/slides.html#partial-sums",
+    "title": "Series",
+    "section": "Partial Sums",
+    "text": "Partial Sums\nThe \\(k\\)th partial sum adds the first \\(k\\) terms:\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}a_n.\\)\n\\(S_1=a_1\\)\n\\(S_2=a_1+a_2\\)\n\\(S_3=a_1+a_2+a_3\\)\nThe partial sums form a new sequence: \\(\\{S_k\\}\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#infinite-interval-to-the-left",
-    "href": "classes/17/slides.html#infinite-interval-to-the-left",
-    "title": "Improper Integrals",
-    "section": "Infinite Interval to the Left",
-    "text": "Infinite Interval to the Left\nIf \\(f(x)\\) is continuous over \\((-\\infty,b]\\), then\n\\[\\int_{-\\infty}^{b} f(x)\\,dx=\\lim_{t\\to-\\infty}\\int_t^b f(x)\\,dx\\]\nprovided this limit exists.\nIn each case, if the limit exists, then the improper integral is said to converge.\nIf the limit does not exist, then the improper integral is said to diverge."
+    "objectID": "classes/19/slides.html#an-accumulation-example",
+    "href": "classes/19/slides.html#an-accumulation-example",
+    "title": "Series",
+    "section": "An Accumulation Example",
+    "text": "An Accumulation Example\nOil enters a lake at \\(1000\\) gallons during the first week, \\(500\\) during the second, and \\(250\\) during the third.\nSuppose each week adds half as much oil as the previous week, and none is removed.\nThe total after \\(k\\) weeks, in thousands of gallons, is\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\left(\\frac{1}{2}\\right)^{n-1}.\\)\nWill the total grow without bound?",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#infinite-interval-in-both-directions",
-    "href": "classes/17/slides.html#infinite-interval-in-both-directions",
-    "title": "Improper Integrals",
-    "section": "Infinite Interval in Both Directions",
-    "text": "Infinite Interval in Both Directions\nIf \\(f(x)\\) is continuous over \\((-\\infty,\\infty)\\), then\n\\[\\int_{-\\infty}^{\\infty} f(x)\\,dx=\\int_{-\\infty}^{0}f(x)\\,dx+\\int_{0}^{\\infty}f(x)\\,dx\\]\nprovided that both integrals converge."
+    "objectID": "classes/19/slides.html#computing-partial-sums",
+    "href": "classes/19/slides.html#computing-partial-sums",
+    "title": "Series",
+    "section": "Computing Partial Sums",
+    "text": "Computing Partial Sums\nFor \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\cdots\\):\n\n\n\n\\(k\\)\n1\n2\n3\n4\n5\n\n\n\n\n\\(S_k\\)\n\\(1\\)\n\\(3/2\\)\n\\(7/4\\)\n\\(15/8\\)\n\\(31/16\\)\n\n\n\n\nThese partial sums suggest \\(S_k=2-\\dfrac{1}{2^{k-1}}\\).\nWe will justify this formula using a finite geometric sum.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#example-finding-an-area",
-    "href": "classes/17/slides.html#example-finding-an-area",
-    "title": "Improper Integrals",
-    "section": "Example: Finding an Area",
-    "text": "Example: Finding an Area\nDetermine whether the area between the graph of \\(f(x)=\\frac{1}{x}\\) and the \\(x\\)-axis over the interval \\([1,\\infty)\\) is finite or infinite.\n\\(A=\\int_1^\\infty \\frac{1}{x}\\,dx\\)\n\\(=\\lim_{t\\to\\infty}\\int_1^t\\frac{1}{x}\\,dx\\)\n\n\\(=\\lim_{t\\to\\infty}\\ln|x|\\bigg|_1^t\\)\n\\(=\\lim_{t\\to\\infty}(\\ln|t|-\\ln 1)=\\infty\\)\nSince the improper integral diverges to \\(\\infty\\), the area of the region is infinite."
+    "objectID": "classes/19/slides.html#the-sequence-of-partial-sums",
+    "href": "classes/19/slides.html#the-sequence-of-partial-sums",
+    "title": "Series",
+    "section": "The Sequence of Partial Sums",
+    "text": "The Sequence of Partial Sums\n\n\nPartial sums of one plus one-half plus one-quarter and so on\n\nPoints at k from one to ten show the finite sums S_k increasing from one toward the dashed line at two. The points represent partial sums, rather than individual terms.     2026-10-21T11:10:54.868138 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             2             4             6             8             10    k                 0             1             2       S k                                S = 2        \n\nEach point represents a finite sum. The partial sums approach \\(2\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#example-finding-a-volume",
-    "href": "classes/17/slides.html#example-finding-a-volume",
-    "title": "Improper Integrals",
-    "section": "Example: Finding a Volume",
-    "text": "Example: Finding a Volume\nFind the volume of the solid obtained by revolving the region bounded by the graph of \\(f(x)=\\frac{1}{x}\\) and the \\(x\\)-axis over \\([1,\\infty)\\) about the \\(x\\)-axis.\nUsing the disk method,\n\\(V=\\pi\\int_1^{\\infty}\\frac{1}{x^2}\\,dx\\)\n\n\\(=\\pi\\lim_{t\\to\\infty}\\int_1^t\\frac{1}{x^2}\\,dx\\)\n\\(=\\pi\\lim_{t\\to\\infty}\\left(-\\frac{1}{x}\\right)\\bigg|_1^t\\)\n\\(=\\pi\\lim_{t\\to\\infty}\\left(-\\frac{1}{t}+1\\right)=\\pi\\)"
+    "objectID": "classes/19/slides.html#the-sum-of-an-infinite-series",
+    "href": "classes/19/slides.html#the-sum-of-an-infinite-series",
+    "title": "Series",
+    "section": "The Sum of an Infinite Series",
+    "text": "The Sum of an Infinite Series\nIf \\(S_k\\to S\\) for a finite number \\(S\\), the series converges and\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=S.\\)\nIf the partial sums do not converge, the series diverges.\n\nFor the oil example, \\(S_k\\to2\\) means that the accumulated oil approaches \\(2000\\) gallons.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#gabriels-horn",
-    "href": "classes/17/slides.html#gabriels-horn",
-    "title": "Improper Integrals",
-    "section": "Gabriel’s Horn",
-    "text": "Gabriel’s Horn\nArea of the region between the \\(x\\)-axis and the graph of \\(f(x)=1/x\\) over \\([1,\\infty)\\) is infinite.\nSurface area of the solid generated by revolving this region about the \\(x\\)-axis is infinite. This is a more challenging integral to evaluate, but we will show it is infinite in a later example.\nVolume of the solid generated by revolving this region about the \\(x\\)-axis is finite.\nThe solid generated is known as Gabriel’s Horn. an object with infinite cross-sectional area but finite volume."
+    "objectID": "classes/19/slides.html#terms-and-partial-sums",
+    "href": "classes/19/slides.html#terms-and-partial-sums",
+    "title": "Series",
+    "section": "Terms and Partial Sums",
+    "text": "Terms and Partial Sums\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\):\n\n\n\n\nFormula\nLimit\n\n\n\n\nTerms\n\\(a_n=(1/2)^{n-1}\\)\n\\(a_n\\to0\\)\n\n\nPartial sums\n\\(S_k=2-2^{1-k}\\)\n\\(S_k\\to2\\)\n\n\n\nThe sum of the series is the limit of partial sums.\nThe individual terms and the running totals answer different questions.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#recall-lhôpitals-rule",
-    "href": "classes/17/slides.html#recall-lhôpitals-rule",
-    "title": "Improper Integrals",
-    "section": "Recall L’Hôpital’s Rule",
-    "text": "Recall L’Hôpital’s Rule\nSuppose \\(\\lim_{x\\to a}f(x)=0\\) and \\(\\lim_{x\\to a}g(x)=0\\), or both limits are \\(\\pm\\infty\\).\nIf \\(\\lim_{x\\to a}\\frac{f'(x)}{g'(x)}\\) exists (or is \\(\\pm\\infty\\)), then\n\\[\n\\lim_{x\\to a}\\frac{f(x)}{g(x)}\n=\\lim_{x\\to a}\\frac{f'(x)}{g'(x)}\n\\]"
+    "objectID": "classes/19/slides.html#divergence-by-growing-partial-sums",
+    "href": "classes/19/slides.html#divergence-by-growing-partial-sums",
+    "title": "Series",
+    "section": "Divergence by Growing Partial Sums",
+    "text": "Divergence by Growing Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{n+1}\\) converges.\n\nFor \\(n\\ge1\\), \\(\\dfrac{n}{n+1}\\ge\\dfrac{1}{2}\\).\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\frac{n}{n+1}\\ge\\frac{k}{2}.\\)\nThe partial sums grow without bound, so the series diverges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#some-indeterminate-forms",
-    "href": "classes/17/slides.html#some-indeterminate-forms",
-    "title": "Improper Integrals",
-    "section": "Some Indeterminate Forms",
-    "text": "Some Indeterminate Forms\n\n\\(\\frac{0}{0}\\)\n\\(\\frac{\\infty}{\\infty}\\)\n\\(\\infty\\cdot 0\\)"
+    "objectID": "classes/19/slides.html#divergence-by-oscillating-partial-sums",
+    "href": "classes/19/slides.html#divergence-by-oscillating-partial-sums",
+    "title": "Series",
+    "section": "Divergence by Oscillating Partial Sums",
+    "text": "Divergence by Oscillating Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n\\) converges.\n\n\\(S_1=-1,\\quad S_2=0,\\quad S_3=-1,\\quad S_4=0.\\)\nIn general, \\(S_k=-1\\) when \\(k\\) is odd and \\(S_k=0\\) when \\(k\\) is even.\nThe partial sums are bounded but do not approach one number.\nThe series diverges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#example-doubly-infinite-intervals",
-    "href": "classes/17/slides.html#example-doubly-infinite-intervals",
-    "title": "Improper Integrals",
-    "section": "Example: Doubly Infinite Intervals",
-    "text": "Example: Doubly Infinite Intervals\nEvaluate \\[\\int_{-\\infty}^{\\infty}xe^x\\,dx\\]\nStart by splitting up the integral:\n\\[\\int_{-\\infty}^{\\infty}xe^x\\,dx=\\int_{-\\infty}^{0}xe^x\\,dx+\\int_{0}^{\\infty}xe^x\\,dx\\]\nIf either integral diverges, then the who integral diverges"
+    "objectID": "classes/19/slides.html#a-convergent-example",
+    "href": "classes/19/slides.html#a-convergent-example",
+    "title": "Series",
+    "section": "A Convergent Example",
+    "text": "A Convergent Example\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\).\n\\(S_1=\\frac{1}{2},\\quad S_2=\\frac{2}{3},\\quad S_3=\\frac{3}{4},\\quad S_4=\\frac{4}{5}.\\)\n\nThe pattern suggests \\(S_k=\\dfrac{k}{k+1}\\).\nWe will prove this by cancellation when we discuss telescoping series.\nSince \\(k/(k+1)\\to1\\), the series converges to \\(1\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#example-first-integral",
-    "href": "classes/17/slides.html#example-first-integral",
-    "title": "Improper Integrals",
-    "section": "Example: First Integral",
-    "text": "Example: First Integral\n\\(\\int_{-\\infty}^{0}xe^x\\,dx=\\lim_{t\\to-\\infty}\\int_t^0xe^x\\,dx\\)\n\\(=\\lim_{t\\to-\\infty}(xe^x-e^x)\\bigg|_t^0\\)\n\\(=\\lim_{t\\to-\\infty}(-1-te^t+e^t)\\)\n\\(=-1\\)\nThe first improper integral converges."
+    "objectID": "classes/19/slides.html#changing-the-starting-index",
+    "href": "classes/19/slides.html#changing-the-starting-index",
+    "title": "Series",
+    "section": "Changing the Starting Index",
+    "text": "Changing the Starting Index\nThese expressions list the same terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}=\\sum_{m=0}^{\\infty}\\left(\\frac{1}{2}\\right)^m.\\)\nHere \\(m=n-1\\).\n\nChanging the index requires changing both the starting value and the formula.\nWriting out the first few terms is a useful check.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#example-second-integral",
-    "href": "classes/17/slides.html#example-second-integral",
-    "title": "Improper Integrals",
-    "section": "Example: Second Integral",
-    "text": "Example: Second Integral\n\\(\\int_0^{\\infty}xe^x\\,dx=\\lim_{t\\to\\infty}\\int_0^t xe^x\\,dx\\)\n\n\\(=\\lim_{t\\to\\infty}(xe^x-e^x)\\bigg|_0^t\\)\n\\(=\\lim_{t\\to\\infty}(te^t-e^t+1)=\\infty\\)\nThus, \\(\\int_0^{\\infty}xe^x\\,dx\\) diverges.\nTherefore, \\(\\int_{-\\infty}^{\\infty}xe^x\\,dx\\) diverges."
+    "objectID": "classes/19/slides.html#the-harmonic-series",
+    "href": "classes/19/slides.html#the-harmonic-series",
+    "title": "Series",
+    "section": "The Harmonic Series",
+    "text": "The Harmonic Series\nThe harmonic series is\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}=1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+\\cdots\\)\nIts terms approach \\(0\\). Does the series converge?\n\nThe harmonic series diverges. We will show that its partial sums are unbounded.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#integrating-a-discontinuous-integrand",
-    "href": "classes/17/slides.html#integrating-a-discontinuous-integrand",
-    "title": "Improper Integrals",
-    "section": "Integrating a Discontinuous Integrand",
-    "text": "Integrating a Discontinuous Integrand\nIf \\(f(x)\\) is continuous over \\([a,b)\\), then\n\\[\\int_a^b f(x)\\,dx=\\lim_{t\\to b^-}\\int_a^t f(x)\\,dx\\]\nIf \\(f(x)\\) is continuous over \\((a,b]\\), then\n\\[\\int_a^b f(x)\\,dx=\\lim_{t\\to a^+}\\int_t^b f(x)\\,dx\\]"
+    "objectID": "classes/19/slides.html#grouping-the-harmonic-terms",
+    "href": "classes/19/slides.html#grouping-the-harmonic-terms",
+    "title": "Series",
+    "section": "Grouping the Harmonic Terms",
+    "text": "Grouping the Harmonic Terms\nGroup consecutive terms in blocks of \\(1,2,4,8,\\ldots\\) terms after the initial \\(1\\).\n\\(\\displaystyle \\frac{1}{3}+\\frac{1}{4}\\ge2\\left(\\frac{1}{4}\\right)=\\frac{1}{2}.\\)\n\\(\\displaystyle \\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}\\ge4\\left(\\frac{1}{8}\\right)=\\frac{1}{2}.\\)\n\nThe block from \\(n=2^{j-1}+1\\) through \\(n=2^j\\) has \\(2^{j-1}\\) terms.\nEach term is at least \\(1/2^j\\), so each block adds at least \\(1/2\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#discontinuity-inside-the-interval",
-    "href": "classes/17/slides.html#discontinuity-inside-the-interval",
-    "title": "Improper Integrals",
-    "section": "Discontinuity Inside the Interval",
-    "text": "Discontinuity Inside the Interval\nIf \\(f(x)\\) is continuous over \\([a,b]\\) except at a point \\(c\\) in \\((a,b)\\), then\n\\[\\int_a^b f(x)\\,dx=\\int_a^c f(x)\\,dx+\\int_c^b f(x)\\,dx\\]\nprovided both integrals converge.\nIf either of these integrals diverges, then \\(\\int_a^b f(x)\\,dx\\) diverges."
+    "objectID": "classes/19/slides.html#why-the-harmonic-series-diverges",
+    "href": "classes/19/slides.html#why-the-harmonic-series-diverges",
+    "title": "Series",
+    "section": "Why the Harmonic Series Diverges",
+    "text": "Why the Harmonic Series Diverges\nThe partial sum through \\(2^j\\) terms satisfies\n\\(\\displaystyle S_{2^j}\\ge1+\\frac{j}{2}.\\)\nThe right side grows without bound as \\(j\\to\\infty\\).\n\nAll terms are positive, so all later partial sums are at least as large.\nTherefore, \\(S_k\\to\\infty\\) and the harmonic series diverges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#example-1-discontinuities",
-    "href": "classes/17/slides.html#example-1-discontinuities",
-    "title": "Improper Integrals",
-    "section": "Example 1: Discontinuities",
-    "text": "Example 1: Discontinuities\nEvaluate \\(\\int_0^4 \\frac{1}{\\sqrt{4-x}}\\,dx\\).\nThe function \\(f(x)=\\frac{1}{\\sqrt{4-x}}\\) is continuous over \\([0,4)\\) and discontinuous at \\(4\\).\n\n\\(\\int_0^4 \\frac{1}{\\sqrt{4-x}}\\,dx=\\lim_{t\\to4^-}\\int_0^t\\frac{1}{\\sqrt{4-x}}\\,dx=4\\)"
+    "objectID": "classes/19/slides.html#terms-approaching-zero-are-not-enough",
+    "href": "classes/19/slides.html#terms-approaching-zero-are-not-enough",
+    "title": "Series",
+    "section": "Terms Approaching Zero Are Not Enough",
+    "text": "Terms Approaching Zero Are Not Enough\nCompare these two series:\n\n\n\n\n\n\n\n\nSeries\nLimit of its terms\nBehavior of partial sums\n\n\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}\\)\n\\(0\\)\nGrow without bound\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\)\n\\(0\\)\nApproach \\(1\\)\n\n\n\nKnowing that the terms approach \\(0\\) does not determine whether their series converges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#example-2-discontinuities",
-    "href": "classes/17/slides.html#example-2-discontinuities",
-    "title": "Improper Integrals",
-    "section": "Example 2: Discontinuities",
-    "text": "Example 2: Discontinuities\nEvaluate \\(\\int_0^2 x\\ln x\\,dx\\) where \\(f(x)=x\\ln x\\) is continuous over \\((0,2]\\) and is discontinuous at zero,\n\\[\\int_0^2 x\\ln x\\,dx=\\lim_{t\\to0^+}\\int_t^2 x\\ln x\\,dx\\]\n\nUsing integration by parts to get \\(2\\ln2-1\\)."
+    "objectID": "classes/19/slides.html#algebraic-properties-of-series",
+    "href": "classes/19/slides.html#algebraic-properties-of-series",
+    "title": "Series",
+    "section": "Algebraic Properties of Series",
+    "text": "Algebraic Properties of Series\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=A\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n=B\\) both converge.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n+b_n)=A+B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n-b_n)=A-B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ca_n=cA\\)\nThese rules follow by taking limits of finite partial sums.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#theorem-3.7-a-comparison-theorem",
-    "href": "classes/17/slides.html#theorem-3.7-a-comparison-theorem",
-    "title": "Improper Integrals",
-    "section": "Theorem 3.7: A Comparison Theorem",
-    "text": "Theorem 3.7: A Comparison Theorem\nLet \\(f(x)\\) and \\(g(x)\\) be continuous over \\([a,\\infty)\\).\nAssume that \\(0\\le f(x)\\le g(x)\\) for \\(x\\ge a\\).\n\nIf \\(\\int_a^{\\infty} f(x)\\,dx=\\infty\\), then \\(\\int_a^{\\infty} g(x)\\,dx=\\infty\\).\nIf \\(\\int_a^{\\infty} g(x)\\,dx=L\\), where \\(L\\) is a real number, then \\(\\int_a^{\\infty} f(x)\\,dx=M\\) for some real number \\(M\\le L\\)."
+    "objectID": "classes/19/slides.html#geometric-series",
+    "href": "classes/19/slides.html#geometric-series",
+    "title": "Series",
+    "section": "Geometric Series",
+    "text": "Geometric Series\nA geometric series has the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=a+ar+ar^2+ar^3+\\cdots\\)\nHere \\(a\\) is the first term and \\(r\\) is the common ratio.\nFor example,\n\\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\cdots\\) has \\(a=1\\) and \\(r=\\frac{1}{2}\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#example-comparison-theorem",
-    "href": "classes/17/slides.html#example-comparison-theorem",
-    "title": "Improper Integrals",
-    "section": "Example: Comparison Theorem",
-    "text": "Example: Comparison Theorem\nUse a comparison to show \\(\\int_1^{\\infty}2\\pi \\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\,dx\\) diverges.\n\nSince \\(\\sqrt{1+\\frac{1}{x^4}}\\geq 1\\) for \\(x\\geq 1\\),\n\\(2\\pi\\int_1^\\infty\\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\geq 2\\pi\\int_1^\\infty\\frac{1}{x}\\,dx\\)\nWe have already shown that \\(\\int_1^\\infty\\frac{1}{x}\\,dx\\) diverges."
+    "objectID": "classes/19/slides.html#a-finite-geometric-sum",
+    "href": "classes/19/slides.html#a-finite-geometric-sum",
+    "title": "Series",
+    "section": "A Finite Geometric Sum",
+    "text": "A Finite Geometric Sum\nStart with \\(S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\).\nMultiply by \\(r\\):\n\\(rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\)\n\nSubtract to obtain \\((1-r)S_k=a-ar^k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#table-of-antiderivatives-trig",
-    "href": "classes/17/slides.html#table-of-antiderivatives-trig",
-    "title": "Improper Integrals",
-    "section": "Table of Antiderivatives: Trig",
-    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\sec^2 x\\,dx &= \\tan x+C \\\\\n\\int \\csc^2 x\\,dx &= -\\cot x+C \\\\\n\\int \\sec x\\tan x\\,dx &= \\sec x+C \\\\\n\\int \\csc x\\cot x\\,dx &= -\\csc x+C\n\\end{aligned}\n\\]"
+    "objectID": "classes/19/slides.html#the-geometric-series-formula",
+    "href": "classes/19/slides.html#the-geometric-series-formula",
+    "title": "Series",
+    "section": "The Geometric Series Formula",
+    "text": "The Geometric Series Formula\nIf \\(|r|&lt;1\\), then \\(r^k\\to0\\).\nTaking the limit of the finite sum gives\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=\\frac{a}{1-r},\\qquad |r|&lt;1.\\)\n\nFor \\(a\\ne0\\), the geometric series diverges when \\(|r|\\ge1\\).\nThe case \\(a=0\\) gives the zero series.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#table-of-antiderivatives-trig-1",
-    "href": "classes/17/slides.html#table-of-antiderivatives-trig-1",
-    "title": "Improper Integrals",
-    "section": "Table of Antiderivatives: Trig",
-    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\tan x\\,dx &= \\ln|\\sec x|+C \\\\\n\\int \\cot x\\,dx &= \\ln|\\sin x|+C \\\\\n\\int \\sec x\\,dx &= \\ln|\\sec x+\\tan x|+C \\\\\n\\int \\csc x\\,dx &= -\\ln|\\csc x+\\cot x|+C\n\\end{aligned}\n\\]"
+    "objectID": "classes/19/slides.html#what-happens-when-rge1",
+    "href": "classes/19/slides.html#what-happens-when-rge1",
+    "title": "Series",
+    "section": "What Happens When \\(|r|\\ge1\\)?",
+    "text": "What Happens When \\(|r|\\ge1\\)?\nAssume \\(a\\ne0\\).\n\nIf \\(r=1\\), then \\(S_k=ka\\), which is unbounded.\nIf \\(r=-1\\), the partial sums alternate between \\(a\\) and \\(0\\).\nIf \\(|r|&gt;1\\), the formula \\(S_k=a(1-r^k)/(1-r)\\) gives unbounded partial sums.\n\nAlways check \\(|r|&lt;1\\) before using \\(a/(1-r)\\) as an infinite sum.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#table-of-antiderivatives-other",
-    "href": "classes/17/slides.html#table-of-antiderivatives-other",
-    "title": "Improper Integrals",
-    "section": "Table of Antiderivatives: Other",
-    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\log_a x\\,dx &= x\\log_a x-\\frac{x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\frac{1}{a^2+x^2}\\,dx &= \\frac{1}{a}\\tan^{-1}\\left(\\frac{x}{a}\\right)+C\n\\end{aligned}\n\\]"
+    "objectID": "classes/19/slides.html#a-negative-geometric-ratio",
+    "href": "classes/19/slides.html#a-negative-geometric-ratio",
+    "title": "Series",
+    "section": "A Negative Geometric Ratio",
+    "text": "A Negative Geometric Ratio\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-3)^{n+1}}{4^{n-1}}\\) converges. If so, find its sum.\n\n\\(\\displaystyle \\frac{(-3)^{n+1}}{4^{n-1}}=9\\left(-\\frac{3}{4}\\right)^{n-1}.\\)\nThe first term is \\(a=9\\) and the ratio is \\(r=-3/4\\).\nSince \\(|r|&lt;1\\), the sum is \\(\\displaystyle \\frac{9}{1-(-3/4)}=\\frac{36}{7}\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/17/slides.html#table-of-antiderivatives-other-1",
-    "href": "classes/17/slides.html#table-of-antiderivatives-other-1",
-    "title": "Improper Integrals",
-    "section": "Table of Antiderivatives: Other",
-    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int \\frac{1}{\\sqrt{a^2-x^2}}\\,dx &= \\sin^{-1}\\left(\\frac{x}{a}\\right)+C \\\\\n\\int \\frac{1}{x\\sqrt{x^2-a^2}}\\,dx &= \\frac{1}{a}\\sec^{-1}\\left|\\frac{x}{a}\\right|+C \\\\\n\\int \\frac{1}{x^2-a^2}\\,dx &= \\frac{1}{2a}\\ln\\left|\\frac{x-a}{x+a}\\right|+C\n\\end{aligned}\n\\]"
+    "objectID": "classes/19/slides.html#a-shifted-geometric-series",
+    "href": "classes/19/slides.html#a-shifted-geometric-series",
+    "title": "Series",
+    "section": "A Shifted Geometric Series",
+    "text": "A Shifted Geometric Series\nEvaluate \\(\\displaystyle \\sum_{n=0}^{\\infty}\\left(\\frac{2}{3}\\right)^{n+2}\\).\n\nThe first few terms are \\(\\displaystyle \\frac{4}{9}+\\frac{8}{27}+\\frac{16}{81}+\\cdots\\)\nTherefore, \\(a=4/9\\) and \\(r=2/3\\).\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\left(\\frac{2}{3}\\right)^{n+2}=\\frac{4/9}{1-2/3}=\\frac{4}{3}.\\)",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/16/worksheet.html",
-    "href": "classes/16/worksheet.html",
+    "objectID": "classes/19/slides.html#a-divergent-geometric-series",
+    "href": "classes/19/slides.html#a-divergent-geometric-series",
+    "title": "Series",
+    "section": "A Divergent Geometric Series",
+    "text": "A Divergent Geometric Series\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}e^{2n}\\) converges.\n\n\\(\\displaystyle e^{2n}=e^2(e^2)^{n-1}.\\)\nThe first term is \\(a=e^2\\) and the ratio is \\(r=e^2&gt;1\\).\nThe series diverges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#repeating-decimals-as-series",
+    "href": "classes/19/slides.html#repeating-decimals-as-series",
+    "title": "Series",
+    "section": "Repeating Decimals as Series",
+    "text": "Repeating Decimals as Series\nWrite \\(3.\\overline{26}=3.262626\\ldots\\) as a fraction.\n\n\\(\\displaystyle 3.\\overline{26}=3+\\frac{26}{100}+\\frac{26}{100^2}+\\frac{26}{100^3}+\\cdots\\)\nThe repeating part is geometric with \\(a=26/100\\) and \\(r=1/100\\).\n\\(\\displaystyle 3.\\overline{26}=3+\\frac{26/100}{1-1/100}=3+\\frac{26}{99}=\\frac{323}{99}.\\)",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#combining-convergent-series",
+    "href": "classes/19/slides.html#combining-convergent-series",
+    "title": "Series",
+    "section": "Combining Convergent Series",
+    "text": "Combining Convergent Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\frac{3}{n(n+1)}+\\left(\\frac{1}{2}\\right)^{n-2}\\right]\\).\n\nBoth component series converge. Since \\((1/2)^{n-2}=2(1/2)^{n-1}\\),\n\\(\\displaystyle 3\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}+2\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\)\n\\(=3(1)+2(2)=7.\\)",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#the-koch-snowflake",
+    "href": "classes/19/slides.html#the-koch-snowflake",
+    "title": "Series",
+    "section": "The Koch Snowflake",
+    "text": "The Koch Snowflake\nStart with an equilateral triangle of side length \\(1\\).\nAt each step, replace the middle third of every segment with two sides of an outward equilateral triangle.\n\n\nFirst four stages of the Koch snowflake\n\nFour figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.     2026-10-21T11:10:55.024373 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                     F 0             F 1             F 2             F 3                   \n\nWhat happens to the perimeter and the enclosed area?",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#koch-snowflake-perimeter",
+    "href": "classes/19/slides.html#koch-snowflake-perimeter",
+    "title": "Series",
+    "section": "Koch Snowflake: Perimeter",
+    "text": "Koch Snowflake: Perimeter\nAt stage \\(n\\), let \\(N_n\\) count the sides and \\(l_n\\) be the length of each side.\nEach step creates four segments, each one-third as long:\n\\(N_n=3\\cdot4^n,\\qquad l_n=\\left(\\frac{1}{3}\\right)^n.\\)\n\n\\(\\displaystyle L_n=N_nl_n=3\\left(\\frac{4}{3}\\right)^n.\\)\nSince \\(4/3&gt;1\\), the perimeter grows without bound.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#koch-snowflake-added-area",
+    "href": "classes/19/slides.html#koch-snowflake-added-area",
+    "title": "Series",
+    "section": "Koch Snowflake: Added Area",
+    "text": "Koch Snowflake: Added Area\nLet \\(A_0=\\sqrt{3}/4\\) be the area of the original triangle.\nAt step \\(n\\ge1\\):\n\nThere are \\(3\\cdot4^{n-1}\\) new triangles.\nEach has side length \\(1/3^n\\) and area \\(A_0/9^n\\).\n\n\nThe added area is \\(\\displaystyle \\Delta A_n=\\frac{A_0}{3}\\left(\\frac{4}{9}\\right)^{n-1}\\).\nThe added areas form a geometric sequence with ratio \\(4/9\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#koch-snowflake-total-area",
+    "href": "classes/19/slides.html#koch-snowflake-total-area",
+    "title": "Series",
+    "section": "Koch Snowflake: Total Area",
+    "text": "Koch Snowflake: Total Area\nThe limiting area is the original area plus all the added areas:\n\\(\\displaystyle A=A_0+\\frac{A_0}{3}\\sum_{n=1}^{\\infty}\\left(\\frac{4}{9}\\right)^{n-1}.\\)\n\n\\(\\displaystyle A=A_0+\\frac{A_0/3}{1-4/9}=\\frac{8}{5}A_0=\\frac{2\\sqrt{3}}{5}.\\)\nThe Koch snowflake has finite area and infinite perimeter.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#telescoping-series",
+    "href": "classes/19/slides.html#telescoping-series",
+    "title": "Series",
+    "section": "Telescoping Series",
+    "text": "Telescoping Series\nA telescoping series has partial sums in which most terms cancel.\nFor example, partial fractions give\n\\(\\displaystyle \\frac{1}{n(n+1)}=\\frac{1}{n}-\\frac{1}{n+1}.\\)\n\nThus \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{n}-\\frac{1}{n+1}\\right)\\).\nFirst cancel in a finite partial sum, then take its limit.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#seeing-the-cancellation",
+    "href": "classes/19/slides.html#seeing-the-cancellation",
+    "title": "Series",
+    "section": "Seeing the Cancellation",
+    "text": "Seeing the Cancellation\n\\(\\displaystyle S_3=\\left(1-\\frac{1}{2}\\right)+\\left(\\frac{1}{2}-\\frac{1}{3}\\right)+\\left(\\frac{1}{3}-\\frac{1}{4}\\right)=1-\\frac{1}{4}.\\)\n\nFor \\(k\\) terms, the same cancellation leaves\n\\(\\displaystyle S_k=1-\\frac{1}{k+1}=\\frac{k}{k+1}.\\)\nTherefore, \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\lim_{k\\to\\infty}S_k=1\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#a-general-telescoping-sum",
+    "href": "classes/19/slides.html#a-general-telescoping-sum",
+    "title": "Series",
+    "section": "A General Telescoping Sum",
+    "text": "A General Telescoping Sum\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\),\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1}).\\)\n\n\\(S_k=b_1-b_{k+1}.\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#a-trigonometric-telescoping-series",
+    "href": "classes/19/slides.html#a-trigonometric-telescoping-series",
+    "title": "Series",
+    "section": "A Trigonometric Telescoping Series",
+    "text": "A Trigonometric Telescoping Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]\\).\n\n\\(\\displaystyle S_k=\\cos(1)-\\cos\\left(\\frac{1}{k+1}\\right).\\)\nSince \\(1/(k+1)\\to0\\) and cosine is continuous,\n\\(\\displaystyle \\lim_{k\\to\\infty}S_k=\\cos(1)-\\cos(0)=\\cos(1)-1.\\)",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#telescoping-does-not-guarantee-convergence",
+    "href": "classes/19/slides.html#telescoping-does-not-guarantee-convergence",
+    "title": "Series",
+    "section": "Telescoping Does Not Guarantee Convergence",
+    "text": "Telescoping Does Not Guarantee Convergence\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\sqrt{n}-\\sqrt{n+1}\\right)\\) converges.\n\nThe \\(k\\)th partial sum is \\(S_k=1-\\sqrt{k+1}\\).\nAs \\(k\\to\\infty\\), \\(S_k\\to-\\infty\\).\nThe series telescopes, but it diverges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/18/worksheet.html",
+    "href": "classes/18/worksheet.html",
     "title": "TBD",
     "section": "",
     "text": "Hint"
   },
   {
-    "objectID": "classes/16/worksheet.html#null",
-    "href": "classes/16/worksheet.html#null",
+    "objectID": "classes/18/worksheet.html#null",
+    "href": "classes/18/worksheet.html#null",
     "title": "TBD",
     "section": "",
     "text": "Hint"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#sequences",
+    "href": "classes/18/sequences-5-1.html#sequences",
+    "title": "Sequences",
+    "section": "Sequences",
+    "text": "Sequences\nClass Session Goals:\n\nFind a formula for the general term of a sequence.\nCalculate the limit of a sequence, if it exists.\nDetermine whether a sequence converges or diverges.\nUse boundedness and monotonicity to establish convergence."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#what-is-a-sequence",
+    "href": "classes/18/sequences-5-1.html#what-is-a-sequence",
+    "title": "Sequences",
+    "section": "What is a Sequence?",
+    "text": "What is a Sequence?\nAn infinite sequence is an ordered list of numbers:\n\\(a_1,a_2,a_3,\\ldots,a_n,\\ldots\\)\nEach number \\(a_n\\) is a term. The integer \\(n\\) is the index.\nWe write \\(\\{a_n\\}_{n=1}^{\\infty}\\), or simply \\(\\{a_n\\}\\).\nFor example, \\(\\{2^n\\}_{n=1}^{\\infty}=\\{2,4,8,16,\\ldots\\}\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#two-ways-to-define-a-sequence",
+    "href": "classes/18/sequences-5-1.html#two-ways-to-define-a-sequence",
+    "title": "Sequences",
+    "section": "Two Ways to Define a Sequence",
+    "text": "Two Ways to Define a Sequence\nAn explicit formula gives a term directly from its index:\n\\(a_n=2^n,\\quad n\\ge 1.\\)\nA recurrence relation gives a term using earlier terms:\n\\(b_1=2,\\quad b_n=ba_{n-1},\\quad n\\ge 2.\\)\nHere \\(\\{a_n\\}=\\{b_n\\}\\) since each term is the same."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#arithmetic-sequences",
+    "href": "classes/18/sequences-5-1.html#arithmetic-sequences",
+    "title": "Sequences",
+    "section": "Arithmetic Sequences",
+    "text": "Arithmetic Sequences\nAn arithmetic sequence has a constant difference between consecutive terms.\n\\(3,7,11,15,19,\\ldots\\)\n\n\\(a_1=3,\\quad a_n=a_{n-1}+4,\\quad n\\ge 2.\\)\n\\(a_n=3+4(n-1)=4n-1.\\)\nIn general, \\(a_n=a_1+(n-1)d\\), where \\(d\\) is the common difference."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#geometric-sequences",
+    "href": "classes/18/sequences-5-1.html#geometric-sequences",
+    "title": "Sequences",
+    "section": "Geometric Sequences",
+    "text": "Geometric Sequences\nA geometric sequence has a constant ratio between consecutive nonzero terms.\n\\(2,-\\frac{2}{3},\\frac{2}{9},-\\frac{2}{27},\\frac{2}{81},\\ldots\\)\n\n\\(a_1=2,\\quad a_n=-\\frac{1}{3}a_{n-1},\\quad n\\ge 2.\\)\n\\(a_n=2\\left(-\\frac{1}{3}\\right)^{n-1}.\\)\nIn general, \\(a_n=a_1r^{n-1}\\), where \\(r\\) is the common ratio."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#finding-an-explicit-formula",
+    "href": "classes/18/sequences-5-1.html#finding-an-explicit-formula",
+    "title": "Sequences",
+    "section": "Finding an Explicit Formula",
+    "text": "Finding an Explicit Formula\nFind a formula for the \\(n\\)th term, starting with \\(n=1\\):\n\\(-\\frac{1}{2},\\frac{2}{3},-\\frac{3}{4},\\frac{4}{5},-\\frac{5}{6},\\ldots\\)\n\nThe numerators are \\(n\\), and the denominators are \\(n+1\\).\nThe factor \\((-1)^n\\) gives a negative sign when \\(n\\) is odd.\n\\(a_n=\\dfrac{(-1)^n n}{n+1}.\\)"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#another-explicit-formula",
+    "href": "classes/18/sequences-5-1.html#another-explicit-formula",
+    "title": "Sequences",
+    "section": "Another Explicit Formula",
+    "text": "Another Explicit Formula\nFind a formula for the \\(n\\)th term, starting with \\(n=1\\):\n\\(\\frac{3}{4},\\frac{9}{7},\\frac{27}{10},\\frac{81}{13},\\frac{243}{16},\\ldots\\)\n\nThe numerators form a geometric sequence: \\(3^n\\).\nThe denominators form an arithmetic sequence: \\(4+3(n-1)=3n+1\\).\n\\(a_n=\\dfrac{3^n}{3n+1}.\\)"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#from-a-recurrence-to-a-formula",
+    "href": "classes/18/sequences-5-1.html#from-a-recurrence-to-a-formula",
+    "title": "Sequences",
+    "section": "From a Recurrence to a Formula",
+    "text": "From a Recurrence to a Formula\nSuppose \\(a_1=\\frac{1}{2}\\) and \\(a_n=a_{n-1}+\\left(\\frac{1}{2}\\right)^n\\) for \\(n\\ge 2\\).\nWrite the first four terms and look for a formula.\n\n\\(a_1=\\frac{1}{2},\\quad a_2=\\frac{3}{4},\\quad a_3=\\frac{7}{8},\\quad a_4=\\frac{15}{16}.\\)\n\\(a_n=\\dfrac{2^n-1}{2^n}=1-\\dfrac{1}{2^n}.\\)\nSubstitution verifies the initial value and recurrence."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#graphing-a-sequence",
+    "href": "classes/18/sequences-5-1.html#graphing-a-sequence",
+    "title": "Sequences",
+    "section": "Graphing a Sequence",
+    "text": "Graphing a Sequence\nA sequence is a function defined at integer indices.\nIts graph consists of the points \\((n,a_n)\\).\nFor \\(a_n=1-\\dfrac{1}{2^n}\\):\n\n\n\n\\(n\\)\n1\n2\n3\n4\n5\n\n\n\n\n\\(a_n\\)\n.5\n.75\n.875\n.9375\n.96875\n\n\n\nWhat happens to \\(a_n\\) as \\(n\\) increases?"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#approaching-a-limit",
+    "href": "classes/18/sequences-5-1.html#approaching-a-limit",
+    "title": "Sequences",
+    "section": "Approaching a Limit",
+    "text": "Approaching a Limit\n\n\nA sequence approaching one\n\nDiscrete points for a_n = 1 minus 1 divided by 2 to the n, for n from 1 to 10. The points increase toward the dashed horizontal line at one.     2026-10-20T19:33:58.151918 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             2             4             6             8             10    n                 0.0             0.5             1.0       a n                                L = 1        \n\nThe terms approach \\(1\\) as \\(n\\) increases.\n\\(\\displaystyle \\lim_{n\\to\\infty}\\left(1-\\frac{1}{2^n}\\right)=1.\\)"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#convergence-and-divergence",
+    "href": "classes/18/sequences-5-1.html#convergence-and-divergence",
+    "title": "Sequences",
+    "section": "Convergence and Divergence",
+    "text": "Convergence and Divergence\nA sequence converges if its terms approach a finite number \\(L\\) as \\(n\\) increases.\nWe write \\(\\displaystyle \\lim_{n\\to\\infty}a_n=L\\), or \\(a_n\\to L\\).\nA sequence that does not converge diverges.\n\nChanging or removing finitely many initial terms does not change convergence or the limit."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#different-long-term-behaviors",
+    "href": "classes/18/sequences-5-1.html#different-long-term-behaviors",
+    "title": "Sequences",
+    "section": "Different Long-Term Behaviors",
+    "text": "Different Long-Term Behaviors\nDetermine whether each sequence converges or diverges.\n\n\n\nSequence\nFirst few terms\n\n\n\n\n\\(a_n=1+3n\\)\n\\(4,7,10,13,\\ldots\\)\n\n\n\\(b_n=1-(1/2)^n\\)\n\\(1/2,3/4,7/8,15/16,\\ldots\\)\n\n\n\\(c_n=(-1)^n\\)\n\\(-1,1,-1,1,\\ldots\\)\n\n\n\\(d_n=(-1)^n/n\\)\n\\(-1,1/2,-1/3,1/4,\\ldots\\)\n\n\n\n\nIn order: diverges to \\(\\infty\\); converges to \\(1\\); diverges; converges to \\(0\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#alternating-does-not-mean-divergent",
+    "href": "classes/18/sequences-5-1.html#alternating-does-not-mean-divergent",
+    "title": "Sequences",
+    "section": "Alternating Does Not Mean Divergent",
+    "text": "Alternating Does Not Mean Divergent\n\n\nTwo alternating sequences\n\nThe left graph alternates between minus one and one. The right graph alternates above and below zero with magnitudes one divided by n, shrinking toward zero.     2026-10-20T19:33:58.227760 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             4             8             12    n                 −1             0             1       a n                                     a n n = ( − 1 )                    0             4             8             12    n                                                                a n n n = ( − 1 ) /             \n\n\\((-1)^n\\) keeps alternating between \\(-1\\) and \\(1\\).\n\\(\\dfrac{(-1)^n}{n}\\) alternates, but its distance from \\(0\\) approaches \\(0\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#a-precise-definition-of-limit",
+    "href": "classes/18/sequences-5-1.html#a-precise-definition-of-limit",
+    "title": "Sequences",
+    "section": "A Precise Definition of Limit",
+    "text": "A Precise Definition of Limit\nA sequence \\(\\{a_n\\}\\) converges to \\(L\\) if, for every \\(\\epsilon&gt;0\\), there is an integer \\(N\\) such that\n\\(|a_n-L|&lt;\\epsilon\\quad\\text{for all }n\\ge N.\\)\nEvery sufficiently late term lies within \\(\\epsilon\\) of \\(L\\).\n\nFor \\(a_n=1/n\\) and \\(L=0\\), choose any integer \\(N&gt;1/\\epsilon\\).\nThen \\(n\\ge N\\) implies \\(|1/n-0|\\le 1/N&lt;\\epsilon\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#divergence-to-infinity",
+    "href": "classes/18/sequences-5-1.html#divergence-to-infinity",
+    "title": "Sequences",
+    "section": "Divergence to Infinity",
+    "text": "Divergence to Infinity\nIf the terms grow without bound, we write\n\\(\\displaystyle \\lim_{n\\to\\infty}(1+3n)=\\infty.\\)\nIf the terms decrease without bound, we write\n\\(\\displaystyle \\lim_{n\\to\\infty}(-5n+2)=-\\infty.\\)"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#using-limits-of-functions",
+    "href": "classes/18/sequences-5-1.html#using-limits-of-functions",
+    "title": "Sequences",
+    "section": "Using Limits of Functions",
+    "text": "Using Limits of Functions\nSuppose \\(a_n=f(n)\\) for \\(n\\ge 1\\).\nIf \\(\\displaystyle \\lim_{x\\to\\infty}f(x)=L\\) for a finite number \\(L\\), then\n\\(\\displaystyle \\lim_{n\\to\\infty}a_n=L.\\)\n\nFor example, \\(\\displaystyle \\lim_{x\\to\\infty}\\frac{1}{x}=0\\) gives \\(\\displaystyle \\lim_{n\\to\\infty}\\frac{1}{n}=0\\).\n\n\nThe reverse implication need not hold: \\(\\sin(2\\pi n)=0\\), while \\(\\sin(2\\pi x)\\) has no limit as \\(x\\to\\infty\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#algebraic-limit-laws",
+    "href": "classes/18/sequences-5-1.html#algebraic-limit-laws",
+    "title": "Sequences",
+    "section": "Algebraic Limit Laws",
+    "text": "Algebraic Limit Laws\nSuppose \\(a_n\\to A\\) and \\(b_n\\to B\\), with \\(A\\) and \\(B\\) finite.\n\n\\(\\displaystyle \\lim_{n\\to\\infty}c=c\\)\n\\(\\displaystyle \\lim_{n\\to\\infty}(ca_n)=cA\\)\n\\(\\displaystyle \\lim_{n\\to\\infty}(a_n\\pm b_n)=A\\pm B\\)\n\\(\\displaystyle \\lim_{n\\to\\infty}(a_nb_n)=AB\\)\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{a_n}{b_n}=\\frac{A}{B}\\), provided \\(B\\ne0\\) and \\(b_n\\ne0\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#a-first-limit-example",
+    "href": "classes/18/sequences-5-1.html#a-first-limit-example",
+    "title": "Sequences",
+    "section": "A First Limit Example",
+    "text": "A First Limit Example\nDetermine whether \\(\\left\\{5-\\dfrac{3}{n^2}\\right\\}\\) converges. If so, find its limit.\n\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{1}{n^2}=0.\\)\nTherefore,\n\\(\\displaystyle \\lim_{n\\to\\infty}\\left(5-\\frac{3}{n^2}\\right)=5-3(0)=5.\\)\nThe sequence converges to \\(5\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#a-rational-sequence",
+    "href": "classes/18/sequences-5-1.html#a-rational-sequence",
+    "title": "Sequences",
+    "section": "A Rational Sequence",
+    "text": "A Rational Sequence\nDetermine whether \\(\\left\\{\\dfrac{3n^4-7n^2+5}{6-4n^4}\\right\\}\\) converges.\n\nDivide the numerator and denominator by \\(n^4\\):\n\\(\\displaystyle \\frac{3n^4-7n^2+5}{6-4n^4}=\\frac{3-7/n^2+5/n^4}{6/n^4-4}.\\)\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{3n^4-7n^2+5}{6-4n^4}=\\frac{3-0+0}{0-4}=-\\frac{3}{4}.\\)"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#exponential-growth-and-polynomial-growth",
+    "href": "classes/18/sequences-5-1.html#exponential-growth-and-polynomial-growth",
+    "title": "Sequences",
+    "section": "Exponential Growth and Polynomial Growth",
+    "text": "Exponential Growth and Polynomial Growth\nDetermine whether \\(\\left\\{\\dfrac{2^n}{n^2}\\right\\}\\) converges.\n\nUse \\(f(x)=2^x/x^2\\) and apply L’Hôpital’s rule twice:\n\\(\\displaystyle \\lim_{x\\to\\infty}\\frac{2^x}{x^2}=\\lim_{x\\to\\infty}\\frac{2^x\\ln 2}{2x}\\)\n\\(\\displaystyle =\\lim_{x\\to\\infty}\\frac{2^x(\\ln 2)^2}{2}=\\infty.\\)\nThe sequence diverges to \\(\\infty\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#an-indeterminate-power",
+    "href": "classes/18/sequences-5-1.html#an-indeterminate-power",
+    "title": "Sequences",
+    "section": "An Indeterminate Power",
+    "text": "An Indeterminate Power\nFind \\(\\displaystyle \\lim_{n\\to\\infty}\\left(1+\\frac{4}{n}\\right)^n\\).\nThe base approaches \\(1\\), but the exponent grows without bound.\n\nFor \\(f(x)=(1+4/x)^x\\), take the logarithm:\n\\(\\displaystyle \\ln f(x)=x\\ln\\left(1+\\frac{4}{x}\\right)=\\frac{\\ln(1+4/x)}{1/x}.\\)\nThis is a \\(0/0\\) form as \\(x\\to\\infty\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#evaluating-the-logarithmic-limit",
+    "href": "classes/18/sequences-5-1.html#evaluating-the-logarithmic-limit",
+    "title": "Sequences",
+    "section": "Evaluating the Logarithmic Limit",
+    "text": "Evaluating the Logarithmic Limit\nApply L’Hôpital’s rule:\n\\(\\displaystyle \\lim_{x\\to\\infty}\\ln f(x)=\\lim_{x\\to\\infty}\\frac{(-4/x^2)/(1+4/x)}{-1/x^2}\\)\n\\(\\displaystyle =\\lim_{x\\to\\infty}\\frac{4}{1+4/x}=4.\\)\n\nSince the exponential function is continuous,\n\\(\\displaystyle \\lim_{n\\to\\infty}\\left(1+\\frac{4}{n}\\right)^n=e^4.\\)"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#continuous-functions-and-sequences",
+    "href": "classes/18/sequences-5-1.html#continuous-functions-and-sequences",
+    "title": "Sequences",
+    "section": "Continuous Functions and Sequences",
+    "text": "Continuous Functions and Sequences\nIf \\(a_n\\to L\\) and \\(f\\) is continuous at \\(L\\), then \\(f(a_n)\\to f(L)\\).\nFor example, find \\(\\displaystyle \\lim_{n\\to\\infty}\\cos\\left(\\frac{3}{n^2}\\right)\\).\n\n\\(\\displaystyle \\frac{3}{n^2}\\to0.\\)\nSince cosine is continuous at \\(0\\),\n\\(\\displaystyle \\lim_{n\\to\\infty}\\cos\\left(\\frac{3}{n^2}\\right)=\\cos(0)=1.\\)"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#squeeze-theorem-for-sequences",
+    "href": "classes/18/sequences-5-1.html#squeeze-theorem-for-sequences",
+    "title": "Sequences",
+    "section": "Squeeze Theorem for Sequences",
+    "text": "Squeeze Theorem for Sequences\nSuppose \\(a_n\\le b_n\\le c_n\\) for all sufficiently large \\(n\\).\nIf \\(a_n\\to L\\) and \\(c_n\\to L\\), then \\(b_n\\to L\\).\n\nA useful special case is\n\\(-|b_n|\\le b_n\\le |b_n|.\\)\nIf \\(|b_n|\\to0\\), then \\(b_n\\to0\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#squeeze-theorem-example",
+    "href": "classes/18/sequences-5-1.html#squeeze-theorem-example",
+    "title": "Sequences",
+    "section": "Squeeze Theorem Example",
+    "text": "Squeeze Theorem Example\nFind \\(\\displaystyle \\lim_{n\\to\\infty}\\frac{\\cos n}{n^2}\\).\n\nSince \\(-1\\le\\cos n\\le1\\),\n\\(\\displaystyle -\\frac{1}{n^2}\\le\\frac{\\cos n}{n^2}\\le\\frac{1}{n^2}.\\)\nBoth bounding sequences approach \\(0\\).\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{\\cos n}{n^2}=0.\\)"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#a-negative-geometric-ratio",
+    "href": "classes/18/sequences-5-1.html#a-negative-geometric-ratio",
+    "title": "Sequences",
+    "section": "A Negative Geometric Ratio",
+    "text": "A Negative Geometric Ratio\nFind \\(\\displaystyle \\lim_{n\\to\\infty}\\left(-\\frac{1}{2}\\right)^n\\).\n\n\\(\\displaystyle -\\frac{1}{2^n}\\le\\left(-\\frac{1}{2}\\right)^n\\le\\frac{1}{2^n}.\\)\nSince both bounds approach \\(0\\), the Squeeze Theorem gives\n\\(\\displaystyle \\lim_{n\\to\\infty}\\left(-\\frac{1}{2}\\right)^n=0.\\)"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#limits-of-geometric-sequences",
+    "href": "classes/18/sequences-5-1.html#limits-of-geometric-sequences",
+    "title": "Sequences",
+    "section": "Limits of Geometric Sequences",
+    "text": "Limits of Geometric Sequences\nFor \\(\\{r^n\\}_{n=1}^{\\infty}\\):\n\n\n\nValue of \\(r\\)\nBehavior as \\(n\\to\\infty\\)\n\n\n\n\n\\(|r|&lt;1\\)\nConverges to \\(0\\)\n\n\n\\(r=1\\)\nConverges to \\(1\\)\n\n\n\\(r&gt;1\\)\nDiverges to \\(\\infty\\)\n\n\n\\(r=-1\\)\nDiverges by oscillation\n\n\n\\(r&lt;-1\\)\nDiverges; magnitude grows and signs alternate"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#bounded-sequences",
+    "href": "classes/18/sequences-5-1.html#bounded-sequences",
+    "title": "Sequences",
+    "section": "Bounded Sequences",
+    "text": "Bounded Sequences\nA sequence is bounded above if some number \\(M\\) satisfies \\(a_n\\le M\\) for every \\(n\\).\nIt is bounded below if some number \\(m\\) satisfies \\(m\\le a_n\\) for every \\(n\\).\nIt is bounded if it is bounded above and below:\n\\(m\\le a_n\\le M\\quad\\text{for every }n.\\)\n\nFor example, \\(0&lt;1/n\\le1\\), so \\(\\{1/n\\}\\) is bounded."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#does-bounded-mean-convergent",
+    "href": "classes/18/sequences-5-1.html#does-bounded-mean-convergent",
+    "title": "Sequences",
+    "section": "Does Bounded Mean Convergent?",
+    "text": "Does Bounded Mean Convergent?\nEvery convergent sequence is bounded.\nDoes every bounded sequence converge?\n\nConsider \\(a_n=(-1)^n\\).\n\\(-1\\le a_n\\le1\\), but the terms do not approach one value.\nBoundedness alone does not guarantee convergence."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#monotone-sequences",
+    "href": "classes/18/sequences-5-1.html#monotone-sequences",
+    "title": "Sequences",
+    "section": "Monotone Sequences",
+    "text": "Monotone Sequences\nA sequence is increasing if \\(a_n\\le a_{n+1}\\) for every \\(n\\).\nIt is decreasing if \\(a_n\\ge a_{n+1}\\) for every \\(n\\).\nA sequence that is increasing or decreasing is monotone.\n\nIf the inequalities hold for all \\(n\\ge n_0\\), the sequence is eventually monotone.\nEquality is allowed in these definitions."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#checking-monotonicity",
+    "href": "classes/18/sequences-5-1.html#checking-monotonicity",
+    "title": "Sequences",
+    "section": "Checking Monotonicity",
+    "text": "Checking Monotonicity\nTo compare consecutive terms, examine \\(a_{n+1}-a_n\\).\n\nIf \\(a_{n+1}-a_n\\ge0\\), the sequence is increasing.\nIf \\(a_{n+1}-a_n\\le0\\), the sequence is decreasing.\n\nFor a positive sequence, comparing \\(a_{n+1}/a_n\\) with \\(1\\) is also useful.\n\nFor \\(a_n=1/n\\), \\(\\displaystyle a_{n+1}-a_n=-\\frac{1}{n(n+1)}&lt;0\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#monotone-convergence-theorem",
+    "href": "classes/18/sequences-5-1.html#monotone-convergence-theorem",
+    "title": "Sequences",
+    "section": "Monotone Convergence Theorem",
+    "text": "Monotone Convergence Theorem\nA bounded sequence that is eventually monotone converges.\nIn particular:\n\nAn increasing sequence that is bounded above converges.\nA decreasing sequence that is bounded below converges.\n\n\nThis establishes the existence of a limit. Finding its value may require another step."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#a-sequence-that-eventually-decreases",
+    "href": "classes/18/sequences-5-1.html#a-sequence-that-eventually-decreases",
+    "title": "Sequences",
+    "section": "A Sequence That Eventually Decreases",
+    "text": "A Sequence That Eventually Decreases\nUse the Monotone Convergence Theorem for \\(a_n=\\dfrac{4^n}{n!}\\).\nThe first few terms are \\(4,8,\\dfrac{32}{3},\\dfrac{32}{3},\\dfrac{128}{15},\\ldots\\)\n\n\\(\\displaystyle \\frac{a_{n+1}}{a_n}=\\frac{4}{n+1}\\le1\\quad\\text{when }n\\ge3.\\)\nThe sequence is decreasing for \\(n\\ge3\\) and bounded below by \\(0\\).\nTherefore, the sequence converges."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#finding-the-factorial-sequence-limit",
+    "href": "classes/18/sequences-5-1.html#finding-the-factorial-sequence-limit",
+    "title": "Sequences",
+    "section": "Finding the Factorial Sequence Limit",
+    "text": "Finding the Factorial Sequence Limit\nWe have established convergence. Let \\(a_n\\to L\\).\nOmitting the first term does not change the limit, so \\(a_{n+1}\\to L\\).\n\n\\(\\displaystyle a_{n+1}=\\frac{4}{n+1}a_n.\\)\nTaking limits gives \\(L=0\\cdot L=0\\).\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{4^n}{n!}=0.\\)"
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#a-recursive-sequence",
+    "href": "classes/18/sequences-5-1.html#a-recursive-sequence",
+    "title": "Sequences",
+    "section": "A Recursive Sequence",
+    "text": "A Recursive Sequence\nLet \\(a_1=2\\) and \\(\\displaystyle a_{n+1}=\\frac{a_n}{2}+\\frac{1}{2a_n}\\) for \\(n\\ge1\\).\nWrite the first four terms. What do they suggest?\n\n\\(\\displaystyle 2,\\frac{5}{4},\\frac{41}{40},\\frac{3281}{3280},\\ldots\\)\nThe terms appear to decrease toward \\(1\\).\nWe will establish a lower bound and prove monotonicity."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#recursive-sequence-a-lower-bound",
+    "href": "classes/18/sequences-5-1.html#recursive-sequence-a-lower-bound",
+    "title": "Sequences",
+    "section": "Recursive Sequence: A Lower Bound",
+    "text": "Recursive Sequence: A Lower Bound\nSince \\(a_1&gt;0\\), the recurrence gives \\(a_n&gt;0\\) for every \\(n\\).\nNow calculate\n\\(\\displaystyle a_{n+1}-1=\\frac{a_n^2+1-2a_n}{2a_n}=\\frac{(a_n-1)^2}{2a_n}\\ge0.\\)\n\nTherefore, \\(a_{n+1}\\ge1\\).\nTogether with \\(a_1=2\\), this gives \\(a_n\\ge1\\) for every \\(n\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#recursive-sequence-decreasing-terms",
+    "href": "classes/18/sequences-5-1.html#recursive-sequence-decreasing-terms",
+    "title": "Sequences",
+    "section": "Recursive Sequence: Decreasing Terms",
+    "text": "Recursive Sequence: Decreasing Terms\nUsing \\(a_n\\ge1\\),\n\\(\\displaystyle a_{n+1}-a_n=\\frac{a_n}{2}+\\frac{1}{2a_n}-a_n\\)\n\\(\\displaystyle =\\frac{1-a_n^2}{2a_n}\\le0.\\)\n\nThe sequence is decreasing and bounded below by \\(1\\).\nThe Monotone Convergence Theorem guarantees convergence."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#recursive-sequence-finding-the-limit",
+    "href": "classes/18/sequences-5-1.html#recursive-sequence-finding-the-limit",
+    "title": "Sequences",
+    "section": "Recursive Sequence: Finding the Limit",
+    "text": "Recursive Sequence: Finding the Limit\nLet \\(a_n\\to L\\). Since \\(a_n\\ge1\\), we have \\(L\\ge1\\).\nTaking limits in the recurrence gives\n\\(\\displaystyle L=\\frac{L}{2}+\\frac{1}{2L}.\\)\n\n\\(2L^2=L^2+1\\), so \\(L^2=1\\).\nSince \\(L\\ge1\\), the limit is \\(L=1\\)."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#strategy-for-sequence-limits",
+    "href": "classes/18/sequences-5-1.html#strategy-for-sequence-limits",
+    "title": "Sequences",
+    "section": "Strategy for Sequence Limits",
+    "text": "Strategy for Sequence Limits\n\nIdentify the formula or recurrence and the starting index.\nTry limit laws, a related function, or continuity.\nFor oscillating terms, look for bounds and use the Squeeze Theorem.\nFor geometric terms, check the ratio \\(r\\).\nFor a recurrence, establish convergence before solving for a possible limit."
+  },
+  {
+    "objectID": "classes/18/sequences-5-1.html#practice",
+    "href": "classes/18/sequences-5-1.html#practice",
+    "title": "Sequences",
+    "section": "Practice",
+    "text": "Practice\n\nFind a formula for \\(\\frac{2}{3},-\\frac{4}{5},\\frac{6}{7},-\\frac{8}{9},\\ldots\\), starting at \\(n=1\\).\nFind \\(\\displaystyle \\lim_{n\\to\\infty}\\frac{7n^2-3}{2n^2+5}\\).\nFind \\(\\displaystyle \\lim_{n\\to\\infty}\\frac{\\sin n}{n}\\).\nLet \\(a_1=3\\) and \\(a_{n+1}=(a_n+2)/2\\) for \\(n\\ge1\\). Show that the sequence converges and find its limit."
+  },
+  {
+    "objectID": "classes/17/worksheet.html",
+    "href": "classes/17/worksheet.html",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/17/worksheet.html#null",
+    "href": "classes/17/worksheet.html#null",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/17/catchup_slides.html#antiderivatives-for-trigonometric-functions",
+    "href": "classes/17/catchup_slides.html#antiderivatives-for-trigonometric-functions",
+    "title": "Lingering Calculation",
+    "section": "Antiderivatives for Trigonometric Functions",
+    "text": "Antiderivatives for Trigonometric Functions\n\\(\\int \\sin x\\,dx=-\\cos x+C\\)\n\\(\\int \\cos x\\,dx=\\sin x+C\\)\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\tan x\\,dx=\\ln|\\sec x|+C\\)\n\\(\\int \\sec x\\,dx=\\ln|\\sec x+\\tan x|+C\\)"
+  },
+  {
+    "objectID": "classes/17/catchup_slides.html#integrals-with-secant-and-tangent",
+    "href": "classes/17/catchup_slides.html#integrals-with-secant-and-tangent",
+    "title": "Lingering Calculation",
+    "section": "Integrals with Secant and Tangent",
+    "text": "Integrals with Secant and Tangent\nUseful identities: \\(\\sec^2 x=1+\\tan^2 x\\)\n\\(\\tan^2 x=\\sec^2 x-1\\)\nFor \\(\\int \\tan^k x\\sec^j x\\,dx\\):\n\nIf \\(j\\) is even and \\(j\\ge 2\\), save \\(\\sec^2 x\\,dx\\) and use \\(u=\\tan x\\).\nIf \\(k\\) is odd and \\(j\\ge 1\\), save \\(\\sec x\\tan x\\,dx\\) and use \\(u=\\sec x\\)."
+  },
+  {
+    "objectID": "classes/17/catchup_slides.html#outlier-example",
+    "href": "classes/17/catchup_slides.html#outlier-example",
+    "title": "Lingering Calculation",
+    "section": "Outlier Example",
+    "text": "Outlier Example\nEvaluate \\(\\int \\sec^3\\theta\\,d\\theta\\).\n\nUse integration by parts.\nLet \\(u=\\sec\\theta\\) and \\(dv=\\sec^2\\theta\\,d\\theta\\).\nThen \\(du=\\sec\\theta\\tan\\theta\\,d\\theta\\) and \\(v=\\tan\\theta\\)."
+  },
+  {
+    "objectID": "classes/17/catchup_slides.html#applying-integration-by-parts",
+    "href": "classes/17/catchup_slides.html#applying-integration-by-parts",
+    "title": "Lingering Calculation",
+    "section": "Applying integration by parts,",
+    "text": "Applying integration by parts,\n\\[\n\\begin{aligned}\n\\int\\sec^3\\theta\\,d\\theta\n&=\\sec\\theta\\tan\\theta-\\int\\sec\\theta\\tan^2\\theta\\,d\\theta\\\\\n&=\\sec\\theta\\tan\\theta-\\int\\sec\\theta(\\sec^2\\theta-1)\\,d\\theta\\\\\n&=\\sec\\theta\\tan\\theta-\\int\\sec^3\\theta\\,d\\theta+\\int\\sec\\theta\\,d\\theta.\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "classes/17/catchup_slides.html#new-integration-formula",
+    "href": "classes/17/catchup_slides.html#new-integration-formula",
+    "title": "Lingering Calculation",
+    "section": "New Integration Formula",
+    "text": "New Integration Formula\n\\[\n\\int\\sec^3\\theta\\,d\\theta\n=\\frac12\\sec\\theta\\tan\\theta\n+\\frac12\\ln|\\sec\\theta+\\tan\\theta|+C\n\\]"
+  },
+  {
+    "objectID": "classes/17/catchup_slides.html#example-3",
+    "href": "classes/17/catchup_slides.html#example-3",
+    "title": "Lingering Calculation",
+    "section": "Example 3",
+    "text": "Example 3\nFind the length of the curve \\(y=x^2\\) over \\([0,\\frac{1}{2}]\\).\n\nSince \\(\\frac{dy}{dx}=2x\\),\n\\(L=\\int_0^{1/2}\\sqrt{1+(2x)^2}\\,dx\\)\n\\(=\\int_0^{1/2}\\sqrt{1+4x^2}\\,dx\\)\nUse \\(x=\\frac{1}{2}\\tan\\theta\\).\n\\(L=\\frac{1}{2}\\int_0^{\\pi/4}\\sec^3\\theta\\,d\\theta\\)\n\\(=\\frac{1}{4}\\left(\\sqrt{2}+\\ln(\\sqrt{2}+1)\\right)\\)"
+  },
+  {
+    "objectID": "classes/16/slides.html#numerical-integration",
+    "href": "classes/16/slides.html#numerical-integration",
+    "title": "Numerical Integration",
+    "section": "Numerical Integration",
+    "text": "Numerical Integration\n\nLeft and right Riemann sum approximations\nThe trapezoidal rule\nSimpson’s rule\nError bounds for numerical integration",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#where-do-functions-come-from",
+    "href": "classes/16/slides.html#where-do-functions-come-from",
+    "title": "Numerical Integration",
+    "section": "Where do functions come from?",
+    "text": "Where do functions come from?\n\nTheory: \\(e^{ax}\\) is a solution to the differential equation \\(\\frac{dy}{dx}=ay\\).\nMeasurement: read the acceration data from a chip 1000 times a second.\n\nBoth are useful, and we need to be able to do calculus on both.",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#rocketry-data",
+    "href": "classes/16/slides.html#rocketry-data",
+    "title": "Numerical Integration",
+    "section": "Rocketry Data",
+    "text": "Rocketry Data\n\n\n\n\\(t\\) (s)\n.01\n.02\n.03\n.04\n.05\n\n\n\n\n\\(a(t)\\) (\\(\\mathrm{m/s^2}\\))\n0.00\n0.00\n0.00\n0.68\n3.54\n\n\n\n\n\n\n\\(t\\) (s)\n.06\n.07\n.08\n.09\n.10\n\n\n\n\n\\(a(t)\\) (\\(\\mathrm{m/s^2}\\))\n8.62\n13.69\n18.77\n23.84\n28.92\n\n\n\nAssume \\(v(0)=x(0)=0\\).",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#rocketry-acceleration-data",
+    "href": "classes/16/slides.html#rocketry-acceleration-data",
+    "title": "Numerical Integration",
+    "section": "Rocketry: Acceleration Data",
+    "text": "Rocketry: Acceleration Data",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#notation-for-numerical-integration",
+    "href": "classes/16/slides.html#notation-for-numerical-integration",
+    "title": "Numerical Integration",
+    "section": "Notation for numerical integration",
+    "text": "Notation for numerical integration\nDivide \\([a,b]\\) into \\(n\\) subintervals of equal width:\n\\(\\Delta x=\\dfrac{b-a}{n}\\)\nThe partition points are\n\\(x_i=a+i\\Delta x,\\quad i=0,1,\\ldots,n.\\)\nFor the acceleration example, the interval is \\([0,.1]\\), \\(n=10\\), and \\(\\Delta t=.01\\) second.",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#left-endpoint-rule",
+    "href": "classes/16/slides.html#left-endpoint-rule",
+    "title": "Numerical Integration",
+    "section": "Left endpoint rule",
+    "text": "Left endpoint rule\nThe Left Endpoint Rule approximates the integral using the function value at the left endpoint of each subinterval.\n\\(L_n=\\Delta x[f(x_0)+f(x_1)+\\cdots+f(x_{n-1})]\\)\n\nFor the rocketry data, using \\(a(0)=0\\):\n\\(L_{10}=.01[a(0)+a(.01)+\\cdots+a(.09)]\\)\n\\(L_{10}=.01[0+0+0+0+.68+3.54\\)\n\\(\\qquad\\qquad +8.62+13.69+18.77+23.84]\\)\n\\(L_{10}=.6914\\ \\mathrm{m/s}\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#rocketry-left-endpoint-rule",
+    "href": "classes/16/slides.html#rocketry-left-endpoint-rule",
+    "title": "Numerical Integration",
+    "section": "Rocketry: Left Endpoint Rule",
+    "text": "Rocketry: Left Endpoint Rule\n\n              0 10 20 30 0 .02 .04 .06 .08 .10 Time (seconds)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#right-endpoint-rule",
+    "href": "classes/16/slides.html#right-endpoint-rule",
+    "title": "Numerical Integration",
+    "section": "Right endpoint rule",
+    "text": "Right endpoint rule\nThe Right Endpoint Rule approximates the integral using the function value at the right endpoint of each subinterval.\n\n\\(R_n=\\Delta x[f(x_1)+f(x_2)+\\cdots+f(x_n)]\\)\nFor the rocketry data:\n\\(R_{10}=.01[a(.01)+a(.02)+\\cdots+a(.10)]\\)\n\\(R_{10}=.01[0+0+0+.68+3.54+8.62\\)\n\\(\\qquad\\qquad +13.69+18.77+23.84+28.92]\\)\n\\(R_{10}=.9806\\ \\mathrm{m/s}\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#rocketry-right-endpoint-rule",
+    "href": "classes/16/slides.html#rocketry-right-endpoint-rule",
+    "title": "Numerical Integration",
+    "section": "Rocketry: Right Endpoint Rule",
+    "text": "Rocketry: Right Endpoint Rule\n\n               0 10 20 30 0 .02 .04 .06 .08 .10 Time (seconds)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#error-analysis",
+    "href": "classes/16/slides.html#error-analysis",
+    "title": "Numerical Integration",
+    "section": "Error Analysis",
+    "text": "Error Analysis\nFor an increasing function:\n\nThe Left Endpoint Rule gives an underestimate.\nThe Right Endpoint Rule gives an overestimate.",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#the-trapezoidal-rule",
+    "href": "classes/16/slides.html#the-trapezoidal-rule",
+    "title": "Numerical Integration",
+    "section": "The Trapezoidal Rule",
+    "text": "The Trapezoidal Rule\nThe Trapezoidal Rule approximates the integral by using trapezoids instead of rectangles.\n\\(T_n=\\dfrac{\\Delta x}{2}[f(x_0)+2f(x_1)+\\cdots+2f(x_{n-1})+f(x_n)]\\)\n\nFor the rocketry data:\n\\(T_{10}=.8360\\ \\mathrm{m/s}\\)\nThus, the approximate velocity at \\(t=.1\\) second is\n\\(v(.1)\\approx .8360\\ \\mathrm{m/s}\\).",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#rocketry-trapezoidal-rule",
+    "href": "classes/16/slides.html#rocketry-trapezoidal-rule",
+    "title": "Numerical Integration",
+    "section": "Rocketry: Trapezoidal Rule",
+    "text": "Rocketry: Trapezoidal Rule",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#error-estimate-formulas",
+    "href": "classes/16/slides.html#error-estimate-formulas",
+    "title": "Numerical Integration",
+    "section": "Error Estimate Formulas",
+    "text": "Error Estimate Formulas\nLeft & Right Endpoint Rule Error Bound: Suppose \\(|f'(x)|\\leq K\\) for all \\(x\\in[a,b]\\).\n\\(\\displaystyle |E_R|=|E_L|\\leq \\frac{K(b-a)^2}{2n}\\)\nTrapezoidal Rule Error Bound: Suppose \\(|f''(x)|\\leq K\\) for all \\(x\\in[a,b]\\).\n\\(\\displaystyle |E_T|\\leq \\frac{K(b-a)^3}{12n^2}\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#error-bound-endpoint-rules",
+    "href": "classes/16/slides.html#error-bound-endpoint-rules",
+    "title": "Numerical Integration",
+    "section": "Error Bound: Endpoint Rules",
+    "text": "Error Bound: Endpoint Rules\nFor the acceleration data, \\(0\\leq t\\leq .10\\) and \\(n=10\\).\nEstimate the maximum first derivative using the data:\n\\(K\\approx \\max\\left|\\dfrac{\\Delta a}{\\Delta t}\\right|=\\dfrac{5.08}{.01}=508\\)\nAssuming \\(|a'(t)|\\leq 508\\), the Left Endpoint Rule error satisfies\n\\(\\displaystyle |E_R|=|E_L|\\leq \\frac{K_1(b-a)^2}{2n}\\leq \\frac{508(.10)^2}{2(10)}\\leq .254\\ \\mathrm{m/s}\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently",
+    "href": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently",
+    "title": "Numerical Integration",
+    "section": "What if We Measure 10 Times More Frequently?",
+    "text": "What if We Measure 10 Times More Frequently?\nKeep the same time interval \\([0,.10]\\) and derivative bound \\(K=508\\).\nIncreasing the sampling frequency by a factor of \\(10\\) gives:\n\n\\(n=100\\) instead of \\(n=10\\).\n\\(\\Delta t=.001\\) instead of \\(\\Delta t=.01\\).\n\nThe Left and Right Endpoint Rule error bounds are\n\\(\\displaystyle |E_L|,\\ |E_R|\\leq\\frac{K(b-a)^2}{2n}\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#substituting-n100",
+    "href": "classes/16/slides.html#substituting-n100",
+    "title": "Numerical Integration",
+    "section": "Substituting \\(n=100\\)",
+    "text": "Substituting \\(n=100\\)\n\\(\\displaystyle |E_L|,\\ |E_R|\\leq\\frac{508(.10)^2}{2(100)}\\leq .0254\\ \\mathrm{m/s}\\)\nCompare with the original error bound:\n\\(\\displaystyle \\frac{.254}{.0254}=10\\)\n10 times the samples 10 times the accuracy.",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#error-bound-trapezoidal-rule",
+    "href": "classes/16/slides.html#error-bound-trapezoidal-rule",
+    "title": "Numerical Integration",
+    "section": "Error Bound: Trapezoidal Rule",
+    "text": "Error Bound: Trapezoidal Rule\nAssuming acceleration is sufficiently smooth and approximately quadratic, estimate the second derivative using consecutive measurements:\n\\(\\displaystyle a''(t)\\approx\\frac{a(t+.01)-2a(t)+a(t-.01)}{(.01)^2}\\)\nFor example, using \\(t=.05\\),\n\\(\\displaystyle a''(.05)\\approx\\frac{8.62-2(3.54)+.68}{(.01)^2}=22{,}200\\)\nThe largest observed second difference gives \\(K\\approx22{,}200\\).",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#error-bound-trapezoidal-rule-calculation",
+    "href": "classes/16/slides.html#error-bound-trapezoidal-rule-calculation",
+    "title": "Numerical Integration",
+    "section": "Error Bound: Trapezoidal Rule Calculation",
+    "text": "Error Bound: Trapezoidal Rule Calculation\nAssuming \\(|a''(t)|\\leq22{,}200\\),\n\\(\\displaystyle |E_T|\\leq\\frac{K(b-a)^3}{12n^2}\\)\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(10)^2}\\)\n\\(\\displaystyle |E_T|\\leq .0185\\ \\mathrm{m/s}\\)\nOur approximation was \\(T_{10}=.8360\\ \\mathrm{m/s}\\).",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently-1",
+    "href": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently-1",
+    "title": "Numerical Integration",
+    "section": "What if We Measure 10 Times More Frequently?",
+    "text": "What if We Measure 10 Times More Frequently?\nKeep the same time interval \\([0,.10]\\) and derivative bound \\(K=22{,}200\\).\nIncreasing the sampling frequency by a factor of \\(10\\) gives:\n\n\\(n=100\\) instead of \\(n=10\\).\n\\(\\Delta t=.001\\) instead of \\(\\Delta t=.01\\).\n\nThe Trapezoidal Rule error bound is\n\\(\\displaystyle |E_T|\\leq\\frac{K(b-a)^3}{12n^2}\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#substituting-n100-1",
+    "href": "classes/16/slides.html#substituting-n100-1",
+    "title": "Numerical Integration",
+    "section": "Substituting \\(n=100\\)",
+    "text": "Substituting \\(n=100\\)\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(100)^2}\\leq .000185\\ \\mathrm{m/s}\\)\nCompare with the original estimate:\n\\(\\displaystyle \\frac{.0185}{.000185}=100\\)\n10 times the sample 100 times the accuracy.",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#faster-sampling-lsm303agr-accelerometer",
+    "href": "classes/16/slides.html#faster-sampling-lsm303agr-accelerometer",
+    "title": "Numerical Integration",
+    "section": "Faster Sampling: LSM303AGR Accelerometer",
+    "text": "Faster Sampling: LSM303AGR Accelerometer\nThe LSM303AGR is a consumer grade accerometer that can measure accelleration at 1,344 sample per second.\nFor the same \\(.10\\) second interval:\n\n\n\n\nOriginal\nLSM303AGR\n\n\n\n\nSampling rate\n100 Hz\n1,344 Hz\n\n\n\\(\\Delta t\\)\n.010 s\n.000744 s\n\n\nSubintervals\n10\n\\(\\approx 134\\)\n\n\n\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(134)^2}\\leq .000103\\ \\mathrm{m/s}\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#why-the-trapezoidal-rule-is-an-average",
+    "href": "classes/16/slides.html#why-the-trapezoidal-rule-is-an-average",
+    "title": "Numerical Integration",
+    "section": "Why the Trapezoidal Rule is an average",
+    "text": "Why the Trapezoidal Rule is an average\nOn \\([x_{i-1},x_i]\\), the area of the trapezoid is\n\\(\\dfrac{\\Delta x}{2}[f(x_{i-1})+f(x_i)].\\)\nAdding these trapezoidal areas gives\n\\(T_n=\\dfrac{L_n+R_n}{2}.\\)\nAveraging the left and right sums reduces the error.",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#falling-object-with-air-resistance",
+    "href": "classes/16/slides.html#falling-object-with-air-resistance",
+    "title": "Numerical Integration",
+    "section": "Falling Object with Air Resistance",
+    "text": "Falling Object with Air Resistance\nSuppose an object falls from rest under gravity with quadratic air resistance.\nNewton’s Second Law gives \\(m\\dfrac{dv}{dt}=mg-cv^2\\) where\n\n\\(v(t)\\) is the downward velocity.\n\\(mg\\) is the gravitational force.\n\\(cv^2\\) is the force of air resistance.\n\nFor our example, take \\(g=10\\) and \\(c/m=0.1\\), then \\(\\frac{dv}{dt}=10-0.1v^2\\) Assume \\(v(0)=0\\). We will find \\(v(1)\\).",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#from-a-differential-equation-to-an-integral",
+    "href": "classes/16/slides.html#from-a-differential-equation-to-an-integral",
+    "title": "Numerical Integration",
+    "section": "From a Differential Equation to an Integral",
+    "text": "From a Differential Equation to an Integral\nOur differential equation is \\(\\dfrac{dv}{dt}=10-0.1v^2.\\)\nIntegrating from \\(0\\) to \\(t\\),\n\\(\\displaystyle v(t)-v(0)=\\int_0^t(10-0.1v(s)^2)\\,ds\\)\nWe want to approximate \\(\\displaystyle v(1)=\\int_0^1(10-0.1v(s)^2)\\,ds\\)\nThe difficulty is that we do not know a formula for \\(v\\). We will use numerical integration to approximate it.",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#approximation-setup",
+    "href": "classes/16/slides.html#approximation-setup",
+    "title": "Numerical Integration",
+    "section": "Approximation setup",
+    "text": "Approximation setup\nDivide \\([0,1]\\) into \\(n\\) subintervals of width \\(\\Delta t=\\dfrac{1}{n}.\\)\nby FTC, \\(\\displaystyle v(t_{i+1})- v(t_i)=\\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\\,ds\\)\n\\(v_i \\approx v(t_i)\\) so \\(v_{i+1} \\approx v(t_{i+1})\\)\n\\(\\displaystyle v_{i+1}\\approx v_i+\\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\\,ds\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#using-the-trapezoidal-rule",
+    "href": "classes/16/slides.html#using-the-trapezoidal-rule",
+    "title": "Numerical Integration",
+    "section": "Using the Trapezoidal Rule",
+    "text": "Using the Trapezoidal Rule\n\\(\\displaystyle v_{i+1}\\approx v_i+\\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\\,ds\\)\nbecomes\n\\(\\displaystyle v_{i+1}=v_i+\\frac{\\Delta t}{2}[(10-0.1v_i^2)+(10-0.1v_{i+1}^2)]\\)\nSimplifying,\n\\(\\displaystyle v_{i+1}=v_i+10\\Delta t-\\frac{.1\\Delta t}{2}(v_i^2+v_{i+1}^2)\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#quadratic-drag-10-subintervals",
+    "href": "classes/16/slides.html#quadratic-drag-10-subintervals",
+    "title": "Numerical Integration",
+    "section": "Quadratic Drag: 10 Subintervals",
+    "text": "Quadratic Drag: 10 Subintervals\nFor \\(n=10\\), \\(\\Delta t=.1\\)\nOur formula becomes\n\\(\\displaystyle v_{i+1}=v_i+1-.005(v_i^2+v_{i+1}^2)\\)\nRearranging,\n\\(\\displaystyle .005v_{i+1}^2+v_{i+1}=v_i+1-.005v_i^2\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#calculating-v_1",
+    "href": "classes/16/slides.html#calculating-v_1",
+    "title": "Numerical Integration",
+    "section": "Calculating \\(v_1\\)",
+    "text": "Calculating \\(v_1\\)\nStarting with \\(v_0=0\\),\n\\(\\displaystyle .005v_1^2+v_1=1\\)\nUsing the quadratic formula and taking the positive root,\n\\(\\displaystyle v_1=\\frac{-1+\\sqrt{1.02}}{.01}\\)\n\\(\\displaystyle v_1\\approx .995049\\ \\mathrm{m/s}\\)\nRepeating this process gives the velocity at each time.",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#calculating-v_2",
+    "href": "classes/16/slides.html#calculating-v_2",
+    "title": "Numerical Integration",
+    "section": "Calculating \\(v_2\\)",
+    "text": "Calculating \\(v_2\\)\nStarting with \\(v_1 \\approx .995049\\),\n\\(\\displaystyle .005v_2^2+v_2=v_1+1-.005v_1^2\\)\nSubstituting \\(v_1\\),\n\\(\\displaystyle .005v_2^2+v_2=.995049+1-.005(.995049)^2=1.990099\\)\nUsing the quadratic formula and taking the positive root,\n\\(\\displaystyle v_2=\\frac{-1+\\sqrt{1+4(.005)(1.990099)}}{.01}\\approx 1.970681\\ \\mathrm{m/s}\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#quadratic-drag-numerical-results",
+    "href": "classes/16/slides.html#quadratic-drag-numerical-results",
+    "title": "Numerical Integration",
+    "section": "Quadratic Drag: Numerical Results",
+    "text": "Quadratic Drag: Numerical Results\nUsing \\(n=10\\) and \\(\\Delta t=.1\\):\n\n\n\n\n\n\\(t_i\\) (s)\n\\(v_i\\) (m/s)\n\n\n\n\n0.0\n0.000000\n\n\n0.1\n0.995049\n\n\n0.2\n1.970681\n\n\n0.3\n2.908953\n\n\n0.4\n3.794646\n\n\n0.5\n4.616107\n\n\n\n\n\n\n\n\\(t_i\\) (s)\n\\(v_i\\) (m/s)\n\n\n\n\n0.6\n5.365616\n\n\n0.7\n6.039301\n\n\n0.8\n6.636706\n\n\n0.9\n7.160139\n\n\n1.0\n7.613940",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#quadratic-drag-100-subintervals",
+    "href": "classes/16/slides.html#quadratic-drag-100-subintervals",
+    "title": "Numerical Integration",
+    "section": "Quadratic Drag: 100 Subintervals",
+    "text": "Quadratic Drag: 100 Subintervals\nNow increase the number of subintervals by a factor of \\(10\\).\n\n\n\n\nFirst calculation\nSecond calculation\n\n\n\n\nInterval\n\\([0,1]\\)\n\\([0,1]\\)\n\n\n\\(n\\)\n10\n100\n\n\n\\(\\Delta t\\)\n.1\n.01\n\n\n\nOur Trapezoidal Rule equation becomes\n\\(\\displaystyle v_{i+1}=v_i+.1-.0005(v_i^2+v_{i+1}^2)\\)\n\\(\\displaystyle \\boxed{v(1)\\approx7.615922\\ \\mathrm{m/s}}\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#quadratic-drag-exact-solution",
+    "href": "classes/16/slides.html#quadratic-drag-exact-solution",
+    "title": "Numerical Integration",
+    "section": "Quadratic Drag: Exact Solution",
+    "text": "Quadratic Drag: Exact Solution\nThe differential equation\n\\(\\displaystyle \\frac{dv}{dt}=10-0.1v^2\\)\nwith \\(v(0)=0\\) has the exact solution \\(v(t)=10\\tanh(t).\\)\nTherefore, \\(\\displaystyle v(1)=10\\tanh(1)\\approx7.615942\\ \\mathrm{m/s}\\)",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
+  },
+  {
+    "objectID": "classes/16/slides.html#compare",
+    "href": "classes/16/slides.html#compare",
+    "title": "Numerical Integration",
+    "section": "Compare",
+    "text": "Compare\nCompare our approximations:\n\n\n\nMethod\nVelocity (m/s)\n\n\n\n\nTrapezoidal, \\(n=10\\)\n7.613940\n\n\nTrapezoidal, \\(n=100\\)\n7.615922\n\n\nExact\n7.615942\n\n\n\nRule of Thumb for Trapazoidal Rule: Squaring the number of intervals doubles the number of decimal digits of accuracy.",
+    "crumbs": [
+      "Class Material",
+      "Numerical Integration"
+    ]
   },
   {
     "objectID": "classes/16/numerical_integration_accelerometer.html#the-problem-we-will-solve",
@@ -4160,431 +5083,1160 @@
     "text": "Hint"
   },
   {
-    "objectID": "classes/16/slides.html#numerical-integration",
-    "href": "classes/16/slides.html#numerical-integration",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#numerical-integration",
+    "href": "classes/16/slides-macmini.html#numerical-integration",
+    "title": "Improper Integrals",
     "section": "Numerical Integration",
-    "text": "Numerical Integration\n\nLeft and right Riemann sum approximations\nThe trapezoidal rule\nSimpson’s rule\nError bounds for numerical integration",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Numerical Integration\n\nLeft and right Riemann sum approximations\nThe trapezoidal rule\nSimpson’s rule\nError bounds for numerical integration"
   },
   {
-    "objectID": "classes/16/slides.html#where-do-functions-come-from",
-    "href": "classes/16/slides.html#where-do-functions-come-from",
-    "title": "Numerical Integration",
-    "section": "Where do functions come from?",
-    "text": "Where do functions come from?\n\nTheory: \\(e^{ax}\\) is a solution to the differential equation \\(\\frac{dy}{dx}=ay\\).\nMeasurement: read the acceration data from a chip 1000 times a second.\n\nBoth are useful, and we need to be able to do calculus on both.",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "objectID": "classes/16/slides-macmini.html#where-do-function-come-from",
+    "href": "classes/16/slides-macmini.html#where-do-function-come-from",
+    "title": "Improper Integrals",
+    "section": "Where do function come from?",
+    "text": "Where do function come from?\n\nTheory: \\(e^{ax}\\) is a solution to the differential equation \\(\\frac{dy}{dx}=ay\\).\nMeasurement: read the acceration data from a chip 1000 times a second.\n\nBoth are useful, but we need to be able to do calculus on both."
   },
   {
-    "objectID": "classes/16/slides.html#rocketry-data",
-    "href": "classes/16/slides.html#rocketry-data",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#rocketry-data",
+    "href": "classes/16/slides-macmini.html#rocketry-data",
+    "title": "Improper Integrals",
     "section": "Rocketry Data",
-    "text": "Rocketry Data\n\n\n\n\\(t\\) (s)\n.01\n.02\n.03\n.04\n.05\n\n\n\n\n\\(a(t)\\) (\\(\\mathrm{m/s^2}\\))\n0.00\n0.00\n0.00\n0.68\n3.54\n\n\n\n\n\n\n\\(t\\) (s)\n.06\n.07\n.08\n.09\n.10\n\n\n\n\n\\(a(t)\\) (\\(\\mathrm{m/s^2}\\))\n8.62\n13.69\n18.77\n23.84\n28.92\n\n\n\nAssume \\(v(0)=x(0)=0\\).",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Rocketry Data\n\n\n\n\\(t\\) (s)\n.01\n.02\n.03\n.04\n.05\n\n\n\n\n\\(a(t)\\) (\\(\\mathrm{m/s^2}\\))\n0.00\n0.00\n0.00\n0.68\n3.54\n\n\n\n\n\n\n\\(t\\) (s)\n.06\n.07\n.08\n.09\n.10\n\n\n\n\n\\(a(t)\\) (\\(\\mathrm{m/s^2}\\))\n8.62\n13.69\n18.77\n23.84\n28.92\n\n\n\nAssume \\(v(0)=x(0)=0\\)."
   },
   {
-    "objectID": "classes/16/slides.html#rocketry-acceleration-data",
-    "href": "classes/16/slides.html#rocketry-acceleration-data",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#rocketry-acceleration-data",
+    "href": "classes/16/slides-macmini.html#rocketry-acceleration-data",
+    "title": "Improper Integrals",
     "section": "Rocketry: Acceleration Data",
-    "text": "Rocketry: Acceleration Data",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Rocketry: Acceleration Data\n\n      0 10 20 30 0 .02 .04 .06 .08 .10 Time (seconds)"
   },
   {
-    "objectID": "classes/16/slides.html#notation-for-numerical-integration",
-    "href": "classes/16/slides.html#notation-for-numerical-integration",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#notation-for-numerical-integration",
+    "href": "classes/16/slides-macmini.html#notation-for-numerical-integration",
+    "title": "Improper Integrals",
     "section": "Notation for numerical integration",
-    "text": "Notation for numerical integration\nDivide \\([a,b]\\) into \\(n\\) subintervals of equal width:\n\\(\\Delta x=\\dfrac{b-a}{n}\\)\nThe partition points are\n\\(x_i=a+i\\Delta x,\\quad i=0,1,\\ldots,n.\\)\nFor the acceleration example, the interval is \\([0,.1]\\), \\(n=10\\), and \\(\\Delta t=.01\\) second.",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Notation for numerical integration\nDivide \\([a,b]\\) into \\(n\\) subintervals of equal width:\n\\(\\Delta x=\\dfrac{b-a}{n}\\)\nThe partition points are\n\\(x_i=a+i\\Delta x,\\quad i=0,1,\\ldots,n.\\)\nFor the acceleration example, the interval is \\([0,.1]\\), \\(n=10\\), and \\(\\Delta t=.01\\) second."
   },
   {
-    "objectID": "classes/16/slides.html#left-endpoint-rule",
-    "href": "classes/16/slides.html#left-endpoint-rule",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#left-endpoint-rule",
+    "href": "classes/16/slides-macmini.html#left-endpoint-rule",
+    "title": "Improper Integrals",
     "section": "Left endpoint rule",
-    "text": "Left endpoint rule\nThe Left Endpoint Rule approximates the integral using the function value at the left endpoint of each subinterval.\n\\(L_n=\\Delta x[f(x_0)+f(x_1)+\\cdots+f(x_{n-1})]\\)\n\nFor the rocketry data, using \\(a(0)=0\\):\n\\(L_{10}=.01[a(0)+a(.01)+\\cdots+a(.09)]\\)\n\\(L_{10}=.01[0+0+0+0+.68+3.54\\)\n\\(\\qquad\\qquad +8.62+13.69+18.77+23.84]\\)\n\\(L_{10}=.6914\\ \\mathrm{m/s}\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Left endpoint rule\nThe Left Endpoint Rule approximates the integral using the function value at the left endpoint of each subinterval.\n\\(L_n=\\Delta x[f(x_0)+f(x_1)+\\cdots+f(x_{n-1})]\\)\n\nFor the rocketry data, using \\(a(0)=0\\):\n\\(L_{10}=.01[a(0)+a(.01)+\\cdots+a(.09)]\\)\n\\(L_{10}=.01[0+0+0+0+.68+3.54\\)\n\\(\\qquad\\qquad +8.62+13.69+18.77+23.84]\\)\n\\(L_{10}=.6914\\ \\mathrm{m/s}\\)"
   },
   {
-    "objectID": "classes/16/slides.html#rocketry-left-endpoint-rule",
-    "href": "classes/16/slides.html#rocketry-left-endpoint-rule",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#rocketry-left-endpoint-rule",
+    "href": "classes/16/slides-macmini.html#rocketry-left-endpoint-rule",
+    "title": "Improper Integrals",
     "section": "Rocketry: Left Endpoint Rule",
-    "text": "Rocketry: Left Endpoint Rule\n\n              0 10 20 30 0 .02 .04 .06 .08 .10 Time (seconds)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Rocketry: Left Endpoint Rule\n\n              0 10 20 30 0 .02 .04 .06 .08 .10 Time (seconds)"
   },
   {
-    "objectID": "classes/16/slides.html#right-endpoint-rule",
-    "href": "classes/16/slides.html#right-endpoint-rule",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#right-endpoint-rule",
+    "href": "classes/16/slides-macmini.html#right-endpoint-rule",
+    "title": "Improper Integrals",
     "section": "Right endpoint rule",
-    "text": "Right endpoint rule\nThe Right Endpoint Rule approximates the integral using the function value at the right endpoint of each subinterval.\n\n\\(R_n=\\Delta x[f(x_1)+f(x_2)+\\cdots+f(x_n)]\\)\nFor the rocketry data:\n\\(R_{10}=.01[a(.01)+a(.02)+\\cdots+a(.10)]\\)\n\\(R_{10}=.01[0+0+0+.68+3.54+8.62\\)\n\\(\\qquad\\qquad +13.69+18.77+23.84+28.92]\\)\n\\(R_{10}=.9806\\ \\mathrm{m/s}\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Right endpoint rule\nThe Right Endpoint Rule approximates the integral using the function value at the right endpoint of each subinterval.\n\n\\(R_n=\\Delta x[f(x_1)+f(x_2)+\\cdots+f(x_n)]\\)\nFor the rocketry data:\n\\(R_{10}=.01[a(.01)+a(.02)+\\cdots+a(.10)]\\)\n\\(R_{10}=.01[0+0+0+.68+3.54+8.62\\)\n\\(\\qquad\\qquad +13.69+18.77+23.84+28.92]\\)\n\\(R_{10}=.9806\\ \\mathrm{m/s}\\)"
   },
   {
-    "objectID": "classes/16/slides.html#rocketry-right-endpoint-rule",
-    "href": "classes/16/slides.html#rocketry-right-endpoint-rule",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#rocketry-right-endpoint-rule",
+    "href": "classes/16/slides-macmini.html#rocketry-right-endpoint-rule",
+    "title": "Improper Integrals",
     "section": "Rocketry: Right Endpoint Rule",
-    "text": "Rocketry: Right Endpoint Rule\n\n               0 10 20 30 0 .02 .04 .06 .08 .10 Time (seconds)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Rocketry: Right Endpoint Rule\n\n               0 10 20 30 0 .02 .04 .06 .08 .10 Time (seconds)"
   },
   {
-    "objectID": "classes/16/slides.html#error-analysis",
-    "href": "classes/16/slides.html#error-analysis",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#error-analysis",
+    "href": "classes/16/slides-macmini.html#error-analysis",
+    "title": "Improper Integrals",
     "section": "Error Analysis",
-    "text": "Error Analysis\nFor an increasing function:\n\nThe Left Endpoint Rule gives an underestimate.\nThe Right Endpoint Rule gives an overestimate.",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Error Analysis\nFor an increasing function:\n\nThe Left Endpoint Rule gives an underestimate.\nThe Right Endpoint Rule gives an overestimate."
   },
   {
-    "objectID": "classes/16/slides.html#the-trapezoidal-rule",
-    "href": "classes/16/slides.html#the-trapezoidal-rule",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#the-trapezoidal-rule",
+    "href": "classes/16/slides-macmini.html#the-trapezoidal-rule",
+    "title": "Improper Integrals",
     "section": "The Trapezoidal Rule",
-    "text": "The Trapezoidal Rule\nThe Trapezoidal Rule approximates the integral by using trapezoids instead of rectangles.\n\\(T_n=\\dfrac{\\Delta x}{2}[f(x_0)+2f(x_1)+\\cdots+2f(x_{n-1})+f(x_n)]\\)\n\nFor the rocketry data:\n\\(T_{10}=.8360\\ \\mathrm{m/s}\\)\nThus, the approximate velocity at \\(t=.1\\) second is\n\\(v(.1)\\approx .8360\\ \\mathrm{m/s}\\).",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "The Trapezoidal Rule\nThe Trapezoidal Rule approximates the integral by using trapezoids instead of rectangles.\n\\(T_n=\\dfrac{\\Delta x}{2}[f(x_0)+2f(x_1)+\\cdots+2f(x_{n-1})+f(x_n)]\\)\n\nFor the rocketry data:\n\\(T_{10}=.8360\\ \\mathrm{m/s}\\)\nThus, the approximate velocity at \\(t=.1\\) second is\n\\(v(.1)\\approx .8360\\ \\mathrm{m/s}\\)."
   },
   {
-    "objectID": "classes/16/slides.html#rocketry-trapezoidal-rule",
-    "href": "classes/16/slides.html#rocketry-trapezoidal-rule",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#rocketry-trapezoidal-rule",
+    "href": "classes/16/slides-macmini.html#rocketry-trapezoidal-rule",
+    "title": "Improper Integrals",
     "section": "Rocketry: Trapezoidal Rule",
-    "text": "Rocketry: Trapezoidal Rule",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Rocketry: Trapezoidal Rule"
   },
   {
-    "objectID": "classes/16/slides.html#error-estimate-formulas",
-    "href": "classes/16/slides.html#error-estimate-formulas",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#error-estimate-formulas",
+    "href": "classes/16/slides-macmini.html#error-estimate-formulas",
+    "title": "Improper Integrals",
     "section": "Error Estimate Formulas",
-    "text": "Error Estimate Formulas\nLeft & Right Endpoint Rule Error Bound: Suppose \\(|f'(x)|\\leq K\\) for all \\(x\\in[a,b]\\).\n\\(\\displaystyle |E_R|=|E_L|\\leq \\frac{K(b-a)^2}{2n}\\)\nTrapezoidal Rule Error Bound: Suppose \\(|f''(x)|\\leq K\\) for all \\(x\\in[a,b]\\).\n\\(\\displaystyle |E_T|\\leq \\frac{K(b-a)^3}{12n^2}\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Error Estimate Formulas\nLeft Endpoint Rule Error Bound: Suppose \\(|f'(x)|\\leq K\\) for all \\(x\\in[a,b]\\).\n\\(\\displaystyle |E_L|\\leq \\frac{K(b-a)^2}{2n}\\)\nRight Endpoint Rule Error Bound: Suppose \\(|f'(x)|\\leq K\\) for all \\(x\\in[a,b]\\).\n\\(\\displaystyle |E_R|\\leq \\frac{K(b-a)^2}{2n}\\)\nTrapezoidal Rule Error Bound: Suppose \\(|f''(x)|\\leq K\\) for all \\(x\\in[a,b]\\).\n\\(\\displaystyle |E_T|\\leq \\frac{K(b-a)^3}{12n^2}\\)"
   },
   {
-    "objectID": "classes/16/slides.html#error-bound-endpoint-rules",
-    "href": "classes/16/slides.html#error-bound-endpoint-rules",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#error-bound-endpoint-rules",
+    "href": "classes/16/slides-macmini.html#error-bound-endpoint-rules",
+    "title": "Improper Integrals",
     "section": "Error Bound: Endpoint Rules",
-    "text": "Error Bound: Endpoint Rules\nFor the acceleration data, \\(0\\leq t\\leq .10\\) and \\(n=10\\).\nEstimate the maximum first derivative using the data:\n\\(K\\approx \\max\\left|\\dfrac{\\Delta a}{\\Delta t}\\right|=\\dfrac{5.08}{.01}=508\\)\nAssuming \\(|a'(t)|\\leq 508\\), the Left Endpoint Rule error satisfies\n\\(\\displaystyle |E_R|=|E_L|\\leq \\frac{K_1(b-a)^2}{2n}\\leq \\frac{508(.10)^2}{2(10)}\\leq .254\\ \\mathrm{m/s}\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Error Bound: Endpoint Rules\nFor the acceleration data, \\(0\\leq t\\leq .10\\) and \\(n=10\\).\nEstimate the maximum first derivative using the data:\n\\(K\\approx \\max\\left|\\dfrac{\\Delta a}{\\Delta t}\\right|=\\dfrac{5.08}{.01}=508\\)\nAssuming \\(|a'(t)|\\leq 508\\), the Left Endpoint Rule error satisfies\n\\(\\displaystyle |E_L|\\leq \\frac{K_1(b-a)^2}{2n}\\)\nSubstituting,\n\\(\\displaystyle |E_L|\\leq \\frac{508(.10)^2}{2(10)}\\)\n\\(\\displaystyle \\boxed{|E_L|\\leq .254\\ \\mathrm{m/s}}\\)\nOur approximation was \\(L_{10}=.6914\\ \\mathrm{m/s}\\). Since \\(E_R\\) uses the same formuala, \\(R_{10}=.9806\\ \\mathrm{m/s}\\)."
   },
   {
-    "objectID": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently",
-    "href": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#what-if-we-measure-10-times-more-frequently",
+    "href": "classes/16/slides-macmini.html#what-if-we-measure-10-times-more-frequently",
+    "title": "Improper Integrals",
     "section": "What if We Measure 10 Times More Frequently?",
-    "text": "What if We Measure 10 Times More Frequently?\nKeep the same time interval \\([0,.10]\\) and derivative bound \\(K=508\\).\nIncreasing the sampling frequency by a factor of \\(10\\) gives:\n\n\\(n=100\\) instead of \\(n=10\\).\n\\(\\Delta t=.001\\) instead of \\(\\Delta t=.01\\).\n\nThe Left and Right Endpoint Rule error bounds are\n\\(\\displaystyle |E_L|,\\ |E_R|\\leq\\frac{K(b-a)^2}{2n}\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "What if We Measure 10 Times More Frequently?\nKeep the same time interval \\([0,.10]\\) and derivative bound \\(K=508\\).\nIncreasing the sampling frequency by a factor of \\(10\\) gives:\n\n\\(n=100\\) instead of \\(n=10\\).\n\\(\\Delta t=.001\\) instead of \\(\\Delta t=.01\\).\n\nThe Left and Right Endpoint Rule error bounds are\n\\(\\displaystyle |E_L|,\\ |E_R|\\leq\\frac{K(b-a)^2}{2n}\\)\nSubstituting \\(n=100\\),\n\\(\\displaystyle |E_L|,\\ |E_R|\\leq\\frac{508(.10)^2}{2(100)}\\)\n\\(\\displaystyle \\boxed{|E_L|,\\ |E_R|\\leq .0254\\ \\mathrm{m/s}}\\)\nCompare with the original error bound:\n\\(\\displaystyle \\frac{.254}{.0254}=10\\)"
   },
   {
-    "objectID": "classes/16/slides.html#substituting-n100",
-    "href": "classes/16/slides.html#substituting-n100",
-    "title": "Numerical Integration",
-    "section": "Substituting \\(n=100\\)",
-    "text": "Substituting \\(n=100\\)\n\\(\\displaystyle |E_L|,\\ |E_R|\\leq\\frac{508(.10)^2}{2(100)}\\leq .0254\\ \\mathrm{m/s}\\)\nCompare with the original error bound:\n\\(\\displaystyle \\frac{.254}{.0254}=10\\)\n10 times the samples 10 times the accuracy.",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
-  },
-  {
-    "objectID": "classes/16/slides.html#error-bound-trapezoidal-rule",
-    "href": "classes/16/slides.html#error-bound-trapezoidal-rule",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#error-bound-trapezoidal-rule",
+    "href": "classes/16/slides-macmini.html#error-bound-trapezoidal-rule",
+    "title": "Improper Integrals",
     "section": "Error Bound: Trapezoidal Rule",
-    "text": "Error Bound: Trapezoidal Rule\nAssuming acceleration is sufficiently smooth and approximately quadratic, estimate the second derivative using consecutive measurements:\n\\(\\displaystyle a''(t)\\approx\\frac{a(t+.01)-2a(t)+a(t-.01)}{(.01)^2}\\)\nFor example, using \\(t=.05\\),\n\\(\\displaystyle a''(.05)\\approx\\frac{8.62-2(3.54)+.68}{(.01)^2}=22{,}200\\)\nThe largest observed second difference gives \\(K\\approx22{,}200\\).",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Error Bound: Trapezoidal Rule\nAssuming acceleration is sufficiently smooth and approximately quadratic, estimate the second derivative using consecutive measurements:\n\\(\\displaystyle a''(t)\\approx\\frac{a(t+.01)-2a(t)+a(t-.01)}{(.01)^2}\\)\nFor example, using \\(t=.05\\),\n\\(\\displaystyle a''(.05)\\approx\\frac{8.62-2(3.54)+.68}{(.01)^2}=22{,}200\\)\nThe largest observed second difference gives \\(K\\approx22{,}200\\).\nAssuming \\(|a''(t)|\\leq22{,}200\\),\n\\(\\displaystyle |E_T|\\leq\\frac{K(b-a)^3}{12n^2}\\)\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(10)^2}\\)\n\\(\\displaystyle \\boxed{|E_T|\\leq .0185\\ \\mathrm{m/s}}\\)\nOur approximation was \\(T_{10}=.8360\\ \\mathrm{m/s}\\)."
   },
   {
-    "objectID": "classes/16/slides.html#error-bound-trapezoidal-rule-calculation",
-    "href": "classes/16/slides.html#error-bound-trapezoidal-rule-calculation",
-    "title": "Numerical Integration",
-    "section": "Error Bound: Trapezoidal Rule Calculation",
-    "text": "Error Bound: Trapezoidal Rule Calculation\nAssuming \\(|a''(t)|\\leq22{,}200\\),\n\\(\\displaystyle |E_T|\\leq\\frac{K(b-a)^3}{12n^2}\\)\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(10)^2}\\)\n\\(\\displaystyle |E_T|\\leq .0185\\ \\mathrm{m/s}\\)\nOur approximation was \\(T_{10}=.8360\\ \\mathrm{m/s}\\).",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
-  },
-  {
-    "objectID": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently-1",
-    "href": "classes/16/slides.html#what-if-we-measure-10-times-more-frequently-1",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#what-if-we-measure-10-times-more-frequently-1",
+    "href": "classes/16/slides-macmini.html#what-if-we-measure-10-times-more-frequently-1",
+    "title": "Improper Integrals",
     "section": "What if We Measure 10 Times More Frequently?",
-    "text": "What if We Measure 10 Times More Frequently?\nKeep the same time interval \\([0,.10]\\) and derivative bound \\(K=22{,}200\\).\nIncreasing the sampling frequency by a factor of \\(10\\) gives:\n\n\\(n=100\\) instead of \\(n=10\\).\n\\(\\Delta t=.001\\) instead of \\(\\Delta t=.01\\).\n\nThe Trapezoidal Rule error bound is\n\\(\\displaystyle |E_T|\\leq\\frac{K(b-a)^3}{12n^2}\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "What if We Measure 10 Times More Frequently?\nKeep the same time interval \\([0,.10]\\) and derivative bound \\(K=22{,}200\\).\nIncreasing the sampling frequency by a factor of \\(10\\) gives:\n\n\\(n=100\\) instead of \\(n=10\\).\n\\(\\Delta t=.001\\) instead of \\(\\Delta t=.01\\).\n\nThe Trapezoidal Rule error bound is\n\\(\\displaystyle |E_T|\\leq\\frac{K(b-a)^3}{12n^2}\\)\nSubstituting \\(n=100\\),\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(100)^2}\\)\n\\(\\displaystyle \\boxed{|E_T|\\leq .000185\\ \\mathrm{m/s}}\\)\nCompare with the original estimate:\n\\(\\displaystyle \\frac{.0185}{.000185}=100\\)"
   },
   {
-    "objectID": "classes/16/slides.html#substituting-n100-1",
-    "href": "classes/16/slides.html#substituting-n100-1",
-    "title": "Numerical Integration",
-    "section": "Substituting \\(n=100\\)",
-    "text": "Substituting \\(n=100\\)\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(100)^2}\\leq .000185\\ \\mathrm{m/s}\\)\nCompare with the original estimate:\n\\(\\displaystyle \\frac{.0185}{.000185}=100\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
-  },
-  {
-    "objectID": "classes/16/slides.html#times-the-sample-100-times-the-accuracy.",
-    "href": "classes/16/slides.html#times-the-sample-100-times-the-accuracy.",
-    "title": "Numerical Integration",
-    "section": "10 times the sample 100 times the accuracy.",
-    "text": "10 times the sample 100 times the accuracy.",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
-  },
-  {
-    "objectID": "classes/16/slides.html#faster-sampling-lsm303agr-accelerometer",
-    "href": "classes/16/slides.html#faster-sampling-lsm303agr-accelerometer",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#faster-sampling-lsm303agr-accelerometer",
+    "href": "classes/16/slides-macmini.html#faster-sampling-lsm303agr-accelerometer",
+    "title": "Improper Integrals",
     "section": "Faster Sampling: LSM303AGR Accelerometer",
-    "text": "Faster Sampling: LSM303AGR Accelerometer\nThe LSM303AGR is a consumer grade accerometer that can measure accelleration at 1,344 sample per second.\nFor the same \\(.10\\) second interval:\n\n\n\n\nOriginal\nLSM303AGR\n\n\n\n\nSampling rate\n100 Hz\n1,344 Hz\n\n\n\\(\\Delta t\\)\n.010 s\n.000744 s\n\n\nSubintervals\n10\n\\(\\approx 134\\)\n\n\n\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(134)^2}\\leq .000103\\ \\mathrm{m/s}\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Faster Sampling: LSM303AGR Accelerometer\nThe LSM303AGR is a consumer grade accerometer that can measure accelleration at 1,344 sample per second.\nFor the same \\(.10\\) second interval:\n\n\n\n\nOriginal\nLSM303AGR\n\n\n\n\nSampling rate\n100 Hz\n1,344 Hz\n\n\n\\(\\Delta t\\)\n.010 s\n.000744 s\n\n\nSubintervals\n10\n\\(\\approx 134\\)\n\n\n\nRecall the Trapezoidal Rule error bound:\n\\(\\displaystyle |E_T|\\leq\\frac{K(b-a)^3}{12n^2}\\)\nUsing \\(K=22{,}200\\) and \\(n=134\\),\n\\(\\displaystyle |E_T|\\leq\\frac{22{,}200(.10)^3}{12(134)^2}\\)\n\\(\\displaystyle \\boxed{|E_T|\\leq .000103\\ \\mathrm{m/s}}\\)\nThe estimated error bound is approximately 180 times smaller!"
   },
   {
-    "objectID": "classes/16/slides.html#why-the-trapezoidal-rule-is-an-average",
-    "href": "classes/16/slides.html#why-the-trapezoidal-rule-is-an-average",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#why-the-trapezoidal-rule-is-an-average",
+    "href": "classes/16/slides-macmini.html#why-the-trapezoidal-rule-is-an-average",
+    "title": "Improper Integrals",
     "section": "Why the Trapezoidal Rule is an average",
-    "text": "Why the Trapezoidal Rule is an average\nOn \\([x_{i-1},x_i]\\), the area of the trapezoid is\n\\(\\dfrac{\\Delta x}{2}[f(x_{i-1})+f(x_i)].\\)\nAdding these trapezoidal areas gives\n\\(T_n=\\dfrac{L_n+R_n}{2}.\\)\nAveraging the left and right sums reduces the error.",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Why the Trapezoidal Rule is an average\nOn \\([x_{i-1},x_i]\\), the area of the trapezoid is\n\\(\\dfrac{\\Delta x}{2}[f(x_{i-1})+f(x_i)].\\)\nAdding these trapezoidal areas gives\n\\(T_n=\\dfrac{L_n+R_n}{2}.\\)\nFor our example,\n\\(T_4=\\dfrac{11+19}{2}=15\\ \\mathrm{m/s}.\\)\nAveraging the left and right sums reduces the error in this example but does not necessarily eliminate it."
   },
   {
-    "objectID": "classes/16/slides.html#falling-object-with-air-resistance",
-    "href": "classes/16/slides.html#falling-object-with-air-resistance",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#absolute-and-relative-error",
+    "href": "classes/16/slides-macmini.html#absolute-and-relative-error",
+    "title": "Improper Integrals",
+    "section": "Absolute and relative error",
+    "text": "Absolute and relative error\nIf \\(A\\) is the actual value and \\(B\\) is an approximation, then\n\\(\\text{Absolute error}=|A-B|.\\)\nThe relative error is\n\\(\\text{Relative error}=\\dfrac{|A-B|}{|A|},\\quad A\\ne0.\\)\nTo express relative error as a percentage, multiply by \\(100\\%\\).\nFor \\(T_4=15\\) and exact value \\(44/3\\),\n\\(\\text{Absolute error}=\\left|\\frac{44}{3}-15\\right|=\\frac13\\ \\mathrm{m/s}.\\)"
+  },
+  {
+    "objectID": "classes/16/slides-macmini.html#falling-object-with-air-resistance",
+    "href": "classes/16/slides-macmini.html#falling-object-with-air-resistance",
+    "title": "Improper Integrals",
     "section": "Falling Object with Air Resistance",
-    "text": "Falling Object with Air Resistance\nSuppose an object falls from rest under gravity with quadratic air resistance.\nNewton’s Second Law gives \\(m\\dfrac{dv}{dt}=mg-cv^2\\) where\n\n\\(v(t)\\) is the downward velocity.\n\\(mg\\) is the gravitational force.\n\\(cv^2\\) is the force of air resistance.\n\nFor our example, take \\(g=10\\) and \\(c/m=0.1\\), then \\(\\frac{dv}{dt}=10-0.1v^2\\) Assume \\(v(0)=0\\). We will find \\(v(1)\\).",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Falling Object with Air Resistance\nSuppose an object falls from rest under gravity with quadratic air resistance.\nNewton’s Second Law gives\n\\(m\\dfrac{dv}{dt}=mg-cv^2\\)\nwhere\n\n\\(v(t)\\) is the downward velocity.\n\\(mg\\) is the gravitational force.\n\\(cv^2\\) is the force of air resistance.\n\nFor our example, take \\(g=10\\) and \\(c/m=0.1\\).\nThen\n\\(\\displaystyle \\boxed{\\frac{dv}{dt}=10-0.1v^2}\\)\nAssume \\(v(0)=0\\).\nWhat is the velocity after one second?"
   },
   {
-    "objectID": "classes/16/slides.html#from-a-differential-equation-to-an-integral",
-    "href": "classes/16/slides.html#from-a-differential-equation-to-an-integral",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#from-a-differential-equation-to-an-integral",
+    "href": "classes/16/slides-macmini.html#from-a-differential-equation-to-an-integral",
+    "title": "Improper Integrals",
     "section": "From a Differential Equation to an Integral",
-    "text": "From a Differential Equation to an Integral\nOur differential equation is \\(\\dfrac{dv}{dt}=10-0.1v^2.\\)\nIntegrating from \\(0\\) to \\(t\\),\n\\(\\displaystyle v(t)-v(0)=\\int_0^t(10-0.1v(s)^2)\\,ds\\)\nWe want to approximate \\(\\displaystyle v(1)=\\int_0^1(10-0.1v(s)^2)\\,ds\\)\nThe difficulty is that we do not know a formula for \\(v\\). We will use numerical integration to approximate it.",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "From a Differential Equation to an Integral\nOur differential equation is\n\\(\\dfrac{dv}{dt}=10-0.1v^2.\\)\nIntegrating from \\(0\\) to \\(t\\),\n\\(\\displaystyle v(t)-v(0)=\\int_0^t(10-0.1v(s)^2)\\,ds\\)\nSince \\(v(0)=0\\),\n\\(\\displaystyle v(t)=\\int_0^t(10-0.1v(s)^2)\\,ds\\)\nWe want to approximate\n\\(\\displaystyle v(1)=\\int_0^1(10-0.1v(s)^2)\\,ds\\)\nThe difficulty is that we do not know \\(v(t)\\).\nWe will use numerical integration to approximate it."
   },
   {
-    "objectID": "classes/16/slides.html#approximation-setup",
-    "href": "classes/16/slides.html#approximation-setup",
-    "title": "Numerical Integration",
-    "section": "Approximation setup",
-    "text": "Approximation setup\nDivide \\([0,1]\\) into \\(n\\) subintervals of width \\(\\Delta t=\\dfrac{1}{n}.\\)\nby FTC, \\(\\displaystyle v(t_{i+1})- v(t_i)=\\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\\,ds\\)\n\\(v_i \\approx v(t_i)\\) so \\(v_{i+1} \\approx v(t_{i+1})\\)\n\\(\\displaystyle v_{i+1}\\approx v_i+\\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\\,ds\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "objectID": "classes/16/slides-macmini.html#applying-the-trapezoidal-rule",
+    "href": "classes/16/slides-macmini.html#applying-the-trapezoidal-rule",
+    "title": "Improper Integrals",
+    "section": "Applying the Trapezoidal Rule",
+    "text": "Applying the Trapezoidal Rule\nDivide \\([0,1]\\) into \\(n\\) subintervals of width\n\\(\\Delta t=\\dfrac{1}{n}.\\)\nOn each subinterval,\n\\(\\displaystyle v_{i+1}\\approx v_i+\\int_{t_i}^{t_{i+1}}(10-0.1v^2)\\,dt\\)\nUsing the Trapezoidal Rule,\n\\(\\displaystyle v_{i+1}=v_i+\\frac{\\Delta t}{2}[(10-0.1v_i^2)+(10-0.1v_{i+1}^2)]\\)\nSimplifying,\n\\(\\displaystyle v_{i+1}=v_i+10\\Delta t-\\frac{.1\\Delta t}{2}(v_i^2+v_{i+1}^2)\\)\nNotice that \\(v_{i+1}\\) appears on both sides.\nWe must solve a quadratic equation at each step."
   },
   {
-    "objectID": "classes/16/slides.html#using-the-trapezoidal-rule",
-    "href": "classes/16/slides.html#using-the-trapezoidal-rule",
-    "title": "Numerical Integration",
-    "section": "Using the Trapezoidal Rule",
-    "text": "Using the Trapezoidal Rule\n\\(\\displaystyle v_{i+1}\\approx v_i+\\int_{t_i}^{t_{i+1}}(10-0.1v(s)^2)\\,ds\\)\nbecomes\n\\(\\displaystyle v_{i+1}=v_i+\\frac{\\Delta t}{2}[(10-0.1v_i^2)+(10-0.1v_{i+1}^2)]\\)\nSimplifying,\n\\(\\displaystyle v_{i+1}=v_i+10\\Delta t-\\frac{.1\\Delta t}{2}(v_i^2+v_{i+1}^2)\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
-  },
-  {
-    "objectID": "classes/16/slides.html#quadratic-drag-10-subintervals",
-    "href": "classes/16/slides.html#quadratic-drag-10-subintervals",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#quadratic-drag-10-subintervals",
+    "href": "classes/16/slides-macmini.html#quadratic-drag-10-subintervals",
+    "title": "Improper Integrals",
     "section": "Quadratic Drag: 10 Subintervals",
-    "text": "Quadratic Drag: 10 Subintervals\nFor \\(n=10\\), \\(\\Delta t=.1\\)\nOur formula becomes\n\\(\\displaystyle v_{i+1}=v_i+1-.005(v_i^2+v_{i+1}^2)\\)\nRearranging,\n\\(\\displaystyle .005v_{i+1}^2+v_{i+1}=v_i+1-.005v_i^2\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Quadratic Drag: 10 Subintervals\nFor \\(n=10\\),\n\\(\\Delta t=.1.\\)\nOur formula becomes\n\\(\\displaystyle v_{i+1}=v_i+1-.005(v_i^2+v_{i+1}^2)\\)\nRearranging,\n\\(\\displaystyle .005v_{i+1}^2+v_{i+1}=v_i+1-.005v_i^2\\)\nStarting with \\(v_0=0\\),\n\\(\\displaystyle .005v_1^2+v_1=1\\)\nUsing the quadratic formula and taking the positive root,\n\\(\\displaystyle v_1=\\frac{-1+\\sqrt{1.02}}{.01}\\)\n\\(\\displaystyle v_1\\approx .995049\\ \\mathrm{m/s}\\)\nRepeating this process gives the velocity at each time."
   },
   {
-    "objectID": "classes/16/slides.html#calculating-v_1",
-    "href": "classes/16/slides.html#calculating-v_1",
-    "title": "Numerical Integration",
-    "section": "Calculating \\(v_1\\)",
-    "text": "Calculating \\(v_1\\)\nStarting with \\(v_0=0\\),\n\\(\\displaystyle .005v_1^2+v_1=1\\)\nUsing the quadratic formula and taking the positive root,\n\\(\\displaystyle v_1=\\frac{-1+\\sqrt{1.02}}{.01}\\)\n\\(\\displaystyle v_1\\approx .995049\\ \\mathrm{m/s}\\)\nRepeating this process gives the velocity at each time.",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
-  },
-  {
-    "objectID": "classes/16/slides.html#calculating-v_2",
-    "href": "classes/16/slides.html#calculating-v_2",
-    "title": "Numerical Integration",
-    "section": "Calculating \\(v_2\\)",
-    "text": "Calculating \\(v_2\\)\nStarting with \\(v_1 \\approx .995049\\),\n\\(\\displaystyle .005v_2^2+v_2=v_1+1-.005v_1^2\\)\nSubstituting \\(v_1\\),\n\\(\\displaystyle .005v_2^2+v_2=.995049+1-.005(.995049)^2=1.990099\\)\nUsing the quadratic formula and taking the positive root,\n\\(\\displaystyle v_2=\\frac{-1+\\sqrt{1+4(.005)(1.990099)}}{.01}\\approx 1.970681\\ \\mathrm{m/s}\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
-  },
-  {
-    "objectID": "classes/16/slides.html#quadratic-drag-numerical-results",
-    "href": "classes/16/slides.html#quadratic-drag-numerical-results",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#quadratic-drag-numerical-results",
+    "href": "classes/16/slides-macmini.html#quadratic-drag-numerical-results",
+    "title": "Improper Integrals",
     "section": "Quadratic Drag: Numerical Results",
-    "text": "Quadratic Drag: Numerical Results\nUsing \\(n=10\\) and \\(\\Delta t=.1\\):\n\n\n\n\n\n\\(t_i\\) (s)\n\\(v_i_\\) (m/s)\n\n\n\n\n0.0\n0.000000\n\n\n0.1\n0.995049\n\n\n0.2\n1.970681\n\n\n0.3\n2.908953\n\n\n0.4\n3.794646\n\n\n0.5\n4.616107\n\n\n\n\n\n\n\n\\(t_i\\) (s)\n\\(v_i_\\) (m/s)\n\n\n\n\n0.6\n5.365616\n\n\n0.7\n6.039301\n\n\n0.8\n6.636706\n\n\n0.9\n7.160139\n\n\n1.0\n7.613940",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Quadratic Drag: Numerical Results\nUsing \\(n=10\\) and \\(\\Delta t=.1\\):\n\n\n\n\\(t\\) (s)\n\\(v(t)\\) (m/s)\n\n\n\n\n0.0\n0.000000\n\n\n0.1\n0.995049\n\n\n0.2\n1.970681\n\n\n0.3\n2.908953\n\n\n0.4\n3.794646\n\n\n0.5\n4.616107\n\n\n0.6\n5.365616\n\n\n0.7\n6.039301\n\n\n0.8\n6.636706\n\n\n0.9\n7.160139\n\n\n1.0\n7.613940\n\n\n\nThus,\n\\(\\displaystyle \\boxed{v(1)\\approx7.613940\\ \\mathrm{m/s}}\\)\nNotice that the velocity increases, but the acceleration decreases as air resistance grows."
   },
   {
-    "objectID": "classes/16/slides.html#quadratic-drag-100-subintervals",
-    "href": "classes/16/slides.html#quadratic-drag-100-subintervals",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#quadratic-drag-100-subintervals",
+    "href": "classes/16/slides-macmini.html#quadratic-drag-100-subintervals",
+    "title": "Improper Integrals",
     "section": "Quadratic Drag: 100 Subintervals",
-    "text": "Quadratic Drag: 100 Subintervals\nNow increase the number of subintervals by a factor of \\(10\\).\n\n\n\n\nFirst calculation\nSecond calculation\n\n\n\n\nInterval\n\\([0,1]\\)\n\\([0,1]\\)\n\n\n\\(n\\)\n10\n100\n\n\n\\(\\Delta t\\)\n.1\n.01\n\n\n\nOur Trapezoidal Rule equation becomes\n\\(\\displaystyle v_{i+1}=v_i+.1-.0005(v_i^2+v_{i+1}^2)\\)\n\\(\\displaystyle \\boxed{v(1)\\approx7.615922\\ \\mathrm{m/s}}\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Quadratic Drag: 100 Subintervals\nNow increase the number of subintervals by a factor of \\(10\\).\n\n\n\n\nFirst calculation\nSecond calculation\n\n\n\n\nInterval\n\\([0,1]\\)\n\\([0,1]\\)\n\n\n\\(n\\)\n10\n100\n\n\n\\(\\Delta t\\)\n.1\n.01\n\n\n\nOur Trapezoidal Rule equation becomes\n\\(\\displaystyle v_{i+1}=v_i+.1-.0005(v_i^2+v_{i+1}^2)\\)\nStarting with \\(v_0=0\\), repeat the calculation 100 times.\nThe resulting approximation is\n\\(\\displaystyle \\boxed{v(1)\\approx7.615922\\ \\mathrm{m/s}}\\)\nHow much more accurate is this approximation?"
   },
   {
-    "objectID": "classes/16/slides.html#quadratic-drag-exact-solution",
-    "href": "classes/16/slides.html#quadratic-drag-exact-solution",
-    "title": "Numerical Integration",
+    "objectID": "classes/16/slides-macmini.html#quadratic-drag-exact-solution",
+    "href": "classes/16/slides-macmini.html#quadratic-drag-exact-solution",
+    "title": "Improper Integrals",
     "section": "Quadratic Drag: Exact Solution",
-    "text": "Quadratic Drag: Exact Solution\nThe differential equation\n\\(\\displaystyle \\frac{dv}{dt}=10-0.1v^2\\)\nwith \\(v(0)=0\\) has the exact solution \\(v(t)=10\\tanh(t).\\)\nTherefore, \\(\\displaystyle v(1)=10\\tanh(1)\\approx7.615942\\ \\mathrm{m/s}\\)",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "text": "Quadratic Drag: Exact Solution\nThe differential equation\n\\(\\displaystyle \\frac{dv}{dt}=10-0.1v^2\\)\nwith \\(v(0)=0\\) has the exact solution\n\\(v(t)=10\\tanh(t).\\)\nTherefore,\n\\(\\displaystyle v(1)=10\\tanh(1)\\)\n\\(\\displaystyle \\boxed{v(1)\\approx7.615942\\ \\mathrm{m/s}}\\)\nCompare our approximations:\n\n\n\nMethod\nVelocity (m/s)\n\n\n\n\nTrapezoidal, \\(n=10\\)\n7.613940\n\n\nTrapezoidal, \\(n=100\\)\n7.615922\n\n\nExact\n7.615942\n\n\n\nBoth numerical approximations underestimate the exact velocity."
   },
   {
-    "objectID": "classes/16/slides.html#compare",
-    "href": "classes/16/slides.html#compare",
-    "title": "Numerical Integration",
-    "section": "Compare",
-    "text": "Compare\nCompare our approximations:\n\n\n\nMethod\nVelocity (m/s)\n\n\n\n\nTrapezoidal, \\(n=10\\)\n7.613940\n\n\nTrapezoidal, \\(n=100\\)\n7.615922\n\n\nExact\n7.615942\n\n\n\nRule of Thumb for Trapazoidal Rule: Squaring the number of intervals doubles the number of decimal digits of accuracy.",
-    "crumbs": [
-      "Class Material",
-      "Numerical Integration"
-    ]
+    "objectID": "classes/16/slides-macmini.html#quadratic-drag-error-analysis",
+    "href": "classes/16/slides-macmini.html#quadratic-drag-error-analysis",
+    "title": "Improper Integrals",
+    "section": "Quadratic Drag: Error Analysis",
+    "text": "Quadratic Drag: Error Analysis\nThe absolute error is\n\\(\\text{Error}=|\\text{Exact Value}-\\text{Approximation}|\\)\nFor \\(n=10\\),\n\\(|E_{10}|\\approx .00200135\\ \\mathrm{m/s}\\)\nFor \\(n=100\\),\n\\(|E_{100}|\\approx .00001993\\ \\mathrm{m/s}\\)\nCompare the errors:\n\\(\\displaystyle \\frac{|E_{10}|}{|E_{100}|}\\approx100.4\\)\nIncreasing the number of subintervals by a factor of 10 reduces the error by approximately a factor of 100.\nThis illustrates second-order convergence of the Trapezoidal Rule for this differential equation."
   },
   {
-    "objectID": "classes/17/catchup_slides.html#antiderivatives-for-trigonometric-functions",
-    "href": "classes/17/catchup_slides.html#antiderivatives-for-trigonometric-functions",
-    "title": "Lingering Calculation",
-    "section": "Antiderivatives for Trigonometric Functions",
-    "text": "Antiderivatives for Trigonometric Functions\n\\(\\int \\sin x\\,dx=-\\cos x+C\\)\n\\(\\int \\cos x\\,dx=\\sin x+C\\)\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\tan x\\,dx=\\ln|\\sec x|+C\\)\n\\(\\int \\sec x\\,dx=\\ln|\\sec x+\\tan x|+C\\)"
+    "objectID": "classes/16/slides-macmini.html#terminal-velocity",
+    "href": "classes/16/slides-macmini.html#terminal-velocity",
+    "title": "Improper Integrals",
+    "section": "Terminal Velocity",
+    "text": "Terminal Velocity\nRecall the equation\n\\(\\displaystyle \\frac{dv}{dt}=10-0.1v^2.\\)\nAs the object speeds up, air resistance increases.\nEventually, gravitational force and drag balance, so acceleration approaches zero:\n\\(0=10-0.1v^2\\)\nSolving,\n\\(v^2=100\\)\n\\(\\displaystyle \\boxed{v_{\\mathrm{terminal}}=10\\ \\mathrm{m/s}}\\)\nThe velocity approaches \\(10\\ \\mathrm{m/s}\\) but never exceeds it."
   },
   {
-    "objectID": "classes/17/catchup_slides.html#integrals-with-secant-and-tangent",
-    "href": "classes/17/catchup_slides.html#integrals-with-secant-and-tangent",
-    "title": "Lingering Calculation",
-    "section": "Integrals with Secant and Tangent",
-    "text": "Integrals with Secant and Tangent\nUseful identities: \\(\\sec^2 x=1+\\tan^2 x\\)\n\\(\\tan^2 x=\\sec^2 x-1\\)\nFor \\(\\int \\tan^k x\\sec^j x\\,dx\\):\n\nIf \\(j\\) is even and \\(j\\ge 2\\), save \\(\\sec^2 x\\,dx\\) and use \\(u=\\tan x\\).\nIf \\(k\\) is odd and \\(j\\ge 1\\), save \\(\\sec x\\tan x\\,dx\\) and use \\(u=\\sec x\\)."
-  },
-  {
-    "objectID": "classes/17/catchup_slides.html#outlier-example",
-    "href": "classes/17/catchup_slides.html#outlier-example",
-    "title": "Lingering Calculation",
-    "section": "Outlier Example",
-    "text": "Outlier Example\nEvaluate \\(\\int \\sec^3\\theta\\,d\\theta\\).\n\nUse integration by parts.\nLet \\(u=\\sec\\theta\\) and \\(dv=\\sec^2\\theta\\,d\\theta\\).\nThen \\(du=\\sec\\theta\\tan\\theta\\,d\\theta\\) and \\(v=\\tan\\theta\\)."
-  },
-  {
-    "objectID": "classes/17/catchup_slides.html#applying-integration-by-parts",
-    "href": "classes/17/catchup_slides.html#applying-integration-by-parts",
-    "title": "Lingering Calculation",
-    "section": "Applying integration by parts,",
-    "text": "Applying integration by parts,\n\\[\n\\begin{aligned}\n\\int\\sec^3\\theta\\,d\\theta\n&=\\sec\\theta\\tan\\theta-\\int\\sec\\theta\\tan^2\\theta\\,d\\theta\\\\\n&=\\sec\\theta\\tan\\theta-\\int\\sec\\theta(\\sec^2\\theta-1)\\,d\\theta\\\\\n&=\\sec\\theta\\tan\\theta-\\int\\sec^3\\theta\\,d\\theta+\\int\\sec\\theta\\,d\\theta.\n\\end{aligned}\n\\]"
-  },
-  {
-    "objectID": "classes/17/catchup_slides.html#new-integration-formula",
-    "href": "classes/17/catchup_slides.html#new-integration-formula",
-    "title": "Lingering Calculation",
-    "section": "New Integration Formula",
-    "text": "New Integration Formula\n\\[\n\\int\\sec^3\\theta\\,d\\theta\n=\\frac12\\sec\\theta\\tan\\theta\n+\\frac12\\ln|\\sec\\theta+\\tan\\theta|+C\n\\]"
-  },
-  {
-    "objectID": "classes/17/catchup_slides.html#example-3",
-    "href": "classes/17/catchup_slides.html#example-3",
-    "title": "Lingering Calculation",
-    "section": "Example 3",
-    "text": "Example 3\nFind the length of the curve \\(y=x^2\\) over \\([0,\\frac{1}{2}]\\).\n\nSince \\(\\frac{dy}{dx}=2x\\),\n\\(L=\\int_0^{1/2}\\sqrt{1+(2x)^2}\\,dx\\)\n\\(=\\int_0^{1/2}\\sqrt{1+4x^2}\\,dx\\)\nUse \\(x=\\frac{1}{2}\\tan\\theta\\).\n\\(L=\\frac{1}{2}\\int_0^{\\pi/4}\\sec^3\\theta\\,d\\theta\\)\n\\(=\\frac{1}{4}\\left(\\sqrt{2}+\\ln(\\sqrt{2}+1)\\right)\\)"
-  },
-  {
-    "objectID": "classes/17/worksheet.html",
-    "href": "classes/17/worksheet.html",
+    "objectID": "classes/16/worksheet.html",
+    "href": "classes/16/worksheet.html",
     "title": "TBD",
     "section": "",
     "text": "Hint"
   },
   {
-    "objectID": "classes/17/worksheet.html#null",
-    "href": "classes/17/worksheet.html#null",
+    "objectID": "classes/16/worksheet.html#null",
+    "href": "classes/16/worksheet.html#null",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/17/slides.html#improper-integrals",
+    "href": "classes/17/slides.html#improper-integrals",
+    "title": "Improper Integrals",
+    "section": "Improper Integrals",
+    "text": "Improper Integrals\nClass Session Goals:\n\nEvaluate an integral over an infinite interval.\nEvaluate an integral over a closed interval with an infinite discontinuity within the interval.\nUse the comparison theorem to determine whether a definite integral is convergent."
+  },
+  {
+    "objectID": "classes/17/slides.html#what-is-an-improper-integral",
+    "href": "classes/17/slides.html#what-is-an-improper-integral",
+    "title": "Improper Integrals",
+    "section": "What is an Improper Integral?",
+    "text": "What is an Improper Integral?\nIntegrals over an infinite interval as well as integrals of functions containing a discontinuity on the interval are called improper integrals.\n\\[\\int_a^{\\infty} f(x)\\,dx\\]"
+  },
+  {
+    "objectID": "classes/17/slides.html#integrating-over-an-infinite-interval",
+    "href": "classes/17/slides.html#integrating-over-an-infinite-interval",
+    "title": "Improper Integrals",
+    "section": "Integrating over an Infinite Interval",
+    "text": "Integrating over an Infinite Interval\nTo integrate a function over an infinite interval, we consider the limit of the integral as the limit increases without bound.\nIf \\(f(x)\\) is continuous over \\([a,\\infty)\\), then\n\\[\\int_a^{\\infty} f(x)\\,dx=\\lim_{t\\to\\infty}\\int_a^t f(x)\\,dx\\]\nprovided this limit exists."
+  },
+  {
+    "objectID": "classes/17/slides.html#infinite-interval-to-the-left",
+    "href": "classes/17/slides.html#infinite-interval-to-the-left",
+    "title": "Improper Integrals",
+    "section": "Infinite Interval to the Left",
+    "text": "Infinite Interval to the Left\nIf \\(f(x)\\) is continuous over \\((-\\infty,b]\\), then\n\\[\\int_{-\\infty}^{b} f(x)\\,dx=\\lim_{t\\to-\\infty}\\int_t^b f(x)\\,dx\\]\nprovided this limit exists.\nIn each case, if the limit exists, then the improper integral is said to converge.\nIf the limit does not exist, then the improper integral is said to diverge."
+  },
+  {
+    "objectID": "classes/17/slides.html#infinite-interval-in-both-directions",
+    "href": "classes/17/slides.html#infinite-interval-in-both-directions",
+    "title": "Improper Integrals",
+    "section": "Infinite Interval in Both Directions",
+    "text": "Infinite Interval in Both Directions\nIf \\(f(x)\\) is continuous over \\((-\\infty,\\infty)\\), then\n\\[\\int_{-\\infty}^{\\infty} f(x)\\,dx=\\int_{-\\infty}^{0}f(x)\\,dx+\\int_{0}^{\\infty}f(x)\\,dx\\]\nprovided that both integrals converge."
+  },
+  {
+    "objectID": "classes/17/slides.html#example-finding-an-area",
+    "href": "classes/17/slides.html#example-finding-an-area",
+    "title": "Improper Integrals",
+    "section": "Example: Finding an Area",
+    "text": "Example: Finding an Area\nDetermine whether the area between the graph of \\(f(x)=\\frac{1}{x}\\) and the \\(x\\)-axis over the interval \\([1,\\infty)\\) is finite or infinite.\n\\(A=\\int_1^\\infty \\frac{1}{x}\\,dx\\)\n\\(=\\lim_{t\\to\\infty}\\int_1^t\\frac{1}{x}\\,dx\\)\n\n\\(=\\lim_{t\\to\\infty}\\ln|x|\\bigg|_1^t\\)\n\\(=\\lim_{t\\to\\infty}(\\ln|t|-\\ln 1)=\\infty\\)\nSince the improper integral diverges to \\(\\infty\\), the area of the region is infinite."
+  },
+  {
+    "objectID": "classes/17/slides.html#example-finding-a-volume",
+    "href": "classes/17/slides.html#example-finding-a-volume",
+    "title": "Improper Integrals",
+    "section": "Example: Finding a Volume",
+    "text": "Example: Finding a Volume\nFind the volume of the solid obtained by revolving the region bounded by the graph of \\(f(x)=\\frac{1}{x}\\) and the \\(x\\)-axis over \\([1,\\infty)\\) about the \\(x\\)-axis.\nUsing the disk method,\n\\(V=\\pi\\int_1^{\\infty}\\frac{1}{x^2}\\,dx\\)\n\n\\(=\\pi\\lim_{t\\to\\infty}\\int_1^t\\frac{1}{x^2}\\,dx\\)\n\\(=\\pi\\lim_{t\\to\\infty}\\left(-\\frac{1}{x}\\right)\\bigg|_1^t\\)\n\\(=\\pi\\lim_{t\\to\\infty}\\left(-\\frac{1}{t}+1\\right)=\\pi\\)"
+  },
+  {
+    "objectID": "classes/17/slides.html#gabriels-horn",
+    "href": "classes/17/slides.html#gabriels-horn",
+    "title": "Improper Integrals",
+    "section": "Gabriel’s Horn",
+    "text": "Gabriel’s Horn\nArea of the region between the \\(x\\)-axis and the graph of \\(f(x)=1/x\\) over \\([1,\\infty)\\) is infinite.\nSurface area of the solid generated by revolving this region about the \\(x\\)-axis is infinite. This is a more challenging integral to evaluate, but we will show it is infinite in a later example.\nVolume of the solid generated by revolving this region about the \\(x\\)-axis is finite.\nThe solid generated is known as Gabriel’s Horn. an object with infinite cross-sectional area but finite volume."
+  },
+  {
+    "objectID": "classes/17/slides.html#recall-lhôpitals-rule",
+    "href": "classes/17/slides.html#recall-lhôpitals-rule",
+    "title": "Improper Integrals",
+    "section": "Recall L’Hôpital’s Rule",
+    "text": "Recall L’Hôpital’s Rule\nSuppose \\(\\lim_{x\\to a}f(x)=0\\) and \\(\\lim_{x\\to a}g(x)=0\\), or both limits are \\(\\pm\\infty\\).\nIf \\(\\lim_{x\\to a}\\frac{f'(x)}{g'(x)}\\) exists (or is \\(\\pm\\infty\\)), then\n\\[\n\\lim_{x\\to a}\\frac{f(x)}{g(x)}\n=\\lim_{x\\to a}\\frac{f'(x)}{g'(x)}\n\\]"
+  },
+  {
+    "objectID": "classes/17/slides.html#some-indeterminate-forms",
+    "href": "classes/17/slides.html#some-indeterminate-forms",
+    "title": "Improper Integrals",
+    "section": "Some Indeterminate Forms",
+    "text": "Some Indeterminate Forms\n\n\\(\\frac{0}{0}\\)\n\\(\\frac{\\infty}{\\infty}\\)\n\\(\\infty\\cdot 0\\)"
+  },
+  {
+    "objectID": "classes/17/slides.html#example-doubly-infinite-intervals",
+    "href": "classes/17/slides.html#example-doubly-infinite-intervals",
+    "title": "Improper Integrals",
+    "section": "Example: Doubly Infinite Intervals",
+    "text": "Example: Doubly Infinite Intervals\nEvaluate \\[\\int_{-\\infty}^{\\infty}xe^x\\,dx\\]\nStart by splitting up the integral:\n\\[\\int_{-\\infty}^{\\infty}xe^x\\,dx=\\int_{-\\infty}^{0}xe^x\\,dx+\\int_{0}^{\\infty}xe^x\\,dx\\]\nIf either integral diverges, then the who integral diverges"
+  },
+  {
+    "objectID": "classes/17/slides.html#example-first-integral",
+    "href": "classes/17/slides.html#example-first-integral",
+    "title": "Improper Integrals",
+    "section": "Example: First Integral",
+    "text": "Example: First Integral\n\\(\\int_{-\\infty}^{0}xe^x\\,dx=\\lim_{t\\to-\\infty}\\int_t^0xe^x\\,dx\\)\n\\(=\\lim_{t\\to-\\infty}(xe^x-e^x)\\bigg|_t^0\\)\n\\(=\\lim_{t\\to-\\infty}(-1-te^t+e^t)\\)\n\\(=-1\\)\nThe first improper integral converges."
+  },
+  {
+    "objectID": "classes/17/slides.html#example-second-integral",
+    "href": "classes/17/slides.html#example-second-integral",
+    "title": "Improper Integrals",
+    "section": "Example: Second Integral",
+    "text": "Example: Second Integral\n\\(\\int_0^{\\infty}xe^x\\,dx=\\lim_{t\\to\\infty}\\int_0^t xe^x\\,dx\\)\n\n\\(=\\lim_{t\\to\\infty}(xe^x-e^x)\\bigg|_0^t\\)\n\\(=\\lim_{t\\to\\infty}(te^t-e^t+1)=\\infty\\)\nThus, \\(\\int_0^{\\infty}xe^x\\,dx\\) diverges.\nTherefore, \\(\\int_{-\\infty}^{\\infty}xe^x\\,dx\\) diverges."
+  },
+  {
+    "objectID": "classes/17/slides.html#integrating-a-discontinuous-integrand",
+    "href": "classes/17/slides.html#integrating-a-discontinuous-integrand",
+    "title": "Improper Integrals",
+    "section": "Integrating a Discontinuous Integrand",
+    "text": "Integrating a Discontinuous Integrand\nIf \\(f(x)\\) is continuous over \\([a,b)\\), then\n\\[\\int_a^b f(x)\\,dx=\\lim_{t\\to b^-}\\int_a^t f(x)\\,dx\\]\nIf \\(f(x)\\) is continuous over \\((a,b]\\), then\n\\[\\int_a^b f(x)\\,dx=\\lim_{t\\to a^+}\\int_t^b f(x)\\,dx\\]"
+  },
+  {
+    "objectID": "classes/17/slides.html#discontinuity-inside-the-interval",
+    "href": "classes/17/slides.html#discontinuity-inside-the-interval",
+    "title": "Improper Integrals",
+    "section": "Discontinuity Inside the Interval",
+    "text": "Discontinuity Inside the Interval\nIf \\(f(x)\\) is continuous over \\([a,b]\\) except at a point \\(c\\) in \\((a,b)\\), then\n\\[\\int_a^b f(x)\\,dx=\\int_a^c f(x)\\,dx+\\int_c^b f(x)\\,dx\\]\nprovided both integrals converge.\nIf either of these integrals diverges, then \\(\\int_a^b f(x)\\,dx\\) diverges."
+  },
+  {
+    "objectID": "classes/17/slides.html#example-1-discontinuities",
+    "href": "classes/17/slides.html#example-1-discontinuities",
+    "title": "Improper Integrals",
+    "section": "Example 1: Discontinuities",
+    "text": "Example 1: Discontinuities\nEvaluate \\(\\int_0^4 \\frac{1}{\\sqrt{4-x}}\\,dx\\).\nThe function \\(f(x)=\\frac{1}{\\sqrt{4-x}}\\) is continuous over \\([0,4)\\) and discontinuous at \\(4\\).\n\n\\(\\int_0^4 \\frac{1}{\\sqrt{4-x}}\\,dx=\\lim_{t\\to4^-}\\int_0^t\\frac{1}{\\sqrt{4-x}}\\,dx=4\\)"
+  },
+  {
+    "objectID": "classes/17/slides.html#example-2-discontinuities",
+    "href": "classes/17/slides.html#example-2-discontinuities",
+    "title": "Improper Integrals",
+    "section": "Example 2: Discontinuities",
+    "text": "Example 2: Discontinuities\nEvaluate \\(\\int_0^2 x\\ln x\\,dx\\) where \\(f(x)=x\\ln x\\) is continuous over \\((0,2]\\) and is discontinuous at zero,\n\\[\\int_0^2 x\\ln x\\,dx=\\lim_{t\\to0^+}\\int_t^2 x\\ln x\\,dx\\]\n\nUsing integration by parts to get \\(2\\ln2-1\\)."
+  },
+  {
+    "objectID": "classes/17/slides.html#theorem-3.7-a-comparison-theorem",
+    "href": "classes/17/slides.html#theorem-3.7-a-comparison-theorem",
+    "title": "Improper Integrals",
+    "section": "Theorem 3.7: A Comparison Theorem",
+    "text": "Theorem 3.7: A Comparison Theorem\nLet \\(f(x)\\) and \\(g(x)\\) be continuous over \\([a,\\infty)\\).\nAssume that \\(0\\le f(x)\\le g(x)\\) for \\(x\\ge a\\).\n\nIf \\(\\int_a^{\\infty} f(x)\\,dx=\\infty\\), then \\(\\int_a^{\\infty} g(x)\\,dx=\\infty\\).\nIf \\(\\int_a^{\\infty} g(x)\\,dx=L\\), where \\(L\\) is a real number, then \\(\\int_a^{\\infty} f(x)\\,dx=M\\) for some real number \\(M\\le L\\)."
+  },
+  {
+    "objectID": "classes/17/slides.html#example-comparison-theorem",
+    "href": "classes/17/slides.html#example-comparison-theorem",
+    "title": "Improper Integrals",
+    "section": "Example: Comparison Theorem",
+    "text": "Example: Comparison Theorem\nUse a comparison to show \\(\\int_1^{\\infty}2\\pi \\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\,dx\\) diverges.\n\nSince \\(\\sqrt{1+\\frac{1}{x^4}}\\geq 1\\) for \\(x\\geq 1\\),\n\\(2\\pi\\int_1^\\infty\\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\geq 2\\pi\\int_1^\\infty\\frac{1}{x}\\,dx\\)\nWe have already shown that \\(\\int_1^\\infty\\frac{1}{x}\\,dx\\) diverges."
+  },
+  {
+    "objectID": "classes/17/slides.html#table-of-antiderivatives-trig",
+    "href": "classes/17/slides.html#table-of-antiderivatives-trig",
+    "title": "Improper Integrals",
+    "section": "Table of Antiderivatives: Trig",
+    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\sec^2 x\\,dx &= \\tan x+C \\\\\n\\int \\csc^2 x\\,dx &= -\\cot x+C \\\\\n\\int \\sec x\\tan x\\,dx &= \\sec x+C \\\\\n\\int \\csc x\\cot x\\,dx &= -\\csc x+C\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "classes/17/slides.html#table-of-antiderivatives-trig-1",
+    "href": "classes/17/slides.html#table-of-antiderivatives-trig-1",
+    "title": "Improper Integrals",
+    "section": "Table of Antiderivatives: Trig",
+    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\tan x\\,dx &= \\ln|\\sec x|+C \\\\\n\\int \\cot x\\,dx &= \\ln|\\sin x|+C \\\\\n\\int \\sec x\\,dx &= \\ln|\\sec x+\\tan x|+C \\\\\n\\int \\csc x\\,dx &= -\\ln|\\csc x+\\cot x|+C\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "classes/17/slides.html#table-of-antiderivatives-other",
+    "href": "classes/17/slides.html#table-of-antiderivatives-other",
+    "title": "Improper Integrals",
+    "section": "Table of Antiderivatives: Other",
+    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\log_a x\\,dx &= x\\log_a x-\\frac{x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\frac{1}{a^2+x^2}\\,dx &= \\frac{1}{a}\\tan^{-1}\\left(\\frac{x}{a}\\right)+C\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "classes/17/slides.html#table-of-antiderivatives-other-1",
+    "href": "classes/17/slides.html#table-of-antiderivatives-other-1",
+    "title": "Improper Integrals",
+    "section": "Table of Antiderivatives: Other",
+    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int \\frac{1}{\\sqrt{a^2-x^2}}\\,dx &= \\sin^{-1}\\left(\\frac{x}{a}\\right)+C \\\\\n\\int \\frac{1}{x\\sqrt{x^2-a^2}}\\,dx &= \\frac{1}{a}\\sec^{-1}\\left|\\frac{x}{a}\\right|+C \\\\\n\\int \\frac{1}{x^2-a^2}\\,dx &= \\frac{1}{2a}\\ln\\left|\\frac{x-a}{x+a}\\right|+C\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "classes/18/four-sequence-plots.html#a_n13n",
+    "href": "classes/18/four-sequence-plots.html#a_n13n",
+    "title": "Math 151 - Calculus II",
+    "section": "\\(a_n=1+3n\\)",
+    "text": "\\(a_n=1+3n\\)\n\n\nGraph of sequence a\n\nThe points rise along a straight pattern from (1,4) through (20,61). The graph shows discrete points at the integer indices one through twenty.     2026-10-22T11:08:22.575099 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               1             5             10             15             20       n                   0             20             40             60       a n                                            \n\n. . .\nThe terms grow without bound. The sequence diverges to \\(\\infty\\)."
+  },
+  {
+    "objectID": "classes/18/four-sequence-plots.html#b_n1-12n",
+    "href": "classes/18/four-sequence-plots.html#b_n1-12n",
+    "title": "Math 151 - Calculus II",
+    "section": "\\(b_n=1-(1/2)^n\\)",
+    "text": "\\(b_n=1-(1/2)^n\\)\n\n\nGraph of sequence b\n\nThe points increase from (1,0.5) toward a dashed horizontal line at one. The graph shows discrete points at the integer indices one through twenty.     2026-10-22T11:08:22.701989 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                                  1             5             10             15             20       n                   0.0             0.5             1.0       b n               L = 1                                     \n\n. . .\nThe terms approach \\(1\\). The sequence converges to \\(1\\)."
+  },
+  {
+    "objectID": "classes/18/four-sequence-plots.html#c_n-1n",
+    "href": "classes/18/four-sequence-plots.html#c_n-1n",
+    "title": "Math 151 - Calculus II",
+    "section": "\\(c_n=(-1)^n\\)",
+    "text": "\\(c_n=(-1)^n\\)\n\n\nGraph of sequence c\n\nPoints at odd indices have value minus one; points at even indices have value one. The graph shows discrete points at the integer indices one through twenty.     2026-10-22T11:08:22.804559 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               1             5             10             15             20       n                   −1             0             1       c n                                            \n\n. . .\nThe terms alternate between \\(-1\\) and \\(1\\). The sequence diverges."
+  },
+  {
+    "objectID": "classes/18/four-sequence-plots.html#d_n-1nn",
+    "href": "classes/18/four-sequence-plots.html#d_n-1nn",
+    "title": "Math 151 - Calculus II",
+    "section": "\\(d_n=(-1)^n/n\\)",
+    "text": "\\(d_n=(-1)^n/n\\)\n\n\nGraph of sequence d\n\nThe points alternate below and above zero, with magnitudes decreasing from one to one twentieth. A dashed line marks zero. The graph shows discrete points at the integer indices one through twenty.     2026-10-22T11:08:22.934034 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                                  1             5             10             15             20       n                   −1             0             1       d n               L = 0                                     \n\n. . .\nThe signs alternate, but the magnitudes approach \\(0\\). The sequence converges to \\(0\\)."
+  },
+  {
+    "objectID": "classes/18/slides.html#sequences",
+    "href": "classes/18/slides.html#sequences",
+    "title": "Sequences",
+    "section": "Sequences",
+    "text": "Sequences\nClass Session Goals:\n\nFind a formula for the general term of a sequence.\nCalculate the limit of a sequence, if it exists.\nDetermine whether a sequence converges or diverges.\nUse boundedness and monotonicity to establish convergence.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#taylors-theorem-and-motivation",
+    "href": "classes/18/slides.html#taylors-theorem-and-motivation",
+    "title": "Sequences",
+    "section": "Taylor’s Theorem and Motivation",
+    "text": "Taylor’s Theorem and Motivation\nCan we approximate a function using polynomials?\nIf \\(f\\) has continuous derivatives through order \\(n+1\\) on an interval containing \\(a\\) and \\(x\\), Taylor’s Theorem gives\n\\(\\displaystyle f(x)=\\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(x-a)^k+R_n(x)\\),\nwhere \\(\\displaystyle R_n(x)=\\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}\\) for some \\(c\\) between \\(a\\) and \\(x\\).",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#gamma-function",
+    "href": "classes/18/slides.html#gamma-function",
+    "title": "Sequences",
+    "section": "Gamma Function",
+    "text": "Gamma Function",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#infinite-series",
+    "href": "classes/18/slides.html#infinite-series",
+    "title": "Sequences",
+    "section": "Infinite Series",
+    "text": "Infinite Series\nAs \\(n\\) increases, the Taylor polynomials form a sequence.\nIf \\(R_n(x)\\to0\\), then\n\\(\\displaystyle f(x)=\\sum_{k=0}^{\\infty}\\frac{f^{(k)}(a)}{k!}(x-a)^k.\\)\nWhen does this infinite series converge, and when does it equal \\(f(x)\\)?",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#what-is-a-sequence",
+    "href": "classes/18/slides.html#what-is-a-sequence",
+    "title": "Sequences",
+    "section": "What is a Sequence?",
+    "text": "What is a Sequence?\nAn infinite sequence is an ordered list of numbers:\n\\(a_1,a_2,a_3,\\ldots,a_n,\\ldots\\)\nEach number \\(a_n\\) is a term. The integer \\(n\\) is the index.\nWe write \\(\\{a_n\\}_{n=1}^{\\infty}\\), or simply \\(\\{a_n\\}\\).\nFor example, \\(\\{2^n\\}_{n=1}^{\\infty}=\\{2,4,8,16,\\ldots\\}\\).",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#two-ways-to-define-a-sequence",
+    "href": "classes/18/slides.html#two-ways-to-define-a-sequence",
+    "title": "Sequences",
+    "section": "Two Ways to Define a Sequence",
+    "text": "Two Ways to Define a Sequence\n1.Explicit formula gives a term directly from its index as a function of the index:\n\\(a_n=2^n,\\quad n\\ge 1.\\)\n\nRecurrence relation gives a term using preceding terms:\n\n\\(b_1=2,\\quad b_n=2b_{n-1},\\quad n\\ge 2.\\)\nHere \\(\\{a_n\\}=\\{b_n\\}\\) since each term is the same.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#arithmetic-sequences",
+    "href": "classes/18/slides.html#arithmetic-sequences",
+    "title": "Sequences",
+    "section": "Arithmetic Sequences",
+    "text": "Arithmetic Sequences\nAn arithmetic sequence has a constant difference between consecutive terms.\n\\(3,7,11,15,19,\\ldots\\)\n\n\\(a_1=3,\\quad a_n=a_{n-1}+4,\\quad n\\ge 2.\\)\n\\(a_n=3+4(n-1)=4n-1.\\)\nIn general, \\(a_n=a_1+(n-1)d\\), where \\(d\\) is the common difference.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#geometric-sequences",
+    "href": "classes/18/slides.html#geometric-sequences",
+    "title": "Sequences",
+    "section": "Geometric Sequences",
+    "text": "Geometric Sequences\nA geometric sequence has a constant ratio between consecutive nonzero terms.\n\\(2,-\\frac{2}{3},\\frac{2}{9},-\\frac{2}{27},\\frac{2}{81},\\ldots\\)\n\n\\(a_1=2,\\quad a_n=-\\frac{1}{3}a_{n-1},\\quad n\\ge 2.\\)\n\\(a_n=2\\left(-\\frac{1}{3}\\right)^{n-1}.\\)\nIn general, \\(a_n=a_1r^{n-1}\\), where \\(r\\) is the common ratio.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#finding-an-explicit-formula",
+    "href": "classes/18/slides.html#finding-an-explicit-formula",
+    "title": "Sequences",
+    "section": "Finding an Explicit Formula",
+    "text": "Finding an Explicit Formula\nFind a formula for the \\(n\\)th term, starting with \\(n=1\\):\n\\(-\\frac{1}{2},\\frac{2}{3},-\\frac{3}{4},\\frac{4}{5},-\\frac{5}{6},\\ldots\\)\n\nThe numerators are \\(n\\), and the denominators are \\(n+1\\).\nThe factor \\((-1)^n\\) gives a negative sign when \\(n\\) is odd.\n\\(a_n=\\dfrac{(-1)^n n}{n+1}.\\)",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#another-explicit-formula",
+    "href": "classes/18/slides.html#another-explicit-formula",
+    "title": "Sequences",
+    "section": "Another Explicit Formula",
+    "text": "Another Explicit Formula\nFind a formula for the \\(n\\)th term, starting with \\(n=1\\):\n\\(\\frac{3}{4},\\frac{9}{7},\\frac{27}{10},\\frac{81}{13},\\frac{243}{16},\\ldots\\)\n\nThe numerators form a geometric sequence: \\(3^n\\).\nThe denominators form an arithmetic sequence: \\(4+3(n-1)=3n+1\\).\n\\(a_n=\\dfrac{3^n}{3n+1}.\\)",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#from-a-recurrence-to-a-formula",
+    "href": "classes/18/slides.html#from-a-recurrence-to-a-formula",
+    "title": "Sequences",
+    "section": "From a Recurrence to a Formula",
+    "text": "From a Recurrence to a Formula\nSuppose \\(a_1=\\frac{1}{2}\\) and \\(a_n=a_{n-1}+\\left(\\frac{1}{2}\\right)^n\\) for \\(n\\ge 2\\).\nWrite the first four terms and look for a formula.\n\n\\(a_1=\\frac{1}{2},\\quad a_2=\\frac{3}{4},\\quad a_3=\\frac{7}{8},\\quad a_4=\\frac{15}{16}.\\)\n\\(a_n=\\dfrac{2^n-1}{2^n}=1-\\dfrac{1}{2^n}.\\)\nSubstitution verifies the initial value and recurrence.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#graphing-a-sequence",
+    "href": "classes/18/slides.html#graphing-a-sequence",
+    "title": "Sequences",
+    "section": "Graphing a Sequence",
+    "text": "Graphing a Sequence\nWe graph the points \\((n,a_n)\\) with \\(n\\) on the horizonal axis and the value of the sequence on the vertical axis.\nFor \\(a_n=1-\\dfrac{1}{2^n}\\):\n\n\n\n\\(n\\)\n1\n2\n3\n4\n5\n\n\n\n\n\\(a_n\\)\n.5\n.75\n.875\n.9375\n.96875",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#behavior-of-sequences",
+    "href": "classes/18/slides.html#behavior-of-sequences",
+    "title": "Sequences",
+    "section": "Behavior of Sequences",
+    "text": "Behavior of Sequences\n\n\nA sequence approaching one\n\nDiscrete points for a_n = 1 minus 1 divided by 2 to the n, for n from 1 to 10. The points increase toward the dashed horizontal line at one.     2026-10-20T19:33:58.151918 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             2             4             6             8             10    n                 0.0             0.5             1.0       a n                                L = 1",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#convergence-and-divergence",
+    "href": "classes/18/slides.html#convergence-and-divergence",
+    "title": "Sequences",
+    "section": "Convergence and Divergence",
+    "text": "Convergence and Divergence\nA sequence converges if its terms approach a finite number \\(L\\) as \\(n\\) increases.\nWe write \\(\\displaystyle \\lim_{n\\to\\infty}a_n=L\\), or \\(a_n\\to L\\).\nA sequence that does not converge diverges.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#different-long-term-behaviors",
+    "href": "classes/18/slides.html#different-long-term-behaviors",
+    "title": "Sequences",
+    "section": "Different Long-Term Behaviors",
+    "text": "Different Long-Term Behaviors\nWhat is the behavior of each sequence as \\(n \\to \\infty\\)?\n\n\\(a_n=1+3n\\)\n\\(b_n=1-(1/2)^n\\)\n\\(c_n=(-1)^n\\)\n\\(d_n=(-1)^n/n\\)",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#a_n13n",
+    "href": "classes/18/slides.html#a_n13n",
+    "title": "Sequences",
+    "section": "\\(a_n=1+3n\\)",
+    "text": "\\(a_n=1+3n\\)\n\n\nGraph of sequence a\n\nThe points rise along a straight pattern from (1,4) through (20,61). The graph shows discrete points at the integer indices one through twenty.     2026-10-22T11:08:22.575099 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               1             5             10             15             20       n                   0             20             40             60       a n                                            \n\n\nThe terms grow without bound. The sequence diverges to \\(\\infty\\).",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#b_n1-12n",
+    "href": "classes/18/slides.html#b_n1-12n",
+    "title": "Sequences",
+    "section": "\\(b_n=1-(1/2)^n\\)",
+    "text": "\\(b_n=1-(1/2)^n\\)\n\n\nGraph of sequence b\n\nThe points increase from (1,0.5) toward a dashed horizontal line at one. The graph shows discrete points at the integer indices one through twenty.     2026-10-22T11:08:22.701989 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                                  1             5             10             15             20       n                   0.0             0.5             1.0       b n               L = 1                                     \n\n\nThe terms approach \\(1\\). The sequence converges to \\(1\\).",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#c_n-1n",
+    "href": "classes/18/slides.html#c_n-1n",
+    "title": "Sequences",
+    "section": "\\(c_n=(-1)^n\\)",
+    "text": "\\(c_n=(-1)^n\\)\n\n\nGraph of sequence c\n\nPoints at odd indices have value minus one; points at even indices have value one. The graph shows discrete points at the integer indices one through twenty.     2026-10-22T11:08:22.804559 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               1             5             10             15             20       n                   −1             0             1       c n                                            \n\n\nThe terms alternate between \\(-1\\) and \\(1\\). The sequence diverges.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#d_n-1nn",
+    "href": "classes/18/slides.html#d_n-1nn",
+    "title": "Sequences",
+    "section": "\\(d_n=(-1)^n/n\\)",
+    "text": "\\(d_n=(-1)^n/n\\)\n\n\nGraph of sequence d\n\nThe points alternate below and above zero, with magnitudes decreasing from one to one twentieth. A dashed line marks zero. The graph shows discrete points at the integer indices one through twenty.     2026-10-22T11:08:22.934034 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                                  1             5             10             15             20       n                   −1             0             1       d n               L = 0                                     \n\n\nThe signs alternate, but the magnitudes approach \\(0\\). The sequence converges to \\(0\\).",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#alternating-example",
+    "href": "classes/18/slides.html#alternating-example",
+    "title": "Sequences",
+    "section": "Alternating Example",
+    "text": "Alternating Example\n\n\nTwo alternating sequences\n\nThe left graph alternates between minus one and one. The right graph alternates above and below zero with magnitudes one divided by n, shrinking toward zero.     2026-10-20T19:33:58.227760 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             4             8             12    n                 −1             0             1       a n                                     a n n = ( − 1 )                    0             4             8             12    n                                                                a n n n = ( − 1 ) /",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#definition-of-limit",
+    "href": "classes/18/slides.html#definition-of-limit",
+    "title": "Sequences",
+    "section": "Definition of Limit",
+    "text": "Definition of Limit\nA sequence \\(\\{a_n\\}\\) converges to \\(L\\) if, for every \\(\\epsilon&gt;0\\), there is an integer \\(N\\) such that\n\\(|a_n-L|&lt;\\epsilon\\quad\\text{for all }n\\ge N.\\)",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#divergence-to-infinity",
+    "href": "classes/18/slides.html#divergence-to-infinity",
+    "title": "Sequences",
+    "section": "Divergence to Infinity",
+    "text": "Divergence to Infinity\nIf the terms grow without bound, we write\n\\(\\displaystyle \\lim_{n\\to\\infty}(1+3n)=\\infty.\\)\nIf the terms decrease without bound, we write\n\\(\\displaystyle \\lim_{n\\to\\infty}(-5n+2)=-\\infty.\\)",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#using-functions-to-calculate-limits-of-sequences",
+    "href": "classes/18/slides.html#using-functions-to-calculate-limits-of-sequences",
+    "title": "Sequences",
+    "section": "Using Functions to Calculate Limits of Sequences",
+    "text": "Using Functions to Calculate Limits of Sequences\nSuppose \\(a_n=f(n)\\) for \\(n\\ge 1\\).\nIf \\(\\displaystyle \\lim_{x\\to\\infty}f(x)=L\\) for a finite number \\(L\\), then\n\\(\\displaystyle \\lim_{n\\to\\infty}a_n=L.\\)",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#algebraic-limit-rules",
+    "href": "classes/18/slides.html#algebraic-limit-rules",
+    "title": "Sequences",
+    "section": "Algebraic Limit Rules",
+    "text": "Algebraic Limit Rules\nSuppose \\(a_n\\to A\\) and \\(b_n\\to B\\), with \\(A\\) and \\(B\\) finite.\n\n\\(\\displaystyle \\lim_{n\\to\\infty}c=c\\)\n\\(\\displaystyle \\lim_{n\\to\\infty}(ca_n)=cA\\)\n\\(\\displaystyle \\lim_{n\\to\\infty}(a_n\\pm b_n)=A\\pm B\\)\n\\(\\displaystyle \\lim_{n\\to\\infty}(a_nb_n)=AB\\)\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{a_n}{b_n}=\\frac{A}{B}\\), provided \\(B\\ne0\\) and \\(b_n\\ne0\\).",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#a-first-limit-example",
+    "href": "classes/18/slides.html#a-first-limit-example",
+    "title": "Sequences",
+    "section": "A First Limit Example",
+    "text": "A First Limit Example\nDetermine whether \\(\\left\\{5-\\dfrac{3}{n^2}\\right\\}\\) converges. If so, find its limit.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#a-rational-sequence",
+    "href": "classes/18/slides.html#a-rational-sequence",
+    "title": "Sequences",
+    "section": "A Rational Sequence",
+    "text": "A Rational Sequence\nDetermine whether \\(\\left\\{\\dfrac{3n^4-7n^2+5}{6-4n^4}\\right\\}\\) converges.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#another-limit",
+    "href": "classes/18/slides.html#another-limit",
+    "title": "Sequences",
+    "section": "Another Limit",
+    "text": "Another Limit\nDetermine whether \\(\\left\\{\\dfrac{2^n}{n^2}\\right\\}\\) converges.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#function-raised-to-the-n-power",
+    "href": "classes/18/slides.html#function-raised-to-the-n-power",
+    "title": "Sequences",
+    "section": "Function raised to the \\(n\\) power",
+    "text": "Function raised to the \\(n\\) power\nFind \\(\\displaystyle \\lim_{n\\to\\infty}\\left(1+\\frac{4}{n}\\right)^n\\).",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#squeeze-theorem-for-sequences",
+    "href": "classes/18/slides.html#squeeze-theorem-for-sequences",
+    "title": "Sequences",
+    "section": "Squeeze Theorem for Sequences",
+    "text": "Squeeze Theorem for Sequences\nSuppose \\(a_n\\le b_n\\le c_n\\) for all sufficiently large \\(n\\).\nIf \\(a_n\\to L\\) and \\(c_n\\to L\\), then \\(b_n\\to L\\).\n\nA useful special case is\n\\(-|b_n|\\le b_n\\le |b_n|.\\)\nIf \\(|b_n|\\to0\\), then \\(b_n\\to0\\).",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#squeeze-theorem-example",
+    "href": "classes/18/slides.html#squeeze-theorem-example",
+    "title": "Sequences",
+    "section": "Squeeze Theorem Example",
+    "text": "Squeeze Theorem Example\nFind \\(\\displaystyle \\lim_{n\\to\\infty}\\frac{\\cos n}{n^2}\\).\n\nSince \\(-1\\le\\cos n\\le1\\),\n\\(\\displaystyle -\\frac{1}{n^2}\\le\\frac{\\cos n}{n^2}\\le\\frac{1}{n^2}.\\)\nBoth bounding sequences approach \\(0\\).\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{\\cos n}{n^2}=0.\\)",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#another-squeeze-theorem-example",
+    "href": "classes/18/slides.html#another-squeeze-theorem-example",
+    "title": "Sequences",
+    "section": "Another Squeeze THeorem Example",
+    "text": "Another Squeeze THeorem Example\nFind \\(\\displaystyle \\lim_{n\\to\\infty}\\left(-\\frac{1}{2}\\right)^n\\).\n\n\\(\\displaystyle -\\frac{1}{2^n}\\le\\left(-\\frac{1}{2}\\right)^n\\le\\frac{1}{2^n}.\\)\nSince both bounds approach \\(0\\), the Squeeze Theorem gives\n\\(\\displaystyle \\lim_{n\\to\\infty}\\left(-\\frac{1}{2}\\right)^n=0.\\)",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#limits-of-geometric-sequences",
+    "href": "classes/18/slides.html#limits-of-geometric-sequences",
+    "title": "Sequences",
+    "section": "Limits of Geometric Sequences",
+    "text": "Limits of Geometric Sequences\nFor \\(\\{r^n\\}_{n=1}^{\\infty}\\):\n\n\n\nValue of \\(r\\)\nBehavior as \\(n\\to\\infty\\)\n\n\n\n\n\\(|r|&lt;1\\)\nConverges to \\(0\\)\n\n\n\\(r=1\\)\nConverges to \\(1\\)\n\n\n\\(r&gt;1\\)\nDiverges to \\(\\infty\\)\n\n\n\\(r=-1\\)\nDiverges\n\n\n\\(r&lt;-1\\)\nDiverges",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#bounded-sequences",
+    "href": "classes/18/slides.html#bounded-sequences",
+    "title": "Sequences",
+    "section": "Bounded Sequences",
+    "text": "Bounded Sequences\nA sequence is bounded above if some number \\(M\\) satisfies \\(a_n\\le M\\) for every \\(n\\).\nIt is bounded below if some number \\(m\\) satisfies \\(m\\le a_n\\) for every \\(n\\).\nIt is bounded if it is bounded above and below:\n\\(m\\le a_n\\le M\\quad\\text{for every }n.\\)\n\nFor example, \\(0&lt;1/n\\le1\\), so \\(\\{1/n\\}\\) is bounded.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#does-bounded-mean-convergent",
+    "href": "classes/18/slides.html#does-bounded-mean-convergent",
+    "title": "Sequences",
+    "section": "Does Bounded Mean Convergent?",
+    "text": "Does Bounded Mean Convergent?\nEvery convergent sequence is bounded.\nDoes every bounded sequence converge?\n\nConsider \\(a_n=(-1)^n\\).\n\\(-1\\le a_n\\le1\\), but the terms do not approach one value.\nBoundedness alone does not guarantee convergence.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#monotone-sequences",
+    "href": "classes/18/slides.html#monotone-sequences",
+    "title": "Sequences",
+    "section": "Monotone Sequences",
+    "text": "Monotone Sequences\nA sequence is increasing if \\(a_n\\le a_{n+1}\\) for every \\(n\\).\nIt is decreasing if \\(a_n\\ge a_{n+1}\\) for every \\(n\\).\nA sequence that is increasing or decreasing is monotone.\n\nIf the inequalities hold for all \\(n\\ge n_0\\), the sequence is eventually monotone.\nEquality is allowed in these definitions.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#checking-monotonicity",
+    "href": "classes/18/slides.html#checking-monotonicity",
+    "title": "Sequences",
+    "section": "Checking Monotonicity",
+    "text": "Checking Monotonicity\nTo compare consecutive terms, examine \\(a_{n+1}-a_n\\).\n\nIf \\(a_{n+1}-a_n\\ge0\\), the sequence is increasing.\nIf \\(a_{n+1}-a_n\\le0\\), the sequence is decreasing.\n\nFor positive sequences \\(a_n\\ge0\\), we can compare \\(a_{n+1}/a_n\\) with \\(1\\).\n\nIf \\(a_{n+1}/a_n&lt;1\\) the sequence is decreasing.\nIf \\(a_{n+1}/a_n&lt;1\\) the sequence is decreasing.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#monotone-convergence-theorem",
+    "href": "classes/18/slides.html#monotone-convergence-theorem",
+    "title": "Sequences",
+    "section": "Monotone Convergence Theorem",
+    "text": "Monotone Convergence Theorem\nA bounded sequence that is eventually monotone converges.\nIn particular:\n\nAn increasing sequence that is bounded above converges.\nA decreasing sequence that is bounded below converges\n\nThis is a tool to establish that a limit exists.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#a-sequence-that-eventually-decreases",
+    "href": "classes/18/slides.html#a-sequence-that-eventually-decreases",
+    "title": "Sequences",
+    "section": "A Sequence That Eventually Decreases",
+    "text": "A Sequence That Eventually Decreases\nUse the Monotone Convergence Theorem for \\(a_n=\\dfrac{4^n}{n!}\\).\nThe first few terms are \\(4,8,\\dfrac{32}{3},\\dfrac{32}{3},\\dfrac{128}{15},\\ldots\\)\n\n\\(\\displaystyle \\frac{a_{n+1}}{a_n}=\\frac{4}{n+1}\\le1\\quad\\text{when }n\\ge3.\\)\nThe sequence is decreasing for \\(n\\ge3\\) and bounded below by \\(0\\).\nTherefore, the sequence converges.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#finding-the-factorial-sequence-limit",
+    "href": "classes/18/slides.html#finding-the-factorial-sequence-limit",
+    "title": "Sequences",
+    "section": "Finding the Factorial Sequence Limit",
+    "text": "Finding the Factorial Sequence Limit\nWe have established convergence. Let \\(a_n\\to L\\).\nOmitting the first term does not change the limit, so \\(a_{n+1}\\to L\\).\n\n\\(\\displaystyle a_{n+1}=\\frac{4}{n+1}a_n.\\)\nTaking limits gives \\(L=0\\cdot L=0\\).\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{4^n}{n!}=0.\\)",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#a-recursive-sequence",
+    "href": "classes/18/slides.html#a-recursive-sequence",
+    "title": "Sequences",
+    "section": "A Recursive Sequence",
+    "text": "A Recursive Sequence\nLet \\(a_1=2\\) and \\(\\displaystyle a_{n+1}=\\frac{a_n}{2}+\\frac{1}{2a_n}\\) for \\(n\\ge1\\).\nWrite the first four terms. What do they suggest?\n\n\\(\\displaystyle 2,\\frac{5}{4},\\frac{41}{40},\\frac{3281}{3280},\\ldots\\)\nThe terms appear to decrease toward \\(1\\).\nWe will establish a lower bound and prove monotonicity.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#recursive-sequence-a-lower-bound",
+    "href": "classes/18/slides.html#recursive-sequence-a-lower-bound",
+    "title": "Sequences",
+    "section": "Recursive Sequence: A Lower Bound",
+    "text": "Recursive Sequence: A Lower Bound\nSince \\(a_1&gt;0\\), the recurrence gives \\(a_n&gt;0\\) for every \\(n\\).\nNow calculate\n\\(\\displaystyle a_{n+1}-1=\\frac{a_n^2+1-2a_n}{2a_n}=\\frac{(a_n-1)^2}{2a_n}\\ge0.\\)\n\nTherefore, \\(a_{n+1}\\ge1\\).\nTogether with \\(a_1=2\\), this gives \\(a_n\\ge1\\) for every \\(n\\).",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#recursive-sequence-decreasing-terms",
+    "href": "classes/18/slides.html#recursive-sequence-decreasing-terms",
+    "title": "Sequences",
+    "section": "Recursive Sequence: Decreasing Terms",
+    "text": "Recursive Sequence: Decreasing Terms\nUsing \\(a_n\\ge1\\),\n\\(\\displaystyle a_{n+1}-a_n=\\frac{a_n}{2}+\\frac{1}{2a_n}-a_n\\)\n\\(\\displaystyle =\\frac{1-a_n^2}{2a_n}\\le0.\\)\n\nThe sequence is decreasing and bounded below by \\(1\\).\nThe Monotone Convergence Theorem guarantees convergence.",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/18/slides.html#recursive-sequence-finding-the-limit",
+    "href": "classes/18/slides.html#recursive-sequence-finding-the-limit",
+    "title": "Sequences",
+    "section": "Recursive Sequence: Finding the Limit",
+    "text": "Recursive Sequence: Finding the Limit\nLet \\(a_n\\to L\\). Since \\(a_n\\ge1\\), we have \\(L\\ge1\\).\nTaking limits in the recurrence gives\n\\(\\displaystyle L=\\frac{L}{2}+\\frac{1}{2L}.\\)\n\n\\(2L^2=L^2+1\\), so \\(L^2=1\\).\nSince \\(L\\ge1\\), the limit is \\(L=1\\).",
+    "crumbs": [
+      "Class Material",
+      "Sequences"
+    ]
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#infinite-series",
+    "href": "classes/19/infinite-series-5-2.html#infinite-series",
+    "title": "Infinite Series",
+    "section": "Infinite Series",
+    "text": "Infinite Series\nClass Session Goals:\n\nExplain the meaning of the sum of an infinite series.\nDetermine convergence using the sequence of partial sums.\nCalculate the sum of a geometric series.\nEvaluate a telescoping series."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#from-sequences-to-series",
+    "href": "classes/19/infinite-series-5-2.html#from-sequences-to-series",
+    "title": "Infinite Series",
+    "section": "From Sequences to Series",
+    "text": "From Sequences to Series\nA sequence is an ordered list of terms:\n\\(a_1,a_2,a_3,\\ldots\\)\nAn infinite series adds the terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=a_1+a_2+a_3+\\cdots\\)\nWhat does it mean to add infinitely many numbers?"
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#partial-sums",
+    "href": "classes/19/infinite-series-5-2.html#partial-sums",
+    "title": "Infinite Series",
+    "section": "Partial Sums",
+    "text": "Partial Sums\nThe \\(k\\)th partial sum adds the first \\(k\\) terms:\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}a_n.\\)\n\\(S_1=a_1\\)\n\\(S_2=a_1+a_2\\)\n\\(S_3=a_1+a_2+a_3\\)\nThe partial sums form a new sequence: \\(\\{S_k\\}\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#an-accumulation-example",
+    "href": "classes/19/infinite-series-5-2.html#an-accumulation-example",
+    "title": "Infinite Series",
+    "section": "An Accumulation Example",
+    "text": "An Accumulation Example\nOil enters a lake at \\(1000\\) gallons during the first week, \\(500\\) during the second, and \\(250\\) during the third.\nSuppose each week adds half as much oil as the previous week, and none is removed.\nThe total after \\(k\\) weeks, in thousands of gallons, is\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\left(\\frac{1}{2}\\right)^{n-1}.\\)\nWill the total grow without bound?"
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#computing-partial-sums",
+    "href": "classes/19/infinite-series-5-2.html#computing-partial-sums",
+    "title": "Infinite Series",
+    "section": "Computing Partial Sums",
+    "text": "Computing Partial Sums\nFor \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\cdots\\):\n\n\n\n\\(k\\)\n1\n2\n3\n4\n5\n\n\n\n\n\\(S_k\\)\n\\(1\\)\n\\(3/2\\)\n\\(7/4\\)\n\\(15/8\\)\n\\(31/16\\)\n\n\n\n\nThese partial sums suggest \\(S_k=2-\\dfrac{1}{2^{k-1}}\\).\nWe will justify this formula using a finite geometric sum."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#the-sequence-of-partial-sums",
+    "href": "classes/19/infinite-series-5-2.html#the-sequence-of-partial-sums",
+    "title": "Infinite Series",
+    "section": "The Sequence of Partial Sums",
+    "text": "The Sequence of Partial Sums\n\n\nPartial sums of one plus one-half plus one-quarter and so on\n\nPoints at k from one to ten show the finite sums S_k increasing from one toward the dashed line at two. The points represent partial sums, rather than individual terms.     2026-10-21T11:10:54.868138 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             2             4             6             8             10    k                 0             1             2       S k                                S = 2        \n\nEach point represents a finite sum. The partial sums approach \\(2\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#the-sum-of-an-infinite-series",
+    "href": "classes/19/infinite-series-5-2.html#the-sum-of-an-infinite-series",
+    "title": "Infinite Series",
+    "section": "The Sum of an Infinite Series",
+    "text": "The Sum of an Infinite Series\nIf \\(S_k\\to S\\) for a finite number \\(S\\), the series converges and\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=S.\\)\nIf the partial sums do not converge, the series diverges.\n\nFor the oil example, \\(S_k\\to2\\) means that the accumulated oil approaches \\(2000\\) gallons."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#terms-and-partial-sums",
+    "href": "classes/19/infinite-series-5-2.html#terms-and-partial-sums",
+    "title": "Infinite Series",
+    "section": "Terms and Partial Sums",
+    "text": "Terms and Partial Sums\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\):\n\n\n\n\nFormula\nLimit\n\n\n\n\nTerms\n\\(a_n=(1/2)^{n-1}\\)\n\\(a_n\\to0\\)\n\n\nPartial sums\n\\(S_k=2-2^{1-k}\\)\n\\(S_k\\to2\\)\n\n\n\nThe sum of the series is the limit of partial sums.\nThe individual terms and the running totals answer different questions."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#divergence-by-growing-partial-sums",
+    "href": "classes/19/infinite-series-5-2.html#divergence-by-growing-partial-sums",
+    "title": "Infinite Series",
+    "section": "Divergence by Growing Partial Sums",
+    "text": "Divergence by Growing Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{n+1}\\) converges.\n\nFor \\(n\\ge1\\), \\(\\dfrac{n}{n+1}\\ge\\dfrac{1}{2}\\).\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\frac{n}{n+1}\\ge\\frac{k}{2}.\\)\nThe partial sums grow without bound, so the series diverges."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#divergence-by-oscillating-partial-sums",
+    "href": "classes/19/infinite-series-5-2.html#divergence-by-oscillating-partial-sums",
+    "title": "Infinite Series",
+    "section": "Divergence by Oscillating Partial Sums",
+    "text": "Divergence by Oscillating Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n\\) converges.\n\n\\(S_1=-1,\\quad S_2=0,\\quad S_3=-1,\\quad S_4=0.\\)\nIn general, \\(S_k=-1\\) when \\(k\\) is odd and \\(S_k=0\\) when \\(k\\) is even.\nThe partial sums are bounded but do not approach one number.\nThe series diverges."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#a-convergent-example",
+    "href": "classes/19/infinite-series-5-2.html#a-convergent-example",
+    "title": "Infinite Series",
+    "section": "A Convergent Example",
+    "text": "A Convergent Example\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\).\n\\(S_1=\\frac{1}{2},\\quad S_2=\\frac{2}{3},\\quad S_3=\\frac{3}{4},\\quad S_4=\\frac{4}{5}.\\)\n\nThe pattern suggests \\(S_k=\\dfrac{k}{k+1}\\).\nWe will prove this by cancellation when we discuss telescoping series.\nSince \\(k/(k+1)\\to1\\), the series converges to \\(1\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#changing-the-starting-index",
+    "href": "classes/19/infinite-series-5-2.html#changing-the-starting-index",
+    "title": "Infinite Series",
+    "section": "Changing the Starting Index",
+    "text": "Changing the Starting Index\nThese expressions list the same terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}=\\sum_{m=0}^{\\infty}\\left(\\frac{1}{2}\\right)^m.\\)\nHere \\(m=n-1\\).\n\nChanging the index requires changing both the starting value and the formula.\nWriting out the first few terms is a useful check."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#the-harmonic-series",
+    "href": "classes/19/infinite-series-5-2.html#the-harmonic-series",
+    "title": "Infinite Series",
+    "section": "The Harmonic Series",
+    "text": "The Harmonic Series\nThe harmonic series is\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}=1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+\\cdots\\)\nIts terms approach \\(0\\). Does the series converge?\n\nThe harmonic series diverges. We will show that its partial sums are unbounded."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#grouping-the-harmonic-terms",
+    "href": "classes/19/infinite-series-5-2.html#grouping-the-harmonic-terms",
+    "title": "Infinite Series",
+    "section": "Grouping the Harmonic Terms",
+    "text": "Grouping the Harmonic Terms\nGroup consecutive terms in blocks of \\(1,2,4,8,\\ldots\\) terms after the initial \\(1\\).\n\\(\\displaystyle \\frac{1}{3}+\\frac{1}{4}\\ge2\\left(\\frac{1}{4}\\right)=\\frac{1}{2}.\\)\n\\(\\displaystyle \\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}\\ge4\\left(\\frac{1}{8}\\right)=\\frac{1}{2}.\\)\n\nThe block from \\(n=2^{j-1}+1\\) through \\(n=2^j\\) has \\(2^{j-1}\\) terms.\nEach term is at least \\(1/2^j\\), so each block adds at least \\(1/2\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#why-the-harmonic-series-diverges",
+    "href": "classes/19/infinite-series-5-2.html#why-the-harmonic-series-diverges",
+    "title": "Infinite Series",
+    "section": "Why the Harmonic Series Diverges",
+    "text": "Why the Harmonic Series Diverges\nThe partial sum through \\(2^j\\) terms satisfies\n\\(\\displaystyle S_{2^j}\\ge1+\\frac{j}{2}.\\)\nThe right side grows without bound as \\(j\\to\\infty\\).\n\nAll terms are positive, so all later partial sums are at least as large.\nTherefore, \\(S_k\\to\\infty\\) and the harmonic series diverges."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#terms-approaching-zero-are-not-enough",
+    "href": "classes/19/infinite-series-5-2.html#terms-approaching-zero-are-not-enough",
+    "title": "Infinite Series",
+    "section": "Terms Approaching Zero Are Not Enough",
+    "text": "Terms Approaching Zero Are Not Enough\nCompare these two series:\n\n\n\n\n\n\n\n\nSeries\nLimit of its terms\nBehavior of partial sums\n\n\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}\\)\n\\(0\\)\nGrow without bound\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\)\n\\(0\\)\nApproach \\(1\\)\n\n\n\nKnowing that the terms approach \\(0\\) does not determine whether their series converges."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#algebraic-properties-of-series",
+    "href": "classes/19/infinite-series-5-2.html#algebraic-properties-of-series",
+    "title": "Infinite Series",
+    "section": "Algebraic Properties of Series",
+    "text": "Algebraic Properties of Series\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=A\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n=B\\) both converge.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n+b_n)=A+B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n-b_n)=A-B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ca_n=cA\\)\nThese rules follow by taking limits of finite partial sums."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#geometric-series",
+    "href": "classes/19/infinite-series-5-2.html#geometric-series",
+    "title": "Infinite Series",
+    "section": "Geometric Series",
+    "text": "Geometric Series\nA geometric series has the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=a+ar+ar^2+ar^3+\\cdots\\)\nHere \\(a\\) is the first term and \\(r\\) is the common ratio.\nFor example,\n\\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\cdots\\) has \\(a=1\\) and \\(r=\\frac{1}{2}\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#a-finite-geometric-sum",
+    "href": "classes/19/infinite-series-5-2.html#a-finite-geometric-sum",
+    "title": "Infinite Series",
+    "section": "A Finite Geometric Sum",
+    "text": "A Finite Geometric Sum\nStart with \\(S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\).\nMultiply by \\(r\\):\n\\(rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\)\n\nSubtract to obtain \\((1-r)S_k=a-ar^k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#the-geometric-series-formula",
+    "href": "classes/19/infinite-series-5-2.html#the-geometric-series-formula",
+    "title": "Infinite Series",
+    "section": "The Geometric Series Formula",
+    "text": "The Geometric Series Formula\nIf \\(|r|&lt;1\\), then \\(r^k\\to0\\).\nTaking the limit of the finite sum gives\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=\\frac{a}{1-r},\\qquad |r|&lt;1.\\)\n\nFor \\(a\\ne0\\), the geometric series diverges when \\(|r|\\ge1\\).\nThe case \\(a=0\\) gives the zero series."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#what-happens-when-rge1",
+    "href": "classes/19/infinite-series-5-2.html#what-happens-when-rge1",
+    "title": "Infinite Series",
+    "section": "What Happens When \\(|r|\\ge1\\)?",
+    "text": "What Happens When \\(|r|\\ge1\\)?\nAssume \\(a\\ne0\\).\n\nIf \\(r=1\\), then \\(S_k=ka\\), which is unbounded.\nIf \\(r=-1\\), the partial sums alternate between \\(a\\) and \\(0\\).\nIf \\(|r|&gt;1\\), the formula \\(S_k=a(1-r^k)/(1-r)\\) gives unbounded partial sums.\n\nAlways check \\(|r|&lt;1\\) before using \\(a/(1-r)\\) as an infinite sum."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#a-negative-geometric-ratio",
+    "href": "classes/19/infinite-series-5-2.html#a-negative-geometric-ratio",
+    "title": "Infinite Series",
+    "section": "A Negative Geometric Ratio",
+    "text": "A Negative Geometric Ratio\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-3)^{n+1}}{4^{n-1}}\\) converges. If so, find its sum.\n\n\\(\\displaystyle \\frac{(-3)^{n+1}}{4^{n-1}}=9\\left(-\\frac{3}{4}\\right)^{n-1}.\\)\nThe first term is \\(a=9\\) and the ratio is \\(r=-3/4\\).\nSince \\(|r|&lt;1\\), the sum is \\(\\displaystyle \\frac{9}{1-(-3/4)}=\\frac{36}{7}\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#a-shifted-geometric-series",
+    "href": "classes/19/infinite-series-5-2.html#a-shifted-geometric-series",
+    "title": "Infinite Series",
+    "section": "A Shifted Geometric Series",
+    "text": "A Shifted Geometric Series\nEvaluate \\(\\displaystyle \\sum_{n=0}^{\\infty}\\left(\\frac{2}{3}\\right)^{n+2}\\).\n\nThe first few terms are \\(\\displaystyle \\frac{4}{9}+\\frac{8}{27}+\\frac{16}{81}+\\cdots\\)\nTherefore, \\(a=4/9\\) and \\(r=2/3\\).\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\left(\\frac{2}{3}\\right)^{n+2}=\\frac{4/9}{1-2/3}=\\frac{4}{3}.\\)"
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#a-divergent-geometric-series",
+    "href": "classes/19/infinite-series-5-2.html#a-divergent-geometric-series",
+    "title": "Infinite Series",
+    "section": "A Divergent Geometric Series",
+    "text": "A Divergent Geometric Series\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}e^{2n}\\) converges.\n\n\\(\\displaystyle e^{2n}=e^2(e^2)^{n-1}.\\)\nThe first term is \\(a=e^2\\) and the ratio is \\(r=e^2&gt;1\\).\nThe series diverges."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#repeating-decimals-as-series",
+    "href": "classes/19/infinite-series-5-2.html#repeating-decimals-as-series",
+    "title": "Infinite Series",
+    "section": "Repeating Decimals as Series",
+    "text": "Repeating Decimals as Series\nWrite \\(3.\\overline{26}=3.262626\\ldots\\) as a fraction.\n\n\\(\\displaystyle 3.\\overline{26}=3+\\frac{26}{100}+\\frac{26}{100^2}+\\frac{26}{100^3}+\\cdots\\)\nThe repeating part is geometric with \\(a=26/100\\) and \\(r=1/100\\).\n\\(\\displaystyle 3.\\overline{26}=3+\\frac{26/100}{1-1/100}=3+\\frac{26}{99}=\\frac{323}{99}.\\)"
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#combining-convergent-series",
+    "href": "classes/19/infinite-series-5-2.html#combining-convergent-series",
+    "title": "Infinite Series",
+    "section": "Combining Convergent Series",
+    "text": "Combining Convergent Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\frac{3}{n(n+1)}+\\left(\\frac{1}{2}\\right)^{n-2}\\right]\\).\n\nBoth component series converge. Since \\((1/2)^{n-2}=2(1/2)^{n-1}\\),\n\\(\\displaystyle 3\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}+2\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\)\n\\(=3(1)+2(2)=7.\\)"
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#the-koch-snowflake",
+    "href": "classes/19/infinite-series-5-2.html#the-koch-snowflake",
+    "title": "Infinite Series",
+    "section": "The Koch Snowflake",
+    "text": "The Koch Snowflake\nStart with an equilateral triangle of side length \\(1\\).\nAt each step, replace the middle third of every segment with two sides of an outward equilateral triangle.\n\n\nFirst four stages of the Koch snowflake\n\nFour figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.     2026-10-21T11:10:55.024373 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                     F 0             F 1             F 2             F 3                   \n\nWhat happens to the perimeter and the enclosed area?"
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#koch-snowflake-perimeter",
+    "href": "classes/19/infinite-series-5-2.html#koch-snowflake-perimeter",
+    "title": "Infinite Series",
+    "section": "Koch Snowflake: Perimeter",
+    "text": "Koch Snowflake: Perimeter\nAt stage \\(n\\), let \\(N_n\\) count the sides and \\(l_n\\) be the length of each side.\nEach step creates four segments, each one-third as long:\n\\(N_n=3\\cdot4^n,\\qquad l_n=\\left(\\frac{1}{3}\\right)^n.\\)\n\n\\(\\displaystyle L_n=N_nl_n=3\\left(\\frac{4}{3}\\right)^n.\\)\nSince \\(4/3&gt;1\\), the perimeter grows without bound."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#koch-snowflake-added-area",
+    "href": "classes/19/infinite-series-5-2.html#koch-snowflake-added-area",
+    "title": "Infinite Series",
+    "section": "Koch Snowflake: Added Area",
+    "text": "Koch Snowflake: Added Area\nLet \\(A_0=\\sqrt{3}/4\\) be the area of the original triangle.\nAt step \\(n\\ge1\\):\n\nThere are \\(3\\cdot4^{n-1}\\) new triangles.\nEach has side length \\(1/3^n\\) and area \\(A_0/9^n\\).\n\n\nThe added area is \\(\\displaystyle \\Delta A_n=\\frac{A_0}{3}\\left(\\frac{4}{9}\\right)^{n-1}\\).\nThe added areas form a geometric sequence with ratio \\(4/9\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#koch-snowflake-total-area",
+    "href": "classes/19/infinite-series-5-2.html#koch-snowflake-total-area",
+    "title": "Infinite Series",
+    "section": "Koch Snowflake: Total Area",
+    "text": "Koch Snowflake: Total Area\nThe limiting area is the original area plus all the added areas:\n\\(\\displaystyle A=A_0+\\frac{A_0}{3}\\sum_{n=1}^{\\infty}\\left(\\frac{4}{9}\\right)^{n-1}.\\)\n\n\\(\\displaystyle A=A_0+\\frac{A_0/3}{1-4/9}=\\frac{8}{5}A_0=\\frac{2\\sqrt{3}}{5}.\\)\nThe Koch snowflake has finite area and infinite perimeter."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#telescoping-series",
+    "href": "classes/19/infinite-series-5-2.html#telescoping-series",
+    "title": "Infinite Series",
+    "section": "Telescoping Series",
+    "text": "Telescoping Series\nA telescoping series has partial sums in which most terms cancel.\nFor example, partial fractions give\n\\(\\displaystyle \\frac{1}{n(n+1)}=\\frac{1}{n}-\\frac{1}{n+1}.\\)\n\nThus \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{n}-\\frac{1}{n+1}\\right)\\).\nFirst cancel in a finite partial sum, then take its limit."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#seeing-the-cancellation",
+    "href": "classes/19/infinite-series-5-2.html#seeing-the-cancellation",
+    "title": "Infinite Series",
+    "section": "Seeing the Cancellation",
+    "text": "Seeing the Cancellation\n\\(\\displaystyle S_3=\\left(1-\\frac{1}{2}\\right)+\\left(\\frac{1}{2}-\\frac{1}{3}\\right)+\\left(\\frac{1}{3}-\\frac{1}{4}\\right)=1-\\frac{1}{4}.\\)\n\nFor \\(k\\) terms, the same cancellation leaves\n\\(\\displaystyle S_k=1-\\frac{1}{k+1}=\\frac{k}{k+1}.\\)\nTherefore, \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\lim_{k\\to\\infty}S_k=1\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#a-general-telescoping-sum",
+    "href": "classes/19/infinite-series-5-2.html#a-general-telescoping-sum",
+    "title": "Infinite Series",
+    "section": "A General Telescoping Sum",
+    "text": "A General Telescoping Sum\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\),\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1}).\\)\n\n\\(S_k=b_1-b_{k+1}.\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)"
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#a-trigonometric-telescoping-series",
+    "href": "classes/19/infinite-series-5-2.html#a-trigonometric-telescoping-series",
+    "title": "Infinite Series",
+    "section": "A Trigonometric Telescoping Series",
+    "text": "A Trigonometric Telescoping Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]\\).\n\n\\(\\displaystyle S_k=\\cos(1)-\\cos\\left(\\frac{1}{k+1}\\right).\\)\nSince \\(1/(k+1)\\to0\\) and cosine is continuous,\n\\(\\displaystyle \\lim_{k\\to\\infty}S_k=\\cos(1)-\\cos(0)=\\cos(1)-1.\\)"
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#telescoping-does-not-guarantee-convergence",
+    "href": "classes/19/infinite-series-5-2.html#telescoping-does-not-guarantee-convergence",
+    "title": "Infinite Series",
+    "section": "Telescoping Does Not Guarantee Convergence",
+    "text": "Telescoping Does Not Guarantee Convergence\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\sqrt{n}-\\sqrt{n+1}\\right)\\) converges.\n\nThe \\(k\\)th partial sum is \\(S_k=1-\\sqrt{k+1}\\).\nAs \\(k\\to\\infty\\), \\(S_k\\to-\\infty\\).\nThe series telescopes, but it diverges."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#strategy-for-infinite-series",
+    "href": "classes/19/infinite-series-5-2.html#strategy-for-infinite-series",
+    "title": "Infinite Series",
+    "section": "Strategy for Infinite Series",
+    "text": "Strategy for Infinite Series\n\nWrite a few terms and identify the starting index.\nFor a geometric series, find the first term and common ratio.\nFor a telescoping series, simplify a finite partial sum.\nTake the limit of the partial sums to determine the sum.\nRemember that terms approaching zero do not establish convergence."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#practice",
+    "href": "classes/19/infinite-series-5-2.html#practice",
+    "title": "Infinite Series",
+    "section": "Practice",
+    "text": "Practice\nDetermine whether each series converges. If it does, find its sum.\n\n\\(\\displaystyle \\sum_{n=2}^{\\infty}5\\left(\\frac{1}{3}\\right)^n\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}4\\left(-\\frac{2}{3}\\right)^{n-1}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+2)}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\ln(n+1)-\\ln n\\right]\\)"
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#practice-a-repeating-decimal",
+    "href": "classes/19/infinite-series-5-2.html#practice-a-repeating-decimal",
+    "title": "Infinite Series",
+    "section": "Practice: A Repeating Decimal",
+    "text": "Practice: A Repeating Decimal\nWrite \\(2.\\overline{14}=2.141414\\ldots\\) as a fraction using a geometric series.\n\nIdentify the first term and ratio of the repeating part.\nState why that geometric series converges.\nAdd the integer part and simplify the fraction."
+  },
+  {
+    "objectID": "classes/19/worksheet.html",
+    "href": "classes/19/worksheet.html",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/19/worksheet.html#null",
+    "href": "classes/19/worksheet.html#null",
     "title": "TBD",
     "section": "",
     "text": "Hint"

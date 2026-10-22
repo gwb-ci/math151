@@ -376,6 +376,7 @@ $\displaystyle \frac{.0185}{.000185}=100$
 
 
 10 times the sample 100 times the accuracy.
+
 ---
 
 
@@ -536,7 +537,7 @@ Using $n=10$ and $\Delta t=.1$:
 
 ::: {.column width="50%"}
 
-| $t_i$ (s) | $v_i_$ (m/s) |
+| $t_i$ (s) | $v_i$ (m/s) |
 |:--|--:|
 | 0.0 | 0.000000 |
 | 0.1 | 0.995049 |
@@ -549,7 +550,7 @@ Using $n=10$ and $\Delta t=.1$:
 
 ::: {.column width="50%"}
 
-| $t_i$ (s) | $v_i_$ (m/s) |
+| $t_i$ (s) | $v_i$ (m/s) |
 |:--|--:|
 | 0.6 | 5.365616 |
 | 0.7 | 6.039301 |
