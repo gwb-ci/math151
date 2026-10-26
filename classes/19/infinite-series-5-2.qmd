@@ -1,5 +1,5 @@
 ---
-title: "Infinite Series"
+title: "Infinite Sequences and  Series"
 
 format:
   revealjs:
@@ -18,6 +18,119 @@ Class Session Goals:
 - Evaluate a telescoping series.
 
 ---
+
+
+## Squeeze Theorem for Sequences
+
+Suppose $a_n\le b_n\le c_n$ for all sufficiently large $n$.
+
+If $a_n\to L$ and $c_n\to L$, then $b_n\to L$.
+
+. . .
+
+A useful special case is
+
+$-|b_n|\le b_n\le |b_n|.$
+
+If $|b_n|\to0$, then $b_n\to0$.
+
+---
+
+## Squeeze Theorem Example
+
+Find $\displaystyle \lim_{n\to\infty}\frac{\cos n}{n^2}$.
+
+. . .
+
+Since $-1\le\cos n\le1$,
+
+$\displaystyle -\frac{1}{n^2}\le\frac{\cos n}{n^2}\le\frac{1}{n^2}.$
+
+Both bounding sequences approach $0$.
+
+$\displaystyle \lim_{n\to\infty}\frac{\cos n}{n^2}=0.$
+
+---
+
+## Bounded Sequences
+
+A sequence is **bounded above** if some number $M$ satisfies $a_n\le M$ for every $n$.
+
+It is **bounded below** if some number $m$ satisfies $m\le a_n$ for every $n$.
+
+It is **bounded** if it is bounded above and below:
+
+$m\le a_n\le M\quad\text{for every }n.$
+
+. . .
+
+For example, $0<1/n\le1$, so $\{1/n\}$ is bounded.
+
+---
+
+## Monotone Sequences
+
+A sequence is **increasing** if $a_n\le a_{n+1}$ for every $n$.
+
+It is **decreasing** if $a_n\ge a_{n+1}$ for every $n$.
+
+A sequence that is increasing or decreasing is **monotone**.
+
+. . .
+
+If the inequalities hold for all $n\ge N$, the sequence is **eventually monotone**.
+
+Equality is allowed in these definitions.
+
+---
+
+## Checking Monotonicity
+
+To compare consecutive terms, examine $a_{n+1}-a_n$.
+
+- If $a_{n+1}-a_n\ge0$, the sequence is increasing.
+- If $a_{n+1}-a_n\le0$, the sequence is decreasing.
+
+For a positive sequence, comparing $a_{n+1}/a_n$ with $1$ is also useful.
+
+. . .
+
+For $a_n=1/n$, $\displaystyle a_{n+1}-a_n=-\frac{1}{n(n+1)}<0$.
+
+---
+
+## Monotone Convergence Theorem
+
+A bounded sequence that is eventually monotone converges.
+
+In particular:
+
+- An increasing sequence that is bounded above converges.
+- A decreasing sequence that is bounded below converges.
+
+. . .
+
+This establishes the existence of a limit. Finding its value may require another step.
+
+---
+
+## A Sequence That Eventually Decreases
+
+Use the Monotone Convergence Theorem for $a_n=\dfrac{4^n}{n!}$.
+
+The first few terms are $4,8,\dfrac{32}{3},\dfrac{32}{3},\dfrac{128}{15},\ldots$
+
+. . .
+
+$\displaystyle \frac{a_{n+1}}{a_n}=\frac{4}{n+1}\le1\quad\text{when }n\ge3.$
+
+The sequence is decreasing for $n\ge3$ and bounded below by $0$.
+
+Therefore, the sequence converges.
+
+---
+
+
 
 ## From Sequences to Series
 
@@ -49,23 +162,19 @@ The partial sums form a new sequence: $\{S_k\}$.
 
 ---
 
-## An Accumulation Example
+## Sum of Powers of $\frac{1}{2}$
 
-Oil enters a lake at $1000$ gallons during the first week, $500$ during the second, and $250$ during the third.
-
-Suppose each week adds half as much oil as the previous week, and none is removed.
-
-The total after $k$ weeks, in thousands of gallons, is
+$\displaystyle 1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}\cdots$
 
 $\displaystyle S_k=\sum_{n=1}^{k}\left(\frac{1}{2}\right)^{n-1}.$
 
-Will the total grow without bound?
+Can we calculate this infinites sum of infinite numbers?
 
 ---
 
 ## Computing Partial Sums
 
-For $\displaystyle 1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots$:
+For $\displaystyle 1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots$
 
 | $k$ | 1 | 2 | 3 | 4 | 5 |
 |:--|--:|--:|--:|--:|--:|
@@ -75,7 +184,7 @@ For $\displaystyle 1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots$:
 
 These partial sums suggest $S_k=2-\dfrac{1}{2^{k-1}}$.
 
-We will justify this formula using a finite geometric sum.
+
 
 ---
 
@@ -333,7 +442,7 @@ z
 </svg>
 
 
-Each point represents a finite sum. The partial sums approach $2$.
+
 
 ---
 
@@ -347,7 +456,7 @@ If the partial sums do not converge, the series **diverges**.
 
 . . .
 
-For the oil example, $S_k\to2$ means that the accumulated oil approaches $2000$ gallons.
+In our example $\lim_{k \to \infty} S_k = 2$.
 
 ---
 
@@ -360,9 +469,9 @@ For $\displaystyle \sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n-1}$:
 | Terms | $a_n=(1/2)^{n-1}$ | $a_n\to0$ |
 | Partial sums | $S_k=2-2^{1-k}$ | $S_k\to2$ |
 
-The sum of the series is the limit of **partial sums**.
+The sum of the series is the limit of partial sums.
 
-The individual terms and the running totals answer different questions.
+
 
 ---
 
@@ -376,7 +485,8 @@ For $n\ge1$, $\dfrac{n}{n+1}\ge\dfrac{1}{2}$.
 
 $\displaystyle S_k=\sum_{n=1}^{k}\frac{n}{n+1}\ge\frac{k}{2}.$
 
-The partial sums grow without bound, so the series diverges.
+
+$\{S_k\} \ge \{\frac{k}{2}\}$. Since $\frac{k}{2}# diverges, so does $\{S_k\}$.
 
 ---
 
@@ -404,27 +514,12 @@ $S_1=\frac{1}{2},\quad S_2=\frac{2}{3},\quad S_3=\frac{3}{4},\quad S_4=\frac{4}{
 
 . . .
 
-The pattern suggests $S_k=\dfrac{k}{k+1}$.
+The pattern suggests $S_k=\dfrac{k}{k+1}$.  Calculate the limit.
 
-We will prove this by cancellation when we discuss telescoping series.
 
-Since $k/(k+1)\to1$, the series converges to $1$.
 
----
 
-## Changing the Starting Index
-
-These expressions list the same terms:
-
-$\displaystyle \sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n-1}=\sum_{m=0}^{\infty}\left(\frac{1}{2}\right)^m.$
-
-Here $m=n-1$.
-
-. . .
-
-Changing the index requires changing both the starting value and the formula.
-
-Writing out the first few terms is a useful check.
+## Best I can hope for in 50 minutes
 
 ---
 
@@ -436,7 +531,6 @@ $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\frac{1}
 
 Its terms approach $0$. Does the series converge?
 
-. . .
 
 The harmonic series diverges. We will show that its partial sums are unbounded.
 
@@ -523,7 +617,6 @@ Multiply by $r$:
 
 $rS_k=ar+ar^2+\cdots+ar^{k-1}+ar^k.$
 
-. . .
 
 Subtract to obtain $(1-r)S_k=a-ar^k$.
 
@@ -539,7 +632,6 @@ Taking the limit of the finite sum gives
 
 $\displaystyle \sum_{n=1}^{\infty}ar^{n-1}=\frac{a}{1-r},\qquad |r|<1.$
 
-. . .
 
 For $a\ne0$, the geometric series diverges when $|r|\ge1$.
 
@@ -601,19 +693,7 @@ The series diverges.
 
 ---
 
-## Repeating Decimals as Series
 
-Write $3.\overline{26}=3.262626\ldots$ as a fraction.
-
-. . .
-
-$\displaystyle 3.\overline{26}=3+\frac{26}{100}+\frac{26}{100^2}+\frac{26}{100^3}+\cdots$
-
-The repeating part is geometric with $a=26/100$ and $r=1/100$.
-
-$\displaystyle 3.\overline{26}=3+\frac{26/100}{1-1/100}=3+\frac{26}{99}=\frac{323}{99}.$
-
----
 
 ## Combining Convergent Series
 
@@ -1062,19 +1142,7 @@ First cancel in a **finite** partial sum, then take its limit.
 
 ---
 
-## Seeing the Cancellation
 
-$\displaystyle S_3=\left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\left(\frac{1}{3}-\frac{1}{4}\right)=1-\frac{1}{4}.$
-
-. . .
-
-For $k$ terms, the same cancellation leaves
-
-$\displaystyle S_k=1-\frac{1}{k+1}=\frac{k}{k+1}.$
-
-Therefore, $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n(n+1)}=\lim_{k\to\infty}S_k=1$.
-
----
 
 ## A General Telescoping Sum
 
@@ -1082,7 +1150,7 @@ For $\displaystyle \sum_{n=1}^{\infty}(b_n-b_{n+1})$,
 
 $S_k=(b_1-b_2)+(b_2-b_3)+\cdots+(b_k-b_{k+1}).$
 
-. . .
+
 
 $S_k=b_1-b_{k+1}.$
 
@@ -1120,32 +1188,4 @@ The series telescopes, but it diverges.
 
 ---
 
-## Strategy for Infinite Series
-
-1. Write a few terms and identify the starting index.
-2. For a geometric series, find the first term and common ratio.
-3. For a telescoping series, simplify a finite partial sum.
-4. Take the limit of the partial sums to determine the sum.
-5. Remember that terms approaching zero do not establish convergence.
-
----
-
-## Practice
-
-Determine whether each series converges. If it does, find its sum.
-
-1. $\displaystyle \sum_{n=2}^{\infty}5\left(\frac{1}{3}\right)^n$
-2. $\displaystyle \sum_{n=1}^{\infty}4\left(-\frac{2}{3}\right)^{n-1}$
-3. $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n(n+2)}$
-4. $\displaystyle \sum_{n=1}^{\infty}\left[\ln(n+1)-\ln n\right]$
-
----
-
-## Practice: A Repeating Decimal
-
-Write $2.\overline{14}=2.141414\ldots$ as a fraction using a geometric series.
-
-- Identify the first term and ratio of the repeating part.
-- State why that geometric series converges.
-- Add the integer part and simplify the fraction.
 

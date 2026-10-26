@@ -6,10 +6,10 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
-  <title>Math 151 - Calculus II – Infinite Series</title>
+  <title>Math 151 - Calculus II – Infinite Sequences and Series</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -19,10 +19,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -129,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Infinite Series</h1>
+  <h1 class="title">Infinite Sequences and Series</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -144,6 +147,80 @@
 <li>Calculate the sum of a geometric series.</li>
 <li>Evaluate a telescoping series.</li>
 </ul>
+</section>
+<section id="squeeze-theorem-for-sequences" class="slide level2">
+<h2>Squeeze Theorem for Sequences</h2>
+<p>Suppose <span class="math inline">\(a_n\le b_n\le c_n\)</span> for all sufficiently large <span class="math inline">\(n\)</span>.</p>
+<p>If <span class="math inline">\(a_n\to L\)</span> and <span class="math inline">\(c_n\to L\)</span>, then <span class="math inline">\(b_n\to L\)</span>.</p>
+<div class="fragment">
+<p>A useful special case is</p>
+<p><span class="math inline">\(-|b_n|\le b_n\le |b_n|.\)</span></p>
+<p>If <span class="math inline">\(|b_n|\to0\)</span>, then <span class="math inline">\(b_n\to0\)</span>.</p>
+</div>
+</section>
+<section id="squeeze-theorem-example" class="slide level2">
+<h2>Squeeze Theorem Example</h2>
+<p>Find <span class="math inline">\(\displaystyle \lim_{n\to\infty}\frac{\cos n}{n^2}\)</span>.</p>
+<div class="fragment">
+<p>Since <span class="math inline">\(-1\le\cos n\le1\)</span>,</p>
+<p><span class="math inline">\(\displaystyle -\frac{1}{n^2}\le\frac{\cos n}{n^2}\le\frac{1}{n^2}.\)</span></p>
+<p>Both bounding sequences approach <span class="math inline">\(0\)</span>.</p>
+<p><span class="math inline">\(\displaystyle \lim_{n\to\infty}\frac{\cos n}{n^2}=0.\)</span></p>
+</div>
+</section>
+<section id="bounded-sequences" class="slide level2">
+<h2>Bounded Sequences</h2>
+<p>A sequence is <strong>bounded above</strong> if some number <span class="math inline">\(M\)</span> satisfies <span class="math inline">\(a_n\le M\)</span> for every <span class="math inline">\(n\)</span>.</p>
+<p>It is <strong>bounded below</strong> if some number <span class="math inline">\(m\)</span> satisfies <span class="math inline">\(m\le a_n\)</span> for every <span class="math inline">\(n\)</span>.</p>
+<p>It is <strong>bounded</strong> if it is bounded above and below:</p>
+<p><span class="math inline">\(m\le a_n\le M\quad\text{for every }n.\)</span></p>
+<div class="fragment">
+<p>For example, <span class="math inline">\(0&lt;1/n\le1\)</span>, so <span class="math inline">\(\{1/n\}\)</span> is bounded.</p>
+</div>
+</section>
+<section id="monotone-sequences" class="slide level2">
+<h2>Monotone Sequences</h2>
+<p>A sequence is <strong>increasing</strong> if <span class="math inline">\(a_n\le a_{n+1}\)</span> for every <span class="math inline">\(n\)</span>.</p>
+<p>It is <strong>decreasing</strong> if <span class="math inline">\(a_n\ge a_{n+1}\)</span> for every <span class="math inline">\(n\)</span>.</p>
+<p>A sequence that is increasing or decreasing is <strong>monotone</strong>.</p>
+<div class="fragment">
+<p>If the inequalities hold for all <span class="math inline">\(n\ge N\)</span>, the sequence is <strong>eventually monotone</strong>.</p>
+<p>Equality is allowed in these definitions.</p>
+</div>
+</section>
+<section id="checking-monotonicity" class="slide level2">
+<h2>Checking Monotonicity</h2>
+<p>To compare consecutive terms, examine <span class="math inline">\(a_{n+1}-a_n\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(a_{n+1}-a_n\ge0\)</span>, the sequence is increasing.</li>
+<li>If <span class="math inline">\(a_{n+1}-a_n\le0\)</span>, the sequence is decreasing.</li>
+</ul>
+<p>For a positive sequence, comparing <span class="math inline">\(a_{n+1}/a_n\)</span> with <span class="math inline">\(1\)</span> is also useful.</p>
+<div class="fragment">
+<p>For <span class="math inline">\(a_n=1/n\)</span>, <span class="math inline">\(\displaystyle a_{n+1}-a_n=-\frac{1}{n(n+1)}&lt;0\)</span>.</p>
+</div>
+</section>
+<section id="monotone-convergence-theorem" class="slide level2">
+<h2>Monotone Convergence Theorem</h2>
+<p>A bounded sequence that is eventually monotone converges.</p>
+<p>In particular:</p>
+<ul>
+<li>An increasing sequence that is bounded above converges.</li>
+<li>A decreasing sequence that is bounded below converges.</li>
+</ul>
+<div class="fragment">
+<p>This establishes the existence of a limit. Finding its value may require another step.</p>
+</div>
+</section>
+<section id="a-sequence-that-eventually-decreases" class="slide level2">
+<h2>A Sequence That Eventually Decreases</h2>
+<p>Use the Monotone Convergence Theorem for <span class="math inline">\(a_n=\dfrac{4^n}{n!}\)</span>.</p>
+<p>The first few terms are <span class="math inline">\(4,8,\dfrac{32}{3},\dfrac{32}{3},\dfrac{128}{15},\ldots\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(\displaystyle \frac{a_{n+1}}{a_n}=\frac{4}{n+1}\le1\quad\text{when }n\ge3.\)</span></p>
+<p>The sequence is decreasing for <span class="math inline">\(n\ge3\)</span> and bounded below by <span class="math inline">\(0\)</span>.</p>
+<p>Therefore, the sequence converges.</p>
+</div>
 </section>
 <section id="from-sequences-to-series" class="slide level2">
 <h2>From Sequences to Series</h2>
@@ -162,17 +239,15 @@
 <p><span class="math inline">\(S_3=a_1+a_2+a_3\)</span></p>
 <p>The partial sums form a new sequence: <span class="math inline">\(\{S_k\}\)</span>.</p>
 </section>
-<section id="an-accumulation-example" class="slide level2">
-<h2>An Accumulation Example</h2>
-<p>Oil enters a lake at <span class="math inline">\(1000\)</span> gallons during the first week, <span class="math inline">\(500\)</span> during the second, and <span class="math inline">\(250\)</span> during the third.</p>
-<p>Suppose each week adds half as much oil as the previous week, and none is removed.</p>
-<p>The total after <span class="math inline">\(k\)</span> weeks, in thousands of gallons, is</p>
+<section id="sum-of-powers-of-frac12" class="slide level2">
+<h2>Sum of Powers of <span class="math inline">\(\frac{1}{2}\)</span></h2>
+<p><span class="math inline">\(\displaystyle 1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}\cdots\)</span></p>
 <p><span class="math inline">\(\displaystyle S_k=\sum_{n=1}^{k}\left(\frac{1}{2}\right)^{n-1}.\)</span></p>
-<p>Will the total grow without bound?</p>
+<p>Can we calculate this infinites sum of infinite numbers?</p>
 </section>
 <section id="computing-partial-sums" class="slide level2">
 <h2>Computing Partial Sums</h2>
-<p>For <span class="math inline">\(\displaystyle 1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots\)</span>:</p>
+<p>For <span class="math inline">\(\displaystyle 1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots\)</span></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -197,7 +272,6 @@
 </table>
 <div class="fragment">
 <p>These partial sums suggest <span class="math inline">\(S_k=2-\dfrac{1}{2^{k-1}}\)</span>.</p>
-<p>We will justify this formula using a finite geometric sum.</p>
 </div>
 </section>
 <section id="the-sequence-of-partial-sums" class="slide level2">
@@ -256,7 +330,6 @@ C -1.926654 3.317391 -0.983399 3.708099 0 3.708099
 z
 " style="stroke: #268bd2"></path> </defs> <g clip-path="url(#pb8977ec6d7)"> <use href="#mc205805e3c" x="94.732412" y="109.909895" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mc205805e3c" x="145.268261" y="69.788842" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mc205805e3c" x="195.80411" y="49.728316" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mc205805e3c" x="246.339959" y="39.698053" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mc205805e3c" x="296.875808" y="34.682921" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mc205805e3c" x="347.411657" y="32.175355" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mc205805e3c" x="397.947506" y="30.921572" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mc205805e3c" x="448.483355" y="30.294681" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mc205805e3c" x="499.019204" y="29.981235" style="fill: #268bd2; stroke: #268bd2"></use> <use href="#mc205805e3c" x="549.555053" y="29.824512" style="fill: #268bd2; stroke: #268bd2"></use> </g> </g> <g id="text_12"> <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #cb4b16" x="448.483355" y="23.248421" transform="rotate(-0 448.483355 23.248421)">S = 2</text> </g> </g> </g> <defs> <clippath id="pb8977ec6d7"> <rect x="44.196563" y="7.2" width="535.68" height="182.952"></rect> </clippath> </defs>
 </svg>
-<p>Each point represents a finite sum. The partial sums approach <span class="math inline">\(2\)</span>.</p>
 </section>
 <section id="the-sum-of-an-infinite-series" class="slide level2">
 <h2>The Sum of an Infinite Series</h2>
@@ -264,7 +337,7 @@ z
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n=S.\)</span></p>
 <p>If the partial sums do not converge, the series <strong>diverges</strong>.</p>
 <div class="fragment">
-<p>For the oil example, <span class="math inline">\(S_k\to2\)</span> means that the accumulated oil approaches <span class="math inline">\(2000\)</span> gallons.</p>
+<p>In our example <span class="math inline">\(\lim_{k \to \infty} S_k = 2\)</span>.</p>
 </div>
 </section>
 <section id="terms-and-partial-sums" class="slide level2">
@@ -291,8 +364,7 @@ z
 </tr>
 </tbody>
 </table>
-<p>The sum of the series is the limit of <strong>partial sums</strong>.</p>
-<p>The individual terms and the running totals answer different questions.</p>
+<p>The sum of the series is the limit of partial sums.</p>
 </section>
 <section id="divergence-by-growing-partial-sums" class="slide level2">
 <h2>Divergence by Growing Partial Sums</h2>
@@ -300,7 +372,7 @@ z
 <div class="fragment">
 <p>For <span class="math inline">\(n\ge1\)</span>, <span class="math inline">\(\dfrac{n}{n+1}\ge\dfrac{1}{2}\)</span>.</p>
 <p><span class="math inline">\(\displaystyle S_k=\sum_{n=1}^{k}\frac{n}{n+1}\ge\frac{k}{2}.\)</span></p>
-<p>The partial sums grow without bound, so the series diverges.</p>
+<p><span class="math inline">\(\{S_k\} \ge \{\frac{k}{2}\}\)</span>. Since $# diverges, so does <span class="math inline">\(\{S_k\}\)</span>.</p>
 </div>
 </section>
 <section id="divergence-by-oscillating-partial-sums" class="slide level2">
@@ -318,29 +390,18 @@ z
 <p>Consider <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n(n+1)}\)</span>.</p>
 <p><span class="math inline">\(S_1=\frac{1}{2},\quad S_2=\frac{2}{3},\quad S_3=\frac{3}{4},\quad S_4=\frac{4}{5}.\)</span></p>
 <div class="fragment">
-<p>The pattern suggests <span class="math inline">\(S_k=\dfrac{k}{k+1}\)</span>.</p>
-<p>We will prove this by cancellation when we discuss telescoping series.</p>
-<p>Since <span class="math inline">\(k/(k+1)\to1\)</span>, the series converges to <span class="math inline">\(1\)</span>.</p>
+<p>The pattern suggests <span class="math inline">\(S_k=\dfrac{k}{k+1}\)</span>. Calculate the limit.</p>
 </div>
 </section>
-<section id="changing-the-starting-index" class="slide level2">
-<h2>Changing the Starting Index</h2>
-<p>These expressions list the same terms:</p>
-<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n-1}=\sum_{m=0}^{\infty}\left(\frac{1}{2}\right)^m.\)</span></p>
-<p>Here <span class="math inline">\(m=n-1\)</span>.</p>
-<div class="fragment">
-<p>Changing the index requires changing both the starting value and the formula.</p>
-<p>Writing out the first few terms is a useful check.</p>
-</div>
+<section id="best-i-can-hope-for-in-50-minutes" class="slide level2">
+<h2>Best I can hope for in 50 minutes</h2>
 </section>
 <section id="the-harmonic-series" class="slide level2">
 <h2>The Harmonic Series</h2>
 <p>The <strong>harmonic series</strong> is</p>
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots\)</span></p>
 <p>Its terms approach <span class="math inline">\(0\)</span>. Does the series converge?</p>
-<div class="fragment">
 <p>The harmonic series diverges. We will show that its partial sums are unbounded.</p>
-</div>
 </section>
 <section id="grouping-the-harmonic-terms" class="slide level2">
 <h2>Grouping the Harmonic Terms</h2>
@@ -414,20 +475,16 @@ z
 <p>Start with <span class="math inline">\(S_k=a+ar+ar^2+\cdots+ar^{k-1}\)</span>.</p>
 <p>Multiply by <span class="math inline">\(r\)</span>:</p>
 <p><span class="math inline">\(rS_k=ar+ar^2+\cdots+ar^{k-1}+ar^k.\)</span></p>
-<div class="fragment">
 <p>Subtract to obtain <span class="math inline">\((1-r)S_k=a-ar^k\)</span>.</p>
 <p>Thus, <span class="math inline">\(\displaystyle S_k=\frac{a(1-r^k)}{1-r}\)</span> when <span class="math inline">\(r\ne1\)</span>.</p>
-</div>
 </section>
 <section id="the-geometric-series-formula" class="slide level2">
 <h2>The Geometric Series Formula</h2>
 <p>If <span class="math inline">\(|r|&lt;1\)</span>, then <span class="math inline">\(r^k\to0\)</span>.</p>
 <p>Taking the limit of the finite sum gives</p>
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}ar^{n-1}=\frac{a}{1-r},\qquad |r|&lt;1.\)</span></p>
-<div class="fragment">
 <p>For <span class="math inline">\(a\ne0\)</span>, the geometric series diverges when <span class="math inline">\(|r|\ge1\)</span>.</p>
 <p>The case <span class="math inline">\(a=0\)</span> gives the zero series.</p>
-</div>
 </section>
 <section id="what-happens-when-rge1" class="slide level2">
 <h2>What Happens When <span class="math inline">\(|r|\ge1\)</span>?</h2>
@@ -464,15 +521,6 @@ z
 <p><span class="math inline">\(\displaystyle e^{2n}=e^2(e^2)^{n-1}.\)</span></p>
 <p>The first term is <span class="math inline">\(a=e^2\)</span> and the ratio is <span class="math inline">\(r=e^2&gt;1\)</span>.</p>
 <p>The series diverges.</p>
-</div>
-</section>
-<section id="repeating-decimals-as-series" class="slide level2">
-<h2>Repeating Decimals as Series</h2>
-<p>Write <span class="math inline">\(3.\overline{26}=3.262626\ldots\)</span> as a fraction.</p>
-<div class="fragment">
-<p><span class="math inline">\(\displaystyle 3.\overline{26}=3+\frac{26}{100}+\frac{26}{100^2}+\frac{26}{100^3}+\cdots\)</span></p>
-<p>The repeating part is geometric with <span class="math inline">\(a=26/100\)</span> and <span class="math inline">\(r=1/100\)</span>.</p>
-<p><span class="math inline">\(\displaystyle 3.\overline{26}=3+\frac{26/100}{1-1/100}=3+\frac{26}{99}=\frac{323}{99}.\)</span></p>
 </div>
 </section>
 <section id="combining-convergent-series" class="slide level2">
@@ -802,24 +850,13 @@ z
 <p>First cancel in a <strong>finite</strong> partial sum, then take its limit.</p>
 </div>
 </section>
-<section id="seeing-the-cancellation" class="slide level2">
-<h2>Seeing the Cancellation</h2>
-<p><span class="math inline">\(\displaystyle S_3=\left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\left(\frac{1}{3}-\frac{1}{4}\right)=1-\frac{1}{4}.\)</span></p>
-<div class="fragment">
-<p>For <span class="math inline">\(k\)</span> terms, the same cancellation leaves</p>
-<p><span class="math inline">\(\displaystyle S_k=1-\frac{1}{k+1}=\frac{k}{k+1}.\)</span></p>
-<p>Therefore, <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n(n+1)}=\lim_{k\to\infty}S_k=1\)</span>.</p>
-</div>
-</section>
 <section id="a-general-telescoping-sum" class="slide level2">
 <h2>A General Telescoping Sum</h2>
 <p>For <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}(b_n-b_{n+1})\)</span>,</p>
 <p><span class="math inline">\(S_k=(b_1-b_2)+(b_2-b_3)+\cdots+(b_k-b_{k+1}).\)</span></p>
-<div class="fragment">
 <p><span class="math inline">\(S_k=b_1-b_{k+1}.\)</span></p>
 <p>If <span class="math inline">\(b_{k+1}\to B\)</span> for a finite number <span class="math inline">\(B\)</span>, then</p>
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}(b_n-b_{n+1})=b_1-B.\)</span></p>
-</div>
 </section>
 <section id="a-trigonometric-telescoping-series" class="slide level2">
 <h2>A Trigonometric Telescoping Series</h2>
@@ -839,34 +876,8 @@ z
 <p>The series telescopes, but it diverges.</p>
 </div>
 </section>
-<section id="strategy-for-infinite-series" class="slide level2">
-<h2>Strategy for Infinite Series</h2>
-<ol type="1">
-<li>Write a few terms and identify the starting index.</li>
-<li>For a geometric series, find the first term and common ratio.</li>
-<li>For a telescoping series, simplify a finite partial sum.</li>
-<li>Take the limit of the partial sums to determine the sum.</li>
-<li>Remember that terms approaching zero do not establish convergence.</li>
-</ol>
-</section>
-<section id="practice" class="slide level2">
-<h2>Practice</h2>
-<p>Determine whether each series converges. If it does, find its sum.</p>
-<ol type="1">
-<li><span class="math inline">\(\displaystyle \sum_{n=2}^{\infty}5\left(\frac{1}{3}\right)^n\)</span></li>
-<li><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}4\left(-\frac{2}{3}\right)^{n-1}\)</span></li>
-<li><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n(n+2)}\)</span></li>
-<li><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\left[\ln(n+1)-\ln n\right]\)</span></li>
-</ol>
-</section>
-<section id="practice-a-repeating-decimal" class="slide level2">
-<h2>Practice: A Repeating Decimal</h2>
-<p>Write <span class="math inline">\(2.\overline{14}=2.141414\ldots\)</span> as a fraction using a geometric series.</p>
-<ul>
-<li>Identify the first term and ratio of the repeating part.</li>
-<li>State why that geometric series converges.</li>
-<li>Add the integer part and simplify the fraction.</li>
-</ul>
+<section class="slide level2">
+
 
 
 </section>
@@ -1059,7 +1070,7 @@ z
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],

@@ -5964,268 +5964,282 @@
   {
     "objectID": "classes/19/infinite-series-5-2.html#infinite-series",
     "href": "classes/19/infinite-series-5-2.html#infinite-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Infinite Series",
     "text": "Infinite Series\nClass Session Goals:\n\nExplain the meaning of the sum of an infinite series.\nDetermine convergence using the sequence of partial sums.\nCalculate the sum of a geometric series.\nEvaluate a telescoping series."
   },
   {
+    "objectID": "classes/19/infinite-series-5-2.html#squeeze-theorem-for-sequences",
+    "href": "classes/19/infinite-series-5-2.html#squeeze-theorem-for-sequences",
+    "title": "Infinite Sequences and Series",
+    "section": "Squeeze Theorem for Sequences",
+    "text": "Squeeze Theorem for Sequences\nSuppose \\(a_n\\le b_n\\le c_n\\) for all sufficiently large \\(n\\).\nIf \\(a_n\\to L\\) and \\(c_n\\to L\\), then \\(b_n\\to L\\).\n\nA useful special case is\n\\(-|b_n|\\le b_n\\le |b_n|.\\)\nIf \\(|b_n|\\to0\\), then \\(b_n\\to0\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#squeeze-theorem-example",
+    "href": "classes/19/infinite-series-5-2.html#squeeze-theorem-example",
+    "title": "Infinite Sequences and Series",
+    "section": "Squeeze Theorem Example",
+    "text": "Squeeze Theorem Example\nFind \\(\\displaystyle \\lim_{n\\to\\infty}\\frac{\\cos n}{n^2}\\).\n\nSince \\(-1\\le\\cos n\\le1\\),\n\\(\\displaystyle -\\frac{1}{n^2}\\le\\frac{\\cos n}{n^2}\\le\\frac{1}{n^2}.\\)\nBoth bounding sequences approach \\(0\\).\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{\\cos n}{n^2}=0.\\)"
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#bounded-sequences",
+    "href": "classes/19/infinite-series-5-2.html#bounded-sequences",
+    "title": "Infinite Sequences and Series",
+    "section": "Bounded Sequences",
+    "text": "Bounded Sequences\nA sequence is bounded above if some number \\(M\\) satisfies \\(a_n\\le M\\) for every \\(n\\).\nIt is bounded below if some number \\(m\\) satisfies \\(m\\le a_n\\) for every \\(n\\).\nIt is bounded if it is bounded above and below:\n\\(m\\le a_n\\le M\\quad\\text{for every }n.\\)\n\nFor example, \\(0&lt;1/n\\le1\\), so \\(\\{1/n\\}\\) is bounded."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#monotone-sequences",
+    "href": "classes/19/infinite-series-5-2.html#monotone-sequences",
+    "title": "Infinite Sequences and Series",
+    "section": "Monotone Sequences",
+    "text": "Monotone Sequences\nA sequence is increasing if \\(a_n\\le a_{n+1}\\) for every \\(n\\).\nIt is decreasing if \\(a_n\\ge a_{n+1}\\) for every \\(n\\).\nA sequence that is increasing or decreasing is monotone.\n\nIf the inequalities hold for all \\(n\\ge N\\), the sequence is eventually monotone.\nEquality is allowed in these definitions."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#checking-monotonicity",
+    "href": "classes/19/infinite-series-5-2.html#checking-monotonicity",
+    "title": "Infinite Sequences and Series",
+    "section": "Checking Monotonicity",
+    "text": "Checking Monotonicity\nTo compare consecutive terms, examine \\(a_{n+1}-a_n\\).\n\nIf \\(a_{n+1}-a_n\\ge0\\), the sequence is increasing.\nIf \\(a_{n+1}-a_n\\le0\\), the sequence is decreasing.\n\nFor a positive sequence, comparing \\(a_{n+1}/a_n\\) with \\(1\\) is also useful.\n\nFor \\(a_n=1/n\\), \\(\\displaystyle a_{n+1}-a_n=-\\frac{1}{n(n+1)}&lt;0\\)."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#monotone-convergence-theorem",
+    "href": "classes/19/infinite-series-5-2.html#monotone-convergence-theorem",
+    "title": "Infinite Sequences and Series",
+    "section": "Monotone Convergence Theorem",
+    "text": "Monotone Convergence Theorem\nA bounded sequence that is eventually monotone converges.\nIn particular:\n\nAn increasing sequence that is bounded above converges.\nA decreasing sequence that is bounded below converges.\n\n\nThis establishes the existence of a limit. Finding its value may require another step."
+  },
+  {
+    "objectID": "classes/19/infinite-series-5-2.html#a-sequence-that-eventually-decreases",
+    "href": "classes/19/infinite-series-5-2.html#a-sequence-that-eventually-decreases",
+    "title": "Infinite Sequences and Series",
+    "section": "A Sequence That Eventually Decreases",
+    "text": "A Sequence That Eventually Decreases\nUse the Monotone Convergence Theorem for \\(a_n=\\dfrac{4^n}{n!}\\).\nThe first few terms are \\(4,8,\\dfrac{32}{3},\\dfrac{32}{3},\\dfrac{128}{15},\\ldots\\)\n\n\\(\\displaystyle \\frac{a_{n+1}}{a_n}=\\frac{4}{n+1}\\le1\\quad\\text{when }n\\ge3.\\)\nThe sequence is decreasing for \\(n\\ge3\\) and bounded below by \\(0\\).\nTherefore, the sequence converges."
+  },
+  {
     "objectID": "classes/19/infinite-series-5-2.html#from-sequences-to-series",
     "href": "classes/19/infinite-series-5-2.html#from-sequences-to-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "From Sequences to Series",
     "text": "From Sequences to Series\nA sequence is an ordered list of terms:\n\\(a_1,a_2,a_3,\\ldots\\)\nAn infinite series adds the terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=a_1+a_2+a_3+\\cdots\\)\nWhat does it mean to add infinitely many numbers?"
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#partial-sums",
     "href": "classes/19/infinite-series-5-2.html#partial-sums",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Partial Sums",
     "text": "Partial Sums\nThe \\(k\\)th partial sum adds the first \\(k\\) terms:\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}a_n.\\)\n\\(S_1=a_1\\)\n\\(S_2=a_1+a_2\\)\n\\(S_3=a_1+a_2+a_3\\)\nThe partial sums form a new sequence: \\(\\{S_k\\}\\)."
   },
   {
-    "objectID": "classes/19/infinite-series-5-2.html#an-accumulation-example",
-    "href": "classes/19/infinite-series-5-2.html#an-accumulation-example",
-    "title": "Infinite Series",
-    "section": "An Accumulation Example",
-    "text": "An Accumulation Example\nOil enters a lake at \\(1000\\) gallons during the first week, \\(500\\) during the second, and \\(250\\) during the third.\nSuppose each week adds half as much oil as the previous week, and none is removed.\nThe total after \\(k\\) weeks, in thousands of gallons, is\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\left(\\frac{1}{2}\\right)^{n-1}.\\)\nWill the total grow without bound?"
+    "objectID": "classes/19/infinite-series-5-2.html#sum-of-powers-of-frac12",
+    "href": "classes/19/infinite-series-5-2.html#sum-of-powers-of-frac12",
+    "title": "Infinite Sequences and Series",
+    "section": "Sum of Powers of \\(\\frac{1}{2}\\)",
+    "text": "Sum of Powers of \\(\\frac{1}{2}\\)\n\\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+\\frac{1}{32}+\\frac{1}{64}\\cdots\\)\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\left(\\frac{1}{2}\\right)^{n-1}.\\)\nCan we calculate this infinites sum of infinite numbers?"
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#computing-partial-sums",
     "href": "classes/19/infinite-series-5-2.html#computing-partial-sums",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Computing Partial Sums",
-    "text": "Computing Partial Sums\nFor \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\cdots\\):\n\n\n\n\\(k\\)\n1\n2\n3\n4\n5\n\n\n\n\n\\(S_k\\)\n\\(1\\)\n\\(3/2\\)\n\\(7/4\\)\n\\(15/8\\)\n\\(31/16\\)\n\n\n\n\nThese partial sums suggest \\(S_k=2-\\dfrac{1}{2^{k-1}}\\).\nWe will justify this formula using a finite geometric sum."
+    "text": "Computing Partial Sums\nFor \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\cdots\\)\n\n\n\n\\(k\\)\n1\n2\n3\n4\n5\n\n\n\n\n\\(S_k\\)\n\\(1\\)\n\\(3/2\\)\n\\(7/4\\)\n\\(15/8\\)\n\\(31/16\\)\n\n\n\n\nThese partial sums suggest \\(S_k=2-\\dfrac{1}{2^{k-1}}\\)."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#the-sequence-of-partial-sums",
     "href": "classes/19/infinite-series-5-2.html#the-sequence-of-partial-sums",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "The Sequence of Partial Sums",
-    "text": "The Sequence of Partial Sums\n\n\nPartial sums of one plus one-half plus one-quarter and so on\n\nPoints at k from one to ten show the finite sums S_k increasing from one toward the dashed line at two. The points represent partial sums, rather than individual terms.     2026-10-21T11:10:54.868138 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             2             4             6             8             10    k                 0             1             2       S k                                S = 2        \n\nEach point represents a finite sum. The partial sums approach \\(2\\)."
+    "text": "The Sequence of Partial Sums\n\n\nPartial sums of one plus one-half plus one-quarter and so on\n\nPoints at k from one to ten show the finite sums S_k increasing from one toward the dashed line at two. The points represent partial sums, rather than individual terms.     2026-10-21T11:10:54.868138 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             2             4             6             8             10    k                 0             1             2       S k                                S = 2"
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#the-sum-of-an-infinite-series",
     "href": "classes/19/infinite-series-5-2.html#the-sum-of-an-infinite-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "The Sum of an Infinite Series",
-    "text": "The Sum of an Infinite Series\nIf \\(S_k\\to S\\) for a finite number \\(S\\), the series converges and\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=S.\\)\nIf the partial sums do not converge, the series diverges.\n\nFor the oil example, \\(S_k\\to2\\) means that the accumulated oil approaches \\(2000\\) gallons."
+    "text": "The Sum of an Infinite Series\nIf \\(S_k\\to S\\) for a finite number \\(S\\), the series converges and\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=S.\\)\nIf the partial sums do not converge, the series diverges.\n\nIn our example \\(\\lim_{k \\to \\infty} S_k = 2\\)."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#terms-and-partial-sums",
     "href": "classes/19/infinite-series-5-2.html#terms-and-partial-sums",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Terms and Partial Sums",
-    "text": "Terms and Partial Sums\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\):\n\n\n\n\nFormula\nLimit\n\n\n\n\nTerms\n\\(a_n=(1/2)^{n-1}\\)\n\\(a_n\\to0\\)\n\n\nPartial sums\n\\(S_k=2-2^{1-k}\\)\n\\(S_k\\to2\\)\n\n\n\nThe sum of the series is the limit of partial sums.\nThe individual terms and the running totals answer different questions."
+    "text": "Terms and Partial Sums\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\):\n\n\n\n\nFormula\nLimit\n\n\n\n\nTerms\n\\(a_n=(1/2)^{n-1}\\)\n\\(a_n\\to0\\)\n\n\nPartial sums\n\\(S_k=2-2^{1-k}\\)\n\\(S_k\\to2\\)\n\n\n\nThe sum of the series is the limit of partial sums."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#divergence-by-growing-partial-sums",
     "href": "classes/19/infinite-series-5-2.html#divergence-by-growing-partial-sums",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Divergence by Growing Partial Sums",
-    "text": "Divergence by Growing Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{n+1}\\) converges.\n\nFor \\(n\\ge1\\), \\(\\dfrac{n}{n+1}\\ge\\dfrac{1}{2}\\).\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\frac{n}{n+1}\\ge\\frac{k}{2}.\\)\nThe partial sums grow without bound, so the series diverges."
+    "text": "Divergence by Growing Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{n+1}\\) converges.\n\nFor \\(n\\ge1\\), \\(\\dfrac{n}{n+1}\\ge\\dfrac{1}{2}\\).\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\frac{n}{n+1}\\ge\\frac{k}{2}.\\)\n\\(\\{S_k\\} \\ge \\{\\frac{k}{2}\\}\\). Since $# diverges, so does \\(\\{S_k\\}\\)."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#divergence-by-oscillating-partial-sums",
     "href": "classes/19/infinite-series-5-2.html#divergence-by-oscillating-partial-sums",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Divergence by Oscillating Partial Sums",
     "text": "Divergence by Oscillating Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n\\) converges.\n\n\\(S_1=-1,\\quad S_2=0,\\quad S_3=-1,\\quad S_4=0.\\)\nIn general, \\(S_k=-1\\) when \\(k\\) is odd and \\(S_k=0\\) when \\(k\\) is even.\nThe partial sums are bounded but do not approach one number.\nThe series diverges."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#a-convergent-example",
     "href": "classes/19/infinite-series-5-2.html#a-convergent-example",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "A Convergent Example",
-    "text": "A Convergent Example\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\).\n\\(S_1=\\frac{1}{2},\\quad S_2=\\frac{2}{3},\\quad S_3=\\frac{3}{4},\\quad S_4=\\frac{4}{5}.\\)\n\nThe pattern suggests \\(S_k=\\dfrac{k}{k+1}\\).\nWe will prove this by cancellation when we discuss telescoping series.\nSince \\(k/(k+1)\\to1\\), the series converges to \\(1\\)."
+    "text": "A Convergent Example\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\).\n\\(S_1=\\frac{1}{2},\\quad S_2=\\frac{2}{3},\\quad S_3=\\frac{3}{4},\\quad S_4=\\frac{4}{5}.\\)\n\nThe pattern suggests \\(S_k=\\dfrac{k}{k+1}\\). Calculate the limit."
   },
   {
-    "objectID": "classes/19/infinite-series-5-2.html#changing-the-starting-index",
-    "href": "classes/19/infinite-series-5-2.html#changing-the-starting-index",
-    "title": "Infinite Series",
-    "section": "Changing the Starting Index",
-    "text": "Changing the Starting Index\nThese expressions list the same terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}=\\sum_{m=0}^{\\infty}\\left(\\frac{1}{2}\\right)^m.\\)\nHere \\(m=n-1\\).\n\nChanging the index requires changing both the starting value and the formula.\nWriting out the first few terms is a useful check."
+    "objectID": "classes/19/infinite-series-5-2.html#best-i-can-hope-for-in-50-minutes",
+    "href": "classes/19/infinite-series-5-2.html#best-i-can-hope-for-in-50-minutes",
+    "title": "Infinite Sequences and Series",
+    "section": "Best I can hope for in 50 minutes",
+    "text": "Best I can hope for in 50 minutes"
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#the-harmonic-series",
     "href": "classes/19/infinite-series-5-2.html#the-harmonic-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "The Harmonic Series",
-    "text": "The Harmonic Series\nThe harmonic series is\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}=1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+\\cdots\\)\nIts terms approach \\(0\\). Does the series converge?\n\nThe harmonic series diverges. We will show that its partial sums are unbounded."
+    "text": "The Harmonic Series\nThe harmonic series is\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}=1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+\\cdots\\)\nIts terms approach \\(0\\). Does the series converge?\nThe harmonic series diverges. We will show that its partial sums are unbounded."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#grouping-the-harmonic-terms",
     "href": "classes/19/infinite-series-5-2.html#grouping-the-harmonic-terms",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Grouping the Harmonic Terms",
     "text": "Grouping the Harmonic Terms\nGroup consecutive terms in blocks of \\(1,2,4,8,\\ldots\\) terms after the initial \\(1\\).\n\\(\\displaystyle \\frac{1}{3}+\\frac{1}{4}\\ge2\\left(\\frac{1}{4}\\right)=\\frac{1}{2}.\\)\n\\(\\displaystyle \\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}\\ge4\\left(\\frac{1}{8}\\right)=\\frac{1}{2}.\\)\n\nThe block from \\(n=2^{j-1}+1\\) through \\(n=2^j\\) has \\(2^{j-1}\\) terms.\nEach term is at least \\(1/2^j\\), so each block adds at least \\(1/2\\)."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#why-the-harmonic-series-diverges",
     "href": "classes/19/infinite-series-5-2.html#why-the-harmonic-series-diverges",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Why the Harmonic Series Diverges",
     "text": "Why the Harmonic Series Diverges\nThe partial sum through \\(2^j\\) terms satisfies\n\\(\\displaystyle S_{2^j}\\ge1+\\frac{j}{2}.\\)\nThe right side grows without bound as \\(j\\to\\infty\\).\n\nAll terms are positive, so all later partial sums are at least as large.\nTherefore, \\(S_k\\to\\infty\\) and the harmonic series diverges."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#terms-approaching-zero-are-not-enough",
     "href": "classes/19/infinite-series-5-2.html#terms-approaching-zero-are-not-enough",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Terms Approaching Zero Are Not Enough",
     "text": "Terms Approaching Zero Are Not Enough\nCompare these two series:\n\n\n\n\n\n\n\n\nSeries\nLimit of its terms\nBehavior of partial sums\n\n\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}\\)\n\\(0\\)\nGrow without bound\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\)\n\\(0\\)\nApproach \\(1\\)\n\n\n\nKnowing that the terms approach \\(0\\) does not determine whether their series converges."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#algebraic-properties-of-series",
     "href": "classes/19/infinite-series-5-2.html#algebraic-properties-of-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Algebraic Properties of Series",
     "text": "Algebraic Properties of Series\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=A\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n=B\\) both converge.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n+b_n)=A+B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n-b_n)=A-B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ca_n=cA\\)\nThese rules follow by taking limits of finite partial sums."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#geometric-series",
     "href": "classes/19/infinite-series-5-2.html#geometric-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Geometric Series",
     "text": "Geometric Series\nA geometric series has the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=a+ar+ar^2+ar^3+\\cdots\\)\nHere \\(a\\) is the first term and \\(r\\) is the common ratio.\nFor example,\n\\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\cdots\\) has \\(a=1\\) and \\(r=\\frac{1}{2}\\)."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#a-finite-geometric-sum",
     "href": "classes/19/infinite-series-5-2.html#a-finite-geometric-sum",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "A Finite Geometric Sum",
-    "text": "A Finite Geometric Sum\nStart with \\(S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\).\nMultiply by \\(r\\):\n\\(rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\)\n\nSubtract to obtain \\((1-r)S_k=a-ar^k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\)."
+    "text": "A Finite Geometric Sum\nStart with \\(S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\).\nMultiply by \\(r\\):\n\\(rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\)\nSubtract to obtain \\((1-r)S_k=a-ar^k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\)."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#the-geometric-series-formula",
     "href": "classes/19/infinite-series-5-2.html#the-geometric-series-formula",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "The Geometric Series Formula",
-    "text": "The Geometric Series Formula\nIf \\(|r|&lt;1\\), then \\(r^k\\to0\\).\nTaking the limit of the finite sum gives\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=\\frac{a}{1-r},\\qquad |r|&lt;1.\\)\n\nFor \\(a\\ne0\\), the geometric series diverges when \\(|r|\\ge1\\).\nThe case \\(a=0\\) gives the zero series."
+    "text": "The Geometric Series Formula\nIf \\(|r|&lt;1\\), then \\(r^k\\to0\\).\nTaking the limit of the finite sum gives\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=\\frac{a}{1-r},\\qquad |r|&lt;1.\\)\nFor \\(a\\ne0\\), the geometric series diverges when \\(|r|\\ge1\\).\nThe case \\(a=0\\) gives the zero series."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#what-happens-when-rge1",
     "href": "classes/19/infinite-series-5-2.html#what-happens-when-rge1",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "What Happens When \\(|r|\\ge1\\)?",
     "text": "What Happens When \\(|r|\\ge1\\)?\nAssume \\(a\\ne0\\).\n\nIf \\(r=1\\), then \\(S_k=ka\\), which is unbounded.\nIf \\(r=-1\\), the partial sums alternate between \\(a\\) and \\(0\\).\nIf \\(|r|&gt;1\\), the formula \\(S_k=a(1-r^k)/(1-r)\\) gives unbounded partial sums.\n\nAlways check \\(|r|&lt;1\\) before using \\(a/(1-r)\\) as an infinite sum."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#a-negative-geometric-ratio",
     "href": "classes/19/infinite-series-5-2.html#a-negative-geometric-ratio",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "A Negative Geometric Ratio",
     "text": "A Negative Geometric Ratio\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-3)^{n+1}}{4^{n-1}}\\) converges. If so, find its sum.\n\n\\(\\displaystyle \\frac{(-3)^{n+1}}{4^{n-1}}=9\\left(-\\frac{3}{4}\\right)^{n-1}.\\)\nThe first term is \\(a=9\\) and the ratio is \\(r=-3/4\\).\nSince \\(|r|&lt;1\\), the sum is \\(\\displaystyle \\frac{9}{1-(-3/4)}=\\frac{36}{7}\\)."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#a-shifted-geometric-series",
     "href": "classes/19/infinite-series-5-2.html#a-shifted-geometric-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "A Shifted Geometric Series",
     "text": "A Shifted Geometric Series\nEvaluate \\(\\displaystyle \\sum_{n=0}^{\\infty}\\left(\\frac{2}{3}\\right)^{n+2}\\).\n\nThe first few terms are \\(\\displaystyle \\frac{4}{9}+\\frac{8}{27}+\\frac{16}{81}+\\cdots\\)\nTherefore, \\(a=4/9\\) and \\(r=2/3\\).\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\left(\\frac{2}{3}\\right)^{n+2}=\\frac{4/9}{1-2/3}=\\frac{4}{3}.\\)"
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#a-divergent-geometric-series",
     "href": "classes/19/infinite-series-5-2.html#a-divergent-geometric-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "A Divergent Geometric Series",
     "text": "A Divergent Geometric Series\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}e^{2n}\\) converges.\n\n\\(\\displaystyle e^{2n}=e^2(e^2)^{n-1}.\\)\nThe first term is \\(a=e^2\\) and the ratio is \\(r=e^2&gt;1\\).\nThe series diverges."
   },
   {
-    "objectID": "classes/19/infinite-series-5-2.html#repeating-decimals-as-series",
-    "href": "classes/19/infinite-series-5-2.html#repeating-decimals-as-series",
-    "title": "Infinite Series",
-    "section": "Repeating Decimals as Series",
-    "text": "Repeating Decimals as Series\nWrite \\(3.\\overline{26}=3.262626\\ldots\\) as a fraction.\n\n\\(\\displaystyle 3.\\overline{26}=3+\\frac{26}{100}+\\frac{26}{100^2}+\\frac{26}{100^3}+\\cdots\\)\nThe repeating part is geometric with \\(a=26/100\\) and \\(r=1/100\\).\n\\(\\displaystyle 3.\\overline{26}=3+\\frac{26/100}{1-1/100}=3+\\frac{26}{99}=\\frac{323}{99}.\\)"
-  },
-  {
     "objectID": "classes/19/infinite-series-5-2.html#combining-convergent-series",
     "href": "classes/19/infinite-series-5-2.html#combining-convergent-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Combining Convergent Series",
     "text": "Combining Convergent Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\frac{3}{n(n+1)}+\\left(\\frac{1}{2}\\right)^{n-2}\\right]\\).\n\nBoth component series converge. Since \\((1/2)^{n-2}=2(1/2)^{n-1}\\),\n\\(\\displaystyle 3\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}+2\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\)\n\\(=3(1)+2(2)=7.\\)"
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#the-koch-snowflake",
     "href": "classes/19/infinite-series-5-2.html#the-koch-snowflake",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "The Koch Snowflake",
     "text": "The Koch Snowflake\nStart with an equilateral triangle of side length \\(1\\).\nAt each step, replace the middle third of every segment with two sides of an outward equilateral triangle.\n\n\nFirst four stages of the Koch snowflake\n\nFour figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.     2026-10-21T11:10:55.024373 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                     F 0             F 1             F 2             F 3                   \n\nWhat happens to the perimeter and the enclosed area?"
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#koch-snowflake-perimeter",
     "href": "classes/19/infinite-series-5-2.html#koch-snowflake-perimeter",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Koch Snowflake: Perimeter",
     "text": "Koch Snowflake: Perimeter\nAt stage \\(n\\), let \\(N_n\\) count the sides and \\(l_n\\) be the length of each side.\nEach step creates four segments, each one-third as long:\n\\(N_n=3\\cdot4^n,\\qquad l_n=\\left(\\frac{1}{3}\\right)^n.\\)\n\n\\(\\displaystyle L_n=N_nl_n=3\\left(\\frac{4}{3}\\right)^n.\\)\nSince \\(4/3&gt;1\\), the perimeter grows without bound."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#koch-snowflake-added-area",
     "href": "classes/19/infinite-series-5-2.html#koch-snowflake-added-area",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Koch Snowflake: Added Area",
     "text": "Koch Snowflake: Added Area\nLet \\(A_0=\\sqrt{3}/4\\) be the area of the original triangle.\nAt step \\(n\\ge1\\):\n\nThere are \\(3\\cdot4^{n-1}\\) new triangles.\nEach has side length \\(1/3^n\\) and area \\(A_0/9^n\\).\n\n\nThe added area is \\(\\displaystyle \\Delta A_n=\\frac{A_0}{3}\\left(\\frac{4}{9}\\right)^{n-1}\\).\nThe added areas form a geometric sequence with ratio \\(4/9\\)."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#koch-snowflake-total-area",
     "href": "classes/19/infinite-series-5-2.html#koch-snowflake-total-area",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Koch Snowflake: Total Area",
     "text": "Koch Snowflake: Total Area\nThe limiting area is the original area plus all the added areas:\n\\(\\displaystyle A=A_0+\\frac{A_0}{3}\\sum_{n=1}^{\\infty}\\left(\\frac{4}{9}\\right)^{n-1}.\\)\n\n\\(\\displaystyle A=A_0+\\frac{A_0/3}{1-4/9}=\\frac{8}{5}A_0=\\frac{2\\sqrt{3}}{5}.\\)\nThe Koch snowflake has finite area and infinite perimeter."
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#telescoping-series",
     "href": "classes/19/infinite-series-5-2.html#telescoping-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Telescoping Series",
     "text": "Telescoping Series\nA telescoping series has partial sums in which most terms cancel.\nFor example, partial fractions give\n\\(\\displaystyle \\frac{1}{n(n+1)}=\\frac{1}{n}-\\frac{1}{n+1}.\\)\n\nThus \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{n}-\\frac{1}{n+1}\\right)\\).\nFirst cancel in a finite partial sum, then take its limit."
   },
   {
-    "objectID": "classes/19/infinite-series-5-2.html#seeing-the-cancellation",
-    "href": "classes/19/infinite-series-5-2.html#seeing-the-cancellation",
-    "title": "Infinite Series",
-    "section": "Seeing the Cancellation",
-    "text": "Seeing the Cancellation\n\\(\\displaystyle S_3=\\left(1-\\frac{1}{2}\\right)+\\left(\\frac{1}{2}-\\frac{1}{3}\\right)+\\left(\\frac{1}{3}-\\frac{1}{4}\\right)=1-\\frac{1}{4}.\\)\n\nFor \\(k\\) terms, the same cancellation leaves\n\\(\\displaystyle S_k=1-\\frac{1}{k+1}=\\frac{k}{k+1}.\\)\nTherefore, \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\lim_{k\\to\\infty}S_k=1\\)."
-  },
-  {
     "objectID": "classes/19/infinite-series-5-2.html#a-general-telescoping-sum",
     "href": "classes/19/infinite-series-5-2.html#a-general-telescoping-sum",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "A General Telescoping Sum",
-    "text": "A General Telescoping Sum\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\),\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1}).\\)\n\n\\(S_k=b_1-b_{k+1}.\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)"
+    "text": "A General Telescoping Sum\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\),\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1}).\\)\n\\(S_k=b_1-b_{k+1}.\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)"
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#a-trigonometric-telescoping-series",
     "href": "classes/19/infinite-series-5-2.html#a-trigonometric-telescoping-series",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "A Trigonometric Telescoping Series",
     "text": "A Trigonometric Telescoping Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]\\).\n\n\\(\\displaystyle S_k=\\cos(1)-\\cos\\left(\\frac{1}{k+1}\\right).\\)\nSince \\(1/(k+1)\\to0\\) and cosine is continuous,\n\\(\\displaystyle \\lim_{k\\to\\infty}S_k=\\cos(1)-\\cos(0)=\\cos(1)-1.\\)"
   },
   {
     "objectID": "classes/19/infinite-series-5-2.html#telescoping-does-not-guarantee-convergence",
     "href": "classes/19/infinite-series-5-2.html#telescoping-does-not-guarantee-convergence",
-    "title": "Infinite Series",
+    "title": "Infinite Sequences and Series",
     "section": "Telescoping Does Not Guarantee Convergence",
     "text": "Telescoping Does Not Guarantee Convergence\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\sqrt{n}-\\sqrt{n+1}\\right)\\) converges.\n\nThe \\(k\\)th partial sum is \\(S_k=1-\\sqrt{k+1}\\).\nAs \\(k\\to\\infty\\), \\(S_k\\to-\\infty\\).\nThe series telescopes, but it diverges."
-  },
-  {
-    "objectID": "classes/19/infinite-series-5-2.html#strategy-for-infinite-series",
-    "href": "classes/19/infinite-series-5-2.html#strategy-for-infinite-series",
-    "title": "Infinite Series",
-    "section": "Strategy for Infinite Series",
-    "text": "Strategy for Infinite Series\n\nWrite a few terms and identify the starting index.\nFor a geometric series, find the first term and common ratio.\nFor a telescoping series, simplify a finite partial sum.\nTake the limit of the partial sums to determine the sum.\nRemember that terms approaching zero do not establish convergence."
-  },
-  {
-    "objectID": "classes/19/infinite-series-5-2.html#practice",
-    "href": "classes/19/infinite-series-5-2.html#practice",
-    "title": "Infinite Series",
-    "section": "Practice",
-    "text": "Practice\nDetermine whether each series converges. If it does, find its sum.\n\n\\(\\displaystyle \\sum_{n=2}^{\\infty}5\\left(\\frac{1}{3}\\right)^n\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}4\\left(-\\frac{2}{3}\\right)^{n-1}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+2)}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\ln(n+1)-\\ln n\\right]\\)"
-  },
-  {
-    "objectID": "classes/19/infinite-series-5-2.html#practice-a-repeating-decimal",
-    "href": "classes/19/infinite-series-5-2.html#practice-a-repeating-decimal",
-    "title": "Infinite Series",
-    "section": "Practice: A Repeating Decimal",
-    "text": "Practice: A Repeating Decimal\nWrite \\(2.\\overline{14}=2.141414\\ldots\\) as a fraction using a geometric series.\n\nIdentify the first term and ratio of the repeating part.\nState why that geometric series converges.\nAdd the integer part and simplify the fraction."
   },
   {
     "objectID": "classes/19/worksheet.html",
