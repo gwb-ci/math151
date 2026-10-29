@@ -6806,6 +6806,50 @@
     ]
   },
   {
+    "objectID": "classes/20/slides.html#p-series",
+    "href": "classes/20/slides.html#p-series",
+    "title": "Series and Tests",
+    "section": "p-Series",
+    "text": "p-Series\nA p-series is a series of the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^p}\\)\nwhere \\(p\\) is any real number.\nA p-series:\n\nConverges if \\(p&gt;1\\).\nDiverges if \\(p\\le 1\\).",
+    "crumbs": [
+      "Class Material",
+      "Series and Tests"
+    ]
+  },
+  {
+    "objectID": "classes/20/slides.html#applying-integral-test-to-p-series",
+    "href": "classes/20/slides.html#applying-integral-test-to-p-series",
+    "title": "Series and Tests",
+    "section": "Applying Integral Test to p-series",
+    "text": "Applying Integral Test to p-series\nA \\(p\\)-series is a series of the form \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^p}\\), where \\(p\\) is any real number.\n\nIf \\(p\\le 0\\), the series diverges by the divergence test.\nIf \\(p&gt;0\\), \\(f(x)=1/x^p\\) is positive, continuous, and decreasing, so we can apply the integral test.\n\nFor \\(p&gt;0\\), \\(p\\ne 1\\),\n\\[\n\\int_1^\\infty \\frac{1}{x^p}\\,dx\n=\\lim_{b\\to\\infty}\\frac{b^{1-p}-1}{1-p}.\n\\]\n\nIf \\(p&gt;1\\), the integral converges to \\(\\frac{1}{p-1}\\).\nIf \\(0&lt;p&lt;1\\), the integral diverges.\nIf \\(p=1\\), \\(\\int_1^\\infty \\frac{1}{x}\\,dx\\) diverges.\n\nTherefore, a \\(p\\)-series converges if \\(p&gt;1\\) and diverges if \\(p\\le 1\\).",
+    "crumbs": [
+      "Class Material",
+      "Series and Tests"
+    ]
+  },
+  {
+    "objectID": "classes/20/slides.html#examples-of-p-series-sums",
+    "href": "classes/20/slides.html#examples-of-p-series-sums",
+    "title": "Series and Tests",
+    "section": "Examples of p-series sums",
+    "text": "Examples of p-series sums\nSome convergent \\(p\\)-series have known exact sums:\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^2}=\\frac{\\pi^2}{6}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^4}=\\frac{\\pi^4}{90}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^6}=\\frac{\\pi^6}{945}\\)\n\nThe Riemann zeta function is defined for \\(p&gt;1\\) by\n\\[\n\\zeta(p)=\\sum_{n=1}^{\\infty}\\frac{1}{n^p}.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Series and Tests"
+    ]
+  },
+  {
+    "objectID": "classes/20/slides.html#the-riemann-hypothesis",
+    "href": "classes/20/slides.html#the-riemann-hypothesis",
+    "title": "Series and Tests",
+    "section": "The Riemann Hypothesis",
+    "text": "The Riemann Hypothesis\nThe Riemann zeta function extends \\(\\zeta(p)=\\sum_{n=1}^{\\infty}\\frac{1}{n^p}\\), originally defined for \\(p&gt;1\\), to complex numbers \\(p\\) (except \\(p=1\\)).\n\nThe Riemann Hypothesis (1859) states that every nontrivial zero of \\(\\zeta(p)\\) has real part \\(\\frac{1}{2}\\).\nAll nontrivial solutions of \\(\\zeta(s)=0\\) lie on the line \\(\\operatorname{Re}(s)=\\frac{1}{2}\\) in the complex plane.\nThe zeros of the zeta function are closely connected to the distribution of prime numbers.\nBiggest(?) open problem in mathematics, with a $1 million prize for a solution.",
+    "crumbs": [
+      "Class Material",
+      "Series and Tests"
+    ]
+  },
+  {
     "objectID": "classes/20/slides.html#the-koch-snowflake",
     "href": "classes/20/slides.html#the-koch-snowflake",
     "title": "Series and Tests",
