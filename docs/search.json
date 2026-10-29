@@ -70,345 +70,333 @@
     ]
   },
   {
-    "objectID": "classes/19/slides.html#infinite-series",
-    "href": "classes/19/slides.html#infinite-series",
+    "objectID": "classes/21/slides.html#series-and-tests",
+    "href": "classes/21/slides.html#series-and-tests",
+    "title": "More Series Test",
+    "section": "Series and Tests",
+    "text": "Series and Tests\nClass Session Goals:\n\nDetermine whether a p-series converges or diverges.\nUse the Integral Test to estimate the error in a partial sum.\nApply the Comparison Test to determine convergence or divergence.\nApply the Limit Comparison Test to determine convergence or divergence.\nChoose an appropriate test for a given infinite series."
+  },
+  {
+    "objectID": "classes/21/slides.html#test-so-far",
+    "href": "classes/21/slides.html#test-so-far",
+    "title": "More Series Test",
+    "section": "Test So Far",
+    "text": "Test So Far\n\nTelescoping\nDivergence\nIntegral"
+  },
+  {
+    "objectID": "classes/21/slides.html#p-series",
+    "href": "classes/21/slides.html#p-series",
+    "title": "More Series Test",
+    "section": "p-Series",
+    "text": "p-Series\nA p-series is a series of the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^p}\\)\nwhere \\(p\\) is any real number.\nA p-series:\n\nConverges if \\(p&gt;1\\).\nDiverges if \\(p\\le 1\\).\n\n\nThe harmonic series is a p-series with \\(p=1\\), so it diverges.\nThe series \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^2}\\) has \\(p=2\\), so it converges."
+  },
+  {
+    "objectID": "classes/21/slides.html#p-series-example-1",
+    "href": "classes/21/slides.html#p-series-example-1",
+    "title": "More Series Test",
+    "section": "p-Series Example 1",
+    "text": "p-Series Example 1\nDetermine whether the following series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^4}\\)\n\nThis is a p-series with \\(p=4\\).\nSince \\(p=4&gt;1\\), the series converges."
+  },
+  {
+    "objectID": "classes/21/slides.html#p-series-example-2",
+    "href": "classes/21/slides.html#p-series-example-2",
+    "title": "More Series Test",
+    "section": "p-Series Example 2",
+    "text": "p-Series Example 2\nDetermine whether the following series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^{2/3}}\\)\n\nThis is a p-series with \\(p=\\frac{2}{3}\\).\nSince \\(p=\\frac{2}{3}&lt;1\\), the series diverges."
+  },
+  {
+    "objectID": "classes/21/slides.html#error-estimates-for-parital-sums",
+    "href": "classes/21/slides.html#error-estimates-for-parital-sums",
+    "title": "More Series Test",
+    "section": "Error Estimates for Parital Sums",
+    "text": "Error Estimates for Parital Sums\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=S\\) converges.\nThe remainder after \\(N\\) terms is\n\\(\\displaystyle R_N=S-S_N=\\sum_{n=N+1}^{\\infty}a_n\\).\nRemainder Estimate from the Integral Test (Theorem 5.10)\nIf \\(f\\) is continuous, positive, and decreasing, with \\(f(n)=a_n\\), then\n\\(\\displaystyle \\int_{N+1}^{\\infty}f(x)\\,dx&lt;R_N&lt;\\int_N^{\\infty}f(x)\\,dx\\).\n\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\),\n\\(\\displaystyle R_N&lt;\\int_N^\\infty\\frac{1}{x^3}\\,dx=\\frac{1}{2N^2}\\).\nTo guarantee \\(R_N&lt;0.001\\), it is sufficient to choose \\(N\\ge 23\\)."
+  },
+  {
+    "objectID": "classes/21/slides.html#comparsion-test",
+    "href": "classes/21/slides.html#comparsion-test",
+    "title": "More Series Test",
+    "section": "Comparsion Test",
+    "text": "Comparsion Test\nComparison Test (Theorem 5.11)\nSuppose \\(a_n\\) and \\(b_n\\) are nonnegative for all \\(n\\ge N\\).\nConvergence:\nIf \\(0\\le a_n\\le b_n\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n\\) converges, then \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) converges.\n\nDivergence:\nIf \\(a_n\\ge b_n\\ge 0\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n\\) diverges, then \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) diverges."
+  },
+  {
+    "objectID": "classes/21/slides.html#comparsion-test-example-1",
+    "href": "classes/21/slides.html#comparsion-test-example-1",
+    "title": "More Series Test",
+    "section": "Comparsion Test Example 1",
+    "text": "Comparsion Test Example 1\nUse the comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3+3n+1}\\)\n\nCompare with \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\).\nFor every positive integer \\(n\\),\n\\(\\displaystyle 0&lt;\\frac{1}{n^3+3n+1}&lt;\\frac{1}{n^3}\\).\nSince \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\) is a convergent p-series with \\(p=3\\), the given series converges by the comparison test."
+  },
+  {
+    "objectID": "classes/21/slides.html#comparsion-test-example-2",
+    "href": "classes/21/slides.html#comparsion-test-example-2",
+    "title": "More Series Test",
+    "section": "Comparsion Test Example 2",
+    "text": "Comparsion Test Example 2\nUse the comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=2}^{\\infty}\\frac{1}{\\ln(n)}\\)\n\nCompare with the harmonic series \\(\\displaystyle \\sum_{n=2}^{\\infty}\\frac{1}{n}\\).\nSince \\(\\ln(n)&lt;n\\) for all \\(n\\ge 2\\),\n\\(\\displaystyle \\frac{1}{\\ln(n)}&gt;\\frac{1}{n}&gt;0\\).\nThe harmonic series diverges.\nTherefore, the given series diverges by the comparison test."
+  },
+  {
+    "objectID": "classes/21/slides.html#limit-comparsion-test",
+    "href": "classes/21/slides.html#limit-comparsion-test",
+    "title": "More Series Test",
+    "section": "Limit Comparsion Test",
+    "text": "Limit Comparsion Test\nLimit Comparison Test (Theorem 5.12)\nSuppose \\(a_n,b_n&gt;0\\) and let\n\\(\\displaystyle L=\\lim_{n\\to\\infty}\\frac{a_n}{b_n}\\).\n\nIf \\(0&lt;L&lt;\\infty\\), both series converge or both diverge.\nIf \\(L=0\\) and \\(\\sum b_n\\) converges, then \\(\\sum a_n\\) converges.\nIf \\(L=\\infty\\) and \\(\\sum b_n\\) diverges, then \\(\\sum a_n\\) diverges.\n\n\nTypically, choose \\(b_n\\) from a known geometric or p-series.\nWhen \\(0&lt;L&lt;\\infty\\), the two series have the same convergence behavior."
+  },
+  {
+    "objectID": "classes/21/slides.html#limit-comparsion-test-example-1",
+    "href": "classes/21/slides.html#limit-comparsion-test-example-1",
+    "title": "More Series Test",
+    "section": "Limit Comparsion Test Example 1",
+    "text": "Limit Comparsion Test Example 1\nUse the limit comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt{n}+1}\\)\n\nCompare with \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt{n}}\\).\n\\(\\displaystyle L=\\lim_{n\\to\\infty}\\frac{1/(\\sqrt{n}+1)}{1/\\sqrt{n}}\\)\n\\(\\displaystyle =\\lim_{n\\to\\infty}\\frac{1}{1+1/\\sqrt{n}}=1\\).\nSince \\(L=1&gt;0\\) and \\(\\sum 1/\\sqrt{n}\\) is a divergent p-series with \\(p=\\frac12\\), the given series diverges."
+  },
+  {
+    "objectID": "classes/21/slides.html#limit-comparsion-test-example-2",
+    "href": "classes/21/slides.html#limit-comparsion-test-example-2",
+    "title": "More Series Test",
+    "section": "Limit Comparsion Test Example 2",
+    "text": "Limit Comparsion Test Example 2\nUse the limit comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{2^n+1}{3^n}\\)\n\nCompare with the geometric series \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{2}{3}\\right)^n\\).\n\\(\\displaystyle L=\\lim_{n\\to\\infty}\\frac{(2^n+1)/3^n}{2^n/3^n}\\)\n\\(\\displaystyle =\\lim_{n\\to\\infty}\\left[1+\\left(\\frac12\\right)^n\\right]=1\\).\nSince \\(L=1&gt;0\\) and the geometric series converges because \\(|r|=\\frac23&lt;1\\), the given series converges."
+  },
+  {
+    "objectID": "classes/19/worksheet.html",
+    "href": "classes/19/worksheet.html",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/19/worksheet.html#null",
+    "href": "classes/19/worksheet.html#null",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/19/slides-macmini.html#infinite-series",
+    "href": "classes/19/slides-macmini.html#infinite-series",
     "title": "Series",
     "section": "Infinite Series",
-    "text": "Infinite Series\nClass Session Goals:\n\nExplain the meaning of the sum of an infinite series.\nDetermine convergence using the sequence of partial sums.\nCalculate the sum of a geometric series.\nEvaluate a telescoping series.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Infinite Series\nClass Session Goals:\n\nExplain the meaning of the sum of an infinite series.\nDetermine convergence using the sequence of partial sums.\nCalculate the sum of a geometric series.\nEvaluate a telescoping series."
   },
   {
-    "objectID": "classes/19/slides.html#from-sequences-to-series",
-    "href": "classes/19/slides.html#from-sequences-to-series",
+    "objectID": "classes/19/slides-macmini.html#from-sequences-to-series",
+    "href": "classes/19/slides-macmini.html#from-sequences-to-series",
     "title": "Series",
     "section": "From Sequences to Series",
-    "text": "From Sequences to Series\nA sequence is an ordered list of terms:\n\\(a_1,a_2,a_3,\\ldots\\)\nAn infinite series adds the terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=a_1+a_2+a_3+\\cdots\\)\nWhat does it mean to add infinitely many numbers?",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "From Sequences to Series\nA sequence is an ordered list of terms:\n\\(a_1,a_2,a_3,\\ldots\\)\nAn infinite series adds the terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=a_1+a_2+a_3+\\cdots\\)\nWhat does it mean to add infinitely many numbers?"
   },
   {
-    "objectID": "classes/19/slides.html#partial-sums",
-    "href": "classes/19/slides.html#partial-sums",
+    "objectID": "classes/19/slides-macmini.html#partial-sums",
+    "href": "classes/19/slides-macmini.html#partial-sums",
     "title": "Series",
     "section": "Partial Sums",
-    "text": "Partial Sums\nThe \\(k\\)th partial sum adds the first \\(k\\) terms:\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}a_n.\\)\n\\(S_1=a_1\\)\n\\(S_2=a_1+a_2\\)\n\\(S_3=a_1+a_2+a_3\\)\nThe partial sums form a new sequence: \\(\\{S_k\\}\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Partial Sums\nThe \\(k\\)th partial sum adds the first \\(k\\) terms:\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}a_n.\\)\n\\(S_1=a_1\\)\n\\(S_2=a_1+a_2\\)\n\\(S_3=a_1+a_2+a_3\\)\nThe partial sums form a new sequence: \\(\\{S_k\\}\\)."
   },
   {
-    "objectID": "classes/19/slides.html#motivating-example",
-    "href": "classes/19/slides.html#motivating-example",
+    "objectID": "classes/19/slides-macmini.html#adding-powers-of-frac12",
+    "href": "classes/19/slides-macmini.html#adding-powers-of-frac12",
     "title": "Series",
-    "section": "Motivating Example",
-    "text": "Motivating Example\nConsider the infinite sum For \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}++\\frac{1}{16}\\cdots\\).\nIt’s partial sum is \\(\\displaystyle S_k=\\sum_{n=1}^{k}\\left(\\frac{1}{2}\\right)^{n-1}.\\)\nHow can we calculate the value of this sum? Is it finite or infinite?",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "section": "Adding Powers of \\(\\frac{1}{2}\\)",
+    "text": "Adding Powers of \\(\\frac{1}{2}\\)\n\\(\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\frac{1}{16}+\\frac{1}{32}+ \\cdots\\)\n\\(\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}.\\)\nHow can we add up and infinite number of numbers?"
   },
   {
-    "objectID": "classes/19/slides.html#computing-partial-sums",
-    "href": "classes/19/slides.html#computing-partial-sums",
+    "objectID": "classes/19/slides-macmini.html#partial-sums-1",
+    "href": "classes/19/slides-macmini.html#partial-sums-1",
     "title": "Series",
-    "section": "Computing Partial Sums",
-    "text": "Computing Partial Sums\nFor \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\cdots\\):\n\n\n\n\\(k\\)\n1\n2\n3\n4\n5\n\n\n\n\n\\(S_k\\)\n\\(1\\)\n\\(3/2\\)\n\\(7/4\\)\n\\(15/8\\)\n\\(31/16\\)\n\n\n\n\nThese partial sums suggest \\(S_k=2-\\dfrac{1}{2^{k-1}}\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "section": "Partial Sums",
+    "text": "Partial Sums\nLet \\(S_k=\\sum_{n=1}^k \\frac{1}{2^n}\\) is the \\(k\\)-th partial sum in this case.\nFor \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\cdots\\):\n\n\n\n\\(k\\)\n1\n2\n3\n4\n5\n\n\n\n\n\\(S_k\\)\n\\(1\\)\n\\(3/2\\)\n\\(7/4\\)\n\\(15/8\\)\n\\(31/16\\)\n\n\n\n\nThese partial sums suggest \\(S_k=2-\\dfrac{1}{2^{k-1}}\\)."
   },
   {
-    "objectID": "classes/19/slides.html#the-sequence-of-partial-sums",
-    "href": "classes/19/slides.html#the-sequence-of-partial-sums",
+    "objectID": "classes/19/slides-macmini.html#the-sequence-of-partial-sums",
+    "href": "classes/19/slides-macmini.html#the-sequence-of-partial-sums",
     "title": "Series",
     "section": "The Sequence of Partial Sums",
-    "text": "The Sequence of Partial Sums\n\n\nPartial sums of one plus one-half plus one-quarter and so on\n\nPoints at k from one to ten show the finite sums S_k increasing from one toward the dashed line at two. The points represent partial sums, rather than individual terms.     2026-10-21T11:10:54.868138 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             2             4             6             8             10    k                 0             1             2       S k                                S = 2        \n\nEach point represents the value of the partial sum \\(S_k\\). The partial sums approach \\(2\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "The Sequence of Partial Sums\n\n\nPartial sums of one plus one-half plus one-quarter and so on\n\nPoints at k from one to ten show the finite sums S_k increasing from one toward the dashed line at two. The points represent partial sums, rather than individual terms.     2026-10-21T11:10:54.868138 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             2             4             6             8             10    k                 0             1             2       S k                                S = 2        \n\nEach point represents a partial sum. It appears that the partial sums approach \\(2\\) as \\(k \\to \\infty\\)."
   },
   {
-    "objectID": "classes/19/slides.html#terms-and-partial-sums",
-    "href": "classes/19/slides.html#terms-and-partial-sums",
-    "title": "Series",
-    "section": "Terms and Partial Sums",
-    "text": "Terms and Partial Sums\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\):\n\n\n\n\nFormula\nLimit\n\n\n\n\nTerms\n\\(a_n=(1/2)^{n-1}\\)\n\\(a_n\\to0\\)\n\n\nPartial sums\n\\(S_k=2-2^{1-k}\\)\n\\(S_k\\to2\\)\n\n\n\nThe sum of the series is the limit of partial sums.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
-  },
-  {
-    "objectID": "classes/19/slides.html#the-sum-of-an-infinite-series",
-    "href": "classes/19/slides.html#the-sum-of-an-infinite-series",
+    "objectID": "classes/19/slides-macmini.html#the-sum-of-an-infinite-series",
+    "href": "classes/19/slides-macmini.html#the-sum-of-an-infinite-series",
     "title": "Series",
     "section": "The Sum of an Infinite Series",
-    "text": "The Sum of an Infinite Series\nIf \\(S_k\\to S\\) for a finite number \\(S\\), the series converges and\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=S.\\)\nIf the partial sums do not converge, the series diverges.\nIn our example our series is convergent and \\(\\sum_{n=1}^{\\infty}\\frac{1}{2}^n=2\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "The Sum of an Infinite Series\nThe partial sums are a sequence \\(\\{S_k\\}\\).\nIf \\(S_k\\to S\\) for a finite number \\(S\\), the series converges and\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=S.\\)\nIf the partial sums do not converge, the series diverges.\n\nWhat is the \\(\\lim_{k \\to \\infty} 2- \\frac{1}{2^k}\\)?"
   },
   {
-    "objectID": "classes/19/slides.html#divergence-by-growing-partial-sums",
-    "href": "classes/19/slides.html#divergence-by-growing-partial-sums",
+    "objectID": "classes/19/slides-macmini.html#terms-and-partial-sums",
+    "href": "classes/19/slides-macmini.html#terms-and-partial-sums",
+    "title": "Series",
+    "section": "Terms and Partial Sums",
+    "text": "Terms and Partial Sums\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\):\n\n\n\n\nFormula\nLimit\n\n\n\n\nTerms\n\\(a_n=(1/2)^{n-1}\\)\n\\(a_n\\to0\\)\n\n\nPartial sums\n\\(S_k=2-2^{1-k}\\)\n\\(S_k\\to2\\)\n\n\n\nThe sum of the series is the limit of partial sums."
+  },
+  {
+    "objectID": "classes/19/slides-macmini.html#divergence-by-growing-partial-sums",
+    "href": "classes/19/slides-macmini.html#divergence-by-growing-partial-sums",
     "title": "Series",
     "section": "Divergence by Growing Partial Sums",
-    "text": "Divergence by Growing Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{n+1}\\) converges.\n\nFor \\(n\\ge1\\), \\(\\dfrac{n}{n+1}\\ge\\dfrac{1}{2}\\).\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\frac{n}{n+1}\\ge\\frac{k}{2}.\\)\nThe partial sums grow without bound, so the series diverges.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Divergence by Growing Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{n+1}\\) converges.\n\nFor \\(n\\ge1\\), \\(\\dfrac{n}{n+1}\\ge\\dfrac{1}{2}\\).\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\frac{n}{n+1}\\ge\\frac{k}{2}.\\)\nSo \\(\\{S_k\\}\\) is bounded below by \\(\\{\\frac{k}{2}\\}\\) which diverges, so ${S_k} diverges."
   },
   {
-    "objectID": "classes/19/slides.html#divergence-by-oscillating-partial-sums",
-    "href": "classes/19/slides.html#divergence-by-oscillating-partial-sums",
+    "objectID": "classes/19/slides-macmini.html#divergence-by-oscillating-partial-sums",
+    "href": "classes/19/slides-macmini.html#divergence-by-oscillating-partial-sums",
     "title": "Series",
     "section": "Divergence by Oscillating Partial Sums",
-    "text": "Divergence by Oscillating Partial Sums\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n\\) converges.\n\\(S_1=-1,\\quad S_2=0,\\quad S_3=-1,\\quad S_4=0.\\)\nIn general, \\(S_k=-1\\) when \\(k\\) is odd and \\(S_k=0\\) when \\(k\\) is even.\nThe series diverges.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Divergence by Oscillating Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n\\) converges.\n\n\\(S_1=-1,\\quad S_2=0,\\quad S_3=-1,\\quad S_4=0.\\)\nIn general, \\(S_k=-1\\) when \\(k\\) is odd and \\(S_k=0\\) when \\(k\\) is even.\nThe partial sums are bounded but do not approach one number.\nThe series diverges."
   },
   {
-    "objectID": "classes/19/slides.html#a-convergent-example",
-    "href": "classes/19/slides.html#a-convergent-example",
+    "objectID": "classes/19/slides-macmini.html#a-convergent-example",
+    "href": "classes/19/slides-macmini.html#a-convergent-example",
     "title": "Series",
     "section": "A Convergent Example",
-    "text": "A Convergent Example\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\).\n\\(S_1=\\frac{1}{2},\\quad S_2=\\frac{2}{3},\\quad S_3=\\frac{3}{4},\\quad S_4=\\frac{4}{5}.\\)\n\nThe pattern for the partial sum is \\(S_k=\\dfrac{k}{k+1}\\).\n\\(\\lim_{k \\to \\infty}\\frac{}{k+1}=1\\), So \\(\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=1\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "A Convergent Example\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\).\n\\(S_1=\\frac{1}{2},\\quad S_2=\\frac{2}{3},\\quad S_3=\\frac{3}{4},\\quad S_4=\\frac{4}{5}.\\)\n\nThe pattern suggests \\(S_k=\\dfrac{k}{k+1}\\)."
   },
   {
-    "objectID": "classes/19/slides.html#the-harmonic-series",
-    "href": "classes/19/slides.html#the-harmonic-series",
+    "objectID": "classes/19/slides-macmini.html#the-harmonic-series",
+    "href": "classes/19/slides-macmini.html#the-harmonic-series",
     "title": "Series",
     "section": "The Harmonic Series",
-    "text": "The Harmonic Series\nThe harmonic series is\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}=1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+\\cdots\\)\nIts terms approach \\(0\\). Does the series converge?\n\nThe harmonic series diverges. We will show that its partial sums are unbounded.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "The Harmonic Series\nThe harmonic series is\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}=1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+\\cdots\\)\nIts terms approach \\(0\\). Does the series converge?\n\nThe harmonic series diverges. We will show that its partial sums are unbounded."
   },
   {
-    "objectID": "classes/19/slides.html#grouping-the-harmonic-terms",
-    "href": "classes/19/slides.html#grouping-the-harmonic-terms",
+    "objectID": "classes/19/slides-macmini.html#grouping-the-harmonic-terms",
+    "href": "classes/19/slides-macmini.html#grouping-the-harmonic-terms",
     "title": "Series",
     "section": "Grouping the Harmonic Terms",
-    "text": "Grouping the Harmonic Terms\nGroup consecutive terms in blocks of \\(1,2,4,8,\\ldots\\) terms after the initial \\(1\\).\n\\(\\displaystyle \\frac{1}{3}+\\frac{1}{4}\\ge2\\left(\\frac{1}{4}\\right)=\\frac{1}{2}.\\)\n\\(\\displaystyle \\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}\\ge4\\left(\\frac{1}{8}\\right)=\\frac{1}{2}.\\)\n\nThe block from \\(n=2^{j-1}+1\\) through \\(n=2^j\\) has \\(2^{j-1}\\) terms.\nEach term is at least \\(1/2^j\\), so each block adds at least \\(1/2\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Grouping the Harmonic Terms\nGroup consecutive terms in blocks of \\(1,2,4,8,\\ldots\\) terms after the initial \\(1\\).\n\\(\\displaystyle \\frac{1}{3}+\\frac{1}{4}\\ge2\\left(\\frac{1}{4}\\right)=\\frac{1}{2}.\\)\n\\(\\displaystyle \\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}\\ge4\\left(\\frac{1}{8}\\right)=\\frac{1}{2}.\\)\n\nThe block from \\(n=2^{j-1}+1\\) through \\(n=2^j\\) has \\(2^{j-1}\\) terms.\nEach term is at least \\(1/2^j\\), so each block adds at least \\(1/2\\)."
   },
   {
-    "objectID": "classes/19/slides.html#why-the-harmonic-series-diverges",
-    "href": "classes/19/slides.html#why-the-harmonic-series-diverges",
+    "objectID": "classes/19/slides-macmini.html#why-the-harmonic-series-diverges",
+    "href": "classes/19/slides-macmini.html#why-the-harmonic-series-diverges",
     "title": "Series",
     "section": "Why the Harmonic Series Diverges",
-    "text": "Why the Harmonic Series Diverges\nThe partial sum through \\(2^j\\) terms satisfies\n\\(\\displaystyle S_{2^j}\\ge1+\\frac{j}{2}.\\)\nThe right side grows without bound as \\(j\\to\\infty\\).\n\nAll terms are positive, so all later partial sums are at least as large.\nTherefore, \\(S_k\\to\\infty\\) and the harmonic series diverges.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Why the Harmonic Series Diverges\nThe partial sum through \\(2^j\\) terms satisfies\n\\(\\displaystyle S_{2^j}\\ge1+\\frac{j}{2}.\\)\nThe right side grows without bound as \\(j\\to\\infty\\).\n\nAll terms are positive, so all later partial sums are at least as large.\nTherefore, \\(S_k\\to\\infty\\) and the harmonic series diverges."
   },
   {
-    "objectID": "classes/19/slides.html#terms-approaching-zero-are-not-enough",
-    "href": "classes/19/slides.html#terms-approaching-zero-are-not-enough",
+    "objectID": "classes/19/slides-macmini.html#terms-approaching-zero-are-not-enough",
+    "href": "classes/19/slides-macmini.html#terms-approaching-zero-are-not-enough",
     "title": "Series",
     "section": "Terms Approaching Zero Are Not Enough",
-    "text": "Terms Approaching Zero Are Not Enough\nCompare these two series:\n\n\n\n\n\n\n\n\nSeries\nLimit of its terms\nBehavior of partial sums\n\n\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}\\)\n\\(0\\)\nGrow without bound\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\)\n\\(0\\)\nApproach \\(1\\)\n\n\n\nKnowing that the terms approach \\(0\\) does not determine whether their series converges.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Terms Approaching Zero Are Not Enough\nCompare these two series:\n\n\n\n\n\n\n\n\nSeries\nLimit of its terms\nBehavior of partial sums\n\n\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}\\)\n\\(0\\)\nGrow without bound\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\)\n\\(0\\)\nApproach \\(1\\)\n\n\n\nKnowing that the terms approach \\(0\\) does not determine whether their series converges."
   },
   {
-    "objectID": "classes/19/slides.html#algebraic-properties-of-series",
-    "href": "classes/19/slides.html#algebraic-properties-of-series",
+    "objectID": "classes/19/slides-macmini.html#algebraic-properties-of-series",
+    "href": "classes/19/slides-macmini.html#algebraic-properties-of-series",
     "title": "Series",
     "section": "Algebraic Properties of Series",
-    "text": "Algebraic Properties of Series\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=A\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n=B\\) both converge.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n+b_n)=A+B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n-b_n)=A-B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ca_n=cA\\)\nThese rules follow by taking limits of finite partial sums.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Algebraic Properties of Series\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=A\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n=B\\) both converge.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n+b_n)=A+B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n-b_n)=A-B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ca_n=cA\\)\nThese rules follow by taking limits of finite partial sums."
   },
   {
-    "objectID": "classes/19/slides.html#geometric-series",
-    "href": "classes/19/slides.html#geometric-series",
+    "objectID": "classes/19/slides-macmini.html#geometric-series",
+    "href": "classes/19/slides-macmini.html#geometric-series",
     "title": "Series",
     "section": "Geometric Series",
-    "text": "Geometric Series\nA geometric series has the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=a+ar+ar^2+ar^3+\\cdots\\)\nthe terms of this series are element of a geometric sequence.\nIn our previous example,\n\\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\cdots\\) has \\(a=1\\) and \\(r=\\frac{1}{2}\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Geometric Series\nA geometric series has the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=a+ar+ar^2+ar^3+\\cdots\\)\nHere \\(a\\) is the first term and \\(r\\) is the common ratio.\nFor example,\n\\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\cdots\\) has \\(a=1\\) and \\(r=\\frac{1}{2}\\)."
   },
   {
-    "objectID": "classes/19/slides.html#a-finite-sum-for-the-geometric-series",
-    "href": "classes/19/slides.html#a-finite-sum-for-the-geometric-series",
+    "objectID": "classes/19/slides-macmini.html#a-finite-geometric-sum",
+    "href": "classes/19/slides-macmini.html#a-finite-geometric-sum",
     "title": "Series",
-    "section": "A Finite Sum for the Geometric Series",
-    "text": "A Finite Sum for the Geometric Series\nStart with \\(S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\).\nMultiply by \\(r\\):\n\\(rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\)\n\nSubtract to obtain \\((1-r)S_k=a-ar^k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "section": "A Finite Geometric Sum",
+    "text": "A Finite Geometric Sum\nStart with \\(S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\).\nMultiply by \\(r\\):\n\\(rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\)\n\nSubtract to obtain \\((1-r)S_k=a-ar^k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\)."
   },
   {
-    "objectID": "classes/19/slides.html#the-geometric-series-formula",
-    "href": "classes/19/slides.html#the-geometric-series-formula",
+    "objectID": "classes/19/slides-macmini.html#the-geometric-series-formula",
+    "href": "classes/19/slides-macmini.html#the-geometric-series-formula",
     "title": "Series",
     "section": "The Geometric Series Formula",
-    "text": "The Geometric Series Formula\nIf \\(|r|&lt;1\\), then \\(r^k\\to0\\).\nTaking the limit of the finite sum gives\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=\\frac{a}{1-r},\\qquad |r|&lt;1.\\)\n\nFor \\(a\\ne0\\), the geometric series diverges when \\(|r|\\ge1\\).\nThe case \\(a=0\\) gives the zero series.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "The Geometric Series Formula\nIf \\(|r|&lt;1\\), then \\(r^k\\to0\\).\nTaking the limit of the finite sum gives\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=\\frac{a}{1-r},\\qquad |r|&lt;1.\\)\n\nFor \\(a\\ne0\\), the geometric series diverges when \\(|r|\\ge1\\).\nThe case \\(a=0\\) gives the zero series."
   },
   {
-    "objectID": "classes/19/slides.html#what-happens-when-rge1",
-    "href": "classes/19/slides.html#what-happens-when-rge1",
+    "objectID": "classes/19/slides-macmini.html#what-happens-when-rge1",
+    "href": "classes/19/slides-macmini.html#what-happens-when-rge1",
     "title": "Series",
     "section": "What Happens When \\(|r|\\ge1\\)?",
-    "text": "What Happens When \\(|r|\\ge1\\)?\nAssume \\(a\\ne0\\).\n\nIf \\(r=1\\), then \\(S_k=ka\\), which is unbounded.\nIf \\(r=-1\\), the partial sums alternate between \\(a\\) and \\(0\\).\nIf \\(|r|&gt;1\\), the formula \\(S_k=a(1-r^k)/(1-r)\\) gives unbounded partial sums.\n\nGeometric series is only finite for \\(|r|&lt;1\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "What Happens When \\(|r|\\ge1\\)?\nAssume \\(a\\ne0\\).\n\nIf \\(r=1\\), then \\(S_k=ka\\), which is unbounded.\nIf \\(r=-1\\), the partial sums alternate between \\(a\\) and \\(0\\).\nIf \\(|r|&gt;1\\), the formula \\(S_k=a(1-r^k)/(1-r)\\) gives unbounded partial sums.\n\nAlways check \\(|r|&lt;1\\) before using \\(a/(1-r)\\) as an infinite sum."
   },
   {
-    "objectID": "classes/19/slides.html#a-divergent-geometric-series",
-    "href": "classes/19/slides.html#a-divergent-geometric-series",
+    "objectID": "classes/19/slides-macmini.html#a-negative-geometric-ratio",
+    "href": "classes/19/slides-macmini.html#a-negative-geometric-ratio",
+    "title": "Series",
+    "section": "A Negative Geometric Ratio",
+    "text": "A Negative Geometric Ratio\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-3)^{n+1}}{4^{n-1}}\\) converges. If so, find its sum.\n\n\\(\\displaystyle \\frac{(-3)^{n+1}}{4^{n-1}}=9\\left(-\\frac{3}{4}\\right)^{n-1}.\\)\nThe first term is \\(a=9\\) and the ratio is \\(r=-3/4\\).\nSince \\(|r|&lt;1\\), the sum is \\(\\displaystyle \\frac{9}{1-(-3/4)}=\\frac{36}{7}\\)."
+  },
+  {
+    "objectID": "classes/19/slides-macmini.html#a-shifted-geometric-series",
+    "href": "classes/19/slides-macmini.html#a-shifted-geometric-series",
+    "title": "Series",
+    "section": "A Shifted Geometric Series",
+    "text": "A Shifted Geometric Series\nEvaluate \\(\\displaystyle \\sum_{n=0}^{\\infty}\\left(\\frac{2}{3}\\right)^{n+2}\\).\n\nThe first few terms are \\(\\displaystyle \\frac{4}{9}+\\frac{8}{27}+\\frac{16}{81}+\\cdots\\)\nTherefore, \\(a=4/9\\) and \\(r=2/3\\).\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\left(\\frac{2}{3}\\right)^{n+2}=\\frac{4/9}{1-2/3}=\\frac{4}{3}.\\)"
+  },
+  {
+    "objectID": "classes/19/slides-macmini.html#a-divergent-geometric-series",
+    "href": "classes/19/slides-macmini.html#a-divergent-geometric-series",
     "title": "Series",
     "section": "A Divergent Geometric Series",
-    "text": "A Divergent Geometric Series\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}e^{2n}\\) converges.\n\n\\(\\displaystyle e^{2n}=e^2(e^2)^{n-1}.\\)\nThe first term is \\(a=e^2\\) and the ratio is \\(r=e^2&gt;1\\).\nThe series diverges.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "A Divergent Geometric Series\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}e^{2n}\\) converges.\n\n\\(\\displaystyle e^{2n}=e^2(e^2)^{n-1}.\\)\nThe first term is \\(a=e^2\\) and the ratio is \\(r=e^2&gt;1\\).\nThe series diverges."
   },
   {
-    "objectID": "classes/19/slides.html#combining-convergent-series",
-    "href": "classes/19/slides.html#combining-convergent-series",
+    "objectID": "classes/19/slides-macmini.html#combining-convergent-series",
+    "href": "classes/19/slides-macmini.html#combining-convergent-series",
     "title": "Series",
     "section": "Combining Convergent Series",
-    "text": "Combining Convergent Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\frac{3}{n(n+1)}+\\left(\\frac{1}{2}\\right)^{n-2}\\right]\\).\n\nBoth component series converge. Since \\((1/2)^{n-2}=2(1/2)^{n-1}\\),\n\\(\\displaystyle 3\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}+2\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\)\n\\(=3(1)+2(2)=7.\\)",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Combining Convergent Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\frac{3}{n(n+1)}+\\left(\\frac{1}{2}\\right)^{n-2}\\right]\\).\n\nBoth component series converge. Since \\((1/2)^{n-2}=2(1/2)^{n-1}\\),\n\\(\\displaystyle 3\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}+2\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\)\n\\(=3(1)+2(2)=7.\\)"
   },
   {
-    "objectID": "classes/19/slides.html#the-koch-snowflake",
-    "href": "classes/19/slides.html#the-koch-snowflake",
+    "objectID": "classes/19/slides-macmini.html#the-koch-snowflake",
+    "href": "classes/19/slides-macmini.html#the-koch-snowflake",
     "title": "Series",
     "section": "The Koch Snowflake",
-    "text": "The Koch Snowflake\nStart with an equilateral triangle of side length \\(1\\).\nAt each step, replace the middle third of every segment with two sides of an outward equilateral triangle.\n\n\nFirst four stages of the Koch snowflake\n\nFour figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.     2026-10-21T11:10:55.024373 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                     F 0             F 1             F 2             F 3                   \n\nWhat happens to the perimeter and the enclosed area?",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "The Koch Snowflake\nStart with an equilateral triangle of side length \\(1\\).\nAt each step, replace the middle third of every segment with two sides of an outward equilateral triangle.\n\n\nFirst four stages of the Koch snowflake\n\nFour figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.     2026-10-21T11:10:55.024373 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                     F 0             F 1             F 2             F 3                   \n\nWhat happens to the perimeter and the enclosed area?"
   },
   {
-    "objectID": "classes/19/slides.html#koch-snowflake-perimeter",
-    "href": "classes/19/slides.html#koch-snowflake-perimeter",
+    "objectID": "classes/19/slides-macmini.html#koch-snowflake-perimeter",
+    "href": "classes/19/slides-macmini.html#koch-snowflake-perimeter",
     "title": "Series",
     "section": "Koch Snowflake: Perimeter",
-    "text": "Koch Snowflake: Perimeter\nAt stage \\(n\\), let \\(N_n\\) count the sides and \\(l_n\\) be the length of each side.\nEach step creates four segments, each one-third as long:\n\\(N_n=3\\cdot4^n,\\qquad l_n=\\left(\\frac{1}{3}\\right)^n.\\)\n\n\\(\\displaystyle L_n=N_nl_n=3\\left(\\frac{4}{3}\\right)^n.\\)\nSince \\(4/3&gt;1\\), the perimeter grows without bound.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Koch Snowflake: Perimeter\nAt stage \\(n\\), let \\(N_n\\) count the sides and \\(l_n\\) be the length of each side.\nEach step creates four segments, each one-third as long:\n\\(N_n=3\\cdot4^n,\\qquad l_n=\\left(\\frac{1}{3}\\right)^n.\\)\n\n\\(\\displaystyle L_n=N_nl_n=3\\left(\\frac{4}{3}\\right)^n.\\)\nSince \\(4/3&gt;1\\), the perimeter grows without bound."
   },
   {
-    "objectID": "classes/19/slides.html#koch-snowflake-added-area",
-    "href": "classes/19/slides.html#koch-snowflake-added-area",
+    "objectID": "classes/19/slides-macmini.html#koch-snowflake-added-area",
+    "href": "classes/19/slides-macmini.html#koch-snowflake-added-area",
     "title": "Series",
     "section": "Koch Snowflake: Added Area",
-    "text": "Koch Snowflake: Added Area\nLet \\(A_0=\\sqrt{3}/4\\) be the area of the original triangle.\nAt step \\(n\\ge1\\):\n\nThere are \\(3\\cdot4^{n-1}\\) new triangles.\nEach has side length \\(1/3^n\\) and area \\(A_0/9^n\\).\n\n\nThe added area is \\(\\displaystyle \\Delta A_n=\\frac{A_0}{3}\\left(\\frac{4}{9}\\right)^{n-1}\\).\nThe added areas form a geometric sequence with ratio \\(4/9\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Koch Snowflake: Added Area\nLet \\(A_0=\\sqrt{3}/4\\) be the area of the original triangle.\nAt step \\(n\\ge1\\):\n\nThere are \\(3\\cdot4^{n-1}\\) new triangles.\nEach has side length \\(1/3^n\\) and area \\(A_0/9^n\\).\n\n\nThe added area is \\(\\displaystyle \\Delta A_n=\\frac{A_0}{3}\\left(\\frac{4}{9}\\right)^{n-1}\\).\nThe added areas form a geometric sequence with ratio \\(4/9\\)."
   },
   {
-    "objectID": "classes/19/slides.html#koch-snowflake-total-area",
-    "href": "classes/19/slides.html#koch-snowflake-total-area",
+    "objectID": "classes/19/slides-macmini.html#koch-snowflake-total-area",
+    "href": "classes/19/slides-macmini.html#koch-snowflake-total-area",
     "title": "Series",
     "section": "Koch Snowflake: Total Area",
-    "text": "Koch Snowflake: Total Area\nThe limiting area is the original area plus all the added areas:\n\\(\\displaystyle A=A_0+\\frac{A_0}{3}\\sum_{n=1}^{\\infty}\\left(\\frac{4}{9}\\right)^{n-1}.\\)\n\n\\(\\displaystyle A=A_0+\\frac{A_0/3}{1-4/9}=\\frac{8}{5}A_0=\\frac{2\\sqrt{3}}{5}.\\)\nThe Koch snowflake has finite area and infinite perimeter.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Koch Snowflake: Total Area\nThe limiting area is the original area plus all the added areas:\n\\(\\displaystyle A=A_0+\\frac{A_0}{3}\\sum_{n=1}^{\\infty}\\left(\\frac{4}{9}\\right)^{n-1}.\\)\n\n\\(\\displaystyle A=A_0+\\frac{A_0/3}{1-4/9}=\\frac{8}{5}A_0=\\frac{2\\sqrt{3}}{5}.\\)\nThe Koch snowflake has finite area and infinite perimeter."
   },
   {
-    "objectID": "classes/19/slides.html#telescoping-series",
-    "href": "classes/19/slides.html#telescoping-series",
+    "objectID": "classes/19/slides-macmini.html#telescoping-series",
+    "href": "classes/19/slides-macmini.html#telescoping-series",
     "title": "Series",
     "section": "Telescoping Series",
-    "text": "Telescoping Series\nA telescoping series has partial sums in which most terms cancel.\nFor example, partial fractions give\n\\(\\displaystyle \\frac{1}{n(n+1)}=\\frac{1}{n}-\\frac{1}{n+1}.\\)\n\nThus \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{n}-\\frac{1}{n+1}\\right)\\).\nFirst cancel in a finite partial sum, then take its limit.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Telescoping Series\nA telescoping series has partial sums in which most terms cancel.\nFor example, partial fractions give\n\\(\\displaystyle \\frac{1}{n(n+1)}=\\frac{1}{n}-\\frac{1}{n+1}.\\)\n\nThus \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{n}-\\frac{1}{n+1}\\right)\\).\nFirst cancel in a finite partial sum, then take its limit."
   },
   {
-    "objectID": "classes/19/slides.html#seeing-the-cancellation",
-    "href": "classes/19/slides.html#seeing-the-cancellation",
+    "objectID": "classes/19/slides-macmini.html#seeing-the-cancellation",
+    "href": "classes/19/slides-macmini.html#seeing-the-cancellation",
     "title": "Series",
     "section": "Seeing the Cancellation",
-    "text": "Seeing the Cancellation\n\\(\\displaystyle S_3=\\left(1-\\frac{1}{2}\\right)+\\left(\\frac{1}{2}-\\frac{1}{3}\\right)+\\left(\\frac{1}{3}-\\frac{1}{4}\\right)=1-\\frac{1}{4}.\\)\n\nFor \\(k\\) terms, the same cancellation leaves\n\\(\\displaystyle S_k=1-\\frac{1}{k+1}=\\frac{k}{k+1}.\\)\nTherefore, \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\lim_{k\\to\\infty}S_k=1\\).",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Seeing the Cancellation\n\\(\\displaystyle S_3=\\left(1-\\frac{1}{2}\\right)+\\left(\\frac{1}{2}-\\frac{1}{3}\\right)+\\left(\\frac{1}{3}-\\frac{1}{4}\\right)=1-\\frac{1}{4}.\\)\n\nFor \\(k\\) terms, the same cancellation leaves\n\\(\\displaystyle S_k=1-\\frac{1}{k+1}=\\frac{k}{k+1}.\\)\nTherefore, \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\lim_{k\\to\\infty}S_k=1\\)."
   },
   {
-    "objectID": "classes/19/slides.html#a-general-telescoping-sum",
-    "href": "classes/19/slides.html#a-general-telescoping-sum",
+    "objectID": "classes/19/slides-macmini.html#a-general-telescoping-sum",
+    "href": "classes/19/slides-macmini.html#a-general-telescoping-sum",
     "title": "Series",
     "section": "A General Telescoping Sum",
-    "text": "A General Telescoping Sum\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\),\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1}).\\)\n\n\\(S_k=b_1-b_{k+1}.\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "A General Telescoping Sum\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\),\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1}).\\)\n\n\\(S_k=b_1-b_{k+1}.\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)"
   },
   {
-    "objectID": "classes/19/slides.html#a-trigonometric-telescoping-series",
-    "href": "classes/19/slides.html#a-trigonometric-telescoping-series",
+    "objectID": "classes/19/slides-macmini.html#a-trigonometric-telescoping-series",
+    "href": "classes/19/slides-macmini.html#a-trigonometric-telescoping-series",
     "title": "Series",
     "section": "A Trigonometric Telescoping Series",
-    "text": "A Trigonometric Telescoping Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]\\).\n\n\\(\\displaystyle S_k=\\cos(1)-\\cos\\left(\\frac{1}{k+1}\\right).\\)\nSince \\(1/(k+1)\\to0\\) and cosine is continuous,\n\\(\\displaystyle \\lim_{k\\to\\infty}S_k=\\cos(1)-\\cos(0)=\\cos(1)-1.\\)",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "A Trigonometric Telescoping Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]\\).\n\n\\(\\displaystyle S_k=\\cos(1)-\\cos\\left(\\frac{1}{k+1}\\right).\\)\nSince \\(1/(k+1)\\to0\\) and cosine is continuous,\n\\(\\displaystyle \\lim_{k\\to\\infty}S_k=\\cos(1)-\\cos(0)=\\cos(1)-1.\\)"
   },
   {
-    "objectID": "classes/19/slides.html#telescoping-does-not-guarantee-convergence",
-    "href": "classes/19/slides.html#telescoping-does-not-guarantee-convergence",
+    "objectID": "classes/19/slides-macmini.html#telescoping-does-not-guarantee-convergence",
+    "href": "classes/19/slides-macmini.html#telescoping-does-not-guarantee-convergence",
     "title": "Series",
     "section": "Telescoping Does Not Guarantee Convergence",
-    "text": "Telescoping Does Not Guarantee Convergence\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\sqrt{n}-\\sqrt{n+1}\\right)\\) converges.\n\nThe \\(k\\)th partial sum is \\(S_k=1-\\sqrt{k+1}\\).\nAs \\(k\\to\\infty\\), \\(S_k\\to-\\infty\\).\nThe series telescopes, but it diverges.",
-    "crumbs": [
-      "Class Material",
-      "Series"
-    ]
+    "text": "Telescoping Does Not Guarantee Convergence\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\sqrt{n}-\\sqrt{n+1}\\right)\\) converges.\n\nThe \\(k\\)th partial sum is \\(S_k=1-\\sqrt{k+1}\\).\nAs \\(k\\to\\infty\\), \\(S_k\\to-\\infty\\).\nThe series telescopes, but it diverges."
   },
   {
     "objectID": "classes/18/worksheet.html",
@@ -6198,18 +6186,716 @@
     "text": "Telescoping Does Not Guarantee Convergence\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\sqrt{n}-\\sqrt{n+1}\\right)\\) converges.\n\nThe \\(k\\)th partial sum is \\(S_k=1-\\sqrt{k+1}\\).\nAs \\(k\\to\\infty\\), \\(S_k\\to-\\infty\\).\nThe series telescopes, but it diverges."
   },
   {
-    "objectID": "classes/19/worksheet.html",
-    "href": "classes/19/worksheet.html",
-    "title": "TBD",
-    "section": "",
-    "text": "Hint"
+    "objectID": "classes/19/slides.html#infinite-series",
+    "href": "classes/19/slides.html#infinite-series",
+    "title": "Series",
+    "section": "Infinite Series",
+    "text": "Infinite Series\nClass Session Goals:\n\nExplain the meaning of the sum of an infinite series.\nDetermine convergence using the sequence of partial sums.\nCalculate the sum of a geometric series.\nEvaluate a telescoping series.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
   },
   {
-    "objectID": "classes/19/worksheet.html#null",
-    "href": "classes/19/worksheet.html#null",
-    "title": "TBD",
-    "section": "",
-    "text": "Hint"
+    "objectID": "classes/19/slides.html#from-sequences-to-series",
+    "href": "classes/19/slides.html#from-sequences-to-series",
+    "title": "Series",
+    "section": "From Sequences to Series",
+    "text": "From Sequences to Series\nA sequence is an ordered list of terms:\n\\(a_1,a_2,a_3,\\ldots\\)\nAn infinite series adds the terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=a_1+a_2+a_3+\\cdots\\)\nWhat does it mean to add infinitely many numbers?",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#partial-sums",
+    "href": "classes/19/slides.html#partial-sums",
+    "title": "Series",
+    "section": "Partial Sums",
+    "text": "Partial Sums\nThe \\(k\\)th partial sum adds the first \\(k\\) terms:\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}a_n.\\)\n\\(S_1=a_1\\)\n\\(S_2=a_1+a_2\\)\n\\(S_3=a_1+a_2+a_3\\)\nThe partial sums form a new sequence: \\(\\{S_k\\}\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#motivating-example",
+    "href": "classes/19/slides.html#motivating-example",
+    "title": "Series",
+    "section": "Motivating Example",
+    "text": "Motivating Example\nConsider the infinite sum For \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}++\\frac{1}{16}\\cdots\\).\nIt’s partial sum is \\(\\displaystyle S_k=\\sum_{n=1}^{k}\\left(\\frac{1}{2}\\right)^{n-1}.\\)\nHow can we calculate the value of this sum? Is it finite or infinite?",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#computing-partial-sums",
+    "href": "classes/19/slides.html#computing-partial-sums",
+    "title": "Series",
+    "section": "Computing Partial Sums",
+    "text": "Computing Partial Sums\nFor \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\cdots\\):\n\n\n\n\\(k\\)\n1\n2\n3\n4\n5\n\n\n\n\n\\(S_k\\)\n\\(1\\)\n\\(3/2\\)\n\\(7/4\\)\n\\(15/8\\)\n\\(31/16\\)\n\n\n\n\nThese partial sums suggest \\(S_k=2-\\dfrac{1}{2^{k-1}}\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#the-sequence-of-partial-sums",
+    "href": "classes/19/slides.html#the-sequence-of-partial-sums",
+    "title": "Series",
+    "section": "The Sequence of Partial Sums",
+    "text": "The Sequence of Partial Sums\n\n\nPartial sums of one plus one-half plus one-quarter and so on\n\nPoints at k from one to ten show the finite sums S_k increasing from one toward the dashed line at two. The points represent partial sums, rather than individual terms.     2026-10-21T11:10:54.868138 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             2             4             6             8             10    k                 0             1             2       S k                                S = 2        \n\nEach point represents the value of the partial sum \\(S_k\\). The partial sums approach \\(2\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#terms-and-partial-sums",
+    "href": "classes/19/slides.html#terms-and-partial-sums",
+    "title": "Series",
+    "section": "Terms and Partial Sums",
+    "text": "Terms and Partial Sums\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\):\n\n\n\n\nFormula\nLimit\n\n\n\n\nTerms\n\\(a_n=(1/2)^{n-1}\\)\n\\(a_n\\to0\\)\n\n\nPartial sums\n\\(S_k=2-2^{1-k}\\)\n\\(S_k\\to2\\)\n\n\n\nThe sum of the series is the limit of partial sums.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#the-sum-of-an-infinite-series",
+    "href": "classes/19/slides.html#the-sum-of-an-infinite-series",
+    "title": "Series",
+    "section": "The Sum of an Infinite Series",
+    "text": "The Sum of an Infinite Series\nIf \\(S_k\\to S\\) for a finite number \\(S\\), the series converges and\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=S.\\)\nIf the partial sums do not converge, the series diverges.\nIn our example our series is convergent and \\(\\sum_{n=1}^{\\infty}\\frac{1}{2}^n=2\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#divergence-by-growing-partial-sums",
+    "href": "classes/19/slides.html#divergence-by-growing-partial-sums",
+    "title": "Series",
+    "section": "Divergence by Growing Partial Sums",
+    "text": "Divergence by Growing Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{n+1}\\) converges.\n\nFor \\(n\\ge1\\), \\(\\dfrac{n}{n+1}\\ge\\dfrac{1}{2}\\).\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\frac{n}{n+1}\\ge\\frac{k}{2}.\\)\nThe partial sums grow without bound, so the series diverges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#divergence-by-oscillating-partial-sums",
+    "href": "classes/19/slides.html#divergence-by-oscillating-partial-sums",
+    "title": "Series",
+    "section": "Divergence by Oscillating Partial Sums",
+    "text": "Divergence by Oscillating Partial Sums\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n\\) converges.\n\\(S_1=-1,\\quad S_2=0,\\quad S_3=-1,\\quad S_4=0.\\)\nIn general, \\(S_k=-1\\) when \\(k\\) is odd and \\(S_k=0\\) when \\(k\\) is even.\nThe series diverges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#a-convergent-example",
+    "href": "classes/19/slides.html#a-convergent-example",
+    "title": "Series",
+    "section": "A Convergent Example",
+    "text": "A Convergent Example\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\).\n\\(S_1=\\frac{1}{2},\\quad S_2=\\frac{2}{3},\\quad S_3=\\frac{3}{4},\\quad S_4=\\frac{4}{5}.\\)\n\nThe pattern for the partial sum is \\(S_k=\\dfrac{k}{k+1}\\).\n\\(\\lim_{k \\to \\infty}\\frac{}{k+1}=1\\), So \\(\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=1\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#the-harmonic-series",
+    "href": "classes/19/slides.html#the-harmonic-series",
+    "title": "Series",
+    "section": "The Harmonic Series",
+    "text": "The Harmonic Series\nThe harmonic series is\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}=1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+\\cdots\\)\nIts terms approach \\(0\\). Does the series converge?\n\nThe harmonic series diverges. We will show that its partial sums are unbounded.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#grouping-the-harmonic-terms",
+    "href": "classes/19/slides.html#grouping-the-harmonic-terms",
+    "title": "Series",
+    "section": "Grouping the Harmonic Terms",
+    "text": "Grouping the Harmonic Terms\nGroup consecutive terms in blocks of \\(1,2,4,8,\\ldots\\) terms after the initial \\(1\\).\n\\(\\displaystyle \\frac{1}{3}+\\frac{1}{4}\\ge2\\left(\\frac{1}{4}\\right)=\\frac{1}{2}.\\)\n\\(\\displaystyle \\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}\\ge4\\left(\\frac{1}{8}\\right)=\\frac{1}{2}.\\)\n\nThe block from \\(n=2^{j-1}+1\\) through \\(n=2^j\\) has \\(2^{j-1}\\) terms.\nEach term is at least \\(1/2^j\\), so each block adds at least \\(1/2\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#why-the-harmonic-series-diverges",
+    "href": "classes/19/slides.html#why-the-harmonic-series-diverges",
+    "title": "Series",
+    "section": "Why the Harmonic Series Diverges",
+    "text": "Why the Harmonic Series Diverges\nThe partial sum through \\(2^j\\) terms satisfies\n\\(\\displaystyle S_{2^j}\\ge1+\\frac{j}{2}.\\)\nThe right side grows without bound as \\(j\\to\\infty\\).\n\nAll terms are positive, so all later partial sums are at least as large.\nTherefore, \\(S_k\\to\\infty\\) and the harmonic series diverges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#terms-approaching-zero-are-not-enough",
+    "href": "classes/19/slides.html#terms-approaching-zero-are-not-enough",
+    "title": "Series",
+    "section": "Terms Approaching Zero Are Not Enough",
+    "text": "Terms Approaching Zero Are Not Enough\nCompare these two series:\n\n\n\n\n\n\n\n\nSeries\nLimit of its terms\nBehavior of partial sums\n\n\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}\\)\n\\(0\\)\nGrow without bound\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\)\n\\(0\\)\nApproach \\(1\\)\n\n\n\nKnowing that the terms approach \\(0\\) does not determine whether their series converges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#algebraic-properties-of-series",
+    "href": "classes/19/slides.html#algebraic-properties-of-series",
+    "title": "Series",
+    "section": "Algebraic Properties of Series",
+    "text": "Algebraic Properties of Series\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=A\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n=B\\) both converge.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n+b_n)=A+B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n-b_n)=A-B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ca_n=cA\\)\nThese rules follow by taking limits of finite partial sums.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#geometric-series",
+    "href": "classes/19/slides.html#geometric-series",
+    "title": "Series",
+    "section": "Geometric Series",
+    "text": "Geometric Series\nA geometric series has the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=a+ar+ar^2+ar^3+\\cdots\\)\nthe terms of this series are element of a geometric sequence.\nIn our previous example,\n\\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\cdots\\) has \\(a=1\\) and \\(r=\\frac{1}{2}\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#a-finite-sum-for-the-geometric-series",
+    "href": "classes/19/slides.html#a-finite-sum-for-the-geometric-series",
+    "title": "Series",
+    "section": "A Finite Sum for the Geometric Series",
+    "text": "A Finite Sum for the Geometric Series\nStart with \\(S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\).\nMultiply by \\(r\\):\n\\(rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\)\n\nSubtract to obtain \\((1-r)S_k=a-ar^k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#the-geometric-series-formula",
+    "href": "classes/19/slides.html#the-geometric-series-formula",
+    "title": "Series",
+    "section": "The Geometric Series Formula",
+    "text": "The Geometric Series Formula\nIf \\(|r|&lt;1\\), then \\(r^k\\to0\\).\nTaking the limit of the finite sum gives\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=\\frac{a}{1-r},\\qquad |r|&lt;1.\\)\n\nFor \\(a\\ne0\\), the geometric series diverges when \\(|r|\\ge1\\).\nThe case \\(a=0\\) gives the zero series.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#what-happens-when-rge1",
+    "href": "classes/19/slides.html#what-happens-when-rge1",
+    "title": "Series",
+    "section": "What Happens When \\(|r|\\ge1\\)?",
+    "text": "What Happens When \\(|r|\\ge1\\)?\nAssume \\(a\\ne0\\).\n\nIf \\(r=1\\), then \\(S_k=ka\\), which is unbounded.\nIf \\(r=-1\\), the partial sums alternate between \\(a\\) and \\(0\\).\nIf \\(|r|&gt;1\\), the formula \\(S_k=a(1-r^k)/(1-r)\\) gives unbounded partial sums.\n\nGeometric series is only finite for \\(|r|&lt;1\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#a-divergent-geometric-series",
+    "href": "classes/19/slides.html#a-divergent-geometric-series",
+    "title": "Series",
+    "section": "A Divergent Geometric Series",
+    "text": "A Divergent Geometric Series\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}e^{2n}\\) converges.\n\n\\(\\displaystyle e^{2n}=e^2(e^2)^{n-1}.\\)\nThe first term is \\(a=e^2\\) and the ratio is \\(r=e^2&gt;1\\).\nThe series diverges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#combining-convergent-series",
+    "href": "classes/19/slides.html#combining-convergent-series",
+    "title": "Series",
+    "section": "Combining Convergent Series",
+    "text": "Combining Convergent Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\frac{3}{n(n+1)}+\\left(\\frac{1}{2}\\right)^{n-2}\\right]\\).\n\nBoth component series converge. Since \\((1/2)^{n-2}=2(1/2)^{n-1}\\),\n\\(\\displaystyle 3\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}+2\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\)\n\\(=3(1)+2(2)=7.\\)",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#the-koch-snowflake",
+    "href": "classes/19/slides.html#the-koch-snowflake",
+    "title": "Series",
+    "section": "The Koch Snowflake",
+    "text": "The Koch Snowflake\nStart with an equilateral triangle of side length \\(1\\).\nAt each step, replace the middle third of every segment with two sides of an outward equilateral triangle.\n\n\nFirst four stages of the Koch snowflake\n\nFour figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.     2026-10-21T11:10:55.024373 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                     F 0             F 1             F 2             F 3                   \n\nWhat happens to the perimeter and the enclosed area?",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#koch-snowflake-perimeter",
+    "href": "classes/19/slides.html#koch-snowflake-perimeter",
+    "title": "Series",
+    "section": "Koch Snowflake: Perimeter",
+    "text": "Koch Snowflake: Perimeter\nAt stage \\(n\\), let \\(N_n\\) count the sides and \\(l_n\\) be the length of each side.\nEach step creates four segments, each one-third as long:\n\\(N_n=3\\cdot4^n,\\qquad l_n=\\left(\\frac{1}{3}\\right)^n.\\)\n\n\\(\\displaystyle L_n=N_nl_n=3\\left(\\frac{4}{3}\\right)^n.\\)\nSince \\(4/3&gt;1\\), the perimeter grows without bound.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#koch-snowflake-added-area",
+    "href": "classes/19/slides.html#koch-snowflake-added-area",
+    "title": "Series",
+    "section": "Koch Snowflake: Added Area",
+    "text": "Koch Snowflake: Added Area\nLet \\(A_0=\\sqrt{3}/4\\) be the area of the original triangle.\nAt step \\(n\\ge1\\):\n\nThere are \\(3\\cdot4^{n-1}\\) new triangles.\nEach has side length \\(1/3^n\\) and area \\(A_0/9^n\\).\n\n\nThe added area is \\(\\displaystyle \\Delta A_n=\\frac{A_0}{3}\\left(\\frac{4}{9}\\right)^{n-1}\\).\nThe added areas form a geometric sequence with ratio \\(4/9\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#koch-snowflake-total-area",
+    "href": "classes/19/slides.html#koch-snowflake-total-area",
+    "title": "Series",
+    "section": "Koch Snowflake: Total Area",
+    "text": "Koch Snowflake: Total Area\nThe limiting area is the original area plus all the added areas:\n\\(\\displaystyle A=A_0+\\frac{A_0}{3}\\sum_{n=1}^{\\infty}\\left(\\frac{4}{9}\\right)^{n-1}.\\)\n\n\\(\\displaystyle A=A_0+\\frac{A_0/3}{1-4/9}=\\frac{8}{5}A_0=\\frac{2\\sqrt{3}}{5}.\\)\nThe Koch snowflake has finite area and infinite perimeter.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#telescoping-series",
+    "href": "classes/19/slides.html#telescoping-series",
+    "title": "Series",
+    "section": "Telescoping Series",
+    "text": "Telescoping Series\nA telescoping series has partial sums in which most terms cancel.\nFor example, partial fractions give\n\\(\\displaystyle \\frac{1}{n(n+1)}=\\frac{1}{n}-\\frac{1}{n+1}.\\)\n\nThus \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{n}-\\frac{1}{n+1}\\right)\\).\nFirst cancel in a finite partial sum, then take its limit.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#seeing-the-cancellation",
+    "href": "classes/19/slides.html#seeing-the-cancellation",
+    "title": "Series",
+    "section": "Seeing the Cancellation",
+    "text": "Seeing the Cancellation\n\\(\\displaystyle S_3=\\left(1-\\frac{1}{2}\\right)+\\left(\\frac{1}{2}-\\frac{1}{3}\\right)+\\left(\\frac{1}{3}-\\frac{1}{4}\\right)=1-\\frac{1}{4}.\\)\n\nFor \\(k\\) terms, the same cancellation leaves\n\\(\\displaystyle S_k=1-\\frac{1}{k+1}=\\frac{k}{k+1}.\\)\nTherefore, \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\lim_{k\\to\\infty}S_k=1\\).",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#a-general-telescoping-sum",
+    "href": "classes/19/slides.html#a-general-telescoping-sum",
+    "title": "Series",
+    "section": "A General Telescoping Sum",
+    "text": "A General Telescoping Sum\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\),\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1}).\\)\n\n\\(S_k=b_1-b_{k+1}.\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#a-trigonometric-telescoping-series",
+    "href": "classes/19/slides.html#a-trigonometric-telescoping-series",
+    "title": "Series",
+    "section": "A Trigonometric Telescoping Series",
+    "text": "A Trigonometric Telescoping Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]\\).\n\n\\(\\displaystyle S_k=\\cos(1)-\\cos\\left(\\frac{1}{k+1}\\right).\\)\nSince \\(1/(k+1)\\to0\\) and cosine is continuous,\n\\(\\displaystyle \\lim_{k\\to\\infty}S_k=\\cos(1)-\\cos(0)=\\cos(1)-1.\\)",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/19/slides.html#telescoping-does-not-guarantee-convergence",
+    "href": "classes/19/slides.html#telescoping-does-not-guarantee-convergence",
+    "title": "Series",
+    "section": "Telescoping Does Not Guarantee Convergence",
+    "text": "Telescoping Does Not Guarantee Convergence\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\sqrt{n}-\\sqrt{n+1}\\right)\\) converges.\n\nThe \\(k\\)th partial sum is \\(S_k=1-\\sqrt{k+1}\\).\nAs \\(k\\to\\infty\\), \\(S_k\\to-\\infty\\).\nThe series telescopes, but it diverges.",
+    "crumbs": [
+      "Class Material",
+      "Series"
+    ]
+  },
+  {
+    "objectID": "classes/20/slides.html#series-and-tests",
+    "href": "classes/20/slides.html#series-and-tests",
+    "title": "Series and Tests",
+    "section": "Series and Tests",
+    "text": "Series and Tests\nClass Session Goals:\n\nDetermine whether an infinite series converges or diverges.\nEvaluate geometric and telescoping series.\nUse the divergence test to show that a series diverges.\nUse the integral test to determine convergence or divergence."
+  },
+  {
+    "objectID": "classes/20/slides.html#the-13-pound-hamburger",
+    "href": "classes/20/slides.html#the-13-pound-hamburger",
+    "title": "Series and Tests",
+    "section": "The \\(1/3\\) Pound Hamburger",
+    "text": "The \\(1/3\\) Pound Hamburger\nIn the 1980s, A&W introduced a \\(1/3\\)-pound hamburger to compete with McDonald’s \\(1/4\\)-pound Quarter Pounder.\nThe A&W burger had more beef for approximately the same price, but it did not sell.\n\nMarket research suggested some customers thought \\(\\frac14&gt;\\frac13\\) because \\(4&gt;3\\).\nBut $&gt;=0.25"
+  },
+  {
+    "objectID": "classes/20/slides.html#the-harmonic-series",
+    "href": "classes/20/slides.html#the-harmonic-series",
+    "title": "Series and Tests",
+    "section": "The Harmonic Series",
+    "text": "The Harmonic Series\nThe harmonic series is\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}=1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+\\cdots\\)\nIts terms approach \\(0\\). Does the series converge?\n\nThe harmonic series diverges. We will show that its partial sums are unbounded."
+  },
+  {
+    "objectID": "classes/20/slides.html#grouping-the-harmonic-terms",
+    "href": "classes/20/slides.html#grouping-the-harmonic-terms",
+    "title": "Series and Tests",
+    "section": "Grouping the Harmonic Terms",
+    "text": "Grouping the Harmonic Terms\nGroup consecutive terms in blocks of \\(1,2,4,8,\\ldots\\) terms after the initial \\(1\\).\n\\(\\displaystyle \\frac{1}{3}+\\frac{1}{4}\\ge2\\left(\\frac{1}{4}\\right)=\\frac{1}{2}.\\)\n\\(\\displaystyle \\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}\\ge4\\left(\\frac{1}{8}\\right)=\\frac{1}{2}.\\)\n\nThe block from \\(n=2^{j-1}+1\\) through \\(n=2^j\\) has \\(2^{j-1}\\) terms.\nEach term is at least \\(1/2^j\\), so each block adds at least \\(1/2\\)."
+  },
+  {
+    "objectID": "classes/20/slides.html#why-the-harmonic-series-diverges",
+    "href": "classes/20/slides.html#why-the-harmonic-series-diverges",
+    "title": "Series and Tests",
+    "section": "Why the Harmonic Series Diverges",
+    "text": "Why the Harmonic Series Diverges\nThe partial sum through \\(2^j\\) terms satisfies\n\\(\\displaystyle S_{2^j}\\ge1+\\frac{j}{2}.\\)\nThe right side grows without bound as \\(j\\to\\infty\\).\n\nAll terms are positive, so all later partial sums are at least as large.\nTherefore, \\(S_k\\to\\infty\\) and the harmonic series diverges."
+  },
+  {
+    "objectID": "classes/20/slides.html#a-finite-sum-for-the-geometric-series",
+    "href": "classes/20/slides.html#a-finite-sum-for-the-geometric-series",
+    "title": "Series and Tests",
+    "section": "A Finite Sum for the Geometric Series",
+    "text": "A Finite Sum for the Geometric Series\nStart with \\(S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\).\n\\(rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\)\nSubtract and solve for \\(S_k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\)."
+  },
+  {
+    "objectID": "classes/20/slides.html#the-geometric-series-formula",
+    "href": "classes/20/slides.html#the-geometric-series-formula",
+    "title": "Series and Tests",
+    "section": "The Geometric Series Formula",
+    "text": "The Geometric Series Formula\nIf \\(|r|&lt;1\\), then \\(r^k\\to0\\).\nTaking the limit of the finite sum gives\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=\\frac{a}{1-r},\\qquad |r|&lt;1.\\)\n\nIf \\(|r|\\ge 1\\) the geometric series diverges and \\(a \\ne 0\\)."
+  },
+  {
+    "objectID": "classes/20/slides.html#cancellation",
+    "href": "classes/20/slides.html#cancellation",
+    "title": "Series and Tests",
+    "section": "Cancellation",
+    "text": "Cancellation\nFor \\(k\\) terms, the same cancellation leaves\n\\(\\displaystyle S_k=1-\\frac{1}{k+1}=\\frac{k}{k+1}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\lim_{k\\to\\infty}S_k=1\\)."
+  },
+  {
+    "objectID": "classes/20/slides.html#telescoping-series-test",
+    "href": "classes/20/slides.html#telescoping-series-test",
+    "title": "Series and Tests",
+    "section": "Telescoping Series Test",
+    "text": "Telescoping Series Test\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\)\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1})\\)\n\\(S_k=b_1-b_{k+1}.\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)"
+  },
+  {
+    "objectID": "classes/20/slides.html#telescoping-series-example",
+    "href": "classes/20/slides.html#telescoping-series-example",
+    "title": "Series and Tests",
+    "section": "Telescoping Series Example",
+    "text": "Telescoping Series Example\nDetermine whether the series converges or diverges. If it converges, find its sum.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]\\)\n\nThe \\(k\\)th partial sum is\n\\(S_k=\\cos(1)-\\cos\\left(\\frac{1}{k+1}\\right)\\).\nSince \\(\\cos\\left(\\frac{1}{k+1}\\right)\\to 1\\),\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]=\\cos(1)-1.\\)"
+  },
+  {
+    "objectID": "classes/20/slides.html#know-series",
+    "href": "classes/20/slides.html#know-series",
+    "title": "Series and Tests",
+    "section": "Know Series",
+    "text": "Know Series\n\nGeometric\nHarmonic\nTelescoping"
+  },
+  {
+    "objectID": "classes/20/slides.html#divergence-test",
+    "href": "classes/20/slides.html#divergence-test",
+    "title": "Series and Tests",
+    "section": "Divergence Test",
+    "text": "Divergence Test\nTheorem 5.8: Divergence Test\nIf \\(\\displaystyle \\lim_{n\\to\\infty}a_n=c\\ne 0\\) or \\(\\displaystyle \\lim_{n\\to\\infty}a_n\\) does not exist, then the series \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) diverges.\nWarning: If \\(\\displaystyle \\lim_{n\\to\\infty}a_n=0\\), the divergence test is inconclusive. The divergence test cannot be used to prove that a series converges. For example, the harmonic series is divergent."
+  },
+  {
+    "objectID": "classes/20/slides.html#divergence-test-example-1",
+    "href": "classes/20/slides.html#divergence-test-example-1",
+    "title": "Series and Tests",
+    "section": "Divergence Test Example 1",
+    "text": "Divergence Test Example 1\nUse the divergence test to determine whether the series diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{3n-1}\\)\n\nSince \\(\\displaystyle \\frac{1}{3}\\ne 0\\), by the divergence test, the series diverges."
+  },
+  {
+    "objectID": "classes/20/slides.html#divergence-test-example-2",
+    "href": "classes/20/slides.html#divergence-test-example-2",
+    "title": "Series and Tests",
+    "section": "Divergence Test Example 2",
+    "text": "Divergence Test Example 2\nUse the divergence test to determine whether the series diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\)\n\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{1}{n^3}=0\\)\nSince the limit is \\(0\\), the divergence test is gives us not informaiton about divergence or convergence."
+  },
+  {
+    "objectID": "classes/20/slides.html#integral-test",
+    "href": "classes/20/slides.html#integral-test",
+    "title": "Series and Tests",
+    "section": "Integral Test",
+    "text": "Integral Test\nTheorem 5.9: Integral Test\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) is a series with positive terms \\(a_n\\).\nSuppose there exists a function \\(f\\) and a positive integer \\(N\\) such that:\n\n\\(f\\) is continuous.\n\\(f\\) is decreasing.\n\\(f(n)=a_n\\) for all integers \\(n\\ge N\\).\n\nThen \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) and \\(\\displaystyle \\int_N^\\infty f(x)\\,dx\\) both converge or both diverge."
+  },
+  {
+    "objectID": "classes/20/slides.html#integral-test-example-1",
+    "href": "classes/20/slides.html#integral-test-example-1",
+    "title": "Series and Tests",
+    "section": "Integral Test Example 1",
+    "text": "Integral Test Example 1\nUse the integral test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\)\nCompare with the improper integral:\n\\(\\displaystyle \\int_1^\\infty\\frac{1}{x^3}\\,dx=\\lim_{b\\to\\infty}\\left[-\\frac{1}{2x^2}\\right]_1^b\\)\n\n\\(\\displaystyle =\\lim_{b\\to\\infty}\\left[-\\frac{1}{2b^2}+\\frac{1}{2}\\right]=\\frac{1}{2}\\) Since the improper integral converges, the series converges.\nWarning: The series does not neccesarily converge to the value of the integral."
+  },
+  {
+    "objectID": "classes/20/slides.html#apérys-constant",
+    "href": "classes/20/slides.html#apérys-constant",
+    "title": "Series and Tests",
+    "section": "Apéry’s Constant",
+    "text": "Apéry’s Constant\nThe series \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\) converges to\n\\(\\displaystyle \\boxed{\\sum_{n=1}^{\\infty}\\frac{1}{n^3}=\\zeta(3)\\approx 1.2020569032}\\)\nThis value is called Apéry’s constant, where \\(\\zeta\\) is the Riemann zeta function.\nUnlike \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^2}=\\frac{\\pi^2}{6}\\), there is no known simple closed-form expression for \\(\\zeta(3)\\) in terms of familiar constants.\nApéry’s constant is named after the French mathematician Roger Apéry, who proved in 1978 that \\(\\zeta(3)\\) is irrational."
+  },
+  {
+    "objectID": "classes/20/slides.html#integral-test-example-2",
+    "href": "classes/20/slides.html#integral-test-example-2",
+    "title": "Series and Tests",
+    "section": "Integral Test Example 2",
+    "text": "Integral Test Example 2\nUse the integral test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt{2n-1}}\\)\nAssume that all conditions for the integral test are met.\nCompare with the improper integral:\n\\(\\displaystyle \\int_1^\\infty\\frac{1}{\\sqrt{2x-1}}\\,dx=\\lim_{b\\to\\infty}\\left[\\sqrt{2x-1}\\right]_1^b\\)\n\n\\(\\displaystyle =\\lim_{b\\to\\infty}\\left[\\sqrt{2b-1}-1\\right]=\\infty\\)\nSince the improper integral diverges, the series diverges."
+  },
+  {
+    "objectID": "classes/20/slides.html#the-koch-snowflake",
+    "href": "classes/20/slides.html#the-koch-snowflake",
+    "title": "Series and Tests",
+    "section": "The Koch Snowflake",
+    "text": "The Koch Snowflake\nStart with an equilateral triangle of side length \\(1\\).\nAt each step, replace the middle third of every segment with two sides of an outward equilateral triangle.\n\n\nFirst four stages of the Koch snowflake\n\nFour figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.     2026-10-21T11:10:55.024373 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                     F 0             F 1             F 2             F 3                   \n\nWhat happens to the perimeter and the enclosed area?"
+  },
+  {
+    "objectID": "classes/20/slides.html#koch-snowflake-perimeter",
+    "href": "classes/20/slides.html#koch-snowflake-perimeter",
+    "title": "Series and Tests",
+    "section": "Koch Snowflake: Perimeter",
+    "text": "Koch Snowflake: Perimeter\nAt stage \\(n\\), let \\(N_n\\) count the sides and \\(l_n\\) be the length of each side.\nEach step creates four segments, each one-third as long:\n\\(N_n=3\\cdot4^n,\\qquad l_n=\\left(\\frac{1}{3}\\right)^n.\\)\n\n\\(\\displaystyle L_n=N_nl_n=3\\left(\\frac{4}{3}\\right)^n.\\)\nSince \\(4/3&gt;1\\), the perimeter grows without bound."
+  },
+  {
+    "objectID": "classes/20/slides.html#koch-snowflake-added-area",
+    "href": "classes/20/slides.html#koch-snowflake-added-area",
+    "title": "Series and Tests",
+    "section": "Koch Snowflake: Added Area",
+    "text": "Koch Snowflake: Added Area\nLet \\(A_0=\\sqrt{3}/4\\) be the area of the original triangle.\nAt step \\(n\\ge1\\):\n\nThere are \\(3\\cdot4^{n-1}\\) new triangles.\nEach has side length \\(1/3^n\\) and area \\(A_0/9^n\\).\n\n\nThe added area is \\(\\displaystyle \\Delta A_n=\\frac{A_0}{3}\\left(\\frac{4}{9}\\right)^{n-1}\\).\nThe added areas form a geometric sequence with ratio \\(4/9\\)."
+  },
+  {
+    "objectID": "classes/20/slides.html#koch-snowflake-total-area",
+    "href": "classes/20/slides.html#koch-snowflake-total-area",
+    "title": "Series and Tests",
+    "section": "Koch Snowflake: Total Area",
+    "text": "Koch Snowflake: Total Area\nThe limiting area is the original area plus all the added areas:\n\\(\\displaystyle A=A_0+\\frac{A_0}{3}\\sum_{n=1}^{\\infty}\\left(\\frac{4}{9}\\right)^{n-1}.\\)\n\n\\(\\displaystyle A=A_0+\\frac{A_0/3}{1-4/9}=\\frac{8}{5}A_0=\\frac{2\\sqrt{3}}{5}.\\)\nThe Koch snowflake has finite area and infinite perimeter."
+  },
+  {
+    "objectID": "classes/22/slides.html#infinite-series",
+    "href": "classes/22/slides.html#infinite-series",
+    "title": "Series",
+    "section": "Infinite Series",
+    "text": "Infinite Series\nClass Session Goals:\n\nExplain the meaning of the sum of an infinite series.\nDetermine convergence using the sequence of partial sums.\nCalculate the sum of a geometric series.\nEvaluate a telescoping series."
+  },
+  {
+    "objectID": "classes/22/slides.html#from-sequences-to-series",
+    "href": "classes/22/slides.html#from-sequences-to-series",
+    "title": "Series",
+    "section": "From Sequences to Series",
+    "text": "From Sequences to Series\nA sequence is an ordered list of terms:\n\\(a_1,a_2,a_3,\\ldots\\)\nAn infinite series adds the terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=a_1+a_2+a_3+\\cdots\\)\nWhat does it mean to add infinitely many numbers?"
+  },
+  {
+    "objectID": "classes/22/slides.html#partial-sums",
+    "href": "classes/22/slides.html#partial-sums",
+    "title": "Series",
+    "section": "Partial Sums",
+    "text": "Partial Sums\nThe \\(k\\)th partial sum adds the first \\(k\\) terms:\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}a_n.\\)\n\\(S_1=a_1\\)\n\\(S_2=a_1+a_2\\)\n\\(S_3=a_1+a_2+a_3\\)\nThe partial sums form a new sequence: \\(\\{S_k\\}\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#motivating-example",
+    "href": "classes/22/slides.html#motivating-example",
+    "title": "Series",
+    "section": "Motivating Example",
+    "text": "Motivating Example\nConsider the infinite sum For \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}++\\frac{1}{16}\\cdots\\).\nIt’s partial sum is \\(\\displaystyle S_k=\\sum_{n=1}^{k}\\left(\\frac{1}{2}\\right)^{n-1}.\\)\nHow can we calculate the value of this sum? Is it finite or infinite?"
+  },
+  {
+    "objectID": "classes/22/slides.html#computing-partial-sums",
+    "href": "classes/22/slides.html#computing-partial-sums",
+    "title": "Series",
+    "section": "Computing Partial Sums",
+    "text": "Computing Partial Sums\nFor \\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\frac{1}{8}+\\cdots\\):\n\n\n\n\\(k\\)\n1\n2\n3\n4\n5\n\n\n\n\n\\(S_k\\)\n\\(1\\)\n\\(3/2\\)\n\\(7/4\\)\n\\(15/8\\)\n\\(31/16\\)\n\n\n\n\nThese partial sums suggest \\(S_k=2-\\dfrac{1}{2^{k-1}}\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#the-sequence-of-partial-sums",
+    "href": "classes/22/slides.html#the-sequence-of-partial-sums",
+    "title": "Series",
+    "section": "The Sequence of Partial Sums",
+    "text": "The Sequence of Partial Sums\n\n\nPartial sums of one plus one-half plus one-quarter and so on\n\nPoints at k from one to ten show the finite sums S_k increasing from one toward the dashed line at two. The points represent partial sums, rather than individual terms.     2026-10-21T11:10:54.868138 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                               0             2             4             6             8             10    k                 0             1             2       S k                                S = 2        \n\nEach point represents the value of the partial sum \\(S_k\\). The partial sums approach \\(2\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#terms-and-partial-sums",
+    "href": "classes/22/slides.html#terms-and-partial-sums",
+    "title": "Series",
+    "section": "Terms and Partial Sums",
+    "text": "Terms and Partial Sums\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\):\n\n\n\n\nFormula\nLimit\n\n\n\n\nTerms\n\\(a_n=(1/2)^{n-1}\\)\n\\(a_n\\to0\\)\n\n\nPartial sums\n\\(S_k=2-2^{1-k}\\)\n\\(S_k\\to2\\)\n\n\n\nThe sum of the series is the limit of partial sums."
+  },
+  {
+    "objectID": "classes/22/slides.html#the-sum-of-an-infinite-series",
+    "href": "classes/22/slides.html#the-sum-of-an-infinite-series",
+    "title": "Series",
+    "section": "The Sum of an Infinite Series",
+    "text": "The Sum of an Infinite Series\nIf \\(S_k\\to S\\) for a finite number \\(S\\), the series converges and\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=S.\\)\nIf the partial sums do not converge, the series diverges.\nIn our example our series is convergent and \\(\\sum_{n=1}^{\\infty}\\frac{1}{2}^n=2\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#divergence-by-growing-partial-sums",
+    "href": "classes/22/slides.html#divergence-by-growing-partial-sums",
+    "title": "Series",
+    "section": "Divergence by Growing Partial Sums",
+    "text": "Divergence by Growing Partial Sums\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{n+1}\\) converges.\n\nFor \\(n\\ge1\\), \\(\\dfrac{n}{n+1}\\ge\\dfrac{1}{2}\\).\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}\\frac{n}{n+1}\\ge\\frac{k}{2}.\\)\nThe partial sums grow without bound, so the series diverges."
+  },
+  {
+    "objectID": "classes/22/slides.html#divergence-by-oscillating-partial-sums",
+    "href": "classes/22/slides.html#divergence-by-oscillating-partial-sums",
+    "title": "Series",
+    "section": "Divergence by Oscillating Partial Sums",
+    "text": "Divergence by Oscillating Partial Sums\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n\\) converges.\n\\(S_1=-1,\\quad S_2=0,\\quad S_3=-1,\\quad S_4=0.\\)\nIn general, \\(S_k=-1\\) when \\(k\\) is odd and \\(S_k=0\\) when \\(k\\) is even.\nThe series diverges."
+  },
+  {
+    "objectID": "classes/22/slides.html#a-convergent-example",
+    "href": "classes/22/slides.html#a-convergent-example",
+    "title": "Series",
+    "section": "A Convergent Example",
+    "text": "A Convergent Example\nConsider \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\).\n\\(S_1=\\frac{1}{2},\\quad S_2=\\frac{2}{3},\\quad S_3=\\frac{3}{4},\\quad S_4=\\frac{4}{5}.\\)\n\nThe pattern for the partial sum is \\(S_k=\\dfrac{k}{k+1}\\).\n\\(\\lim_{k \\to \\infty}\\frac{}{k+1}=1\\), So \\(\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=1\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#the-harmonic-series",
+    "href": "classes/22/slides.html#the-harmonic-series",
+    "title": "Series",
+    "section": "The Harmonic Series",
+    "text": "The Harmonic Series\nThe harmonic series is\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}=1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+\\cdots\\)\nIts terms approach \\(0\\). Does the series converge?\n\nThe harmonic series diverges. We will show that its partial sums are unbounded."
+  },
+  {
+    "objectID": "classes/22/slides.html#grouping-the-harmonic-terms",
+    "href": "classes/22/slides.html#grouping-the-harmonic-terms",
+    "title": "Series",
+    "section": "Grouping the Harmonic Terms",
+    "text": "Grouping the Harmonic Terms\nGroup consecutive terms in blocks of \\(1,2,4,8,\\ldots\\) terms after the initial \\(1\\).\n\\(\\displaystyle \\frac{1}{3}+\\frac{1}{4}\\ge2\\left(\\frac{1}{4}\\right)=\\frac{1}{2}.\\)\n\\(\\displaystyle \\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}\\ge4\\left(\\frac{1}{8}\\right)=\\frac{1}{2}.\\)\n\nThe block from \\(n=2^{j-1}+1\\) through \\(n=2^j\\) has \\(2^{j-1}\\) terms.\nEach term is at least \\(1/2^j\\), so each block adds at least \\(1/2\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#why-the-harmonic-series-diverges",
+    "href": "classes/22/slides.html#why-the-harmonic-series-diverges",
+    "title": "Series",
+    "section": "Why the Harmonic Series Diverges",
+    "text": "Why the Harmonic Series Diverges\nThe partial sum through \\(2^j\\) terms satisfies\n\\(\\displaystyle S_{2^j}\\ge1+\\frac{j}{2}.\\)\nThe right side grows without bound as \\(j\\to\\infty\\).\n\nAll terms are positive, so all later partial sums are at least as large.\nTherefore, \\(S_k\\to\\infty\\) and the harmonic series diverges."
+  },
+  {
+    "objectID": "classes/22/slides.html#terms-approaching-zero-are-not-enough",
+    "href": "classes/22/slides.html#terms-approaching-zero-are-not-enough",
+    "title": "Series",
+    "section": "Terms Approaching Zero Are Not Enough",
+    "text": "Terms Approaching Zero Are Not Enough\nCompare these two series:\n\n\n\n\n\n\n\n\nSeries\nLimit of its terms\nBehavior of partial sums\n\n\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n}\\)\n\\(0\\)\nGrow without bound\n\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\)\n\\(0\\)\nApproach \\(1\\)\n\n\n\nKnowing that the terms approach \\(0\\) does not determine whether their series converges."
+  },
+  {
+    "objectID": "classes/22/slides.html#algebraic-properties-of-series",
+    "href": "classes/22/slides.html#algebraic-properties-of-series",
+    "title": "Series",
+    "section": "Algebraic Properties of Series",
+    "text": "Algebraic Properties of Series\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=A\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n=B\\) both converge.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n+b_n)=A+B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(a_n-b_n)=A-B\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ca_n=cA\\)\nThese rules follow by taking limits of finite partial sums."
+  },
+  {
+    "objectID": "classes/22/slides.html#geometric-series",
+    "href": "classes/22/slides.html#geometric-series",
+    "title": "Series",
+    "section": "Geometric Series",
+    "text": "Geometric Series\nA geometric series has the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=a+ar+ar^2+ar^3+\\cdots\\)\nthe terms of this series are element of a geometric sequence.\nIn our previous example,\n\\(\\displaystyle 1+\\frac{1}{2}+\\frac{1}{4}+\\cdots\\) has \\(a=1\\) and \\(r=\\frac{1}{2}\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#a-finite-sum-for-the-geometric-series",
+    "href": "classes/22/slides.html#a-finite-sum-for-the-geometric-series",
+    "title": "Series",
+    "section": "A Finite Sum for the Geometric Series",
+    "text": "A Finite Sum for the Geometric Series\nStart with \\(S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\).\nMultiply by \\(r\\):\n\\(rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\)\n\nSubtract to obtain \\((1-r)S_k=a-ar^k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#the-geometric-series-formula",
+    "href": "classes/22/slides.html#the-geometric-series-formula",
+    "title": "Series",
+    "section": "The Geometric Series Formula",
+    "text": "The Geometric Series Formula\nIf \\(|r|&lt;1\\), then \\(r^k\\to0\\).\nTaking the limit of the finite sum gives\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=\\frac{a}{1-r},\\qquad |r|&lt;1.\\)\n\nFor \\(a\\ne0\\), the geometric series diverges when \\(|r|\\ge1\\).\nThe case \\(a=0\\) gives the zero series."
+  },
+  {
+    "objectID": "classes/22/slides.html#what-happens-when-rge1",
+    "href": "classes/22/slides.html#what-happens-when-rge1",
+    "title": "Series",
+    "section": "What Happens When \\(|r|\\ge1\\)?",
+    "text": "What Happens When \\(|r|\\ge1\\)?\nAssume \\(a\\ne0\\).\n\nIf \\(r=1\\), then \\(S_k=ka\\), which is unbounded.\nIf \\(r=-1\\), the partial sums alternate between \\(a\\) and \\(0\\).\nIf \\(|r|&gt;1\\), the formula \\(S_k=a(1-r^k)/(1-r)\\) gives unbounded partial sums.\n\nGeometric series is only finite for \\(|r|&lt;1\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#a-divergent-geometric-series",
+    "href": "classes/22/slides.html#a-divergent-geometric-series",
+    "title": "Series",
+    "section": "A Divergent Geometric Series",
+    "text": "A Divergent Geometric Series\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}e^{2n}\\) converges.\n\n\\(\\displaystyle e^{2n}=e^2(e^2)^{n-1}.\\)\nThe first term is \\(a=e^2\\) and the ratio is \\(r=e^2&gt;1\\).\nThe series diverges."
+  },
+  {
+    "objectID": "classes/22/slides.html#combining-convergent-series",
+    "href": "classes/22/slides.html#combining-convergent-series",
+    "title": "Series",
+    "section": "Combining Convergent Series",
+    "text": "Combining Convergent Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\frac{3}{n(n+1)}+\\left(\\frac{1}{2}\\right)^{n-2}\\right]\\).\n\nBoth component series converge. Since \\((1/2)^{n-2}=2(1/2)^{n-1}\\),\n\\(\\displaystyle 3\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}+2\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^{n-1}\\)\n\\(=3(1)+2(2)=7.\\)"
+  },
+  {
+    "objectID": "classes/22/slides.html#the-koch-snowflake",
+    "href": "classes/22/slides.html#the-koch-snowflake",
+    "title": "Series",
+    "section": "The Koch Snowflake",
+    "text": "The Koch Snowflake\nStart with an equilateral triangle of side length \\(1\\).\nAt each step, replace the middle third of every segment with two sides of an outward equilateral triangle.\n\n\nFirst four stages of the Koch snowflake\n\nFour figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.     2026-10-21T11:10:55.024373 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                     F 0             F 1             F 2             F 3                   \n\nWhat happens to the perimeter and the enclosed area?"
+  },
+  {
+    "objectID": "classes/22/slides.html#koch-snowflake-perimeter",
+    "href": "classes/22/slides.html#koch-snowflake-perimeter",
+    "title": "Series",
+    "section": "Koch Snowflake: Perimeter",
+    "text": "Koch Snowflake: Perimeter\nAt stage \\(n\\), let \\(N_n\\) count the sides and \\(l_n\\) be the length of each side.\nEach step creates four segments, each one-third as long:\n\\(N_n=3\\cdot4^n,\\qquad l_n=\\left(\\frac{1}{3}\\right)^n.\\)\n\n\\(\\displaystyle L_n=N_nl_n=3\\left(\\frac{4}{3}\\right)^n.\\)\nSince \\(4/3&gt;1\\), the perimeter grows without bound."
+  },
+  {
+    "objectID": "classes/22/slides.html#koch-snowflake-added-area",
+    "href": "classes/22/slides.html#koch-snowflake-added-area",
+    "title": "Series",
+    "section": "Koch Snowflake: Added Area",
+    "text": "Koch Snowflake: Added Area\nLet \\(A_0=\\sqrt{3}/4\\) be the area of the original triangle.\nAt step \\(n\\ge1\\):\n\nThere are \\(3\\cdot4^{n-1}\\) new triangles.\nEach has side length \\(1/3^n\\) and area \\(A_0/9^n\\).\n\n\nThe added area is \\(\\displaystyle \\Delta A_n=\\frac{A_0}{3}\\left(\\frac{4}{9}\\right)^{n-1}\\).\nThe added areas form a geometric sequence with ratio \\(4/9\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#koch-snowflake-total-area",
+    "href": "classes/22/slides.html#koch-snowflake-total-area",
+    "title": "Series",
+    "section": "Koch Snowflake: Total Area",
+    "text": "Koch Snowflake: Total Area\nThe limiting area is the original area plus all the added areas:\n\\(\\displaystyle A=A_0+\\frac{A_0}{3}\\sum_{n=1}^{\\infty}\\left(\\frac{4}{9}\\right)^{n-1}.\\)\n\n\\(\\displaystyle A=A_0+\\frac{A_0/3}{1-4/9}=\\frac{8}{5}A_0=\\frac{2\\sqrt{3}}{5}.\\)\nThe Koch snowflake has finite area and infinite perimeter."
+  },
+  {
+    "objectID": "classes/22/slides.html#telescoping-series",
+    "href": "classes/22/slides.html#telescoping-series",
+    "title": "Series",
+    "section": "Telescoping Series",
+    "text": "Telescoping Series\nA telescoping series has partial sums in which most terms cancel.\nFor example, partial fractions give\n\\(\\displaystyle \\frac{1}{n(n+1)}=\\frac{1}{n}-\\frac{1}{n+1}.\\)\n\nThus \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{n}-\\frac{1}{n+1}\\right)\\).\nFirst cancel in a finite partial sum, then take its limit."
+  },
+  {
+    "objectID": "classes/22/slides.html#seeing-the-cancellation",
+    "href": "classes/22/slides.html#seeing-the-cancellation",
+    "title": "Series",
+    "section": "Seeing the Cancellation",
+    "text": "Seeing the Cancellation\n\\(\\displaystyle S_3=\\left(1-\\frac{1}{2}\\right)+\\left(\\frac{1}{2}-\\frac{1}{3}\\right)+\\left(\\frac{1}{3}-\\frac{1}{4}\\right)=1-\\frac{1}{4}.\\)\n\nFor \\(k\\) terms, the same cancellation leaves\n\\(\\displaystyle S_k=1-\\frac{1}{k+1}=\\frac{k}{k+1}.\\)\nTherefore, \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\lim_{k\\to\\infty}S_k=1\\)."
+  },
+  {
+    "objectID": "classes/22/slides.html#a-general-telescoping-sum",
+    "href": "classes/22/slides.html#a-general-telescoping-sum",
+    "title": "Series",
+    "section": "A General Telescoping Sum",
+    "text": "A General Telescoping Sum\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\),\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1}).\\)\n\n\\(S_k=b_1-b_{k+1}.\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)"
+  },
+  {
+    "objectID": "classes/22/slides.html#a-trigonometric-telescoping-series",
+    "href": "classes/22/slides.html#a-trigonometric-telescoping-series",
+    "title": "Series",
+    "section": "A Trigonometric Telescoping Series",
+    "text": "A Trigonometric Telescoping Series\nEvaluate \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]\\).\n\n\\(\\displaystyle S_k=\\cos(1)-\\cos\\left(\\frac{1}{k+1}\\right).\\)\nSince \\(1/(k+1)\\to0\\) and cosine is continuous,\n\\(\\displaystyle \\lim_{k\\to\\infty}S_k=\\cos(1)-\\cos(0)=\\cos(1)-1.\\)"
+  },
+  {
+    "objectID": "classes/22/slides.html#telescoping-does-not-guarantee-convergence",
+    "href": "classes/22/slides.html#telescoping-does-not-guarantee-convergence",
+    "title": "Series",
+    "section": "Telescoping Does Not Guarantee Convergence",
+    "text": "Telescoping Does Not Guarantee Convergence\nDetermine whether \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\sqrt{n}-\\sqrt{n+1}\\right)\\) converges.\n\nThe \\(k\\)th partial sum is \\(S_k=1-\\sqrt{k+1}\\).\nAs \\(k\\to\\infty\\), \\(S_k\\to-\\infty\\).\nThe series telescopes, but it diverges."
   },
   {
     "objectID": "grading/course-learning-targets.html",
