@@ -385,12 +385,15 @@ A p-series:
 - **Diverges** if $p\le 1$.
 
 
-## Applying Integral Test to p-series
-
-A **$p$-series** is a series of the form $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^p}$, where $p$ is any real number.
+## Applying Tests to p-series
 
 - If $p\le 0$, the series diverges by the divergence test.
+- If $p=1$ this is the harmonic series and diverges.
 - If $p>0$, $f(x)=1/x^p$ is positive, continuous, and decreasing, so we can apply the integral test.
+
+---
+
+## Integral Test on p-Series
 
 For $p>0$, $p\ne 1$,
 
@@ -403,7 +406,7 @@ $$
 - If $0<p<1$, the integral diverges.
 - If $p=1$, $\int_1^\infty \frac{1}{x}\,dx$ diverges.
 
-Therefore, a $p$-series **converges if $p>1$** and **diverges if $p\le 1$**.
+
 
 ---
 
@@ -414,6 +417,10 @@ Some convergent $p$-series have known exact sums:
 - $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6}$
 - $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^4}=\frac{\pi^4}{90}$
 - $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^6}=\frac{\pi^6}{945}$
+
+---
+
+## Riemann zeta function
 
 The **Riemann zeta function** is defined for $p>1$ by
 
@@ -430,7 +437,7 @@ The **Riemann zeta function** extends $\zeta(p)=\sum_{n=1}^{\infty}\frac{1}{n^p}
 
 - The **Riemann Hypothesis** (1859) states that every nontrivial zero of $\zeta(p)$ has real part $\frac{1}{2}$.
 
-- All nontrivial solutions of $\zeta(s)=0$ lie on the line $\operatorname{Re}(s)=\frac{1}{2}$ in the complex plane.
+- All nontrivial solutions of $\zeta(p)=0$ lie on the line $\operatorname{Re}(p)=\frac{1}{2}$ in the complex plane.
 
 - The zeros of the zeta function are closely connected to the distribution of prime numbers.
 

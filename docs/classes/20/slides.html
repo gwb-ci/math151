@@ -329,13 +329,16 @@
 <li><strong>Diverges</strong> if <span class="math inline">\(p\le 1\)</span>.</li>
 </ul>
 </section>
-<section id="applying-integral-test-to-p-series" class="slide level2">
-<h2>Applying Integral Test to p-series</h2>
-<p>A <strong><span class="math inline">\(p\)</span>-series</strong> is a series of the form <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^p}\)</span>, where <span class="math inline">\(p\)</span> is any real number.</p>
+<section id="applying-tests-to-p-series" class="slide level2">
+<h2>Applying Tests to p-series</h2>
 <ul>
 <li>If <span class="math inline">\(p\le 0\)</span>, the series diverges by the divergence test.</li>
+<li>If <span class="math inline">\(p=1\)</span> this is the harmonic series and diverges.</li>
 <li>If <span class="math inline">\(p&gt;0\)</span>, <span class="math inline">\(f(x)=1/x^p\)</span> is positive, continuous, and decreasing, so we can apply the integral test.</li>
 </ul>
+</section>
+<section id="integral-test-on-p-series" class="slide level2">
+<h2>Integral Test on p-Series</h2>
 <p>For <span class="math inline">\(p&gt;0\)</span>, <span class="math inline">\(p\ne 1\)</span>,</p>
 <p><span class="math display">\[
 \int_1^\infty \frac{1}{x^p}\,dx
@@ -346,7 +349,6 @@
 <li>If <span class="math inline">\(0&lt;p&lt;1\)</span>, the integral diverges.</li>
 <li>If <span class="math inline">\(p=1\)</span>, <span class="math inline">\(\int_1^\infty \frac{1}{x}\,dx\)</span> diverges.</li>
 </ul>
-<p>Therefore, a <span class="math inline">\(p\)</span>-series <strong>converges if <span class="math inline">\(p&gt;1\)</span></strong> and <strong>diverges if <span class="math inline">\(p\le 1\)</span></strong>.</p>
 </section>
 <section id="examples-of-p-series-sums" class="slide level2">
 <h2>Examples of p-series sums</h2>
@@ -356,6 +358,9 @@
 <li><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^4}=\frac{\pi^4}{90}\)</span></li>
 <li><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^6}=\frac{\pi^6}{945}\)</span></li>
 </ul>
+</section>
+<section id="riemann-zeta-function" class="slide level2">
+<h2>Riemann zeta function</h2>
 <p>The <strong>Riemann zeta function</strong> is defined for <span class="math inline">\(p&gt;1\)</span> by</p>
 <p><span class="math display">\[
 \zeta(p)=\sum_{n=1}^{\infty}\frac{1}{n^p}.
@@ -366,7 +371,7 @@
 <p>The <strong>Riemann zeta function</strong> extends <span class="math inline">\(\zeta(p)=\sum_{n=1}^{\infty}\frac{1}{n^p}\)</span>, originally defined for <span class="math inline">\(p&gt;1\)</span>, to complex numbers <span class="math inline">\(p\)</span> (except <span class="math inline">\(p=1\)</span>).</p>
 <ul>
 <li><p>The <strong>Riemann Hypothesis</strong> (1859) states that every nontrivial zero of <span class="math inline">\(\zeta(p)\)</span> has real part <span class="math inline">\(\frac{1}{2}\)</span>.</p></li>
-<li><p>All nontrivial solutions of <span class="math inline">\(\zeta(s)=0\)</span> lie on the line <span class="math inline">\(\operatorname{Re}(s)=\frac{1}{2}\)</span> in the complex plane.</p></li>
+<li><p>All nontrivial solutions of <span class="math inline">\(\zeta(p)=0\)</span> lie on the line <span class="math inline">\(\operatorname{Re}(p)=\frac{1}{2}\)</span> in the complex plane.</p></li>
 <li><p>The zeros of the zeta function are closely connected to the distribution of prime numbers.</p></li>
 <li><p>Biggest(?) open problem in mathematics, with a $1 million prize for a solution.</p></li>
 </ul>
