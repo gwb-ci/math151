@@ -6590,7 +6590,7 @@
     "href": "classes/20/slides.html#the-13-pound-hamburger",
     "title": "Series and Tests",
     "section": "The \\(1/3\\) Pound Hamburger",
-    "text": "The \\(1/3\\) Pound Hamburger\nIn the 1980s, A&W introduced a \\(1/3\\)-pound hamburger to compete with McDonald’s \\(1/4\\)-pound Quarter Pounder.\nThe A&W burger had more beef for approximately the same price, but it did not sell.\n\nMarket research suggested some customers thought \\(\\frac14&gt;\\frac13\\) because \\(4&gt;3\\).\nBut $&gt;=0.25",
+    "text": "The \\(1/3\\) Pound Hamburger\nIn the 1980s, A&W introduced a \\(1/3\\)-pound hamburger to compete with McDonald’s \\(1/4\\)-pound Quarter Pounder.\nThe A&W burger had more beef for approximately the same price, but it did not sell.\n\nMarket research suggested some customers thought \\(\\frac14&gt;\\frac13\\) because \\(4&gt;3\\).",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6612,18 +6612,7 @@
     "href": "classes/20/slides.html#grouping-the-harmonic-terms",
     "title": "Series and Tests",
     "section": "Grouping the Harmonic Terms",
-    "text": "Grouping the Harmonic Terms\nGroup consecutive terms in blocks of \\(1,2,4,8,\\ldots\\) terms after the initial \\(1\\).\n\\(\\displaystyle \\frac{1}{3}+\\frac{1}{4}\\ge2\\left(\\frac{1}{4}\\right)=\\frac{1}{2}.\\)\n\\(\\displaystyle \\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}\\ge4\\left(\\frac{1}{8}\\right)=\\frac{1}{2}.\\)\n\nThe block from \\(n=2^{j-1}+1\\) through \\(n=2^j\\) has \\(2^{j-1}\\) terms.\nEach term is at least \\(1/2^j\\), so each block adds at least \\(1/2\\).",
-    "crumbs": [
-      "Class Material",
-      "Series and Tests"
-    ]
-  },
-  {
-    "objectID": "classes/20/slides.html#why-the-harmonic-series-diverges",
-    "href": "classes/20/slides.html#why-the-harmonic-series-diverges",
-    "title": "Series and Tests",
-    "section": "Why the Harmonic Series Diverges",
-    "text": "Why the Harmonic Series Diverges\nThe partial sum through \\(2^j\\) terms satisfies\n\\(\\displaystyle S_{2^j}\\ge1+\\frac{j}{2}.\\)\nThe right side grows without bound as \\(j\\to\\infty\\).\n\nAll terms are positive, so all later partial sums are at least as large.\nTherefore, \\(S_k\\to\\infty\\) and the harmonic series diverges.",
+    "text": "Grouping the Harmonic Terms\n\\[1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+\\frac{1}{5}+\\frac{1}{6}+\\frac{1}{7}+\\frac{1}{8}+\\frac{1}{9}+\\cdots\\]\n\\(S=\\sum_{j=0}^\\infty B_j=1+\\sum_{j=1}^\\infty \\frac{1}{2}=\\lim_{k \\to \\infty}1+\\frac{k}{2}\\)\nThis limit is infinite so the harmonic series diverges.",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6634,7 +6623,7 @@
     "href": "classes/20/slides.html#a-finite-sum-for-the-geometric-series",
     "title": "Series and Tests",
     "section": "A Finite Sum for the Geometric Series",
-    "text": "A Finite Sum for the Geometric Series\nStart with \\(S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\).\n\\(rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\)\nSubtract and solve for \\(S_k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\).",
+    "text": "A Finite Sum for the Geometric Series\n\\[S_k=a+ar+ar^2+\\cdots+ar^{k-1}\\]\n\\[rS_k=ar+ar^2+\\cdots+ar^{k-1}+ar^k.\\]\n\nSubtract and solve for \\(S_k\\).\nThus, \\(\\displaystyle S_k=\\frac{a(1-r^k)}{1-r}\\) when \\(r\\ne1\\).",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6652,11 +6641,22 @@
     ]
   },
   {
-    "objectID": "classes/20/slides.html#cancellation",
-    "href": "classes/20/slides.html#cancellation",
+    "objectID": "classes/20/slides.html#telescoping-series",
+    "href": "classes/20/slides.html#telescoping-series",
     "title": "Series and Tests",
-    "section": "Cancellation",
-    "text": "Cancellation\nFor \\(k\\) terms, the same cancellation leaves\n\\(\\displaystyle S_k=1-\\frac{1}{k+1}=\\frac{k}{k+1}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\lim_{k\\to\\infty}S_k=1\\).",
+    "section": "Telescoping Series",
+    "text": "Telescoping Series\nA telescoping series has partial sums in which most terms cancel.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\)\n\nLook at the parital sums:\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1})\\)\n\\(S_k=b_1-b_{k+1}\\)\n\\(\\lim_{k \\to \\infty}S_k=\\lim_{k \\to \\infty}(b_1-b_{k+1})=\\lim_{k \\to \\infty}b_{k+1}\\)",
+    "crumbs": [
+      "Class Material",
+      "Series and Tests"
+    ]
+  },
+  {
+    "objectID": "classes/20/slides.html#telescoping-series-example-1",
+    "href": "classes/20/slides.html#telescoping-series-example-1",
+    "title": "Series and Tests",
+    "section": "Telescoping Series Example 1",
+    "text": "Telescoping Series Example 1\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\)\nUse the fact \\(\\frac{1}{n(n+1)}=\\frac{1}{n}-\\frac{1}{n+1}\\).\n\nThus \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{n}-\\frac{1}{n+1}\\right)\\).\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}=\\lim_{k\\to\\infty}S_k=1\\).",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6667,7 +6667,7 @@
     "href": "classes/20/slides.html#telescoping-series-test",
     "title": "Series and Tests",
     "section": "Telescoping Series Test",
-    "text": "Telescoping Series Test\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\)\n\\(S_k=(b_1-b_2)+(b_2-b_3)+\\cdots+(b_k-b_{k+1})\\)\n\\(S_k=b_1-b_{k+1}.\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)",
+    "text": "Telescoping Series Test\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\)\nIf \\(b_{k+1}\\to B\\) for a finite number \\(B\\), then\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})=b_1-B.\\)",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6678,18 +6678,29 @@
     "href": "classes/20/slides.html#telescoping-series-example",
     "title": "Series and Tests",
     "section": "Telescoping Series Example",
-    "text": "Telescoping Series Example\nDetermine whether the series converges or diverges. If it converges, find its sum.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]\\)\n\nThe \\(k\\)th partial sum is\n\\(S_k=\\cos(1)-\\cos\\left(\\frac{1}{k+1}\\right)\\).\nSince \\(\\cos\\left(\\frac{1}{k+1}\\right)\\to 1\\),\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]=\\cos(1)-1.\\)",
+    "text": "Telescoping Series Example\nDetermine whether the series converges or diverges. If it converges, find its sum.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]\\)\n\n\\(S_k=\\cos(1)-\\cos\\left(\\frac{1}{k+1}\\right)\\).\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left[\\cos\\left(\\frac{1}{n}\\right)-\\cos\\left(\\frac{1}{n+1}\\right)\\right]=\\cos(1)-1.\\)",
     "crumbs": [
       "Class Material",
       "Series and Tests"
     ]
   },
   {
-    "objectID": "classes/20/slides.html#know-series",
-    "href": "classes/20/slides.html#know-series",
+    "objectID": "classes/20/slides.html#known-series",
+    "href": "classes/20/slides.html#known-series",
     "title": "Series and Tests",
-    "section": "Know Series",
-    "text": "Know Series\n\nGeometric\nHarmonic\nTelescoping",
+    "section": "Known Series",
+    "text": "Known Series\n\nGeometric: \\(\\sum_{n=1}^\\infty ar^n\\) converges to \\(\\frac{a}{1-r}\\) for \\(|r|&lt;1\\).\nHarmonic: \\(\\sum_{n=1}^\\infty \\frac{1}{n}\\) diverges\nTelescoping: \\(\\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\) If \\(b_{n}\\to B\\) the series converges to \\(b_1-B\\)",
+    "crumbs": [
+      "Class Material",
+      "Series and Tests"
+    ]
+  },
+  {
+    "objectID": "classes/20/slides.html#testing-for-divergence-and-convergence",
+    "href": "classes/20/slides.html#testing-for-divergence-and-convergence",
+    "title": "Series and Tests",
+    "section": "Testing for Divergence and Convergence",
+    "text": "Testing for Divergence and Convergence\nA series \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) converges if its sequence of partial sums converges.\nIn practice, calculating the limit of the partial sums can be difficult. Often it is good enough to know if the series converges or diverges rather than knowing exactly what the series converges to.",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6700,7 +6711,7 @@
     "href": "classes/20/slides.html#divergence-test",
     "title": "Series and Tests",
     "section": "Divergence Test",
-    "text": "Divergence Test\nTheorem 5.8: Divergence Test\nIf \\(\\displaystyle \\lim_{n\\to\\infty}a_n=c\\ne 0\\) or \\(\\displaystyle \\lim_{n\\to\\infty}a_n\\) does not exist, then the series \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) diverges.\nWarning: If \\(\\displaystyle \\lim_{n\\to\\infty}a_n=0\\), the divergence test is inconclusive. The divergence test cannot be used to prove that a series converges. For example, the harmonic series is divergent.",
+    "text": "Divergence Test\nTheorem 5.8: Divergence Test\nIf \\(\\displaystyle \\lim_{n\\to\\infty}a_n=c\\ne 0\\) or \\(\\displaystyle \\lim_{n\\to\\infty}a_n\\) does not exist, then the series \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) diverges.\n\nWarning: If \\(\\displaystyle \\lim_{n\\to\\infty}a_n=0\\), the divergence test is inconclusive. The divergence test cannot be used to prove that a series converges. For example, the harmonic series is divergent.",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6711,7 +6722,7 @@
     "href": "classes/20/slides.html#divergence-test-example-1",
     "title": "Series and Tests",
     "section": "Divergence Test Example 1",
-    "text": "Divergence Test Example 1\nUse the divergence test to determine whether the series diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{3n-1}\\)\n\nSince \\(\\displaystyle \\frac{1}{3}\\ne 0\\), by the divergence test, the series diverges.",
+    "text": "Divergence Test Example 1\nUse the divergence test to determine whether the series diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n}{3n-1}\\)\n\n\\(\\lim_{n \\to \\infty} \\frac{n}{3n-1}=frac{1}{3}\\)\nSince \\(\\displaystyle \\frac{1}{3}\\ne 0\\), by the divergence test, the series diverges.",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6733,7 +6744,7 @@
     "href": "classes/20/slides.html#integral-test",
     "title": "Series and Tests",
     "section": "Integral Test",
-    "text": "Integral Test\nTheorem 5.9: Integral Test\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) is a series with positive terms \\(a_n\\).\nSuppose there exists a function \\(f\\) and a positive integer \\(N\\) such that:\n\n\\(f\\) is continuous.\n\\(f\\) is decreasing.\n\\(f(n)=a_n\\) for all integers \\(n\\ge N\\).\n\nThen \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) and \\(\\displaystyle \\int_N^\\infty f(x)\\,dx\\) both converge or both diverge.",
+    "text": "Integral Test\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) is a series with positive terms \\(a_n\\) and there exists a function \\(f\\) and a positive integer \\(N\\) such that:\n\n\\(f\\) is continuous.\n\\(f\\) is decreasing.\n\\(f(n)=a_n\\) for all integers \\(n\\ge N\\).\n\nThen \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) and \\(\\displaystyle \\int_N^\\infty f(x)\\,dx\\) both converge or both diverge.",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6766,7 +6777,7 @@
     "href": "classes/20/slides.html#integral-test-example-1",
     "title": "Series and Tests",
     "section": "Integral Test Example 1",
-    "text": "Integral Test Example 1\nUse the integral test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\)\nCompare with the improper integral:\n\\(\\displaystyle \\int_1^\\infty\\frac{1}{x^3}\\,dx=\\lim_{b\\to\\infty}\\left[-\\frac{1}{2x^2}\\right]_1^b\\)\n\n\\(\\displaystyle =\\lim_{b\\to\\infty}\\left[-\\frac{1}{2b^2}+\\frac{1}{2}\\right]=\\frac{1}{2}\\) Since the improper integral converges, the series converges.\nWarning: The series does not neccesarily converge to the value of the integral.",
+    "text": "Integral Test Example 1\nUse the integral test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\)\n\n\\(\\displaystyle \\int_1^\\infty\\frac{1}{x^3}\\,dx=\\lim_{k\\to\\infty}\\left[-\\frac{1}{2x^2}\\right]_1^k=\\frac{1}{2}\\)\nWarning: The series does not neccesarily converge to the value of the integral.",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6777,7 +6788,7 @@
     "href": "classes/20/slides.html#apérys-constant",
     "title": "Series and Tests",
     "section": "Apéry’s Constant",
-    "text": "Apéry’s Constant\nThe series \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\) converges to\n\\(\\displaystyle \\boxed{\\sum_{n=1}^{\\infty}\\frac{1}{n^3}=\\zeta(3)\\approx 1.2020569032}\\)\nThis value is called Apéry’s constant, where \\(\\zeta\\) is the Riemann zeta function.\nUnlike \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^2}=\\frac{\\pi^2}{6}\\), there is no known simple closed-form expression for \\(\\zeta(3)\\) in terms of familiar constants.\nApéry’s constant is named after the French mathematician Roger Apéry, who proved in 1978 that \\(\\zeta(3)\\) is irrational.",
+    "text": "Apéry’s Constant\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}=\\zeta(3)\\approx 1.2020569032\\)\nThis value is called Apéry’s constant, where \\(\\zeta\\) is the Riemann zeta function.\nThere is no known simple closed-form expression for \\(\\zeta(3)\\) in terms of familiar constants.\nApéry’s constant is named after the French mathematician Roger Apéry, who proved in 1978 that \\(\\zeta(3)\\) is irrational.",
     "crumbs": [
       "Class Material",
       "Series and Tests"
@@ -6788,7 +6799,7 @@
     "href": "classes/20/slides.html#integral-test-example-2",
     "title": "Series and Tests",
     "section": "Integral Test Example 2",
-    "text": "Integral Test Example 2\nUse the integral test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt{2n-1}}\\)\nAssume that all conditions for the integral test are met.\nCompare with the improper integral:\n\\(\\displaystyle \\int_1^\\infty\\frac{1}{\\sqrt{2x-1}}\\,dx=\\lim_{b\\to\\infty}\\left[\\sqrt{2x-1}\\right]_1^b\\)\n\n\\(\\displaystyle =\\lim_{b\\to\\infty}\\left[\\sqrt{2b-1}-1\\right]=\\infty\\)\nSince the improper integral diverges, the series diverges.",
+    "text": "Integral Test Example 2\nUse the integral test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt{2n-1}}\\)\n\n\\(\\displaystyle \\int_1^\\infty\\frac{1}{\\sqrt{2x-1}}\\,dx=\\lim_{b\\to\\infty}\\left[\\sqrt{2x-1}\\right]_1^b=\\infty\\)\nSince the improper integral diverges, the series diverges.",
     "crumbs": [
       "Class Material",
       "Series and Tests"
