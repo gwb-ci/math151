@@ -298,6 +298,29 @@
 </ol>
 <p>Then <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> and <span class="math inline">\(\displaystyle \int_N^\infty f(x)\,dx\)</span> both converge or both diverge.</p>
 </section>
+<section id="integral-test-upper-rectangles" class="slide level2">
+<h2>Integral Test: Upper Rectangles</h2>
+<p>For a positive, decreasing function <span class="math inline">\(f(x)\)</span>, left-endpoint rectangles lie above the curve.</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 600 305" role="img" aria-label="Upper rectangles for the decreasing function one over x cubed">
+<rect width="600" height="305" rx="8" fill="#fdf6e3"></rect> <g fill="#d6e8ee" stroke="#268bd2" stroke-width="1.7"> <rect x="90" y="57" width="108" height="211"></rect> <rect x="198" y="241.6" width="108" height="26.4"></rect> <rect x="306" y="260.2" width="108" height="7.8"></rect> <rect x="414" y="264.7" width="108" height="3.3"></rect> </g> <path d="M90 57 L117 161 L144 205.5 L171 228.6 L198 241.6 L252 254.5 L306 260.2 L360 263.1 L414 264.7 L468 265.9 L522 266.3 L550 266.8" fill="none" stroke="#dc322f" stroke-width="3" stroke-linejoin="round"></path> <path d="M76 35 V268 H554" stroke="#586e75" stroke-width="2" fill="none"></path> <g fill="#586e75" font-size="14"> <text x="90" y="287" text-anchor="middle">1</text> <text x="198" y="287" text-anchor="middle">2</text> <text x="306" y="287" text-anchor="middle">3</text> <text x="414" y="287" text-anchor="middle">4</text> <text x="522" y="287" text-anchor="middle">5</text> <text x="559" y="285">x</text> <text x="56" y="29">y</text> </g> <text x="290" y="57" font-size="20" font-weight="600" fill="#dc322f">f(x) = 1/x³</text> <text x="290" y="80" font-size="14" fill="#268bd2">Left-endpoint rectangles</text>
+</svg>
+<p>Each rectangle has width <span class="math inline">\(1\)</span> and height <span class="math inline">\(f(n)\)</span>.</p>
+<div class="fragment">
+<p>Therefore, <span class="math inline">\(\displaystyle \int_1^{N+1}f(x)\,dx\le\sum_{n=1}^N f(n)\)</span>.</p>
+</div>
+</section>
+<section id="integral-test-lower-rectangles" class="slide level2">
+<h2>Integral Test: Lower Rectangles</h2>
+<p>For a positive, decreasing function <span class="math inline">\(f(x)\)</span>, right-endpoint rectangles lie below the curve.</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 600 305" role="img" aria-label="Lower rectangles for the decreasing function one over x cubed">
+<rect width="600" height="305" rx="8" fill="#fdf6e3"></rect> <g fill="#c9e6d5" stroke="#859900" stroke-width="1.7"> <rect x="90" y="241.6" width="108" height="26.4"></rect> <rect x="198" y="260.2" width="108" height="7.8"></rect> <rect x="306" y="264.7" width="108" height="3.3"></rect> <rect x="414" y="266.3" width="108" height="1.7"></rect> </g> <path d="M90 57 L117 161 L144 205.5 L171 228.6 L198 241.6 L252 254.5 L306 260.2 L360 263.1 L414 264.7 L468 265.9 L522 266.3 L550 266.8" fill="none" stroke="#dc322f" stroke-width="3" stroke-linejoin="round"></path> <path d="M76 35 V268 H554" stroke="#586e75" stroke-width="2" fill="none"></path> <g fill="#586e75" font-size="14"> <text x="90" y="287" text-anchor="middle">1</text> <text x="198" y="287" text-anchor="middle">2</text> <text x="306" y="287" text-anchor="middle">3</text> <text x="414" y="287" text-anchor="middle">4</text> <text x="522" y="287" text-anchor="middle">5</text> <text x="559" y="285">x</text> <text x="56" y="29">y</text> </g> <text x="290" y="57" font-size="20" font-weight="600" fill="#dc322f">f(x) = 1/x³</text> <text x="290" y="80" font-size="14" fill="#859900">Right-endpoint rectangles</text>
+</svg>
+<p>Each rectangle has width <span class="math inline">\(1\)</span> and height <span class="math inline">\(f(n+1)\)</span>.</p>
+<div class="fragment">
+<p>Therefore, <span class="math inline">\(\displaystyle \sum_{n=2}^{N+1}f(n)\le\int_1^{N+1}f(x)\,dx\)</span>.</p>
+<p>Since the integral and series bound one another (up to a finite number of terms), they have the same convergence behavior.</p>
+</div>
+</section>
 <section id="integral-test-example-1" class="slide level2">
 <h2>Integral Test Example 1</h2>
 <p>Use the integral test to determine whether the series converges or diverges.</p>

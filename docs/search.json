@@ -6632,6 +6632,20 @@
     "text": "Integral Test\nTheorem 5.9: Integral Test\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) is a series with positive terms \\(a_n\\).\nSuppose there exists a function \\(f\\) and a positive integer \\(N\\) such that:\n\n\\(f\\) is continuous.\n\\(f\\) is decreasing.\n\\(f(n)=a_n\\) for all integers \\(n\\ge N\\).\n\nThen \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) and \\(\\displaystyle \\int_N^\\infty f(x)\\,dx\\) both converge or both diverge."
   },
   {
+    "objectID": "classes/20/slides.html#integral-test-upper-rectangles",
+    "href": "classes/20/slides.html#integral-test-upper-rectangles",
+    "title": "Series and Tests",
+    "section": "Integral Test: Upper Rectangles",
+    "text": "Integral Test: Upper Rectangles\nFor a positive, decreasing function \\(f(x)\\), left-endpoint rectangles lie above the curve.\n\n          1 2 3 4 5 x y  f(x) = 1/x³ Left-endpoint rectangles\n\nEach rectangle has width \\(1\\) and height \\(f(n)\\).\n\nTherefore, \\(\\displaystyle \\int_1^{N+1}f(x)\\,dx\\le\\sum_{n=1}^N f(n)\\)."
+  },
+  {
+    "objectID": "classes/20/slides.html#integral-test-lower-rectangles",
+    "href": "classes/20/slides.html#integral-test-lower-rectangles",
+    "title": "Series and Tests",
+    "section": "Integral Test: Lower Rectangles",
+    "text": "Integral Test: Lower Rectangles\nFor a positive, decreasing function \\(f(x)\\), right-endpoint rectangles lie below the curve.\n\n          1 2 3 4 5 x y  f(x) = 1/x³ Right-endpoint rectangles\n\nEach rectangle has width \\(1\\) and height \\(f(n+1)\\).\n\nTherefore, \\(\\displaystyle \\sum_{n=2}^{N+1}f(n)\\le\\int_1^{N+1}f(x)\\,dx\\).\nSince the integral and series bound one another (up to a finite number of terms), they have the same convergence behavior."
+  },
+  {
     "objectID": "classes/20/slides.html#integral-test-example-1",
     "href": "classes/20/slides.html#integral-test-example-1",
     "title": "Series and Tests",
