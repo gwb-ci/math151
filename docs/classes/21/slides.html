@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
   <title>Math 151 - Calculus II – More Convergence Tests</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,10 +19,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -137,14 +140,34 @@
 </section>
 <section id="series-and-tests" class="slide level2">
 <h2>Series and Tests</h2>
-<p>Class Session Goals:</p>
 <ul>
-<li>Determine whether a p-series converges or diverges.</li>
 <li>Use the Integral Test to estimate the error in a partial sum.</li>
 <li>Apply the Comparison Test to determine convergence or divergence.</li>
 <li>Apply the Limit Comparison Test to determine convergence or divergence.</li>
 <li>Choose an appropriate test for a given infinite series.</li>
 </ul>
+</section>
+<section id="from-sequences-to-series" class="slide level2">
+<h2>From Sequences to Series</h2>
+<p>A <strong>sequence</strong> is an ordered list of terms:</p>
+<p><span class="math inline">\(a_1,a_2,a_3,\ldots\)</span></p>
+<p>An <strong>infinite series</strong> adds the terms:</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n=a_1+a_2+a_3+\cdots\)</span></p>
+<p>What does it mean to add infinitely many numbers?</p>
+</section>
+<section id="partial-sums" class="slide level2">
+<h2>Partial Sums</h2>
+<p>The <span class="math inline">\(k\)</span>th <strong>partial sum</strong> adds the first <span class="math inline">\(k\)</span> terms:</p>
+<p><span class="math inline">\(\displaystyle S_k=\sum_{n=1}^{k}a_n\)</span></p>
+<p><span class="math inline">\(S_1=a_1\)</span></p>
+<p><span class="math inline">\(S_2=a_1+a_2\)</span></p>
+<p><span class="math inline">\(S_3=a_1+a_2+a_3\)</span></p>
+</section>
+<section id="convergence-and-divergence-of-parital-sums" class="slide level2">
+<h2>Convergence and Divergence of Parital Sums</h2>
+<p>The partial sums form a new sequence: <span class="math inline">\(\{S_k\}\)</span>.</p>
+<p><span class="math display">\[\lim_{k\to\infty}S_k =\sum_{n=1}^{\infty}a_n\]</span></p>
+<p>If <span class="math inline">\(\lim_{k\to\infty}S_k=L\)</span> exists, the series <strong>converges</strong> to <span class="math inline">\(L\)</span>. Otherwise, the series <strong>diverges</strong>.</p>
 </section>
 <section id="test-so-far" class="slide level2">
 <h2>Test So Far</h2>
@@ -152,7 +175,32 @@
 <li>Telescoping</li>
 <li>Divergence</li>
 <li>Integral</li>
+<li>p-Series</li>
+<li>Geometric</li>
 </ul>
+</section>
+<section id="telescoping-series" class="slide level2">
+<h2>Telescoping Series</h2>
+<p>A <strong>telescoping series</strong> has partial sums in which most terms cancel.</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}(b_n-b_{n+1})\)</span></p>
+<p>The <span class="math inline">\(k\)</span>th partial sum is <span class="math inline">\(S_k=b_1-b_{k+1}\)</span>.</p>
+<p><span class="math inline">\(\lim_{k \to \infty}S_k=\lim_{k \to \infty}(b_1-b_{k+1})=b_1-\lim_{k \to \infty}b_{k+1}\)</span></p>
+<p>If <span class="math inline">\(\lim_{k \to \infty}b_{k+1}=L\)</span>, then the series converges to <span class="math inline">\(b_1-L\)</span>.</p>
+</section>
+<section id="divergence-test" class="slide level2">
+<h2>Divergence Test</h2>
+<p>If <span class="math inline">\(\displaystyle \lim_{n\to\infty}a_n=c\ne 0\)</span> or <span class="math inline">\(\displaystyle \lim_{n\to\infty}a_n\)</span> does not exist, then the series <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> diverges.</p>
+<p>Warning: If <span class="math inline">\(\displaystyle \lim_{n\to\infty}a_n=0\)</span>, the divergence test is inconclusive. The divergence test cannot be used to prove that a series converges. For example, the harmonic series is divergent.</p>
+</section>
+<section id="integral-test" class="slide level2">
+<h2>Integral Test</h2>
+<p>Suppose <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> is a series with positive terms <span class="math inline">\(a_n\)</span> and there exists a function <span class="math inline">\(f\)</span> and a positive integer <span class="math inline">\(N\)</span> such that:</p>
+<ol type="1">
+<li><span class="math inline">\(f\)</span> is continuous.</li>
+<li><span class="math inline">\(f\)</span> is decreasing.</li>
+<li><span class="math inline">\(f(n)=a_n\)</span> for all integers <span class="math inline">\(n\ge N\)</span>.</li>
+</ol>
+<p>Then <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> and <span class="math inline">\(\displaystyle \int_N^\infty f(x)\,dx\)</span> both converge or both diverge.</p>
 </section>
 <section id="p-series" class="slide level2">
 <h2>p-Series</h2>
@@ -164,27 +212,379 @@
 <li><strong>Converges</strong> if <span class="math inline">\(p&gt;1\)</span>.</li>
 <li><strong>Diverges</strong> if <span class="math inline">\(p\le 1\)</span>.</li>
 </ul>
+</section>
+<section id="geometric-series" class="slide level2">
+<h2>Geometric Series</h2>
+<p>A <strong>geometric series</strong> has the form</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}ar^{n-1}=a+ar+ar^2+ar^3+\cdots\)</span></p>
+<p>with <span class="math inline">\(a \ne 0\)</span> and <span class="math inline">\(r \ne 0\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(|r|&lt;1\)</span>, the series converges to <span class="math inline">\(\frac{a}{1-r}\)</span>.</li>
+<li>If <span class="math inline">\(|r|\ge1\)</span> the series diverges.</li>
+</ul>
+</section>
+<section id="new-tests" class="slide level2">
+<h2>New Tests</h2>
+<p>Now that we have more series that we can identify as convergent or divergent, we can use them to test other series. The two new tests are the <strong>comparison test</strong> and the <strong>limit comparison test</strong>. Both tests compare a given series to a known convergent or divergent series.</p>
+<p>The way they so the comparison is to use the sequences of terms from the series. For these tests <span class="math inline">\(\sum_{n=1}^{\infty}a_n\)</span> is unknown, and <span class="math inline">\(\sum_{n=1}^{\infty}b_n\)</span> has known behavior. Often we choose <span class="math inline">\(b_n\)</span> from a known geometric or p-series.</p>
+</section>
+<section id="comparison-test" class="slide level2">
+<h2>Comparison Test</h2>
+<p>Suppose <span class="math inline">\(a_n\)</span> and <span class="math inline">\(b_n\)</span> are nonnegative for all <span class="math inline">\(n\ge N\)</span>.</p>
+<p><strong>Convergence:</strong></p>
+<p>If <span class="math inline">\(0\le a_n\le b_n\)</span> and <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}b_n\)</span> converges, then <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> converges.</p>
+<p><strong>Divergence:</strong></p>
+<p>If <span class="math inline">\(a_n\ge b_n\ge 0\)</span> and <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}b_n\)</span> diverges, then <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> diverges.</p>
+</section>
+<section id="comparison-test-example-1" class="slide level2">
+<h2>Comparison Test Example 1</h2>
+<p>Use the comparison test to determine whether the series converges or diverges.</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^3+3n+1}\)</span></p>
 <div class="fragment">
-<p>The harmonic series is a p-series with <span class="math inline">\(p=1\)</span>, so it diverges.</p>
-<p>The series <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^2}\)</span> has <span class="math inline">\(p=2\)</span>, so it converges.</p>
+<p>Compare with <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^3}\)</span>.</p>
 </div>
 </section>
-<section id="p-series-example-1" class="slide level2">
-<h2>p-Series Example 1</h2>
-<p>Determine whether the following series converges or diverges.</p>
-<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^4}\)</span></p>
+<section id="comparison-test-example-2" class="slide level2">
+<h2>Comparison Test Example 2</h2>
+<p>Use the comparison test to determine whether the series converges or diverges.</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=2}^{\infty}\frac{1}{\ln(n)}\)</span></p>
 <div class="fragment">
-<p>This is a p-series with <span class="math inline">\(p=4\)</span>.</p>
-<p>Since <span class="math inline">\(p=4&gt;1\)</span>, the series <strong>converges</strong>.</p>
+<p>Compare with the harmonic series <span class="math inline">\(\displaystyle \sum_{n=2}^{\infty}\frac{1}{n}\)</span>.</p>
 </div>
 </section>
-<section id="p-series-example-2" class="slide level2">
-<h2>p-Series Example 2</h2>
-<p>Determine whether the following series converges or diverges.</p>
-<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^{2/3}}\)</span></p>
+<section id="limit-comparison-test" class="slide level2">
+<h2>Limit Comparison Test</h2>
+<p><strong>Limit Comparison Test (Theorem 5.12)</strong></p>
+<p>Suppose <span class="math inline">\(a_n,b_n&gt;0\)</span> and let</p>
+<p><span class="math inline">\(\displaystyle L=\lim_{n\to\infty}\frac{a_n}{b_n}\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(0&lt;L&lt;\infty\)</span>, both <span class="math inline">\(\sum_{n=1}^{\infty} a_n\)</span> and <span class="math inline">\(\sum_{n=1}^{\infty} b_n\)</span> converge or both diverge.</li>
+<li>If <span class="math inline">\(L=0\)</span> and <span class="math inline">\(\sum_{n=1}^{\infty} b_n\)</span> converges, then <span class="math inline">\(\sum_{n=1}^{\infty} a_n\)</span> converges.</li>
+<li>If <span class="math inline">\(L=\infty\)</span> and <span class="math inline">\(\sum_{n=1}^{\infty} b_n\)</span> diverges, then <span class="math inline">\(\sum_{n=1}^{\infty} a_n\)</span> diverges.</li>
+</ul>
+</section>
+<section id="limit-comparison-test-example-1" class="slide level2">
+<h2>Limit Comparison Test Example 1</h2>
+<p>Use the limit comparison test to determine whether the series converges or diverges.</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{\sqrt{n}+1}\)</span></p>
 <div class="fragment">
-<p>This is a p-series with <span class="math inline">\(p=\frac{2}{3}\)</span>.</p>
-<p>Since <span class="math inline">\(p=\frac{2}{3}&lt;1\)</span>, the series <strong>diverges</strong>.</p>
+<p>Compare with <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{\sqrt{n}}\)</span>.</p>
+</div>
+</section>
+<section id="limit-comparison-test-example-2" class="slide level2">
+<h2>Limit Comparison Test Example 2</h2>
+<p>Use the limit comparison test to determine whether the series converges or diverges.</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{2^n+1}{3^n}\)</span></p>
+<div class="fragment">
+<p>Compare with the geometric series <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\left(\frac{2}{3}\right)^n\)</span>.</p>
+</div>
+</section>
+<section id="the-koch-snowflake" class="slide level2">
+<h2>The Koch Snowflake</h2>
+<p>Start with an equilateral triangle of side length <span class="math inline">\(1\)</span>.</p>
+<p>At each step, replace the middle third of every segment with two sides of an outward equilateral triangle.</p>
+<svg role="img" aria-labelledby="koch-stages-title koch-stages-desc" xlink="http://www.w3.org/1999/xlink" width="100%" viewbox="0 0 715.055692 197.203292" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<title id="koch-stages-title">
+First four stages of the Koch snowflake
+</title>
+<desc id="koch-stages-desc">Four figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.</desc> <metadata> <rdf:rdf xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <cc:work> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:date>2026-10-21T11:10:55.024373</dc:date> <dc:format>image/svg+xml</dc:format> <dc:creator> <cc:agent> <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title> </cc:agent> </dc:creator> </cc:work> </rdf:rdf> </metadata> <defs> <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style> </defs> <g id="figure_1"> <g id="patch_1"> <path d="M 0 197.203292 
+L 715.055692 197.203292 
+L 715.055692 -0 
+L 0 -0 
+z
+" style="fill: #fdf6e3"></path> </g> <g id="axes_1"> <g id="patch_2"> <path d="M 19.500474 142.031442 
+L 142.505217 142.031442 
+L 81.002846 35.50621 
+z
+" clip-path="url(#pba486ea7e1)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"></path> </g> <g id="text_1"> <!-- $F_0$ --> <g style="fill: #586e75" transform="translate(71.027846 21.637031)"> <text> <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan> <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">0</tspan> </text> </g> </g> </g> <g id="axes_2"> <g id="patch_3"> <path d="M 203.850474 142.031442 
+L 244.852055 142.031442 
+L 265.352846 177.539853 
+L 285.853636 142.031442 
+L 326.855217 142.031442 
+L 306.354427 106.523032 
+L 326.855217 71.014621 
+L 285.853636 71.014621 
+L 265.352846 35.50621 
+L 244.852055 71.014621 
+L 203.850474 71.014621 
+L 224.351265 106.523032 
+z
+" clip-path="url(#p8bb7e60510)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"></path> </g> <g id="text_2"> <!-- $F_1$ --> <g style="fill: #586e75" transform="translate(255.377846 21.637031)"> <text> <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan> <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">1</tspan> </text> </g> </g> </g> <g id="axes_3"> <g id="patch_4"> <path d="M 388.200474 142.031442 
+L 401.867668 142.031442 
+L 408.701265 153.867579 
+L 415.534862 142.031442 
+L 429.202055 142.031442 
+L 436.035652 153.867579 
+L 429.202055 165.703716 
+L 442.869249 165.703716 
+L 449.702846 177.539853 
+L 456.536443 165.703716 
+L 470.203636 165.703716 
+L 463.37004 153.867579 
+L 470.203636 142.031442 
+L 483.87083 142.031442 
+L 490.704427 153.867579 
+L 497.538024 142.031442 
+L 511.205217 142.031442 
+L 504.371621 130.195305 
+L 511.205217 118.359168 
+L 497.538024 118.359168 
+L 490.704427 106.523032 
+L 497.538024 94.686895 
+L 511.205217 94.686895 
+L 504.371621 82.850758 
+L 511.205217 71.014621 
+L 497.538024 71.014621 
+L 490.704427 59.178484 
+L 483.87083 71.014621 
+L 470.203636 71.014621 
+L 463.37004 59.178484 
+L 470.203636 47.342347 
+L 456.536443 47.342347 
+L 449.702846 35.50621 
+L 442.869249 47.342347 
+L 429.202055 47.342347 
+L 436.035652 59.178484 
+L 429.202055 71.014621 
+L 415.534862 71.014621 
+L 408.701265 59.178484 
+L 401.867668 71.014621 
+L 388.200474 71.014621 
+L 395.034071 82.850758 
+L 388.200474 94.686895 
+L 401.867668 94.686895 
+L 408.701265 106.523032 
+L 401.867668 118.359168 
+L 388.200474 118.359168 
+L 395.034071 130.195305 
+z
+" clip-path="url(#p09be6ca37e)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"></path> </g> <g id="text_3"> <!-- $F_2$ --> <g style="fill: #586e75" transform="translate(439.727846 21.637031)"> <text> <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan> <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">2</tspan> </text> </g> </g> </g> <g id="axes_4"> <g id="patch_5"> <path d="M 572.550474 142.031442 
+L 577.106206 142.031442 
+L 579.384071 145.976821 
+L 581.661937 142.031442 
+L 586.217668 142.031442 
+L 588.495534 145.976821 
+L 586.217668 149.9222 
+L 590.773399 149.9222 
+L 593.051265 153.867579 
+L 595.32913 149.9222 
+L 599.884862 149.9222 
+L 597.606996 145.976821 
+L 599.884862 142.031442 
+L 604.440593 142.031442 
+L 606.718458 145.976821 
+L 608.996324 142.031442 
+L 613.552055 142.031442 
+L 615.829921 145.976821 
+L 613.552055 149.9222 
+L 618.107787 149.9222 
+L 620.385652 153.867579 
+L 618.107787 157.812958 
+L 613.552055 157.812958 
+L 615.829921 161.758337 
+L 613.552055 165.703716 
+L 618.107787 165.703716 
+L 620.385652 169.649095 
+L 622.663518 165.703716 
+L 627.219249 165.703716 
+L 629.497115 169.649095 
+L 627.219249 173.594474 
+L 631.77498 173.594474 
+L 634.052846 177.539853 
+L 636.330711 173.594474 
+L 640.886443 173.594474 
+L 638.608577 169.649095 
+L 640.886443 165.703716 
+L 645.442174 165.703716 
+L 647.72004 169.649095 
+L 649.997905 165.703716 
+L 654.553636 165.703716 
+L 652.275771 161.758337 
+L 654.553636 157.812958 
+L 649.997905 157.812958 
+L 647.72004 153.867579 
+L 649.997905 149.9222 
+L 654.553636 149.9222 
+L 652.275771 145.976821 
+L 654.553636 142.031442 
+L 659.109368 142.031442 
+L 661.387233 145.976821 
+L 663.665099 142.031442 
+L 668.22083 142.031442 
+L 670.498696 145.976821 
+L 668.22083 149.9222 
+L 672.776561 149.9222 
+L 675.054427 153.867579 
+L 677.332292 149.9222 
+L 681.888024 149.9222 
+L 679.610158 145.976821 
+L 681.888024 142.031442 
+L 686.443755 142.031442 
+L 688.721621 145.976821 
+L 690.999486 142.031442 
+L 695.555217 142.031442 
+L 693.277352 138.086063 
+L 695.555217 134.140684 
+L 690.999486 134.140684 
+L 688.721621 130.195305 
+L 690.999486 126.249926 
+L 695.555217 126.249926 
+L 693.277352 122.304547 
+L 695.555217 118.359168 
+L 690.999486 118.359168 
+L 688.721621 114.413789 
+L 686.443755 118.359168 
+L 681.888024 118.359168 
+L 679.610158 114.413789 
+L 681.888024 110.468411 
+L 677.332292 110.468411 
+L 675.054427 106.523032 
+L 677.332292 102.577653 
+L 681.888024 102.577653 
+L 679.610158 98.632274 
+L 681.888024 94.686895 
+L 686.443755 94.686895 
+L 688.721621 98.632274 
+L 690.999486 94.686895 
+L 695.555217 94.686895 
+L 693.277352 90.741516 
+L 695.555217 86.796137 
+L 690.999486 86.796137 
+L 688.721621 82.850758 
+L 690.999486 78.905379 
+L 695.555217 78.905379 
+L 693.277352 74.96 
+L 695.555217 71.014621 
+L 690.999486 71.014621 
+L 688.721621 67.069242 
+L 686.443755 71.014621 
+L 681.888024 71.014621 
+L 679.610158 67.069242 
+L 681.888024 63.123863 
+L 677.332292 63.123863 
+L 675.054427 59.178484 
+L 672.776561 63.123863 
+L 668.22083 63.123863 
+L 670.498696 67.069242 
+L 668.22083 71.014621 
+L 663.665099 71.014621 
+L 661.387233 67.069242 
+L 659.109368 71.014621 
+L 654.553636 71.014621 
+L 652.275771 67.069242 
+L 654.553636 63.123863 
+L 649.997905 63.123863 
+L 647.72004 59.178484 
+L 649.997905 55.233105 
+L 654.553636 55.233105 
+L 652.275771 51.287726 
+L 654.553636 47.342347 
+L 649.997905 47.342347 
+L 647.72004 43.396968 
+L 645.442174 47.342347 
+L 640.886443 47.342347 
+L 638.608577 43.396968 
+L 640.886443 39.451589 
+L 636.330711 39.451589 
+L 634.052846 35.50621 
+L 631.77498 39.451589 
+L 627.219249 39.451589 
+L 629.497115 43.396968 
+L 627.219249 47.342347 
+L 622.663518 47.342347 
+L 620.385652 43.396968 
+L 618.107787 47.342347 
+L 613.552055 47.342347 
+L 615.829921 51.287726 
+L 613.552055 55.233105 
+L 618.107787 55.233105 
+L 620.385652 59.178484 
+L 618.107787 63.123863 
+L 613.552055 63.123863 
+L 615.829921 67.069242 
+L 613.552055 71.014621 
+L 608.996324 71.014621 
+L 606.718458 67.069242 
+L 604.440593 71.014621 
+L 599.884862 71.014621 
+L 597.606996 67.069242 
+L 599.884862 63.123863 
+L 595.32913 63.123863 
+L 593.051265 59.178484 
+L 590.773399 63.123863 
+L 586.217668 63.123863 
+L 588.495534 67.069242 
+L 586.217668 71.014621 
+L 581.661937 71.014621 
+L 579.384071 67.069242 
+L 577.106206 71.014621 
+L 572.550474 71.014621 
+L 574.82834 74.96 
+L 572.550474 78.905379 
+L 577.106206 78.905379 
+L 579.384071 82.850758 
+L 577.106206 86.796137 
+L 572.550474 86.796137 
+L 574.82834 90.741516 
+L 572.550474 94.686895 
+L 577.106206 94.686895 
+L 579.384071 98.632274 
+L 581.661937 94.686895 
+L 586.217668 94.686895 
+L 588.495534 98.632274 
+L 586.217668 102.577653 
+L 590.773399 102.577653 
+L 593.051265 106.523032 
+L 590.773399 110.468411 
+L 586.217668 110.468411 
+L 588.495534 114.413789 
+L 586.217668 118.359168 
+L 581.661937 118.359168 
+L 579.384071 114.413789 
+L 577.106206 118.359168 
+L 572.550474 118.359168 
+L 574.82834 122.304547 
+L 572.550474 126.249926 
+L 577.106206 126.249926 
+L 579.384071 130.195305 
+L 577.106206 134.140684 
+L 572.550474 134.140684 
+L 574.82834 138.086063 
+z
+" clip-path="url(#p051ff4b7f7)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"></path> </g> <g id="text_4"> <!-- $F_3$ --> <g style="fill: #586e75" transform="translate(624.077846 21.637031)"> <text> <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan> <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">3</tspan> </text> </g> </g> </g> </g> <defs> <clippath id="pba486ea7e1"> <rect x="7.2" y="27.637031" width="147.605692" height="162.366261"></rect> </clippath> <clippath id="p8bb7e60510"> <rect x="191.55" y="27.637031" width="147.605692" height="162.366261"></rect> </clippath> <clippath id="p09be6ca37e"> <rect x="375.9" y="27.637031" width="147.605692" height="162.366261"></rect> </clippath> <clippath id="p051ff4b7f7"> <rect x="560.25" y="27.637031" width="147.605692" height="162.366261"></rect> </clippath> </defs>
+</svg>
+<p>What happens to the perimeter and the enclosed area?</p>
+</section>
+<section id="koch-snowflake-perimeter" class="slide level2">
+<h2>Koch Snowflake: Perimeter</h2>
+<p>At stage <span class="math inline">\(n\)</span>, let <span class="math inline">\(N_n\)</span> count the sides and <span class="math inline">\(l_n\)</span> be the length of each side.</p>
+<p>Each step creates four segments, each one-third as long:</p>
+<p><span class="math inline">\(N_n=3\cdot4^n,\qquad l_n=\left(\frac{1}{3}\right)^n.\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(\displaystyle L_n=N_nl_n=3\left(\frac{4}{3}\right)^n.\)</span></p>
+<p>Since <span class="math inline">\(4/3&gt;1\)</span>, the perimeter grows without bound.</p>
+</div>
+</section>
+<section id="koch-snowflake-added-area" class="slide level2">
+<h2>Koch Snowflake: Added Area</h2>
+<p>Let <span class="math inline">\(A_0=\sqrt{3}/4\)</span> be the area of the original triangle.</p>
+<p>At step <span class="math inline">\(n\ge1\)</span>:</p>
+<ul>
+<li>There are <span class="math inline">\(3\cdot4^{n-1}\)</span> new triangles.</li>
+<li>Each has side length <span class="math inline">\(1/3^n\)</span> and area <span class="math inline">\(A_0/9^n\)</span>.</li>
+</ul>
+<div class="fragment">
+<p>The added area is <span class="math inline">\(\displaystyle \Delta A_n=\frac{A_0}{3}\left(\frac{4}{9}\right)^{n-1}\)</span>.</p>
+<p>The added areas form a geometric sequence with ratio <span class="math inline">\(4/9\)</span>.</p>
+</div>
+</section>
+<section id="koch-snowflake-total-area" class="slide level2">
+<h2>Koch Snowflake: Total Area</h2>
+<p>The limiting area is the original area plus all the added areas:</p>
+<p><span class="math inline">\(\displaystyle A=A_0+\frac{A_0}{3}\sum_{n=1}^{\infty}\left(\frac{4}{9}\right)^{n-1}.\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(\displaystyle A=A_0+\frac{A_0/3}{1-4/9}=\frac{8}{5}A_0=\frac{2\sqrt{3}}{5}.\)</span></p>
+<p>The Koch snowflake has finite area and infinite perimeter.</p>
 </div>
 </section>
 <section id="error-estimates-for-parital-sums" class="slide level2">
@@ -199,77 +599,6 @@
 <p>For <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^3}\)</span>,</p>
 <p><span class="math inline">\(\displaystyle R_N&lt;\int_N^\infty\frac{1}{x^3}\,dx=\frac{1}{2N^2}\)</span>.</p>
 <p>To guarantee <span class="math inline">\(R_N&lt;0.001\)</span>, it is sufficient to choose <span class="math inline">\(N\ge 23\)</span>.</p>
-</div>
-</section>
-<section id="comparsion-test" class="slide level2">
-<h2>Comparsion Test</h2>
-<p><strong>Comparison Test (Theorem 5.11)</strong></p>
-<p>Suppose <span class="math inline">\(a_n\)</span> and <span class="math inline">\(b_n\)</span> are nonnegative for all <span class="math inline">\(n\ge N\)</span>.</p>
-<p><strong>Convergence:</strong></p>
-<p>If <span class="math inline">\(0\le a_n\le b_n\)</span> and <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}b_n\)</span> converges, then <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> converges.</p>
-<div class="fragment">
-<p><strong>Divergence:</strong></p>
-<p>If <span class="math inline">\(a_n\ge b_n\ge 0\)</span> and <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}b_n\)</span> diverges, then <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> diverges.</p>
-</div>
-</section>
-<section id="comparsion-test-example-1" class="slide level2">
-<h2>Comparsion Test Example 1</h2>
-<p>Use the comparison test to determine whether the series converges or diverges.</p>
-<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^3+3n+1}\)</span></p>
-<div class="fragment">
-<p>Compare with <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^3}\)</span>.</p>
-<p>For every positive integer <span class="math inline">\(n\)</span>,</p>
-<p><span class="math inline">\(\displaystyle 0&lt;\frac{1}{n^3+3n+1}&lt;\frac{1}{n^3}\)</span>.</p>
-<p>Since <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^3}\)</span> is a convergent p-series with <span class="math inline">\(p=3\)</span>, the given series <strong>converges</strong> by the comparison test.</p>
-</div>
-</section>
-<section id="comparsion-test-example-2" class="slide level2">
-<h2>Comparsion Test Example 2</h2>
-<p>Use the comparison test to determine whether the series converges or diverges.</p>
-<p><span class="math inline">\(\displaystyle \sum_{n=2}^{\infty}\frac{1}{\ln(n)}\)</span></p>
-<div class="fragment">
-<p>Compare with the harmonic series <span class="math inline">\(\displaystyle \sum_{n=2}^{\infty}\frac{1}{n}\)</span>.</p>
-<p>Since <span class="math inline">\(\ln(n)&lt;n\)</span> for all <span class="math inline">\(n\ge 2\)</span>,</p>
-<p><span class="math inline">\(\displaystyle \frac{1}{\ln(n)}&gt;\frac{1}{n}&gt;0\)</span>.</p>
-<p>The harmonic series diverges.</p>
-<p>Therefore, the given series <strong>diverges</strong> by the comparison test.</p>
-</div>
-</section>
-<section id="limit-comparsion-test" class="slide level2">
-<h2>Limit Comparsion Test</h2>
-<p><strong>Limit Comparison Test (Theorem 5.12)</strong></p>
-<p>Suppose <span class="math inline">\(a_n,b_n&gt;0\)</span> and let</p>
-<p><span class="math inline">\(\displaystyle L=\lim_{n\to\infty}\frac{a_n}{b_n}\)</span>.</p>
-<ul>
-<li>If <span class="math inline">\(0&lt;L&lt;\infty\)</span>, both series <strong>converge or both diverge</strong>.</li>
-<li>If <span class="math inline">\(L=0\)</span> and <span class="math inline">\(\sum b_n\)</span> converges, then <span class="math inline">\(\sum a_n\)</span> converges.</li>
-<li>If <span class="math inline">\(L=\infty\)</span> and <span class="math inline">\(\sum b_n\)</span> diverges, then <span class="math inline">\(\sum a_n\)</span> diverges.</li>
-</ul>
-<div class="fragment">
-<p>Typically, choose <span class="math inline">\(b_n\)</span> from a known geometric or p-series.</p>
-<p>When <span class="math inline">\(0&lt;L&lt;\infty\)</span>, the two series have the same convergence behavior.</p>
-</div>
-</section>
-<section id="limit-comparsion-test-example-1" class="slide level2">
-<h2>Limit Comparsion Test Example 1</h2>
-<p>Use the limit comparison test to determine whether the series converges or diverges.</p>
-<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{\sqrt{n}+1}\)</span></p>
-<div class="fragment">
-<p>Compare with <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{\sqrt{n}}\)</span>.</p>
-<p><span class="math inline">\(\displaystyle L=\lim_{n\to\infty}\frac{1/(\sqrt{n}+1)}{1/\sqrt{n}}\)</span></p>
-<p><span class="math inline">\(\displaystyle =\lim_{n\to\infty}\frac{1}{1+1/\sqrt{n}}=1\)</span>.</p>
-<p>Since <span class="math inline">\(L=1&gt;0\)</span> and <span class="math inline">\(\sum 1/\sqrt{n}\)</span> is a divergent p-series with <span class="math inline">\(p=\frac12\)</span>, the given series <strong>diverges</strong>.</p>
-</div>
-</section>
-<section id="limit-comparsion-test-example-2" class="slide level2">
-<h2>Limit Comparsion Test Example 2</h2>
-<p>Use the limit comparison test to determine whether the series converges or diverges.</p>
-<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{2^n+1}{3^n}\)</span></p>
-<div class="fragment">
-<p>Compare with the geometric series <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\left(\frac{2}{3}\right)^n\)</span>.</p>
-<p><span class="math inline">\(\displaystyle L=\lim_{n\to\infty}\frac{(2^n+1)/3^n}{2^n/3^n}\)</span></p>
-<p><span class="math inline">\(\displaystyle =\lim_{n\to\infty}\left[1+\left(\frac12\right)^n\right]=1\)</span>.</p>
-<p>Since <span class="math inline">\(L=1&gt;0\)</span> and the geometric series converges because <span class="math inline">\(|r|=\frac23&lt;1\)</span>, the given series <strong>converges</strong>.</p>
 </div>
 </section>
 <section class="slide level2">

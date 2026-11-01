@@ -74,7 +74,40 @@
     "href": "classes/21/slides.html#series-and-tests",
     "title": "More Convergence Tests",
     "section": "Series and Tests",
-    "text": "Series and Tests\nClass Session Goals:\n\nDetermine whether a p-series converges or diverges.\nUse the Integral Test to estimate the error in a partial sum.\nApply the Comparison Test to determine convergence or divergence.\nApply the Limit Comparison Test to determine convergence or divergence.\nChoose an appropriate test for a given infinite series.",
+    "text": "Series and Tests\n\nUse the Integral Test to estimate the error in a partial sum.\nApply the Comparison Test to determine convergence or divergence.\nApply the Limit Comparison Test to determine convergence or divergence.\nChoose an appropriate test for a given infinite series.",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#from-sequences-to-series",
+    "href": "classes/21/slides.html#from-sequences-to-series",
+    "title": "More Convergence Tests",
+    "section": "From Sequences to Series",
+    "text": "From Sequences to Series\nA sequence is an ordered list of terms:\n\\(a_1,a_2,a_3,\\ldots\\)\nAn infinite series adds the terms:\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=a_1+a_2+a_3+\\cdots\\)\nWhat does it mean to add infinitely many numbers?",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#partial-sums",
+    "href": "classes/21/slides.html#partial-sums",
+    "title": "More Convergence Tests",
+    "section": "Partial Sums",
+    "text": "Partial Sums\nThe \\(k\\)th partial sum adds the first \\(k\\) terms:\n\\(\\displaystyle S_k=\\sum_{n=1}^{k}a_n\\)\n\\(S_1=a_1\\)\n\\(S_2=a_1+a_2\\)\n\\(S_3=a_1+a_2+a_3\\)",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#convergence-and-divergence-of-parital-sums",
+    "href": "classes/21/slides.html#convergence-and-divergence-of-parital-sums",
+    "title": "More Convergence Tests",
+    "section": "Convergence and Divergence of Parital Sums",
+    "text": "Convergence and Divergence of Parital Sums\nThe partial sums form a new sequence: \\(\\{S_k\\}\\).\n\\[\\lim_{k\\to\\infty}S_k =\\sum_{n=1}^{\\infty}a_n\\]\nIf \\(\\lim_{k\\to\\infty}S_k=L\\) exists, the series converges to \\(L\\). Otherwise, the series diverges.",
     "crumbs": [
       "Class Material",
       "More Convergence Tests"
@@ -85,7 +118,40 @@
     "href": "classes/21/slides.html#test-so-far",
     "title": "More Convergence Tests",
     "section": "Test So Far",
-    "text": "Test So Far\n\nTelescoping\nDivergence\nIntegral",
+    "text": "Test So Far\n\nTelescoping\nDivergence\nIntegral\np-Series\nGeometric",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#telescoping-series",
+    "href": "classes/21/slides.html#telescoping-series",
+    "title": "More Convergence Tests",
+    "section": "Telescoping Series",
+    "text": "Telescoping Series\nA telescoping series has partial sums in which most terms cancel.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(b_n-b_{n+1})\\)\nThe \\(k\\)th partial sum is \\(S_k=b_1-b_{k+1}\\).\n\\(\\lim_{k \\to \\infty}S_k=\\lim_{k \\to \\infty}(b_1-b_{k+1})=b_1-\\lim_{k \\to \\infty}b_{k+1}\\)\nIf \\(\\lim_{k \\to \\infty}b_{k+1}=L\\), then the series converges to \\(b_1-L\\).",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#divergence-test",
+    "href": "classes/21/slides.html#divergence-test",
+    "title": "More Convergence Tests",
+    "section": "Divergence Test",
+    "text": "Divergence Test\nIf \\(\\displaystyle \\lim_{n\\to\\infty}a_n=c\\ne 0\\) or \\(\\displaystyle \\lim_{n\\to\\infty}a_n\\) does not exist, then the series \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) diverges.\nWarning: If \\(\\displaystyle \\lim_{n\\to\\infty}a_n=0\\), the divergence test is inconclusive. The divergence test cannot be used to prove that a series converges. For example, the harmonic series is divergent.",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#integral-test",
+    "href": "classes/21/slides.html#integral-test",
+    "title": "More Convergence Tests",
+    "section": "Integral Test",
+    "text": "Integral Test\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) is a series with positive terms \\(a_n\\) and there exists a function \\(f\\) and a positive integer \\(N\\) such that:\n\n\\(f\\) is continuous.\n\\(f\\) is decreasing.\n\\(f(n)=a_n\\) for all integers \\(n\\ge N\\).\n\nThen \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) and \\(\\displaystyle \\int_N^\\infty f(x)\\,dx\\) both converge or both diverge.",
     "crumbs": [
       "Class Material",
       "More Convergence Tests"
@@ -96,29 +162,139 @@
     "href": "classes/21/slides.html#p-series",
     "title": "More Convergence Tests",
     "section": "p-Series",
-    "text": "p-Series\nA p-series is a series of the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^p}\\)\nwhere \\(p\\) is any real number.\nA p-series:\n\nConverges if \\(p&gt;1\\).\nDiverges if \\(p\\le 1\\).\n\n\nThe harmonic series is a p-series with \\(p=1\\), so it diverges.\nThe series \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^2}\\) has \\(p=2\\), so it converges.",
+    "text": "p-Series\nA p-series is a series of the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^p}\\)\nwhere \\(p\\) is any real number.\nA p-series:\n\nConverges if \\(p&gt;1\\).\nDiverges if \\(p\\le 1\\).",
     "crumbs": [
       "Class Material",
       "More Convergence Tests"
     ]
   },
   {
-    "objectID": "classes/21/slides.html#p-series-example-1",
-    "href": "classes/21/slides.html#p-series-example-1",
+    "objectID": "classes/21/slides.html#geometric-series",
+    "href": "classes/21/slides.html#geometric-series",
     "title": "More Convergence Tests",
-    "section": "p-Series Example 1",
-    "text": "p-Series Example 1\nDetermine whether the following series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^4}\\)\n\nThis is a p-series with \\(p=4\\).\nSince \\(p=4&gt;1\\), the series converges.",
+    "section": "Geometric Series",
+    "text": "Geometric Series\nA geometric series has the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}ar^{n-1}=a+ar+ar^2+ar^3+\\cdots\\)\nwith \\(a \\ne 0\\) and \\(r \\ne 0\\).\n\nIf \\(|r|&lt;1\\), the series converges to \\(\\frac{a}{1-r}\\).\nIf \\(|r|\\ge1\\) the series diverges.",
     "crumbs": [
       "Class Material",
       "More Convergence Tests"
     ]
   },
   {
-    "objectID": "classes/21/slides.html#p-series-example-2",
-    "href": "classes/21/slides.html#p-series-example-2",
+    "objectID": "classes/21/slides.html#new-tests",
+    "href": "classes/21/slides.html#new-tests",
     "title": "More Convergence Tests",
-    "section": "p-Series Example 2",
-    "text": "p-Series Example 2\nDetermine whether the following series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^{2/3}}\\)\n\nThis is a p-series with \\(p=\\frac{2}{3}\\).\nSince \\(p=\\frac{2}{3}&lt;1\\), the series diverges.",
+    "section": "New Tests",
+    "text": "New Tests\nNow that we have more series that we can identify as convergent or divergent, we can use them to test other series. The two new tests are the comparison test and the limit comparison test. Both tests compare a given series to a known convergent or divergent series.\nThe way they so the comparison is to use the sequences of terms from the series. For these tests \\(\\sum_{n=1}^{\\infty}a_n\\) is unknown, and \\(\\sum_{n=1}^{\\infty}b_n\\) has known behavior. Often we choose \\(b_n\\) from a known geometric or p-series.",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#comparison-test",
+    "href": "classes/21/slides.html#comparison-test",
+    "title": "More Convergence Tests",
+    "section": "Comparison Test",
+    "text": "Comparison Test\nSuppose \\(a_n\\) and \\(b_n\\) are nonnegative for all \\(n\\ge N\\).\nConvergence:\nIf \\(0\\le a_n\\le b_n\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n\\) converges, then \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) converges.\nDivergence:\nIf \\(a_n\\ge b_n\\ge 0\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n\\) diverges, then \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) diverges.",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#comparison-test-example-1",
+    "href": "classes/21/slides.html#comparison-test-example-1",
+    "title": "More Convergence Tests",
+    "section": "Comparison Test Example 1",
+    "text": "Comparison Test Example 1\nUse the comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3+3n+1}\\)\n\nCompare with \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\).",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#comparison-test-example-2",
+    "href": "classes/21/slides.html#comparison-test-example-2",
+    "title": "More Convergence Tests",
+    "section": "Comparison Test Example 2",
+    "text": "Comparison Test Example 2\nUse the comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=2}^{\\infty}\\frac{1}{\\ln(n)}\\)\n\nCompare with the harmonic series \\(\\displaystyle \\sum_{n=2}^{\\infty}\\frac{1}{n}\\).",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#limit-comparison-test",
+    "href": "classes/21/slides.html#limit-comparison-test",
+    "title": "More Convergence Tests",
+    "section": "Limit Comparison Test",
+    "text": "Limit Comparison Test\nLimit Comparison Test (Theorem 5.12)\nSuppose \\(a_n,b_n&gt;0\\) and let\n\\(\\displaystyle L=\\lim_{n\\to\\infty}\\frac{a_n}{b_n}\\).\n\nIf \\(0&lt;L&lt;\\infty\\), both \\(\\sum_{n=1}^{\\infty} a_n\\) and \\(\\sum_{n=1}^{\\infty} b_n\\) converge or both diverge.\nIf \\(L=0\\) and \\(\\sum_{n=1}^{\\infty} b_n\\) converges, then \\(\\sum_{n=1}^{\\infty} a_n\\) converges.\nIf \\(L=\\infty\\) and \\(\\sum_{n=1}^{\\infty} b_n\\) diverges, then \\(\\sum_{n=1}^{\\infty} a_n\\) diverges.",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#limit-comparison-test-example-1",
+    "href": "classes/21/slides.html#limit-comparison-test-example-1",
+    "title": "More Convergence Tests",
+    "section": "Limit Comparison Test Example 1",
+    "text": "Limit Comparison Test Example 1\nUse the limit comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt{n}+1}\\)\n\nCompare with \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt{n}}\\).",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#limit-comparison-test-example-2",
+    "href": "classes/21/slides.html#limit-comparison-test-example-2",
+    "title": "More Convergence Tests",
+    "section": "Limit Comparison Test Example 2",
+    "text": "Limit Comparison Test Example 2\nUse the limit comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{2^n+1}{3^n}\\)\n\nCompare with the geometric series \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{2}{3}\\right)^n\\).",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#the-koch-snowflake",
+    "href": "classes/21/slides.html#the-koch-snowflake",
+    "title": "More Convergence Tests",
+    "section": "The Koch Snowflake",
+    "text": "The Koch Snowflake\nStart with an equilateral triangle of side length \\(1\\).\nAt each step, replace the middle third of every segment with two sides of an outward equilateral triangle.\n\n\nFirst four stages of the Koch snowflake\n\nFour figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.     2026-10-21T11:10:55.024373 image/svg+xml   Matplotlib v3.10.8, https://matplotlib.org/                     F 0             F 1             F 2             F 3                   \n\nWhat happens to the perimeter and the enclosed area?",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#koch-snowflake-perimeter",
+    "href": "classes/21/slides.html#koch-snowflake-perimeter",
+    "title": "More Convergence Tests",
+    "section": "Koch Snowflake: Perimeter",
+    "text": "Koch Snowflake: Perimeter\nAt stage \\(n\\), let \\(N_n\\) count the sides and \\(l_n\\) be the length of each side.\nEach step creates four segments, each one-third as long:\n\\(N_n=3\\cdot4^n,\\qquad l_n=\\left(\\frac{1}{3}\\right)^n.\\)\n\n\\(\\displaystyle L_n=N_nl_n=3\\left(\\frac{4}{3}\\right)^n.\\)\nSince \\(4/3&gt;1\\), the perimeter grows without bound.",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#koch-snowflake-added-area",
+    "href": "classes/21/slides.html#koch-snowflake-added-area",
+    "title": "More Convergence Tests",
+    "section": "Koch Snowflake: Added Area",
+    "text": "Koch Snowflake: Added Area\nLet \\(A_0=\\sqrt{3}/4\\) be the area of the original triangle.\nAt step \\(n\\ge1\\):\n\nThere are \\(3\\cdot4^{n-1}\\) new triangles.\nEach has side length \\(1/3^n\\) and area \\(A_0/9^n\\).\n\n\nThe added area is \\(\\displaystyle \\Delta A_n=\\frac{A_0}{3}\\left(\\frac{4}{9}\\right)^{n-1}\\).\nThe added areas form a geometric sequence with ratio \\(4/9\\).",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#koch-snowflake-total-area",
+    "href": "classes/21/slides.html#koch-snowflake-total-area",
+    "title": "More Convergence Tests",
+    "section": "Koch Snowflake: Total Area",
+    "text": "Koch Snowflake: Total Area\nThe limiting area is the original area plus all the added areas:\n\\(\\displaystyle A=A_0+\\frac{A_0}{3}\\sum_{n=1}^{\\infty}\\left(\\frac{4}{9}\\right)^{n-1}.\\)\n\n\\(\\displaystyle A=A_0+\\frac{A_0/3}{1-4/9}=\\frac{8}{5}A_0=\\frac{2\\sqrt{3}}{5}.\\)\nThe Koch snowflake has finite area and infinite perimeter.",
     "crumbs": [
       "Class Material",
       "More Convergence Tests"
@@ -130,72 +306,6 @@
     "title": "More Convergence Tests",
     "section": "Error Estimates for Parital Sums",
     "text": "Error Estimates for Parital Sums\nSuppose \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n=S\\) converges.\nThe remainder after \\(N\\) terms is\n\\(\\displaystyle R_N=S-S_N=\\sum_{n=N+1}^{\\infty}a_n\\).\nRemainder Estimate from the Integral Test (Theorem 5.10)\nIf \\(f\\) is continuous, positive, and decreasing, with \\(f(n)=a_n\\), then\n\\(\\displaystyle \\int_{N+1}^{\\infty}f(x)\\,dx&lt;R_N&lt;\\int_N^{\\infty}f(x)\\,dx\\).\n\nFor \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\),\n\\(\\displaystyle R_N&lt;\\int_N^\\infty\\frac{1}{x^3}\\,dx=\\frac{1}{2N^2}\\).\nTo guarantee \\(R_N&lt;0.001\\), it is sufficient to choose \\(N\\ge 23\\).",
-    "crumbs": [
-      "Class Material",
-      "More Convergence Tests"
-    ]
-  },
-  {
-    "objectID": "classes/21/slides.html#comparsion-test",
-    "href": "classes/21/slides.html#comparsion-test",
-    "title": "More Convergence Tests",
-    "section": "Comparsion Test",
-    "text": "Comparsion Test\nComparison Test (Theorem 5.11)\nSuppose \\(a_n\\) and \\(b_n\\) are nonnegative for all \\(n\\ge N\\).\nConvergence:\nIf \\(0\\le a_n\\le b_n\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n\\) converges, then \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) converges.\n\nDivergence:\nIf \\(a_n\\ge b_n\\ge 0\\) and \\(\\displaystyle \\sum_{n=1}^{\\infty}b_n\\) diverges, then \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) diverges.",
-    "crumbs": [
-      "Class Material",
-      "More Convergence Tests"
-    ]
-  },
-  {
-    "objectID": "classes/21/slides.html#comparsion-test-example-1",
-    "href": "classes/21/slides.html#comparsion-test-example-1",
-    "title": "More Convergence Tests",
-    "section": "Comparsion Test Example 1",
-    "text": "Comparsion Test Example 1\nUse the comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3+3n+1}\\)\n\nCompare with \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\).\nFor every positive integer \\(n\\),\n\\(\\displaystyle 0&lt;\\frac{1}{n^3+3n+1}&lt;\\frac{1}{n^3}\\).\nSince \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^3}\\) is a convergent p-series with \\(p=3\\), the given series converges by the comparison test.",
-    "crumbs": [
-      "Class Material",
-      "More Convergence Tests"
-    ]
-  },
-  {
-    "objectID": "classes/21/slides.html#comparsion-test-example-2",
-    "href": "classes/21/slides.html#comparsion-test-example-2",
-    "title": "More Convergence Tests",
-    "section": "Comparsion Test Example 2",
-    "text": "Comparsion Test Example 2\nUse the comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=2}^{\\infty}\\frac{1}{\\ln(n)}\\)\n\nCompare with the harmonic series \\(\\displaystyle \\sum_{n=2}^{\\infty}\\frac{1}{n}\\).\nSince \\(\\ln(n)&lt;n\\) for all \\(n\\ge 2\\),\n\\(\\displaystyle \\frac{1}{\\ln(n)}&gt;\\frac{1}{n}&gt;0\\).\nThe harmonic series diverges.\nTherefore, the given series diverges by the comparison test.",
-    "crumbs": [
-      "Class Material",
-      "More Convergence Tests"
-    ]
-  },
-  {
-    "objectID": "classes/21/slides.html#limit-comparsion-test",
-    "href": "classes/21/slides.html#limit-comparsion-test",
-    "title": "More Convergence Tests",
-    "section": "Limit Comparsion Test",
-    "text": "Limit Comparsion Test\nLimit Comparison Test (Theorem 5.12)\nSuppose \\(a_n,b_n&gt;0\\) and let\n\\(\\displaystyle L=\\lim_{n\\to\\infty}\\frac{a_n}{b_n}\\).\n\nIf \\(0&lt;L&lt;\\infty\\), both series converge or both diverge.\nIf \\(L=0\\) and \\(\\sum b_n\\) converges, then \\(\\sum a_n\\) converges.\nIf \\(L=\\infty\\) and \\(\\sum b_n\\) diverges, then \\(\\sum a_n\\) diverges.\n\n\nTypically, choose \\(b_n\\) from a known geometric or p-series.\nWhen \\(0&lt;L&lt;\\infty\\), the two series have the same convergence behavior.",
-    "crumbs": [
-      "Class Material",
-      "More Convergence Tests"
-    ]
-  },
-  {
-    "objectID": "classes/21/slides.html#limit-comparsion-test-example-1",
-    "href": "classes/21/slides.html#limit-comparsion-test-example-1",
-    "title": "More Convergence Tests",
-    "section": "Limit Comparsion Test Example 1",
-    "text": "Limit Comparsion Test Example 1\nUse the limit comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt{n}+1}\\)\n\nCompare with \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{\\sqrt{n}}\\).\n\\(\\displaystyle L=\\lim_{n\\to\\infty}\\frac{1/(\\sqrt{n}+1)}{1/\\sqrt{n}}\\)\n\\(\\displaystyle =\\lim_{n\\to\\infty}\\frac{1}{1+1/\\sqrt{n}}=1\\).\nSince \\(L=1&gt;0\\) and \\(\\sum 1/\\sqrt{n}\\) is a divergent p-series with \\(p=\\frac12\\), the given series diverges.",
-    "crumbs": [
-      "Class Material",
-      "More Convergence Tests"
-    ]
-  },
-  {
-    "objectID": "classes/21/slides.html#limit-comparsion-test-example-2",
-    "href": "classes/21/slides.html#limit-comparsion-test-example-2",
-    "title": "More Convergence Tests",
-    "section": "Limit Comparsion Test Example 2",
-    "text": "Limit Comparsion Test Example 2\nUse the limit comparison test to determine whether the series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{2^n+1}{3^n}\\)\n\nCompare with the geometric series \\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{2}{3}\\right)^n\\).\n\\(\\displaystyle L=\\lim_{n\\to\\infty}\\frac{(2^n+1)/3^n}{2^n/3^n}\\)\n\\(\\displaystyle =\\lim_{n\\to\\infty}\\left[1+\\left(\\frac12\\right)^n\\right]=1\\).\nSince \\(L=1&gt;0\\) and the geometric series converges because \\(|r|=\\frac23&lt;1\\), the given series converges.",
     "crumbs": [
       "Class Material",
       "More Convergence Tests"
