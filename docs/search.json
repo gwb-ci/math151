@@ -257,6 +257,94 @@
     ]
   },
   {
+    "objectID": "classes/21/slides.html#alternating-series",
+    "href": "classes/21/slides.html#alternating-series",
+    "title": "More Convergence Tests",
+    "section": "Alternating Series",
+    "text": "Alternating Series\nAn alternating series is a series whose terms alternate between positive and negative values.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n+1}b_n=b_1-b_2+b_3-b_4+\\cdots\\)\nor\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^nb_n=-b_1+b_2-b_3+b_4-\\cdots\\)\nwhere \\(b_n&gt;0\\) for all positive integers \\(n\\).",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#alternating-series-example",
+    "href": "classes/21/slides.html#alternating-series-example",
+    "title": "More Convergence Tests",
+    "section": "Alternating Series Example",
+    "text": "Alternating Series Example\nThe alternating harmonic series is\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{n}=1-\\frac12+\\frac13-\\frac14+\\cdots\\)",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#alternating-series-test",
+    "href": "classes/21/slides.html#alternating-series-test",
+    "title": "More Convergence Tests",
+    "section": "Alternating Series Test",
+    "text": "Alternating Series Test\nAn alternating series of the form\n\\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n+1}b_n\\) or \\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^nb_n\\)\nconverges if\n\n\\(0&lt;b_{n+1}\\leq b_n\\) for all \\(n\\geq N\\), and\n\\(\\displaystyle \\lim_{n\\to\\infty}b_n=0\\).",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#alternating-series-example-1",
+    "href": "classes/21/slides.html#alternating-series-example-1",
+    "title": "More Convergence Tests",
+    "section": "Alternating Series Example 1",
+    "text": "Alternating Series Example 1\nDetermine whether the following series converges or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{n^2}\\)\n\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{1}{n^2}=0,\\)\nthe series converges by the alternating series test.",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#absolute-and-conditional-convergence",
+    "href": "classes/21/slides.html#absolute-and-conditional-convergence",
+    "title": "More Convergence Tests",
+    "section": "Absolute and Conditional Convergence",
+    "text": "Absolute and Conditional Convergence\nA series \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) converges absolutely if\n\\(\\displaystyle \\sum_{n=1}^{\\infty}|a_n|\\) converges.\nA series \\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) converges conditionally if\n\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\) converges, but \\(\\displaystyle \\sum_{n=1}^{\\infty}|a_n|\\) diverges.",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#absolute-and-conditional-convergence-example-1",
+    "href": "classes/21/slides.html#absolute-and-conditional-convergence-example-1",
+    "title": "More Convergence Tests",
+    "section": "Absolute and Conditional Convergence Example 1",
+    "text": "Absolute and Conditional Convergence Example 1\nDetermine whether the series converges absolutely, converges conditionally, or diverges.\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{3n+1}\\)\n\nUsing the limit comparison test with the harmonic series,\n\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{1/(3n+1)}{1/n}=\\frac{1}{3}.\\)\nTherefore, the series does not converge absolutely.",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#absolute-and-conditional-convergence-example-1-1",
+    "href": "classes/21/slides.html#absolute-and-conditional-convergence-example-1-1",
+    "title": "More Convergence Tests",
+    "section": "Absolute and Conditional Convergence Example 1",
+    "text": "Absolute and Conditional Convergence Example 1\nTo test for conditional convergence, let \\(b_n=\\frac{1}{3n+1}\\).\nSince \\(\\displaystyle \\frac{1}{3(n+1)+1}&lt;\\frac{1}{3n+1}\\)\nand \\(\\displaystyle \\lim_{n\\to\\infty}\\frac{1}{3n+1}=0,\\)\nthe series converges by the alternating series test.\nBecause the series converges but the series of absolute values diverges this series converges conditionally.",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
+    "objectID": "classes/21/slides.html#activity-testing-for-convergence-or-divergence",
+    "href": "classes/21/slides.html#activity-testing-for-convergence-or-divergence",
+    "title": "More Convergence Tests",
+    "section": "Activity: Testing for Convergence or Divergence",
+    "text": "Activity: Testing for Convergence or Divergence\nDetermine whether each of the following series converges absolutely, converges conditionally, or diverges. Justify your answers using an appropriate convergence test.\n(a) \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{\\sqrt{n}}\\)\n(b) \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n^2+1}\\)\n(c) \\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^n\\frac{n}{n+2}\\)\n(d) \\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}n}{n^2+4}\\)",
+    "crumbs": [
+      "Class Material",
+      "More Convergence Tests"
+    ]
+  },
+  {
     "objectID": "classes/21/slides.html#the-koch-snowflake",
     "href": "classes/21/slides.html#the-koch-snowflake",
     "title": "More Convergence Tests",

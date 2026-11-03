@@ -249,6 +249,129 @@ Compare with the geometric series $\displaystyle \sum_{n=1}^{\infty}\left(\frac{
 
 
 
+## Alternating Series
+
+An **alternating series** is a series whose terms alternate between positive and negative values.
+
+
+$\displaystyle \sum_{n=1}^{\infty}(-1)^{n+1}b_n=b_1-b_2+b_3-b_4+\cdots$
+
+or
+
+$\displaystyle \sum_{n=1}^{\infty}(-1)^nb_n=-b_1+b_2-b_3+b_4-\cdots$
+
+where $b_n>0$ for all positive integers $n$.
+
+
+
+---
+
+## Alternating Series Example 
+
+The alternating harmonic series is
+
+$\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=1-\frac12+\frac13-\frac14+\cdots$
+
+---
+
+## Alternating Series Test
+
+
+An alternating series of the form
+
+$\displaystyle \sum_{n=1}^{\infty}(-1)^{n+1}b_n$ or $\displaystyle \sum_{n=1}^{\infty}(-1)^nb_n$
+
+converges if
+
+1. $0<b_{n+1}\leq b_n$ for all  $n\geq N$, and
+2. $\displaystyle \lim_{n\to\infty}b_n=0$.
+
+
+---
+
+## Alternating Series Example 1
+
+
+
+Determine whether the following series converges or diverges.
+
+$\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^2}$
+
+. . . 
+
+$\displaystyle \lim_{n\to\infty}\frac{1}{n^2}=0,$
+
+the series **converges** by the alternating series test.
+
+---
+
+
+
+## Absolute and Conditional Convergence
+
+
+
+A series $\displaystyle \sum_{n=1}^{\infty}a_n$ converges **absolutely** if
+
+$\displaystyle \sum_{n=1}^{\infty}|a_n|$ converges.
+
+A series $\displaystyle \sum_{n=1}^{\infty}a_n$ converges **conditionally** if
+
+$\displaystyle \sum_{n=1}^{\infty}a_n$ converges, but $\displaystyle \sum_{n=1}^{\infty}|a_n|$ diverges.
+
+
+
+
+---
+
+## Absolute and Conditional Convergence Example 1
+
+
+
+Determine whether the series converges absolutely, converges conditionally, or diverges.
+
+$\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{3n+1}$
+
+. . . 
+
+
+Using the limit comparison test with the harmonic series,
+
+$\displaystyle \lim_{n\to\infty}\frac{1/(3n+1)}{1/n}=\frac{1}{3}.$
+
+Therefore, the series does not converge absolutely.
+
+---
+
+## Absolute and Conditional Convergence Example 1
+
+
+To test for conditional convergence, let $b_n=\frac{1}{3n+1}$.
+
+Since $\displaystyle \frac{1}{3(n+1)+1}<\frac{1}{3n+1}$
+
+and $\displaystyle \lim_{n\to\infty}\frac{1}{3n+1}=0,$
+
+the series converges by the alternating series test.
+
+Because the series converges but the series of absolute values diverges this series converges conditionally.
+
+
+---
+
+## Activity: Testing for Convergence or Divergence
+
+Determine whether each of the following series **converges absolutely, converges conditionally, or diverges**. Justify your answers using an appropriate convergence test.
+
+**(a)** $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{\sqrt{n}}$
+
+**(b)** $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n}{n^2+1}$
+
+**(c)** $\displaystyle \sum_{n=1}^{\infty}(-1)^n\frac{n}{n+2}$
+
+**(d)** $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}n}{n^2+4}$
+
+---
 
 ## The Koch Snowflake
 

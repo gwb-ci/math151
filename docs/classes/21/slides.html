@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <title>Math 151 - Calculus II – More Convergence Tests</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,13 +19,10 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -278,6 +275,71 @@
 <div class="fragment">
 <p>Compare with the geometric series <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\left(\frac{2}{3}\right)^n\)</span>.</p>
 </div>
+</section>
+<section id="alternating-series" class="slide level2">
+<h2>Alternating Series</h2>
+<p>An <strong>alternating series</strong> is a series whose terms alternate between positive and negative values.</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}(-1)^{n+1}b_n=b_1-b_2+b_3-b_4+\cdots\)</span></p>
+<p>or</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}(-1)^nb_n=-b_1+b_2-b_3+b_4-\cdots\)</span></p>
+<p>where <span class="math inline">\(b_n&gt;0\)</span> for all positive integers <span class="math inline">\(n\)</span>.</p>
+</section>
+<section id="alternating-series-example" class="slide level2">
+<h2>Alternating Series Example</h2>
+<p>The alternating harmonic series is</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=1-\frac12+\frac13-\frac14+\cdots\)</span></p>
+</section>
+<section id="alternating-series-test" class="slide level2">
+<h2>Alternating Series Test</h2>
+<p>An alternating series of the form</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}(-1)^{n+1}b_n\)</span> or <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}(-1)^nb_n\)</span></p>
+<p>converges if</p>
+<ol type="1">
+<li><span class="math inline">\(0&lt;b_{n+1}\leq b_n\)</span> for all <span class="math inline">\(n\geq N\)</span>, and</li>
+<li><span class="math inline">\(\displaystyle \lim_{n\to\infty}b_n=0\)</span>.</li>
+</ol>
+</section>
+<section id="alternating-series-example-1" class="slide level2">
+<h2>Alternating Series Example 1</h2>
+<p>Determine whether the following series converges or diverges.</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^2}\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(\displaystyle \lim_{n\to\infty}\frac{1}{n^2}=0,\)</span></p>
+<p>the series <strong>converges</strong> by the alternating series test.</p>
+</div>
+</section>
+<section id="absolute-and-conditional-convergence" class="slide level2">
+<h2>Absolute and Conditional Convergence</h2>
+<p>A series <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> converges <strong>absolutely</strong> if</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}|a_n|\)</span> converges.</p>
+<p>A series <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> converges <strong>conditionally</strong> if</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> converges, but <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}|a_n|\)</span> diverges.</p>
+</section>
+<section id="absolute-and-conditional-convergence-example-1" class="slide level2">
+<h2>Absolute and Conditional Convergence Example 1</h2>
+<p>Determine whether the series converges absolutely, converges conditionally, or diverges.</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{3n+1}\)</span></p>
+<div class="fragment">
+<p>Using the limit comparison test with the harmonic series,</p>
+<p><span class="math inline">\(\displaystyle \lim_{n\to\infty}\frac{1/(3n+1)}{1/n}=\frac{1}{3}.\)</span></p>
+<p>Therefore, the series does not converge absolutely.</p>
+</div>
+</section>
+<section id="absolute-and-conditional-convergence-example-1-1" class="slide level2">
+<h2>Absolute and Conditional Convergence Example 1</h2>
+<p>To test for conditional convergence, let <span class="math inline">\(b_n=\frac{1}{3n+1}\)</span>.</p>
+<p>Since <span class="math inline">\(\displaystyle \frac{1}{3(n+1)+1}&lt;\frac{1}{3n+1}\)</span></p>
+<p>and <span class="math inline">\(\displaystyle \lim_{n\to\infty}\frac{1}{3n+1}=0,\)</span></p>
+<p>the series converges by the alternating series test.</p>
+<p>Because the series converges but the series of absolute values diverges this series converges conditionally.</p>
+</section>
+<section id="activity-testing-for-convergence-or-divergence" class="slide level2">
+<h2>Activity: Testing for Convergence or Divergence</h2>
+<p>Determine whether each of the following series <strong>converges absolutely, converges conditionally, or diverges</strong>. Justify your answers using an appropriate convergence test.</p>
+<p><strong>(a)</strong> <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{\sqrt{n}}\)</span></p>
+<p><strong>(b)</strong> <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n}{n^2+1}\)</span></p>
+<p><strong>(c)</strong> <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}(-1)^n\frac{n}{n+2}\)</span></p>
+<p><strong>(d)</strong> <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}n}{n^2+4}\)</span></p>
 </section>
 <section id="the-koch-snowflake" class="slide level2">
 <h2>The Koch Snowflake</h2>
