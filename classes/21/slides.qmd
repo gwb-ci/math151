@@ -251,6 +251,8 @@ Compare with the geometric series $\displaystyle \sum_{n=1}^{\infty}\left(\frac{
 
 ## Alternating Series
 
+One more test:
+
 An **alternating series** is a series whose terms alternate between positive and negative values.
 
 

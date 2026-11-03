@@ -29,98 +29,14 @@ format:
 
 Class Session Goals:
 
-- Use the Alternating Series Test to determine convergence.
-- Distinguish between absolute and conditional convergence.
+
 - Use the Ratio Test to determine convergence or divergence.
 - Use the Root Test to determine convergence or divergence.
 - Recognize when a convergence test is inconclusive.
 
 ---
 
-## Alternating Series Test
 
-An **alternating series** is a series whose terms alternate between positive and negative values.
-
-$\displaystyle \sum_{n=1}^{\infty}(-1)^{n+1}b_n=b_1-b_2+b_3-b_4+\cdots$
-
-**Alternating Series Test (Theorem 5.13)**
-
-The series converges if:
-
-1. $0<b_{n+1}\le b_n$ for all $n\ge 1$.
-2. $\displaystyle \lim_{n\to\infty}b_n=0$.
-
-. . .
-
-Both conditions must be satisfied to apply the test.
-
-If the conditions are not satisfied, the test is inconclusive.
-
----
-
-## Alternating Series Test Example 1
-
-Determine whether the series converges or diverges.
-
-$\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^2}$
-
-. . .
-
-Let $b_n=\frac{1}{n^2}$.
-
-**Condition 1:**
-
-$\displaystyle b_{n+1}=\frac{1}{(n+1)^2}<\frac{1}{n^2}=b_n$
-
-**Condition 2:**
-
-$\displaystyle \lim_{n\to\infty}\frac{1}{n^2}=0$
-
-Since both conditions are satisfied, the series **converges** by the Alternating Series Test.
-
----
-
-## Alternating Series Test Example 2
-
-Determine whether the series converges or diverges.
-
-$\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}n}{n+1}$
-
-. . .
-
-Let $b_n=\frac{n}{n+1}$.
-
-Check the limit:
-
-$\displaystyle \lim_{n\to\infty}\frac{n}{n+1}=1\ne0$
-
-The Alternating Series Test does not apply.
-
-. . .
-
-Since $\frac{(-1)^{n+1}n}{n+1}$ does not approach $0$, the series **diverges** by the Divergence Test.
-
----
-
-## Absolute and Conditional Convergence
-
-A series $\displaystyle \sum_{n=1}^{\infty}a_n$ exhibits **absolute convergence** if
-
-$\displaystyle \sum_{n=1}^{\infty}|a_n|$ converges.
-
-A series exhibits **conditional convergence** if $\sum a_n$ converges but $\sum |a_n|$ diverges.
-
-. . .
-
-**Examples:**
-
-$\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}$ converges conditionally.
-
-$\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^2}$ converges absolutely.
-
-**Theorem 5.15:** If $\sum |a_n|$ converges, then $\sum a_n$ converges.
-
----
 
 ## Ratio Test
 
@@ -247,5 +163,564 @@ Using L'Hôpital's Rule,
 $\displaystyle \rho=\lim_{n\to\infty}\frac{1}{1/n}=\infty$
 
 Since $\rho=\infty$, the series **diverges**.
+
+---
+
+
+
+## Reveiw of Known Series
+
+**Geometric Series:**
+
+$\displaystyle \sum_{n=0}^{\infty}ar^n$
+
+- Converges if $|r|<1$.
+- Diverges if $|r|\geq 1$.
+- If $|r|<1$, the sum is $\displaystyle \frac{a}{1-r}$.
+
+**$p$-Series:**
+
+$\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^p}$
+
+- Converges if $p>1$.
+- Diverges if $p\leq 1$.
+
+**Harmonic Series:**
+
+$\displaystyle \sum_{n=1}^{\infty}\frac{1}{n}$ diverges.
+
+**Alternating Harmonic Series:**
+
+$\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}$ converges conditionally.
+
+---
+
+## Review of Tests
+
+| Test | When to Use |
+|---|---|
+| Divergence Test | Check if $\lim a_n\neq 0$. |
+| Integral Test | Positive, continuous, decreasing functions |
+| Comparison Test | Positive terms; compare with a known series |
+| Limit Comparison Test | Positive terms; similar to a known series |
+| Alternating Series Test | Alternating signs with $b_n\to 0$ and $b_n$ decreasing |
+| Ratio Test | Factorials or exponentials |
+| Root Test | Terms involving powers of $n$ |
+
+**Remember:**
+
+- The Ratio and Root Tests are inconclusive when $\rho=1$.
+- The Divergence Test cannot prove convergence.
+- Absolute convergence implies convergence.
+
+---
+
+## Strategies for Choosing a Test
+
+**Problem-Solving Strategy: Choosing a Convergence Test for a Series**
+
+1. **Is it a familiar series?**
+   - Geometric series, $p$-series, or harmonic series?
+
+2. **Is it an alternating series?**
+   - Try the Alternating Series Test.
+   - For absolute convergence, consider $\sum |a_n|$.
+
+3. **Is it similar to a $p$-series or geometric series?**
+   - Try the Comparison or Limit Comparison Test.
+
+4. **Does it contain factorials or powers?**
+   - Factorials or exponentials: Ratio Test.
+   - Terms of the form $a_n=(b_n)^n$: Root Test.
+
+5. **If none of these work:**
+   - Check the Divergence Test.
+   - Consider the Integral Test.
+
+---
+
+## Activity
+
+**Choosing a Convergence Test**
+
+For each series, determine which convergence test is the best to use and explain why. Then determine whether the series converges or diverges. For alternating series, determine whether convergence is absolute or conditional.
+
+- $\displaystyle \sum_{n=1}^{\infty}\frac{n^2+2n}{n^3+3n^2+1}$
+
+- $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}(3n+1)}{n!}$
+
+- $\displaystyle \sum_{n=1}^{\infty}\frac{e^n}{n^3}$
+
+- $\displaystyle \sum_{n=1}^{\infty}\frac{3^n}{(n+1)^n}$
+
+---
+
+
+
+
+## The Koch Snowflake
+
+Start with an equilateral triangle of side length $1$.
+
+At each step, replace the middle third of every segment with two sides of an outward equilateral triangle.
+
+<svg role="img" aria-labelledby="koch-stages-title koch-stages-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" viewBox="0 0 715.055692 197.203292" xmlns="http://www.w3.org/2000/svg" version="1.1"><title id="koch-stages-title">First four stages of the Koch snowflake</title><desc id="koch-stages-desc">Four figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-21T11:10:55.024373</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 197.203292 
+L 715.055692 197.203292 
+L 715.055692 -0 
+L 0 -0 
+z
+" style="fill: #fdf6e3"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 19.500474 142.031442 
+L 142.505217 142.031442 
+L 81.002846 35.50621 
+z
+" clip-path="url(#pba486ea7e1)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <!-- $F_0$ -->
+    <g style="fill: #586e75" transform="translate(71.027846 21.637031)">
+     <text>
+      <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan>
+      <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">0</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path d="M 203.850474 142.031442 
+L 244.852055 142.031442 
+L 265.352846 177.539853 
+L 285.853636 142.031442 
+L 326.855217 142.031442 
+L 306.354427 106.523032 
+L 326.855217 71.014621 
+L 285.853636 71.014621 
+L 265.352846 35.50621 
+L 244.852055 71.014621 
+L 203.850474 71.014621 
+L 224.351265 106.523032 
+z
+" clip-path="url(#p8bb7e60510)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_2">
+    <!-- $F_1$ -->
+    <g style="fill: #586e75" transform="translate(255.377846 21.637031)">
+     <text>
+      <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan>
+      <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">1</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_4">
+    <path d="M 388.200474 142.031442 
+L 401.867668 142.031442 
+L 408.701265 153.867579 
+L 415.534862 142.031442 
+L 429.202055 142.031442 
+L 436.035652 153.867579 
+L 429.202055 165.703716 
+L 442.869249 165.703716 
+L 449.702846 177.539853 
+L 456.536443 165.703716 
+L 470.203636 165.703716 
+L 463.37004 153.867579 
+L 470.203636 142.031442 
+L 483.87083 142.031442 
+L 490.704427 153.867579 
+L 497.538024 142.031442 
+L 511.205217 142.031442 
+L 504.371621 130.195305 
+L 511.205217 118.359168 
+L 497.538024 118.359168 
+L 490.704427 106.523032 
+L 497.538024 94.686895 
+L 511.205217 94.686895 
+L 504.371621 82.850758 
+L 511.205217 71.014621 
+L 497.538024 71.014621 
+L 490.704427 59.178484 
+L 483.87083 71.014621 
+L 470.203636 71.014621 
+L 463.37004 59.178484 
+L 470.203636 47.342347 
+L 456.536443 47.342347 
+L 449.702846 35.50621 
+L 442.869249 47.342347 
+L 429.202055 47.342347 
+L 436.035652 59.178484 
+L 429.202055 71.014621 
+L 415.534862 71.014621 
+L 408.701265 59.178484 
+L 401.867668 71.014621 
+L 388.200474 71.014621 
+L 395.034071 82.850758 
+L 388.200474 94.686895 
+L 401.867668 94.686895 
+L 408.701265 106.523032 
+L 401.867668 118.359168 
+L 388.200474 118.359168 
+L 395.034071 130.195305 
+z
+" clip-path="url(#p09be6ca37e)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_3">
+    <!-- $F_2$ -->
+    <g style="fill: #586e75" transform="translate(439.727846 21.637031)">
+     <text>
+      <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan>
+      <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">2</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_5">
+    <path d="M 572.550474 142.031442 
+L 577.106206 142.031442 
+L 579.384071 145.976821 
+L 581.661937 142.031442 
+L 586.217668 142.031442 
+L 588.495534 145.976821 
+L 586.217668 149.9222 
+L 590.773399 149.9222 
+L 593.051265 153.867579 
+L 595.32913 149.9222 
+L 599.884862 149.9222 
+L 597.606996 145.976821 
+L 599.884862 142.031442 
+L 604.440593 142.031442 
+L 606.718458 145.976821 
+L 608.996324 142.031442 
+L 613.552055 142.031442 
+L 615.829921 145.976821 
+L 613.552055 149.9222 
+L 618.107787 149.9222 
+L 620.385652 153.867579 
+L 618.107787 157.812958 
+L 613.552055 157.812958 
+L 615.829921 161.758337 
+L 613.552055 165.703716 
+L 618.107787 165.703716 
+L 620.385652 169.649095 
+L 622.663518 165.703716 
+L 627.219249 165.703716 
+L 629.497115 169.649095 
+L 627.219249 173.594474 
+L 631.77498 173.594474 
+L 634.052846 177.539853 
+L 636.330711 173.594474 
+L 640.886443 173.594474 
+L 638.608577 169.649095 
+L 640.886443 165.703716 
+L 645.442174 165.703716 
+L 647.72004 169.649095 
+L 649.997905 165.703716 
+L 654.553636 165.703716 
+L 652.275771 161.758337 
+L 654.553636 157.812958 
+L 649.997905 157.812958 
+L 647.72004 153.867579 
+L 649.997905 149.9222 
+L 654.553636 149.9222 
+L 652.275771 145.976821 
+L 654.553636 142.031442 
+L 659.109368 142.031442 
+L 661.387233 145.976821 
+L 663.665099 142.031442 
+L 668.22083 142.031442 
+L 670.498696 145.976821 
+L 668.22083 149.9222 
+L 672.776561 149.9222 
+L 675.054427 153.867579 
+L 677.332292 149.9222 
+L 681.888024 149.9222 
+L 679.610158 145.976821 
+L 681.888024 142.031442 
+L 686.443755 142.031442 
+L 688.721621 145.976821 
+L 690.999486 142.031442 
+L 695.555217 142.031442 
+L 693.277352 138.086063 
+L 695.555217 134.140684 
+L 690.999486 134.140684 
+L 688.721621 130.195305 
+L 690.999486 126.249926 
+L 695.555217 126.249926 
+L 693.277352 122.304547 
+L 695.555217 118.359168 
+L 690.999486 118.359168 
+L 688.721621 114.413789 
+L 686.443755 118.359168 
+L 681.888024 118.359168 
+L 679.610158 114.413789 
+L 681.888024 110.468411 
+L 677.332292 110.468411 
+L 675.054427 106.523032 
+L 677.332292 102.577653 
+L 681.888024 102.577653 
+L 679.610158 98.632274 
+L 681.888024 94.686895 
+L 686.443755 94.686895 
+L 688.721621 98.632274 
+L 690.999486 94.686895 
+L 695.555217 94.686895 
+L 693.277352 90.741516 
+L 695.555217 86.796137 
+L 690.999486 86.796137 
+L 688.721621 82.850758 
+L 690.999486 78.905379 
+L 695.555217 78.905379 
+L 693.277352 74.96 
+L 695.555217 71.014621 
+L 690.999486 71.014621 
+L 688.721621 67.069242 
+L 686.443755 71.014621 
+L 681.888024 71.014621 
+L 679.610158 67.069242 
+L 681.888024 63.123863 
+L 677.332292 63.123863 
+L 675.054427 59.178484 
+L 672.776561 63.123863 
+L 668.22083 63.123863 
+L 670.498696 67.069242 
+L 668.22083 71.014621 
+L 663.665099 71.014621 
+L 661.387233 67.069242 
+L 659.109368 71.014621 
+L 654.553636 71.014621 
+L 652.275771 67.069242 
+L 654.553636 63.123863 
+L 649.997905 63.123863 
+L 647.72004 59.178484 
+L 649.997905 55.233105 
+L 654.553636 55.233105 
+L 652.275771 51.287726 
+L 654.553636 47.342347 
+L 649.997905 47.342347 
+L 647.72004 43.396968 
+L 645.442174 47.342347 
+L 640.886443 47.342347 
+L 638.608577 43.396968 
+L 640.886443 39.451589 
+L 636.330711 39.451589 
+L 634.052846 35.50621 
+L 631.77498 39.451589 
+L 627.219249 39.451589 
+L 629.497115 43.396968 
+L 627.219249 47.342347 
+L 622.663518 47.342347 
+L 620.385652 43.396968 
+L 618.107787 47.342347 
+L 613.552055 47.342347 
+L 615.829921 51.287726 
+L 613.552055 55.233105 
+L 618.107787 55.233105 
+L 620.385652 59.178484 
+L 618.107787 63.123863 
+L 613.552055 63.123863 
+L 615.829921 67.069242 
+L 613.552055 71.014621 
+L 608.996324 71.014621 
+L 606.718458 67.069242 
+L 604.440593 71.014621 
+L 599.884862 71.014621 
+L 597.606996 67.069242 
+L 599.884862 63.123863 
+L 595.32913 63.123863 
+L 593.051265 59.178484 
+L 590.773399 63.123863 
+L 586.217668 63.123863 
+L 588.495534 67.069242 
+L 586.217668 71.014621 
+L 581.661937 71.014621 
+L 579.384071 67.069242 
+L 577.106206 71.014621 
+L 572.550474 71.014621 
+L 574.82834 74.96 
+L 572.550474 78.905379 
+L 577.106206 78.905379 
+L 579.384071 82.850758 
+L 577.106206 86.796137 
+L 572.550474 86.796137 
+L 574.82834 90.741516 
+L 572.550474 94.686895 
+L 577.106206 94.686895 
+L 579.384071 98.632274 
+L 581.661937 94.686895 
+L 586.217668 94.686895 
+L 588.495534 98.632274 
+L 586.217668 102.577653 
+L 590.773399 102.577653 
+L 593.051265 106.523032 
+L 590.773399 110.468411 
+L 586.217668 110.468411 
+L 588.495534 114.413789 
+L 586.217668 118.359168 
+L 581.661937 118.359168 
+L 579.384071 114.413789 
+L 577.106206 118.359168 
+L 572.550474 118.359168 
+L 574.82834 122.304547 
+L 572.550474 126.249926 
+L 577.106206 126.249926 
+L 579.384071 130.195305 
+L 577.106206 134.140684 
+L 572.550474 134.140684 
+L 574.82834 138.086063 
+z
+" clip-path="url(#p051ff4b7f7)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_4">
+    <!-- $F_3$ -->
+    <g style="fill: #586e75" transform="translate(624.077846 21.637031)">
+     <text>
+      <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan>
+      <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">3</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pba486ea7e1">
+   <rect x="7.2" y="27.637031" width="147.605692" height="162.366261"/>
+  </clipPath>
+  <clipPath id="p8bb7e60510">
+   <rect x="191.55" y="27.637031" width="147.605692" height="162.366261"/>
+  </clipPath>
+  <clipPath id="p09be6ca37e">
+   <rect x="375.9" y="27.637031" width="147.605692" height="162.366261"/>
+  </clipPath>
+  <clipPath id="p051ff4b7f7">
+   <rect x="560.25" y="27.637031" width="147.605692" height="162.366261"/>
+  </clipPath>
+ </defs>
+</svg>
+
+
+What happens to the perimeter and the enclosed area?
+
+---
+
+## Koch Snowflake: Perimeter
+
+At stage $n$, let $N_n$ count the sides and $l_n$ be the length of each side.
+
+Each step creates four segments, each one-third as long:
+
+$N_n=3\cdot4^n,\qquad l_n=\left(\frac{1}{3}\right)^n.$
+
+. . .
+
+$\displaystyle L_n=N_nl_n=3\left(\frac{4}{3}\right)^n.$
+
+Since $4/3>1$, the perimeter grows without bound.
+
+---
+
+## Koch Snowflake: Added Area
+
+Let $A_0=\sqrt{3}/4$ be the area of the original triangle.
+
+At step $n\ge1$:
+
+- There are $3\cdot4^{n-1}$ new triangles.
+- Each has side length $1/3^n$ and area $A_0/9^n$.
+
+. . .
+
+The added area is $\displaystyle \Delta A_n=\frac{A_0}{3}\left(\frac{4}{9}\right)^{n-1}$.
+
+The added areas form a geometric sequence with ratio $4/9$.
+
+---
+
+## Koch Snowflake: Total Area
+
+The limiting area is the original area plus all the added areas:
+
+$\displaystyle A=A_0+\frac{A_0}{3}\sum_{n=1}^{\infty}\left(\frac{4}{9}\right)^{n-1}.$
+
+. . .
+
+$\displaystyle A=A_0+\frac{A_0/3}{1-4/9}=\frac{8}{5}A_0=\frac{2\sqrt{3}}{5}.$
+
+The Koch snowflake has finite area and infinite perimeter.
+
+---
+
+
+
+## Error Estimate using Integral Test
+
+**Theorem 5.10: Remainder Estimate from the Integral Test**
+
+Suppose $\sum_{n=1}^{\infty}a_n$ is a convergent series with positive terms and $a_n=f(n)$, where $f$ is continuous, positive, and decreasing.
+
+Let $S_N$ be the $N$th partial sum and let $S$ be the sum of the series.
+
+The remainder is
+
+$R_N=S-S_N=\sum_{n=N+1}^{\infty}a_n$.
+
+Then
+
+$\displaystyle \int_{N+1}^{\infty}f(x)\,dx<R_N<\int_N^{\infty}f(x)\,dx$.
+
+Therefore, the error in approximating $S$ by $S_N$ is bounded above by
+
+$\displaystyle R_N<\int_N^{\infty}f(x)\,dx$.
+
+---
+
+## Error Estimate for Alternating Series
+
+**Theorem 5.14: Remainders in Alternating Series**
+
+Consider an alternating series
+
+$\displaystyle \sum_{n=1}^{\infty}(-1)^{n+1}b_n$
+
+that satisfies the hypotheses of the alternating series test.
+
+Let $S$ denote the sum of the series and $S_N$ denote the $N$th partial sum.
+
+Then the remainder $R_N=S-S_N$ satisfies
+
+$\displaystyle |R_N|\leq b_{N+1}$.
+
+**In other words:**
+
+The error in approximating an alternating series by its $N$th partial sum is at most the size of the next term.
+
+To guarantee an error of at most $\varepsilon$, choose $N$ such that
+
+$\displaystyle b_{N+1}\leq\varepsilon$.
 
 ---
