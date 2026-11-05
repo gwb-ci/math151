@@ -218,7 +218,7 @@ $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}$ converges conditionally.
 ---
 
 
-## Review of Tests 1 {.smaller}
+## Review of Tests 1
 
 | Test | When to Use |
 |---|---|
