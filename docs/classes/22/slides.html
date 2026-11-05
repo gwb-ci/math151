@@ -258,7 +258,7 @@
 <p><strong>Alternating Harmonic Series:</strong></p>
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}\)</span> converges conditionally.</p>
 </section>
-<section id="review-of-tests-1" class="slide level2">
+<section id="review-of-tests-1" class="slide level2 smaller">
 <h2>Review of Tests 1</h2>
 <table class="caption-top">
 <thead>
@@ -273,16 +273,16 @@
 <td>Check if <span class="math inline">\(\lim a_n\neq 0\)</span>.</td>
 </tr>
 <tr class="even">
+<td>Telescoping Series</td>
+<td>Terms cancel in partial sums</td>
+</tr>
+<tr class="odd">
 <td>Integral Test</td>
 <td>Positive, continuous, decreasing functions</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Comparison Test</td>
 <td>Positive terms; compare with a known series</td>
-</tr>
-<tr class="even">
-<td>Limit Comparison Test</td>
-<td>Positive terms; similar to a known series</td>
 </tr>
 </tbody>
 </table>
@@ -302,16 +302,20 @@
 </thead>
 <tbody>
 <tr class="odd">
+<td>Limit Comparison Test</td>
+<td>Positive terms; similar to a known series</td>
+</tr>
+<tr class="even">
 <td>Alternating Series Test</td>
 <td>Alternating signs with <span class="math inline">\(b_n\to 0\)</span> and <span class="math inline">\(b_n\)</span> decreasing</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Ratio Test</td>
 <td>Factorials or exponentials</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Root Test</td>
-<td>Terms involving powers of <span class="math inline">\(n\)</span></td>
+<td>Terms raised to the <span class="math inline">\(n\)</span>th power</td>
 </tr>
 </tbody>
 </table>
@@ -355,7 +359,7 @@
 <ol type="1">
 <li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{n^2+2n}{n^3+3n^2+1}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}(3n+1)}{n!}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{e^n}{n^3}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\left(\frac{2n}{3n+1}\right)^n\)</span></p></li>
 </ol>
 </section>
 <section id="activity-2" class="slide level2">
@@ -371,7 +375,7 @@
 <ol start="7" type="1">
 <li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{e^n}{n!}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n}{\sqrt n}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n n!}{n^n}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n(n+1)}\)</span></p></li>
 </ol>
 </section>
 <section id="activity-4" class="slide level2">
@@ -379,7 +383,7 @@
 <ol start="10" type="1">
 <li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}n^{-(n+1/n)}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}n}{n^2+1}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n n!}{3^n}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^{3/2}}\)</span></p></li>
 </ol>
 </section>
 <section id="answer-key-convergence-tests" class="slide level2 smaller">
@@ -405,13 +409,13 @@
 </tr>
 <tr class="odd">
 <td>3</td>
-<td>Ratio Test</td>
-<td>Diverges</td>
+<td>Root Test</td>
+<td>Converges</td>
 </tr>
 <tr class="even">
 <td>4</td>
 <td>Root Test</td>
-<td>Absolutely converges</td>
+<td>Converges</td>
 </tr>
 <tr class="odd">
 <td>5</td>
@@ -435,8 +439,8 @@
 </tr>
 <tr class="odd">
 <td>9</td>
-<td>Ratio Test</td>
-<td>Absolutely converges</td>
+<td>Telescoping Series</td>
+<td>Converges</td>
 </tr>
 <tr class="even">
 <td>10</td>
@@ -450,8 +454,8 @@
 </tr>
 <tr class="even">
 <td>12</td>
-<td>Ratio Test</td>
-<td>Diverges</td>
+<td><span class="math inline">\(p\)</span>-Series Test (<span class="math inline">\(p=3/2\)</span>)</td>
+<td>Converges</td>
 </tr>
 </tbody>
 </table>

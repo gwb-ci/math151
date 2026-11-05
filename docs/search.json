@@ -7314,7 +7314,7 @@
     "href": "classes/22/slides.html#review-of-tests-1",
     "title": "Even More Series Tests",
     "section": "Review of Tests 1",
-    "text": "Review of Tests 1\n\n\n\nTest\nWhen to Use\n\n\n\n\nDivergence Test\nCheck if \\(\\lim a_n\\neq 0\\).\n\n\nIntegral Test\nPositive, continuous, decreasing functions\n\n\nComparison Test\nPositive terms; compare with a known series\n\n\nLimit Comparison Test\nPositive terms; similar to a known series",
+    "text": "Review of Tests 1\n\n\n\nTest\nWhen to Use\n\n\n\n\nDivergence Test\nCheck if \\(\\lim a_n\\neq 0\\).\n\n\nTelescoping Series\nTerms cancel in partial sums\n\n\nIntegral Test\nPositive, continuous, decreasing functions\n\n\nComparison Test\nPositive terms; compare with a known series",
     "crumbs": [
       "Class Material",
       "Even More Series Tests"
@@ -7325,7 +7325,7 @@
     "href": "classes/22/slides.html#review-of-tests-2",
     "title": "Even More Series Tests",
     "section": "Review of Tests 2",
-    "text": "Review of Tests 2\n\n\n\n\n\n\n\nTest\nWhen to Use\n\n\n\n\nAlternating Series Test\nAlternating signs with \\(b_n\\to 0\\) and \\(b_n\\) decreasing\n\n\nRatio Test\nFactorials or exponentials\n\n\nRoot Test\nTerms involving powers of \\(n\\)",
+    "text": "Review of Tests 2\n\n\n\n\n\n\n\nTest\nWhen to Use\n\n\n\n\nLimit Comparison Test\nPositive terms; similar to a known series\n\n\nAlternating Series Test\nAlternating signs with \\(b_n\\to 0\\) and \\(b_n\\) decreasing\n\n\nRatio Test\nFactorials or exponentials\n\n\nRoot Test\nTerms raised to the \\(n\\)th power",
     "crumbs": [
       "Class Material",
       "Even More Series Tests"
@@ -7358,7 +7358,7 @@
     "href": "classes/22/slides.html#activity-1",
     "title": "Even More Series Tests",
     "section": "Activity 1",
-    "text": "Activity 1\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n^2+2n}{n^3+3n^2+1}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}(3n+1)}{n!}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{e^n}{n^3}\\)",
+    "text": "Activity 1\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{n^2+2n}{n^3+3n^2+1}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}(3n+1)}{n!}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\left(\\frac{2n}{3n+1}\\right)^n\\)",
     "crumbs": [
       "Class Material",
       "Even More Series Tests"
@@ -7380,7 +7380,7 @@
     "href": "classes/22/slides.html#activity-3",
     "title": "Even More Series Tests",
     "section": "Activity 3",
-    "text": "Activity 3\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{e^n}{n!}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^n}{\\sqrt n}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^n n!}{n^n}\\)",
+    "text": "Activity 3\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{e^n}{n!}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^n}{\\sqrt n}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)}\\)",
     "crumbs": [
       "Class Material",
       "Even More Series Tests"
@@ -7391,7 +7391,7 @@
     "href": "classes/22/slides.html#activity-4",
     "title": "Even More Series Tests",
     "section": "Activity 4",
-    "text": "Activity 4\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}n^{-(n+1/n)}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}n}{n^2+1}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^n n!}{3^n}\\)",
+    "text": "Activity 4\n\n\\(\\displaystyle \\sum_{n=1}^{\\infty}n^{-(n+1/n)}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}n}{n^2+1}\\)\n\\(\\displaystyle \\sum_{n=1}^{\\infty}\\frac{1}{n^{3/2}}\\)",
     "crumbs": [
       "Class Material",
       "Even More Series Tests"
@@ -7402,7 +7402,7 @@
     "href": "classes/22/slides.html#answer-key-convergence-tests",
     "title": "Even More Series Tests",
     "section": "Answer Key: Convergence Tests",
-    "text": "Answer Key: Convergence Tests\n\n\n\n#\nRecommended Test\nConclusion\n\n\n\n\n1\nLimit Comparison (\\(1/n\\))\nDiverges\n\n\n2\nRatio Test\nAbsolutely converges\n\n\n3\nRatio Test\nDiverges\n\n\n4\nRoot Test\nAbsolutely converges\n\n\n5\nDirect Comparison (\\(1/n^2\\))\nConverges\n\n\n6\nRatio Test\nDiverges\n\n\n7\nRatio Test\nConverges\n\n\n8\nAlternating Series Test\nConditionally converges\n\n\n9\nRatio Test\nAbsolutely converges\n\n\n10\nRoot Test\nConverges\n\n\n11\nAlternating Series Test\nConditionally converges\n\n\n12\nRatio Test\nDiverges",
+    "text": "Answer Key: Convergence Tests\n\n\n\n#\nRecommended Test\nConclusion\n\n\n\n\n1\nLimit Comparison (\\(1/n\\))\nDiverges\n\n\n2\nRatio Test\nAbsolutely converges\n\n\n3\nRoot Test\nConverges\n\n\n4\nRoot Test\nConverges\n\n\n5\nDirect Comparison (\\(1/n^2\\))\nConverges\n\n\n6\nRatio Test\nDiverges\n\n\n7\nRatio Test\nConverges\n\n\n8\nAlternating Series Test\nConditionally converges\n\n\n9\nTelescoping Series\nConverges\n\n\n10\nRoot Test\nConverges\n\n\n11\nAlternating Series Test\nConditionally converges\n\n\n12\n\\(p\\)-Series Test (\\(p=3/2\\))\nConverges",
     "crumbs": [
       "Class Material",
       "Even More Series Tests"

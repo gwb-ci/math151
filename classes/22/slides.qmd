@@ -217,25 +217,30 @@ $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}$ converges conditionally.
 
 ---
 
-## Review of Tests 1
+
+## Review of Tests 1 {.smaller}
 
 | Test | When to Use |
 |---|---|
 | Divergence Test | Check if $\lim a_n\neq 0$. |
+| Telescoping Series | Terms cancel in partial sums |
 | Integral Test | Positive, continuous, decreasing functions |
 | Comparison Test | Positive terms; compare with a known series |
-| Limit Comparison Test | Positive terms; similar to a known series |
+
+
+---
 
 ## Review of Tests 2
 
 | Test | When to Use |
 |---|---|
+| Limit Comparison Test | Positive terms; similar to a known series |
 | Alternating Series Test | Alternating signs with $b_n\to 0$ and $b_n$ decreasing |
 | Ratio Test | Factorials or exponentials |
-| Root Test | Terms involving powers of $n$ |
-
+| Root Test | Terms raised to the $n$th power |
 
 ---
+
 
 ## Strategies for Choosing a Test 1
 
@@ -264,13 +269,14 @@ $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}$ converges conditionally.
 ---
 
 
+
 ## Activity 1
 
 1. $\displaystyle \sum_{n=1}^{\infty}\frac{n^2+2n}{n^3+3n^2+1}$
 
 2. $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}(3n+1)}{n!}$
 
-3. $\displaystyle \sum_{n=1}^{\infty}\frac{e^n}{n^3}$
+3. $\displaystyle \sum_{n=1}^{\infty}\left(\frac{2n}{3n+1}\right)^n$
 
 ---
 
@@ -290,7 +296,7 @@ $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}$ converges conditionally.
 
 8. $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n}{\sqrt n}$
 
-9. $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n n!}{n^n}$
+9. $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n(n+1)}$
 
 ---
 
@@ -300,7 +306,7 @@ $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}$ converges conditionally.
 
 11. $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}n}{n^2+1}$
 
-12. $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n n!}{3^n}$
+12. $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^{3/2}}$
 
 ---
 
@@ -310,13 +316,13 @@ $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}$ converges conditionally.
 |---|---|---|
 | 1 | Limit Comparison ($1/n$) | Diverges |
 | 2 | Ratio Test | Absolutely converges |
-| 3 | Ratio Test | Diverges |
-| 4 | Root Test | Absolutely converges |
+| 3 | Root Test | Converges |
+| 4 | Root Test | Converges |
 | 5 | Direct Comparison ($1/n^2$) | Converges |
 | 6 | Ratio Test | Diverges |
 | 7 | Ratio Test | Converges |
 | 8 | Alternating Series Test | Conditionally converges |
-| 9 | Ratio Test | Absolutely converges |
+| 9 | Telescoping Series | Converges |
 | 10 | Root Test | Converges |
 | 11 | Alternating Series Test | Conditionally converges |
-| 12 | Ratio Test | Diverges |
+| 12 | $p$-Series Test ($p=3/2$) | Converges |
