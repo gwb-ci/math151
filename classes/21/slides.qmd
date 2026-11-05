@@ -29,10 +29,10 @@ format:
 ## Series and Tests
 
 
-- Use the Integral Test to estimate the error in a partial sum.
 - Apply the Comparison Test to determine convergence or divergence.
 - Apply the Limit Comparison Test to determine convergence or divergence.
-- Choose an appropriate test for a given infinite series.
+- Use the Alternating Series Test to determine convergence.
+- Distinguish between absolute and conditional convergence.
 
 ---
 

@@ -144,9 +144,37 @@
 <li>Recognize when a convergence test is inconclusive.</li>
 </ul>
 </section>
+<section id="from-sequences-to-series" class="slide level2">
+<h2>From Sequences to Series</h2>
+<p>A <strong>sequence</strong> is an ordered list of terms:</p>
+<p><span class="math inline">\(a_1,a_2,a_3,\ldots\)</span></p>
+<p>An <strong>infinite series</strong> adds the terms:</p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n=a_1+a_2+a_3+\cdots\)</span></p>
+<p>What does it mean to add infinitely many numbers?</p>
+</section>
+<section id="partial-sums" class="slide level2">
+<h2>Partial Sums</h2>
+<p>The <span class="math inline">\(k\)</span>th <strong>partial sum</strong> adds the first <span class="math inline">\(k\)</span> terms:</p>
+<p><span class="math inline">\(\displaystyle S_k=\sum_{n=1}^{k}a_n\)</span></p>
+<p><span class="math inline">\(S_1=a_1\)</span></p>
+<p><span class="math inline">\(S_2=a_1+a_2\)</span></p>
+<p><span class="math inline">\(S_3=a_1+a_2+a_3\)</span></p>
+</section>
+<section id="convergence-and-divergence-of-parital-sums" class="slide level2">
+<h2>Convergence and Divergence of Parital Sums</h2>
+<p>The partial sums form a new sequence: <span class="math inline">\(\{S_k\}\)</span>.</p>
+<p><span class="math display">\[\lim_{k\to\infty}S_k =\sum_{n=1}^{\infty}a_n\]</span></p>
+<p>If <span class="math inline">\(\lim_{k\to\infty}S_k=L\)</span> exists, the series <strong>converges</strong> to <span class="math inline">\(L\)</span>. Otherwise, the series <strong>diverges</strong>.</p>
+</section>
+<section id="ratio-and-root-tests" class="slide level2">
+<h2>Ratio and Root Tests</h2>
+<ul>
+<li><p><strong>Ratio Test</strong>: Useful for series with factorials or exponentials.</p></li>
+<li><p><strong>Root Test</strong>: Useful for series with terms raised to the <span class="math inline">\(n\)</span>th power.</p></li>
+</ul>
+</section>
 <section id="ratio-test" class="slide level2">
 <h2>Ratio Test</h2>
-<p><strong>Ratio Test (Theorem 5.16)</strong></p>
 <p>For a series <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> with nonzero terms, let</p>
 <p><span class="math inline">\(\displaystyle \rho=\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|\)</span>.</p>
 <p>Then:</p>
@@ -155,18 +183,12 @@
 <li>If <span class="math inline">\(\rho&gt;1\)</span> or <span class="math inline">\(\rho=\infty\)</span>, the series <strong>diverges</strong>.</li>
 <li>If <span class="math inline">\(\rho=1\)</span>, the test is <strong>inconclusive</strong>.</li>
 </ul>
-<div class="fragment">
-<p>The Ratio Test is particularly useful for series involving <strong>factorials</strong> or <strong>exponentials</strong>.</p>
-</div>
 </section>
 <section id="ratio-test-example-1" class="slide level2">
 <h2>Ratio Test Example 1</h2>
 <p>Use the Ratio Test to determine whether the series converges or diverges.</p>
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{2^n}{n!}\)</span></p>
 <div class="fragment">
-<p>Let <span class="math inline">\(a_n=\frac{2^n}{n!}\)</span>.</p>
-<p><span class="math inline">\(\displaystyle \rho=\lim_{n\to\infty}\left|\frac{2^{n+1}/(n+1)!}{2^n/n!}\right|\)</span></p>
-<p>Simplify using <span class="math inline">\((n+1)!=(n+1)n!\)</span>.</p>
 <p><span class="math inline">\(\displaystyle \rho=\lim_{n\to\infty}\frac{2}{n+1}=0\)</span></p>
 <p>Since <span class="math inline">\(\rho=0&lt;1\)</span>, the series <strong>converges</strong>.</p>
 </div>
@@ -176,9 +198,6 @@
 <p>Use the Ratio Test to determine whether the series converges or diverges.</p>
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{n^n}{n!}\)</span></p>
 <div class="fragment">
-<p>Let <span class="math inline">\(a_n=\frac{n^n}{n!}\)</span>.</p>
-<p><span class="math inline">\(\displaystyle \rho=\lim_{n\to\infty}\left|\frac{(n+1)^{n+1}/(n+1)!}{n^n/n!}\right|\)</span></p>
-<p>Simplifying,</p>
 <p><span class="math inline">\(\displaystyle \rho=\lim_{n\to\infty}\left(\frac{n+1}{n}\right)^n\)</span></p>
 <p><span class="math inline">\(\displaystyle =\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n=e\)</span></p>
 <p>Since <span class="math inline">\(\rho=e&gt;1\)</span>, the series <strong>diverges</strong>.</p>
@@ -186,7 +205,6 @@
 </section>
 <section id="root-test" class="slide level2">
 <h2>Root Test</h2>
-<p><strong>Root Test (Theorem 5.17)</strong></p>
 <p>For a series <span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span>, let</p>
 <p><span class="math inline">\(\displaystyle \rho=\lim_{n\to\infty}\sqrt[n]{|a_n|}\)</span>.</p>
 <p>Then:</p>
@@ -195,20 +213,12 @@
 <li>If <span class="math inline">\(\rho&gt;1\)</span> or <span class="math inline">\(\rho=\infty\)</span>, the series <strong>diverges</strong>.</li>
 <li>If <span class="math inline">\(\rho=1\)</span>, the test is <strong>inconclusive</strong>.</li>
 </ul>
-<div class="fragment">
-<p>The Root Test is especially useful when the terms contain an expression raised to the <span class="math inline">\(n\)</span>th power.</p>
-<p>For <span class="math inline">\(|a_n|=b_n^n\)</span>, we have <span class="math inline">\(\sqrt[n]{|a_n|}=b_n\)</span>.</p>
-</div>
 </section>
 <section id="root-test-example-1" class="slide level2">
 <h2>Root Test Example 1</h2>
 <p>Use the Root Test to determine whether the series converges or diverges.</p>
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\left(\frac{n^2+3n}{4n^2+5}\right)^n\)</span></p>
 <div class="fragment">
-<p>Apply the Root Test:</p>
-<p><span class="math inline">\(\displaystyle \rho=\lim_{n\to\infty}\sqrt[n]{\left|\left(\frac{n^2+3n}{4n^2+5}\right)^n\right|}\)</span></p>
-<p><span class="math inline">\(\displaystyle =\lim_{n\to\infty}\frac{n^2+3n}{4n^2+5}\)</span></p>
-<p>Divide numerator and denominator by <span class="math inline">\(n^2\)</span>:</p>
 <p><span class="math inline">\(\displaystyle \rho=\lim_{n\to\infty}\frac{1+3/n}{4+5/n^2}=\frac14\)</span></p>
 <p>Since <span class="math inline">\(\rho=\frac14&lt;1\)</span>, the series <strong>converges absolutely</strong>.</p>
 </div>
@@ -218,41 +228,39 @@
 <p>Use the Root Test to determine whether the series converges or diverges.</p>
 <p><span class="math inline">\(\displaystyle \sum_{n=2}^{\infty}\left(\frac{n}{\ln(n)}\right)^n\)</span></p>
 <div class="fragment">
-<p>Apply the Root Test:</p>
-<p><span class="math inline">\(\displaystyle \rho=\lim_{n\to\infty}\sqrt[n]{\left|\left(\frac{n}{\ln(n)}\right)^n\right|}\)</span></p>
-<p><span class="math inline">\(\displaystyle =\lim_{n\to\infty}\frac{n}{\ln(n)}\)</span></p>
-<p>Using L’Hôpital’s Rule,</p>
 <p><span class="math inline">\(\displaystyle \rho=\lim_{n\to\infty}\frac{1}{1/n}=\infty\)</span></p>
 <p>Since <span class="math inline">\(\rho=\infty\)</span>, the series <strong>diverges</strong>.</p>
 </div>
 </section>
-<section id="reveiw-of-known-series" class="slide level2">
-<h2>Reveiw of Known Series</h2>
+<section id="known-series-1" class="slide level2">
+<h2>Known Series 1</h2>
 <p><strong>Geometric Series:</strong></p>
-<p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}ar^n\)</span></p>
+<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}ar^{n-1}\)</span></p>
 <ul>
 <li>Converges if <span class="math inline">\(|r|&lt;1\)</span>.</li>
 <li>Diverges if <span class="math inline">\(|r|\geq 1\)</span>.</li>
 <li>If <span class="math inline">\(|r|&lt;1\)</span>, the sum is <span class="math inline">\(\displaystyle \frac{a}{1-r}\)</span>.</li>
 </ul>
+</section>
+<section id="known-series-2" class="slide level2">
+<h2>Known Series 2</h2>
 <p><strong><span class="math inline">\(p\)</span>-Series:</strong></p>
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^p}\)</span></p>
 <ul>
 <li>Converges if <span class="math inline">\(p&gt;1\)</span>.</li>
 <li>Diverges if <span class="math inline">\(p\leq 1\)</span>.</li>
 </ul>
+</section>
+<section id="known-series-3" class="slide level2">
+<h2>Known Series 3</h2>
 <p><strong>Harmonic Series:</strong></p>
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n}\)</span> diverges.</p>
 <p><strong>Alternating Harmonic Series:</strong></p>
 <p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}\)</span> converges conditionally.</p>
 </section>
-<section id="review-of-tests" class="slide level2">
-<h2>Review of Tests</h2>
+<section id="review-of-tests-1" class="slide level2">
+<h2>Review of Tests 1</h2>
 <table class="caption-top">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Test</th>
@@ -276,6 +284,23 @@
 <td>Limit Comparison Test</td>
 <td>Positive terms; similar to a known series</td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="review-of-tests-2" class="slide level2">
+<h2>Review of Tests 2</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
 <td>Alternating Series Test</td>
 <td>Alternating signs with <span class="math inline">\(b_n\to 0\)</span> and <span class="math inline">\(b_n\)</span> decreasing</td>
@@ -290,15 +315,9 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Remember:</strong></p>
-<ul>
-<li>The Ratio and Root Tests are inconclusive when <span class="math inline">\(\rho=1\)</span>.</li>
-<li>The Divergence Test cannot prove convergence.</li>
-<li>Absolute convergence implies convergence.</li>
-</ul>
 </section>
-<section id="strategies-for-choosing-a-test" class="slide level2">
-<h2>Strategies for Choosing a Test</h2>
+<section id="strategies-for-choosing-a-test-1" class="slide level2">
+<h2>Strategies for Choosing a Test 1</h2>
 <p><strong>Problem-Solving Strategy: Choosing a Convergence Test for a Series</strong></p>
 <ol type="1">
 <li><strong>Is it a familiar series?</strong>
@@ -314,6 +333,11 @@
 <ul>
 <li>Try the Comparison or Limit Comparison Test.</li>
 </ul></li>
+</ol>
+</section>
+<section id="strategies-for-choosing-a-test-2" class="slide level2">
+<h2>Strategies for Choosing a Test 2</h2>
+<ol start="4" type="1">
 <li><strong>Does it contain factorials or powers?</strong>
 <ul>
 <li>Factorials or exponentials: Ratio Test.</li>
@@ -326,353 +350,111 @@
 </ul></li>
 </ol>
 </section>
-<section id="activity" class="slide level2">
-<h2>Activity</h2>
-<p><strong>Choosing a Convergence Test</strong></p>
-<p>For each series, determine which convergence test is the best to use and explain why. Then determine whether the series converges or diverges. For alternating series, determine whether convergence is absolute or conditional.</p>
-<ul>
+<section id="activity-1" class="slide level2">
+<h2>Activity 1</h2>
+<ol type="1">
 <li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{n^2+2n}{n^3+3n^2+1}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}(3n+1)}{n!}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{e^n}{n^3}\)</span></p></li>
+</ol>
+</section>
+<section id="activity-2" class="slide level2">
+<h2>Activity 2</h2>
+<ol start="4" type="1">
 <li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{3^n}{(n+1)^n}\)</span></p></li>
-</ul>
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^2+5n+4}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{2^n}{n^4}\)</span></p></li>
+</ol>
 </section>
-<section id="the-koch-snowflake" class="slide level2">
-<h2>The Koch Snowflake</h2>
-<p>Start with an equilateral triangle of side length <span class="math inline">\(1\)</span>.</p>
-<p>At each step, replace the middle third of every segment with two sides of an outward equilateral triangle.</p>
-<svg role="img" aria-labelledby="koch-stages-title koch-stages-desc" xlink="http://www.w3.org/1999/xlink" width="100%" viewbox="0 0 715.055692 197.203292" xmlns="http://www.w3.org/2000/svg" version="1.1">
-<title id="koch-stages-title">
-First four stages of the Koch snowflake
-</title>
-<desc id="koch-stages-desc">Four figures labeled F zero through F three. Each stage replaces the middle third of every side by two sides of an outward equilateral triangle. All four figures use the same scale.</desc> <metadata> <rdf:rdf xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <cc:work> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type> <dc:date>2026-10-21T11:10:55.024373</dc:date> <dc:format>image/svg+xml</dc:format> <dc:creator> <cc:agent> <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title> </cc:agent> </dc:creator> </cc:work> </rdf:rdf> </metadata> <defs> <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style> </defs> <g id="figure_1"> <g id="patch_1"> <path d="M 0 197.203292 
-L 715.055692 197.203292 
-L 715.055692 -0 
-L 0 -0 
-z
-" style="fill: #fdf6e3"></path> </g> <g id="axes_1"> <g id="patch_2"> <path d="M 19.500474 142.031442 
-L 142.505217 142.031442 
-L 81.002846 35.50621 
-z
-" clip-path="url(#pba486ea7e1)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"></path> </g> <g id="text_1"> <!-- $F_0$ --> <g style="fill: #586e75" transform="translate(71.027846 21.637031)"> <text> <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan> <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">0</tspan> </text> </g> </g> </g> <g id="axes_2"> <g id="patch_3"> <path d="M 203.850474 142.031442 
-L 244.852055 142.031442 
-L 265.352846 177.539853 
-L 285.853636 142.031442 
-L 326.855217 142.031442 
-L 306.354427 106.523032 
-L 326.855217 71.014621 
-L 285.853636 71.014621 
-L 265.352846 35.50621 
-L 244.852055 71.014621 
-L 203.850474 71.014621 
-L 224.351265 106.523032 
-z
-" clip-path="url(#p8bb7e60510)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"></path> </g> <g id="text_2"> <!-- $F_1$ --> <g style="fill: #586e75" transform="translate(255.377846 21.637031)"> <text> <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan> <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">1</tspan> </text> </g> </g> </g> <g id="axes_3"> <g id="patch_4"> <path d="M 388.200474 142.031442 
-L 401.867668 142.031442 
-L 408.701265 153.867579 
-L 415.534862 142.031442 
-L 429.202055 142.031442 
-L 436.035652 153.867579 
-L 429.202055 165.703716 
-L 442.869249 165.703716 
-L 449.702846 177.539853 
-L 456.536443 165.703716 
-L 470.203636 165.703716 
-L 463.37004 153.867579 
-L 470.203636 142.031442 
-L 483.87083 142.031442 
-L 490.704427 153.867579 
-L 497.538024 142.031442 
-L 511.205217 142.031442 
-L 504.371621 130.195305 
-L 511.205217 118.359168 
-L 497.538024 118.359168 
-L 490.704427 106.523032 
-L 497.538024 94.686895 
-L 511.205217 94.686895 
-L 504.371621 82.850758 
-L 511.205217 71.014621 
-L 497.538024 71.014621 
-L 490.704427 59.178484 
-L 483.87083 71.014621 
-L 470.203636 71.014621 
-L 463.37004 59.178484 
-L 470.203636 47.342347 
-L 456.536443 47.342347 
-L 449.702846 35.50621 
-L 442.869249 47.342347 
-L 429.202055 47.342347 
-L 436.035652 59.178484 
-L 429.202055 71.014621 
-L 415.534862 71.014621 
-L 408.701265 59.178484 
-L 401.867668 71.014621 
-L 388.200474 71.014621 
-L 395.034071 82.850758 
-L 388.200474 94.686895 
-L 401.867668 94.686895 
-L 408.701265 106.523032 
-L 401.867668 118.359168 
-L 388.200474 118.359168 
-L 395.034071 130.195305 
-z
-" clip-path="url(#p09be6ca37e)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"></path> </g> <g id="text_3"> <!-- $F_2$ --> <g style="fill: #586e75" transform="translate(439.727846 21.637031)"> <text> <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan> <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">2</tspan> </text> </g> </g> </g> <g id="axes_4"> <g id="patch_5"> <path d="M 572.550474 142.031442 
-L 577.106206 142.031442 
-L 579.384071 145.976821 
-L 581.661937 142.031442 
-L 586.217668 142.031442 
-L 588.495534 145.976821 
-L 586.217668 149.9222 
-L 590.773399 149.9222 
-L 593.051265 153.867579 
-L 595.32913 149.9222 
-L 599.884862 149.9222 
-L 597.606996 145.976821 
-L 599.884862 142.031442 
-L 604.440593 142.031442 
-L 606.718458 145.976821 
-L 608.996324 142.031442 
-L 613.552055 142.031442 
-L 615.829921 145.976821 
-L 613.552055 149.9222 
-L 618.107787 149.9222 
-L 620.385652 153.867579 
-L 618.107787 157.812958 
-L 613.552055 157.812958 
-L 615.829921 161.758337 
-L 613.552055 165.703716 
-L 618.107787 165.703716 
-L 620.385652 169.649095 
-L 622.663518 165.703716 
-L 627.219249 165.703716 
-L 629.497115 169.649095 
-L 627.219249 173.594474 
-L 631.77498 173.594474 
-L 634.052846 177.539853 
-L 636.330711 173.594474 
-L 640.886443 173.594474 
-L 638.608577 169.649095 
-L 640.886443 165.703716 
-L 645.442174 165.703716 
-L 647.72004 169.649095 
-L 649.997905 165.703716 
-L 654.553636 165.703716 
-L 652.275771 161.758337 
-L 654.553636 157.812958 
-L 649.997905 157.812958 
-L 647.72004 153.867579 
-L 649.997905 149.9222 
-L 654.553636 149.9222 
-L 652.275771 145.976821 
-L 654.553636 142.031442 
-L 659.109368 142.031442 
-L 661.387233 145.976821 
-L 663.665099 142.031442 
-L 668.22083 142.031442 
-L 670.498696 145.976821 
-L 668.22083 149.9222 
-L 672.776561 149.9222 
-L 675.054427 153.867579 
-L 677.332292 149.9222 
-L 681.888024 149.9222 
-L 679.610158 145.976821 
-L 681.888024 142.031442 
-L 686.443755 142.031442 
-L 688.721621 145.976821 
-L 690.999486 142.031442 
-L 695.555217 142.031442 
-L 693.277352 138.086063 
-L 695.555217 134.140684 
-L 690.999486 134.140684 
-L 688.721621 130.195305 
-L 690.999486 126.249926 
-L 695.555217 126.249926 
-L 693.277352 122.304547 
-L 695.555217 118.359168 
-L 690.999486 118.359168 
-L 688.721621 114.413789 
-L 686.443755 118.359168 
-L 681.888024 118.359168 
-L 679.610158 114.413789 
-L 681.888024 110.468411 
-L 677.332292 110.468411 
-L 675.054427 106.523032 
-L 677.332292 102.577653 
-L 681.888024 102.577653 
-L 679.610158 98.632274 
-L 681.888024 94.686895 
-L 686.443755 94.686895 
-L 688.721621 98.632274 
-L 690.999486 94.686895 
-L 695.555217 94.686895 
-L 693.277352 90.741516 
-L 695.555217 86.796137 
-L 690.999486 86.796137 
-L 688.721621 82.850758 
-L 690.999486 78.905379 
-L 695.555217 78.905379 
-L 693.277352 74.96 
-L 695.555217 71.014621 
-L 690.999486 71.014621 
-L 688.721621 67.069242 
-L 686.443755 71.014621 
-L 681.888024 71.014621 
-L 679.610158 67.069242 
-L 681.888024 63.123863 
-L 677.332292 63.123863 
-L 675.054427 59.178484 
-L 672.776561 63.123863 
-L 668.22083 63.123863 
-L 670.498696 67.069242 
-L 668.22083 71.014621 
-L 663.665099 71.014621 
-L 661.387233 67.069242 
-L 659.109368 71.014621 
-L 654.553636 71.014621 
-L 652.275771 67.069242 
-L 654.553636 63.123863 
-L 649.997905 63.123863 
-L 647.72004 59.178484 
-L 649.997905 55.233105 
-L 654.553636 55.233105 
-L 652.275771 51.287726 
-L 654.553636 47.342347 
-L 649.997905 47.342347 
-L 647.72004 43.396968 
-L 645.442174 47.342347 
-L 640.886443 47.342347 
-L 638.608577 43.396968 
-L 640.886443 39.451589 
-L 636.330711 39.451589 
-L 634.052846 35.50621 
-L 631.77498 39.451589 
-L 627.219249 39.451589 
-L 629.497115 43.396968 
-L 627.219249 47.342347 
-L 622.663518 47.342347 
-L 620.385652 43.396968 
-L 618.107787 47.342347 
-L 613.552055 47.342347 
-L 615.829921 51.287726 
-L 613.552055 55.233105 
-L 618.107787 55.233105 
-L 620.385652 59.178484 
-L 618.107787 63.123863 
-L 613.552055 63.123863 
-L 615.829921 67.069242 
-L 613.552055 71.014621 
-L 608.996324 71.014621 
-L 606.718458 67.069242 
-L 604.440593 71.014621 
-L 599.884862 71.014621 
-L 597.606996 67.069242 
-L 599.884862 63.123863 
-L 595.32913 63.123863 
-L 593.051265 59.178484 
-L 590.773399 63.123863 
-L 586.217668 63.123863 
-L 588.495534 67.069242 
-L 586.217668 71.014621 
-L 581.661937 71.014621 
-L 579.384071 67.069242 
-L 577.106206 71.014621 
-L 572.550474 71.014621 
-L 574.82834 74.96 
-L 572.550474 78.905379 
-L 577.106206 78.905379 
-L 579.384071 82.850758 
-L 577.106206 86.796137 
-L 572.550474 86.796137 
-L 574.82834 90.741516 
-L 572.550474 94.686895 
-L 577.106206 94.686895 
-L 579.384071 98.632274 
-L 581.661937 94.686895 
-L 586.217668 94.686895 
-L 588.495534 98.632274 
-L 586.217668 102.577653 
-L 590.773399 102.577653 
-L 593.051265 106.523032 
-L 590.773399 110.468411 
-L 586.217668 110.468411 
-L 588.495534 114.413789 
-L 586.217668 118.359168 
-L 581.661937 118.359168 
-L 579.384071 114.413789 
-L 577.106206 118.359168 
-L 572.550474 118.359168 
-L 574.82834 122.304547 
-L 572.550474 126.249926 
-L 577.106206 126.249926 
-L 579.384071 130.195305 
-L 577.106206 134.140684 
-L 572.550474 134.140684 
-L 574.82834 138.086063 
-z
-" clip-path="url(#p051ff4b7f7)" style="fill: #c6dfe5; stroke: #268bd2; stroke-width: 1.3; stroke-linejoin: miter"></path> </g> <g id="text_4"> <!-- $F_3$ --> <g style="fill: #586e75" transform="translate(624.077846 21.637031)"> <text> <tspan x="0" y="-0.15625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #586e75">F</tspan> <tspan x="10.928711" y="2.960938" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #586e75">3</tspan> </text> </g> </g> </g> </g> <defs> <clippath id="pba486ea7e1"> <rect x="7.2" y="27.637031" width="147.605692" height="162.366261"></rect> </clippath> <clippath id="p8bb7e60510"> <rect x="191.55" y="27.637031" width="147.605692" height="162.366261"></rect> </clippath> <clippath id="p09be6ca37e"> <rect x="375.9" y="27.637031" width="147.605692" height="162.366261"></rect> </clippath> <clippath id="p051ff4b7f7"> <rect x="560.25" y="27.637031" width="147.605692" height="162.366261"></rect> </clippath> </defs>
-</svg>
-<p>What happens to the perimeter and the enclosed area?</p>
+<section id="activity-3" class="slide level2">
+<h2>Activity 3</h2>
+<ol start="7" type="1">
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{e^n}{n!}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n}{\sqrt n}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n n!}{n^n}\)</span></p></li>
+</ol>
 </section>
-<section id="koch-snowflake-perimeter" class="slide level2">
-<h2>Koch Snowflake: Perimeter</h2>
-<p>At stage <span class="math inline">\(n\)</span>, let <span class="math inline">\(N_n\)</span> count the sides and <span class="math inline">\(l_n\)</span> be the length of each side.</p>
-<p>Each step creates four segments, each one-third as long:</p>
-<p><span class="math inline">\(N_n=3\cdot4^n,\qquad l_n=\left(\frac{1}{3}\right)^n.\)</span></p>
-<div class="fragment">
-<p><span class="math inline">\(\displaystyle L_n=N_nl_n=3\left(\frac{4}{3}\right)^n.\)</span></p>
-<p>Since <span class="math inline">\(4/3&gt;1\)</span>, the perimeter grows without bound.</p>
-</div>
+<section id="activity-4" class="slide level2">
+<h2>Activity 4</h2>
+<ol start="10" type="1">
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}n^{-(n+1/n)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^{n+1}n}{n^2+1}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n n!}{3^n}\)</span></p></li>
+</ol>
 </section>
-<section id="koch-snowflake-added-area" class="slide level2">
-<h2>Koch Snowflake: Added Area</h2>
-<p>Let <span class="math inline">\(A_0=\sqrt{3}/4\)</span> be the area of the original triangle.</p>
-<p>At step <span class="math inline">\(n\ge1\)</span>:</p>
-<ul>
-<li>There are <span class="math inline">\(3\cdot4^{n-1}\)</span> new triangles.</li>
-<li>Each has side length <span class="math inline">\(1/3^n\)</span> and area <span class="math inline">\(A_0/9^n\)</span>.</li>
-</ul>
-<div class="fragment">
-<p>The added area is <span class="math inline">\(\displaystyle \Delta A_n=\frac{A_0}{3}\left(\frac{4}{9}\right)^{n-1}\)</span>.</p>
-<p>The added areas form a geometric sequence with ratio <span class="math inline">\(4/9\)</span>.</p>
-</div>
-</section>
-<section id="koch-snowflake-total-area" class="slide level2">
-<h2>Koch Snowflake: Total Area</h2>
-<p>The limiting area is the original area plus all the added areas:</p>
-<p><span class="math inline">\(\displaystyle A=A_0+\frac{A_0}{3}\sum_{n=1}^{\infty}\left(\frac{4}{9}\right)^{n-1}.\)</span></p>
-<div class="fragment">
-<p><span class="math inline">\(\displaystyle A=A_0+\frac{A_0/3}{1-4/9}=\frac{8}{5}A_0=\frac{2\sqrt{3}}{5}.\)</span></p>
-<p>The Koch snowflake has finite area and infinite perimeter.</p>
-</div>
-</section>
-<section id="error-estimate-using-integral-test" class="slide level2">
-<h2>Error Estimate using Integral Test</h2>
-<p><strong>Theorem 5.10: Remainder Estimate from the Integral Test</strong></p>
-<p>Suppose <span class="math inline">\(\sum_{n=1}^{\infty}a_n\)</span> is a convergent series with positive terms and <span class="math inline">\(a_n=f(n)\)</span>, where <span class="math inline">\(f\)</span> is continuous, positive, and decreasing.</p>
-<p>Let <span class="math inline">\(S_N\)</span> be the <span class="math inline">\(N\)</span>th partial sum and let <span class="math inline">\(S\)</span> be the sum of the series.</p>
-<p>The remainder is</p>
-<p><span class="math inline">\(R_N=S-S_N=\sum_{n=N+1}^{\infty}a_n\)</span>.</p>
-<p>Then</p>
-<p><span class="math inline">\(\displaystyle \int_{N+1}^{\infty}f(x)\,dx&lt;R_N&lt;\int_N^{\infty}f(x)\,dx\)</span>.</p>
-<p>Therefore, the error in approximating <span class="math inline">\(S\)</span> by <span class="math inline">\(S_N\)</span> is bounded above by</p>
-<p><span class="math inline">\(\displaystyle R_N&lt;\int_N^{\infty}f(x)\,dx\)</span>.</p>
-</section>
-<section id="error-estimate-for-alternating-series" class="slide level2">
-<h2>Error Estimate for Alternating Series</h2>
-<p><strong>Theorem 5.14: Remainders in Alternating Series</strong></p>
-<p>Consider an alternating series</p>
-<p><span class="math inline">\(\displaystyle \sum_{n=1}^{\infty}(-1)^{n+1}b_n\)</span></p>
-<p>that satisfies the hypotheses of the alternating series test.</p>
-<p>Let <span class="math inline">\(S\)</span> denote the sum of the series and <span class="math inline">\(S_N\)</span> denote the <span class="math inline">\(N\)</span>th partial sum.</p>
-<p>Then the remainder <span class="math inline">\(R_N=S-S_N\)</span> satisfies</p>
-<p><span class="math inline">\(\displaystyle |R_N|\leq b_{N+1}\)</span>.</p>
-<p><strong>In other words:</strong></p>
-<p>The error in approximating an alternating series by its <span class="math inline">\(N\)</span>th partial sum is at most the size of the next term.</p>
-<p>To guarantee an error of at most <span class="math inline">\(\varepsilon\)</span>, choose <span class="math inline">\(N\)</span> such that</p>
-<p><span class="math inline">\(\displaystyle b_{N+1}\leq\varepsilon\)</span>.</p>
-</section>
-<section class="slide level2">
-
+<section id="answer-key-convergence-tests" class="slide level2 smaller">
+<h2>Answer Key: Convergence Tests</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Recommended Test</th>
+<th>Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Limit Comparison (<span class="math inline">\(1/n\)</span>)</td>
+<td>Diverges</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Ratio Test</td>
+<td>Absolutely converges</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Ratio Test</td>
+<td>Diverges</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Root Test</td>
+<td>Absolutely converges</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Direct Comparison (<span class="math inline">\(1/n^2\)</span>)</td>
+<td>Converges</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Ratio Test</td>
+<td>Diverges</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Ratio Test</td>
+<td>Converges</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Alternating Series Test</td>
+<td>Conditionally converges</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Ratio Test</td>
+<td>Absolutely converges</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Root Test</td>
+<td>Converges</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Alternating Series Test</td>
+<td>Conditionally converges</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Ratio Test</td>
+<td>Diverges</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
