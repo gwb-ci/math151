@@ -70,6 +70,62 @@
     ]
   },
   {
+    "objectID": "classes/23/worksheet.html",
+    "href": "classes/23/worksheet.html",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/23/worksheet.html#null",
+    "href": "classes/23/worksheet.html#null",
+    "title": "TBD",
+    "section": "",
+    "text": "Hint"
+  },
+  {
+    "objectID": "classes/23/catchup_slides.html#antiderivatives-for-trigonometric-functions",
+    "href": "classes/23/catchup_slides.html#antiderivatives-for-trigonometric-functions",
+    "title": "Lingering Calculation",
+    "section": "Antiderivatives for Trigonometric Functions",
+    "text": "Antiderivatives for Trigonometric Functions\n\\(\\int \\sin x\\,dx=-\\cos x+C\\)\n\\(\\int \\cos x\\,dx=\\sin x+C\\)\n\\(\\int \\sec^2 x\\,dx=\\tan x+C\\)\n\\(\\int \\sec x\\tan x\\,dx=\\sec x+C\\)\n\\(\\int \\tan x\\,dx=\\ln|\\sec x|+C\\)\n\\(\\int \\sec x\\,dx=\\ln|\\sec x+\\tan x|+C\\)"
+  },
+  {
+    "objectID": "classes/23/catchup_slides.html#integrals-with-secant-and-tangent",
+    "href": "classes/23/catchup_slides.html#integrals-with-secant-and-tangent",
+    "title": "Lingering Calculation",
+    "section": "Integrals with Secant and Tangent",
+    "text": "Integrals with Secant and Tangent\nUseful identities: \\(\\sec^2 x=1+\\tan^2 x\\)\n\\(\\tan^2 x=\\sec^2 x-1\\)\nFor \\(\\int \\tan^k x\\sec^j x\\,dx\\):\n\nIf \\(j\\) is even and \\(j\\ge 2\\), save \\(\\sec^2 x\\,dx\\) and use \\(u=\\tan x\\).\nIf \\(k\\) is odd and \\(j\\ge 1\\), save \\(\\sec x\\tan x\\,dx\\) and use \\(u=\\sec x\\)."
+  },
+  {
+    "objectID": "classes/23/catchup_slides.html#outlier-example",
+    "href": "classes/23/catchup_slides.html#outlier-example",
+    "title": "Lingering Calculation",
+    "section": "Outlier Example",
+    "text": "Outlier Example\nEvaluate \\(\\int \\sec^3\\theta\\,d\\theta\\).\n\nUse integration by parts.\nLet \\(u=\\sec\\theta\\) and \\(dv=\\sec^2\\theta\\,d\\theta\\).\nThen \\(du=\\sec\\theta\\tan\\theta\\,d\\theta\\) and \\(v=\\tan\\theta\\)."
+  },
+  {
+    "objectID": "classes/23/catchup_slides.html#applying-integration-by-parts",
+    "href": "classes/23/catchup_slides.html#applying-integration-by-parts",
+    "title": "Lingering Calculation",
+    "section": "Applying integration by parts,",
+    "text": "Applying integration by parts,\n\\[\n\\begin{aligned}\n\\int\\sec^3\\theta\\,d\\theta\n&=\\sec\\theta\\tan\\theta-\\int\\sec\\theta\\tan^2\\theta\\,d\\theta\\\\\n&=\\sec\\theta\\tan\\theta-\\int\\sec\\theta(\\sec^2\\theta-1)\\,d\\theta\\\\\n&=\\sec\\theta\\tan\\theta-\\int\\sec^3\\theta\\,d\\theta+\\int\\sec\\theta\\,d\\theta.\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "classes/23/catchup_slides.html#new-integration-formula",
+    "href": "classes/23/catchup_slides.html#new-integration-formula",
+    "title": "Lingering Calculation",
+    "section": "New Integration Formula",
+    "text": "New Integration Formula\n\\[\n\\int\\sec^3\\theta\\,d\\theta\n=\\frac12\\sec\\theta\\tan\\theta\n+\\frac12\\ln|\\sec\\theta+\\tan\\theta|+C\n\\]"
+  },
+  {
+    "objectID": "classes/23/catchup_slides.html#example-3",
+    "href": "classes/23/catchup_slides.html#example-3",
+    "title": "Lingering Calculation",
+    "section": "Example 3",
+    "text": "Example 3\nFind the length of the curve \\(y=x^2\\) over \\([0,\\frac{1}{2}]\\).\n\nSince \\(\\frac{dy}{dx}=2x\\),\n\\(L=\\int_0^{1/2}\\sqrt{1+(2x)^2}\\,dx\\)\n\\(=\\int_0^{1/2}\\sqrt{1+4x^2}\\,dx\\)\nUse \\(x=\\frac{1}{2}\\tan\\theta\\).\n\\(L=\\frac{1}{2}\\int_0^{\\pi/4}\\sec^3\\theta\\,d\\theta\\)\n\\(=\\frac{1}{4}\\left(\\sqrt{2}+\\ln(\\sqrt{2}+1)\\right)\\)"
+  },
+  {
     "objectID": "classes/22/extra_slides.html#the-koch-snowflake",
     "href": "classes/22/extra_slides.html#the-koch-snowflake",
     "title": "Extra Chapter 5 Slides",
@@ -7406,6 +7462,497 @@
     "crumbs": [
       "Class Material",
       "Even More Series Tests"
+    ]
+  },
+  {
+    "objectID": "classes/23/slides.html#improper-integrals",
+    "href": "classes/23/slides.html#improper-integrals",
+    "title": "Improper Integrals",
+    "section": "Improper Integrals",
+    "text": "Improper Integrals\nClass Session Goals:\n\nEvaluate an integral over an infinite interval.\nEvaluate an integral over a closed interval with an infinite discontinuity within the interval.\nUse the comparison theorem to determine whether a definite integral is convergent."
+  },
+  {
+    "objectID": "classes/23/slides.html#what-is-an-improper-integral",
+    "href": "classes/23/slides.html#what-is-an-improper-integral",
+    "title": "Improper Integrals",
+    "section": "What is an Improper Integral?",
+    "text": "What is an Improper Integral?\nIntegrals over an infinite interval as well as integrals of functions containing a discontinuity on the interval are called improper integrals.\n\\[\\int_a^{\\infty} f(x)\\,dx\\]"
+  },
+  {
+    "objectID": "classes/23/slides.html#integrating-over-an-infinite-interval",
+    "href": "classes/23/slides.html#integrating-over-an-infinite-interval",
+    "title": "Improper Integrals",
+    "section": "Integrating over an Infinite Interval",
+    "text": "Integrating over an Infinite Interval\nTo integrate a function over an infinite interval, we consider the limit of the integral as the limit increases without bound.\nIf \\(f(x)\\) is continuous over \\([a,\\infty)\\), then\n\\[\\int_a^{\\infty} f(x)\\,dx=\\lim_{t\\to\\infty}\\int_a^t f(x)\\,dx\\]\nprovided this limit exists."
+  },
+  {
+    "objectID": "classes/23/slides.html#infinite-interval-to-the-left",
+    "href": "classes/23/slides.html#infinite-interval-to-the-left",
+    "title": "Improper Integrals",
+    "section": "Infinite Interval to the Left",
+    "text": "Infinite Interval to the Left\nIf \\(f(x)\\) is continuous over \\((-\\infty,b]\\), then\n\\[\\int_{-\\infty}^{b} f(x)\\,dx=\\lim_{t\\to-\\infty}\\int_t^b f(x)\\,dx\\]\nprovided this limit exists.\nIn each case, if the limit exists, then the improper integral is said to converge.\nIf the limit does not exist, then the improper integral is said to diverge."
+  },
+  {
+    "objectID": "classes/23/slides.html#infinite-interval-in-both-directions",
+    "href": "classes/23/slides.html#infinite-interval-in-both-directions",
+    "title": "Improper Integrals",
+    "section": "Infinite Interval in Both Directions",
+    "text": "Infinite Interval in Both Directions\nIf \\(f(x)\\) is continuous over \\((-\\infty,\\infty)\\), then\n\\[\\int_{-\\infty}^{\\infty} f(x)\\,dx=\\int_{-\\infty}^{0}f(x)\\,dx+\\int_{0}^{\\infty}f(x)\\,dx\\]\nprovided that both integrals converge."
+  },
+  {
+    "objectID": "classes/23/slides.html#example-finding-an-area",
+    "href": "classes/23/slides.html#example-finding-an-area",
+    "title": "Improper Integrals",
+    "section": "Example: Finding an Area",
+    "text": "Example: Finding an Area\nDetermine whether the area between the graph of \\(f(x)=\\frac{1}{x}\\) and the \\(x\\)-axis over the interval \\([1,\\infty)\\) is finite or infinite.\n\\(A=\\int_1^\\infty \\frac{1}{x}\\,dx\\)\n\\(=\\lim_{t\\to\\infty}\\int_1^t\\frac{1}{x}\\,dx\\)\n\n\\(=\\lim_{t\\to\\infty}\\ln|x|\\bigg|_1^t\\)\n\\(=\\lim_{t\\to\\infty}(\\ln|t|-\\ln 1)=\\infty\\)\nSince the improper integral diverges to \\(\\infty\\), the area of the region is infinite."
+  },
+  {
+    "objectID": "classes/23/slides.html#example-finding-a-volume",
+    "href": "classes/23/slides.html#example-finding-a-volume",
+    "title": "Improper Integrals",
+    "section": "Example: Finding a Volume",
+    "text": "Example: Finding a Volume\nFind the volume of the solid obtained by revolving the region bounded by the graph of \\(f(x)=\\frac{1}{x}\\) and the \\(x\\)-axis over \\([1,\\infty)\\) about the \\(x\\)-axis.\nUsing the disk method,\n\\(V=\\pi\\int_1^{\\infty}\\frac{1}{x^2}\\,dx\\)\n\n\\(=\\pi\\lim_{t\\to\\infty}\\int_1^t\\frac{1}{x^2}\\,dx\\)\n\\(=\\pi\\lim_{t\\to\\infty}\\left(-\\frac{1}{x}\\right)\\bigg|_1^t\\)\n\\(=\\pi\\lim_{t\\to\\infty}\\left(-\\frac{1}{t}+1\\right)=\\pi\\)"
+  },
+  {
+    "objectID": "classes/23/slides.html#gabriels-horn",
+    "href": "classes/23/slides.html#gabriels-horn",
+    "title": "Improper Integrals",
+    "section": "Gabriel’s Horn",
+    "text": "Gabriel’s Horn\nArea of the region between the \\(x\\)-axis and the graph of \\(f(x)=1/x\\) over \\([1,\\infty)\\) is infinite.\nSurface area of the solid generated by revolving this region about the \\(x\\)-axis is infinite. This is a more challenging integral to evaluate, but we will show it is infinite in a later example.\nVolume of the solid generated by revolving this region about the \\(x\\)-axis is finite.\nThe solid generated is known as Gabriel’s Horn. an object with infinite cross-sectional area but finite volume."
+  },
+  {
+    "objectID": "classes/23/slides.html#recall-lhôpitals-rule",
+    "href": "classes/23/slides.html#recall-lhôpitals-rule",
+    "title": "Improper Integrals",
+    "section": "Recall L’Hôpital’s Rule",
+    "text": "Recall L’Hôpital’s Rule\nSuppose \\(\\lim_{x\\to a}f(x)=0\\) and \\(\\lim_{x\\to a}g(x)=0\\), or both limits are \\(\\pm\\infty\\).\nIf \\(\\lim_{x\\to a}\\frac{f'(x)}{g'(x)}\\) exists (or is \\(\\pm\\infty\\)), then\n\\[\n\\lim_{x\\to a}\\frac{f(x)}{g(x)}\n=\\lim_{x\\to a}\\frac{f'(x)}{g'(x)}\n\\]"
+  },
+  {
+    "objectID": "classes/23/slides.html#some-indeterminate-forms",
+    "href": "classes/23/slides.html#some-indeterminate-forms",
+    "title": "Improper Integrals",
+    "section": "Some Indeterminate Forms",
+    "text": "Some Indeterminate Forms\n\n\\(\\frac{0}{0}\\)\n\\(\\frac{\\infty}{\\infty}\\)\n\\(\\infty\\cdot 0\\)"
+  },
+  {
+    "objectID": "classes/23/slides.html#example-doubly-infinite-intervals",
+    "href": "classes/23/slides.html#example-doubly-infinite-intervals",
+    "title": "Improper Integrals",
+    "section": "Example: Doubly Infinite Intervals",
+    "text": "Example: Doubly Infinite Intervals\nEvaluate \\[\\int_{-\\infty}^{\\infty}xe^x\\,dx\\]\nStart by splitting up the integral:\n\\[\\int_{-\\infty}^{\\infty}xe^x\\,dx=\\int_{-\\infty}^{0}xe^x\\,dx+\\int_{0}^{\\infty}xe^x\\,dx\\]\nIf either integral diverges, then the who integral diverges"
+  },
+  {
+    "objectID": "classes/23/slides.html#example-first-integral",
+    "href": "classes/23/slides.html#example-first-integral",
+    "title": "Improper Integrals",
+    "section": "Example: First Integral",
+    "text": "Example: First Integral\n\\(\\int_{-\\infty}^{0}xe^x\\,dx=\\lim_{t\\to-\\infty}\\int_t^0xe^x\\,dx\\)\n\\(=\\lim_{t\\to-\\infty}(xe^x-e^x)\\bigg|_t^0\\)\n\\(=\\lim_{t\\to-\\infty}(-1-te^t+e^t)\\)\n\\(=-1\\)\nThe first improper integral converges."
+  },
+  {
+    "objectID": "classes/23/slides.html#example-second-integral",
+    "href": "classes/23/slides.html#example-second-integral",
+    "title": "Improper Integrals",
+    "section": "Example: Second Integral",
+    "text": "Example: Second Integral\n\\(\\int_0^{\\infty}xe^x\\,dx=\\lim_{t\\to\\infty}\\int_0^t xe^x\\,dx\\)\n\n\\(=\\lim_{t\\to\\infty}(xe^x-e^x)\\bigg|_0^t\\)\n\\(=\\lim_{t\\to\\infty}(te^t-e^t+1)=\\infty\\)\nThus, \\(\\int_0^{\\infty}xe^x\\,dx\\) diverges.\nTherefore, \\(\\int_{-\\infty}^{\\infty}xe^x\\,dx\\) diverges."
+  },
+  {
+    "objectID": "classes/23/slides.html#integrating-a-discontinuous-integrand",
+    "href": "classes/23/slides.html#integrating-a-discontinuous-integrand",
+    "title": "Improper Integrals",
+    "section": "Integrating a Discontinuous Integrand",
+    "text": "Integrating a Discontinuous Integrand\nIf \\(f(x)\\) is continuous over \\([a,b)\\), then\n\\[\\int_a^b f(x)\\,dx=\\lim_{t\\to b^-}\\int_a^t f(x)\\,dx\\]\nIf \\(f(x)\\) is continuous over \\((a,b]\\), then\n\\[\\int_a^b f(x)\\,dx=\\lim_{t\\to a^+}\\int_t^b f(x)\\,dx\\]"
+  },
+  {
+    "objectID": "classes/23/slides.html#discontinuity-inside-the-interval",
+    "href": "classes/23/slides.html#discontinuity-inside-the-interval",
+    "title": "Improper Integrals",
+    "section": "Discontinuity Inside the Interval",
+    "text": "Discontinuity Inside the Interval\nIf \\(f(x)\\) is continuous over \\([a,b]\\) except at a point \\(c\\) in \\((a,b)\\), then\n\\[\\int_a^b f(x)\\,dx=\\int_a^c f(x)\\,dx+\\int_c^b f(x)\\,dx\\]\nprovided both integrals converge.\nIf either of these integrals diverges, then \\(\\int_a^b f(x)\\,dx\\) diverges."
+  },
+  {
+    "objectID": "classes/23/slides.html#example-1-discontinuities",
+    "href": "classes/23/slides.html#example-1-discontinuities",
+    "title": "Improper Integrals",
+    "section": "Example 1: Discontinuities",
+    "text": "Example 1: Discontinuities\nEvaluate \\(\\int_0^4 \\frac{1}{\\sqrt{4-x}}\\,dx\\).\nThe function \\(f(x)=\\frac{1}{\\sqrt{4-x}}\\) is continuous over \\([0,4)\\) and discontinuous at \\(4\\).\n\n\\(\\int_0^4 \\frac{1}{\\sqrt{4-x}}\\,dx=\\lim_{t\\to4^-}\\int_0^t\\frac{1}{\\sqrt{4-x}}\\,dx=4\\)"
+  },
+  {
+    "objectID": "classes/23/slides.html#example-2-discontinuities",
+    "href": "classes/23/slides.html#example-2-discontinuities",
+    "title": "Improper Integrals",
+    "section": "Example 2: Discontinuities",
+    "text": "Example 2: Discontinuities\nEvaluate \\(\\int_0^2 x\\ln x\\,dx\\) where \\(f(x)=x\\ln x\\) is continuous over \\((0,2]\\) and is discontinuous at zero,\n\\[\\int_0^2 x\\ln x\\,dx=\\lim_{t\\to0^+}\\int_t^2 x\\ln x\\,dx\\]\n\nUsing integration by parts to get \\(2\\ln2-1\\)."
+  },
+  {
+    "objectID": "classes/23/slides.html#theorem-3.7-a-comparison-theorem",
+    "href": "classes/23/slides.html#theorem-3.7-a-comparison-theorem",
+    "title": "Improper Integrals",
+    "section": "Theorem 3.7: A Comparison Theorem",
+    "text": "Theorem 3.7: A Comparison Theorem\nLet \\(f(x)\\) and \\(g(x)\\) be continuous over \\([a,\\infty)\\).\nAssume that \\(0\\le f(x)\\le g(x)\\) for \\(x\\ge a\\).\n\nIf \\(\\int_a^{\\infty} f(x)\\,dx=\\infty\\), then \\(\\int_a^{\\infty} g(x)\\,dx=\\infty\\).\nIf \\(\\int_a^{\\infty} g(x)\\,dx=L\\), where \\(L\\) is a real number, then \\(\\int_a^{\\infty} f(x)\\,dx=M\\) for some real number \\(M\\le L\\)."
+  },
+  {
+    "objectID": "classes/23/slides.html#example-comparison-theorem",
+    "href": "classes/23/slides.html#example-comparison-theorem",
+    "title": "Improper Integrals",
+    "section": "Example: Comparison Theorem",
+    "text": "Example: Comparison Theorem\nUse a comparison to show \\(\\int_1^{\\infty}2\\pi \\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\,dx\\) diverges.\n\nSince \\(\\sqrt{1+\\frac{1}{x^4}}\\geq 1\\) for \\(x\\geq 1\\),\n\\(2\\pi\\int_1^\\infty\\frac{1}{x}{\\sqrt{1+\\frac{1}{x^4}}}\\geq 2\\pi\\int_1^\\infty\\frac{1}{x}\\,dx\\)\nWe have already shown that \\(\\int_1^\\infty\\frac{1}{x}\\,dx\\) diverges."
+  },
+  {
+    "objectID": "classes/23/slides.html#table-of-antiderivatives-trig",
+    "href": "classes/23/slides.html#table-of-antiderivatives-trig",
+    "title": "Improper Integrals",
+    "section": "Table of Antiderivatives: Trig",
+    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\sec^2 x\\,dx &= \\tan x+C \\\\\n\\int \\csc^2 x\\,dx &= -\\cot x+C \\\\\n\\int \\sec x\\tan x\\,dx &= \\sec x+C \\\\\n\\int \\csc x\\cot x\\,dx &= -\\csc x+C\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "classes/23/slides.html#table-of-antiderivatives-trig-1",
+    "href": "classes/23/slides.html#table-of-antiderivatives-trig-1",
+    "title": "Improper Integrals",
+    "section": "Table of Antiderivatives: Trig",
+    "text": "Table of Antiderivatives: Trig\n\\[\n\\begin{aligned}\n\\int \\tan x\\,dx &= \\ln|\\sec x|+C \\\\\n\\int \\cot x\\,dx &= \\ln|\\sin x|+C \\\\\n\\int \\sec x\\,dx &= \\ln|\\sec x+\\tan x|+C \\\\\n\\int \\csc x\\,dx &= -\\ln|\\csc x+\\cot x|+C\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "classes/23/slides.html#table-of-antiderivatives-other",
+    "href": "classes/23/slides.html#table-of-antiderivatives-other",
+    "title": "Improper Integrals",
+    "section": "Table of Antiderivatives: Other",
+    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int a^x\\,dx &= \\frac{a^x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\log_a x\\,dx &= x\\log_a x-\\frac{x}{\\ln a}+C,\\quad a&gt;0,\\ a\\neq1 \\\\\n\\int \\frac{1}{a^2+x^2}\\,dx &= \\frac{1}{a}\\tan^{-1}\\left(\\frac{x}{a}\\right)+C\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "classes/23/slides.html#table-of-antiderivatives-other-1",
+    "href": "classes/23/slides.html#table-of-antiderivatives-other-1",
+    "title": "Improper Integrals",
+    "section": "Table of Antiderivatives: Other",
+    "text": "Table of Antiderivatives: Other\n\\[\n\\begin{aligned}\n\\int \\frac{1}{\\sqrt{a^2-x^2}}\\,dx &= \\sin^{-1}\\left(\\frac{x}{a}\\right)+C \\\\\n\\int \\frac{1}{x\\sqrt{x^2-a^2}}\\,dx &= \\frac{1}{a}\\sec^{-1}\\left|\\frac{x}{a}\\right|+C \\\\\n\\int \\frac{1}{x^2-a^2}\\,dx &= \\frac{1}{2a}\\ln\\left|\\frac{x-a}{x+a}\\right|+C\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "classes/24/slides.html#power-series-and-functions",
+    "href": "classes/24/slides.html#power-series-and-functions",
+    "title": "Power Series and Functions",
+    "section": "Power Series and Functions",
+    "text": "Power Series and Functions\nClass Session Goals:\n\nIdentify a power series and provide examples of them.\nDetermine the radius of convergence and interval of convergence of a power series.\nUse a power series to represent a function.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#motivation",
+    "href": "classes/24/slides.html#motivation",
+    "title": "Power Series and Functions",
+    "section": "Motivation",
+    "text": "Motivation\n** Power Series are an alternative way to represent functions**\n\nA power series are infinite polynomials.\nPolynomials are easy to evaluate, differentiate, integrate, and approximate.\nPower series allow us to represent common functions and define new functions.\nWe can use polynomial approximations to estimate values of functions.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#definition-of-a-power-series-1",
+    "href": "classes/24/slides.html#definition-of-a-power-series-1",
+    "title": "Power Series and Functions",
+    "section": "Definition of a Power Series 1",
+    "text": "Definition of a Power Series 1\nA series of the form\n\\(\\displaystyle \\sum_{n=0}^{\\infty}c_nx^n\n=c_0+c_1x+c_2x^2+\\cdots\\)\nis a power series centered at \\(x=0\\).\n\\(x\\) is a variable, and the coefficients \\(c_n\\) are functions of \\(n\\) that do not depend on \\(x\\).",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#definition-of-a-power-series-2",
+    "href": "classes/24/slides.html#definition-of-a-power-series-2",
+    "title": "Power Series and Functions",
+    "section": "Definition of a Power Series 2",
+    "text": "Definition of a Power Series 2\nA series of the form\n\\(\\displaystyle \\sum_{n=0}^{\\infty}c_n(x-a)^n\n=c_0+c_1(x-a)+c_2(x-a)^2+\\cdots\\)\nis a power series centered at \\(x=a\\).\n\\(x\\) and \\(c_n\\) are as before, and \\(a\\) is a constant. One way to think of \\(a\\) as the location where we are approximating a funciton.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#example-1-exponential-function",
+    "href": "classes/24/slides.html#example-1-exponential-function",
+    "title": "Power Series and Functions",
+    "section": "Example 1: Exponential Function",
+    "text": "Example 1: Exponential Function\nConsider the power series\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\frac{x^n}{n!}\\)\nExpanding the series gives\n\\(\\displaystyle 1+x+\\frac{x^2}{2!}+\\frac{x^3}{3!}+\\cdots\\)\nWe can define a function \\(f(x)=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}\\).",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#example-continued",
+    "href": "classes/24/slides.html#example-continued",
+    "title": "Power Series and Functions",
+    "section": "Example Continued",
+    "text": "Example Continued\nWhat is the value of \\(f(x)\\)?\nIf \\(x=0\\), then \\(f(x)=1\\).\nWhat about \\(f(1)\\)?\n\\(\\displaystyle f(1)=\\lim_{k\\to\\infty}\\sum_{n=0}^{k}\\frac{1}{n!}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(k\\)\n0\n1\n2\n3\n4\n5\n6\n7\n8\n\n\n\n\nPartial sum\n1.0000\n2.0000\n2.5000\n2.6667\n2.7083\n2.7167\n2.7181\n2.7183\n2.7183\n\n\n\nAs \\(k\\to\\infty\\), the partial sums approach \\(e\\).\n\\(\\displaystyle f(1)=e\\approx 2.71828\\)",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#example-continued-1",
+    "href": "classes/24/slides.html#example-continued-1",
+    "title": "Power Series and Functions",
+    "section": "Example Continued",
+    "text": "Example Continued\n\\(f(0)=1=e^1\\)\n\\(f(1)=e=e^1\\)\nLater in this section we will show that \\(e^x=f(x)=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}\\)\nAn important question to ask is for which values of \\(x\\) does this equation hold.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#example-2-frac11-x",
+    "href": "classes/24/slides.html#example-2-frac11-x",
+    "title": "Power Series and Functions",
+    "section": "Example 2: \\(\\frac{1}{1-x}\\)",
+    "text": "Example 2: \\(\\frac{1}{1-x}\\)\nConsider the geometric series\n\\(\\displaystyle \\sum_{n=0}^{\\infty}x^n\n=1+x+x^2+x^3+\\cdots\\)\nRecall that a geometric series converges if \\(|r|&lt;1\\).\nFor \\(r=x\\), the series converges when \\(|x|&lt;1\\).\nTherefore,\n\\(\\displaystyle \\frac{1}{1-x}=\\sum_{n=0}^{\\infty}x^n\\)\nfor \\(|x|&lt;1\\).\n\nCenter: \\(a=0\\)\nCoefficients: \\(c_n=1\\)",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#power-series-as-approximations",
+    "href": "classes/24/slides.html#power-series-as-approximations",
+    "title": "Power Series and Functions",
+    "section": "Power Series as Approximations",
+    "text": "Power Series as Approximations\nConsider\n\\(\\displaystyle f(x)=\\frac{1}{1-x}=1+x+x^2+x^3+\\cdots\\)\nWe can approximate this function with a polynomial:\n\\(\\displaystyle P_3(x)=1+x+x^2+x^3\\)\n\n\n\n\\(x\\)\n\\(f(x)\\)\n\\(P_3(x)\\)\n\n\n\n\n\\(0.1\\)\n\\(1.11111\\ldots\\)\n\\(1.111\\)\n\n\n\\(0.5\\)\n\\(2\\)\n\\(1.875\\)\n\n\n\\(0.9\\)\n\\(10\\)\n\\(3.439\\)",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#convergence-of-power-series",
+    "href": "classes/24/slides.html#convergence-of-power-series",
+    "title": "Power Series and Functions",
+    "section": "Convergence of Power Series",
+    "text": "Convergence of Power Series\nConsider the power series\n\\(\\displaystyle \\sum_{n=0}^{\\infty}c_n(x-a)^n\\)\n\nA power series may converge for some values of \\(x\\) and diverge for others.\nAt \\(x=a\\), the series becomes \\(c_0\\).\nTherefore, a power series always converges at its center.\n\nThe possible sets of convergence are:\n\nOnly the center \\(x=a\\).\nAll real numbers.\nAn interval centered at \\(x=a\\), possibly including one or both endpoints.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#theorem-6.1",
+    "href": "classes/24/slides.html#theorem-6.1",
+    "title": "Power Series and Functions",
+    "section": "Theorem 6.1",
+    "text": "Theorem 6.1\nConvergence of a Power Series\nConsider the power series \\(\\displaystyle \\sum_{n=0}^{\\infty}c_n(x-a)^n\\).\nThe series satisfies exactly one of the following properties:\n\nThe series converges at \\(x=a\\) and diverges for all \\(x\\ne a\\).\nThe series converges for all real numbers \\(x\\).\nThere exists a real number \\(R&gt;0\\) such that the series converges if \\(|x-a|&lt;R\\) and diverges if \\(|x-a|&gt;R\\).\nAt the values \\(x\\) where \\(|x-a|=R\\), the series may converge or diverge.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#proof-of-theorem-6.1",
+    "href": "classes/24/slides.html#proof-of-theorem-6.1",
+    "title": "Power Series and Functions",
+    "section": "Proof of Theorem 6.1",
+    "text": "Proof of Theorem 6.1\nKey fact: If \\(\\displaystyle \\sum_{n=0}^{\\infty}c_nd^n\\) converges for some \\(d\\ne0\\), then \\(\\displaystyle \\sum_{n=0}^{\\infty}c_nx^n\\) converges absolutely for \\(|x|&lt;|d|\\).\nSince \\(\\sum c_nd^n\\) converges, \\(c_nd^n\\to0\\).\nThus, for sufficiently large \\(n\\), \\(|c_nd^n|\\le1\\).\nConsequently,\n\\(\\displaystyle |c_nx^n|=|c_nd^n|\\left|\\frac{x}{d}\\right|^n\n\\le\\left|\\frac{x}{d}\\right|^n\\)\nThe geometric series \\(\\displaystyle \\sum\\left|\\frac{x}{d}\\right|^n\\) converges whenever \\(|x|&lt;|d|\\).\nBy the comparison test, \\(\\sum c_nx^n\\) converges absolutely.\nFor a general center \\(a\\), substitute \\(y=x-a\\).",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#what-does-theorem-6.1-tell-us",
+    "href": "classes/24/slides.html#what-does-theorem-6.1-tell-us",
+    "title": "Power Series and Functions",
+    "section": "What Does Theorem 6.1 Tell Us?",
+    "text": "What Does Theorem 6.1 Tell Us?\nIf a power series converges at a point, then it converges absolutely at every point closer to its center.\nConsider a power series centered at \\(a=2\\) that converges at \\(x=5\\).\n\nWhat can we conclude about convergence at \\(x=3\\)?\nWhat can we conclude about convergence at \\(x=0\\)?\nWhat can we conclude about convergence at \\(x=6\\)?\n\nThink–Pair–Share: Discuss which conclusions are guaranteed by the theorem.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#definition-of-radius-of-convergence",
+    "href": "classes/24/slides.html#definition-of-radius-of-convergence",
+    "title": "Power Series and Functions",
+    "section": "Definition of Radius of Convergence",
+    "text": "Definition of Radius of Convergence\nConsider the power series \\(\\displaystyle \\sum_{n=0}^{\\infty}c_n(x-a)^n\\).\nThe interval of convergence is the set of real numbers \\(x\\) where the series converges.\nThe radius of convergence is the value \\(R\\) such that:\n\nThe series converges for \\(|x-a|&lt;R\\).\nThe series diverges for \\(|x-a|&gt;R\\).\nAt \\(x=a-R\\) and \\(x=a+R\\), convergence must be checked separately.\n\nSpecial cases:\n\nIf the series converges only at \\(x=a\\), then \\(R=0\\).\nIf the series converges for all real numbers, then \\(R=\\infty\\).",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#visualizing-the-radius-of-convergence",
+    "href": "classes/24/slides.html#visualizing-the-radius-of-convergence",
+    "title": "Power Series and Functions",
+    "section": "Visualizing the Radius of Convergence",
+    "text": "Visualizing the Radius of Convergence\nFor a power series centered at \\(x=a\\) with \\(0&lt;R&lt;\\infty\\):\n\n\n\n\n\n  \n  \n a − R a a + R \n Converges Diverges Diverges \n Endpoints must be tested separately. \n\n\nImportant: The radius tells us where convergence is guaranteed, but not whether either endpoint belongs to the interval of convergence.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#finding-the-radius-of-convergence",
+    "href": "classes/24/slides.html#finding-the-radius-of-convergence",
+    "title": "Power Series and Functions",
+    "section": "Finding the Radius of Convergence",
+    "text": "Finding the Radius of Convergence\nConsider \\(\\displaystyle \\sum_{n=0}^{\\infty}c_n(x-a)^n\\).\nStrategy:\n\nApply the ratio test to the power series.\nDetermine the values of \\(x\\) for which \\(\\rho&lt;1\\).\nFind the radius of convergence \\(R\\).\nTest the endpoints individually.\nState the interval of convergence.\n\nRemember: The ratio test is inconclusive when \\(\\rho=1\\).",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#radius-example-1",
+    "href": "classes/24/slides.html#radius-example-1",
+    "title": "Power Series and Functions",
+    "section": "Radius Example 1",
+    "text": "Radius Example 1\nFind the interval and radius of convergence.\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\frac{x^n}{n!}\\)\nQuestions to consider:\n\nWhat happens when we apply the ratio test?\nFor which values of \\(x\\) does the series converge?\nWhat is the radius of convergence?\n\n\n\n\n\n\n\nNote\n\n\nWork this example on the whiteboard.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#radius-example-2",
+    "href": "classes/24/slides.html#radius-example-2",
+    "title": "Power Series and Functions",
+    "section": "Radius Example 2",
+    "text": "Radius Example 2\nFind the interval and radius of convergence.\n\\(\\displaystyle \\sum_{n=0}^{\\infty}n!x^n\\)\nQuestions to consider:\n\nHow does this series compare with the previous example?\nWhat happens when we apply the ratio test for \\(x\\ne0\\)?\nWhat happens at \\(x=0\\)?\n\n\n\n\n\n\n\nNote\n\n\nWork this example on the whiteboard.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#radius-example-3",
+    "href": "classes/24/slides.html#radius-example-3",
+    "title": "Power Series and Functions",
+    "section": "Radius Example 3",
+    "text": "Radius Example 3\nFind the interval and radius of convergence.\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\frac{(x-2)^n}{(n+1)3^n}\\)\nQuestions to consider:\n\nWhat is the center of the series?\nWhat is the radius of convergence?\nWhat happens at each endpoint?\nWhich endpoints belong to the interval of convergence?\n\n\n\n\n\n\n\nNote\n\n\nWork this example on the whiteboard.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#day-1-exit-question",
+    "href": "classes/24/slides.html#day-1-exit-question",
+    "title": "Power Series and Functions",
+    "section": "Day 1: Exit Question",
+    "text": "Day 1: Exit Question\nA power series centered at \\(x=2\\) converges at \\(x=5\\).\nWhich of the following must be true?\nA. The series converges at \\(x=0\\).\nB. The series converges at \\(x=6\\).\nC. The series converges at \\(x=-1\\).\nD. The series diverges at \\(x=-2\\).\nExplain your reasoning.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#day-2-representing-functions-as-power-series",
+    "href": "classes/24/slides.html#day-2-representing-functions-as-power-series",
+    "title": "Power Series and Functions",
+    "section": "Day 2: Representing Functions as Power Series",
+    "text": "Day 2: Representing Functions as Power Series\nRecall from our previous session:\n\nA power series is an infinite polynomial.\nEvery power series has a radius of convergence.\nA function can sometimes be represented by a power series.\n\nToday’s question:\nHow can we construct a power series representation of a function?\nWe will start with a familiar series and use algebra to create new representations.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#recall-geometric-series",
+    "href": "classes/24/slides.html#recall-geometric-series",
+    "title": "Power Series and Functions",
+    "section": "Recall: Geometric Series",
+    "text": "Recall: Geometric Series\nA geometric series is a series of the form\n\\(\\displaystyle \\sum_{n=0}^{\\infty}ar^n=a+ar+ar^2+ar^3+\\cdots\\)\nwhere \\(a\\) is the first term and \\(r\\) is the common ratio.\n\nIf \\(|r|&lt;1\\), the series converges, and\n\\(\\displaystyle \\sum_{n=0}^{\\infty}ar^n=\\frac{a}{1-r}\\)\nIf \\(|r|\\geq1\\) and \\(a\\ne0\\), the series diverges.\n\nSpecial case: When \\(a=1\\),\n\\(\\displaystyle \\frac{1}{1-r}=\\sum_{n=0}^{\\infty}r^n\\)\nfor \\(|r|&lt;1\\).",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#rational-functions-as-power-series",
+    "href": "classes/24/slides.html#rational-functions-as-power-series",
+    "title": "Power Series and Functions",
+    "section": "Rational Functions as Power Series",
+    "text": "Rational Functions as Power Series\nRecall the geometric series formula:\n\\(\\displaystyle \\frac{1}{1-r}=\\sum_{n=0}^{\\infty}r^n\n=1+r+r^2+r^3+\\cdots\\)\nfor \\(|r|&lt;1\\).\nWe can use this formula to represent certain rational functions as power series.\nStrategy:\n\nRewrite the function in the form \\(\\frac{A}{1-r}\\).\nIdentify the geometric ratio \\(r\\).\nSubstitute into the geometric series formula.\nSolve \\(|r|&lt;1\\) to determine the interval of convergence.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#example-1",
+    "href": "classes/24/slides.html#example-1",
+    "title": "Power Series and Functions",
+    "section": "Example 1",
+    "text": "Example 1\nRepresent the function as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{1}{1+x^3}\\)\nQuestions to consider:\n\nHow can we rewrite the denominator as \\(1-r\\)?\nWhat is the common ratio \\(r\\)?\nWhat are the first four nonzero terms?\nFor which values of \\(x\\) does the series converge?\n\n\n\n\n\n\n\nNote\n\n\nWork this example on the whiteboard.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#example-2",
+    "href": "classes/24/slides.html#example-2",
+    "title": "Power Series and Functions",
+    "section": "Example 2",
+    "text": "Example 2\nRepresent the function as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{x^2}{4-x^2}\\)\nQuestions to consider:\n\nHow can we rewrite the function using the geometric series formula?\nWhat is the common ratio \\(r\\)?\nHow do we handle the factor outside the geometric series?\nWhat is the interval of convergence?\n\n\n\n\n\n\n\nNote\n\n\nWork this example on the whiteboard.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#activity-the-power-series-factory",
+    "href": "classes/24/slides.html#activity-the-power-series-factory",
+    "title": "Power Series and Functions",
+    "section": "Activity: The Power Series Factory",
+    "text": "Activity: The Power Series Factory\nRecall that\n\\(\\displaystyle \\frac{1}{1-x}=\\sum_{n=0}^{\\infty}x^n\\) for \\(|x|&lt;1\\).\nWorking with a partner:\nUse this geometric series to find a power series representation for each function.\n\n\\(\\displaystyle f(x)=\\frac{1}{1+x}\\)\n\\(\\displaystyle g(x)=\\frac{1}{1-2x}\\)\n\\(\\displaystyle h(x)=\\frac{1}{1+x^2}\\)\n\nFor each function:\n\nWrite the first four nonzero terms.\nExpress the series using summation notation.\nDetermine the interval of convergence.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#activity-create-your-own-power-series",
+    "href": "classes/24/slides.html#activity-create-your-own-power-series",
+    "title": "Power Series and Functions",
+    "section": "Activity: Create Your Own Power Series",
+    "text": "Activity: Create Your Own Power Series\nChallenge:\nCreate a rational function whose power series representation has radius of convergence \\(R=3\\).\nYour response should include:\n\nA rational function \\(f(x)\\).\nA power series representation of \\(f(x)\\).\nThe interval of convergence.\nAn explanation of why the radius of convergence is \\(R=3\\).\n\nDiscuss: Can two different rational functions have the same radius of convergence?",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#example-3",
+    "href": "classes/24/slides.html#example-3",
+    "title": "Power Series and Functions",
+    "section": "Example 3",
+    "text": "Example 3\nRepresent the function as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{x^3}{2-x}\\)\nQuestions to consider:\n\nHow do we rewrite the function using \\(\\frac{1}{1-r}\\)?\nWhat is the common ratio \\(r\\)?\nHow does the factor \\(x^3\\) affect the power series?\nWhat is the interval of convergence?\n\n\n\n\n\n\n\nNote\n\n\nWork this example on the whiteboard.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#challenge-change-the-center",
+    "href": "classes/24/slides.html#challenge-change-the-center",
+    "title": "Power Series and Functions",
+    "section": "Challenge: Change the Center",
+    "text": "Challenge: Change the Center\nFind a power series representation of\n\\(\\displaystyle f(x)=\\frac{1}{3-x}\\)\ncentered at \\(x=1\\).\nHint: Rewrite the denominator in terms of \\((x-1)\\).\nDetermine:\n\nThe power series representation.\nThe center of the series.\nThe radius of convergence.\nThe interval of convergence.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#day-2-exit-question",
+    "href": "classes/24/slides.html#day-2-exit-question",
+    "title": "Power Series and Functions",
+    "section": "Day 2: Exit Question",
+    "text": "Day 2: Exit Question\nFind the interval of convergence of the geometric power series representing\n\\(\\displaystyle f(x)=\\frac{1}{1-4x^2}\\)\nChoose the correct answer:\nA. \\((-2,2)\\)\nB. \\((-\\frac12,\\frac12)\\)\nC. \\((-\\frac14,\\frac14)\\)\nD. \\((-1,1)\\)\nExplain how you determined the interval.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
     ]
   },
   {
