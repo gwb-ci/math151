@@ -23,7 +23,7 @@ To successfully learn the Calculus, you need to demonstrate that you understand 
 - **A**: Applications of integration  
 - **I**: Fundamental Concepts and Techniques in Integration
 - **S**: Sequences and Series
-- ~~**S**: Numerical Methods~~
+- ~~**N**: Numerical Methods~~
 - **P**: Power Series 
 
 Each of these groups are described in detail below. Learning Targets whose abbreviations are marked with a \* are Supplemental Learning Targets. The Learning Targets with an 'MP' in their abbreviation are Mathematical Practice Learning Targets. The rest are Core Learning Targets. Your grade in the course will be calcualted, primarily, from the number and type of learning targets you master.

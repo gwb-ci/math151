@@ -146,9 +146,9 @@
 </section>
 <section id="motivation" class="slide level2">
 <h2>Motivation</h2>
-<p>** Power Series are an alternative way to represent functions**</p>
+<p><strong>Power Series are an alternative way to represent functions</strong></p>
 <ul>
-<li>A power series are infinite polynomials.</li>
+<li>Power series are infinite polynomials</li>
 <li>Polynomials are easy to evaluate, differentiate, integrate, and approximate.</li>
 <li>Power series allow us to represent common functions and define new functions.</li>
 <li>We can use polynomial approximations to estimate values of functions.</li>
@@ -161,6 +161,7 @@
 =c_0+c_1x+c_2x^2+\cdots\)</span></p>
 <p>is a <strong>power series centered at <span class="math inline">\(x=0\)</span>.</strong></p>
 <p><span class="math inline">\(x\)</span> is a variable, and the coefficients <span class="math inline">\(c_n\)</span> are functions of <span class="math inline">\(n\)</span> that do not depend on <span class="math inline">\(x\)</span>.</p>
+<p>The value of this series depends on <span class="math inline">\(x\)</span> so it is a function of <span class="math inline">\(x\)</span>.</p>
 </section>
 <section id="definition-of-a-power-series-2" class="slide level2">
 <h2>Definition of a Power Series 2</h2>
@@ -168,7 +169,8 @@
 <p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}c_n(x-a)^n
 =c_0+c_1(x-a)+c_2(x-a)^2+\cdots\)</span></p>
 <p>is a <strong>power series centered at <span class="math inline">\(x=a\)</span>.</strong></p>
-<p><span class="math inline">\(x\)</span> and <span class="math inline">\(c_n\)</span> are as before, and <span class="math inline">\(a\)</span> is a constant. One way to think of <span class="math inline">\(a\)</span> as the location where we are approximating a funciton.</p>
+<p><span class="math inline">\(x\)</span> and <span class="math inline">\(c_n\)</span> are as before, and <span class="math inline">\(a\)</span> is a constant.</p>
+<p>One way to think of <span class="math inline">\(a\)</span> as the location where we examining a funciton.</p>
 </section>
 <section id="example-1-exponential-function" class="slide level2">
 <h2>Example 1: Exponential Function</h2>
@@ -176,26 +178,26 @@
 <p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}\frac{x^n}{n!}\)</span></p>
 <p>Expanding the series gives</p>
 <p><span class="math inline">\(\displaystyle 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots\)</span></p>
-<p>We can define a function <span class="math inline">\(f(x)=\sum_{n=0}^{\infty}\frac{x^n}{n!}\)</span>.</p>
+<p>We can define a function <span class="math inline">\(f(x)=\sum_{n=0}^{\infty}\frac{x^n}{n!}\)</span>. If <span class="math inline">\(x=0\)</span>, then <span class="math inline">\(f(0)=1\)</span>.</p>
 </section>
 <section id="example-continued" class="slide level2">
 <h2>Example Continued</h2>
-<p>What is the value of <span class="math inline">\(f(x)\)</span>?</p>
-<p>If <span class="math inline">\(x=0\)</span>, then <span class="math inline">\(f(x)=1\)</span>.</p>
-<p>What about <span class="math inline">\(f(1)\)</span>?</p>
+<p>What is the value of <span class="math inline">\(f(x)\)</span> in general? What about <span class="math inline">\(f(1)\)</span>?</p>
 <p><span class="math inline">\(\displaystyle f(1)=\lim_{k\to\infty}\sum_{n=0}^{k}\frac{1}{n!}\)</span></p>
-<table class="caption-top" style="width:100%;">
+<div style="font-size: 0.65em;">
+<table class="caption-top">
 <colgroup>
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -209,6 +211,7 @@
 <th style="text-align: center;">6</th>
 <th style="text-align: center;">7</th>
 <th style="text-align: center;">8</th>
+<th style="text-align: center;"></th>
 </tr>
 </thead>
 <tbody>
@@ -223,33 +226,31 @@
 <td style="text-align: center;">2.7181</td>
 <td style="text-align: center;">2.7183</td>
 <td style="text-align: center;">2.7183</td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
+</div>
 <p>As <span class="math inline">\(k\to\infty\)</span>, the partial sums approach <span class="math inline">\(e\)</span>.</p>
 <p><span class="math inline">\(\displaystyle f(1)=e\approx 2.71828\)</span></p>
 </section>
 <section id="example-continued-1" class="slide level2">
 <h2>Example Continued</h2>
-<p><span class="math inline">\(f(0)=1=e^1\)</span></p>
+<p><span class="math inline">\(f(0)=1=e^0\)</span></p>
 <p><span class="math inline">\(f(1)=e=e^1\)</span></p>
 <p>Later in this section we will show that <span class="math inline">\(e^x=f(x)=\sum_{n=0}^{\infty}\frac{x^n}{n!}\)</span></p>
-<p>An important question to ask is for which values of <span class="math inline">\(x\)</span> does this equation hold.</p>
+<p><strong>For which values of <span class="math inline">\(x\)</span> does this equation hold?</strong></p>
 </section>
-<section id="example-2-frac11-x" class="slide level2">
-<h2>Example 2: <span class="math inline">\(\frac{1}{1-x}\)</span></h2>
+<section id="example-2-geometeric-series" class="slide level2">
+<h2>Example 2: Geometeric Series</h2>
 <p>Consider the geometric series</p>
 <p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}x^n
 =1+x+x^2+x^3+\cdots\)</span></p>
-<p>Recall that a geometric series converges if <span class="math inline">\(|r|&lt;1\)</span>.</p>
-<p>For <span class="math inline">\(r=x\)</span>, the series converges when <span class="math inline">\(|x|&lt;1\)</span>.</p>
-<p>Therefore,</p>
+<p>This series converges if <span class="math inline">\(|x|&lt;1\)</span> and if it converges the sum is <span class="math inline">\(\frac{1}{1-x}\)</span></p>
+<p>So we have:</p>
 <p><span class="math inline">\(\displaystyle \frac{1}{1-x}=\sum_{n=0}^{\infty}x^n\)</span></p>
 <p>for <span class="math inline">\(|x|&lt;1\)</span>.</p>
-<ul>
-<li>Center: <span class="math inline">\(a=0\)</span></li>
-<li>Coefficients: <span class="math inline">\(c_n=1\)</span></li>
-</ul>
+<p>Here the center is <span class="math inline">\(a=0\)</span> and the coefficients are <span class="math inline">\(c_n=1\)</span> for all <span class="math inline">\(n\)</span>.</p>
 </section>
 <section id="power-series-as-approximations" class="slide level2">
 <h2>Power Series as Approximations</h2>
@@ -290,19 +291,12 @@
 <p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}c_n(x-a)^n\)</span></p>
 <ul>
 <li>A power series may converge for some values of <span class="math inline">\(x\)</span> and diverge for others.</li>
-<li>At <span class="math inline">\(x=a\)</span>, the series becomes <span class="math inline">\(c_0\)</span>.</li>
-<li>Therefore, a power series <strong>always converges at its center</strong>.</li>
+<li>At <span class="math inline">\(x=a\)</span>, the series becomes <span class="math inline">\(c_0\)</span> and power series always converges at its center.</li>
 </ul>
-<p>The possible sets of convergence are:</p>
-<ol type="1">
-<li>Only the center <span class="math inline">\(x=a\)</span>.</li>
-<li>All real numbers.</li>
-<li>An interval centered at <span class="math inline">\(x=a\)</span>, possibly including one or both endpoints.</li>
-</ol>
+<p>The possible sets of convergence are: only the center <span class="math inline">\(x=a\)</span>, all real numbers, an interval centered at <span class="math inline">\(x=a\)</span>, possibly including one or both endpoints.</p>
 </section>
-<section id="theorem-6.1" class="slide level2">
-<h2>Theorem 6.1</h2>
-<p><strong>Convergence of a Power Series</strong></p>
+<section id="theorem-6.1-convergence-of-a-power-series" class="slide level2">
+<h2>Theorem 6.1 Convergence of a Power Series</h2>
 <p>Consider the power series <span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}c_n(x-a)^n\)</span>.</p>
 <p>The series satisfies exactly one of the following properties:</p>
 <ol type="1">
@@ -326,14 +320,13 @@
 </section>
 <section id="what-does-theorem-6.1-tell-us" class="slide level2">
 <h2>What Does Theorem 6.1 Tell Us?</h2>
-<p><strong>If a power series converges at a point, then it converges absolutely at every point closer to its center.</strong></p>
+<p>If a power series converges at a point, then it converges absolutely at every point closer to its center.</p>
 <p>Consider a power series centered at <span class="math inline">\(a=2\)</span> that converges at <span class="math inline">\(x=5\)</span>.</p>
 <ul>
 <li>What can we conclude about convergence at <span class="math inline">\(x=3\)</span>?</li>
 <li>What can we conclude about convergence at <span class="math inline">\(x=0\)</span>?</li>
 <li>What can we conclude about convergence at <span class="math inline">\(x=6\)</span>?</li>
 </ul>
-<p><strong>Think–Pair–Share:</strong> Discuss which conclusions are guaranteed by the theorem.</p>
 </section>
 <section id="definition-of-radius-of-convergence" class="slide level2">
 <h2>Definition of Radius of Convergence</h2>
@@ -354,16 +347,16 @@
 <section id="visualizing-the-radius-of-convergence" class="slide level2">
 <h2>Visualizing the Radius of Convergence</h2>
 <p>For a power series centered at <span class="math inline">\(x=a\)</span> with <span class="math inline">\(0&lt;R&lt;\infty\)</span>:</p>
-<div style="max-width: 850px; margin: 30px auto;">
-<svg viewbox="0 0 800 200" width="100%" xmlns="http://www.w3.org/2000/svg">
-</svg><p><rect x="210" y="70" width="380" height="35" fill="#bbf7d0" opacity="0.7"></rect></p>
-<p><line x1="60" y1="88" x2="740" y2="88" stroke="currentColor" stroke-width="2"></line></p>
-<p><polygon points="740,88 730,82 730,94" fill="currentColor"></polygon></p>
-<p><line x1="210" y1="79" x2="210" y2="97" stroke="currentColor" stroke-width="2"> <line x1="400" y1="79" x2="400" y2="97" stroke="currentColor" stroke-width="2"> <line x1="590" y1="79" x2="590" y2="97" stroke="currentColor" stroke-width="2"></line></line></line></p>
-<p><circle cx="210" cy="88" r="7" fill="white" stroke="#15803d" stroke-width="3"> <circle cx="400" cy="88" r="5" fill="#15803d"> <circle cx="590" cy="88" r="7" fill="white" stroke="#15803d" stroke-width="3"></circle></circle></circle></p>
-<p><g fill="currentColor" font-size="24" text-anchor="middle"> <text x="210" y="132">a − R</text> <text x="400" y="132">a</text> <text x="590" y="132">a + R</text> </g></p>
-<p><g font-size="21" text-anchor="middle"> <text x="400" y="48" fill="#15803d">Converges</text> <text x="118" y="48" fill="#dc2626">Diverges</text> <text x="682" y="48" fill="#dc2626">Diverges</text> </g></p>
-<text x="400" y="180" fill="currentColor" font-size="19" text-anchor="middle"> Endpoints must be tested separately. </text>
+<div style="width: 85%; margin: 25px auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 800 200" width="100%" height="200">
+</svg><p><!-- Convergence region --> <rect x="210" y="70" width="380" height="35" fill="#bbf7d0" opacity="0.7"></rect></p>
+<p><!-- Number line --> <line x1="60" y1="88" x2="740" y2="88" stroke="black" stroke-width="2"></line></p>
+<p><polygon points="740,88 730,82 730,94" fill="black"></polygon></p>
+<p><!-- Tick marks --> <line x1="210" y1="79" x2="210" y2="97" stroke="black" stroke-width="2"> <line x1="400" y1="79" x2="400" y2="97" stroke="black" stroke-width="2"> <line x1="590" y1="79" x2="590" y2="97" stroke="black" stroke-width="2"></line></line></line></p>
+<p><!-- Endpoints and center --> <circle cx="210" cy="88" r="7" fill="white" stroke="#15803d" stroke-width="3"> <circle cx="400" cy="88" r="5" fill="#15803d"> <circle cx="590" cy="88" r="7" fill="white" stroke="#15803d" stroke-width="3"></circle></circle></circle></p>
+<p><!-- Labels --> <g fill="black" font-size="24" text-anchor="middle"> <text x="210" y="132">a - R</text> <text x="400" y="132">a</text> <text x="590" y="132">a + R</text> </g></p>
+<p><!-- Regions --> <g font-size="21" text-anchor="middle"> <text x="400" y="48" fill="#15803d">Converges</text> <text x="118" y="48" fill="#dc2626">Diverges</text> <text x="682" y="48" fill="#dc2626">Diverges</text> </g></p>
+<p><text x="400" y="180" fill="black" font-size="19" text-anchor="middle"> Endpoints must be tested separately. </text></p>
 
 </div>
 <p><strong>Important:</strong> The radius tells us where convergence is guaranteed, but not whether either endpoint belongs to the interval of convergence.</p>
@@ -377,104 +370,38 @@
 <li>Determine the values of <span class="math inline">\(x\)</span> for which <span class="math inline">\(\rho&lt;1\)</span>.</li>
 <li>Find the radius of convergence <span class="math inline">\(R\)</span>.</li>
 <li>Test the endpoints individually.</li>
-<li>State the interval of convergence.</li>
 </ol>
-<p><strong>Remember:</strong> The ratio test is inconclusive when <span class="math inline">\(\rho=1\)</span>.</p>
 </section>
 <section id="radius-example-1" class="slide level2">
 <h2>Radius Example 1</h2>
 <p><strong>Find the interval and radius of convergence.</strong></p>
 <p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}\frac{x^n}{n!}\)</span></p>
-<p><strong>Questions to consider:</strong></p>
-<ul>
-<li>What happens when we apply the ratio test?</li>
-<li>For which values of <span class="math inline">\(x\)</span> does the series converge?</li>
-<li>What is the radius of convergence?</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Work this example on the whiteboard.</p>
-</div>
-</div>
+<div class="fragment">
+<p><span class="math inline">\(R=\infty\)</span></p>
 </div>
 </section>
 <section id="radius-example-2" class="slide level2">
 <h2>Radius Example 2</h2>
 <p><strong>Find the interval and radius of convergence.</strong></p>
 <p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}n!x^n\)</span></p>
-<p><strong>Questions to consider:</strong></p>
-<ul>
-<li>How does this series compare with the previous example?</li>
-<li>What happens when we apply the ratio test for <span class="math inline">\(x\ne0\)</span>?</li>
-<li>What happens at <span class="math inline">\(x=0\)</span>?</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Work this example on the whiteboard.</p>
-</div>
-</div>
+<div class="fragment">
+<p><span class="math inline">\(R=0\)</span></p>
 </div>
 </section>
 <section id="radius-example-3" class="slide level2">
 <h2>Radius Example 3</h2>
 <p><strong>Find the interval and radius of convergence.</strong></p>
 <p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}\frac{(x-2)^n}{(n+1)3^n}\)</span></p>
-<p><strong>Questions to consider:</strong></p>
-<ul>
-<li>What is the center of the series?</li>
-<li>What is the radius of convergence?</li>
-<li>What happens at each endpoint?</li>
-<li>Which endpoints belong to the interval of convergence?</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Work this example on the whiteboard.</p>
-</div>
-</div>
-</div>
 </section>
-<section id="day-1-exit-question" class="slide level2">
-<h2>Day 1: Exit Question</h2>
-<p>A power series centered at <span class="math inline">\(x=2\)</span> converges at <span class="math inline">\(x=5\)</span>.</p>
-<p><strong>Which of the following must be true?</strong></p>
-<p>A. The series converges at <span class="math inline">\(x=0\)</span>.</p>
-<p>B. The series converges at <span class="math inline">\(x=6\)</span>.</p>
-<p>C. The series converges at <span class="math inline">\(x=-1\)</span>.</p>
-<p>D. The series diverges at <span class="math inline">\(x=-2\)</span>.</p>
-<p><strong>Explain your reasoning.</strong></p>
-</section>
-<section id="day-2-representing-functions-as-power-series" class="slide level2">
-<h2>Day 2: Representing Functions as Power Series</h2>
-<p><strong>Recall from our previous session:</strong></p>
+<section id="representing-functions-as-power-series" class="slide level2">
+<h2>Representing Functions as Power Series</h2>
+<p><strong>Summary</strong></p>
 <ul>
 <li>A power series is an infinite polynomial.</li>
 <li>Every power series has a radius of convergence.</li>
-<li>A function can sometimes be represented by a power series.</li>
+<li>A function can be represented by a power series where the power series converges.</li>
 </ul>
-<p><strong>Today’s question:</strong></p>
-<p>How can we construct a power series representation of a function?</p>
-<p>We will start with a familiar series and use algebra to create new representations.</p>
+<p>Given a function, how can we construct a power series representation of a function? Where is the power series represenation valid?</p>
 </section>
 <section id="recall-geometric-series" class="slide level2">
 <h2>Recall: Geometric Series</h2>
@@ -507,84 +434,26 @@
 </section>
 <section id="example-1" class="slide level2">
 <h2>Example 1</h2>
-<p><strong>Represent the function as a power series and find the interval of convergence.</strong></p>
 <p><span class="math inline">\(\displaystyle f(x)=\frac{1}{1+x^3}\)</span></p>
-<p><strong>Questions to consider:</strong></p>
-<ul>
-<li>How can we rewrite the denominator as <span class="math inline">\(1-r\)</span>?</li>
-<li>What is the common ratio <span class="math inline">\(r\)</span>?</li>
-<li>What are the first four nonzero terms?</li>
-<li>For which values of <span class="math inline">\(x\)</span> does the series converge?</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Work this example on the whiteboard.</p>
-</div>
-</div>
-</div>
+<p>. .</p>
 </section>
 <section id="example-2" class="slide level2">
 <h2>Example 2</h2>
 <p><strong>Represent the function as a power series and find the interval of convergence.</strong></p>
 <p><span class="math inline">\(\displaystyle f(x)=\frac{x^2}{4-x^2}\)</span></p>
-<p><strong>Questions to consider:</strong></p>
-<ul>
-<li>How can we rewrite the function using the geometric series formula?</li>
-<li>What is the common ratio <span class="math inline">\(r\)</span>?</li>
-<li>How do we handle the factor outside the geometric series?</li>
-<li>What is the interval of convergence?</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Work this example on the whiteboard.</p>
-</div>
-</div>
-</div>
 </section>
 <section id="activity-the-power-series-factory" class="slide level2">
 <h2>Activity: The Power Series Factory</h2>
-<p>Recall that</p>
-<p><span class="math inline">\(\displaystyle \frac{1}{1-x}=\sum_{n=0}^{\infty}x^n\)</span> for <span class="math inline">\(|x|&lt;1\)</span>.</p>
-<p><strong>Working with a partner:</strong></p>
-<p>Use this geometric series to find a power series representation for each function.</p>
+<p>Find a power series representation for each function.</p>
 <ol type="1">
 <li><p><span class="math inline">\(\displaystyle f(x)=\frac{1}{1+x}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle g(x)=\frac{1}{1-2x}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle h(x)=\frac{1}{1+x^2}\)</span></p></li>
 </ol>
-<p>For each function:</p>
-<ul>
-<li>Write the first four nonzero terms.</li>
-<li>Express the series using summation notation.</li>
-<li>Determine the interval of convergence.</li>
-</ul>
 </section>
 <section id="activity-create-your-own-power-series" class="slide level2">
 <h2>Activity: Create Your Own Power Series</h2>
-<p><strong>Challenge:</strong></p>
 <p>Create a rational function whose power series representation has radius of convergence <span class="math inline">\(R=3\)</span>.</p>
-<p>Your response should include:</p>
-<ol type="1">
-<li>A rational function <span class="math inline">\(f(x)\)</span>.</li>
-<li>A power series representation of <span class="math inline">\(f(x)\)</span>.</li>
-<li>The interval of convergence.</li>
-<li>An explanation of why the radius of convergence is <span class="math inline">\(R=3\)</span>.</li>
-</ol>
-<p><strong>Discuss:</strong> Can two different rational functions have the same radius of convergence?</p>
 </section>
 <section id="example-3" class="slide level2">
 <h2>Example 3</h2>
@@ -624,17 +493,6 @@
 <li>The radius of convergence.</li>
 <li>The interval of convergence.</li>
 </ul>
-</section>
-<section id="day-2-exit-question" class="slide level2">
-<h2>Day 2: Exit Question</h2>
-<p>Find the interval of convergence of the geometric power series representing</p>
-<p><span class="math inline">\(\displaystyle f(x)=\frac{1}{1-4x^2}\)</span></p>
-<p><strong>Choose the correct answer:</strong></p>
-<p>A. <span class="math inline">\((-2,2)\)</span></p>
-<p>B. <span class="math inline">\((-\frac12,\frac12)\)</span></p>
-<p>C. <span class="math inline">\((-\frac14,\frac14)\)</span></p>
-<p>D. <span class="math inline">\((-1,1)\)</span></p>
-<p><strong>Explain how you determined the interval.</strong></p>
 </section>
 <section class="slide level2">
 
