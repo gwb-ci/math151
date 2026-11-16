@@ -7485,7 +7485,18 @@
     "href": "classes/24/slides.html#proof-of-theorem-6.1",
     "title": "Power Series and Functions",
     "section": "Proof of Theorem 6.1",
-    "text": "Proof of Theorem 6.1\nKey fact: If \\(\\displaystyle \\sum_{n=0}^{\\infty}c_nd^n\\) converges for some \\(d\\ne0\\), then \\(\\displaystyle \\sum_{n=0}^{\\infty}c_nx^n\\) converges absolutely for \\(|x|&lt;|d|\\).\nSince \\(\\sum c_nd^n\\) converges, \\(c_nd^n\\to0\\).\nThus, for sufficiently large \\(n\\), \\(|c_nd^n|\\le1\\).\nConsequently,\n\\(\\displaystyle |c_nx^n|=|c_nd^n|\\left|\\frac{x}{d}\\right|^n\n\\le\\left|\\frac{x}{d}\\right|^n\\)\nThe geometric series \\(\\displaystyle \\sum\\left|\\frac{x}{d}\\right|^n\\) converges whenever \\(|x|&lt;|d|\\).\nBy the comparison test, \\(\\sum c_nx^n\\) converges absolutely.\nFor a general center \\(a\\), substitute \\(y=x-a\\).",
+    "text": "Proof of Theorem 6.1\nKey fact: If \\(\\displaystyle \\sum_{n=0}^{\\infty}c_nd^n\\) converges for some \\(d\\ne0\\), then \\(\\displaystyle \\sum_{n=0}^{\\infty}c_nx^n\\) converges absolutely for \\(|x|&lt;|d|\\).\nSince \\(\\sum c_nd^n\\) converges, \\(c_nd^n\\to0\\).\nThus, for sufficiently large \\(n\\), \\(|c_nd^n|\\le1\\).",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/24/slides.html#proof-of-theorem-6.1-continued",
+    "href": "classes/24/slides.html#proof-of-theorem-6.1-continued",
+    "title": "Power Series and Functions",
+    "section": "Proof of Theorem 6.1 Continued",
+    "text": "Proof of Theorem 6.1 Continued\n\\(\\displaystyle |c_nx^n|=|c_nd^n|\\left|\\frac{x}{d}\\right|^n\n\\le\\left|\\frac{x}{d}\\right|^n\\)\nThe geometric series \\(\\displaystyle \\sum\\left|\\frac{x}{d}\\right|^n\\) converges whenever \\(|x|&lt;|d|\\).\nBy the comparison test, \\(\\sum c_nx^n\\) converges absolutely.",
     "crumbs": [
       "Class Material",
       "Power Series and Functions"
@@ -7518,7 +7529,7 @@
     "href": "classes/24/slides.html#visualizing-the-radius-of-convergence",
     "title": "Power Series and Functions",
     "section": "Visualizing the Radius of Convergence",
-    "text": "Visualizing the Radius of Convergence\nFor a power series centered at \\(x=a\\) with \\(0&lt;R&lt;\\infty\\):\n\n\n \n \n\n   \n   \n  a - R a a + R \n  Converges Diverges Diverges \n Endpoints must be tested separately. \n\n\nImportant: The radius tells us where convergence is guaranteed, but not whether either endpoint belongs to the interval of convergence.",
+    "text": "Visualizing the Radius of Convergence\nFor a power series centered at \\(x=a\\) with \\(0&lt;R&lt;\\infty\\):\n\n\n\n\n  \n  \n\n  \n  \n\n  \n\n  \n  \n\n  \n\n  \n\n  \n  \n\n  \n\n  \n\n  \n  \n    a - R\n    a\n    a + R\n  \n\n  \n  \n    Converges\n    Diverges\n    Diverges\n  \n\n  \n    Endpoints must be tested separately.\n  \n\n\n\nImportant: The radius tells us where convergence is guaranteed, but not whether either endpoint belongs to the interval of convergence.",
     "crumbs": [
       "Class Material",
       "Power Series and Functions"
@@ -7562,7 +7573,7 @@
     "href": "classes/24/slides.html#radius-example-3",
     "title": "Power Series and Functions",
     "section": "Radius Example 3",
-    "text": "Radius Example 3\nFind the interval and radius of convergence.\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\frac{(x-2)^n}{(n+1)3^n}\\)",
+    "text": "Radius Example 3\nFind the interval and radius of convergence.\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\frac{(x-2)^n}{(n+1)3^n}\\)\n\n\\(R=3\\)",
     "crumbs": [
       "Class Material",
       "Power Series and Functions"
@@ -7573,18 +7584,18 @@
     "href": "classes/24/slides.html#representing-functions-as-power-series",
     "title": "Power Series and Functions",
     "section": "Representing Functions as Power Series",
-    "text": "Representing Functions as Power Series\nSummary\n\nA power series is an infinite polynomial.\nEvery power series has a radius of convergence.\nA function can be represented by a power series where the power series converges.\n\nGiven a function, how can we construct a power series representation of a function? Where is the power series represenation valid?",
+    "text": "Representing Functions as Power Series\n\nA power series is an infinite polynomial.\nEvery power series has a radius of convergence.\nA function can be represented by a power series where the power series converges.\n\nGiven a function, how can we construct a power series representation of a function? Where is the power series represenation valid?",
     "crumbs": [
       "Class Material",
       "Power Series and Functions"
     ]
   },
   {
-    "objectID": "classes/24/slides.html#recall-geometric-series",
-    "href": "classes/24/slides.html#recall-geometric-series",
+    "objectID": "classes/24/slides.html#use-geometric-series",
+    "href": "classes/24/slides.html#use-geometric-series",
     "title": "Power Series and Functions",
-    "section": "Recall: Geometric Series",
-    "text": "Recall: Geometric Series\nA geometric series is a series of the form\n\\(\\displaystyle \\sum_{n=0}^{\\infty}ar^n=a+ar+ar^2+ar^3+\\cdots\\)\nwhere \\(a\\) is the first term and \\(r\\) is the common ratio.\n\nIf \\(|r|&lt;1\\), the series converges, and\n\\(\\displaystyle \\sum_{n=0}^{\\infty}ar^n=\\frac{a}{1-r}\\)\nIf \\(|r|\\geq1\\) and \\(a\\ne0\\), the series diverges.\n\nSpecial case: When \\(a=1\\),\n\\(\\displaystyle \\frac{1}{1-r}=\\sum_{n=0}^{\\infty}r^n\\)\nfor \\(|r|&lt;1\\).",
+    "section": "Use Geometric Series",
+    "text": "Use Geometric Series\nA geometric series is a series of the form\n\\(\\displaystyle \\sum_{n=0}^{\\infty}ar^n=a+ar+ar^2+ar^3+\\cdots\\)\n\nIf \\(|r|&lt;1\\), the series converges, and\n\\(\\displaystyle \\sum_{n=0}^{\\infty}ar^n=\\frac{a}{1-r}\\)\nIf \\(|r|\\geq1\\) and \\(a\\ne0\\), the series diverges.",
     "crumbs": [
       "Class Material",
       "Power Series and Functions"
@@ -7595,7 +7606,7 @@
     "href": "classes/24/slides.html#rational-functions-as-power-series",
     "title": "Power Series and Functions",
     "section": "Rational Functions as Power Series",
-    "text": "Rational Functions as Power Series\nRecall the geometric series formula:\n\\(\\displaystyle \\frac{1}{1-r}=\\sum_{n=0}^{\\infty}r^n\n=1+r+r^2+r^3+\\cdots\\)\nfor \\(|r|&lt;1\\).\nWe can use this formula to represent certain rational functions as power series.\nStrategy:\n\nRewrite the function in the form \\(\\frac{A}{1-r}\\).\nIdentify the geometric ratio \\(r\\).\nSubstitute into the geometric series formula.\nSolve \\(|r|&lt;1\\) to determine the interval of convergence.",
+    "text": "Rational Functions as Power Series\nRecall the geometric series formula:\nStrategy:\n\nRewrite the function in the form \\(\\frac{a}{1-r}\\).\nIdentify the geometric ratio \\(r\\).\nSubstitute into the geometric series formula.\nSolve \\(|r|&lt;1\\) to determine the interval of convergence.",
     "crumbs": [
       "Class Material",
       "Power Series and Functions"
@@ -7606,7 +7617,7 @@
     "href": "classes/24/slides.html#example-1",
     "title": "Power Series and Functions",
     "section": "Example 1",
-    "text": "Example 1\n\\(\\displaystyle f(x)=\\frac{1}{1+x^3}\\)\n. .",
+    "text": "Example 1\nRewrite as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{1}{1+x^3}\\)",
     "crumbs": [
       "Class Material",
       "Power Series and Functions"
@@ -7617,29 +7628,7 @@
     "href": "classes/24/slides.html#example-2",
     "title": "Power Series and Functions",
     "section": "Example 2",
-    "text": "Example 2\nRepresent the function as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{x^2}{4-x^2}\\)",
-    "crumbs": [
-      "Class Material",
-      "Power Series and Functions"
-    ]
-  },
-  {
-    "objectID": "classes/24/slides.html#activity-the-power-series-factory",
-    "href": "classes/24/slides.html#activity-the-power-series-factory",
-    "title": "Power Series and Functions",
-    "section": "Activity: The Power Series Factory",
-    "text": "Activity: The Power Series Factory\nFind a power series representation for each function.\n\n\\(\\displaystyle f(x)=\\frac{1}{1+x}\\)\n\\(\\displaystyle g(x)=\\frac{1}{1-2x}\\)\n\\(\\displaystyle h(x)=\\frac{1}{1+x^2}\\)",
-    "crumbs": [
-      "Class Material",
-      "Power Series and Functions"
-    ]
-  },
-  {
-    "objectID": "classes/24/slides.html#activity-create-your-own-power-series",
-    "href": "classes/24/slides.html#activity-create-your-own-power-series",
-    "title": "Power Series and Functions",
-    "section": "Activity: Create Your Own Power Series",
-    "text": "Activity: Create Your Own Power Series\nCreate a rational function whose power series representation has radius of convergence \\(R=3\\).",
+    "text": "Example 2\nRewrite as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{x^2}{4-x^2}\\)",
     "crumbs": [
       "Class Material",
       "Power Series and Functions"
@@ -7650,18 +7639,18 @@
     "href": "classes/24/slides.html#example-3",
     "title": "Power Series and Functions",
     "section": "Example 3",
-    "text": "Example 3\nRepresent the function as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{x^3}{2-x}\\)\nQuestions to consider:\n\nHow do we rewrite the function using \\(\\frac{1}{1-r}\\)?\nWhat is the common ratio \\(r\\)?\nHow does the factor \\(x^3\\) affect the power series?\nWhat is the interval of convergence?\n\n\n\n\n\n\n\nNote\n\n\nWork this example on the whiteboard.",
+    "text": "Example 3\nRewrite as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{x^3}{2-x}\\)",
     "crumbs": [
       "Class Material",
       "Power Series and Functions"
     ]
   },
   {
-    "objectID": "classes/24/slides.html#challenge-change-the-center",
-    "href": "classes/24/slides.html#challenge-change-the-center",
+    "objectID": "classes/24/slides.html#activity-the-power-series-factory",
+    "href": "classes/24/slides.html#activity-the-power-series-factory",
     "title": "Power Series and Functions",
-    "section": "Challenge: Change the Center",
-    "text": "Challenge: Change the Center\nFind a power series representation of\n\\(\\displaystyle f(x)=\\frac{1}{3-x}\\)\ncentered at \\(x=1\\).\nHint: Rewrite the denominator in terms of \\((x-1)\\).\nDetermine:\n\nThe power series representation.\nThe center of the series.\nThe radius of convergence.\nThe interval of convergence.",
+    "section": "Activity: The Power Series Factory",
+    "text": "Activity: The Power Series Factory\nFind a power series representation for each function. What is the radius of convergence?\n\n\\(\\displaystyle f(x)=\\frac{1}{1+x}\\)\n\\(\\displaystyle g(x)=\\frac{1}{1-2x}\\)\n\\(\\displaystyle h(x)=\\frac{1}{1+x^2}\\)",
     "crumbs": [
       "Class Material",
       "Power Series and Functions"

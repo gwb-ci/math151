@@ -201,7 +201,9 @@ Since $\sum c_nd^n$ converges, $c_nd^n\to0$.
 
 Thus, for sufficiently large $n$, $|c_nd^n|\le1$.
 
-Consequently,
+---
+
+## Proof of Theorem 6.1 Continued
 
 $\displaystyle |c_nx^n|=|c_nd^n|\left|\frac{x}{d}\right|^n
 \le\left|\frac{x}{d}\right|^n$
@@ -210,7 +212,6 @@ The geometric series $\displaystyle \sum\left|\frac{x}{d}\right|^n$ converges wh
 
 By the comparison test, $\sum c_nx^n$ converges absolutely.
 
-For a general center $a$, substitute $y=x-a$.
 
 ---
 
@@ -247,68 +248,79 @@ Special cases:
 ---
 
 
+
 ## Visualizing the Radius of Convergence
 
 For a power series centered at $x=a$ with $0<R<\infty$:
 
-<div style="width: 85%; margin: 25px auto;">
+```{=html}
+<div style="width: 85%; margin: 15px auto;">
 
 <svg xmlns="http://www.w3.org/2000/svg"
      viewBox="0 0 800 200"
-     width="100%" height="200">
+     width="100%"
+     height="200">
 
-  <!-- Convergence region -->
-  <rect x="210" y="70" width="380" height="35"
+  <!-- Shaded convergence region -->
+  <rect x="210" y="75" width="380" height="30"
         fill="#bbf7d0" opacity="0.7"/>
 
   <!-- Number line -->
-  <line x1="60" y1="88" x2="740" y2="88"
-        stroke="black" stroke-width="2"/>
+  <line x1="60" y1="90" x2="740" y2="90"
+        stroke="#526b76" stroke-width="3"/>
 
-  <polygon points="740,88 730,82 730,94"
-           fill="black"/>
+  <polygon points="740,90 728,83 728,97"
+           fill="#526b76"/>
 
   <!-- Tick marks -->
-  <line x1="210" y1="79" x2="210" y2="97"
-        stroke="black" stroke-width="2"/>
-  <line x1="400" y1="79" x2="400" y2="97"
-        stroke="black" stroke-width="2"/>
-  <line x1="590" y1="79" x2="590" y2="97"
-        stroke="black" stroke-width="2"/>
+  <line x1="210" y1="80" x2="210" y2="100"
+        stroke="#526b76" stroke-width="2"/>
+
+  <line x1="400" y1="80" x2="400" y2="100"
+        stroke="#526b76" stroke-width="2"/>
+
+  <line x1="590" y1="80" x2="590" y2="100"
+        stroke="#526b76" stroke-width="2"/>
 
   <!-- Endpoints and center -->
-  <circle cx="210" cy="88" r="7"
-          fill="white" stroke="#15803d" stroke-width="3"/>
-  <circle cx="400" cy="88" r="5" fill="#15803d"/>
-  <circle cx="590" cy="88" r="7"
-          fill="white" stroke="#15803d" stroke-width="3"/>
+  <circle cx="210" cy="90" r="8"
+          fill="#fff8e7" stroke="#15803d" stroke-width="3"/>
 
-  <!-- Labels -->
-  <g fill="black" font-size="24" text-anchor="middle">
-    <text x="210" y="132">a - R</text>
-    <text x="400" y="132">a</text>
-    <text x="590" y="132">a + R</text>
+  <circle cx="400" cy="90" r="5"
+          fill="#15803d"/>
+
+  <circle cx="590" cy="90" r="8"
+          fill="#fff8e7" stroke="#15803d" stroke-width="3"/>
+
+  <!-- Number line labels -->
+  <g fill="#526b76" font-size="25" text-anchor="middle">
+    <text x="210" y="140">a - R</text>
+    <text x="400" y="140">a</text>
+    <text x="590" y="140">a + R</text>
   </g>
 
-  <!-- Regions -->
-  <g font-size="21" text-anchor="middle">
-    <text x="400" y="48" fill="#15803d">Converges</text>
-    <text x="118" y="48" fill="#dc2626">Diverges</text>
-    <text x="682" y="48" fill="#dc2626">Diverges</text>
+  <!-- Convergence labels -->
+  <g font-size="22" text-anchor="middle">
+    <text x="400" y="55" fill="#15803d">Converges</text>
+    <text x="120" y="55" fill="#dc2626">Diverges</text>
+    <text x="680" y="55" fill="#dc2626">Diverges</text>
   </g>
 
-  <text x="400" y="180" fill="black"
-        font-size="19" text-anchor="middle">
+  <text x="400" y="185"
+        font-size="21"
+        fill="#526b76"
+        text-anchor="middle">
     Endpoints must be tested separately.
   </text>
 
 </svg>
-
 </div>
+```
 
 **Important:** The radius tells us where convergence is guaranteed, but not whether either endpoint belongs to the interval of convergence.
 
 ---
+
 
 
 ## Finding the Radius of Convergence
@@ -358,13 +370,14 @@ $\displaystyle \sum_{n=0}^{\infty}\frac{(x-2)^n}{(n+1)3^n}$
 
 . . . 
 
+$R=3$
+
 ---
 
 
 
 ## Representing Functions as Power Series
 
-**Summary**
 
 - A power series is an infinite polynomial.
 - Every power series has a radius of convergence.
@@ -377,13 +390,13 @@ Given a function, how can we construct a power series representation of a functi
 
 ---
 
-## Recall: Geometric Series
+## Use Geometric Series
 
 A **geometric series** is a series of the form
 
 $\displaystyle \sum_{n=0}^{\infty}ar^n=a+ar+ar^2+ar^3+\cdots$
 
-where $a$ is the first term and $r$ is the common ratio.
+
 
 - If $|r|<1$, the series converges, and
 
@@ -391,11 +404,7 @@ where $a$ is the first term and $r$ is the common ratio.
 
 - If $|r|\geq1$ and $a\ne0$, the series diverges.
 
-**Special case:** When $a=1$,
 
-$\displaystyle \frac{1}{1-r}=\sum_{n=0}^{\infty}r^n$
-
-for $|r|<1$.
 
 ---
 
@@ -403,16 +412,11 @@ for $|r|<1$.
 
 Recall the geometric series formula:
 
-$\displaystyle \frac{1}{1-r}=\sum_{n=0}^{\infty}r^n
-=1+r+r^2+r^3+\cdots$
 
-for $|r|<1$.
-
-We can use this formula to represent certain rational functions as power series.
 
 **Strategy:**
 
-1. Rewrite the function in the form $\frac{A}{1-r}$.
+1. Rewrite the function in the form $\frac{a}{1-r}$.
 2. Identify the geometric ratio $r$.
 3. Substitute into the geometric series formula.
 4. Solve $|r|<1$ to determine the interval of convergence.
@@ -421,26 +425,40 @@ We can use this formula to represent certain rational functions as power series.
 
 ## Example 1
 
+Rewrite as a power series and find the interval of convergence.
 
 $\displaystyle f(x)=\frac{1}{1+x^3}$
 
- . . 
+
 
 ---
 
 ## Example 2
 
-**Represent the function as a power series and find the interval of convergence.**
+Rewrite as a power series and find the interval of convergence.
 
 $\displaystyle f(x)=\frac{x^2}{4-x^2}$
 
-. . . 
+---
+
+
+
+
+
+## Example 3
+
+Rewrite as a power series and find the interval of convergence.
+
+$\displaystyle f(x)=\frac{x^3}{2-x}$
+
+
+
 
 ---
 
 ## Activity: The Power Series Factory
 
-Find a power series representation for each function.
+Find a power series representation for each function.  What is the radius of convergence?
 
 1. $\displaystyle f(x)=\frac{1}{1+x}$
 
@@ -450,53 +468,4 @@ Find a power series representation for each function.
 
 
 ---
-
-## Activity: Create Your Own Power Series
-
-
-
-Create a rational function whose power series representation has radius of convergence $R=3$.
-
-
-
----
-
-## Example 3
-
-**Represent the function as a power series and find the interval of convergence.**
-
-$\displaystyle f(x)=\frac{x^3}{2-x}$
-
-**Questions to consider:**
-
-- How do we rewrite the function using $\frac{1}{1-r}$?
-- What is the common ratio $r$?
-- How does the factor $x^3$ affect the power series?
-- What is the interval of convergence?
-
-::: {.callout-note}
-Work this example on the whiteboard.
-:::
-
----
-
-## Challenge: Change the Center
-
-Find a power series representation of
-
-$\displaystyle f(x)=\frac{1}{3-x}$
-
-centered at $x=1$.
-
-**Hint:** Rewrite the denominator in terms of $(x-1)$.
-
-Determine:
-
-- The power series representation.
-- The center of the series.
-- The radius of convergence.
-- The interval of convergence.
-
----
-
 

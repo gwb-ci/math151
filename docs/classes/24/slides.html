@@ -311,12 +311,13 @@
 <p><strong>Key fact:</strong> If <span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}c_nd^n\)</span> converges for some <span class="math inline">\(d\ne0\)</span>, then <span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}c_nx^n\)</span> converges absolutely for <span class="math inline">\(|x|&lt;|d|\)</span>.</p>
 <p>Since <span class="math inline">\(\sum c_nd^n\)</span> converges, <span class="math inline">\(c_nd^n\to0\)</span>.</p>
 <p>Thus, for sufficiently large <span class="math inline">\(n\)</span>, <span class="math inline">\(|c_nd^n|\le1\)</span>.</p>
-<p>Consequently,</p>
+</section>
+<section id="proof-of-theorem-6.1-continued" class="slide level2">
+<h2>Proof of Theorem 6.1 Continued</h2>
 <p><span class="math inline">\(\displaystyle |c_nx^n|=|c_nd^n|\left|\frac{x}{d}\right|^n
 \le\left|\frac{x}{d}\right|^n\)</span></p>
 <p>The geometric series <span class="math inline">\(\displaystyle \sum\left|\frac{x}{d}\right|^n\)</span> converges whenever <span class="math inline">\(|x|&lt;|d|\)</span>.</p>
 <p>By the comparison test, <span class="math inline">\(\sum c_nx^n\)</span> converges absolutely.</p>
-<p>For a general center <span class="math inline">\(a\)</span>, substitute <span class="math inline">\(y=x-a\)</span>.</p>
 </section>
 <section id="what-does-theorem-6.1-tell-us" class="slide level2">
 <h2>What Does Theorem 6.1 Tell Us?</h2>
@@ -347,17 +348,51 @@
 <section id="visualizing-the-radius-of-convergence" class="slide level2">
 <h2>Visualizing the Radius of Convergence</h2>
 <p>For a power series centered at <span class="math inline">\(x=a\)</span> with <span class="math inline">\(0&lt;R&lt;\infty\)</span>:</p>
-<div style="width: 85%; margin: 25px auto;">
-<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 800 200" width="100%" height="200">
-</svg><p><!-- Convergence region --> <rect x="210" y="70" width="380" height="35" fill="#bbf7d0" opacity="0.7"></rect></p>
-<p><!-- Number line --> <line x1="60" y1="88" x2="740" y2="88" stroke="black" stroke-width="2"></line></p>
-<p><polygon points="740,88 730,82 730,94" fill="black"></polygon></p>
-<p><!-- Tick marks --> <line x1="210" y1="79" x2="210" y2="97" stroke="black" stroke-width="2"> <line x1="400" y1="79" x2="400" y2="97" stroke="black" stroke-width="2"> <line x1="590" y1="79" x2="590" y2="97" stroke="black" stroke-width="2"></line></line></line></p>
-<p><!-- Endpoints and center --> <circle cx="210" cy="88" r="7" fill="white" stroke="#15803d" stroke-width="3"> <circle cx="400" cy="88" r="5" fill="#15803d"> <circle cx="590" cy="88" r="7" fill="white" stroke="#15803d" stroke-width="3"></circle></circle></circle></p>
-<p><!-- Labels --> <g fill="black" font-size="24" text-anchor="middle"> <text x="210" y="132">a - R</text> <text x="400" y="132">a</text> <text x="590" y="132">a + R</text> </g></p>
-<p><!-- Regions --> <g font-size="21" text-anchor="middle"> <text x="400" y="48" fill="#15803d">Converges</text> <text x="118" y="48" fill="#dc2626">Diverges</text> <text x="682" y="48" fill="#dc2626">Diverges</text> </g></p>
-<p><text x="400" y="180" fill="black" font-size="19" text-anchor="middle"> Endpoints must be tested separately. </text></p>
+<div style="width: 85%; margin: 15px auto;">
 
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 800 200" width="100%" height="200">
+
+  <!-- Shaded convergence region -->
+  <rect x="210" y="75" width="380" height="30" fill="#bbf7d0" opacity="0.7"></rect>
+
+  <!-- Number line -->
+  <line x1="60" y1="90" x2="740" y2="90" stroke="#526b76" stroke-width="3"></line>
+
+  <polygon points="740,90 728,83 728,97" fill="#526b76"></polygon>
+
+  <!-- Tick marks -->
+  <line x1="210" y1="80" x2="210" y2="100" stroke="#526b76" stroke-width="2"></line>
+
+  <line x1="400" y1="80" x2="400" y2="100" stroke="#526b76" stroke-width="2"></line>
+
+  <line x1="590" y1="80" x2="590" y2="100" stroke="#526b76" stroke-width="2"></line>
+
+  <!-- Endpoints and center -->
+  <circle cx="210" cy="90" r="8" fill="#fff8e7" stroke="#15803d" stroke-width="3"></circle>
+
+  <circle cx="400" cy="90" r="5" fill="#15803d"></circle>
+
+  <circle cx="590" cy="90" r="8" fill="#fff8e7" stroke="#15803d" stroke-width="3"></circle>
+
+  <!-- Number line labels -->
+  <g fill="#526b76" font-size="25" text-anchor="middle">
+    <text x="210" y="140">a - R</text>
+    <text x="400" y="140">a</text>
+    <text x="590" y="140">a + R</text>
+  </g>
+
+  <!-- Convergence labels -->
+  <g font-size="22" text-anchor="middle">
+    <text x="400" y="55" fill="#15803d">Converges</text>
+    <text x="120" y="55" fill="#dc2626">Diverges</text>
+    <text x="680" y="55" fill="#dc2626">Diverges</text>
+  </g>
+
+  <text x="400" y="185" font-size="21" fill="#526b76" text-anchor="middle">
+    Endpoints must be tested separately.
+  </text>
+
+</svg>
 </div>
 <p><strong>Important:</strong> The radius tells us where convergence is guaranteed, but not whether either endpoint belongs to the interval of convergence.</p>
 </section>
@@ -392,10 +427,12 @@
 <h2>Radius Example 3</h2>
 <p><strong>Find the interval and radius of convergence.</strong></p>
 <p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}\frac{(x-2)^n}{(n+1)3^n}\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(R=3\)</span></p>
+</div>
 </section>
 <section id="representing-functions-as-power-series" class="slide level2">
 <h2>Representing Functions as Power Series</h2>
-<p><strong>Summary</strong></p>
 <ul>
 <li>A power series is an infinite polynomial.</li>
 <li>Every power series has a radius of convergence.</li>
@@ -403,30 +440,22 @@
 </ul>
 <p>Given a function, how can we construct a power series representation of a function? Where is the power series represenation valid?</p>
 </section>
-<section id="recall-geometric-series" class="slide level2">
-<h2>Recall: Geometric Series</h2>
+<section id="use-geometric-series" class="slide level2">
+<h2>Use Geometric Series</h2>
 <p>A <strong>geometric series</strong> is a series of the form</p>
 <p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}ar^n=a+ar+ar^2+ar^3+\cdots\)</span></p>
-<p>where <span class="math inline">\(a\)</span> is the first term and <span class="math inline">\(r\)</span> is the common ratio.</p>
 <ul>
 <li><p>If <span class="math inline">\(|r|&lt;1\)</span>, the series converges, and</p>
 <p><span class="math inline">\(\displaystyle \sum_{n=0}^{\infty}ar^n=\frac{a}{1-r}\)</span></p></li>
 <li><p>If <span class="math inline">\(|r|\geq1\)</span> and <span class="math inline">\(a\ne0\)</span>, the series diverges.</p></li>
 </ul>
-<p><strong>Special case:</strong> When <span class="math inline">\(a=1\)</span>,</p>
-<p><span class="math inline">\(\displaystyle \frac{1}{1-r}=\sum_{n=0}^{\infty}r^n\)</span></p>
-<p>for <span class="math inline">\(|r|&lt;1\)</span>.</p>
 </section>
 <section id="rational-functions-as-power-series" class="slide level2">
 <h2>Rational Functions as Power Series</h2>
 <p>Recall the geometric series formula:</p>
-<p><span class="math inline">\(\displaystyle \frac{1}{1-r}=\sum_{n=0}^{\infty}r^n
-=1+r+r^2+r^3+\cdots\)</span></p>
-<p>for <span class="math inline">\(|r|&lt;1\)</span>.</p>
-<p>We can use this formula to represent certain rational functions as power series.</p>
 <p><strong>Strategy:</strong></p>
 <ol type="1">
-<li>Rewrite the function in the form <span class="math inline">\(\frac{A}{1-r}\)</span>.</li>
+<li>Rewrite the function in the form <span class="math inline">\(\frac{a}{1-r}\)</span>.</li>
 <li>Identify the geometric ratio <span class="math inline">\(r\)</span>.</li>
 <li>Substitute into the geometric series formula.</li>
 <li>Solve <span class="math inline">\(|r|&lt;1\)</span> to determine the interval of convergence.</li>
@@ -434,65 +463,27 @@
 </section>
 <section id="example-1" class="slide level2">
 <h2>Example 1</h2>
+<p>Rewrite as a power series and find the interval of convergence.</p>
 <p><span class="math inline">\(\displaystyle f(x)=\frac{1}{1+x^3}\)</span></p>
-<p>. .</p>
 </section>
 <section id="example-2" class="slide level2">
 <h2>Example 2</h2>
-<p><strong>Represent the function as a power series and find the interval of convergence.</strong></p>
+<p>Rewrite as a power series and find the interval of convergence.</p>
 <p><span class="math inline">\(\displaystyle f(x)=\frac{x^2}{4-x^2}\)</span></p>
+</section>
+<section id="example-3" class="slide level2">
+<h2>Example 3</h2>
+<p>Rewrite as a power series and find the interval of convergence.</p>
+<p><span class="math inline">\(\displaystyle f(x)=\frac{x^3}{2-x}\)</span></p>
 </section>
 <section id="activity-the-power-series-factory" class="slide level2">
 <h2>Activity: The Power Series Factory</h2>
-<p>Find a power series representation for each function.</p>
+<p>Find a power series representation for each function. What is the radius of convergence?</p>
 <ol type="1">
 <li><p><span class="math inline">\(\displaystyle f(x)=\frac{1}{1+x}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle g(x)=\frac{1}{1-2x}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle h(x)=\frac{1}{1+x^2}\)</span></p></li>
 </ol>
-</section>
-<section id="activity-create-your-own-power-series" class="slide level2">
-<h2>Activity: Create Your Own Power Series</h2>
-<p>Create a rational function whose power series representation has radius of convergence <span class="math inline">\(R=3\)</span>.</p>
-</section>
-<section id="example-3" class="slide level2">
-<h2>Example 3</h2>
-<p><strong>Represent the function as a power series and find the interval of convergence.</strong></p>
-<p><span class="math inline">\(\displaystyle f(x)=\frac{x^3}{2-x}\)</span></p>
-<p><strong>Questions to consider:</strong></p>
-<ul>
-<li>How do we rewrite the function using <span class="math inline">\(\frac{1}{1-r}\)</span>?</li>
-<li>What is the common ratio <span class="math inline">\(r\)</span>?</li>
-<li>How does the factor <span class="math inline">\(x^3\)</span> affect the power series?</li>
-<li>What is the interval of convergence?</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Work this example on the whiteboard.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="challenge-change-the-center" class="slide level2">
-<h2>Challenge: Change the Center</h2>
-<p>Find a power series representation of</p>
-<p><span class="math inline">\(\displaystyle f(x)=\frac{1}{3-x}\)</span></p>
-<p>centered at <span class="math inline">\(x=1\)</span>.</p>
-<p><strong>Hint:</strong> Rewrite the denominator in terms of <span class="math inline">\((x-1)\)</span>.</p>
-<p>Determine:</p>
-<ul>
-<li>The power series representation.</li>
-<li>The center of the series.</li>
-<li>The radius of convergence.</li>
-<li>The interval of convergence.</li>
-</ul>
 </section>
 <section class="slide level2">
 
