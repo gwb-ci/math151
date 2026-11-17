@@ -1,0 +1,761 @@
+---
+title: "Taylor Series"
+
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    include-after-body:
+      text: |
+        <script>
+        (function useMathJaxSVG() {
+          if (window.MathJax && MathJax.Hub) {
+            MathJax.Hub.Queue(
+              ["setRenderer", MathJax.Hub, "SVG"],
+              ["Rerender", MathJax.Hub]
+            );
+          } else {
+            window.setTimeout(useMathJaxSVG, 50);
+          }
+        })();
+        </script>
+---
+
+
+
+
+## Applications Taylor Series
+
+
+By the end of this lesson, you should be able to:
+
+1. Construct binomial series for functions of the form $(1+x)^p$.
+2. Use known Taylor series to construct series for other functions.
+3. Apply algebra, substitution, differentiation, and integration to power series.
+4. Use power series to find solutions to differential equations.
+5. Use Taylor series to approximate definite integrals that cannot be evaluated using elementary antiderivatives.
+6. Estimate the error in a series approximation.
+
+---
+
+## Review: Taylor and Maclaurin Series
+
+Recall that the **Taylor series** for $f(x)$ centered at $a$ is
+
+$$
+\boxed{
+\sum_{n=0}^{\infty}
+\frac{f^{(n)}(a)}{n!}(x-a)^n
+}
+$$
+
+A **Maclaurin series** is a Taylor series centered at $a=0$:
+
+$$
+\boxed{
+\sum_{n=0}^{\infty}
+\frac{f^{(n)}(0)}{n!}x^n
+}
+$$
+
+When the Taylor series converges to the function, we can use it to represent and approximate that function.
+
+---
+
+## Review: Common Maclaurin Series
+
+**Exponential:**
+
+$$
+e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}
+$$
+
+**Sine:**
+
+$$
+\sin x=\sum_{n=0}^{\infty}
+\frac{(-1)^nx^{2n+1}}{(2n+1)!}
+$$
+
+**Cosine:**
+
+$$
+\cos x=\sum_{n=0}^{\infty}
+\frac{(-1)^nx^{2n}}{(2n)!}
+$$
+
+These representations are valid for all real $x$.
+
+---
+
+## Review: More Maclaurin Series
+
+**Geometric:**
+
+$$
+\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n,
+\qquad |x|<1
+$$
+
+**Natural logarithm:**
+
+$$
+\ln(1+x)=
+\sum_{n=1}^{\infty}
+\frac{(-1)^{n+1}x^n}{n},
+\qquad -1<x\leq 1
+$$
+
+**Inverse tangent:**
+
+$$
+\arctan x=
+\sum_{n=0}^{\infty}
+\frac{(-1)^nx^{2n+1}}{2n+1},
+\qquad -1\leq x\leq 1
+$$
+
+**Question:** How can we use these series to represent other functions?
+
+---
+
+## Working with Taylor Series
+
+In Section 6.3, we learned how to calculate Taylor coefficients using derivatives.
+
+But finding many derivatives can be tedious.
+
+**Alternative strategy:**
+
+Start with a known Taylor series and construct a new one using:
+
+1. Algebraic operations
+2. Substitution
+3. Differentiation
+4. Integration
+
+We will also investigate two applications:
+
+- Solving differential equations
+- Evaluating nonelementary integrals
+
+---
+
+## The Binomial Theorem
+
+Recall the binomial expansion for a nonnegative integer $m$:
+
+$$
+(1+x)^m
+=
+\sum_{n=0}^{m}\binom{m}{n}x^n.
+$$
+
+The binomial coefficients are
+
+$$
+\binom{m}{n}
+=
+\frac{m!}{n!(m-n)!}.
+$$
+
+For example,
+
+$$
+(1+x)^3=1+3x+3x^2+x^3.
+$$
+
+**Question:** What happens if the exponent is not a nonnegative integer?
+
+---
+
+## Generalized Binomial Coefficients
+
+For any real number $p$, define
+
+$$
+\binom{p}{0}=1
+$$
+
+and, for $n\geq 1$,
+
+$$
+\boxed{
+\binom{p}{n}
+=
+\frac{p(p-1)(p-2)\cdots(p-n+1)}{n!}
+}
+$$
+
+For example,
+
+$$
+\binom{p}{1}=p
+$$
+
+$$
+\binom{p}{2}=\frac{p(p-1)}{2}
+$$
+
+$$
+\binom{p}{3}=\frac{p(p-1)(p-2)}{6}.
+$$
+
+These coefficients allow us to extend the binomial theorem.
+
+---
+
+## Definition: The Binomial Series
+
+For any real number $p$,
+
+$$
+\boxed{
+(1+x)^p=
+\sum_{n=0}^{\infty}\binom{p}{n}x^n
+}
+$$
+
+for $|x|<1$.
+
+Expanding:
+
+$$
+\begin{aligned}
+(1+x)^p={}&1+px\\
+&+\frac{p(p-1)}{2!}x^2\\
+&+\frac{p(p-1)(p-2)}{3!}x^3+\cdots
+\end{aligned}
+$$
+
+For $p$ not a nonnegative integer, the radius of convergence is $R=1$.
+
+Convergence at the endpoints depends on $p$.
+
+---
+
+## Example 1: A Binomial Series
+
+Find the Maclaurin series for
+
+$$
+f(x)=\sqrt{1+x}.
+$$
+
+Determine its radius of convergence.
+
+**Strategy:**
+
+1. Rewrite the function as $(1+x)^p$.
+2. Identify $p$.
+3. Compute the first four binomial coefficients.
+4. Write the first four nonzero terms.
+5. Express the result using sigma notation.
+
+---
+
+## Example 2: A Binomial Series
+
+Find the Maclaurin series for
+
+$$
+f(x)=\frac{1}{\sqrt{1+x}}.
+$$
+
+Determine its radius of convergence.
+
+**Questions:**
+
+1. What value of $p$ should we use?
+2. What are the first four terms?
+3. How do the coefficients compare with those for $\sqrt{1+x}$?
+
+---
+
+## Example 3: Approximating with a Binomial Series
+
+Use the third-degree Maclaurin polynomial for
+
+$$
+f(x)=\sqrt{1+x}
+$$
+
+to approximate
+
+$$
+\sqrt{1.2}.
+$$
+
+**Questions:**
+
+1. What value of $x$ corresponds to $\sqrt{1.2}$?
+2. What approximation does $P_3(x)$ give?
+3. How can Taylor's theorem be used to bound the error?
+
+---
+
+## Activity: The Binomial Series Factory
+
+Find the first four nonzero terms of the Maclaurin series for:
+
+1. $\displaystyle f(x)=(1+x)^{-2}$
+
+2. $\displaystyle g(x)=(1+x)^{1/3}$
+
+3. $\displaystyle h(x)=(1-2x)^{-1/2}$
+
+For each function:
+
+- Identify the exponent $p$.
+- Find the coefficients.
+- Determine the radius of convergence.
+
+---
+
+## Constructing New Taylor Series
+
+Suppose
+
+$$
+f(x)=\sum_{n=0}^{\infty}c_nx^n.
+$$
+
+We can replace $x$ by another expression, such as $bx^m$:
+
+$$
+\boxed{
+f(bx^m)=
+\sum_{n=0}^{\infty}c_nb^nx^{mn}
+}
+$$
+
+**Important:**
+
+The resulting series is valid whenever the substituted expression lies in the interval where the original series represents $f$.
+
+---
+
+## Example 4: Substitution into a Known Series
+
+Find the Maclaurin series for
+
+$$
+f(x)=e^{-x^2}.
+$$
+
+**Strategy:**
+
+1. Start with the Maclaurin series for $e^x$.
+2. Replace $x$ with $-x^2$.
+3. Simplify the general term.
+4. Determine the radius of convergence.
+
+---
+
+## Example 5: Substitution into a Known Series
+
+Find a Maclaurin series representation for
+
+$$
+f(x)=\sin(x^2).
+$$
+
+**Questions:**
+
+1. What known series should we use?
+2. How do the exponents change after substitution?
+3. What are the first four nonzero terms?
+4. What is the radius of convergence?
+
+---
+
+## Differentiating Known Taylor Series
+
+Recall that
+
+$$
+f(x)=\sum_{n=0}^{\infty}c_nx^n
+$$
+
+can be differentiated term by term inside its radius of convergence:
+
+$$
+\boxed{
+f'(x)=
+\sum_{n=1}^{\infty}nc_nx^{n-1}
+}
+$$
+
+The differentiated series has the same radius of convergence.
+
+**Question:**
+
+When would differentiation be easier than computing Taylor coefficients directly?
+
+---
+
+## Example 6: Differentiating a Known Series
+
+Use the geometric series
+
+$$
+\frac{1}{1-x}=
+\sum_{n=0}^{\infty}x^n
+$$
+
+to find a power series representation for
+
+$$
+f(x)=\frac{1}{(1-x)^3}.
+$$
+
+**Strategy:**
+
+1. Differentiate the geometric series.
+2. Differentiate a second time.
+3. Adjust the constant factor.
+4. Determine the interval of convergence.
+
+---
+
+## Integrating Known Taylor Series
+
+Recall that a power series can be integrated term by term:
+
+$$
+\boxed{
+\int\sum_{n=0}^{\infty}c_nx^n\,dx
+=
+C+\sum_{n=0}^{\infty}
+\frac{c_nx^{n+1}}{n+1}
+}
+$$
+
+This is valid inside the original radius of convergence.
+
+**Why is this useful?**
+
+Some functions do not have antiderivatives that can be expressed using elementary functions.
+
+Power series give us another way to work with these integrals.
+
+---
+
+## Solving Differential Equations with Power Series
+
+Consider a differential equation involving an unknown function $y(x)$.
+
+Suppose its solution can be represented by
+
+$$
+\boxed{
+y(x)=\sum_{n=0}^{\infty}a_nx^n
+}
+$$
+
+Then
+
+$$
+y'(x)=\sum_{n=1}^{\infty}na_nx^{n-1}
+$$
+
+and
+
+$$
+y''(x)=\sum_{n=2}^{\infty}n(n-1)a_nx^{n-2}.
+$$
+
+We can substitute these series into the differential equation and determine the coefficients.
+
+---
+
+## Strategy: Power Series Solutions
+
+To solve a differential equation using a power series:
+
+1. Assume a solution of the form
+
+   $$
+   y(x)=\sum_{n=0}^{\infty}a_nx^n.
+   $$
+
+2. Differentiate the series as needed.
+
+3. Substitute into the differential equation.
+
+4. Rewrite using matching powers of $x$.
+
+5. Equate coefficients and solve for the $a_n$.
+
+6. Use initial conditions to determine unknown coefficients.
+
+---
+
+## Example 7: A Power Series Solution
+
+Use power series to solve the initial-value problem
+
+$$
+y'=y,\qquad y(0)=1.
+$$
+
+**Questions:**
+
+1. Write $y$ and $y'$ as power series.
+2. How can we rewrite both series using powers of $x^n$?
+3. What equation relates $a_{n+1}$ to $a_n$?
+4. What does the initial condition tell us?
+5. Do you recognize the resulting series?
+
+---
+
+## Example 8: A New Differential Equation
+
+Find a power series solution for
+
+$$
+y'=xy,\qquad y(0)=1.
+$$
+
+**Strategy:**
+
+1. Assume $y=\sum_{n=0}^{\infty}a_nx^n$.
+2. Find the series for $y'$ and $xy$.
+3. Match the coefficients of like powers.
+4. Find the first six coefficients.
+5. Write the first several nonzero terms of $y(x)$.
+
+Can you identify the function represented by this series?
+
+---
+
+## Example 9: A Second-Order Equation
+
+Consider Airy's equation:
+
+$$
+y''-xy=0.
+$$
+
+Suppose
+
+$$
+y(x)=\sum_{n=0}^{\infty}a_nx^n.
+$$
+
+**Questions:**
+
+1. Write power series for $y''$ and $xy$.
+2. Substitute into the differential equation.
+3. Match coefficients of equal powers of $x$.
+4. Obtain a recurrence relation for the coefficients.
+
+What information would initial conditions provide?
+
+---
+
+## Evaluating Nonelementary Integrals
+
+Some functions have antiderivatives that cannot be expressed in terms of elementary functions.
+
+For example,
+
+$$
+\int e^{-x^2}\,dx.
+$$
+
+Our usual integration techniques do not produce an elementary antiderivative.
+
+**Alternative approach:**
+
+1. Represent the integrand as a power series.
+2. Integrate term by term.
+3. Use a finite number of terms to approximate a definite integral.
+
+---
+
+## Example 10: Integrating a Taylor Series
+
+Find a power series representation for
+
+$$
+\int e^{-x^2}\,dx.
+$$
+
+**Strategy:**
+
+1. Start with
+
+   $$
+   e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}.
+   $$
+
+2. Replace $x$ with $-x^2$.
+3. Integrate the resulting series term by term.
+4. Write the answer using sigma notation.
+
+---
+
+## Example 11: Approximating a Definite Integral
+
+Use a Maclaurin series to approximate
+
+$$
+\int_0^{1/2}e^{-x^2}\,dx.
+$$
+
+**Questions:**
+
+1. What is the Maclaurin series for $e^{-x^2}$?
+2. What series results from integrating term by term?
+3. What approximation do the first four terms give?
+4. How can we bound the error using the Alternating Series Estimation Theorem?
+
+---
+
+## Error in a Series Approximation
+
+Suppose
+
+$$
+S=\sum_{n=0}^{\infty}(-1)^nb_n
+$$
+
+is an alternating series with $b_n>0$, decreasing to zero.
+
+If we approximate using the partial sum
+
+$$
+S_N=\sum_{n=0}^{N}(-1)^nb_n,
+$$
+
+then
+
+$$
+\boxed{
+|S-S_N|\leq b_{N+1}
+}
+$$
+
+The error is at most the magnitude of the first omitted term.
+
+**Important:** We must verify the conditions of the Alternating Series Estimation Theorem.
+
+---
+
+## Example 12: Accuracy of an Integral Approximation
+
+Consider
+
+$$
+I=\int_0^{1}e^{-x^2}\,dx.
+$$
+
+Use the power series for $e^{-x^2}$ to determine how many terms are needed to approximate $I$ with error less than
+
+$$
+10^{-5}.
+$$
+
+**Questions:**
+
+1. What is the general term of the integrated series?
+2. Does the resulting numerical series satisfy the alternating series conditions?
+3. How many terms guarantee the required accuracy?
+
+---
+
+## Application: Probability
+
+The standard normal density function is
+
+$$
+\phi(x)=
+\frac{1}{\sqrt{2\pi}}e^{-x^2/2}.
+$$
+
+For a standard normal random variable $Z$,
+
+$$
+P(a\leq Z\leq b)
+=
+\frac{1}{\sqrt{2\pi}}
+\int_a^b e^{-x^2/2}\,dx.
+$$
+
+Because the antiderivative is nonelementary, we can use a power series to approximate this probability.
+
+**Question:**
+
+How could we obtain a series for $e^{-x^2/2}$?
+
+---
+
+## Activity: The Taylor Series Toolbox
+
+Work in groups to solve the following problems.
+
+**Part A: Constructing a Series**
+
+Find the first four nonzero terms of the Maclaurin series for
+
+$$
+f(x)=e^{-2x^2}.
+$$
+
+**Part B: Integrating a Series**
+
+Use your result to approximate
+
+$$
+\int_0^{1/2}e^{-2x^2}\,dx.
+$$
+
+**Part C: Error**
+
+Determine an upper bound on the error from using the first four terms.
+
+---
+
+## Summary: Working with Taylor Series
+
+We can use known Taylor series to construct new representations through:
+
+1. The binomial series
+2. Substitution and algebra
+3. Term-by-term differentiation
+4. Term-by-term integration
+
+We can also use power series to:
+
+- Find solutions to differential equations.
+- Approximate nonelementary integrals.
+- Estimate approximation errors.
+
+Power series extend the techniques available to us beyond elementary algebra and integration.
+
+---
+
+## Exit Ticket
+
+1. Find the first four nonzero terms of the binomial series for
+
+   $$
+   f(x)=\frac{1}{\sqrt{1-x}}.
+   $$
+
+2. Find a power series representation for
+
+   $$
+   \int e^{-x^2}\,dx.
+   $$
+
+3. Use the first three nonzero terms to approximate
+
+   $$
+   \int_0^{1/2}e^{-x^2}\,dx.
+   $$
+
+4. Explain how a power series can be used to solve a differential equation.
+
+---
