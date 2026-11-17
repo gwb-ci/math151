@@ -1,5 +1,5 @@
 ---
-title: "Power Series and Functions"
+title: "Power Series"
 
 format:
   revealjs:
@@ -24,7 +24,7 @@ format:
 
 
 
-## Power Series and Functions
+## Power Series 
 
 **Class Session Goals:**
 

@@ -70,6 +70,248 @@
     ]
   },
   {
+    "objectID": "classes/25/slides.html#course-objectives",
+    "href": "classes/25/slides.html#course-objectives",
+    "title": "Power Series and Functions",
+    "section": "Course Objectives",
+    "text": "Course Objectives\nBy the end of this lesson, you should be able to:\n\nDefine a power series and determine its radius and interval of convergence.\nRepresent rational functions as power series using the geometric series.\nConstruct new power series by combining and multiplying known power series.\nDifferentiate and integrate power series term by term.\nDetermine where a power series representation is valid.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#definition-of-a-power-series",
+    "href": "classes/25/slides.html#definition-of-a-power-series",
+    "title": "Power Series and Functions",
+    "section": "Definition of a Power Series",
+    "text": "Definition of a Power Series\nA power series centered at \\(a\\) is an infinite series of the form\n\\[\n\\sum_{n=0}^{\\infty}c_n(x-a)^n=c_0+c_1(x-a)+c_2(x-a)^2+\\cdots\n\\]\nwhere:\n\n\\(a\\) is the center of the series.\n\\(c_n\\) are the coefficients.\n\\(x\\) is the variable.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#radius-of-convergence",
+    "href": "classes/25/slides.html#radius-of-convergence",
+    "title": "Power Series and Functions",
+    "section": "Radius of Convergence",
+    "text": "Radius of Convergence\nFor a power series\n\\[\n\\sum_{n=0}^{\\infty}c_n(x-a)^n,\n\\]\nthere is a radius of convergence \\(R\\) such that:\n\nThe series converges when \\(|x-a|&lt;R\\).\nThe series diverges when \\(|x-a|&gt;R\\).\nConvergence at \\(x=a-R\\) and \\(x=a+R\\) must be checked separately.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#review-interval-of-convergence",
+    "href": "classes/25/slides.html#review-interval-of-convergence",
+    "title": "Power Series and Functions",
+    "section": "Review: Interval of Convergence",
+    "text": "Review: Interval of Convergence\nThe radius of convergence tells us how far from the center the series converges.\nThe interval of convergence tells us exactly which real numbers \\(x\\) produce a convergent series.\nIn for \\(x\\) in the interval of convergence, we can treat the powerseries as a function of \\(x\\).",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#representing-functions-as-power-series",
+    "href": "classes/25/slides.html#representing-functions-as-power-series",
+    "title": "Power Series and Functions",
+    "section": "Representing Functions as Power Series",
+    "text": "Representing Functions as Power Series\n\nA power series is an infinite polynomial.\nEvery power series has a radius of convergence.\nA function can be represented by a power series where the series converges to that function.\n\nHow can we find power series representations of functions?",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#use-geometric-series",
+    "href": "classes/25/slides.html#use-geometric-series",
+    "title": "Power Series and Functions",
+    "section": "Use Geometric Series",
+    "text": "Use Geometric Series\nA geometric series is a series of the form\n\\[\n\\sum_{n=0}^{\\infty}ar^n\n=a+ar+ar^2+ar^3+\\cdots\n\\]\n\nIf \\(|r|&lt;1\\), the series converges, and\n\n\\[\n\\sum_{n=0}^{\\infty}ar^n=\\frac{a}{1-r}.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#example-1",
+    "href": "classes/25/slides.html#example-1",
+    "title": "Power Series and Functions",
+    "section": "Example 1",
+    "text": "Example 1\nRewrite as a power series and find the interval of convergence.\n\\[\nf(x)=\\frac{1}{1+x^3}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#example-2",
+    "href": "classes/25/slides.html#example-2",
+    "title": "Power Series and Functions",
+    "section": "Example 2",
+    "text": "Example 2\nRewrite as a power series and find the interval of convergence.\n\\[\nf(x)=\\frac{x^2}{4-x^2}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#example-3",
+    "href": "classes/25/slides.html#example-3",
+    "title": "Power Series and Functions",
+    "section": "Example 3",
+    "text": "Example 3\nRewrite as a power series and find the interval of convergence.\n\\[\nf(x)=\\frac{x^3}{2-x}\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#activity-creating-power-series",
+    "href": "classes/25/slides.html#activity-creating-power-series",
+    "title": "Power Series and Functions",
+    "section": "Activity: Creating Power Series",
+    "text": "Activity: Creating Power Series\nFind a power series representation for each function. What is the radius of convergence?\n\n\\(\\displaystyle f(x)=\\frac{1}{1+x}\\)\n\\(\\displaystyle g(x)=\\frac{1}{1-2x}\\)\n\\(\\displaystyle h(x)=\\frac{1}{1+x^2}\\)",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#combining-power-series",
+    "href": "classes/25/slides.html#combining-power-series",
+    "title": "Power Series and Functions",
+    "section": "Combining Power Series",
+    "text": "Combining Power Series\nSuppose \\(f(x)=\\sum_{n=0}^{\\infty}a_nx^n\\) and \\(g(x)=\\sum_{n=0}^{\\infty}b_nx^n\\)\n\\[\nf(x)+ g(x)= \\sum_{n=0}^{\\infty}(a_n+ b_n)x^n\n\\]\nand\n\\[\ncf(x)=\\sum_{n=0}^{\\infty}ca_nx^n.\n\\]\nThe are only valid in the interval of convergence.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#multipling-and-substituting",
+    "href": "classes/25/slides.html#multipling-and-substituting",
+    "title": "Power Series and Functions",
+    "section": "Multipling and Substituting",
+    "text": "Multipling and Substituting\nMultiplication by a power of \\(x\\) gives\n\\[\nx^mf(x)=\\sum_{n=0}^{\\infty}a_nx^{n+m}.\n\\]\nWe can also substitute another expression in place of \\(x\\).\n\\[\nf(bx^m)=\\sum_{n=0}^{\\infty}a_nb^nx^{mn}.\n\\]\nFor the last expression, the new series is valid wherever \\(bx^m\\) lies in the original interval of convergence.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#example-4-combining-power-series",
+    "href": "classes/25/slides.html#example-4-combining-power-series",
+    "title": "Power Series and Functions",
+    "section": "Example 4: Combining Power Series",
+    "text": "Example 4: Combining Power Series\nFind a power series representation for the following function and determine its radius and interval of convergence.\n\\[\nf(x)=\\frac{1}{1-x}+\\frac{1}{1+x}.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#example-5-using-partial-fractions",
+    "href": "classes/25/slides.html#example-5-using-partial-fractions",
+    "title": "Power Series and Functions",
+    "section": "Example 5: Using Partial Fractions",
+    "text": "Example 5: Using Partial Fractions\nFind a power series representation for the following function and determine its radius and interval of convergence.\n\\[\nf(x)=\\frac{1}{(1-x)(2-x)}.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#differentiating-power-series",
+    "href": "classes/25/slides.html#differentiating-power-series",
+    "title": "Power Series and Functions",
+    "section": "Differentiating Power Series",
+    "text": "Differentiating Power Series\nSuppose a power series represents a function \\(f(x)=\\sum_{n=0}^{\\infty}c_n(x-a)^n\\) with radius of convergence \\(R&gt;0\\).\nWe can differentiate the series term by term:\n\\[\nf'(x)=\\sum_{n=1}^{\\infty}\nnc_n(x-a)^{n-1}\n\\]\nfor \\(|x-a|&lt;R\\).\nThe differentiated power series has the same radius of convergence.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#example-7-differentiating-a-power-series",
+    "href": "classes/25/slides.html#example-7-differentiating-a-power-series",
+    "title": "Power Series and Functions",
+    "section": "Example 7: Differentiating a Power Series",
+    "text": "Example 7: Differentiating a Power Series\nRecall that\n\\[\n\\frac{1}{1-x}=\\sum_{n=0}^{\\infty}x^n,\n\\qquad |x|&lt;1.\n\\]\nDifferentiate both sides to find a power series for\n\\[\nf(x)=\\frac{1}{(1-x)^2}.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#integrating-power-series",
+    "href": "classes/25/slides.html#integrating-power-series",
+    "title": "Power Series and Functions",
+    "section": "Integrating Power Series",
+    "text": "Integrating Power Series\nSuppose \\(f(x)=\\sum_{n=0}^{\\infty}c_n(x-a)^n\\) has radius of convergence \\(R&gt;0\\).\nWe can integrate term by term:\n\\[\n\\int f(x)\\,dx\n=\nC+\\sum_{n=0}^{\\infty}\n\\frac{c_n}{n+1}(x-a)^{n+1}\n\\]\nfor \\(|x-a|&lt;R\\).\nThe integrated series has the same radius of convergence.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#example-8-integrating-a-power-series",
+    "href": "classes/25/slides.html#example-8-integrating-a-power-series",
+    "title": "Power Series and Functions",
+    "section": "Example 8: Integrating a Power Series",
+    "text": "Example 8: Integrating a Power Series\nWe know that\n\\[\n\\frac{1}{1+x}=\\sum_{n=0}^{\\infty}(-1)^nx^n,\n\\qquad |x|&lt;1.\n\\]\nIntegrate both sides to find a power series representation for\n\\[\nf(x)=\\ln(1+x).\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#example-9-an-inverse-tangent-series",
+    "href": "classes/25/slides.html#example-9-an-inverse-tangent-series",
+    "title": "Power Series and Functions",
+    "section": "Example 9: An Inverse Tangent Series",
+    "text": "Example 9: An Inverse Tangent Series\nRecall that\n\\[\n\\frac{1}{1+x^2}\n=\n\\sum_{n=0}^{\\infty}(-1)^nx^{2n},\n\\qquad |x|&lt;1.\n\\]\nUse integration to find a power series for\n\\[\nf(x)=\\arctan x.\n\\]\nDetermine the radius and interval of convergence of the resulting series.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#uniqueness-of-power-series",
+    "href": "classes/25/slides.html#uniqueness-of-power-series",
+    "title": "Power Series and Functions",
+    "section": "Uniqueness of Power Series",
+    "text": "Uniqueness of Power Series\nSuppose two power series centered at \\(a\\) represent the same function on an open interval containing \\(a\\):\n\\[\n\\sum_{n=0}^{\\infty}c_n(x-a)^n\n=\n\\sum_{n=0}^{\\infty}d_n(x-a)^n.\n\\]\nThen \\(c_n=d_n\\) for every \\(n\\).\nTwo power series are equal if and only if their coeffiecients are equal.",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#multiplication-of-power-series",
+    "href": "classes/25/slides.html#multiplication-of-power-series",
+    "title": "Power Series and Functions",
+    "section": "Multiplication of Power Series",
+    "text": "Multiplication of Power Series\nSuppose\n\\(f(x)=a_0+a_1x+a_2x^2+\\cdots\\) and \\(g(x)=b_0+b_1x+b_2x^2+\\cdots\\)\nTheir product is\n\\[\nf(x)g(x)=c_0+c_1x+c_2x^2+\\cdots,\n\\]\nwhere\n\\[\nc_n=\\sum_{k=0}^{n}a_kb_{n-k}.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
+    "objectID": "classes/25/slides.html#example-6-multiplying-power-series",
+    "href": "classes/25/slides.html#example-6-multiplying-power-series",
+    "title": "Power Series and Functions",
+    "section": "Example 6: Multiplying Power Series",
+    "text": "Example 6: Multiplying Power Series\nWe know that\n\\[\n\\frac{1}{1-x}=\\sum_{n=0}^{\\infty}x^n,\n\\qquad |x|&lt;1.\n\\]\nUse multiplication of power series to find a representation for\n\\[\nf(x)=\\frac{1}{(1-x)^2}.\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Power Series and Functions"
+    ]
+  },
+  {
     "objectID": "classes/23/slides.html#improper-integrals",
     "href": "classes/23/slides.html#improper-integrals",
     "title": "Improper Integrals",
@@ -7360,300 +7602,630 @@
     "text": "Example 3\nFind the length of the curve \\(y=x^2\\) over \\([0,\\frac{1}{2}]\\).\n\nSince \\(\\frac{dy}{dx}=2x\\),\n\\(L=\\int_0^{1/2}\\sqrt{1+(2x)^2}\\,dx\\)\n\\(=\\int_0^{1/2}\\sqrt{1+4x^2}\\,dx\\)\nUse \\(x=\\frac{1}{2}\\tan\\theta\\).\n\\(L=\\frac{1}{2}\\int_0^{\\pi/4}\\sec^3\\theta\\,d\\theta\\)\n\\(=\\frac{1}{4}\\left(\\sqrt{2}+\\ln(\\sqrt{2}+1)\\right)\\)"
   },
   {
-    "objectID": "classes/24/slides.html#power-series-and-functions",
-    "href": "classes/24/slides.html#power-series-and-functions",
-    "title": "Power Series and Functions",
-    "section": "Power Series and Functions",
-    "text": "Power Series and Functions\nClass Session Goals:\n\nIdentify a power series and provide examples of them.\nDetermine the radius of convergence and interval of convergence of a power series.\nUse a power series to represent a function.",
+    "objectID": "classes/24/slides.html#power-series",
+    "href": "classes/24/slides.html#power-series",
+    "title": "Power Series",
+    "section": "Power Series",
+    "text": "Power Series\nClass Session Goals:\n\nIdentify a power series and provide examples of them.\nDetermine the radius of convergence and interval of convergence of a power series.\nUse a power series to represent a function.",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#motivation",
     "href": "classes/24/slides.html#motivation",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Motivation",
     "text": "Motivation\nPower Series are an alternative way to represent functions\n\nPower series are infinite polynomials\nPolynomials are easy to evaluate, differentiate, integrate, and approximate.\nPower series allow us to represent common functions and define new functions.\nWe can use polynomial approximations to estimate values of functions.",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#definition-of-a-power-series-1",
     "href": "classes/24/slides.html#definition-of-a-power-series-1",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Definition of a Power Series 1",
     "text": "Definition of a Power Series 1\nA series of the form\n\\(\\displaystyle \\sum_{n=0}^{\\infty}c_nx^n\n=c_0+c_1x+c_2x^2+\\cdots\\)\nis a power series centered at \\(x=0\\).\n\\(x\\) is a variable, and the coefficients \\(c_n\\) are functions of \\(n\\) that do not depend on \\(x\\).\nThe value of this series depends on \\(x\\) so it is a function of \\(x\\).",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#definition-of-a-power-series-2",
     "href": "classes/24/slides.html#definition-of-a-power-series-2",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Definition of a Power Series 2",
     "text": "Definition of a Power Series 2\nA series of the form\n\\(\\displaystyle \\sum_{n=0}^{\\infty}c_n(x-a)^n\n=c_0+c_1(x-a)+c_2(x-a)^2+\\cdots\\)\nis a power series centered at \\(x=a\\).\n\\(x\\) and \\(c_n\\) are as before, and \\(a\\) is a constant.\nOne way to think of \\(a\\) as the location where we examining a funciton.",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#example-1-exponential-function",
     "href": "classes/24/slides.html#example-1-exponential-function",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Example 1: Exponential Function",
     "text": "Example 1: Exponential Function\nConsider the power series\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\frac{x^n}{n!}\\)\nExpanding the series gives\n\\(\\displaystyle 1+x+\\frac{x^2}{2!}+\\frac{x^3}{3!}+\\cdots\\)\nWe can define a function \\(f(x)=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}\\). If \\(x=0\\), then \\(f(0)=1\\).",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#example-continued",
     "href": "classes/24/slides.html#example-continued",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Example Continued",
     "text": "Example Continued\nWhat is the value of \\(f(x)\\) in general? What about \\(f(1)\\)?\n\\(\\displaystyle f(1)=\\lim_{k\\to\\infty}\\sum_{n=0}^{k}\\frac{1}{n!}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(k\\)\n0\n1\n2\n3\n4\n5\n6\n7\n8\n\n\n\n\n\nPartial sum\n1.0000\n2.0000\n2.5000\n2.6667\n2.7083\n2.7167\n2.7181\n2.7183\n2.7183\n\n\n\n\n\nAs \\(k\\to\\infty\\), the partial sums approach \\(e\\).\n\\(\\displaystyle f(1)=e\\approx 2.71828\\)",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#example-continued-1",
     "href": "classes/24/slides.html#example-continued-1",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Example Continued",
     "text": "Example Continued\n\\(f(0)=1=e^0\\)\n\\(f(1)=e=e^1\\)\nLater in this section we will show that \\(e^x=f(x)=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}\\)\nFor which values of \\(x\\) does this equation hold?",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#example-2-geometeric-series",
     "href": "classes/24/slides.html#example-2-geometeric-series",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Example 2: Geometeric Series",
     "text": "Example 2: Geometeric Series\nConsider the geometric series\n\\(\\displaystyle \\sum_{n=0}^{\\infty}x^n\n=1+x+x^2+x^3+\\cdots\\)\nThis series converges if \\(|x|&lt;1\\) and if it converges the sum is \\(\\frac{1}{1-x}\\)\nSo we have:\n\\(\\displaystyle \\frac{1}{1-x}=\\sum_{n=0}^{\\infty}x^n\\)\nfor \\(|x|&lt;1\\).\nHere the center is \\(a=0\\) and the coefficients are \\(c_n=1\\) for all \\(n\\).",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#power-series-as-approximations",
     "href": "classes/24/slides.html#power-series-as-approximations",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Power Series as Approximations",
     "text": "Power Series as Approximations\nConsider\n\\(\\displaystyle f(x)=\\frac{1}{1-x}=1+x+x^2+x^3+\\cdots\\)\nWe can approximate this function with a polynomial:\n\\(\\displaystyle P_3(x)=1+x+x^2+x^3\\)\n\n\n\n\\(x\\)\n\\(f(x)\\)\n\\(P_3(x)\\)\n\n\n\n\n\\(0.1\\)\n\\(1.11111\\ldots\\)\n\\(1.111\\)\n\n\n\\(0.5\\)\n\\(2\\)\n\\(1.875\\)\n\n\n\\(0.9\\)\n\\(10\\)\n\\(3.439\\)",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#convergence-of-power-series",
     "href": "classes/24/slides.html#convergence-of-power-series",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Convergence of Power Series",
     "text": "Convergence of Power Series\nConsider the power series\n\\(\\displaystyle \\sum_{n=0}^{\\infty}c_n(x-a)^n\\)\n\nA power series may converge for some values of \\(x\\) and diverge for others.\nAt \\(x=a\\), the series becomes \\(c_0\\) and power series always converges at its center.\n\nThe possible sets of convergence are: only the center \\(x=a\\), all real numbers, an interval centered at \\(x=a\\), possibly including one or both endpoints.",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#theorem-6.1-convergence-of-a-power-series",
     "href": "classes/24/slides.html#theorem-6.1-convergence-of-a-power-series",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Theorem 6.1 Convergence of a Power Series",
     "text": "Theorem 6.1 Convergence of a Power Series\nConsider the power series \\(\\displaystyle \\sum_{n=0}^{\\infty}c_n(x-a)^n\\).\nThe series satisfies exactly one of the following properties:\n\nThe series converges at \\(x=a\\) and diverges for all \\(x\\ne a\\).\nThe series converges for all real numbers \\(x\\).\nThere exists a real number \\(R&gt;0\\) such that the series converges if \\(|x-a|&lt;R\\) and diverges if \\(|x-a|&gt;R\\).\nAt the values \\(x\\) where \\(|x-a|=R\\), the series may converge or diverge.",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#proof-of-theorem-6.1",
     "href": "classes/24/slides.html#proof-of-theorem-6.1",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Proof of Theorem 6.1",
     "text": "Proof of Theorem 6.1\nKey fact: If \\(\\displaystyle \\sum_{n=0}^{\\infty}c_nd^n\\) converges for some \\(d\\ne0\\), then \\(\\displaystyle \\sum_{n=0}^{\\infty}c_nx^n\\) converges absolutely for \\(|x|&lt;|d|\\).\nSince \\(\\sum c_nd^n\\) converges, \\(c_nd^n\\to0\\).\nThus, for sufficiently large \\(n\\), \\(|c_nd^n|\\le1\\).",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#proof-of-theorem-6.1-continued",
     "href": "classes/24/slides.html#proof-of-theorem-6.1-continued",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Proof of Theorem 6.1 Continued",
     "text": "Proof of Theorem 6.1 Continued\n\\(\\displaystyle |c_nx^n|=|c_nd^n|\\left|\\frac{x}{d}\\right|^n\n\\le\\left|\\frac{x}{d}\\right|^n\\)\nThe geometric series \\(\\displaystyle \\sum\\left|\\frac{x}{d}\\right|^n\\) converges whenever \\(|x|&lt;|d|\\).\nBy the comparison test, \\(\\sum c_nx^n\\) converges absolutely.",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#what-does-theorem-6.1-tell-us",
     "href": "classes/24/slides.html#what-does-theorem-6.1-tell-us",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "What Does Theorem 6.1 Tell Us?",
     "text": "What Does Theorem 6.1 Tell Us?\nIf a power series converges at a point, then it converges absolutely at every point closer to its center.\nConsider a power series centered at \\(a=2\\) that converges at \\(x=5\\).\n\nWhat can we conclude about convergence at \\(x=3\\)?\nWhat can we conclude about convergence at \\(x=0\\)?\nWhat can we conclude about convergence at \\(x=6\\)?",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#definition-of-radius-of-convergence",
     "href": "classes/24/slides.html#definition-of-radius-of-convergence",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Definition of Radius of Convergence",
     "text": "Definition of Radius of Convergence\nConsider the power series \\(\\displaystyle \\sum_{n=0}^{\\infty}c_n(x-a)^n\\).\nThe interval of convergence is the set of real numbers \\(x\\) where the series converges.\nThe radius of convergence is the value \\(R\\) such that:\n\nThe series converges for \\(|x-a|&lt;R\\).\nThe series diverges for \\(|x-a|&gt;R\\).\nAt \\(x=a-R\\) and \\(x=a+R\\), convergence must be checked separately.\n\nSpecial cases:\n\nIf the series converges only at \\(x=a\\), then \\(R=0\\).\nIf the series converges for all real numbers, then \\(R=\\infty\\).",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#visualizing-the-radius-of-convergence",
     "href": "classes/24/slides.html#visualizing-the-radius-of-convergence",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Visualizing the Radius of Convergence",
     "text": "Visualizing the Radius of Convergence\nFor a power series centered at \\(x=a\\) with \\(0&lt;R&lt;\\infty\\):\n\n\n\n\n  \n  \n\n  \n  \n\n  \n\n  \n  \n\n  \n\n  \n\n  \n  \n\n  \n\n  \n\n  \n  \n    a - R\n    a\n    a + R\n  \n\n  \n  \n    Converges\n    Diverges\n    Diverges\n  \n\n  \n    Endpoints must be tested separately.\n  \n\n\n\nImportant: The radius tells us where convergence is guaranteed, but not whether either endpoint belongs to the interval of convergence.",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#finding-the-radius-of-convergence",
     "href": "classes/24/slides.html#finding-the-radius-of-convergence",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Finding the Radius of Convergence",
     "text": "Finding the Radius of Convergence\nConsider \\(\\displaystyle \\sum_{n=0}^{\\infty}c_n(x-a)^n\\).\nStrategy:\n\nApply the ratio test to the power series.\nDetermine the values of \\(x\\) for which \\(\\rho&lt;1\\).\nFind the radius of convergence \\(R\\).\nTest the endpoints individually.",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#radius-example-1",
     "href": "classes/24/slides.html#radius-example-1",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Radius Example 1",
     "text": "Radius Example 1\nFind the interval and radius of convergence.\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\frac{x^n}{n!}\\)\n\n\\(R=\\infty\\)",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#radius-example-2",
     "href": "classes/24/slides.html#radius-example-2",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Radius Example 2",
     "text": "Radius Example 2\nFind the interval and radius of convergence.\n\\(\\displaystyle \\sum_{n=0}^{\\infty}n!x^n\\)\n\n\\(R=0\\)",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#radius-example-3",
     "href": "classes/24/slides.html#radius-example-3",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Radius Example 3",
     "text": "Radius Example 3\nFind the interval and radius of convergence.\n\\(\\displaystyle \\sum_{n=0}^{\\infty}\\frac{(x-2)^n}{(n+1)3^n}\\)\n\n\\(R=3\\)",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#representing-functions-as-power-series",
     "href": "classes/24/slides.html#representing-functions-as-power-series",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Representing Functions as Power Series",
     "text": "Representing Functions as Power Series\n\nA power series is an infinite polynomial.\nEvery power series has a radius of convergence.\nA function can be represented by a power series where the power series converges.\n\nGiven a function, how can we construct a power series representation of a function? Where is the power series represenation valid?",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#use-geometric-series",
     "href": "classes/24/slides.html#use-geometric-series",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Use Geometric Series",
     "text": "Use Geometric Series\nA geometric series is a series of the form\n\\(\\displaystyle \\sum_{n=0}^{\\infty}ar^n=a+ar+ar^2+ar^3+\\cdots\\)\n\nIf \\(|r|&lt;1\\), the series converges, and\n\\(\\displaystyle \\sum_{n=0}^{\\infty}ar^n=\\frac{a}{1-r}\\)\nIf \\(|r|\\geq1\\) and \\(a\\ne0\\), the series diverges.",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#rational-functions-as-power-series",
     "href": "classes/24/slides.html#rational-functions-as-power-series",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Rational Functions as Power Series",
     "text": "Rational Functions as Power Series\nRecall the geometric series formula:\nStrategy:\n\nRewrite the function in the form \\(\\frac{a}{1-r}\\).\nIdentify the geometric ratio \\(r\\).\nSubstitute into the geometric series formula.\nSolve \\(|r|&lt;1\\) to determine the interval of convergence.",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#example-1",
     "href": "classes/24/slides.html#example-1",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Example 1",
     "text": "Example 1\nRewrite as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{1}{1+x^3}\\)",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#example-2",
     "href": "classes/24/slides.html#example-2",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Example 2",
     "text": "Example 2\nRewrite as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{x^2}{4-x^2}\\)",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#example-3",
     "href": "classes/24/slides.html#example-3",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Example 3",
     "text": "Example 3\nRewrite as a power series and find the interval of convergence.\n\\(\\displaystyle f(x)=\\frac{x^3}{2-x}\\)",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
     ]
   },
   {
     "objectID": "classes/24/slides.html#activity-the-power-series-factory",
     "href": "classes/24/slides.html#activity-the-power-series-factory",
-    "title": "Power Series and Functions",
+    "title": "Power Series",
     "section": "Activity: The Power Series Factory",
     "text": "Activity: The Power Series Factory\nFind a power series representation for each function. What is the radius of convergence?\n\n\\(\\displaystyle f(x)=\\frac{1}{1+x}\\)\n\\(\\displaystyle g(x)=\\frac{1}{1-2x}\\)\n\\(\\displaystyle h(x)=\\frac{1}{1+x^2}\\)",
     "crumbs": [
       "Class Material",
-      "Power Series and Functions"
+      "Power Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#taylor-series",
+    "href": "classes/26/slides.html#taylor-series",
+    "title": "Taylor Series",
+    "section": "Taylor Series",
+    "text": "Taylor Series\nBy the end of this lesson, you should be able to:\n\nExplain how Taylor series coefficients are determined from derivatives of a function.\nConstruct Taylor and Maclaurin polynomials and series.\nFind Maclaurin series for \\(e^x\\), \\(\\sin x\\), and \\(\\cos x\\).\nUse Taylor polynomials to approximate function values.\nUse Taylor’s theorem with remainder to estimate approximation error.\nDetermine when a Taylor series represents its function.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#review-power-series",
+    "href": "classes/26/slides.html#review-power-series",
+    "title": "Taylor Series",
+    "section": "Review: Power Series",
+    "text": "Review: Power Series\nRecall that a power series centered at \\(a\\) has the form\n\\[\n\\sum_{n=0}^{\\infty}c_n(x-a)^n.\n\\]\nWe can write this as\n\\[\nc_0+c_1(x-a)+c_2(x-a)^2+\\cdots\n\\]\n\nThe numbers \\(c_n\\) are the coefficients.\nThe number \\(a\\) is the center.\nThe series converges for values of \\(x\\) within its radius of convergence.\n\nQuestion: How can we find the coefficients if we are given a function \\(f(x)\\)?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#representing-functions-as-power-series",
+    "href": "classes/26/slides.html#representing-functions-as-power-series",
+    "title": "Taylor Series",
+    "section": "Representing Functions as Power Series",
+    "text": "Representing Functions as Power Series\nIn Section 6.2, we used geometric series to construct power series representations.\nFor example,\n\\[\n\\frac{1}{1-x}\n=\n\\sum_{n=0}^{\\infty}x^n,\n\\qquad |x|&lt;1.\n\\]\nWe also constructed new representations using algebra, differentiation, and integration.\nNew question:\nCan we construct a power series for a function directly from its derivatives?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#the-idea-behind-taylor-series",
+    "href": "classes/26/slides.html#the-idea-behind-taylor-series",
+    "title": "Taylor Series",
+    "section": "The Idea Behind Taylor Series",
+    "text": "The Idea Behind Taylor Series\nSuppose a function \\(f(x)\\) can be represented by a power series centered at \\(a\\):\n\\[\nf(x)=c_0+c_1(x-a)+c_2(x-a)^2+\\cdots\n\\]\nHow can we determine the coefficients?\nStart by evaluating at \\(x=a\\).\n\\[\nf(a)=c_0\n\\]\nDifferentiate both sides:\n\\[\nf'(x)=c_1+2c_2(x-a)+3c_3(x-a)^2+\\cdots\n\\]\nEvaluate at \\(x=a\\):\n\\[\nf'(a)=c_1\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#finding-the-coefficients",
+    "href": "classes/26/slides.html#finding-the-coefficients",
+    "title": "Taylor Series",
+    "section": "Finding the Coefficients",
+    "text": "Finding the Coefficients\nContinue differentiating and evaluating at \\(x=a\\):\n\\[\n\\begin{aligned}\nc_0 &= f(a)\\\\[6pt]\nc_1 &= f'(a)\\\\[6pt]\nc_2 &= \\frac{f''(a)}{2!}\\\\[6pt]\nc_3 &= \\frac{f'''(a)}{3!}\n\\end{aligned}\n\\]\nIn general,\n\\[\n\\boxed{\nc_n=\\frac{f^{(n)}(a)}{n!}\n}\n\\]\nThis gives us a formula for the coefficients of a power series representation.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#definition-taylor-series",
+    "href": "classes/26/slides.html#definition-taylor-series",
+    "title": "Taylor Series",
+    "section": "Definition: Taylor Series",
+    "text": "Definition: Taylor Series\nThe Taylor series for a function \\(f(x)\\) centered at \\(a\\) is\n\\[\n\\boxed{\n\\sum_{n=0}^{\\infty}\n\\frac{f^{(n)}(a)}{n!}(x-a)^n\n}\n\\]\nExpanding the first few terms:\n\\[\n\\begin{aligned}\nf(x)\\sim {}&f(a)+f'(a)(x-a)\\\\\n&+\\frac{f''(a)}{2!}(x-a)^2\\\\\n&+\\frac{f'''(a)}{3!}(x-a)^3+\\cdots\n\\end{aligned}\n\\]\nThe symbol \\(\\sim\\) indicates the formal Taylor expansion. Equality requires that the series converge to \\(f(x)\\).",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#definition-maclaurin-series",
+    "href": "classes/26/slides.html#definition-maclaurin-series",
+    "title": "Taylor Series",
+    "section": "Definition: Maclaurin Series",
+    "text": "Definition: Maclaurin Series\nA Maclaurin series is a Taylor series centered at \\(a=0\\).\n\\[\n\\boxed{\n\\sum_{n=0}^{\\infty}\n\\frac{f^{(n)}(0)}{n!}x^n\n}\n\\]\nIn expanded form:\n\\[\n\\begin{aligned}\nf(x)\\sim {}& f(0)+f'(0)x\\\\\n&+\\frac{f''(0)}{2!}x^2\\\\\n&+\\frac{f'''(0)}{3!}x^3+\\cdots\n\\end{aligned}\n\\]\nQuestion: What is the difference between a Taylor series and a Maclaurin series?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#taylor-polynomials",
+    "href": "classes/26/slides.html#taylor-polynomials",
+    "title": "Taylor Series",
+    "section": "Taylor Polynomials",
+    "text": "Taylor Polynomials\nA Taylor polynomial is a finite partial sum of a Taylor series.\nThe Taylor polynomial of degree \\(n\\) centered at \\(a\\) is\n\\[\n\\boxed{\nP_n(x)=\n\\sum_{k=0}^{n}\n\\frac{f^{(k)}(a)}{k!}(x-a)^k\n}\n\\]\nFor example:\n\\[\nP_0(x)=f(a)\n\\]\n\\[\nP_1(x)=f(a)+f'(a)(x-a)\n\\]\n\\[\nP_2(x)=P_1(x)+\\frac{f''(a)}{2}(x-a)^2\n\\]\nEach polynomial gives an approximation to \\(f(x)\\) near \\(a\\).",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#taylor-polynomials-as-approximations",
+    "href": "classes/26/slides.html#taylor-polynomials-as-approximations",
+    "title": "Taylor Series",
+    "section": "Taylor Polynomials as Approximations",
+    "text": "Taylor Polynomials as Approximations\nRecall the linear approximation from Calculus I:\n\\[\nL(x)=f(a)+f'(a)(x-a).\n\\]\nThis is precisely the first Taylor polynomial \\(P_1(x)\\).\nAdding more terms gives higher-degree polynomial approximations.\nImportant idea:\nA Taylor polynomial agrees with the function and its derivatives through order \\(n\\) at the center.\nHigher-degree polynomials often provide better approximations near the center.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#example-1-taylor-polynomials",
+    "href": "classes/26/slides.html#example-1-taylor-polynomials",
+    "title": "Taylor Series",
+    "section": "Example 1: Taylor Polynomials",
+    "text": "Example 1: Taylor Polynomials\nConsider\n\\[\nf(x)=\\ln x.\n\\]\nFind the Taylor polynomials \\(P_0\\), \\(P_1\\), \\(P_2\\), and \\(P_3\\) centered at \\(a=1\\).\nStrategy:\n\nFind the first three derivatives.\nEvaluate each derivative at \\(x=1\\).\nSubstitute into the Taylor polynomial formula.\nCompare the approximations near \\(x=1\\).",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#example-2-maclaurin-polynomials",
+    "href": "classes/26/slides.html#example-2-maclaurin-polynomials",
+    "title": "Taylor Series",
+    "section": "Example 2: Maclaurin Polynomials",
+    "text": "Example 2: Maclaurin Polynomials\nFind the Maclaurin polynomials \\(P_0\\), \\(P_1\\), \\(P_2\\), and \\(P_3\\) for\n\\[\nf(x)=e^x.\n\\]\nQuestions:\n\nWhat is the derivative of \\(e^x\\)?\nWhat is the value of every derivative at \\(x=0\\)?\nIs there a pattern in the coefficients?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#the-maclaurin-series-for-ex",
+    "href": "classes/26/slides.html#the-maclaurin-series-for-ex",
+    "title": "Taylor Series",
+    "section": "The Maclaurin Series for \\(e^x\\)",
+    "text": "The Maclaurin Series for \\(e^x\\)\nFor\n\\[\nf(x)=e^x,\n\\]\nevery derivative is \\(e^x\\), so\n\\[\nf^{(n)}(0)=1.\n\\]\nTherefore,\n\\[\n\\boxed{\ne^x=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}\n}\n\\]\nor\n\\[\ne^x=1+x+\\frac{x^2}{2!}\n+\\frac{x^3}{3!}+\\cdots\n\\]\nThis series converges to \\(e^x\\) for all real \\(x\\).\nRadius of convergence: \\(R=\\infty\\).",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#example-3-maclaurin-series-for-sine",
+    "href": "classes/26/slides.html#example-3-maclaurin-series-for-sine",
+    "title": "Taylor Series",
+    "section": "Example 3: Maclaurin Series for Sine",
+    "text": "Example 3: Maclaurin Series for Sine\nFind the Maclaurin series for\n\\[\nf(x)=\\sin x.\n\\]\nStrategy:\n\nCompute the first several derivatives.\nEvaluate the derivatives at \\(x=0\\).\nLook for a repeating pattern.\nWrite the series using sigma notation.\n\nWhat happens to the coefficients of the even powers of \\(x\\)?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#the-maclaurin-series-for-sin-x",
+    "href": "classes/26/slides.html#the-maclaurin-series-for-sin-x",
+    "title": "Taylor Series",
+    "section": "The Maclaurin Series for \\(\\sin x\\)",
+    "text": "The Maclaurin Series for \\(\\sin x\\)\nThe derivatives repeat in a cycle:\n\\[\n\\sin x,\\quad \\cos x,\\quad\n-\\sin x,\\quad -\\cos x.\n\\]\nEvaluating at zero gives\n\\[\n0,\\quad 1,\\quad 0,\\quad -1,\\ldots\n\\]\nTherefore,\n\\[\n\\boxed{\n\\sin x=\n\\sum_{n=0}^{\\infty}\n\\frac{(-1)^n x^{2n+1}}{(2n+1)!}\n}\n\\]\nor\n\\[\n\\sin x=x-\\frac{x^3}{3!}\n+\\frac{x^5}{5!}-\\cdots\n\\]\nThis series converges to \\(\\sin x\\) for all real \\(x\\).",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#example-4-maclaurin-series-for-cosine",
+    "href": "classes/26/slides.html#example-4-maclaurin-series-for-cosine",
+    "title": "Taylor Series",
+    "section": "Example 4: Maclaurin Series for Cosine",
+    "text": "Example 4: Maclaurin Series for Cosine\nFind the Maclaurin series for\n\\[\nf(x)=\\cos x.\n\\]\nQuestions:\n\nWhat pattern do the derivatives follow?\nWhich coefficients are zero?\nHow does the series compare with the series for \\(\\sin x\\)?\n\nWrite the result using sigma notation.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#the-maclaurin-series-for-cos-x",
+    "href": "classes/26/slides.html#the-maclaurin-series-for-cos-x",
+    "title": "Taylor Series",
+    "section": "The Maclaurin Series for \\(\\cos x\\)",
+    "text": "The Maclaurin Series for \\(\\cos x\\)\nThe Maclaurin series is\n\\[\n\\boxed{\n\\cos x=\n\\sum_{n=0}^{\\infty}\n\\frac{(-1)^n x^{2n}}{(2n)!}\n}\n\\]\nor\n\\[\n\\cos x=\n1-\\frac{x^2}{2!}\n+\\frac{x^4}{4!}\n-\\frac{x^6}{6!}+\\cdots\n\\]\nThis series converges to \\(\\cos x\\) for all real \\(x\\).\nQuestion: What happens when we differentiate this power series term by term?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#important-maclaurin-series",
+    "href": "classes/26/slides.html#important-maclaurin-series",
+    "title": "Taylor Series",
+    "section": "Important Maclaurin Series",
+    "text": "Important Maclaurin Series\nThe following series are especially useful:\nExponential:\n\\[\ne^x=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}\n\\]\nSine:\n\\[\n\\sin x=\\sum_{n=0}^{\\infty}\n\\frac{(-1)^n x^{2n+1}}{(2n+1)!}\n\\]\nCosine:\n\\[\n\\cos x=\\sum_{n=0}^{\\infty}\n\\frac{(-1)^n x^{2n}}{(2n)!}\n\\]\nAll three series converge for every real number \\(x\\).",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#activity-the-taylor-polynomial-factory",
+    "href": "classes/26/slides.html#activity-the-taylor-polynomial-factory",
+    "title": "Taylor Series",
+    "section": "Activity: The Taylor Polynomial Factory",
+    "text": "Activity: The Taylor Polynomial Factory\nFind the third-degree Maclaurin polynomial \\(P_3(x)\\) for each function.\n\n\\(\\displaystyle f(x)=e^{2x}\\)\n\\(\\displaystyle g(x)=\\sin(2x)\\)\n\\(\\displaystyle h(x)=\\cos x\\)\n\nFor each function:\n\nFind the necessary derivatives at zero.\nWrite the polynomial.\nIdentify which coefficients are zero.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#approximating-function-values",
+    "href": "classes/26/slides.html#approximating-function-values",
+    "title": "Taylor Series",
+    "section": "Approximating Function Values",
+    "text": "Approximating Function Values\nSuppose we want to approximate\n\\[\ne^{0.2}.\n\\]\nWe could use the third Maclaurin polynomial:\n\\[\nP_3(x)=1+x+\\frac{x^2}{2!}+\\frac{x^3}{3!}.\n\\]\nThen\n\\[\ne^{0.2}\\approx P_3(0.2).\n\\]\nQuestions:\n\nWhat is the approximate value?\nWould \\(P_5(0.2)\\) give a more accurate approximation?\nHow can we estimate the error without knowing the exact value?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#the-remainder-of-a-taylor-polynomial",
+    "href": "classes/26/slides.html#the-remainder-of-a-taylor-polynomial",
+    "title": "Taylor Series",
+    "section": "The Remainder of a Taylor Polynomial",
+    "text": "The Remainder of a Taylor Polynomial\nA Taylor polynomial approximates a function:\n\\[\nf(x)\\approx P_n(x).\n\\]\nThe remainder is the difference between the function and the polynomial:\n\\[\n\\boxed{\nR_n(x)=f(x)-P_n(x)\n}\n\\]\nTherefore,\n\\[\nf(x)=P_n(x)+R_n(x).\n\\]\nThe absolute error is\n\\[\n|R_n(x)|.\n\\]\nHow can we estimate this error?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#taylors-theorem-with-remainder",
+    "href": "classes/26/slides.html#taylors-theorem-with-remainder",
+    "title": "Taylor Series",
+    "section": "Taylor’s Theorem with Remainder",
+    "text": "Taylor’s Theorem with Remainder\nSuppose \\(f\\) has at least \\(n+1\\) continuous derivatives on an interval containing \\(a\\) and \\(x\\).\nThen there exists a number \\(c\\) between \\(a\\) and \\(x\\) such that\n\\[\n\\boxed{\nR_n(x)=\n\\frac{f^{(n+1)}(c)}{(n+1)!}\n(x-a)^{n+1}\n}\n\\]\nThe number \\(c\\) is generally unknown.\nWe use a bound on the derivative to estimate the remainder.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#bounding-the-approximation-error",
+    "href": "classes/26/slides.html#bounding-the-approximation-error",
+    "title": "Taylor Series",
+    "section": "Bounding the Approximation Error",
+    "text": "Bounding the Approximation Error\nSuppose\n\\[\n|f^{(n+1)}(t)|\\leq M\n\\]\nfor all \\(t\\) between \\(a\\) and \\(x\\).\nThen Taylor’s theorem tells us\n\\[\n\\boxed{\n|R_n(x)|\n\\leq\n\\frac{M}{(n+1)!}|x-a|^{n+1}\n}\n\\]\nStrategy:\n\nIdentify the Taylor polynomial degree \\(n\\).\nFind the \\((n+1)\\)st derivative.\nFind a bound \\(M\\) on that derivative.\nSubstitute into the error bound.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#example-5-estimating-error",
+    "href": "classes/26/slides.html#example-5-estimating-error",
+    "title": "Taylor Series",
+    "section": "Example 5: Estimating Error",
+    "text": "Example 5: Estimating Error\nUse the third Maclaurin polynomial for\n\\[\nf(x)=e^x\n\\]\nto approximate\n\\[\ne^{0.2}.\n\\]\nUse Taylor’s theorem to find an upper bound for the error.\nQuestions:\n\nWhat is the fourth derivative of \\(e^x\\)?\nWhat is its maximum value on \\([0,0.2]\\)?\nWhat error bound does Taylor’s theorem give?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#example-6-choosing-a-polynomial-degree",
+    "href": "classes/26/slides.html#example-6-choosing-a-polynomial-degree",
+    "title": "Taylor Series",
+    "section": "Example 6: Choosing a Polynomial Degree",
+    "text": "Example 6: Choosing a Polynomial Degree\nWe want to approximate\n\\[\n\\sin(0.5)\n\\]\nwith an error less than\n\\[\n10^{-5}.\n\\]\nUse a Maclaurin polynomial and Taylor’s theorem to determine a degree that guarantees the required accuracy.\nQuestions:\n\nHow can we bound the derivatives of \\(\\sin x\\)?\nHow does the error bound depend on \\(n\\)?\nWhat degree is sufficient?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#convergence-of-taylor-series",
+    "href": "classes/26/slides.html#convergence-of-taylor-series",
+    "title": "Taylor Series",
+    "section": "Convergence of Taylor Series",
+    "text": "Convergence of Taylor Series\nA Taylor series for \\(f(x)\\) centered at \\(a\\) is\n\\[\n\\sum_{n=0}^{\\infty}\n\\frac{f^{(n)}(a)}{n!}(x-a)^n.\n\\]\nIts partial sums are the Taylor polynomials \\(P_n(x)\\).\nFor the Taylor series to converge to \\(f(x)\\), we need\n\\[\n\\lim_{n\\to\\infty}P_n(x)=f(x).\n\\]\nEquivalently,\n\\[\n\\boxed{\n\\lim_{n\\to\\infty}R_n(x)=0.\n}\n\\]\nThis is the key condition for a Taylor series to represent its function.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#does-every-taylor-series-equal-its-function",
+    "href": "classes/26/slides.html#does-every-taylor-series-equal-its-function",
+    "title": "Taylor Series",
+    "section": "Does Every Taylor Series Equal Its Function?",
+    "text": "Does Every Taylor Series Equal Its Function?\nA function may have derivatives of every order at a point.\nThis allows us to construct its Taylor series.\nHowever, the Taylor series does not necessarily converge to the original function.\nImportant distinction:\n\nThe Taylor formula determines the coefficients.\nThe Ratio Test can help determine where the resulting series converges.\nThe remainder determines whether the series converges to the original function.\n\nWe must distinguish convergence of a series from convergence to the intended function.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#example-7-a-taylor-series-centered-at-1",
+    "href": "classes/26/slides.html#example-7-a-taylor-series-centered-at-1",
+    "title": "Taylor Series",
+    "section": "Example 7: A Taylor Series Centered at 1",
+    "text": "Example 7: A Taylor Series Centered at 1\nFind the Taylor series for\n\\[\nf(x)=\\frac{1}{x}\n\\]\ncentered at \\(a=1\\).\nDetermine its interval of convergence.\nStrategy:\n\nCompute \\(f^{(n)}(x)\\).\nEvaluate at \\(x=1\\).\nFind a general formula for the coefficients.\nWrite the Taylor series.\nDetermine its radius and interval of convergence.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#activity-taylor-series-investigation",
+    "href": "classes/26/slides.html#activity-taylor-series-investigation",
+    "title": "Taylor Series",
+    "section": "Activity: Taylor Series Investigation",
+    "text": "Activity: Taylor Series Investigation\nConsider the function\n\\[\nf(x)=\\cos x.\n\\]\nPart A: Find the Maclaurin polynomials\n\\[\nP_2(x),\\qquad P_4(x),\\qquad P_6(x).\n\\]\nPart B: Use each polynomial to approximate\n\\[\n\\cos(0.5).\n\\]\nPart C: Compare the approximations.\nDiscussion: Why do higher-degree Taylor polynomials tend to give better approximations near the center?",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#summary-taylor-and-maclaurin-series",
+    "href": "classes/26/slides.html#summary-taylor-and-maclaurin-series",
+    "title": "Taylor Series",
+    "section": "Summary: Taylor and Maclaurin Series",
+    "text": "Summary: Taylor and Maclaurin Series\nThe Taylor series centered at \\(a\\) is\n\\[\n\\boxed{\n\\sum_{n=0}^{\\infty}\n\\frac{f^{(n)}(a)}{n!}(x-a)^n\n}\n\\]\nA Maclaurin series is a Taylor series with \\(a=0\\).\nTaylor polynomials give finite approximations:\n\\[\nf(x)\\approx P_n(x).\n\\]\nTaylor’s theorem provides an error bound:\n\\[\n|R_n(x)|\n\\leq\n\\frac{M|x-a|^{n+1}}{(n+1)!}.\n\\]\nTo prove the series represents \\(f\\), show that \\(R_n(x)\\to0\\).",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#exit-ticket",
+    "href": "classes/26/slides.html#exit-ticket",
+    "title": "Taylor Series",
+    "section": "Exit Ticket",
+    "text": "Exit Ticket\n\nFind the third-degree Maclaurin polynomial for\n\\[\nf(x)=e^{-x}.\n\\]\nUse your polynomial to approximate\n\\[\ne^{-0.1}.\n\\]\nWrite an expression that bounds the error using Taylor’s theorem.\nExplain the difference between a Taylor polynomial and a Taylor series.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
     ]
   },
   {

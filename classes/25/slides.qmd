@@ -28,26 +28,20 @@ format:
 
 By the end of this lesson, you should be able to:
 
-1. Define a power series and determine its radius and interval of convergence.
-2. Represent rational functions as power series using the geometric series.
-3. Construct new power series by combining and multiplying known power series.
-4. Differentiate and integrate power series term by term.
-5. Determine where a power series representation is valid.
+- Define a power series and determine its radius and interval of convergence.
+- Represent rational functions as power series using the geometric series.
+- Construct new power series by combining and multiplying known power series.
+- Differentiate and integrate power series term by term.
+- Determine where a power series representation is valid.
 
 ---
 
-## Review: Definition of a Power Series
+##  Definition of a Power Series
 
 A **power series centered at $a$** is an infinite series of the form
 
 $$
-\sum_{n=0}^{\infty}c_n(x-a)^n
-$$
-
-or
-
-$$
-c_0+c_1(x-a)+c_2(x-a)^2+\cdots
+\sum_{n=0}^{\infty}c_n(x-a)^n=c_0+c_1(x-a)+c_2(x-a)^2+\cdots
 $$
 
 where:
@@ -56,11 +50,10 @@ where:
 - $c_n$ are the **coefficients**.
 - $x$ is the **variable**.
 
-A power series can be viewed as an infinite polynomial.
 
 ---
 
-## Review: Radius of Convergence
+##  Radius of Convergence
 
 For a power series
 
@@ -74,11 +67,7 @@ there is a radius of convergence $R$ such that:
 - The series diverges when $|x-a|>R$.
 - Convergence at $x=a-R$ and $x=a+R$ must be checked separately.
 
-The possible values of $R$ are
 
-$$
-0\leq R\leq\infty.
-$$
 
 ---
 
@@ -88,14 +77,9 @@ The **radius of convergence** tells us how far from the center the series conver
 
 The **interval of convergence** tells us exactly which real numbers $x$ produce a convergent series.
 
-**Strategy:**
+In for $x$ in the  interval of convergence, we can treat the powerseries as a function of $x$.
 
-1. Use the Ratio Test or Root Test to find $R$.
-2. Find the open interval $(a-R,a+R)$.
-3. Test each endpoint separately.
-4. Write the interval of convergence.
 
-**Question:** Can two power series have the same radius of convergence but different intervals of convergence?
 
 ---
 
@@ -105,9 +89,7 @@ The **interval of convergence** tells us exactly which real numbers $x$ produce 
 - Every power series has a radius of convergence.
 - A function can be represented by a power series where the series converges to that function.
 
-Given a function, how can we construct a power series representation?
-
-Where is the power series representation valid?
+How can we find power series representations of functions?
 
 ---
 
@@ -126,27 +108,11 @@ $$
 \sum_{n=0}^{\infty}ar^n=\frac{a}{1-r}.
 $$
 
-- If $|r|\geq 1$ and $a\neq 0$, the series diverges.
+
 
 ---
 
-## Rational Functions as Power Series
 
-Recall the geometric series formula:
-
-$$
-\frac{1}{1-r}=\sum_{n=0}^{\infty}r^n,
-\qquad |r|<1.
-$$
-
-**Strategy:**
-
-1. Rewrite the function in the form $\frac{a}{1-r}$.
-2. Identify the geometric ratio $r$.
-3. Substitute into the geometric series formula.
-4. Solve $|r|<1$ to determine the interval of convergence.
-
----
 
 ## Example 1
 
@@ -178,11 +144,9 @@ $$
 
 ---
 
-## Activity: The Power Series Factory
+## Activity: Creating Power Series
 
-Find a power series representation for each function.
-
-What is the radius of convergence?
+Find a power series representation for each function. What is the radius of convergence?
 
 1. $\displaystyle f(x)=\frac{1}{1+x}$
 
@@ -190,70 +154,28 @@ What is the radius of convergence?
 
 3. $\displaystyle h(x)=\frac{1}{1+x^2}$
 
----
-
-## Properties of Power Series
-
-We have learned how to construct power series using geometric series.
-
-**What else can we do with power series?**
-
-Recall that a power series behaves much like a polynomial.
-
-Can we:
-
-- Add or subtract power series?
-- Multiply power series?
-- Differentiate a power series?
-- Integrate a power series?
-
-The answer is yes, on appropriate intervals of convergence.
 
 ---
 
 ## Combining Power Series
 
-Suppose
+Suppose $f(x)=\sum_{n=0}^{\infty}a_nx^n$ and $g(x)=\sum_{n=0}^{\infty}b_nx^n$
 
 $$
-f(x)=\sum_{n=0}^{\infty}a_nx^n
+f(x)+ g(x)= \sum_{n=0}^{\infty}(a_n+ b_n)x^n
 $$
 
 and
 
 $$
-g(x)=\sum_{n=0}^{\infty}b_nx^n
+cf(x)=\sum_{n=0}^{\infty}ca_nx^n.
 $$
 
-converge on a common interval $I$.
-
-Then
-
-$$
-f(x)\pm g(x)
-=
-\sum_{n=0}^{\infty}(a_n\pm b_n)x^n
-$$
-
-for every $x$ in $I$.
-
-**Important:** We can combine the series wherever both original series converge.
+The are only valid in the interval of convergence.
 
 ---
 
-## Constructing New Power Series
-
-If
-
-$$
-f(x)=\sum_{n=0}^{\infty}a_nx^n,
-$$
-
-then multiplication by a constant gives
-
-$$
-cf(x)=\sum_{n=0}^{\infty}ca_nx^n.
-$$
+## Multipling and Substituting
 
 Multiplication by a power of $x$ gives
 
@@ -273,118 +195,45 @@ For the last expression, the new series is valid wherever $bx^m$ lies in the ori
 
 ## Example 4: Combining Power Series
 
-Find a power series representation for
+Find a power series representation for the following function and determine its radius and interval of convergence.
 
 $$
 f(x)=\frac{1}{1-x}+\frac{1}{1+x}.
 $$
 
-Determine its radius and interval of convergence.
 
-**Questions:**
-
-1. What power series represent the two fractions?
-2. On what interval do both series converge?
-3. What happens when we add their coefficients?
 
 ---
 
 ## Example 5: Using Partial Fractions
 
-Find a power series representation for
+Find a power series representation for the following function and determine its radius and interval of convergence.
 
 $$
 f(x)=\frac{1}{(1-x)(2-x)}.
 $$
 
-Determine the radius of convergence.
 
-**Strategy:**
-
-1. Write the function using partial fractions.
-2. Represent each fraction as a geometric series.
-3. Combine the resulting power series.
-4. Determine the common interval of convergence.
 
 ---
 
-## Multiplication of Power Series
 
-Suppose
 
-$$
-f(x)=a_0+a_1x+a_2x^2+\cdots
-$$
-
-and
-
-$$
-g(x)=b_0+b_1x+b_2x^2+\cdots.
-$$
-
-Their product is
-
-$$
-f(x)g(x)=c_0+c_1x+c_2x^2+\cdots,
-$$
-
-where
-
-$$
-c_n=\sum_{k=0}^{n}a_kb_{n-k}.
-$$
-
-This is called the **Cauchy product**.
-
-It is obtained by multiplying and collecting terms just as we do with finite polynomials.
-
----
-
-## Example 6: Multiplying Power Series
-
-We know that
-
-$$
-\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n,
-\qquad |x|<1.
-$$
-
-Use multiplication of power series to find a representation for
-
-$$
-f(x)=\frac{1}{(1-x)^2}.
-$$
-
-**Questions:**
-
-1. What are the coefficients of $x^0,x^1,x^2,x^3$?
-2. Can you describe the coefficient of $x^n$?
-3. What is the radius of convergence?
-
----
 
 ## Differentiating Power Series
 
-Suppose a power series represents a function $f$:
-
-$$
-f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n
-$$
-
-with radius of convergence $R>0$.
+Suppose a power series represents a function $f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n$ with radius of convergence $R>0$.
 
 We can differentiate the series **term by term**:
 
 $$
-\boxed{
 f'(x)=\sum_{n=1}^{\infty}
 nc_n(x-a)^{n-1}
-}
 $$
 
 for $|x-a|<R$.
 
-The differentiated power series has the **same radius of convergence** as the original series.
+The differentiated power series has the same radius of convergence.
 
 ---
 
@@ -403,61 +252,27 @@ $$
 f(x)=\frac{1}{(1-x)^2}.
 $$
 
-**Questions:**
 
-1. What happens to the exponent of each term?
-2. What happens to the coefficient of each term?
-3. What is the radius of convergence?
-
----
-
-## Activity: Two Ways to Find a Power Series
-
-Consider
-
-$$
-f(x)=\frac{1}{(1-x)^2}.
-$$
-
-We have now developed two approaches:
-
-1. Multiply the power series for $\frac{1}{1-x}$ by itself.
-2. Differentiate the power series for $\frac{1}{1-x}$.
-
-**Compare your answers.**
-
-Do the two methods produce the same power series?
-
-Why should we expect this?
 
 ---
 
 ## Integrating Power Series
 
-Suppose
-
-$$
-f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n
-$$
-
-has radius of convergence $R>0$.
+Suppose $f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n$ has radius of convergence $R>0$.
 
 We can integrate **term by term**:
 
 $$
-\boxed{
 \int f(x)\,dx
 =
 C+\sum_{n=0}^{\infty}
 \frac{c_n}{n+1}(x-a)^{n+1}
-}
 $$
 
 for $|x-a|<R$.
 
-The integrated series has the **same radius of convergence**.
+The integrated series has the same radius of convergence.
 
-We must still check its endpoints separately.
 
 ---
 
@@ -476,11 +291,6 @@ $$
 f(x)=\ln(1+x).
 $$
 
-**Questions:**
-
-1. What is the antiderivative of each term?
-2. How can we determine the constant of integration?
-3. Does the new series converge at $x=1$ or $x=-1$?
 
 ---
 
@@ -505,26 +315,6 @@ Determine the radius and interval of convergence of the resulting series.
 
 ---
 
-## Properties and Convergence
-
-Suppose
-
-$$
-f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n
-$$
-
-has a positive radius of convergence $R$.
-
-**Important results:**
-
-- The series can be differentiated term by term for $|x-a|<R$.
-- The series can be integrated term by term for $|x-a|<R$.
-- Both new series have the same radius of convergence $R$.
-- Their behavior at the endpoints may be different.
-
-**Why must we test the endpoints again after differentiation or integration?**
-
----
 
 ## Uniqueness of Power Series
 
@@ -536,50 +326,48 @@ $$
 \sum_{n=0}^{\infty}d_n(x-a)^n.
 $$
 
-Then
+Then $c_n=d_n$ for every $n$.
 
-$$
-\boxed{c_n=d_n \quad \text{for every } n.}
-$$
+**Two power series are equal if and only if their coeffiecients are equal.**
 
-A function has at most one power series representation centered at a given point on an open interval containing that point.
-
-This explains why different methods for finding a power series produce the same coefficients.
 
 ---
 
-## Summary: Working with Power Series
+## Multiplication of Power Series
 
-Starting with a known power series, we can construct new representations by:
+Suppose
 
-1. Substitution into the geometric series formula.
-2. Addition and subtraction of power series.
-3. Multiplication of power series.
-4. Term-by-term differentiation.
-5. Term-by-term integration.
+$f(x)=a_0+a_1x+a_2x^2+\cdots$ and $g(x)=b_0+b_1x+b_2x^2+\cdots$
 
-**For every representation:**
+Their product is
 
-Determine its radius and interval of convergence.
+$$
+f(x)g(x)=c_0+c_1x+c_2x^2+\cdots,
+$$
+
+where
+
+$$
+c_n=\sum_{k=0}^{n}a_kb_{n-k}.
+$$
+
+
 
 ---
 
-## Exit Ticket
+## Example 6: Multiplying Power Series
 
-1. Find a power series representation for
+We know that
 
-   $$
-   f(x)=\frac{1}{(1+2x)^2}.
-   $$
+$$
+\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n,
+\qquad |x|<1.
+$$
 
-   Determine its radius of convergence.
+Use multiplication of power series to find a representation for
 
-2. Use a known geometric series to find a power series representation for
-
-   $$
-   g(x)=\ln(1-x).
-   $$
-
-3. Explain why differentiating or integrating a power series does not change its radius of convergence, even though its interval of convergence may change.
+$$
+f(x)=\frac{1}{(1-x)^2}.
+$$
 
 ---
