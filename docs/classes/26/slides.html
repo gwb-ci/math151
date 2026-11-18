@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <title>Math 151 - Calculus II – Taylor Series</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,13 +19,10 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -154,18 +151,14 @@
 <h2>Review: Power Series</h2>
 <p>Recall that a <strong>power series centered at <span class="math inline">\(a\)</span></strong> has the form</p>
 <p><span class="math display">\[
-\sum_{n=0}^{\infty}c_n(x-a)^n.
-\]</span></p>
-<p>We can write this as</p>
-<p><span class="math display">\[
-c_0+c_1(x-a)+c_2(x-a)^2+\cdots
+\sum_{n=0}^{\infty}c_n(x-a)^n =c_0+c_1(x-a)+c_2(x-a)^2+\cdots
 \]</span></p>
 <ul>
 <li>The numbers <span class="math inline">\(c_n\)</span> are the coefficients.</li>
 <li>The number <span class="math inline">\(a\)</span> is the center.</li>
 <li>The series converges for values of <span class="math inline">\(x\)</span> within its radius of convergence.</li>
 </ul>
-<p><strong>Question:</strong> How can we find the coefficients if we are given a function <span class="math inline">\(f(x)\)</span>?</p>
+<p><strong>Given a function how can we find the power series?</strong></p>
 </section>
 <section id="representing-functions-as-power-series" class="slide level2">
 <h2>Representing Functions as Power Series</h2>
@@ -178,8 +171,7 @@ c_0+c_1(x-a)+c_2(x-a)^2+\cdots
 \qquad |x|&lt;1.
 \]</span></p>
 <p>We also constructed new representations using algebra, differentiation, and integration.</p>
-<p><strong>New question:</strong></p>
-<p>Can we construct a power series for a function directly from its derivatives?</p>
+<p><strong>Today we want to find a more general way to find power series.</strong></p>
 </section>
 <section id="the-idea-behind-taylor-series" class="slide level2">
 <h2>The Idea Behind Taylor Series</h2>
@@ -187,18 +179,33 @@ c_0+c_1(x-a)+c_2(x-a)^2+\cdots
 <p><span class="math display">\[
 f(x)=c_0+c_1(x-a)+c_2(x-a)^2+\cdots
 \]</span></p>
-<p>How can we determine the coefficients?</p>
-<p><strong>Start by evaluating at <span class="math inline">\(x=a\)</span>.</strong></p>
+<p>How can we determine the coefficients <span class="math inline">\(c_n\)</span>?</p>
+<p>What’s <span class="math inline">\(c_0\)</span>? Plug in <span class="math inline">\(x=a\)</span>.</p>
 <p><span class="math display">\[
 f(a)=c_0
 \]</span></p>
-<p>Differentiate both sides:</p>
+</section>
+<section id="keep-going" class="slide level2">
+<h2>Keep Going</h2>
+<p>What’s <span class="math inline">\(c_1\)</span>?</p>
+<p>Differentiate :</p>
 <p><span class="math display">\[
 f'(x)=c_1+2c_2(x-a)+3c_3(x-a)^2+\cdots
 \]</span></p>
-<p>Evaluate at <span class="math inline">\(x=a\)</span>:</p>
+<p>Plug in <span class="math inline">\(x=a\)</span></p>
 <p><span class="math display">\[
 f'(a)=c_1
+\]</span></p>
+</section>
+<section id="one-more" class="slide level2">
+<h2>One more</h2>
+<p>What’s <span class="math inline">\(c_2\)</span>?</p>
+<p>Differentiate :</p>
+<p><span class="math display">\[
+f''(x)=2c_2+3 \cdot 2 c_3(x-a)+\cdots
+\]</span></p>
+<p>Plug in <span class="math inline">\(x=a\)</span> to ger <span class="math inline">\(f''(a)=2c_1\)</span>. So <span class="math display">\[
+c_2=\frac{f''(a)}{2}
 \]</span></p>
 </section>
 <section id="finding-the-coefficients" class="slide level2">
@@ -212,6 +219,9 @@ c_2 &amp;= \frac{f''(a)}{2!}\\[6pt]
 c_3 &amp;= \frac{f'''(a)}{3!}
 \end{aligned}
 \]</span></p>
+</section>
+<section id="whats-the-pattern" class="slide level2">
+<h2>What’s the Pattern</h2>
 <p>In general,</p>
 <p><span class="math display">\[
 \boxed{
@@ -224,16 +234,13 @@ c_n=\frac{f^{(n)}(a)}{n!}
 <h2>Definition: Taylor Series</h2>
 <p>The <strong>Taylor series</strong> for a function <span class="math inline">\(f(x)\)</span> centered at <span class="math inline">\(a\)</span> is</p>
 <p><span class="math display">\[
-\boxed{
 \sum_{n=0}^{\infty}
 \frac{f^{(n)}(a)}{n!}(x-a)^n
-}
 \]</span></p>
 <p>Expanding the first few terms:</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(x)\sim {}&amp;f(a)+f'(a)(x-a)\\
-&amp;+\frac{f''(a)}{2!}(x-a)^2\\
+f(x)\sim {}&amp;f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2\\
 &amp;+\frac{f'''(a)}{3!}(x-a)^3+\cdots
 \end{aligned}
 \]</span></p>
@@ -251,25 +258,23 @@ f(x)\sim {}&amp;f(a)+f'(a)(x-a)\\
 <p>In expanded form:</p>
 <p><span class="math display">\[
 \begin{aligned}
-f(x)\sim {}&amp; f(0)+f'(0)x\\
-&amp;+\frac{f''(0)}{2!}x^2\\
+f(x)\sim {}&amp; f(0)+f'(0)x +\frac{f''(0)}{2!}x^2\\
 &amp;+\frac{f'''(0)}{3!}x^3+\cdots
 \end{aligned}
 \]</span></p>
-<p><strong>Question:</strong> What is the difference between a Taylor series and a Maclaurin series?</p>
 </section>
 <section id="taylor-polynomials" class="slide level2">
 <h2>Taylor Polynomials</h2>
 <p>A <strong>Taylor polynomial</strong> is a finite partial sum of a Taylor series.</p>
 <p>The Taylor polynomial of degree <span class="math inline">\(n\)</span> centered at <span class="math inline">\(a\)</span> is</p>
 <p><span class="math display">\[
-\boxed{
 P_n(x)=
 \sum_{k=0}^{n}
 \frac{f^{(k)}(a)}{k!}(x-a)^k
-}
 \]</span></p>
-<p>For example:</p>
+</section>
+<section id="taylor-polynomials-1" class="slide level2">
+<h2>Taylor Polynomials</h2>
 <p><span class="math display">\[
 P_0(x)=f(a)
 \]</span></p>
@@ -287,11 +292,7 @@ P_2(x)=P_1(x)+\frac{f''(a)}{2}(x-a)^2
 <p><span class="math display">\[
 L(x)=f(a)+f'(a)(x-a).
 \]</span></p>
-<p>This is precisely the first Taylor polynomial <span class="math inline">\(P_1(x)\)</span>.</p>
-<p>Adding more terms gives higher-degree polynomial approximations.</p>
-<p><strong>Important idea:</strong></p>
-<p>A Taylor polynomial agrees with the function and its derivatives through order <span class="math inline">\(n\)</span> at the center.</p>
-<p>Higher-degree polynomials often provide better approximations near the center.</p>
+<p>This is precisely the first Taylor polynomial <span class="math inline">\(P_1(x)\)</span>. Adding more terms gives higher-degree polynomial approximations. Higher-degree polynomials often provide better approximations near the center.</p>
 </section>
 <section id="example-1-taylor-polynomials" class="slide level2">
 <h2>Example 1: Taylor Polynomials</h2>
@@ -300,13 +301,81 @@ L(x)=f(a)+f'(a)(x-a).
 f(x)=\ln x.
 \]</span></p>
 <p>Find the Taylor polynomials <span class="math inline">\(P_0\)</span>, <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span>, and <span class="math inline">\(P_3\)</span> centered at <span class="math inline">\(a=1\)</span>.</p>
-<p><strong>Strategy:</strong></p>
-<ol type="1">
-<li>Find the first three derivatives.</li>
-<li>Evaluate each derivative at <span class="math inline">\(x=1\)</span>.</li>
-<li>Substitute into the Taylor polynomial formula.</li>
-<li>Compare the approximations near <span class="math inline">\(x=1\)</span>.</li>
-</ol>
+</section>
+<section id="example-1-taylor-polynomial-approximations" class="slide level2">
+<h2>Example 1: Taylor Polynomial Approximations</h2>
+<p>For <span class="math inline">\(f(x)=\ln x\)</span> centered at <span class="math inline">\(a=1\)</span>, compare the values of the Taylor polynomials with the actual function values.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\ln x\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_0(x)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_1(x)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_2(x)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_3(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.5</td>
+<td style="text-align: right;">-0.6931</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">-0.5000</td>
+<td style="text-align: right;">-0.6250</td>
+<td style="text-align: right;">-0.6667</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.8</td>
+<td style="text-align: right;">-0.2231</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">-0.2000</td>
+<td style="text-align: right;">-0.2200</td>
+<td style="text-align: right;">-0.2227</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.9</td>
+<td style="text-align: right;">-0.1054</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">-0.1000</td>
+<td style="text-align: right;">-0.1050</td>
+<td style="text-align: right;">-0.1053</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1.0</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1.1</td>
+<td style="text-align: right;">0.0953</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.1000</td>
+<td style="text-align: right;">0.0950</td>
+<td style="text-align: right;">0.0953</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1.2</td>
+<td style="text-align: right;">0.1823</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.2000</td>
+<td style="text-align: right;">0.1800</td>
+<td style="text-align: right;">0.1827</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1.5</td>
+<td style="text-align: right;">0.4055</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.5000</td>
+<td style="text-align: right;">0.3750</td>
+<td style="text-align: right;">0.4167</td>
+</tr>
+</tbody>
+</table>
+<p>Higher-degree Taylor polynomials generally provide better approximations near <span class="math inline">\(a=1\)</span>.</p>
 </section>
 <section id="example-2-maclaurin-polynomials" class="slide level2">
 <h2>Example 2: Maclaurin Polynomials</h2>
@@ -314,12 +383,6 @@ f(x)=\ln x.
 <p><span class="math display">\[
 f(x)=e^x.
 \]</span></p>
-<p><strong>Questions:</strong></p>
-<ol type="1">
-<li>What is the derivative of <span class="math inline">\(e^x\)</span>?</li>
-<li>What is the value of every derivative at <span class="math inline">\(x=0\)</span>?</li>
-<li>Is there a pattern in the coefficients?</li>
-</ol>
 </section>
 <section id="the-maclaurin-series-for-ex" class="slide level2">
 <h2>The Maclaurin Series for <span class="math inline">\(e^x\)</span></h2>
@@ -345,46 +408,100 @@ e^x=1+x+\frac{x^2}{2!}
 <p>This series converges to <span class="math inline">\(e^x\)</span> for all real <span class="math inline">\(x\)</span>.</p>
 <p><strong>Radius of convergence:</strong> <span class="math inline">\(R=\infty\)</span>.</p>
 </section>
+<section id="example-1-maclaurin-polynomial-approximations" class="slide level2">
+<h2>Example 1: Maclaurin Polynomial Approximations</h2>
+<p>For <span class="math inline">\(f(x)=e^x\)</span> centered at <span class="math inline">\(a=0\)</span>, compare the values of the Maclaurin polynomials with the actual function values.</p>
+<p>The Maclaurin polynomials are:</p>
+<ul>
+<li><span class="math inline">\(P_0(x)=1\)</span></li>
+<li><span class="math inline">\(P_1(x)=1+x\)</span></li>
+<li><span class="math inline">\(P_2(x)=1+x+\frac{x^2}{2}\)</span></li>
+<li><span class="math inline">\(P_3(x)=1+x+\frac{x^2}{2}+\frac{x^3}{6}\)</span></li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(e^x\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_0(x)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_1(x)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_2(x)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_3(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">-1.0</td>
+<td style="text-align: right;">0.3679</td>
+<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.5000</td>
+<td style="text-align: right;">0.3333</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">-0.5</td>
+<td style="text-align: right;">0.6065</td>
+<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">0.5000</td>
+<td style="text-align: right;">0.6250</td>
+<td style="text-align: right;">0.6042</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">-0.2</td>
+<td style="text-align: right;">0.8187</td>
+<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">0.8000</td>
+<td style="text-align: right;">0.8200</td>
+<td style="text-align: right;">0.8187</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.0</td>
+<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">1.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.2</td>
+<td style="text-align: right;">1.2214</td>
+<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">1.2000</td>
+<td style="text-align: right;">1.2200</td>
+<td style="text-align: right;">1.2213</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.5</td>
+<td style="text-align: right;">1.6487</td>
+<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">1.5000</td>
+<td style="text-align: right;">1.6250</td>
+<td style="text-align: right;">1.6458</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1.0</td>
+<td style="text-align: right;">2.7183</td>
+<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">2.0000</td>
+<td style="text-align: right;">2.5000</td>
+<td style="text-align: right;">2.6667</td>
+</tr>
+</tbody>
+</table>
+<p>Higher-degree Maclaurin polynomials generally provide better approximations near <span class="math inline">\(a=0\)</span>.</p>
+</section>
 <section id="example-3-maclaurin-series-for-sine" class="slide level2">
 <h2>Example 3: Maclaurin Series for Sine</h2>
 <p>Find the Maclaurin series for</p>
 <p><span class="math display">\[
 f(x)=\sin x.
 \]</span></p>
-<p><strong>Strategy:</strong></p>
-<ol type="1">
-<li>Compute the first several derivatives.</li>
-<li>Evaluate the derivatives at <span class="math inline">\(x=0\)</span>.</li>
-<li>Look for a repeating pattern.</li>
-<li>Write the series using sigma notation.</li>
-</ol>
-<p>What happens to the coefficients of the even powers of <span class="math inline">\(x\)</span>?</p>
-</section>
-<section id="the-maclaurin-series-for-sin-x" class="slide level2">
-<h2>The Maclaurin Series for <span class="math inline">\(\sin x\)</span></h2>
-<p>The derivatives repeat in a cycle:</p>
-<p><span class="math display">\[
-\sin x,\quad \cos x,\quad
--\sin x,\quad -\cos x.
-\]</span></p>
-<p>Evaluating at zero gives</p>
-<p><span class="math display">\[
-0,\quad 1,\quad 0,\quad -1,\ldots
-\]</span></p>
-<p>Therefore,</p>
-<p><span class="math display">\[
-\boxed{
-\sin x=
-\sum_{n=0}^{\infty}
-\frac{(-1)^n x^{2n+1}}{(2n+1)!}
-}
-\]</span></p>
-<p>or</p>
+<div class="fragment">
 <p><span class="math display">\[
 \sin x=x-\frac{x^3}{3!}
 +\frac{x^5}{5!}-\cdots
 \]</span></p>
-<p>This series converges to <span class="math inline">\(\sin x\)</span> for all real <span class="math inline">\(x\)</span>.</p>
+</div>
 </section>
 <section id="example-4-maclaurin-series-for-cosine" class="slide level2">
 <h2>Example 4: Maclaurin Series for Cosine</h2>
@@ -392,33 +509,12 @@ f(x)=\sin x.
 <p><span class="math display">\[
 f(x)=\cos x.
 \]</span></p>
-<p><strong>Questions:</strong></p>
-<ol type="1">
-<li>What pattern do the derivatives follow?</li>
-<li>Which coefficients are zero?</li>
-<li>How does the series compare with the series for <span class="math inline">\(\sin x\)</span>?</li>
-</ol>
-<p>Write the result using sigma notation.</p>
-</section>
-<section id="the-maclaurin-series-for-cos-x" class="slide level2">
-<h2>The Maclaurin Series for <span class="math inline">\(\cos x\)</span></h2>
-<p>The Maclaurin series is</p>
-<p><span class="math display">\[
-\boxed{
-\cos x=
-\sum_{n=0}^{\infty}
-\frac{(-1)^n x^{2n}}{(2n)!}
-}
-\]</span></p>
-<p>or</p>
-<p><span class="math display">\[
+<p>. . . <span class="math display">\[
 \cos x=
 1-\frac{x^2}{2!}
 +\frac{x^4}{4!}
 -\frac{x^6}{6!}+\cdots
 \]</span></p>
-<p>This series converges to <span class="math inline">\(\cos x\)</span> for all real <span class="math inline">\(x\)</span>.</p>
-<p><strong>Question:</strong> What happens when we differentiate this power series term by term?</p>
 </section>
 <section id="important-maclaurin-series" class="slide level2">
 <h2>Important Maclaurin Series</h2>
@@ -439,21 +535,6 @@ e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}
 \]</span></p>
 <p>All three series converge for every real number <span class="math inline">\(x\)</span>.</p>
 </section>
-<section id="activity-the-taylor-polynomial-factory" class="slide level2">
-<h2>Activity: The Taylor Polynomial Factory</h2>
-<p>Find the third-degree Maclaurin polynomial <span class="math inline">\(P_3(x)\)</span> for each function.</p>
-<ol type="1">
-<li><p><span class="math inline">\(\displaystyle f(x)=e^{2x}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle g(x)=\sin(2x)\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle h(x)=\cos x\)</span></p></li>
-</ol>
-<p>For each function:</p>
-<ul>
-<li>Find the necessary derivatives at zero.</li>
-<li>Write the polynomial.</li>
-<li>Identify which coefficients are zero.</li>
-</ul>
-</section>
 <section id="approximating-function-values" class="slide level2">
 <h2>Approximating Function Values</h2>
 <p>Suppose we want to approximate</p>
@@ -468,12 +549,7 @@ P_3(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}.
 <p><span class="math display">\[
 e^{0.2}\approx P_3(0.2).
 \]</span></p>
-<p><strong>Questions:</strong></p>
-<ol type="1">
-<li>What is the approximate value?</li>
-<li>Would <span class="math inline">\(P_5(0.2)\)</span> give a more accurate approximation?</li>
-<li>How can we estimate the error without knowing the exact value?</li>
-</ol>
+<p>How good is this estimation? How can we estimate the error without knowing the exact value?</p>
 </section>
 <section id="the-remainder-of-a-taylor-polynomial" class="slide level2">
 <h2>The Remainder of a Taylor Polynomial</h2>
@@ -483,9 +559,7 @@ f(x)\approx P_n(x).
 \]</span></p>
 <p>The <strong>remainder</strong> is the difference between the function and the polynomial:</p>
 <p><span class="math display">\[
-\boxed{
 R_n(x)=f(x)-P_n(x)
-}
 \]</span></p>
 <p>Therefore,</p>
 <p><span class="math display">\[
@@ -502,11 +576,9 @@ f(x)=P_n(x)+R_n(x).
 <p>Suppose <span class="math inline">\(f\)</span> has at least <span class="math inline">\(n+1\)</span> continuous derivatives on an interval containing <span class="math inline">\(a\)</span> and <span class="math inline">\(x\)</span>.</p>
 <p>Then there exists a number <span class="math inline">\(c\)</span> between <span class="math inline">\(a\)</span> and <span class="math inline">\(x\)</span> such that</p>
 <p><span class="math display">\[
-\boxed{
 R_n(x)=
 \frac{f^{(n+1)}(c)}{(n+1)!}
 (x-a)^{n+1}
-}
 \]</span></p>
 <p>The number <span class="math inline">\(c\)</span> is generally unknown.</p>
 <p>We use a bound on the derivative to estimate the remainder.</p>
@@ -520,19 +592,10 @@ R_n(x)=
 <p>for all <span class="math inline">\(t\)</span> between <span class="math inline">\(a\)</span> and <span class="math inline">\(x\)</span>.</p>
 <p>Then Taylor’s theorem tells us</p>
 <p><span class="math display">\[
-\boxed{
 |R_n(x)|
 \leq
 \frac{M}{(n+1)!}|x-a|^{n+1}
-}
 \]</span></p>
-<p><strong>Strategy:</strong></p>
-<ol type="1">
-<li>Identify the Taylor polynomial degree <span class="math inline">\(n\)</span>.</li>
-<li>Find the <span class="math inline">\((n+1)\)</span>st derivative.</li>
-<li>Find a bound <span class="math inline">\(M\)</span> on that derivative.</li>
-<li>Substitute into the error bound.</li>
-</ol>
 </section>
 <section id="example-5-estimating-error" class="slide level2">
 <h2>Example 5: Estimating Error</h2>
@@ -674,8 +737,82 @@ e^{-0.1}.
 <li><p>Explain the difference between a Taylor polynomial and a Taylor series.</p></li>
 </ol>
 </section>
-<section class="slide level2">
-
+<section id="power-series-can-describe-unknown-functions" class="slide level2">
+<h2>Power Series Can Describe Unknown Functions</h2>
+<p>So far, we have used Taylor and Maclaurin series to represent familiar functions such as <span class="math inline">\(e^x\)</span>, <span class="math inline">\(\sin x\)</span>, and <span class="math inline">\(\ln(1+x)\)</span>.</p>
+<p>But what if we encounter a function that we do not already know?</p>
+<ul>
+<li>Some functions are defined by equations involving their derivatives.</li>
+<li>These equations are called <strong>differential equations</strong>.</li>
+<li>Power series can help us construct solutions even when no familiar formula exists.</li>
+</ul>
+<p><strong>Key Idea:</strong> A power series can define a new function, not just approximate a familiar one.</p>
+</section>
+<section id="example-the-airy-equation" class="slide level2">
+<h2>Example: The Airy Equation</h2>
+<p>Consider the differential equation</p>
+<p><span class="math display">\[
+y''-xy=0.
+\]</span></p>
+<p>This is called the <strong>Airy equation</strong>.</p>
+<p>We want to find a function <span class="math inline">\(y(x)\)</span> whose second derivative satisfies</p>
+<p><span class="math display">\[
+y''=xy.
+\]</span></p>
+<p>Unlike the differential equation <span class="math inline">\(y'=y\)</span>, whose solutions include <span class="math inline">\(e^x\)</span>, the Airy equation has no nonzero solutions expressible using elementary functions.</p>
+<p><strong>Question:</strong> Can we describe its solutions using power series?</p>
+</section>
+<section id="solving-the-airy-equation-with-power-series" class="slide level2">
+<h2>Solving the Airy Equation with Power Series</h2>
+<p>Suppose the unknown function has a Maclaurin series</p>
+<p><span class="math display">\[
+y(x)=\sum_{n=0}^{\infty}a_nx^n.
+\]</span></p>
+<p>Differentiating twice gives</p>
+<p><span class="math display">\[
+y''(x)=\sum_{n=2}^{\infty}n(n-1)a_nx^{n-2}.
+\]</span></p>
+<p>Substitute into <span class="math inline">\(y''-xy=0\)</span>:</p>
+<p><span class="math display">\[
+\sum_{n=2}^{\infty}n(n-1)a_nx^{n-2}
+-\sum_{n=0}^{\infty}a_nx^{n+1}=0.
+\]</span></p>
+<p>Matching coefficients of equal powers of <span class="math inline">\(x\)</span> gives</p>
+<ul>
+<li><span class="math inline">\(a_2=0\)</span></li>
+<li><span class="math inline">\(a_{n+2}=\dfrac{a_{n-1}}{(n+2)(n+1)}\)</span>, for <span class="math inline">\(n\geq 1\)</span>.</li>
+</ul>
+<p>The differential equation tells us how to calculate the coefficients!</p>
+</section>
+<section id="constructing-an-unknown-function" class="slide level2">
+<h2>Constructing an Unknown Function</h2>
+<p>The recurrence relation gives</p>
+<ul>
+<li><span class="math inline">\(a_2=0\)</span></li>
+<li><span class="math inline">\(a_3=\dfrac{a_0}{6}\)</span></li>
+<li><span class="math inline">\(a_4=\dfrac{a_1}{12}\)</span></li>
+<li><span class="math inline">\(a_5=0\)</span></li>
+<li><span class="math inline">\(a_6=\dfrac{a_0}{180}\)</span></li>
+<li><span class="math inline">\(a_7=\dfrac{a_1}{504}\)</span></li>
+</ul>
+<p>Therefore, the solution begins as</p>
+<p><span class="math display">\[
+y(x)=a_0\left(1+\frac{x^3}{6}+\frac{x^6}{180}+\cdots\right)
++a_1\left(x+\frac{x^4}{12}+\frac{x^7}{504}+\cdots\right).
+\]</span></p>
+<p>The constants <span class="math inline">\(a_0=y(0)\)</span> and <span class="math inline">\(a_1=y'(0)\)</span> determine a particular solution.</p>
+<p><strong>Notice:</strong> We have constructed a function without knowing an elementary formula for it!</p>
+</section>
+<section id="why-this-matters" class="slide level2">
+<h2>Why This Matters</h2>
+<p>The Airy equation has two important solutions called the <strong>Airy functions</strong>, <span class="math inline">\(\operatorname{Ai}(x)\)</span> and <span class="math inline">\(\operatorname{Bi}(x)\)</span>.</p>
+<p>These functions appear in applications involving wave motion, optics, and quantum mechanics.</p>
+<ul>
+<li>Power series provide a way to define and calculate these functions.</li>
+<li>Adding more terms gives increasingly accurate approximations.</li>
+<li>The series solutions converge for every real number <span class="math inline">\(x\)</span>.</li>
+</ul>
+<p>Taylor and Maclaurin series do more than approximate known functions. They allow us understand new functions.</p>
 
 
 </section>

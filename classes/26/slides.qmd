@@ -43,20 +43,15 @@ By the end of this lesson, you should be able to:
 Recall that a **power series centered at $a$** has the form
 
 $$
-\sum_{n=0}^{\infty}c_n(x-a)^n.
+\sum_{n=0}^{\infty}c_n(x-a)^n =c_0+c_1(x-a)+c_2(x-a)^2+\cdots
 $$
 
-We can write this as
-
-$$
-c_0+c_1(x-a)+c_2(x-a)^2+\cdots
-$$
 
 - The numbers $c_n$ are the coefficients.
 - The number $a$ is the center.
 - The series converges for values of $x$ within its radius of convergence.
 
-**Question:** How can we find the coefficients if we are given a function $f(x)$?
+**Given a function how can we find the power series?**
 
 ---
 
@@ -75,9 +70,7 @@ $$
 
 We also constructed new representations using algebra, differentiation, and integration.
 
-**New question:**
-
-Can we construct a power series for a function directly from its derivatives?
+**Today we want to find a more general way to find power series.**
 
 ---
 
@@ -89,25 +82,49 @@ $$
 f(x)=c_0+c_1(x-a)+c_2(x-a)^2+\cdots
 $$
 
-How can we determine the coefficients?
+How can we determine the coefficients $c_n$?
 
-**Start by evaluating at $x=a$.**
+What's $c_0$?  Plug in $x=a$.
 
 $$
 f(a)=c_0
 $$
 
-Differentiate both sides:
+---
+
+## Keep Going
+
+What's $c_1$?
+
+Differentiate :
 
 $$
 f'(x)=c_1+2c_2(x-a)+3c_3(x-a)^2+\cdots
 $$
 
-Evaluate at $x=a$:
+Plug in $x=a$
 
 $$
 f'(a)=c_1
 $$
+
+---
+
+## One more
+
+What's $c_2$?
+
+Differentiate :
+
+$$
+f''(x)=2c_2+3 \cdot 2 c_3(x-a)+\cdots
+$$
+
+Plug in $x=a$ to ger $f''(a)=2c_1$. So
+$$
+c_2=\frac{f''(a)}{2}
+$$
+
 
 ---
 
@@ -123,6 +140,8 @@ c_2 &= \frac{f''(a)}{2!}\\[6pt]
 c_3 &= \frac{f'''(a)}{3!}
 \end{aligned}
 $$
+
+## What's the Pattern
 
 In general,
 
@@ -141,18 +160,15 @@ This gives us a formula for the coefficients of a power series representation.
 The **Taylor series** for a function $f(x)$ centered at $a$ is
 
 $$
-\boxed{
 \sum_{n=0}^{\infty}
 \frac{f^{(n)}(a)}{n!}(x-a)^n
-}
 $$
 
 Expanding the first few terms:
 
 $$
 \begin{aligned}
-f(x)\sim {}&f(a)+f'(a)(x-a)\\
-&+\frac{f''(a)}{2!}(x-a)^2\\
+f(x)\sim {}&f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2\\
 &+\frac{f'''(a)}{3!}(x-a)^3+\cdots
 \end{aligned}
 $$
@@ -176,13 +192,12 @@ In expanded form:
 
 $$
 \begin{aligned}
-f(x)\sim {}& f(0)+f'(0)x\\
-&+\frac{f''(0)}{2!}x^2\\
+f(x)\sim {}& f(0)+f'(0)x +\frac{f''(0)}{2!}x^2\\
 &+\frac{f'''(0)}{3!}x^3+\cdots
 \end{aligned}
 $$
 
-**Question:** What is the difference between a Taylor series and a Maclaurin series?
+
 
 ---
 
@@ -193,14 +208,13 @@ A **Taylor polynomial** is a finite partial sum of a Taylor series.
 The Taylor polynomial of degree $n$ centered at $a$ is
 
 $$
-\boxed{
 P_n(x)=
 \sum_{k=0}^{n}
 \frac{f^{(k)}(a)}{k!}(x-a)^k
-}
 $$
 
-For example:
+
+## Taylor Polynomials
 
 $$
 P_0(x)=f(a)
@@ -226,15 +240,7 @@ $$
 L(x)=f(a)+f'(a)(x-a).
 $$
 
-This is precisely the first Taylor polynomial $P_1(x)$.
-
-Adding more terms gives higher-degree polynomial approximations.
-
-**Important idea:**
-
-A Taylor polynomial agrees with the function and its derivatives through order $n$ at the center.
-
-Higher-degree polynomials often provide better approximations near the center.
+This is precisely the first Taylor polynomial $P_1(x)$. Adding more terms gives higher-degree polynomial approximations. Higher-degree polynomials often provide better approximations near the center.
 
 ---
 
@@ -248,14 +254,27 @@ $$
 
 Find the Taylor polynomials $P_0$, $P_1$, $P_2$, and $P_3$ centered at $a=1$.
 
-**Strategy:**
-
-1. Find the first three derivatives.
-2. Evaluate each derivative at $x=1$.
-3. Substitute into the Taylor polynomial formula.
-4. Compare the approximations near $x=1$.
 
 ---
+
+## Example 1: Taylor Polynomial Approximations
+
+For $f(x)=\ln x$ centered at $a=1$, compare the values of the
+Taylor polynomials with the actual function values.
+
+| $x$ | $\ln x$ | $P_0(x)$ | $P_1(x)$ | $P_2(x)$ | $P_3(x)$ |
+|:---:|---:|---:|---:|---:|---:|
+| 0.5 | -0.6931 | 0.0000 | -0.5000 | -0.6250 | -0.6667 |
+| 0.8 | -0.2231 | 0.0000 | -0.2000 | -0.2200 | -0.2227 |
+| 0.9 | -0.1054 | 0.0000 | -0.1000 | -0.1050 | -0.1053 |
+| 1.0 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| 1.1 | 0.0953 | 0.0000 | 0.1000 | 0.0950 | 0.0953 |
+| 1.2 | 0.1823 | 0.0000 | 0.2000 | 0.1800 | 0.1827 |
+| 1.5 | 0.4055 | 0.0000 | 0.5000 | 0.3750 | 0.4167 |
+
+Higher-degree Taylor polynomials generally
+provide better approximations near $a=1$.
+
 
 ## Example 2: Maclaurin Polynomials
 
@@ -265,11 +284,6 @@ $$
 f(x)=e^x.
 $$
 
-**Questions:**
-
-1. What is the derivative of $e^x$?
-2. What is the value of every derivative at $x=0$?
-3. Is there a pattern in the coefficients?
 
 ---
 
@@ -308,6 +322,33 @@ This series converges to $e^x$ for all real $x$.
 
 ---
 
+## Example 1: Maclaurin Polynomial Approximations
+
+For $f(x)=e^x$ centered at $a=0$, compare the values of the
+Maclaurin polynomials with the actual function values.
+
+The Maclaurin polynomials are:
+
+- $P_0(x)=1$
+- $P_1(x)=1+x$
+- $P_2(x)=1+x+\frac{x^2}{2}$
+- $P_3(x)=1+x+\frac{x^2}{2}+\frac{x^3}{6}$
+
+| $x$ | $e^x$ | $P_0(x)$ | $P_1(x)$ | $P_2(x)$ | $P_3(x)$ |
+|:---:|---:|---:|---:|---:|---:|
+| -1.0 | 0.3679 | 1.0000 | 0.0000 | 0.5000 | 0.3333 |
+| -0.5 | 0.6065 | 1.0000 | 0.5000 | 0.6250 | 0.6042 |
+| -0.2 | 0.8187 | 1.0000 | 0.8000 | 0.8200 | 0.8187 |
+| 0.0 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 0.2 | 1.2214 | 1.0000 | 1.2000 | 1.2200 | 1.2213 |
+| 0.5 | 1.6487 | 1.0000 | 1.5000 | 1.6250 | 1.6458 |
+| 1.0 | 2.7183 | 1.0000 | 2.0000 | 2.5000 | 2.6667 |
+
+Higher-degree Maclaurin polynomials generally
+provide better approximations near $a=0$.
+
+---
+
 ## Example 3: Maclaurin Series for Sine
 
 Find the Maclaurin series for
@@ -316,52 +357,17 @@ $$
 f(x)=\sin x.
 $$
 
-**Strategy:**
 
-1. Compute the first several derivatives.
-2. Evaluate the derivatives at $x=0$.
-3. Look for a repeating pattern.
-4. Write the series using sigma notation.
-
-What happens to the coefficients of the even powers of $x$?
-
----
-
-## The Maclaurin Series for $\sin x$
-
-The derivatives repeat in a cycle:
-
-$$
-\sin x,\quad \cos x,\quad
--\sin x,\quad -\cos x.
-$$
-
-Evaluating at zero gives
-
-$$
-0,\quad 1,\quad 0,\quad -1,\ldots
-$$
-
-Therefore,
-
-$$
-\boxed{
-\sin x=
-\sum_{n=0}^{\infty}
-\frac{(-1)^n x^{2n+1}}{(2n+1)!}
-}
-$$
-
-or
+. . . 
 
 $$
 \sin x=x-\frac{x^3}{3!}
 +\frac{x^5}{5!}-\cdots
 $$
 
-This series converges to $\sin x$ for all real $x$.
 
 ---
+
 
 ## Example 4: Maclaurin Series for Cosine
 
@@ -371,30 +377,7 @@ $$
 f(x)=\cos x.
 $$
 
-**Questions:**
-
-1. What pattern do the derivatives follow?
-2. Which coefficients are zero?
-3. How does the series compare with the series for $\sin x$?
-
-Write the result using sigma notation.
-
----
-
-## The Maclaurin Series for $\cos x$
-
-The Maclaurin series is
-
-$$
-\boxed{
-\cos x=
-\sum_{n=0}^{\infty}
-\frac{(-1)^n x^{2n}}{(2n)!}
-}
-$$
-
-or
-
+. . . 
 $$
 \cos x=
 1-\frac{x^2}{2!}
@@ -402,11 +385,9 @@ $$
 -\frac{x^6}{6!}+\cdots
 $$
 
-This series converges to $\cos x$ for all real $x$.
-
-**Question:** What happens when we differentiate this power series term by term?
-
 ---
+
+
 
 ## Important Maclaurin Series
 
@@ -434,23 +415,7 @@ $$
 
 All three series converge for every real number $x$.
 
----
 
-## Activity: The Taylor Polynomial Factory
-
-Find the third-degree Maclaurin polynomial $P_3(x)$ for each function.
-
-1. $\displaystyle f(x)=e^{2x}$
-
-2. $\displaystyle g(x)=\sin(2x)$
-
-3. $\displaystyle h(x)=\cos x$
-
-For each function:
-
-- Find the necessary derivatives at zero.
-- Write the polynomial.
-- Identify which coefficients are zero.
 
 ---
 
@@ -474,11 +439,7 @@ $$
 e^{0.2}\approx P_3(0.2).
 $$
 
-**Questions:**
-
-1. What is the approximate value?
-2. Would $P_5(0.2)$ give a more accurate approximation?
-3. How can we estimate the error without knowing the exact value?
+How good is this estimation? How can we estimate the error without knowing the exact value?
 
 ---
 
@@ -493,9 +454,7 @@ $$
 The **remainder** is the difference between the function and the polynomial:
 
 $$
-\boxed{
 R_n(x)=f(x)-P_n(x)
-}
 $$
 
 Therefore,
@@ -521,11 +480,9 @@ Suppose $f$ has at least $n+1$ continuous derivatives on an interval containing 
 Then there exists a number $c$ between $a$ and $x$ such that
 
 $$
-\boxed{
 R_n(x)=
 \frac{f^{(n+1)}(c)}{(n+1)!}
 (x-a)^{n+1}
-}
 $$
 
 The number $c$ is generally unknown.
@@ -547,19 +504,12 @@ for all $t$ between $a$ and $x$.
 Then Taylor's theorem tells us
 
 $$
-\boxed{
 |R_n(x)|
 \leq
 \frac{M}{(n+1)!}|x-a|^{n+1}
-}
 $$
 
-**Strategy:**
 
-1. Identify the Taylor polynomial degree $n$.
-2. Find the $(n+1)$st derivative.
-3. Find a bound $M$ on that derivative.
-4. Substitute into the error bound.
 
 ---
 
@@ -757,3 +707,97 @@ To prove the series represents $f$, show that $R_n(x)\to0$.
 
 ---
 
+
+## Power Series Can Describe Unknown Functions
+
+So far, we have used Taylor and Maclaurin series to represent familiar functions such as $e^x$, $\sin x$, and $\ln(1+x)$.
+
+But what if we encounter a function that we do not already know?
+
+- Some functions are defined by equations involving their derivatives.
+- These equations are called **differential equations**.
+- Power series can help us construct solutions even when no familiar formula exists.
+
+**Key Idea:** A power series can define a new function, not just approximate a familiar one.
+
+## Example: The Airy Equation
+
+Consider the differential equation
+
+$$
+y''-xy=0.
+$$
+
+This is called the **Airy equation**.
+
+We want to find a function $y(x)$ whose second derivative satisfies
+
+$$
+y''=xy.
+$$
+
+Unlike the differential equation $y'=y$, whose solutions include $e^x$, the Airy equation has no nonzero solutions expressible using elementary functions.
+
+**Question:** Can we describe its solutions using power series?
+
+## Solving the Airy Equation with Power Series
+
+Suppose the unknown function has a Maclaurin series
+
+$$
+y(x)=\sum_{n=0}^{\infty}a_nx^n.
+$$
+
+Differentiating twice gives
+
+$$
+y''(x)=\sum_{n=2}^{\infty}n(n-1)a_nx^{n-2}.
+$$
+
+Substitute into $y''-xy=0$:
+
+$$
+\sum_{n=2}^{\infty}n(n-1)a_nx^{n-2}
+-\sum_{n=0}^{\infty}a_nx^{n+1}=0.
+$$
+
+Matching coefficients of equal powers of $x$ gives
+
+- $a_2=0$
+- $a_{n+2}=\dfrac{a_{n-1}}{(n+2)(n+1)}$, for $n\geq 1$.
+
+The differential equation tells us how to calculate the coefficients!
+
+## Constructing an Unknown Function
+
+The recurrence relation gives
+
+- $a_2=0$
+- $a_3=\dfrac{a_0}{6}$
+- $a_4=\dfrac{a_1}{12}$
+- $a_5=0$
+- $a_6=\dfrac{a_0}{180}$
+- $a_7=\dfrac{a_1}{504}$
+
+Therefore, the solution begins as
+
+$$
+y(x)=a_0\left(1+\frac{x^3}{6}+\frac{x^6}{180}+\cdots\right)
++a_1\left(x+\frac{x^4}{12}+\frac{x^7}{504}+\cdots\right).
+$$
+
+The constants $a_0=y(0)$ and $a_1=y'(0)$ determine a particular solution.
+
+**Notice:** We have constructed a function without knowing an elementary formula for it!
+
+## Why This Matters
+
+The Airy equation has two important solutions called the **Airy functions**, $\operatorname{Ai}(x)$ and $\operatorname{Bi}(x)$.
+
+These functions appear in applications involving wave motion, optics, and quantum mechanics.
+
+- Power series provide a way to define and calculate these functions.
+- Adding more terms gives increasingly accurate approximations.
+- The series solutions converge for every real number $x$.
+
+Taylor and Maclaurin series do more than approximate known functions. They allow us understand new functions.
