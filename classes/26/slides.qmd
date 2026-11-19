@@ -146,9 +146,7 @@ $$
 In general,
 
 $$
-\boxed{
 c_n=\frac{f^{(n)}(a)}{n!}
-}
 $$
 
 This gives us a formula for the coefficients of a power series representation.
@@ -182,10 +180,8 @@ The symbol $\sim$ indicates the formal Taylor expansion. Equality requires that 
 A **Maclaurin series** is a Taylor series centered at $a=0$.
 
 $$
-\boxed{
 \sum_{n=0}^{\infty}
 \frac{f^{(n)}(0)}{n!}x^n
-}
 $$
 
 In expanded form:
@@ -225,7 +221,7 @@ P_1(x)=f(a)+f'(a)(x-a)
 $$
 
 $$
-P_2(x)=P_1(x)+\frac{f''(a)}{2}(x-a)^2
+P_2(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2
 $$
 
 Each polynomial gives an approximation to $f(x)$ near $a$.
@@ -244,6 +240,9 @@ This is precisely the first Taylor polynomial $P_1(x)$. Adding more terms gives 
 
 ---
 
+
+
+
 ## Example 1: Taylor Polynomials
 
 Consider
@@ -257,7 +256,22 @@ Find the Taylor polynomials $P_0$, $P_1$, $P_2$, and $P_3$ centered at $a=1$.
 
 ---
 
+
+
+
 ## Example 1: Taylor Polynomial Approximations
+
+Consider $f(x)=\ln x$ centered at $a=1$.
+
+![](taylor_ln.svg){width=90% fig-align="center"}
+
+Notice that higher-degree Taylor polynomials provide
+better approximations near $x=1$.
+
+---
+
+
+## Example 1: Taylor Polynomial Approximations {.smaller}
 
 For $f(x)=\ln x$ centered at $a=1$, compare the values of the
 Taylor polynomials with the actual function values.
@@ -287,6 +301,20 @@ $$
 
 ---
 
+## Taylor Polynomials as Approximations
+
+Consider $f(x)=e^x$ centered at $a=0$.
+
+
+## Taylor Polynomials as Approximations
+
+Consider $f(x)=e^x$ centered at $a=0$.
+
+![](taylor_exp.svg){width=90% fig-align="center"}
+
+---
+
+
 ## The Maclaurin Series for $e^x$
 
 For
@@ -304,9 +332,7 @@ $$
 Therefore,
 
 $$
-\boxed{
 e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}
-}
 $$
 
 or
@@ -322,8 +348,7 @@ This series converges to $e^x$ for all real $x$.
 
 ---
 
-## Example 1: Maclaurin Polynomial Approximations
-
+## Example 1: Maclaurin Polynomial Approximations 
 For $f(x)=e^x$ centered at $a=0$, compare the values of the
 Maclaurin polynomials with the actual function values.
 
@@ -333,6 +358,10 @@ The Maclaurin polynomials are:
 - $P_1(x)=1+x$
 - $P_2(x)=1+x+\frac{x^2}{2}$
 - $P_3(x)=1+x+\frac{x^2}{2}+\frac{x^3}{6}$
+
+---
+
+## ## Example 1: Maclaurin Polynomial Approximations {.smaller}
 
 | $x$ | $e^x$ | $P_0(x)$ | $P_1(x)$ | $P_2(x)$ | $P_3(x)$ |
 |:---:|---:|---:|---:|---:|---:|
@@ -393,25 +422,11 @@ $$
 
 The following series are especially useful:
 
-**Exponential:**
+**Exponential:** $e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}$
 
-$$
-e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}
-$$
+**Sine:** $\sin x=\sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{(2n+1)!}$
 
-**Sine:**
-
-$$
-\sin x=\sum_{n=0}^{\infty}
-\frac{(-1)^n x^{2n+1}}{(2n+1)!}
-$$
-
-**Cosine:**
-
-$$
-\cos x=\sum_{n=0}^{\infty}
-\frac{(-1)^n x^{2n}}{(2n)!}
-$$
+**Cosine:** $\cos x=\sum_{n=0}^{\infty}\frac{(-1)^n x^{2n}}{(2n)!}$
 
 All three series converge for every real number $x$.
 
@@ -433,11 +448,7 @@ $$
 P_3(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}.
 $$
 
-Then
-
-$$
-e^{0.2}\approx P_3(0.2).
-$$
+Then $e^{0.2}\approx P_3(0.2)$.
 
 How good is this estimation? How can we estimate the error without knowing the exact value?
 
@@ -445,10 +456,10 @@ How good is this estimation? How can we estimate the error without knowing the e
 
 ## The Remainder of a Taylor Polynomial
 
-A Taylor polynomial approximates a function:
+A Taylor polynomial approximates a function: $f(x)\approx P_n(x)$.
 
 $$
-f(x)\approx P_n(x).
+f(x)=P_n(x)+R_n(x).
 $$
 
 The **remainder** is the difference between the function and the polynomial:
@@ -457,19 +468,10 @@ $$
 R_n(x)=f(x)-P_n(x)
 $$
 
-Therefore,
+The error is $|R_n(x)|$.
 
-$$
-f(x)=P_n(x)+R_n(x).
-$$
 
-The absolute error is
-
-$$
-|R_n(x)|.
-$$
-
-How can we estimate this error?
+We can estimate this error?
 
 ---
 
@@ -515,41 +517,23 @@ $$
 
 ## Example 5: Estimating Error
 
-Use the third Maclaurin polynomial for
+Use the third Maclaurin polynomial for $e^x$, $P_n(x)=1+x+\frac{x^2}{2}+\frac{x^3}{6}$
 
-$$
-f(x)=e^x
-$$
-
-to approximate
-
-$$
-e^{0.2}.
-$$
+to approximate $e^{0.2}$.
 
 Use Taylor's theorem to find an upper bound for the error.
 
 **Questions:**
 
-1. What is the fourth derivative of $e^x$?
-2. What is its maximum value on $[0,0.2]$?
+1. What is the fourth derivative of $e^x$? e^x
+2. What is its maximum value on $[0,0.2]$?  .2
 3. What error bound does Taylor's theorem give?
 
 ---
 
 ## Example 6: Choosing a Polynomial Degree
 
-We want to approximate
-
-$$
-\sin(0.5)
-$$
-
-with an error less than
-
-$$
-10^{-5}.
-$$
+We want to approximate $\sin(0.5)$ with an error less than $10^{-5}$.
 
 Use a Maclaurin polynomial and Taylor's theorem to determine a degree that guarantees the required accuracy.
 

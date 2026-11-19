@@ -224,9 +224,7 @@ c_3 &amp;= \frac{f'''(a)}{3!}
 <h2>What’s the Pattern</h2>
 <p>In general,</p>
 <p><span class="math display">\[
-\boxed{
 c_n=\frac{f^{(n)}(a)}{n!}
-}
 \]</span></p>
 <p>This gives us a formula for the coefficients of a power series representation.</p>
 </section>
@@ -250,10 +248,8 @@ f(x)\sim {}&amp;f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2\\
 <h2>Definition: Maclaurin Series</h2>
 <p>A <strong>Maclaurin series</strong> is a Taylor series centered at <span class="math inline">\(a=0\)</span>.</p>
 <p><span class="math display">\[
-\boxed{
 \sum_{n=0}^{\infty}
 \frac{f^{(n)}(0)}{n!}x^n
-}
 \]</span></p>
 <p>In expanded form:</p>
 <p><span class="math display">\[
@@ -282,7 +278,7 @@ P_0(x)=f(a)
 P_1(x)=f(a)+f'(a)(x-a)
 \]</span></p>
 <p><span class="math display">\[
-P_2(x)=P_1(x)+\frac{f''(a)}{2}(x-a)^2
+P_2(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2
 \]</span></p>
 <p>Each polynomial gives an approximation to <span class="math inline">\(f(x)\)</span> near <span class="math inline">\(a\)</span>.</p>
 </section>
@@ -303,6 +299,12 @@ f(x)=\ln x.
 <p>Find the Taylor polynomials <span class="math inline">\(P_0\)</span>, <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span>, and <span class="math inline">\(P_3\)</span> centered at <span class="math inline">\(a=1\)</span>.</p>
 </section>
 <section id="example-1-taylor-polynomial-approximations" class="slide level2">
+<h2>Example 1: Taylor Polynomial Approximations</h2>
+<p>Consider <span class="math inline">\(f(x)=\ln x\)</span> centered at <span class="math inline">\(a=1\)</span>.</p>
+
+<img data-src="taylor_ln.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><p>Notice that higher-degree Taylor polynomials provide better approximations near <span class="math inline">\(x=1\)</span>.</p>
+</section>
+<section id="example-1-taylor-polynomial-approximations-1" class="slide level2 smaller">
 <h2>Example 1: Taylor Polynomial Approximations</h2>
 <p>For <span class="math inline">\(f(x)=\ln x\)</span> centered at <span class="math inline">\(a=1\)</span>, compare the values of the Taylor polynomials with the actual function values.</p>
 <table class="caption-top">
@@ -384,6 +386,15 @@ f(x)=\ln x.
 f(x)=e^x.
 \]</span></p>
 </section>
+<section id="taylor-polynomials-as-approximations-1" class="slide level2">
+<h2>Taylor Polynomials as Approximations</h2>
+<p>Consider <span class="math inline">\(f(x)=e^x\)</span> centered at <span class="math inline">\(a=0\)</span>.</p>
+</section>
+<section id="taylor-polynomials-as-approximations-2" class="slide level2">
+<h2>Taylor Polynomials as Approximations</h2>
+<p>Consider <span class="math inline">\(f(x)=e^x\)</span> centered at <span class="math inline">\(a=0\)</span>.</p>
+
+<img data-src="taylor_exp.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section>
 <section id="the-maclaurin-series-for-ex" class="slide level2">
 <h2>The Maclaurin Series for <span class="math inline">\(e^x\)</span></h2>
 <p>For</p>
@@ -396,9 +407,7 @@ f^{(n)}(0)=1.
 \]</span></p>
 <p>Therefore,</p>
 <p><span class="math display">\[
-\boxed{
 e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}
-}
 \]</span></p>
 <p>or</p>
 <p><span class="math display">\[
@@ -418,6 +427,9 @@ e^x=1+x+\frac{x^2}{2!}
 <li><span class="math inline">\(P_2(x)=1+x+\frac{x^2}{2}\)</span></li>
 <li><span class="math inline">\(P_3(x)=1+x+\frac{x^2}{2}+\frac{x^3}{6}\)</span></li>
 </ul>
+</section>
+<section id="example-1-maclaurin-polynomial-approximations-1" class="slide level2 smaller">
+<h2>## Example 1: Maclaurin Polynomial Approximations</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -519,20 +531,9 @@ f(x)=\cos x.
 <section id="important-maclaurin-series" class="slide level2">
 <h2>Important Maclaurin Series</h2>
 <p>The following series are especially useful:</p>
-<p><strong>Exponential:</strong></p>
-<p><span class="math display">\[
-e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}
-\]</span></p>
-<p><strong>Sine:</strong></p>
-<p><span class="math display">\[
-\sin x=\sum_{n=0}^{\infty}
-\frac{(-1)^n x^{2n+1}}{(2n+1)!}
-\]</span></p>
-<p><strong>Cosine:</strong></p>
-<p><span class="math display">\[
-\cos x=\sum_{n=0}^{\infty}
-\frac{(-1)^n x^{2n}}{(2n)!}
-\]</span></p>
+<p><strong>Exponential:</strong> <span class="math inline">\(e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}\)</span></p>
+<p><strong>Sine:</strong> <span class="math inline">\(\sin x=\sum_{n=0}^{\infty}\frac{(-1)^n x^{2n+1}}{(2n+1)!}\)</span></p>
+<p><strong>Cosine:</strong> <span class="math inline">\(\cos x=\sum_{n=0}^{\infty}\frac{(-1)^n x^{2n}}{(2n)!}\)</span></p>
 <p>All three series converge for every real number <span class="math inline">\(x\)</span>.</p>
 </section>
 <section id="approximating-function-values" class="slide level2">
@@ -545,31 +546,21 @@ e^{0.2}.
 <p><span class="math display">\[
 P_3(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}.
 \]</span></p>
-<p>Then</p>
-<p><span class="math display">\[
-e^{0.2}\approx P_3(0.2).
-\]</span></p>
+<p>Then <span class="math inline">\(e^{0.2}\approx P_3(0.2)\)</span>.</p>
 <p>How good is this estimation? How can we estimate the error without knowing the exact value?</p>
 </section>
 <section id="the-remainder-of-a-taylor-polynomial" class="slide level2">
 <h2>The Remainder of a Taylor Polynomial</h2>
-<p>A Taylor polynomial approximates a function:</p>
+<p>A Taylor polynomial approximates a function: <span class="math inline">\(f(x)\approx P_n(x)\)</span>.</p>
 <p><span class="math display">\[
-f(x)\approx P_n(x).
+f(x)=P_n(x)+R_n(x).
 \]</span></p>
 <p>The <strong>remainder</strong> is the difference between the function and the polynomial:</p>
 <p><span class="math display">\[
 R_n(x)=f(x)-P_n(x)
 \]</span></p>
-<p>Therefore,</p>
-<p><span class="math display">\[
-f(x)=P_n(x)+R_n(x).
-\]</span></p>
-<p>The absolute error is</p>
-<p><span class="math display">\[
-|R_n(x)|.
-\]</span></p>
-<p>How can we estimate this error?</p>
+<p>The error is <span class="math inline">\(|R_n(x)|\)</span>.</p>
+<p>We can estimate this error?</p>
 </section>
 <section id="taylors-theorem-with-remainder" class="slide level2">
 <h2>Taylor’s Theorem with Remainder</h2>
@@ -599,32 +590,19 @@ R_n(x)=
 </section>
 <section id="example-5-estimating-error" class="slide level2">
 <h2>Example 5: Estimating Error</h2>
-<p>Use the third Maclaurin polynomial for</p>
-<p><span class="math display">\[
-f(x)=e^x
-\]</span></p>
-<p>to approximate</p>
-<p><span class="math display">\[
-e^{0.2}.
-\]</span></p>
+<p>Use the third Maclaurin polynomial for <span class="math inline">\(e^x\)</span>, <span class="math inline">\(P_n(x)=1+x+\frac{x^2}{2}+\frac{x^3}{6}\)</span></p>
+<p>to approximate <span class="math inline">\(e^{0.2}\)</span>.</p>
 <p>Use Taylor’s theorem to find an upper bound for the error.</p>
 <p><strong>Questions:</strong></p>
 <ol type="1">
-<li>What is the fourth derivative of <span class="math inline">\(e^x\)</span>?</li>
-<li>What is its maximum value on <span class="math inline">\([0,0.2]\)</span>?</li>
+<li>What is the fourth derivative of <span class="math inline">\(e^x\)</span>? e^x</li>
+<li>What is its maximum value on <span class="math inline">\([0,0.2]\)</span>? .2</li>
 <li>What error bound does Taylor’s theorem give?</li>
 </ol>
 </section>
 <section id="example-6-choosing-a-polynomial-degree" class="slide level2">
 <h2>Example 6: Choosing a Polynomial Degree</h2>
-<p>We want to approximate</p>
-<p><span class="math display">\[
-\sin(0.5)
-\]</span></p>
-<p>with an error less than</p>
-<p><span class="math display">\[
-10^{-5}.
-\]</span></p>
+<p>We want to approximate <span class="math inline">\(\sin(0.5)\)</span> with an error less than <span class="math inline">\(10^{-5}\)</span>.</p>
 <p>Use a Maclaurin polynomial and Taylor’s theorem to determine a degree that guarantees the required accuracy.</p>
 <p><strong>Questions:</strong></p>
 <ol type="1">

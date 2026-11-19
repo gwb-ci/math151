@@ -1,0 +1,50 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390">
+<style>
+  text {font: 15px sans-serif; fill: currentColor}
+  .axis {stroke:#888;stroke-width:1.2}
+  .curve {fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+  .c0 {stroke:#222;stroke-width:3.5}
+  .c1 {stroke:#008b96;stroke-dasharray:8 5}
+  .c2 {stroke:#d47a26;stroke-dasharray:8 5}
+  .c3 {stroke:#7956ad;stroke-dasharray:8 5}
+  .c4 {stroke:#b7475e;stroke-dasharray:8 5}
+</style>
+<rect width="760" height="390" fill="white"/>
+<g class="axis">
+<path d="M60 160H700 M325 45V330"/>
+</g>
+<g fill="none" stroke="#ccc" stroke-dasharray="3 5">
+<path d="M325 60V330"/>
+</g>
+<g font-family="sans-serif" font-size="14" fill="#555">
+<text x="318" y="353">1</text>
+<text x="635" y="353">2</text>
+<text x="706" y="165">x</text>
+<text x="332" y="48">y</text>
+<text x="304" y="155">0</text>
+</g>
+<g class="curve">
+<path class="c0" d="M60,307 L100,259 L140,230 L180,209 L220,192 L260,178 L300,167 L340,157 L380,148 L420,140 L460,133 L500,126 L540,120 L580,114 L620,109 L660,104 L700,99"/>
+<path class="c1" d="M60,160 H700"/>
+<path class="c2" d="M60,226 L100,216 L140,206 L180,196 L220,186 L260,176 L300,167 L340,157 L380,147 L420,137 L460,127 L500,117 L540,107 L580,97 L620,87 L660,78 L700,68"/>
+<path class="c3" d="M60,254 L100,236 L140,220 L180,205 L220,191 L260,178 L300,167 L340,157 L380,148 L420,140 L460,134 L500,129 L540,125 L580,123 L620,122 L660,122 L700,123"/>
+<path class="c4" d="M60,270 L100,246 L140,225 L180,207 L220,192 L260,178 L300,167 L340,157 L380,148 L420,140 L460,132 L500,125 L540,117 L580,109 L620,100 L660,90 L700,79"/>
+</g>
+<circle cx="325.4" cy="160.3" r="4" fill="#222"/>
+<g font-size="14" font-family="sans-serif">
+<g transform="translate(70 25)">
+<rect width="480" height="30" rx="5" fill="#f5f5f5"/>
+<path d="M10 15H40" stroke="#222" stroke-width="3"/>
+<text x="45" y="20">ln(x)</text>
+<path d="M115 15H145" stroke="#008b96" stroke-width="3" stroke-dasharray="8 5"/>
+<text x="150" y="20">P₀</text>
+<path d="M215 15H245" stroke="#d47a26" stroke-width="3" stroke-dasharray="8 5"/>
+<text x="250" y="20">P₁</text>
+<path d="M315 15H345" stroke="#7956ad" stroke-width="3" stroke-dasharray="8 5"/>
+<text x="350" y="20">P₂</text>
+<path d="M405 15H435" stroke="#b7475e" stroke-width="3" stroke-dasharray="8 5"/>
+<text x="440" y="20">P₃</text>
+</g>
+</g>
+</svg>
