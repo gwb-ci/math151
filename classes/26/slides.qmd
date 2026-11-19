@@ -361,7 +361,7 @@ The Maclaurin polynomials are:
 
 ---
 
-## ## Example 1: Maclaurin Polynomial Approximations {.smaller}
+## Example 1: Maclaurin Polynomial Approximations {.smaller}
 
 | $x$ | $e^x$ | $P_0(x)$ | $P_1(x)$ | $P_2(x)$ | $P_3(x)$ |
 |:---:|---:|---:|---:|---:|---:|
@@ -396,6 +396,70 @@ $$
 
 
 ---
+
+
+
+## Maclaurin Polynomial Approximations: $P_1$
+
+Consider $f(x)=\sin x$ centered at $a=0$.
+
+$P_1(x)=x$
+
+![](sin_p1.svg){width=82% fig-align="center"}
+
+The linear approximation agrees with $\sin x$ near $x=0$.
+
+---
+
+## Maclaurin Polynomial Approximations: $P_3$
+
+Add the cubic term:
+
+$P_3(x)=x-\frac{x^3}{3!}$
+
+![](sin_p3.svg){width=82% fig-align="center"}
+
+The cubic polynomial follows $\sin x$ more closely.
+
+---
+
+## Maclaurin Polynomial Approximations: $P_5$
+
+Add the fifth-degree term:
+
+$P_5(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}$
+
+![](sin_p5.svg){width=82% fig-align="center"}
+
+The approximation improves over a larger interval.
+
+---
+
+## Maclaurin Polynomial Approximations: $P_7$
+
+Add the seventh-degree term:
+
+$P_7(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}$
+
+![](sin_p7.svg){width=82% fig-align="center"}
+
+The curves are nearly indistinguishable on this interval.
+
+---
+
+
+
+
+## Limitations of Taylor Polynomial Approximations
+
+
+![](sin_p7_wide.svg){width=90% fig-align="center"}
+
+
+
+---
+
+
 
 
 ## Example 4: Maclaurin Series for Cosine

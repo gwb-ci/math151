@@ -429,7 +429,7 @@ e^x=1+x+\frac{x^2}{2!}
 </ul>
 </section>
 <section id="example-1-maclaurin-polynomial-approximations-1" class="slide level2 smaller">
-<h2>## Example 1: Maclaurin Polynomial Approximations</h2>
+<h2>Example 1: Maclaurin Polynomial Approximations</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -515,6 +515,38 @@ f(x)=\sin x.
 \]</span></p>
 </div>
 </section>
+<section id="maclaurin-polynomial-approximations-p_1" class="slide level2">
+<h2>Maclaurin Polynomial Approximations: <span class="math inline">\(P_1\)</span></h2>
+<p>Consider <span class="math inline">\(f(x)=\sin x\)</span> centered at <span class="math inline">\(a=0\)</span>.</p>
+<p><span class="math inline">\(P_1(x)=x\)</span></p>
+
+<img data-src="sin_p1.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:82.0%"><p>The linear approximation agrees with <span class="math inline">\(\sin x\)</span> near <span class="math inline">\(x=0\)</span>.</p>
+</section>
+<section id="maclaurin-polynomial-approximations-p_3" class="slide level2">
+<h2>Maclaurin Polynomial Approximations: <span class="math inline">\(P_3\)</span></h2>
+<p>Add the cubic term:</p>
+<p><span class="math inline">\(P_3(x)=x-\frac{x^3}{3!}\)</span></p>
+
+<img data-src="sin_p3.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:82.0%"><p>The cubic polynomial follows <span class="math inline">\(\sin x\)</span> more closely.</p>
+</section>
+<section id="maclaurin-polynomial-approximations-p_5" class="slide level2">
+<h2>Maclaurin Polynomial Approximations: <span class="math inline">\(P_5\)</span></h2>
+<p>Add the fifth-degree term:</p>
+<p><span class="math inline">\(P_5(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}\)</span></p>
+
+<img data-src="sin_p5.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:82.0%"><p>The approximation improves over a larger interval.</p>
+</section>
+<section id="maclaurin-polynomial-approximations-p_7" class="slide level2">
+<h2>Maclaurin Polynomial Approximations: <span class="math inline">\(P_7\)</span></h2>
+<p>Add the seventh-degree term:</p>
+<p><span class="math inline">\(P_7(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}\)</span></p>
+
+<img data-src="sin_p7.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:82.0%"><p>The curves are nearly indistinguishable on this interval.</p>
+</section>
+<section id="limitations-of-taylor-polynomial-approximations" class="slide level2">
+<h2>Limitations of Taylor Polynomial Approximations</h2>
+
+<img data-src="sin_p7_wide.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section>
 <section id="example-4-maclaurin-series-for-cosine" class="slide level2">
 <h2>Example 4: Maclaurin Series for Cosine</h2>
 <p>Find the Maclaurin series for</p>

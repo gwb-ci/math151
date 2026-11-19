@@ -304,8 +304,8 @@
     "objectID": "classes/26/slides.html#example-1-maclaurin-polynomial-approximations-1",
     "href": "classes/26/slides.html#example-1-maclaurin-polynomial-approximations-1",
     "title": "Taylor Series",
-    "section": "## Example 1: Maclaurin Polynomial Approximations",
-    "text": "## Example 1: Maclaurin Polynomial Approximations\n\n\n\n\\(x\\)\n\\(e^x\\)\n\\(P_0(x)\\)\n\\(P_1(x)\\)\n\\(P_2(x)\\)\n\\(P_3(x)\\)\n\n\n\n\n-1.0\n0.3679\n1.0000\n0.0000\n0.5000\n0.3333\n\n\n-0.5\n0.6065\n1.0000\n0.5000\n0.6250\n0.6042\n\n\n-0.2\n0.8187\n1.0000\n0.8000\n0.8200\n0.8187\n\n\n0.0\n1.0000\n1.0000\n1.0000\n1.0000\n1.0000\n\n\n0.2\n1.2214\n1.0000\n1.2000\n1.2200\n1.2213\n\n\n0.5\n1.6487\n1.0000\n1.5000\n1.6250\n1.6458\n\n\n1.0\n2.7183\n1.0000\n2.0000\n2.5000\n2.6667\n\n\n\nHigher-degree Maclaurin polynomials generally provide better approximations near \\(a=0\\).",
+    "section": "Example 1: Maclaurin Polynomial Approximations",
+    "text": "Example 1: Maclaurin Polynomial Approximations\n\n\n\n\\(x\\)\n\\(e^x\\)\n\\(P_0(x)\\)\n\\(P_1(x)\\)\n\\(P_2(x)\\)\n\\(P_3(x)\\)\n\n\n\n\n-1.0\n0.3679\n1.0000\n0.0000\n0.5000\n0.3333\n\n\n-0.5\n0.6065\n1.0000\n0.5000\n0.6250\n0.6042\n\n\n-0.2\n0.8187\n1.0000\n0.8000\n0.8200\n0.8187\n\n\n0.0\n1.0000\n1.0000\n1.0000\n1.0000\n1.0000\n\n\n0.2\n1.2214\n1.0000\n1.2000\n1.2200\n1.2213\n\n\n0.5\n1.6487\n1.0000\n1.5000\n1.6250\n1.6458\n\n\n1.0\n2.7183\n1.0000\n2.0000\n2.5000\n2.6667\n\n\n\nHigher-degree Maclaurin polynomials generally provide better approximations near \\(a=0\\).",
     "crumbs": [
       "Class Material",
       "Taylor Series"
@@ -317,6 +317,61 @@
     "title": "Taylor Series",
     "section": "Example 3: Maclaurin Series for Sine",
     "text": "Example 3: Maclaurin Series for Sine\nFind the Maclaurin series for\n\\[\nf(x)=\\sin x.\n\\]\n\n\\[\n\\sin x=x-\\frac{x^3}{3!}\n+\\frac{x^5}{5!}-\\cdots\n\\]",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#maclaurin-polynomial-approximations-p_1",
+    "href": "classes/26/slides.html#maclaurin-polynomial-approximations-p_1",
+    "title": "Taylor Series",
+    "section": "Maclaurin Polynomial Approximations: \\(P_1\\)",
+    "text": "Maclaurin Polynomial Approximations: \\(P_1\\)\nConsider \\(f(x)=\\sin x\\) centered at \\(a=0\\).\n\\(P_1(x)=x\\)\n\nThe linear approximation agrees with \\(\\sin x\\) near \\(x=0\\).",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#maclaurin-polynomial-approximations-p_3",
+    "href": "classes/26/slides.html#maclaurin-polynomial-approximations-p_3",
+    "title": "Taylor Series",
+    "section": "Maclaurin Polynomial Approximations: \\(P_3\\)",
+    "text": "Maclaurin Polynomial Approximations: \\(P_3\\)\nAdd the cubic term:\n\\(P_3(x)=x-\\frac{x^3}{3!}\\)\n\nThe cubic polynomial follows \\(\\sin x\\) more closely.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#maclaurin-polynomial-approximations-p_5",
+    "href": "classes/26/slides.html#maclaurin-polynomial-approximations-p_5",
+    "title": "Taylor Series",
+    "section": "Maclaurin Polynomial Approximations: \\(P_5\\)",
+    "text": "Maclaurin Polynomial Approximations: \\(P_5\\)\nAdd the fifth-degree term:\n\\(P_5(x)=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}\\)\n\nThe approximation improves over a larger interval.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#maclaurin-polynomial-approximations-p_7",
+    "href": "classes/26/slides.html#maclaurin-polynomial-approximations-p_7",
+    "title": "Taylor Series",
+    "section": "Maclaurin Polynomial Approximations: \\(P_7\\)",
+    "text": "Maclaurin Polynomial Approximations: \\(P_7\\)\nAdd the seventh-degree term:\n\\(P_7(x)=x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\frac{x^7}{7!}\\)\n\nThe curves are nearly indistinguishable on this interval.",
+    "crumbs": [
+      "Class Material",
+      "Taylor Series"
+    ]
+  },
+  {
+    "objectID": "classes/26/slides.html#limitations-of-taylor-polynomial-approximations",
+    "href": "classes/26/slides.html#limitations-of-taylor-polynomial-approximations",
+    "title": "Taylor Series",
+    "section": "Limitations of Taylor Polynomial Approximations",
+    "text": "Limitations of Taylor Polynomial Approximations",
     "crumbs": [
       "Class Material",
       "Taylor Series"
